@@ -1,1 +1,1 @@
-# Buy new license
+# New license

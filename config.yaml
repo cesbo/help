@@ -1,0 +1,76 @@
+title: "Cesbo"
+author: "Cesbo Team"
+copyright: "© 2021, Cesbo OU; all rights reserved."
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: true
+disableKinds:
+- "RSS"
+- "sitemap"
+
+params:
+  twitter: "@cesbo"
+
+languages:
+  en:
+    languageName: "English"
+    description: "Professional software for Digital TV Broadcasting"
+    weight: 1
+
+    menu:
+      main:
+      - name: "Docs"
+        weight: 1
+        url: "docs/"
+
+      - name: "Pricing"
+        weight: 2
+        url: "pricing/"
+
+      - name: "Profile"
+        weight: 3
+        url: "profile/"
+
+      footer:
+      - name: "Contact Us"
+        weight: 1
+        url: "help/"
+
+      - name: "Terms"
+        weight: 2
+        url: "terms/"
+
+      - name: "Privacy"
+        weight: 3
+        url: "privacy/"
+
+  ru:
+    languageName: "Русский"
+    description: "Профессиональное программное обеспечение для трансляции Цифрового ТВ"
+    weight: 2
+
+    menu:
+      main:
+      - name: "Справка"
+        weight: 1
+        url: "docs/"
+
+      - name: "Цены"
+        weight: 2
+        url: "pricing/"
+
+      - name: "Профиль"
+        weight: 3
+        url: "profile/"
+
+      footer:
+      - name: "Написать нам"
+        weight: 1
+        url: "help/"
+
+      - name: "Условия использования"
+        weight: 2
+        url: "terms/"
+
+      - name: "Конфиденциальность"
+        weight: 3
+        url: "privacy/"
