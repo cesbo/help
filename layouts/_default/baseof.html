@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="h-100" lang="{{ .Language.Lang }}">
+<head>
+	{{- $description := .Description | default .Site.Params.description | plainify | htmlUnescape -}}
+	{{- $title := .Site.Title }}
+	{{- if isset .Params "title" }}{{ $title = print .Params.title " - " $title }}{{ end }}
+	<meta charset="utf-8" />
+	<title>{{ $title }}</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="generator" content="vi" />
+	<meta name="description" content="{{ $description }}" />
+	<meta name="title" content="{{ $title }}" />
+	<meta name="image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	<meta property="og:url" content="{{ .Permalink }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="{{ .Site.Title }}" />
+	<meta property="og:title" content="{{ $title }}" />
+	<meta property="og:description" content="{{ $description }}" />
+	<meta property="og:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	{{- if isset .Site.Params "twitter" }}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+	<meta name="twitter:title" content="{{ $title }}" />
+	<meta name="twitter:description" content="{{ $description }}" />
+	<meta name="twitter:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+	<meta name="twitter:image:alt" content="{{ .Site.Title }}" />
+	{{- end }}
+
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}assets/img/favicon.png" />
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="alternate" href="{{ .Site.BaseURL }}" hreflang="x-default" />
+
+	{{- range $.Site.Home.AllTranslations }}
+	<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="{{ .Language.LanguageName }}" />
+	{{- end }}
+
+	<link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<link href="/assets/css/landing.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column h-100">
+	<nav class="navbar sticky-top py-0 bg-light border-bottom">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="{{ .Site.BaseURL }}{{ .Language.Lang }}/">
+				<img src="/assets/img/logo.svg" height="30" class="d-inline-block align-text-top" />
+			</a>
+			<ul class="navbar-nav flex-row ms-auto mb-2 mb-lg-0">
+				{{- range .Site.Menus.main }}
+				<li class="nav-item"><a class="nav-link px-3" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+				{{- end }}
+			</ul>
+		</div>
+	</nav>
+
+	<main role="main" id="content" class="flex-shrink-0">
+		{{- block "main" . }}{{- end }}
+	</main>
+
+	<footer class="navbar mt-auto py-0 bg-light border-top">
+		<div class="container-fluid">
+			<span class="navbar-text text-muted small mr-auto">&copy; {{ .Site.LastChange.Format "2006" }}, Cesbo OÜ</span>
+			<ul class="navbar-nav flex-row mb-2 mb-lg-0">
+				{{- range .Site.Menus.footer }}
+				<li class="nav-item"><a class="nav-link small px-3" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+				{{- end }}
+
+				{{ if .IsTranslated }}{{ range .Translations }}<li class="nav-item">
+					<a class="nav-link small px-3" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+				</li>{{ end }}{{ end }}
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

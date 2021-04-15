@@ -1,0 +1,83 @@
+title = "Cesbo"
+author = "Cesbo Team"
+copyright = "© 2021, Cesbo OU; all rights reserved."
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+disableKinds = ["RSS", "sitemap"]
+
+[params]
+twitter = "@cesbo"
+
+[languages]
+
+[languages.en]
+languageName = "English"
+description = "Professional software for Digital TV Broadcasting"
+weight = 1
+
+    [languages.en.menu]
+        [[languages.en.menu.main]]
+        weight = 1
+        name = "Docs"
+        url = "docs/"
+
+        [[languages.en.menu.main]]
+        weight = 2
+        name = "Pricing"
+        url = "pricing/"
+
+        [[languages.en.menu.main]]
+        weight = 3
+        name = "Profile"
+        url = "profile/"
+
+        [[languages.en.menu.footer]]
+        weight = 1
+        name = "Contact Us"
+        url = "help/"
+
+        [[languages.en.menu.footer]]
+        weight = 2
+        name = "Terms"
+        url = "terms/"
+
+        [[languages.en.menu.footer]]
+        weight = 3
+        name = "Privacy"
+        url = "privacy/"
+
+[languages.ru]
+languageName = "Русский"
+description = "Профессиональное программное обеспечение для трансляции Цифрового ТВ"
+weight = 2
+
+    [languages.ru.menu]
+        [[languages.ru.menu.main]]
+        weight = 1
+        name = "Справка"
+        url = "docs/"
+
+        [[languages.ru.menu.main]]
+        weight = 2
+        name = "Цены"
+        url = "pricing/"
+
+        [[languages.ru.menu.main]]
+        weight = 3
+        name = "Профиль"
+        url = "profile/"
+
+        [[languages.ru.menu.footer]]
+        weight = 1
+        name = "Написать нам"
+        url = "help/"
+
+        [[languages.ru.menu.footer]]
+        weight = 2
+        name = "Условия использования"
+        url = "terms/"
+
+        [[languages.ru.menu.footer]]
+        weight = 3
+        name = "Конфиденциальность"
+        url = "privacy/"

@@ -1,0 +1,129 @@
+:root {
+	--main-bg-color: #ffffff;
+	--text-color: #212121;
+	--info-color: #31708f;
+	--info-bg-color: #d9edf7;
+	--ok-color: #66bb6a;
+	--error-color: #b71c1c;
+	--error-bg-color: #f2dede;
+	--border-color: #a9a9a9;
+	--backdrop-color: #000000;
+	--link-color: #519ed4;
+	--link-color-hover: #2b78ae;
+	--hover-bg-color: #f5f5f5;
+	--button-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+body {
+	background-color: var(--main-bg-color);
+	color: var(--text-color);
+	overflow-wrap: break-word;
+}
+
+.landing-header {
+	max-width: 1140px;
+	margin: 2.5rem auto;
+}
+.landing-header h1 { border: 0; padding-bottom: 0; }
+
+.landing-block { position: relative; border-top: thin solid var(--link-color); margin-bottom: 2.5rem; }
+.landing-block::before {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 2rem;
+	height: 2rem;
+	left: 50%;
+	top: -1rem;
+	margin-left: -1rem;
+	border-width: 0 thin thin 0;
+	border-style: solid;
+	border-color: var(--link-color);
+	transform: rotate(45deg);
+	background-color: var(--main-bg-color);
+}
+
+.landing-block>div { margin-left: auto; }
+.landing-block h3 { font-weight: 300; }
+.landing-block ul { list-style: none; padding-left: 1rem; }
+.landing-block ul>li { position: relative; padding-bottom: .5em; }
+.landing-block ul>li::before { content: "\26A1"; font-size: .5em; position: absolute; left: -1rem; line-height: 1.5rem; }
+
+/* Dashboard */
+
+.demo-button { cursor: default; padding: 0 16px; margin: 0 6px; border: none; outline: none; height: 36px; background-color: transparent; font: inherit; color: inherit; font-weight: 600; text-transform: uppercase; -moz-appearance: none; -webkit-appearance: none; appearance: none; }
+
+.demo-icon { display: inline-block; width: 100%; height: 100%; background-position: center; background-repeat: no-repeat; }
+.demo-button.demo-icon { height: 24px; width: 24px; border-radius: 50%; padding: 0; margin: 0; overflow: hidden; background-size: 20px; vertical-align: middle; }
+.demo-button.demo-icon:hover, .demo-button.demo-icon:focus { z-index: 2; }
+.demo-icon-more { background-image: url('data:image/svg+xml,<svg fill="%23519ed4" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>'); }
+
+/* Cards */
+
+.demo-monospace { font-family: "Lucida Console", Monaco, monospace; }
+
+.demo-row { display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; width: 100%; background-color: transparent; }
+.demo-row.top { -webkit-align-items: flex-start; align-items: flex-start; }
+.demo-row.center { -webkit-justify-content: center; justify-content: center; }
+.demo-row:before, .demo-row:after { display: table; content: " "; }
+.demo-row:after { clear: both; }
+.demo-row>* { display: inline-block; -webkit-flex: 0 0 auto; flex: 0 0 auto; position: relative; }
+.demo-row>.col-expand { -webkit-flex: 2 0 auto; flex: 2 0 auto; }
+
+.demo-card-stack { text-align: center; font-size: 0; }
+.demo-card-stack[data-header]:before { content: attr(data-header); color: var(--border-color); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; font-size: 12px; letter-spacing: 1px; text-align: center; display: block; }
+
+.demo-card { width: 220px; border: 1px solid var(--border-color); margin: 1px; text-align: left; cursor: default; display: inline-block; vertical-align: top; position: relative; color: inherit; }
+.demo-card:hover, .demo-card:focus { text-decoration: none; outline: none; }
+.demo-card .demo-card-name, .demo-card .demo-card-status { white-space: nowrap; overflow: hidden; margin: 0 3px; }
+.demo-card .demo-card-name { line-height: 24px; font-size: 16px; font-weight: 200; }
+.demo-card .demo-card-action { position: absolute; top: 0; right: 0; }
+.demo-card .demo-card-status { line-height: 18px; font-size: 14px; }
+.demo-card .demo-card-footer { margin-top: 2px; margin-bottom: 1px; border-top: 1px solid var(--border-color); }
+.demo-card .demo-card-status .text { color: var(--border-color); display: block; }
+.demo-card .demo-card-status .text.onair { color: #66bb6a; }
+.demo-card .demo-card-status .text.error, .demo-card .demo-card-status .text.scrambled, .demo-card .demo-card-status .text.cc { color: #ef5350; }
+.demo-card.stream-mpts .demo-card-status .text[data-name]:after { content: attr(data-name); padding-left: 5px; }
+
+@keyframes card-inactive-bounce {
+	0% { box-shadow: none; }
+	50% { box-shadow: 0 0 5px var(--border-color); }
+	100% { box-shadow: none; }
+}
+.demo-card.card-true-3, .demo-card.card-false-0 { animation: card-inactive-bounce 1s; }
+.demo-card.card-false-0 { border-style: dotted; }
+.demo-card.card-false-0 .demo-card-name { color: var(--border-color); }
+
+@keyframes card-onair-bounce {
+	0% { box-shadow: none; }
+	50% { box-shadow: 0 0 5px #66bb6a; }
+	100% { box-shadow: none; }
+}
+.demo-card.card-true-2 { border-color: #66bb6a; animation: card-onair-bounce 1s; }
+
+@keyframes card-error-bounce {
+	0% { box-shadow: none; }
+	50% { box-shadow: 0 0 5px #ef5350; }
+	100% { box-shadow: none; }
+}
+.demo-card.card-true-0, .demo-card.card-true-1 { border-color: #ef5350; animation: card-error-bounce 1s; }
+
+/* Progress */
+
+.demo-progress { display: -webkit-flex; display: flex; width: 100%; position: relative; }
+.demo-progress>* { display: inline-block; height: 100%; }
+.demo-progress>.progress-level { -webkit-flex: 0 0 auto; flex: 0 0 auto; background-color: transparent; transition: width 1s; }
+.demo-progress>.progress-overlay { -webkit-flex: 2 0 auto; flex: 2 0 auto; background-color: var(--hover-bg-color); }
+
+/* DVB Status */
+
+.signal-level {
+	background: url('data:image/svg+xml;utf8,<svg width="100%" height="16" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1"><stop stop-color="%23F44336" offset="0%"/><stop stop-color="%23FFFF00" offset="25%"/><stop stop-color="%2300E676" offset="75%"/><stop stop-color="%2300E676" offset="100%"/></linearGradient></defs><rect fill="url(%23g1)" x="0" y="0" width="100%" height="100%"/></svg>');
+	background-repeat: no-repeat;
+	height: 16px;
+}
+
+.dvb-status { width: auto; }
+.dvb-status>*:nth-child(1) { width: 10px; }
+.dvb-status>*:nth-child(2) { width: auto; }
+.dvb-status>*:nth-child(3) { width: 30px; text-align: right; }
