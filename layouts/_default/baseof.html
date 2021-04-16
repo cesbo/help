@@ -52,7 +52,7 @@
 			</a>
 			<ul class="navbar-nav flex-row ms-auto mb-2 mb-lg-0">
 				{{- range .Site.Menus.main }}
-				<li class="nav-item"><a class="nav-link px-3" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+				<li class="nav-item"><a class="nav-link px-3" href="{{ .URL }}">{{ .Name }}</a></li>
 				{{- end }}
 			</ul>
 		</div>
@@ -64,10 +64,10 @@
 
 	<footer class="navbar mt-auto py-0 bg-light border-top">
 		<div class="container-fluid">
-			<span class="navbar-text text-muted small mr-auto">&copy; {{ .Site.LastChange.Format "2006" }}, Cesbo OÜ</span>
+			<span class="navbar-text text-muted small mr-auto">&copy; {{ now.Year }}, Cesbo OÜ</span>
 			<ul class="navbar-nav flex-row mb-2 mb-lg-0">
 				{{- range .Site.Menus.footer }}
-				<li class="nav-item"><a class="nav-link small px-3" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+				<li class="nav-item"><a class="nav-link small px-3" href="{{ .URL }}">{{ .Name }}</a></li>
 				{{- end }}
 
 				{{ if .IsTranslated }}{{ range .Translations }}<li class="nav-item">

@@ -1,5 +1,13 @@
 {{ define "main" }}
-<div class="container-fluid">
+
+{{ with .Site.GetPage "docs" "_summary" }}{{ .Content }}{{ end }}
+
+<aside>
+{{ .TableOfContents }}
+</aside>
+
+<article class="container-fluid">
 {{ .Content }}
-</div>
+</article>
+
 {{ end }}
