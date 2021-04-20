@@ -10,9 +10,54 @@
 	</noscript>
 </head>
 <body>
-<a href="{{ .Permalink }}">{{ .Permalink }}</a>
+{{- if not $.Page }}
 <script>
-// TODO: https://nanmu.me/en/posts/2020/hugo-i18n-automatic-language-redirection/
+function checkLanguage(l) {
+	l = l.substring(0, 2);
+	return (l != 'ru') ? 'en' : l;
+}
+
+function setCookie(cname, cvalue, exdays) {
+	let d = new Date();
+	d.setTime(d.getTime() + exdays * 86400000);
+	document.cookie = cname + '=' + cvalue + ';expires=' + d.toUTCString() + ';path=/';
+}
+
+function getCookie(cname) {
+	const name = cname + '=';
+	const decodedCookie = decodeURIComponent(document.cookie);
+	const ca = decodedCookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		const c = ca[i];
+		while(c.charAt(0) == ' ') c = c.substring(1);
+		if(c.indexOf(name) == 0) return c.substring(name.length, c.length);
+	}
+	return '';
+}
+
+const params = new URLSearchParams(location.search);
+const nextLanguage = params.get('lang');
+if(nextLanguage) {
+	const l = checkLanguage(nextLanguage);
+	setCookie('lang', l, 365);
+	const nextHref = params.get('next') || '/';
+	location.href = '/' + l + nextHref;
+} else {
+	const l = checkLanguage(getCookie('lang') || navigator.language || 'en');
+	location.href = '/' + l + '/';
+}
 </script>
+{{- else if eq .File.BaseFileName "redirects" }}
+<script>
+// TODO: i18n
+window.location.replace('{{ .Permalink }}')
+</script>
+{{- else }}
+<script>
+// TODO: additional rules for /xx/a/
+window.location.replace('{{ .Permalink }}')
+</script>
+{{- end }}
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 aliases:
-  - "/en/docs/"
+- "/en/docs/"
 ---
 
 # Quick Start
