@@ -1,0 +1,14 @@
+<footer class="navbar mt-auto py-0 bg-light border-top">
+	<div class="container-fluid">
+		<span class="navbar-text text-muted small mr-auto">&copy; {{ now.Year }}, Cesbo OÜ</span>
+		<ul class="navbar-nav flex-row mb-2 mb-lg-0">
+			{{- range .Site.Menus.footer }}
+			<li class="nav-item"><a class="nav-link small px-3" href="{{ .URL }}">{{ .Name }}</a></li>
+			{{- end }}
+
+			{{ if .IsTranslated }}{{ range .Translations }}<li class="nav-item">
+				<a class="nav-link small px-3" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+			</li>{{ end }}{{ end }}
+		</ul>
+	</div>
+</footer>
