@@ -21,14 +21,14 @@ languages:
       main:
       - name: "Pricing"
         weight: 2
-        url: "/en/pricing/"
+        url: "/pricing/"
       - name: "Profile"
         weight: 3
-        url: "/en/profile/"
+        url: "/profile/"
       footer:
       - name: "Contact Us"
         weight: 1
-        url: "/en/help/"
+        url: "/help/"
 
   ru:
     languageName: "Русский"
@@ -40,11 +40,11 @@ languages:
       main:
       - name: "Цены"
         weight: 2
-        url: "/ru/pricing/"
+        url: "/pricing/"
       - name: "Профиль"
         weight: 3
-        url: "/ru/profile/"
+        url: "/profile/"
       footer:
       - name: "Написать нам"
         weight: 1
-        url: "/ru/help/"
+        url: "/help/"

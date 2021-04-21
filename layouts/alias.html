@@ -10,11 +10,15 @@
 	</noscript>
 </head>
 <body>
-{{- if not $.Page }}
+
 <script>
 function checkLanguage(l) {
 	l = l.substring(0, 2);
 	return (l != 'ru') ? 'en' : l;
+}
+
+function getLanguage() {
+	return checkLanguage(getCookie('lang') || navigator.language || 'en');
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -34,29 +38,44 @@ function getCookie(cname) {
 	}
 	return '';
 }
+</script>
 
+{{- if not $.Page }}
+
+<script>
 const params = new URLSearchParams(location.search);
 const nextLanguage = params.get('lang');
 if(nextLanguage) {
 	const l = checkLanguage(nextLanguage);
 	setCookie('lang', l, 365);
 	const nextHref = params.get('next') || '/';
-	location.href = '/' + l + nextHref;
+	location.replace('/' + l + nextHref);
 } else {
-	const l = checkLanguage(getCookie('lang') || navigator.language || 'en');
-	location.href = '/' + l + '/';
+	location.replace('/' + getLanguage() + '/');
 }
 </script>
-{{- else if eq .File.BaseFileName "redirects" }}
-<script>
-// TODO: i18n
-window.location.replace('{{ .Permalink }}')
-</script>
+
 {{- else }}
+
 <script>
-// TODO: additional rules for /xx/a/
-window.location.replace('{{ .Permalink }}')
+function shortAppAlias(name) {
+	name = name || location.pathname.substring(1, location.pathname.length - 1);
+	location.replace('/' + getLanguage() + '/a#' + name);
+}
+
+switch(location.pathname) {
+	case '/pricing/':
+	case '/profile/':
+	case '/help/':
+		shortAppAlias();
+		break;
+	case '/astra-license/': shortAppAlias('pricing'); break;
+	default:
+		location.replace('{{ .Permalink }}');
+		break;
+}
 </script>
+
 {{- end }}
 
 </body>
