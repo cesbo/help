@@ -1,6 +1,5 @@
 ---
-aliases:
-- "/en/docs/"
+title: "Astra. Quick Start"
 ---
 
 # Quick Start

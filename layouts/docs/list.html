@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ if ne .File.Dir "docs/" }}
+	{{ .Render "content" }}
+{{ else }}
+<script>
+window.location.replace('quick-start/')
+</script>
+{{ end }}
+
+{{ end }}

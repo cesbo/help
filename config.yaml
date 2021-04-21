@@ -1,6 +1,7 @@
 title: "Cesbo"
 author: "Cesbo Team"
 copyright: "© 2021, Cesbo OU; all rights reserved."
+contentDir: "content/en"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: true
 disableKinds:
@@ -33,6 +34,7 @@ languages:
     languageName: "Русский"
     description: "Профессиональное программное обеспечение для трансляции Цифрового ТВ"
     weight: 2
+    contentDir: "content/ru"
 
     menu:
       main:
