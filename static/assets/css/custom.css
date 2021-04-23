@@ -97,9 +97,11 @@ html {
 /* TEMPLATE */
 
 a[href=""] {
-	color: var(--text-light);
+	color: var(--text-light) !important;
+	background-color: transparent !important;
+	text-decoration: none !important;
 	cursor: default;
-	text-decoration: none;
+	pointer-events: none;
 }
 
 aside ul {
