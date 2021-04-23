@@ -4,7 +4,7 @@ title: "Astra. Quick Start"
 
 # Quick Start
 
-Cesbo Astra installation is a simple process - just copy single binary file.
+Cesbo Astra installation is a simple process - just copy single binary file to your server.
 
 ## Prepare
 

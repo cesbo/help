@@ -104,6 +104,20 @@ a[href=""] {
 	pointer-events: none;
 }
 
+aside nav {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+aside h2 {
+	font-weight: 600;
+	margin: 0;
+	padding: .5rem 1rem;
+	font-size: 1em;
+	color: var(--text-light);
+	cursor: default;
+}
+
 aside ul {
 	list-style: none;
 	margin: 0;
@@ -117,17 +131,7 @@ aside li {
 }
 
 aside a {
-	display: block;
 	padding: .25em 1em;
-}
-
-aside a:hover {
-	text-decoration: none;
-	background-color: var(--blue-lighter);
-}
-
-aside ul ul a {
-	padding-left: 1.5em;
 }
 
 header {
@@ -173,16 +177,14 @@ main.docs>aside:first-child a {
 	border-bottom-right-radius: var(--border-radius);
 }
 
-main.docs>aside:first-child>nav>ul>li {
+main.docs>aside:first-child ul {
 	border-bottom: 2px solid var(--blue-lighter);
-	margin-bottom: .5em;
+	margin-bottom: .25em;
 	padding-bottom: .5em;
 }
-main.docs>aside:first-child>nav>ul>li:last-child {
+
+main.docs>aside:first-child ul:last-child {
 	margin-bottom: 0;
-}
-main.docs>aside:first-child>nav>ul>li>a {
-	font-weight: 600;
 }
 
 main.docs>aside:last-child a {

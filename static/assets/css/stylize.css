@@ -94,13 +94,12 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-nav>a {
+nav a {
     padding: .5rem 1rem;
     display: block;
     white-space: nowrap;
-    font-weight: 600;
 }
-nav>a:hover{
+nav a:hover{
     color: var(--blue-dark);
     background-color: var(--blue-lighter);
     text-decoration: none;
