@@ -61,21 +61,21 @@ function shortAppAlias(lang, name) {
 }
 
 switch(location.pathname) {
-	case '/pricing/':			shortAppAlias(null, 'pricing'); break;
-	case '/profile/':			shortAppAlias(null, 'profile'); break;
-	case '/help/':				shortAppAlias(null, 'help'); break;
+	case '/pricing/': shortAppAlias(null, 'pricing'); break;
+	case '/profile/': shortAppAlias(null, 'profile'); break;
+	case '/help/': shortAppAlias(null, 'help'); break;
 
-	case '/en/pricing/':		shortAppAlias('en', 'pricing'); break;
-	case '/en/profile/':		shortAppAlias('en', 'profile'); break;
-	case '/en/help/':			shortAppAlias('en', 'help'); break;
+	case '/en/pricing/': shortAppAlias('en', 'pricing'); break;
+	case '/en/profile/': shortAppAlias('en', 'profile'); break;
+	case '/en/help/': shortAppAlias('en', 'help'); break;
 
-	case '/ru/pricing/':		shortAppAlias('ru', 'pricing'); break;
-	case '/ru/profile/':		shortAppAlias('ru', 'profile'); break;
-	case '/ru/help/':			shortAppAlias('ru', 'help'); break;
+	case '/ru/pricing/': shortAppAlias('ru', 'pricing'); break;
+	case '/ru/profile/': shortAppAlias('ru', 'profile'); break;
+	case '/ru/help/': shortAppAlias('ru', 'help'); break;
 
-	case '/astra-license/':		shortAppAlias(null, 'pricing'); break;
+	case '/astra-license/': shortAppAlias(null, 'pricing'); break;
 
-	default: 					location.replace('{{ .Permalink }}');
+	default: location.replace('{{ .Permalink }}');
 }
 </script>
 

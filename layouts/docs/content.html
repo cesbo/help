@@ -1,9 +1,11 @@
+<aside>
 {{ with .Site.GetPage "docs" "_summary" }}{{ .Content }}{{ end }}
+</aside>
+
+<article>
+{{ .Content }}
+</article>
 
 <aside>
 {{ .TableOfContents }}
 </aside>
-
-<article class="container-fluid">
-{{ .Content }}
-</article>

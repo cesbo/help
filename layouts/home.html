@@ -1,12 +1,11 @@
 {{ define "main" }}
-<div class="row landing-header"><div class="col-lg-4">
+<div class="landing-hero">
+	<div>
+		<h1>Astra</h1>
+		<p class="lead">{{ .Site.Params.description }}</p>
+	</div>
 
-	<h1>Astra</h1>
-	<p class="lead">{{ .Site.Params.description }}</p>
-
-</div><div class="col-lg-8 px-0">
-
-	<div class="astra-demo">
+	<div>
 		<div class="demo-card-stack">
 			<span class="demo-card card-true-2">
 				<div class="demo-card-name">DVB Adapter</div>
@@ -60,10 +59,9 @@
 			</span>
 		</div>
 	</div>
+</div>
 
-</div></div>
-
-<div class="container-fluid">
+<div class="landing-info">
 {{ .Content }}
 </div>
 

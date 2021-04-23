@@ -1,16 +1,76 @@
 <!DOCTYPE html>
-<html class="h-100" lang="{{ .Language.Lang }}">
+<html lang="{{ .Language.Lang }}">
+
 <head>
-{{ partial "head.html" . }}
+	{{- $description := .Description | default .Site.Params.description | plainify | htmlUnescape -}}
+	{{- $title := .Site.Title }}
+	{{- if isset .Params "title" }}{{ $title = print .Params.title " - " $title }}{{ end }}
+	<meta charset="utf-8" />
+	<title>{{ $title }}</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="generator" content="vi" />
+	<meta name="description" content="{{ $description }}" />
+	<meta name="title" content="{{ $title }}" />
+	<meta name="image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	<meta property="og:url" content="{{ .Permalink }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="{{ .Site.Title }}" />
+	<meta property="og:title" content="{{ $title }}" />
+	<meta property="og:description" content="{{ $description }}" />
+	<meta property="og:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	{{- if isset .Site.Params "twitter" }}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+	<meta name="twitter:title" content="{{ $title }}" />
+	<meta name="twitter:description" content="{{ $description }}" />
+	<meta name="twitter:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+	<meta name="twitter:image:alt" content="{{ .Site.Title }}" />
+	{{- end }}
+
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}assets/img/favicon.png" />
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="alternate" href="{{ .Site.BaseURL }}" hreflang="x-default" />
+
+	{{- range $.Site.Home.AllTranslations }}
+	<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="{{ .Language.LanguageName }}" />
+	{{- end }}
+
+	<link rel="stylesheet" href="/assets/css/stylize.css">
+	<link rel="stylesheet" href="/assets/css/custom.css" />
 </head>
 
-<body class="d-flex flex-column h-100">
-{{ partial "main-menu.html" . }}
+<body>
+	<header>
+		<nav>
+			<a href="{{ .Site.BaseURL }}{{ .Language.Lang }}/">
+				<img src="/assets/img/logo.svg" height="30" />
+			</a>
+			{{- range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{- end }}
+		</nav>
+	</header>
 
-<main role="main" id="content" class="flex-shrink-0">
-	{{- block "main" . }}{{- end }}
-</main>
 
-{{ partial "footer.html" . }}
+	<main class="{{ .Type }}">{{ block "main" . }}{{ end }}</main>
+
+	<footer>
+		<nav>
+			<span>&copy; {{ now.Year }}, Cesbo OÜ</span>
+
+			{{- range .Site.Menus.footer }}
+			<a href="{{ .URL }}">{{ .Name }}</a>
+			{{- end }}
+
+			{{- if .IsTranslated }}{{ range .Translations }}
+			<a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+			{{- end }}{{ end }}
+		</nav>
+	</footer>
 </body>
+
 </html>
