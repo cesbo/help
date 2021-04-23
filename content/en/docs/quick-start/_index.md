@@ -80,11 +80,7 @@ firewall-cmd --permanent --zone=public --add-service=astra
 firewall-cmd --reload
 ```
 
-## Install archived version
+## Archived guides
 
-On the web site also available archive: http://cesbo.com/download/astra/. Find requried version, download it, and set execute permission:
-
-```sh
-curl -Lo /usr/bin/astra link-to-requried-version
-chmod +x /usr/bin/astra
-```
+- [Autorun with init.d script]()
+- [Autorun with Monit]()

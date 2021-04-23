@@ -11,6 +11,10 @@ disableKinds:
 params:
   twitter: "@cesbo"
 
+# Syntax Highlighting
+pygmentsCodefences: true
+pygmentsUseClasses: true
+
 languages:
   en:
     languageName: "English"

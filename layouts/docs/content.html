@@ -1,5 +1,5 @@
 <aside>
-{{ with .Site.GetPage "docs" "_summary" }}{{ .Content }}{{ end }}
+{{ with .Site.GetPage "docs" "_summary" }}<nav>{{ .Content }}</nav>{{ end }}
 </aside>
 
 <article>

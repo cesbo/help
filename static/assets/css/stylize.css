@@ -1,23 +1,52 @@
-/*! stylize.css v1.0.0 | License MIT | https://github.com/vasanthv/stylize.css */
-:root{
-    --text: #333333;
-    --text-med: #888888;
-    --text-light: #cccccc;
-    --text-lighter: #eeeeee;
-    --blue: #3498db;
-    --dark-blue: #2980b9;
+/*! based on https://github.com/vasanthv/stylize.css */
+
+:root {
+    --brand-color: #519ed4;
+    --background: #ffffff;
+
+    --blue: #519ed4;
+    --blue-dark: #31708f;
+    --blue-lighter: #d9edf7;
+
+    --green: #66bb6a;
+
+    --red: #b71c1c;
+    --red-lighter: #f2dede;
+
     --yellow: #ffeaa7;
-    --red: #c0392b;
+
+    --text: #212121;
+    --text-med: #626262;
+    --text-light: #9a9a9a;
+    --text-lighter: #f5f5f5;
+
     --border-radius: 3px;
+
+    --button-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; /* To use the system default font. */
-    line-height: 1.5; 
+    line-height: 1.5;
     font-size: 1em;
-    color:var(--text);
-    margin: 10px;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
     -webkit-text-size-adjust: 100%;
+    overflow-wrap: break-word;
+    height: 100%;
 }
 
 /* Headings */
@@ -48,27 +77,33 @@ h6{
 
 /* Links */
 a{
-    color:var(--blue);
+    text-decoration: none;
+    color: var(--blue);
     background-color: transparent;
 }
-a:visited{
-    color:var(--dark-blue);
+a:hover{
+    color: var(--blue-dark);
+    text-decoration: underline;
 }
 
 /* Navigation Links*/
 nav{
-    background-color: var(--text-lighter);
-    padding: 1em;
-    margin:-10px;
+    background-color: var(--background);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
-nav a{
-    padding:0.5em;
-    border-radius: var(--border-radius);
+nav>a {
+    padding: .5rem 1rem;
+    display: block;
+    white-space: nowrap;
+    font-weight: 600;
+}
+nav>a:hover{
+    color: var(--blue-dark);
+    background-color: var(--blue-lighter);
     text-decoration: none;
-}
-nav a:hover{
-    background-color: var(--text-light);
-    color: var(--text)
 }
 
 /* Horizontal Line */
@@ -84,52 +119,34 @@ p{
 }
 mark{
     background-color: var(--yellow);
-    color:#333333;
+    color: #333333;
 }
 small{
     font-size: 80%;
 }
-sub, 
+sub,
 sup{
     font-size: 75%;
 }
 
 /* Quotation and Citation tags*/
+pre{
+    border-radius: var(--border-radius);
+    padding:1.25em 1em;
+    border: thin solid var(--text-med);
+    line-height: 1.25;
+}
 blockquote{
     border-left: 4px solid var(--text-light);
     margin:1em 0;
     padding:0.6em 1em;
 }
-pre{
-    font-family: monospace;
-    border:1px solid var(--text-light);
-    background-color: var(--text-lighter);
-    padding: 0.8em;
-    border-radius: var(--border-radius);
-    font-size: 1em;
-    white-space: pre-wrap; 
-    word-wrap: break-word; 
-}
-code, 
-kbd, 
+code,
+kbd,
 samp{
     font-family: monospace;
     font-size: 1em;
-}
-code, 
-kbd{
-    border-radius: var(--border-radius);
-    padding:0px 2px;
-}
-code{
-    border:1px solid var(--text-light);
-    background-color: var(--text-lighter);
-    color:var(--red);
-}
-kbd{
-    border:1px solid var(--text);
-    background-color: var(--text);
-    color:var(--text-lighter);
+    line-height: 1.5;
 }
 
 /* List items */
@@ -224,16 +241,16 @@ progress[value]::-webkit-progress-value{
 table{
     border-collapse: collapse;
 }
-table, 
-table th, 
+table,
+table th,
 table td {
     border-bottom: 1px solid var(--text-light);
     padding:0.33em 0.66em;
     text-align: left;
     vertical-align: middle;
 }
-table[border="1"], 
-table[border="1"] th, 
+table[border="1"],
+table[border="1"] th,
 table[border="1"] td {
     border: 1px solid var(--text-light);
 }
@@ -274,5 +291,5 @@ table[border="1"] td {
     text-decoration: none;
 }
 ol.reset, ul.reset {
-	list-style: none;
+    list-style: none;
 }

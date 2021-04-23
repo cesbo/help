@@ -41,8 +41,9 @@
 	<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="{{ .Language.LanguageName }}" />
 	{{- end }}
 
-	<link rel="stylesheet" href="/assets/css/stylize.css">
+	<link rel="stylesheet" href="/assets/css/stylize.css" />
 	<link rel="stylesheet" href="/assets/css/custom.css" />
+	{{- if eq .Type "docs" }}<link rel="stylesheet" href="/assets/css/syntax.css" />{{ end }}
 </head>
 
 <body>
