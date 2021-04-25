@@ -109,13 +109,13 @@ aside nav {
 	align-items: flex-start;
 }
 
-aside details {
+aside nav details {
 	width: 100%;
 }
 
-aside summary {
+aside nav summary {
 	font-weight: 600;
-	padding: .5rem 1rem;
+	padding: .2em 1em;
 	color: var(--text-light);
 }
 
@@ -131,8 +131,8 @@ aside li {
 	padding: 0;
 }
 
-aside a {
-	padding: .25em 1em;
+aside nav a {
+	padding: .2em 1em;
 }
 
 header {
@@ -176,17 +176,6 @@ main.docs>aside {
 main.docs>aside a {
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
-}
-
-main.docs>aside ul {
-	border-bottom: 2px solid var(--blue-lighter);
-	margin-bottom: .25em;
-	padding-bottom: .5em;
-}
-
-main.docs>aside ul:last-child {
-	margin-bottom: 0;
-	border-bottom: none;
 }
 
 main.docs>article {

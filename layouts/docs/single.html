@@ -5,36 +5,35 @@
 {{- $current := . }}
 
 <nav>
-{{ range .CurrentSection.Params.sidebar }}
+{{- range .CurrentSection.Params.sidebar }}
 
-{{ $isOpen := false }}
-{{ range .items }}
-	{{ with $.CurrentSection.GetPage . }}
-		{{ if eq $current.RelPermalink .RelPermalink }}
-			{{ $isOpen = true }}
-		{{ end }}
-	{{ end }}
-{{ end }}
+{{- $isOpen := false }}
+{{- range .items }}
+	{{- with $.CurrentSection.GetPage . }}
+		{{- if eq $current.RelPermalink .RelPermalink }}
+			{{- $isOpen = true }}
+		{{- end }}
+	{{- end }}
+{{- end }}
 
-<details {{ if $isOpen }}open{{ end }}>
+<details{{ if $isOpen }} open{{ end }}>
 <summary>{{ .title }}</summary>
-
 <ul>
-{{ range .items }}
+{{- range .items }}
 <li>
-	{{ with $.CurrentSection.GetPage . }}
+	{{- with $.CurrentSection.GetPage . }}
 	<a href="{{ .RelPermalink }}" class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}">
 		{{ .Title }}
 	</a>
-	{{ else }}
+	{{- else }}
 	<a href="">{{ . }}</a>
-	{{ end }}
+	{{- end }}
 </li>
-{{ end }}
+{{- end }}
 </ul>
 </details>
 
-{{ end }}
+{{- end }}
 </nav>
 
 </aside>
