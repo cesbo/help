@@ -109,13 +109,14 @@ aside nav {
 	align-items: flex-start;
 }
 
-aside h2 {
+aside details {
+	width: 100%;
+}
+
+aside summary {
 	font-weight: 600;
-	margin: 0;
 	padding: .5rem 1rem;
-	font-size: 1em;
 	color: var(--text-light);
-	cursor: default;
 }
 
 aside ul {
@@ -168,28 +169,24 @@ main.docs {
 	flex-direction: row;
 }
 
-main.docs>aside:first-child {
+main.docs>aside {
 	min-width: 300px;
 }
 
-main.docs>aside:first-child a {
+main.docs>aside a {
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
 
-main.docs>aside:first-child ul {
+main.docs>aside ul {
 	border-bottom: 2px solid var(--blue-lighter);
 	margin-bottom: .25em;
 	padding-bottom: .5em;
 }
 
-main.docs>aside:first-child ul:last-child {
+main.docs>aside ul:last-child {
 	margin-bottom: 0;
-}
-
-main.docs>aside:last-child a {
-	border-top-left-radius: var(--border-radius);
-	border-bottom-left-radius: var(--border-radius);
+	border-bottom: none;
 }
 
 main.docs>article {
@@ -198,15 +195,13 @@ main.docs>article {
 }
 
 @media only screen and (max-width: 800px) {
-	main.docs>:first-child {
+	main.docs>aside {
 		display: none;
 	}
 }
 
 @media only screen and (max-width: 1000px) {
-	main.docs>:last-child {
-		display: none;
-	}
+
 }
 
 pre {

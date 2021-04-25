@@ -1,1 +1,47 @@
-{{ define "main" }}{{ .Render "content" }}{{ end }}
+{{ define "main" }}
+
+<aside>
+
+{{- $current := . }}
+
+<nav>
+{{ range .CurrentSection.Params.sidebar }}
+
+{{ $isOpen := false }}
+{{ range .items }}
+	{{ with $.CurrentSection.GetPage . }}
+		{{ if eq $current.RelPermalink .RelPermalink }}
+			{{ $isOpen = true }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+<details {{ if $isOpen }}open{{ end }}>
+<summary>{{ .title }}</summary>
+
+<ul>
+{{ range .items }}
+<li>
+	{{ with $.CurrentSection.GetPage . }}
+	<a href="{{ .RelPermalink }}" class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}">
+		{{ .Title }}
+	</a>
+	{{ else }}
+	<a href="">{{ . }}</a>
+	{{ end }}
+</li>
+{{ end }}
+</ul>
+</details>
+
+{{ end }}
+</nav>
+
+</aside>
+
+<article>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+</article>
+
+{{ end }}

@@ -1,8 +1,6 @@
 ---
-title: "Astra. Backup"
+title: Backup
 ---
-
-# Backup
 
 ## Create
 

@@ -99,10 +99,14 @@ nav a {
     display: block;
     white-space: nowrap;
 }
-nav a:hover{
+nav a:hover {
     color: var(--blue-dark);
     background-color: var(--blue-lighter);
     text-decoration: none;
+}
+nav a.active {
+    font-weight: 600;
+    color: var(--blue-dark);
 }
 
 /* Horizontal Line */
@@ -151,6 +155,11 @@ samp{
 /* List items */
 ul, ol{
     padding-left: 2em;
+}
+
+/* Details */
+summary{
+    cursor: pointer;
 }
 
 /* Form elements */
