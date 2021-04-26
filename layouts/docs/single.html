@@ -1,41 +1,34 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/assets/css/syntax.css" />
+{{ end }}
+
 {{ define "main" }}
 
-<aside>
-
 {{- $current := . }}
+{{- $docs := $.GetPage "docs" }}
 
+<aside>
 <nav>
-{{- range .CurrentSection.Params.sidebar }}
-
-{{- $isOpen := false }}
-{{- range .items }}
-	{{- with $.CurrentSection.GetPage . }}
-		{{- if eq $current.RelPermalink .RelPermalink }}
-			{{- $isOpen = true }}
+{{- range $docs.Sections }}
+	<details {{ if eq $current.CurrentSection .CurrentSection }}open{{ end }}>
+		<summary>{{ .Title }}</summary>
+		<ul>
+		{{- range .Pages }}
+			{{- $class := slice }}
+			{{- if eq $current.RelPermalink .RelPermalink }}
+				{{ $class = $class | append "active" }}
+			{{- end }}
+			{{- $class = delimit $class " " }}
+			<li>
+				<a href="{{ .RelPermalink }}" class="{{ $class }}">
+					{{ .Title }}
+				</a>
+			</li>
 		{{- end }}
-	{{- end }}
-{{- end }}
-
-<details{{ if $isOpen }} open{{ end }}>
-<summary>{{ .title }}</summary>
-<ul>
-{{- range .items }}
-<li>
-	{{- with $.CurrentSection.GetPage . }}
-	<a href="{{ .RelPermalink }}" class="{{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}">
-		{{ .Title }}
-	</a>
-	{{- else }}
-	<a href="">{{ . }}</a>
-	{{- end }}
-</li>
-{{- end }}
-</ul>
-</details>
-
+		</ul>
+	</details>
 {{- end }}
 </nav>
-
 </aside>
 
 <article>

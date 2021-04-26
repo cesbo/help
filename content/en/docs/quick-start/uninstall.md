@@ -1,5 +1,6 @@
 ---
 title: Uninstall
+weight: 5
 ---
 
 Before uninstall please make [backup]({{< relref "backup" >}})

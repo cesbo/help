@@ -1,5 +1,6 @@
 ---
 title: Install
+weight: 1
 ---
 
 Cesbo Astra installation is a simple process - just copy single binary file to your server.

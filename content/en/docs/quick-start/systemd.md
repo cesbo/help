@@ -1,5 +1,6 @@
 ---
 title: Service Options
+weight: 7
 ---
 
 Most Linux distributions uses `systemd` for the system service management by the default.

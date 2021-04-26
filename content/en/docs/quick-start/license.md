@@ -1,5 +1,6 @@
 ---
 title: License
+weight: 2
 ---
 
 Valid license is required to launch Astra.

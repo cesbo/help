@@ -1,5 +1,6 @@
 ---
 title: Update
+weight: 4
 ---
 
 Before update please make [backup]({{< relref "backup" >}})

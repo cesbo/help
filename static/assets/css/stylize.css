@@ -18,7 +18,7 @@
     --text: #212121;
     --text-med: #626262;
     --text-light: #9a9a9a;
-    --text-lighter: #f5f5f5;
+    --text-lighter: #f6f7f6;
 
     --border-radius: 3px;
 
@@ -87,7 +87,7 @@ a:hover{
 }
 
 /* Navigation Links*/
-nav{
+nav {
     background-color: var(--background);
     display: flex;
     flex-wrap: nowrap;
@@ -110,43 +110,45 @@ nav a.active {
 }
 
 /* Horizontal Line */
-hr{
+hr {
     border: 1px solid var(--text-med);
     border-bottom: 0px;
     height:0px;
 }
 
 /* Text formatting tags */
-p{
+p {
     margin:1em 0;
 }
-mark{
+mark {
     background-color: var(--yellow);
     color: #333333;
 }
-small{
+small {
     font-size: 80%;
 }
 sub,
-sup{
+sup {
     font-size: 75%;
 }
 
 /* Quotation and Citation tags*/
-pre{
+pre {
     border-radius: var(--border-radius);
-    padding:1.25em 1em;
-    border: thin solid var(--text-med);
+    padding: 1.25em 1em;
     line-height: 1.25;
+    background-color: var(--text-lighter);
+    overflow-x: auto;
+	overflow-y: hidden;
 }
-blockquote{
+blockquote {
     border-left: 4px solid var(--text-light);
     margin:1em 0;
     padding:0.6em 1em;
 }
 code,
 kbd,
-samp{
+samp {
     font-family: monospace;
     font-size: 1em;
     line-height: 1.5;

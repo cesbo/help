@@ -3,8 +3,16 @@
 
 <head>
 	{{- $description := .Description | default .Site.Params.description | plainify | htmlUnescape -}}
-	{{- $title := .Site.Title }}
-	{{- if isset .Params "title" }}{{ $title = print .Params.title " - " $title }}{{ end }}
+
+	{{- $title := "" }}
+	{{- if eq .Title "" }}
+		{{- $title = .Site.Title }}
+	{{- else if eq .CurrentSection.Title "" }}
+		{{- $title = print .Title " - " .Site.Title }}
+	{{- else }}
+		{{- $title = print .Title " - " .CurrentSection.Title " - " .Site.Title }}
+	{{- end }}
+
 	<meta charset="utf-8" />
 	<title>{{ $title }}</title>
 
@@ -43,7 +51,7 @@
 
 	<link rel="stylesheet" href="/assets/css/stylize.css" />
 	<link rel="stylesheet" href="/assets/css/custom.css" />
-	{{- if eq .Type "docs" }}<link rel="stylesheet" href="/assets/css/syntax.css" />{{ end }}
+	{{- block "head" . }}{{ end }}
 </head>
 
 <body>
@@ -55,7 +63,6 @@
 			{{- range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{- end }}
 		</nav>
 	</header>
-
 
 	<main class="{{ .Type }}">{{ block "main" . }}{{ end }}</main>
 

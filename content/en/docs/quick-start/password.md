@@ -1,5 +1,6 @@
 ---
 title: Reset Password
+weight: 6
 ---
 
 If you forgot your password. Use next command in console:

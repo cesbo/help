@@ -1,3 +1,5 @@
 {{ define "main" }}
-<script>window.location.replace('quick-start/')</script>
+<script>
+window.location.replace('{{ (index .Pages 0).RelPermalink }}')
+</script>
 {{ end }}
