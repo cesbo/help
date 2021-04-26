@@ -1,5 +1,6 @@
 ---
 title: Reset Password
+description: Setup new password for web interface
 weight: 6
 ---
 

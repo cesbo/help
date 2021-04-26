@@ -1,5 +1,6 @@
 ---
 title: Uninstall
+description: Uninstall Astra
 weight: 5
 ---
 

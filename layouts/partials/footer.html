@@ -1,0 +1,13 @@
+<footer>
+	<nav>
+		<span>&copy; {{ now.Year }}, Cesbo OÜ</span>
+
+		{{- range .Site.Menus.footer }}
+		<a href="{{ .URL }}">{{ .Name }}</a>
+		{{- end }}
+
+		{{- if .IsTranslated }}{{ range .Translations }}
+		<a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+		{{- end }}{{ end }}
+	</nav>
+</footer>

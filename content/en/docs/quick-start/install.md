@@ -1,5 +1,6 @@
 ---
 title: Install
+description: Download and Install Astra. System process management
 weight: 1
 ---
 

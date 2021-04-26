@@ -11,6 +11,11 @@ disableKinds:
 params:
   twitter: "@cesbo"
 
+outputs:
+  home:
+  - html
+  - json
+
 # Syntax Highlighting
 pygmentsCodefences: true
 pygmentsUseClasses: true

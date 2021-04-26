@@ -1,0 +1,52 @@
+<head>
+	{{- $description := .Description | default .Site.Params.description | plainify | htmlUnescape -}}
+
+	{{- $title := "" }}
+	{{- if eq .Title "" }}
+		{{- $title = .Site.Title }}
+	{{- else if eq .CurrentSection.Title "" }}
+		{{- $title = print .Title " - " .Site.Title }}
+	{{- else }}
+		{{- $title = print .Title " - " .CurrentSection.Title " - " .Site.Title }}
+	{{- end }}
+
+	<meta charset="utf-8" />
+	<title>{{ $title }}</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	{{ hugo.Generator }}
+	<meta name="description" content="{{ $description }}" />
+	<meta name="title" content="{{ $title }}" />
+	<meta name="image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	<meta property="og:url" content="{{ .Permalink }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="{{ .Site.Title }}" />
+	<meta property="og:title" content="{{ $title }}" />
+	<meta property="og:description" content="{{ $description }}" />
+	<meta property="og:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+
+	{{- if isset .Site.Params "twitter" }}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+	<meta name="twitter:title" content="{{ $title }}" />
+	<meta name="twitter:description" content="{{ $description }}" />
+	<meta name="twitter:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
+	<meta name="twitter:image:alt" content="{{ .Site.Title }}" />
+	{{- end }}
+
+	<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}assets/img/favicon.png" />
+
+	<link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="alternate" href="{{ .Site.BaseURL }}" hreflang="x-default" />
+
+	{{- range $.Site.Home.AllTranslations }}
+	<link rel="alternate" href="{{ .Permalink }}" hreflang="{{ .Lang }}" title="{{ .Language.LanguageName }}" />
+	{{- end }}
+
+	<link rel="stylesheet" href="/assets/css/stylize.css" />
+	<link rel="stylesheet" href="/assets/css/custom.css" />
+	{{- block "head" . }}{{ end }}
+</head>

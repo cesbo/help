@@ -1,5 +1,6 @@
 ---
 title: License
+description: Buy new license, or request for a free demo license. Install license
 weight: 2
 ---
 

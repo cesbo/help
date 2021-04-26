@@ -1,5 +1,16 @@
 {{ define "main" }}
-<script>
-window.location.replace('{{ (index .Pages 0).RelPermalink }}')
-</script>
+
+<div>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range .Pages }}
+<div>
+	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	<p>{{ .Description | markdownify }}</p>
+</div>
+{{ end }}
+
+</div>
+
 {{ end }}

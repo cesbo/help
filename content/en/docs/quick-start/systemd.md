@@ -1,5 +1,6 @@
 ---
 title: Service Options
+description: System service management with systemd
 weight: 7
 ---
 
