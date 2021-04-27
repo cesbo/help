@@ -11,6 +11,9 @@ disableKinds:
 params:
   twitter: "@cesbo"
 
+minify:
+  minifyOutput: false
+
 outputs:
   home:
   - html

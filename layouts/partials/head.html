@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
 <head>
 	{{- $description := .Description | default .Site.Params.description | plainify | htmlUnescape -}}
 
@@ -50,3 +52,4 @@
 	<link rel="stylesheet" href="/assets/css/custom.css" />
 	{{- block "head" . }}{{ end }}
 </head>
+<body>
