@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+<head>
 {{- partial "head.html" . }}
+{{- block "head" . }}{{ end }}
+</head>
+<body>
+
 {{- partial "header.html" . }}
-<main>
+<main class="{{ .Type }}">
+	{{ block "aside" . }}{{ end }}
 	{{ block "main" . }}{{ end }}
 </main>
 {{- partial "footer.html" . }}
-{{- partial "tail.html" . }}
+
+<script src="/assets/js/app.js"></script>
+{{- block "tail" . }}{{ end }}
+</body>
+</html>

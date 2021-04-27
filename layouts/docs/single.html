@@ -2,9 +2,20 @@
 <link rel="stylesheet" href="/assets/css/syntax.css" />
 {{ end }}
 
+
+{{ define "aside" }}
+{{ partial "docs-aside.html" . }}
+{{ end }}
+
+
 {{ define "main" }}
 <article>
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 </article>
+{{ end }}
+
+
+{{ define "tail" }}
+<script src="/assets/js/search.js"></script>
 {{ end }}

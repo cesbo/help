@@ -1,5 +1,9 @@
-{{ define "main" }}
+{{ define "aside" }}
+	{{ partial "docs-aside.html" . }}
+{{ end }}
 
+
+{{ define "main" }}
 <div>
 <h1>{{ .Title }}</h1>
 {{ .Content }}
@@ -12,5 +16,9 @@
 {{ end }}
 
 </div>
+{{ end }}
 
+
+{{ define "tail" }}
+<script src="/assets/js/search.js"></script>
 {{ end }}
