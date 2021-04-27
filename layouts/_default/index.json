@@ -1,7 +1,7 @@
 {{- $.Scratch.Add "index" slice }}
 {{- range where .Site.Pages "Section" "docs" }}
     {{- if .IsPage }}
-        {{- $.Scratch.Add "index" (dict "title" .Title "contents" (htmlUnescape .Plain) "permalink" .RelPermalink) }}
+        {{- $.Scratch.Add "index" (dict "title" .Title "content" (htmlUnescape .Plain) "link" .RelPermalink) }}
     {{- end }}
 {{- end }}
 {{- $.Scratch.Get "index" | jsonify }}
