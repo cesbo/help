@@ -1,5 +1,6 @@
 ---
 title: InfluxDB
+weight: 2
 ---
 
 ## Install
@@ -51,10 +52,9 @@ Done. InfluxDB configured and ready to receive data.
     - `onair` - `true` if active input works without errors;
     - `sessions` - uint, number of sessions;
     - `bitrate` - uint, stream bitrate in KBit/s;
-    - `packets` - uint, TS-packets counter;
-    - `sc_error` - uint, scrambled TS-packets counter;
+    - `sc_error` - uint, percent of scrambled TS-packets;
     - `cc_error` - uint, CC errors counter;
-    - `pes_error` - uint, invalid PES-packets counter;
+    - `pes_error` - uint, percent of invalid PES-packets;
     - `sync_error` - uint, HTTP/HLS sync errors.
 
 ### Adapter

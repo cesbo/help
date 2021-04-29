@@ -1,6 +1,10 @@
 ---
 title: Grafana
+weight: 3
 ---
+
+Grafana is an open source analytics and interactive visualization web application.
+It works in pair with [InfluxDB]({{< relref "influxdb" >}}) to visualize status of the Astra, stream, and adapters.
 
 ## Install
 
@@ -45,6 +49,8 @@ Find out more information on official site: https://grafana.com/docs/grafana/lat
 
 ## Dashboard
 
+{{< figure src="/assets/img/docs/monitoring/grafana-1.png" alt="App status in Grafana" >}}
+
 Dashboard has next variables:
 
 - `Source` - choose `Astra` or other name;
@@ -80,5 +86,8 @@ Recent events on top of the table. All values in the table at the event time:
     - `PES Errors` - percent of the video/audio packets with the corrupted content;
     - `Scrambled` - percent of the scrambled packets;
     - `Bitrate` - stream bitrate in KBit/s.
+
+{{< figure src="/assets/img/docs/monitoring/grafana-2.png" alt="Charts in Grafana" >}}
+
 - `Adapters` - chart displayed for each selected adapter;
 - `Streams` - chart displayed for each selected stream.

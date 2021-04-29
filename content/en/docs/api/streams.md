@@ -74,7 +74,6 @@ Response:
 - `onair` - `true` if active input works without errors;
 - `sessions` - number of active sessions on the stream;
 - `bitrate` - stream bitrate in Kbit/s;
-- `packets` - TS-packets counter;
-- `sc_error` - scrambled TS-packets counter;
+- `sc_error` - percent of scrambled TS-packets;
 - `cc_error` - CC errors counter;
-- `pes_error` - invalid PES-packets counter.
+- `pes_error` - percent of invalid PES-packets packets.
