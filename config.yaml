@@ -9,6 +9,7 @@ disableKinds:
 - "sitemap"
 
 params:
+  cdn: "https://cdn.cesbo.dev"
   twitter: "@cesbo"
 
 minify:

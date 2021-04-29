@@ -40,7 +40,7 @@ Find out more information on official site: https://grafana.com/docs/grafana/lat
 
 ## Append dashboard
 
-1. Download our template for Grafana: [grafana.json](/assets/astra/monitoring/grafana.json)
+1. Download our template for Grafana: [dashboard.json]({{< param "cdn" >}}/docs/monitoring/grafana/dashboard.json)
 2. Open: Create -> Import
 3. Click "Upload JSON file"
 4. Choose downloaded file

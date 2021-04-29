@@ -33,11 +33,11 @@ Done. InfluxDB configured and ready to receive data.
 
 1. Open Astra Admin interface: http://astra-server:8000
 2. Open Settings -> General
-3. "Instance Name" - by the default is `astra` will be used as bucket in the InfluxDB
-4. "InfluxDB Address" - address of the InfluxDB: `http://db-server:8086`
-5. "InfluxDB Organization" - your orgranization in the InfluxDB settings
-6. "InfluxDB Token" - paste your token from clipboard
-7. Click "Apply & Restart"
+    - "Instance Name" - by the default is `astra` will be used as bucket in the InfluxDB
+    - "InfluxDB Address" - address of the InfluxDB: `http://db-server:8086`
+    - "InfluxDB Organization" - your orgranization in the InfluxDB settings
+    - "InfluxDB Token" - paste your token from clipboard
+3. Click "Apply & Restart"
 
 ## (Advanced) InfluxDB data structure
 
