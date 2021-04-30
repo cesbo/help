@@ -89,7 +89,7 @@ main.docs figure {
 	display: block;
 }
 
-main.docs figure>img {
+main.docs figure img {
 	display: block;
 	max-width: 100%;
 	margin: 0 auto;

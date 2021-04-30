@@ -1,7 +1,6 @@
 title: "Cesbo"
 author: "Cesbo Team"
 copyright: "© 2021, Cesbo OU; all rights reserved."
-contentDir: "content/en"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: true
 disableKinds:

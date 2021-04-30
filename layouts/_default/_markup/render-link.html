@@ -1,0 +1,7 @@
+{{- $link := .Destination }}
+{{- $isExternal := or (strings.HasPrefix $link "https://") (strings.HasPrefix $link "http://") }}
+<a
+	href="{{ $link | safeURL }}"
+	{{- with .Title}}title="{{ . }}"{{ end }}
+	{{- if $isExternal }}target="_blank"{{ end }}
+>{{ .Text | safeHTML }}</a>
