@@ -33,9 +33,7 @@ Click to expand:
 
 ### UDP/RTP
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 udp://[interface@]address[:port][#options]
@@ -67,14 +65,12 @@ udp://eth0@239.255.1.1
 udp://239.255.1.1:1234#cbr=8000
 ```
 
-</div></details>
+{{< /details >}}
 
 
 ### RTSP
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 RTSP protocol is only available for receiving
 
@@ -92,14 +88,12 @@ Input options:
 - `tcp` - interleaved mode. receive stream over TCP instead UDP
 - `ua=NAME` - custom User-Agent header
 
-</div></details>
+{{< /details >}}
 
 
 ### HTTP Input
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 http://[auth@]host[:port][/path][#options]
@@ -119,14 +113,12 @@ Options:
 - `debug` - log all receiving information: HTTP headers, segments download time
 - `bandwidth=KBIT` - only for HLS streams. Choose variant with bandwidth close to defined value. By the default selects stream with maximal bandwidth
 
-</div></details>
+{{< /details >}}
 
 
 ### HTTP Output
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 http://interface:port[/path][#options]
@@ -155,14 +147,12 @@ HTTP Options:
 - `buffer_size=SIZE` - the size of the client buffer, in kilobytes. A buffer is allocated for each connection and prevents data loss during transmission delay. Default: `1024`
 - `buffer_fill=SIZE` - the minimum size of data in kilobytes that must be collected before sending to the client. Default: `buffer_size / 20`
 
-</div></details>
+{{< /details >}}
 
 
 ### DigitalDevices RESI DVB-C Modulator
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 resi://#adapter=0&device=0&frequency=346&modulation=QAM256
@@ -177,14 +167,12 @@ Options:
 - `modulation` - DVB-C modulation, possible meanings: QAM16, QAM32, QAM64, QAM128, QAM256. Default: `QAM64`
 - `attenuator` - Signal attenuation. The value must be between 0 and 10. Default: `0`
 
-</div></details>
+{{< /details >}}
 
 
-### TBS6004 DVB-C Modulator
+### TBS6004 DVB-C Modulator [^1]
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 TBS6004 is a DVB-C modulator manufactured by TBS. Available since 2020-12-28
 
@@ -200,14 +188,12 @@ Options:
 - `symbolrate` - transponder speed. Default: `6900`
 - `modulation` - DVB-C modulation, possible meanings: QAM16, QAM32, QAM64, QAM128, QAM256. Default: `QAM64`
 
-</div></details>
+{{< /details >}}
 
 
 ### MPEG-TS File Input
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 file://path[#options]
@@ -223,14 +209,12 @@ Options:
 - `loop` - looping file playback
 - `lock` - full path to lock file to save reading position
 
-</div></details>
+{{< /details >}}
 
 
 ### MPEG-TS File Output
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 ```
 file://path[#options]
@@ -246,14 +230,12 @@ Options:
 - `duration` - single file length in minutes. Only for writing to directory
 - `depth` - arhive time in hours. Files older than `depth` will be removed from directory
 
-</div></details>
+{{< /details >}}
 
 
 ### Network Push
 
-<details>
-<summary>Read...</summary>
-<div markdown="1">
+{{< details "Read..." >}}
 
 Network Push — The HTTP-based transmission protocol.
 Used for transmitting stream from the client to the server.
@@ -267,7 +249,7 @@ np://[login:password@]address[:port][/path]
 - `port` - port number. Default: `80`
 - `path` - the path to the resource. Default: `/`
 
-</div></details>
+{{< /details >}}
 
 
 ## General input options
@@ -291,7 +273,8 @@ np://[login:password@]address[:port][/path]
 - `cc_limit=N` - set CC error limit. If the number of CC errors exceeds the set limit, Astra will switch to the backup source (if available). Default: no limit is set
 - `bitrate_limit=RATE` - set the minimum bitrate for the analyzer in Kbit/s. The source will be considered non-working if the stream bitrate is less than the specified value. Default: `16 Kbit/s` for stream without video data and `128 Kbit/s` for stream with video data
 - `pass_data` - pass the elementary streams containing the data (data-pid). By default, Astra deletes this data
-- `order` [^1] - sort PID in the PMT table. Often used with the `lang` parameter to select a priority audio track. In this example, we will set the English audio track first (default): `map.audio.ita=1475&map.audio.eng=1472&order=1472,1475`
-- `lang` [^1] - set the language property for the audio track. Example: `lang.1241=eng` where: `1241` - pid, `eng` - language code.
+- `order` [^2] - sort PID in the PMT table. Often used with the `lang` parameter to select a priority audio track. In this example, we will set the English audio track first (default): `map.audio.ita=1475&map.audio.eng=1472&order=1472,1475`
+- `lang` [^2] - set the language property for the audio track. Example: `lang.1241=eng` where: `1241` - pid, `eng` - language code.
 
-[^1]: Available from version 5.64
+[^1]: Version 2021-05-01 and newer
+[^2]: Version 5.64 and newer
