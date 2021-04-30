@@ -1,5 +1,6 @@
 ---
 title: Backup
+description: Stream input redundancy
 weight: 4
 ---
 

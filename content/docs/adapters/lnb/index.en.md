@@ -22,11 +22,14 @@ For circular polarized converters (e.g. 36°E, 56°E), set 10750 in LOF1
 - SLOF - Sub-band range. If adapter frequency more than SLOF, than will be used LOF2 value and sends tone (22 kHz) signal to LNB to switch
 - Force Tone - option to send 22 KHz tone signal.
 
-> **Voltage 13V/18V** - is not only for LNB power supply but also choosing signal polarization
->    - 13V is for Vertical/Right polarization. Switching signal in the range of 11-14 Volts
->    - 18V is for Horizontal/Left polarization. Switching signal in the range of 16-20 Volts
+{{< notice >}}
+**Voltage 13V/18V** - is not only for LNB power supply but also choosing signal polarization
 
-> **22kHz signal** is a heterodine switch (LOF1 or LOF2)
+- 13V is for Vertical/Right polarization. Switching signal in the range of 11-14 Volts
+- 18V is for Horizontal/Left polarization. Switching signal in the range of 16-20 Volts
+
+**22kHz signal** is a heterodine switch (LOF1 or LOF2)
+{{< /notice >}}
 
 ![DVB LNB Options](lnb.png)
 
@@ -34,11 +37,13 @@ For circular polarized converters (e.g. 36°E, 56°E), set 10750 in LOF1
 
 Disable LNB voltage supply and tone signal
 
-> Allows you to connect several DVB-adapters to single converter through
-> a passive splitter. On the splitter, only one adapter must be active,
-> the any other adapters should be passive. All adapters on same splitter
-> should use same polarization and same sub-band
-> (frequency is greater or less than the value of slof).
+{{< notice >}}
+Allows you to connect several DVB-adapters to single converter through
+a passive splitter. On the splitter, only one adapter must be active,
+the any other adapters should be passive. All adapters on same splitter
+should use same polarization and same sub-band
+(frequency is greater or less than the value of slof).
+{{< /notice >}}
 
 ## DiSEqC
 

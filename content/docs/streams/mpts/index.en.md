@@ -86,9 +86,12 @@ Not to perform on the set-top boxes and TV full channel search (which usually ta
 2. Go to settings `mpts_1` and open the `NIT` tab. Check all related multiplexes
 3. Done!
 
-> How it works
-> During the channel setup, the TV or STB finds the frequency 378,
-> with `mpts_1`, got the `NIT` tables for all linked multiplexes and scan them fast.
+{{< notice >}}
+### How it works
+
+During the channel setup, the TV or STB finds the frequency 378,
+with `mpts_1`, got the `NIT` tables for all linked multiplexes and scan them fast.
+{{< /notice >}}
 
 ## Advanced tab
 

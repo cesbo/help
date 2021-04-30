@@ -1,0 +1,8 @@
+{{- $class := slice "notice" }}
+{{- if len .Params | gt 0 }}
+	{{- $class = $class | append (.Get 0) }}
+{{- end }}
+{{- $class = delimit $class " " }}
+<div
+	class="{{ $class }}"
+>{{ .Inner | markdownify }}</div>

@@ -1,5 +1,6 @@
 ---
 title: Create
+description: Create new Single-Program or Multi-Program Trasnport stream. General stream options
 weight: 1
 ---
 

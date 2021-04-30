@@ -1,5 +1,6 @@
 ---
-title: Media Address Format
+title: Address Format
+description: Media address format and options
 weight: 6
 ---
 

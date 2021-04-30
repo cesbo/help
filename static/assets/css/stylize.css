@@ -148,7 +148,7 @@ pre {
     line-height: 1.25;
     background-color: var(--text-lighter);
     overflow-x: auto;
-	overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 blockquote {
@@ -296,15 +296,25 @@ table[border="1"] td {
     display: none;
 }
 
-/* NOTE */
+/* NOTICE */
 
-.note {
-	border: 1px solid var(--blue);
-	border-left-width: 4px;
-	padding: 2em;
+.notice {
+    border: 1px solid var(--blue);
+    border-left-width: 4px;
+    padding: 2em;
 }
 
-.error {
-	border-color: var(--red);
+.notice h3 {
+    padding-top: 0;
+    margin-top: 0;
+    border-bottom: thin solid var(--blue);
+}
+
+.notice.error {
+    border-color: var(--red);
     background-color: var(--red-lighter);
+}
+
+.notice.error h3 {
+    border-bottom-color: var(--red);
 }

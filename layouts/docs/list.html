@@ -1,21 +1,18 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/assets/css/syntax.css" />
+{{ end }}
+
+
 {{ define "aside" }}
-	{{ partial "docs-aside.html" . }}
+{{ partial "docs-aside.html" . }}
 {{ end }}
 
 
 {{ define "main" }}
-<div>
+<article>
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-
-{{ range .Pages }}
-<div>
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	<p>{{ .Description | markdownify }}</p>
-</div>
-{{ end }}
-
-</div>
+</article>
 {{ end }}
 
 
