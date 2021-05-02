@@ -1,5 +1,5 @@
 ---
-title: Docs
+title: "Astra"
 
 menu:
   main:

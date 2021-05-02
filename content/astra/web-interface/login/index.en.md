@@ -8,4 +8,4 @@ After installation default login and password will be: `admin`
 ![Login Form](form.png)
 
 Please, change default password for security reasons.
-If your forgot your password: [Reset Password]({{< relref "/docs/quick-start/password" >}})
+If your forgot your password: [Reset Password]({{< relref "/astra/quick-start/password" >}})

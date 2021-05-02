@@ -1,0 +1,26 @@
+<aside>
+	<nav>
+		{{- $docs := $.GetPage "astra" }}
+		<ul>
+			<li>
+				<a href="{{ $docs.RelPermalink }}"
+					{{- if eq $.Page $docs }} class="active"{{ end -}}
+				>{{ $docs.Title }}</a>
+			</li>
+		</ul>
+		{{- range $docs.Sections }}
+		<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
+			<summary>{{ .Title }}</summary>
+			<ul>
+				{{- range .Pages }}
+				<li>
+					<a href="{{ .RelPermalink }}"
+						{{- if eq $.Page . }} class="active"{{ end -}}
+					>{{ .Title }}</a>
+				</li>
+				{{- end }}
+			</ul>
+		</details>
+		{{- end }}
+	</nav>
+</aside>

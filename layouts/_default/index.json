@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice }}
-{{- range where .Site.Pages "Section" "docs" }}
+{{- range where .Site.Pages "Section" "astra" }}
     {{- if .IsPage }}
         {{- $.Scratch.Add "index" (dict "title" .Title "content" (htmlUnescape .Plain) "link" .RelPermalink) }}
     {{- end }}

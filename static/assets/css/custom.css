@@ -56,28 +56,28 @@ aside>nav a {
 	padding: .2em 1em;
 }
 
-/* DOCS */
+/* ASTRA DOCS */
 
-main.docs {
+main.astra {
 	display: flex;
 	flex-direction: row;
 }
 
-main.docs>:first-child {
+main.astra>:first-child {
 	min-width: 300px;
 }
 
-main.docs>:first-child a {
+main.astra>:first-child a {
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
 
-main.docs>:last-child {
+main.astra>:last-child {
 	flex-grow: 1;
 	padding: 0 1em;
 }
 
-main.docs a[href=""] {
+main.astra a[href=""] {
 	color: var(--text-light) !important;
 	background-color: transparent !important;
 	text-decoration: none !important;
@@ -85,11 +85,11 @@ main.docs a[href=""] {
 	pointer-events: none;
 }
 
-main.docs figure {
+main.astra figure {
 	display: block;
 }
 
-main.docs figure img {
+main.astra figure img {
 	display: block;
 	max-width: 100%;
 	margin: 0 auto;
@@ -99,7 +99,7 @@ main.docs figure img {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 800px) {
-	main.docs>aside {
+	main.astra>aside {
 		display: none;
 	}
 }

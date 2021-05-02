@@ -3,7 +3,7 @@
 {{- $title := "" }}
 {{- if eq .Title "" }}
 	{{- $title = .Site.Title }}
-{{- else if eq .CurrentSection.Title "" }}
+{{- else if or (eq .CurrentSection.Title "") (eq .CurrentSection .Page) }}
 	{{- $title = print .Title " - " .Site.Title }}
 {{- else }}
 	{{- $title = print .Title " - " .CurrentSection.Title " - " .Site.Title }}
