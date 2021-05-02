@@ -1,6 +1,6 @@
 <aside>
 	<nav>
-		{{- $docs := $.GetPage "astra" }}
+		{{- $docs := $.GetPage $.Section }}
 		<ul>
 			<li>
 				<a href="{{ $docs.RelPermalink }}"
