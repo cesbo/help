@@ -11,7 +11,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${datasource}",
       "description": "Average CPU usage.\nThe System CPU usage is for all cores. Max value is number of cores multiplied by 100\nThe App CPU usage is for all threads on all cores and relative to System CPU usage.",
       "fieldConfig": {
         "defaults": {},
@@ -139,7 +139,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${datasource}",
       "description": "The System Memory Usage - is total memory usage by all processes\nThe App Memory Usage - is total memory usage by all threads. Value is relative to total system momory",
       "fieldConfig": {
         "defaults": {},
@@ -262,7 +262,7 @@
       }
     },
     {
-      "datasource": null,
+      "datasource": "${datasource}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -414,7 +414,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "${datasource}",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -526,7 +526,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${datasource}",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -674,7 +674,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${datasource}",
       "description": "",
       "fieldConfig": {
         "defaults": {},
@@ -939,7 +939,7 @@
         "name": "stream",
         "options": [],
         "query": "from(bucket: \"${bucket}\")\r\n|> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n|> filter(fn: (r) => r._measurement == \"stream\")\r\n|> keyValues(keyColumns: [\"name\"])\r\n|> group()\r\n|> keep(columns: [\"name\"])",
-        "refresh": 1,
+        "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
         "sort": 1,
