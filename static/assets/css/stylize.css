@@ -310,11 +310,11 @@ table[border="1"] td {
     border-bottom: thin solid var(--blue);
 }
 
-.notice.error {
+.notice.alert {
     border-color: var(--red);
     background-color: var(--red-lighter);
 }
 
-.notice.error h3 {
+.notice.alert h3 {
     border-bottom-color: var(--red);
 }
