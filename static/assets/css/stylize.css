@@ -83,23 +83,31 @@ a:hover {
     text-decoration: underline;
 }
 
+a>svg.icon,
+details>summary>svg.icon {
+    fill: var(--blue);
+}
+
 /* Navigation Links*/
 
 nav {
-    background-color: var(--background);
     display: flex;
     flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+nav a,
+nav details.submenu>summary {
+    padding: 0 1rem;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-nav a {
-    padding: .5rem 1rem;
-    display: block;
     white-space: nowrap;
+    color: var(--blue);
 }
 
-nav a:hover {
+nav a:hover,
+nav details.submenu>summary:hover,
+nav details.submenu[open]>summary {
     color: var(--blue-dark);
     background-color: var(--blue-lighter);
     text-decoration: none;
@@ -108,6 +116,80 @@ nav a:hover {
 nav a.active {
     font-weight: 600;
     color: var(--blue-dark);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* SIDE MENU */
+
+nav.sidemenu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+nav.sidemenu details {
+    width: 100%;
+}
+
+nav.sidemenu summary {
+    font-weight: 600;
+    padding: .25rem 1rem;
+    color: var(--text-light);
+}
+
+nav.sidemenu a {
+    padding: .25rem 1rem;
+}
+
+/* SUB MENU */
+
+details.submenu {
+    position: relative;
+}
+
+details.submenu>summary {
+    list-style: none;
+    height: 100%;
+}
+
+details.submenu[open]>summary::before {
+    position: fixed;
+    content: " ";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    display: block;
+    cursor: default;
+    background: transparent;
+}
+
+details.submenu[open]>summary+* {
+    position: absolute;
+    z-index: 51;
+    background-color: var(--background);
+    background-clip: padding-box;
+    border: 1px solid var(--text-med);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 4px 0 var(--text-med);
+    overflow: hidden;
+}
+
+details.submenu-up[open]>summary+* { bottom: calc(100% + .25rem); }
+details.submenu-right[open]>summary+* { right: .25rem; text-align: right; }
+details.submenu-down[open]>summary+* { top: calc(100% + .25rem); }
+details.submenu-left[open]>summary+* { left: .25rem; }
+
+details.submenu a {
+    padding: .25rem 1rem;
+    text-align: right;
 }
 
 /* Horizontal Line */
@@ -317,4 +399,11 @@ table[border="1"] td {
 
 .notice.alert h3 {
     border-bottom-color: var(--red);
+}
+
+/* ICON */
+
+svg.icon {
+    width: 24px;
+    height: 24px;
 }

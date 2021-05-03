@@ -15,45 +15,19 @@ footer {
 header>nav,
 footer>nav {
 	padding: 0;
+	min-height: 2.5rem;
 }
 
-header>nav>:first-child,
-footer>nav>:first-child {
+header>nav>.logo,
+footer>nav>.copyright {
 	padding: 0 1rem;
 	margin-right: auto;
 	line-height: 0;
+	align-self: center;
 }
 
-header>nav>:first-child:hover {
+header>nav>.logo:hover {
 	background-color: transparent;
-}
-
-/* SIDEBAR */
-
-aside>nav {
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-aside>nav details {
-	width: 100%;
-}
-
-aside>nav summary {
-	font-weight: 600;
-	padding: .2em 1em;
-	color: var(--text-light);
-}
-
-aside>nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-aside>nav a {
-	padding: .2em 1em;
 }
 
 /* DOCS */
@@ -63,11 +37,13 @@ main.docs {
 	flex-direction: row;
 }
 
-main.docs>:first-child {
+main.docs>.sidemenu {
 	min-width: 300px;
+	max-width: 300px;
+	overflow-x: hidden;
 }
 
-main.docs>:first-child a {
+main.docs>.sidemenu a {
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }
@@ -99,7 +75,7 @@ main.docs figure img {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 800px) {
-	main.docs>aside {
+	nav>.sidebar {
 		display: none;
 	}
 }

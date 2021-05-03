@@ -1,6 +1,6 @@
 <header>
 	<nav>
-		<a href="{{ .Site.BaseURL }}{{ .Language.Lang }}/">
+		<a class="logo" href="{{ .Site.BaseURL }}{{ .Language.Lang }}/">
 			<img src="/assets/img/logo.svg" height="30" />
 		</a>
 		{{- range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{- end }}

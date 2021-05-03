@@ -1,26 +1,31 @@
-<aside>
-	<nav>
-		{{- $docs := $.GetPage $.Section }}
-		<ul>
-			<li>
-				<a href="{{ $docs.RelPermalink }}"
-					{{- if eq $.Page $docs }} class="active"{{ end -}}
-				>{{ $docs.Title }}</a>
-			</li>
-		</ul>
-		{{- range $docs.Sections }}
-		<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
-			<summary>{{ .Title }}</summary>
-			<ul>
-				{{- range .Pages }}
-				<li>
-					<a href="{{ .RelPermalink }}"
-						{{- if eq $.Page . }} class="active"{{ end -}}
-					>{{ .Title }}</a>
-				</li>
-				{{- end }}
-			</ul>
-		</details>
+<nav class="sidemenu">
+	{{- $docs := $.GetPage $.Section }}
+	<ul style="margin-bottom: .5em;">
+		<li>
+			<a href="{{ $docs.RelPermalink }}"
+				{{- if eq . $docs }} class="active"{{ end -}}
+			>{{ $docs.Title }}</a>
+		</li>
+		{{- range where $docs.Pages "IsNode" false }}
+		<li>
+			<a href="{{ .RelPermalink }}"
+				{{- if eq . $.Page }} class="active"{{ end -}}
+			>{{ .Title }}</a>
+		</li>
 		{{- end }}
-	</nav>
-</aside>
+	</ul>
+	{{- range $docs.Sections }}
+	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
+		<summary>{{ .Title }}</summary>
+		<ul>
+			{{- range .Pages }}
+			<li>
+				<a href="{{ .RelPermalink }}"
+					{{- if eq . $.Page }} class="active"{{ end -}}
+				>{{ .Title }}</a>
+			</li>
+			{{- end }}
+		</ul>
+	</details>
+	{{- end }}
+</nav>
