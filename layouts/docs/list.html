@@ -9,11 +9,10 @@
 
 
 {{ define "main" }}
-<article class="expand">
+<article class="flex-expand">
+{{ partial "edit-page" . }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-
-{{ partial "docs-tools" . }}
 </article>
 {{ end }}
 

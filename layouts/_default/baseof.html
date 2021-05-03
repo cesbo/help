@@ -4,10 +4,10 @@
 {{- partial "head.html" . }}
 {{- block "head" . }}{{ end }}
 </head>
-<body>
+<body class="flex-column">
 
 {{- partial "header.html" . }}
-<main class="expand {{ .Type }}">
+<main class="flex-expand {{ .Type }}">
 	{{ block "aside" . }}{{ end }}
 	{{ block "main" . }}{{ end }}
 </main>

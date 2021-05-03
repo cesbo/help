@@ -1,9 +1,5 @@
 ---
-title: "Terms"
-
-menu:
-  footer:
-    weight: 2
+title: "Terms and Conditions"
 ---
 
 # Terms and Conditions

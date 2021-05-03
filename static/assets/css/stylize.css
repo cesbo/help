@@ -25,7 +25,14 @@
 
     --border-radius: 3px;
 
-    --button-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --button-shadow: 0 0 4px 0 var(--text-light);
+
+    --space-unit: 1em;
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.8 * var(--space-unit));
+    --space-md: calc(1.2 * var(--space-unit));
+    --space-lg: calc(1.7 * var(--space-unit));
+    --space-xl: calc(2.5 * var(--space-unit));
 }
 
 *, ::after, ::before {
@@ -38,12 +45,9 @@ html {
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-
     font-family: var(--font-content);
     line-height: 1.5;
-    font-size: 1em;
+    font-size: var(--space-unit);
     background-color: var(--background);
     color: var(--text);
     margin: 0;
@@ -56,17 +60,17 @@ body{
 /* Headings */
 
 h1, h2, h3 {
-    margin: .5em 0;
-    padding: .5em 0;
+    margin: .3em 0;
+    padding: .3em 0;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: var(--space-xl);
     margin-top: 0;
     padding-top: 0;
 }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
+h2 { font-size: var(--space-lg); }
+h3 { font-size: var(--space-md); }
 
 h4, h5, h6 { display: none; }
 
@@ -171,9 +175,8 @@ details.submenu[open]>summary+* {
     z-index: 51;
     background-color: var(--background);
     background-clip: padding-box;
-    border: 1px solid var(--text-med);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 4px 0 var(--text-med);
+    box-shadow: var(--button-shadow);
     overflow: hidden;
 }
 
@@ -240,14 +243,14 @@ code,
 kbd,
 samp {
     font-family: var(--font-monospace);
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
 /* List items */
 
 ul, ol {
-    padding-left: 2em;
+    padding-left: var(--space-lg);
 }
 
 /* Details */
@@ -369,20 +372,20 @@ table[border="1"] td {
 
 /* Utility classes */
 
-.hide {
-    display: none;
-}
+.hide { display: none; }
 
-.expand {
-    flex-grow: 1;
-}
+.text-sm { font-size: var(--space-sm); }
+
+.flex-row { display: flex; flex-direction: row; }
+.flex-column { display: flex; flex-direction: column; }
+.flex-expand { flex-grow: 1; }
 
 /* NOTICE */
 
 .notice {
     border: 1px solid var(--blue);
     border-left-width: 4px;
-    padding: 2em;
+    padding: var(--space-lg);
 }
 
 .notice h3 {

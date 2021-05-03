@@ -1,6 +1,6 @@
 
 header {
-	border-bottom: thin solid var(--text-light);
+	box-shadow: var(--button-shadow);
 }
 
 main {
@@ -8,18 +8,22 @@ main {
 }
 
 footer {
-	border-top: thin solid var(--text-light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--text-lighter);
+	padding: var(--space-sm) 0;
 }
 
 header>nav,
 footer>nav {
 	padding: 0;
-	min-height: 2.5em;
+	min-height: var(--space-xl);
 }
 
 header>nav>.logo,
 footer>nav>.copyright {
-	padding: 0 1em;
+	padding: 0 var(--space-unit);
 	align-self: center;
 }
 
@@ -29,7 +33,6 @@ header>nav>.logo:hover {
 
 .copyright {
 	color: var(--text-light);
-	font-size: 90%;
 }
 
 /* DOCS */
@@ -51,7 +54,7 @@ main.docs>.sidemenu a {
 }
 
 main.docs>article {
-	padding: 0 1em;
+	padding: 0 var(--space-unit);
 }
 
 main.docs a[href=""] {
@@ -73,14 +76,16 @@ main.docs figure img {
 	box-shadow: 0 0 2px 0 #a9a9a9;
 }
 
-main.docs .docs-tools {
-	margin-top: 3rem;
+/* */
+
+.edit-page {
+	float: right;
+	margin: 1em .5em;
 }
 
-main.docs .docs-tools .github-link {
-	display: flex;
-	align-items: center;
-	font-size: 90%;
+.edit-page svg {
+	width: var(--space-md);
+	height: var(--space-md);
 }
 
 /* RESPONSIVE */
@@ -88,14 +93,6 @@ main.docs .docs-tools .github-link {
 @media only screen and (max-width: 800px) {
 	.hide-sm {
 		display: none;
-	}
-
-	footer>nav {
-		flex-direction: column;
-	}
-	footer>nav>.copyright {
-		margin-top: 1em;
-		order: 100;
 	}
 }
 

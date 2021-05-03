@@ -1,7 +1,6 @@
 <footer>
 	<nav>
-		<div class="copyright">&copy; {{ now.Year }}, Cesbo OÜ</div>
-		<div class="expand hide-sm"></div>
+		<div class="flex-expand hide-sm"></div>
 
 		{{- range .Site.Menus.footer }}
 		<a href="{{ .URL }}">{{ .Name }}</a>
@@ -25,6 +24,15 @@
 				</li>
 			</ul>
 		</details>
+		{{- end }}
+	</nav>
+	<nav class="text-sm" style="margin-top: 2em;">
+		<div class="copyright">&copy; {{ now.Year }}, Cesbo OÜ</div>
+		{{- with .GetPage "terms" }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+		{{- end }}
+		{{- with .GetPage "privacy" }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		{{- end }}
 	</nav>
 </footer>

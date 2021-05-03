@@ -1,9 +1,5 @@
 ---
-title: "Privacy"
-
-menu:
-  footer:
-    weight: 3
+title: "Privacy Policy"
 ---
 
 # Privacy Policy
