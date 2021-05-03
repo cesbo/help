@@ -9,16 +9,12 @@
 
 
 {{ define "main" }}
-<div>
-<article>
+<article class="expand">
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-</article>
 
-<div>
-<a href="https://github.com/cesbo/docs/edit/main/content/{{ .File.Path }}" target="_blank">Edit this page</a>
-</div>
-</div>
+{{ partial "docs-tools" . }}
+</article>
 {{ end }}
 
 

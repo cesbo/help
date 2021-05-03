@@ -83,11 +83,6 @@ a:hover {
     text-decoration: underline;
 }
 
-a>svg.icon,
-details>summary>svg.icon {
-    fill: var(--blue);
-}
-
 /* Navigation Links*/
 
 nav {
@@ -98,7 +93,7 @@ nav {
 
 nav a,
 nav details.submenu>summary {
-    padding: 0 1rem;
+    padding: 0 1em;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -139,12 +134,12 @@ nav.sidemenu details {
 
 nav.sidemenu summary {
     font-weight: 600;
-    padding: .25rem 1rem;
+    padding: .25em 1em;
     color: var(--text-light);
 }
 
 nav.sidemenu a {
-    padding: .25rem 1rem;
+    padding: .25em 1em;
 }
 
 /* SUB MENU */
@@ -182,14 +177,14 @@ details.submenu[open]>summary+* {
     overflow: hidden;
 }
 
-details.submenu-up[open]>summary+* { bottom: calc(100% + .25rem); }
-details.submenu-right[open]>summary+* { right: .25rem; text-align: right; }
-details.submenu-down[open]>summary+* { top: calc(100% + .25rem); }
-details.submenu-left[open]>summary+* { left: .25rem; }
+details.submenu-up[open]>summary+* { bottom: calc(100% + .25em); }
+details.submenu-right[open]>summary+* { right: .25em; }
+details.submenu-down[open]>summary+* { top: calc(100% + .25em); }
+details.submenu-left[open]>summary+* { left: .25em; }
 
-details.submenu a {
-    padding: .25rem 1rem;
-    text-align: right;
+details.submenu a,
+details.submenu span {
+    padding: .25em 1em;
 }
 
 /* Horizontal Line */
@@ -378,6 +373,10 @@ table[border="1"] td {
     display: none;
 }
 
+.expand {
+    flex-grow: 1;
+}
+
 /* NOTICE */
 
 .notice {
@@ -399,11 +398,4 @@ table[border="1"] td {
 
 .notice.alert h3 {
     border-bottom-color: var(--red);
-}
-
-/* ICON */
-
-svg.icon {
-    width: 24px;
-    height: 24px;
 }

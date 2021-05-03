@@ -1,6 +1,4 @@
-title: "Cesbo"
-author: "Cesbo Team"
-copyright: "© 2021, Cesbo OU; all rights reserved."
+title: Cesbo
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: true
 disableKinds:
@@ -8,7 +6,8 @@ disableKinds:
 - "sitemap"
 
 params:
-  cdn: "https://cdn.cesbo.dev"
+  cdn: https://cdn.cesbo.dev
+  repository: https://github.com/cesbo/docs
   twitter: "@cesbo"
 
 minify:
@@ -29,28 +28,8 @@ languages:
     description: "Professional software for Digital TV Broadcasting"
     weight: 1
 
-    menu:
-      main:
-      - name: "Profile"
-        weight: 3
-        url: "/en/profile/"
-      footer:
-      - name: "Contact Us"
-        weight: 1
-        url: "/en/help/"
-
   ru:
     languageName: "Русский"
     description: "Профессиональное программное обеспечение для трансляции Цифрового ТВ"
     weight: 2
     contentDir: "content/ru"
-
-    menu:
-      main:
-      - name: "Профиль"
-        weight: 3
-        url: "/ru/profile/"
-      footer:
-      - name: "Написать нам"
-        weight: 1
-        url: "/ru/help/"
