@@ -69,6 +69,7 @@ main.docs>.sidemenu {
 }
 
 main.docs>.sidemenu a {
+	height: var(--space-lg);
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
 }

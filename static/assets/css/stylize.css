@@ -31,7 +31,7 @@
     --space-xs: calc(0.5 * var(--space-unit));
     --space-sm: calc(0.8 * var(--space-unit));
     --space-md: calc(1.2 * var(--space-unit));
-    --space-lg: calc(1.7 * var(--space-unit));
+    --space-lg: calc(1.8 * var(--space-unit));
     --space-xl: calc(2.5 * var(--space-unit));
 }
 
@@ -73,6 +73,15 @@ h2 { font-size: var(--space-lg); }
 h3 { font-size: var(--space-md); }
 
 h4, h5, h6 { display: none; }
+
+h1>a, h2>a, h3>a {
+    float: right;
+}
+
+h1>a>svg, h2>a>svg, h3>a>svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
 
 /* Links */
 
