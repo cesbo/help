@@ -1,9 +1,5 @@
 <nav class="sidemenu hide-sm">
 	{{- $docs := $.GetPage $.Section }}
-	<form class="search">
-		<input type="text" placeholder="" />
-	</form>
-
 	<a href="{{ $docs.RelPermalink }}"
 		{{- if eq . $docs }} class="active"{{ end -}}
 	>{{ $docs.Title }}</a>

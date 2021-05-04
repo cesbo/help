@@ -101,13 +101,17 @@ a:hover {
 nav {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     width: 100%;
 }
 
 nav a,
 nav details>summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1;
     padding: var(--space-xs) var(--space-unit);
     white-space: nowrap;
     color: var(--blue);
@@ -187,11 +191,6 @@ details.submenu-up[open]>summary+* { bottom: calc(100% + .25em); }
 details.submenu-right[open]>summary+* { right: .25em; }
 details.submenu-down[open]>summary+* { top: calc(100% + .25em); }
 details.submenu-left[open]>summary+* { left: .25em; }
-
-details.submenu a,
-details.submenu span {
-    padding: .25em 1em;
-}
 
 /* Horizontal Line */
 

@@ -1,23 +1,24 @@
 <footer>
 	<nav class="menu">
-		{{- range .Site.Menus.footer }}
-		<a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-		{{- end }}
+		{{ partial "menu" .Site.Menus.footer }}
 
 		{{- if .IsTranslated }}
 		<details class="submenu submenu-up submenu-right">
-			<summary class="flex-row">
-				<svg viewBox="0 0 24 24" width="1.4em" height="1.4em" fill="currentColor"><use xlink:href="/assets/img/icon-pack.svg#lang"></use></svg>
+			<summary>
+				<svg viewBox="0 0 24 24" width="1.4em" height="1.4em" fill="currentColor">
+					<use xlink:href="/assets/img/icon-pack.svg#lang"></use>
+				</svg>
+				<span class="hide-sm">{{ .Language.LanguageName }}</span>
 			</summary>
 			<div class="flex-column" style="width: 160px;">
 				{{- range .Translations }}
 				<a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
 				{{- end }}
-				<a href="{{ .RelPermalink }}" class="active">{{ .Language.LanguageName }}</a>
 			</div>
 		</details>
 		{{- end }}
 	</nav>
+
 	<nav class="legal text-sm">
 		<div class="copyright">&copy; {{ now.Year }}, Cesbo OÜ</div>
 		{{- with .GetPage "terms" }}

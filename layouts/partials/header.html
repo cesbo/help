@@ -3,7 +3,9 @@
 		<a class="logo" href="{{ .Site.BaseURL }}{{ .Language.Lang }}/" title="{{ .Site.Title }}">
 			<img src="/assets/img/logo.svg" height="30" alt="Cesbo Logo" />
 		</a>
+
 		<div class="flex-expand"></div>
-		{{- range .Site.Menus.main }}<a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>{{- end }}
+
+		{{ partial "menu" .Site.Menus.main }}
 	</nav>
 </header>

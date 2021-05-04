@@ -47,6 +47,7 @@ footer>nav.legal>.copyright {
 	padding: var(--space-xs) var(--space-unit);
 	display: flex;
 	align-items: center;
+	line-height: 1;
 }
 
 /* PAGES */
