@@ -32,4 +32,3 @@ languages:
     languageName: "Русский"
     description: "Профессиональное программное обеспечение для трансляции Цифрового ТВ"
     weight: 2
-    contentDir: "content/ru"

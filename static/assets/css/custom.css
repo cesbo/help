@@ -69,9 +69,25 @@ main.docs>.sidemenu {
 }
 
 main.docs>.sidemenu a {
-	height: var(--space-lg);
 	border-top-right-radius: var(--border-radius);
 	border-bottom-right-radius: var(--border-radius);
+}
+
+
+main.docs>.sidemenu a,
+main.docs>.sidemenu details>summary {
+	padding-top: .2em;
+	padding-bottom: .2em;
+}
+
+main.docs .search {
+	width: 100%;
+	padding: 0 var(--space-unit);
+	margin-bottom: var(--space-xs);
+}
+
+main.docs .search>input {
+	width: 100%;
 }
 
 main.docs>article {

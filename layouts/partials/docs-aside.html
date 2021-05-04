@@ -1,31 +1,27 @@
 <nav class="sidemenu hide-sm">
 	{{- $docs := $.GetPage $.Section }}
-	<ul style="margin-bottom: .5em;">
-		<li>
-			<a href="{{ $docs.RelPermalink }}"
-				{{- if eq . $docs }} class="active"{{ end -}}
-			>{{ $docs.Title }}</a>
-		</li>
-		{{- range where $docs.Pages "IsNode" false }}
-		<li>
-			<a href="{{ .RelPermalink }}"
-				{{- if eq . $.Page }} class="active"{{ end -}}
-			>{{ .Title }}</a>
-		</li>
-		{{- end }}
-	</ul>
+	<form class="search">
+		<input type="text" placeholder="" />
+	</form>
+
+	<a href="{{ $docs.RelPermalink }}"
+		{{- if eq . $docs }} class="active"{{ end -}}
+	>{{ $docs.Title }}</a>
+
+	{{- range where $docs.Pages "IsNode" false }}
+	<a href="{{ .RelPermalink }}"
+		{{- if eq . $.Page }} class="active"{{ end -}}
+	>{{ .Title }}</a>
+	{{- end }}
+
 	{{- range $docs.Sections }}
 	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
 		<summary>{{ .Title }}</summary>
-		<ul>
-			{{- range .Pages }}
-			<li>
-				<a href="{{ .RelPermalink }}"
-					{{- if eq . $.Page }} class="active"{{ end -}}
-				>{{ .Title }}</a>
-			</li>
-			{{- end }}
-		</ul>
+		{{- range .Pages }}
+		<a href="{{ .RelPermalink }}"
+			{{- if eq . $.Page }} class="active"{{ end -}}
+		>{{ .Title }}</a>
+		{{- end }}
 	</details>
 	{{- end }}
 </nav>

@@ -28,11 +28,11 @@
     --button-shadow: 0 0 4px 0 var(--text-light);
 
     --space-unit: 1em;
-    --space-xs: calc(0.5 * var(--space-unit));
+    --space-xs: calc(0.4 * var(--space-unit));
     --space-sm: calc(0.8 * var(--space-unit));
     --space-md: calc(1.2 * var(--space-unit));
-    --space-lg: calc(1.8 * var(--space-unit));
-    --space-xl: calc(2.5 * var(--space-unit));
+    --space-lg: calc(1.6 * var(--space-unit));
+    --space-xl: calc(2.0 * var(--space-unit));
 }
 
 *, ::after, ::before {
@@ -46,7 +46,7 @@ html {
 
 body{
     font-family: var(--font-content);
-    line-height: 1.5;
+    line-height: 1.5rem;
     font-size: var(--space-unit);
     background-color: var(--background);
     color: var(--text);
@@ -101,16 +101,14 @@ a:hover {
 nav {
     display: flex;
     flex-wrap: nowrap;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 nav a,
-nav details.submenu>summary {
-    display: flex;
-    align-items: center;
-    height: var(--space-xl);
-    padding: 0 var(--space-unit);
+nav details>summary {
+    padding: var(--space-xs) var(--space-unit);
     white-space: nowrap;
     color: var(--blue);
 }
@@ -128,13 +126,6 @@ nav a.active {
     color: var(--blue-dark);
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 /* SIDE MENU */
 
 nav.sidemenu {
@@ -143,18 +134,19 @@ nav.sidemenu {
     justify-content: flex-start;
 }
 
-nav.sidemenu details {
+nav.sidemenu>* {
     width: 100%;
 }
 
-nav.sidemenu summary {
-    font-weight: 600;
-    padding: .25em 1em;
-    color: var(--text-light);
+nav.sidemenu details {
+    display: flex;
+    flex-direction: column;
 }
 
-nav.sidemenu a {
-    padding: .25em 1em;
+nav.sidemenu details>summary {
+    font-weight: 600;
+    color: var(--text-light);
+    width: 100%;
 }
 
 /* SUB MENU */
@@ -300,6 +292,7 @@ a[role="button"] {
     padding: 0.33em;
     border: 1px solid var(--text-light);
     border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
 input[type="checkbox"],

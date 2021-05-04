@@ -4,7 +4,7 @@ description: Update Astra
 weight: 4
 ---
 
-Before update please make [backup]({{< relref "backup" >}})
+Before update please make a [backup]({{< relref "backup" >}})
 
 ## Install update
 
