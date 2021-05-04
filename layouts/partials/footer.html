@@ -1,7 +1,5 @@
 <footer>
-	<nav>
-		<div class="flex-expand hide-sm"></div>
-
+	<nav class="menu">
 		{{- range .Site.Menus.footer }}
 		<a href="{{ .URL }}">{{ .Name }}</a>
 		{{- end }}
@@ -26,13 +24,19 @@
 		</details>
 		{{- end }}
 	</nav>
-	<nav class="text-sm" style="margin-top: 2em;">
+	<nav class="legal text-sm">
 		<div class="copyright">&copy; {{ now.Year }}, Cesbo OÜ</div>
 		{{- with .GetPage "terms" }}
 		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		{{- end }}
 		{{- with .GetPage "privacy" }}
 		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+		{{- end }}
+		{{- if and (isset .Site.Params "repository") (.File) }}
+		<a
+			href="{{ .Site.Params.repository }}/edit/main/content/{{ .File.Path }}"
+			target="_blank"
+		>Edit this page</a>
 		{{- end }}
 	</nav>
 </footer>

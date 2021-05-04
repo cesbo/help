@@ -93,13 +93,15 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    width: 100%;
 }
 
 nav a,
 nav details.submenu>summary {
-    padding: 0 1em;
     display: flex;
     align-items: center;
+    height: var(--space-xl);
+    padding: 0 var(--space-unit);
     white-space: nowrap;
     color: var(--blue);
 }
