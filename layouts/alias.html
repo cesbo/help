@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>redirect...</title>
+	<meta charset="utf-8" />
+	<meta name="robots" content="noindex" />
+
+	<title>Redirect...</title>
+
 	<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 	<link rel="canonical" href="{{ .Permalink }}" />
-	<meta name="robots" content="noindex" />
-	<meta charset="utf-8" />
 	<noscript>
 		<meta http-equiv="refresh" content="0; url={{ .Permalink }}" />
 	</noscript>
@@ -57,24 +59,16 @@ location.replace('/' + lang + next);
 {{- else }}
 
 <script>
-function shortAppAlias(lang, name) {
-	location.replace('/' + getLanguage(lang) + '/a#' + name)
+function alias(name) {
+	location.replace('/' + getLanguage() + '/' + name + '/')
 }
 
 switch(location.pathname) {
-	case '/pricing/': shortAppAlias(null, 'pricing'); break;
-	case '/profile/': shortAppAlias(null, 'profile'); break;
-	case '/help/': shortAppAlias(null, 'help'); break;
-
-	case '/en/pricing/': shortAppAlias('en', 'pricing'); break;
-	case '/en/profile/': shortAppAlias('en', 'profile'); break;
-	case '/en/help/': shortAppAlias('en', 'help'); break;
-
-	case '/ru/pricing/': shortAppAlias('ru', 'pricing'); break;
-	case '/ru/profile/': shortAppAlias('ru', 'profile'); break;
-	case '/ru/help/': shortAppAlias('ru', 'help'); break;
-
-	case '/astra-license/': shortAppAlias(null, 'pricing'); break;
+	case '/404.html': alias('404'); break;
+	case '/pricing/': alias('pricing'); break;
+	case '/profile/': alias('profile'); break;
+	case '/help/': alias('help'); break;
+	case '/astra-license/': alias('pricing'); break;
 
 	default: location.replace('{{ .Permalink }}');
 }

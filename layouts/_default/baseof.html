@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Language.Lang }}">
 <head>
-{{- partial "head.html" . }}
+{{- partial "head" . }}
 {{- block "head" . }}{{ end }}
 </head>
 <body class="flex-column">
 
-{{- partial "header.html" . }}
+{{- partial "header" . }}
 <main class="flex-expand {{ .Type }}">
 	{{ block "aside" . }}{{ end }}
 	{{ block "main" . }}{{ end }}
 </main>
-{{- partial "footer.html" . }}
+{{- partial "footer" . }}
 
 <script src="/assets/js/app.js"></script>
 {{- block "tail" . }}{{ end }}

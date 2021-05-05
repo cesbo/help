@@ -10,7 +10,13 @@
 {{- end }}
 
 <meta charset="utf-8" />
+{{- if .Page.Params.noindex }}
+<meta name="robots" content="noindex" />
+{{- end }}
+
 <title>{{ $title }}</title>
+
+<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,8 +41,6 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}assets/img/landing.png" />
 <meta name="twitter:image:alt" content="{{ .Site.Title }}" />
 {{- end }}
-
-<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
 <link rel="canonical" href="{{ .Permalink }}" />
 <link rel="alternate" href="{{ .Site.BaseURL }}" hreflang="x-default" />
