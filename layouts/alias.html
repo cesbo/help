@@ -51,7 +51,7 @@ if(params.has('lang')) setCookie('lang', lang, 365);
 location.replace('/' + lang + next);
 </script>
 
-{{- else if eq .File.TranslationBaseName "404" }}
+{{- else if eq .File.Dir "404/" }}
 
 <script>
 location.replace('/' + getLanguage() + '/404/')
