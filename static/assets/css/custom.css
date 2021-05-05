@@ -74,13 +74,6 @@ main.docs>.sidemenu a {
 	border-bottom-right-radius: var(--border-radius);
 }
 
-
-main.docs>.sidemenu a,
-main.docs>.sidemenu details>summary {
-	padding-top: .2em;
-	padding-bottom: .2em;
-}
-
 main.docs .search {
 	width: 100%;
 	padding: 0 var(--space-unit);

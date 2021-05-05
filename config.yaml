@@ -1,9 +1,9 @@
 title: Cesbo
-defaultContentLanguage: "en"
+defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 disableKinds:
-- "RSS"
-- "sitemap"
+- RSS
+- sitemap
 
 params:
   cdn: https://cdn.cesbo.dev
