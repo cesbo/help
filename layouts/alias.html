@@ -14,47 +14,33 @@
 </head>
 <body>
 
-<script>
-function setCookie(cname, cvalue, exdays) {
-	let d = new Date();
-	d.setTime(d.getTime() + exdays * 86400000);
-	document.cookie = cname + '=' + cvalue + ';expires=' + d.toUTCString() + ';path=/';
-}
-
-function getCookie(cname) {
-	const name = cname + '=';
-	const decodedCookie = decodeURIComponent(document.cookie);
-	const ca = decodedCookie.split(';');
-	for(let i = 0; i < ca.length; i++) {
-		const c = ca[i];
-		while(c.charAt(0) == ' ') c = c.substring(1);
-		if(c.indexOf(name) == 0) return c.substring(name.length, c.length);
-	}
-	return '';
-}
-
-function getLanguage(lang) {
-	const langList = ['en', 'ru'];
-	lang = lang || getCookie('lang') || navigator.language || langList[0];
-	lang = lang.substring(0, 2);
-	return (langList.indexOf(lang) != -1) ? lang : langList[0]
-}
-</script>
+<script src="/assets/js/app.js"></script>
 
 {{- if not $.Page }}
 
 <script>
-const params = new URLSearchParams(location.search);
-const lang = getLanguage(params.get('lang'));
-const next = params.get('next') || '/';
-if(params.has('lang')) setCookie('lang', lang, 365);
-location.replace('/' + lang + next);
+$(function() {
+	const params = new URLSearchParams(location.search);
+
+	let lang = params.get('lang');
+	if(!!lang) {
+		lang = checkLanguage(lang);
+		setLanguage(lang);
+	} else {
+		lang = getLanguage();
+	}
+
+	const next = params.get('next') || '/';
+	location.replace('/' + lang + next);
+})
 </script>
 
 {{- else if eq .File.Dir "404/" }}
 
 <script>
-location.replace('/' + getLanguage() + '/404/')
+$(function() {
+	location.replace('/' + getLanguage() + '/404/')
+})
 </script>
 
 {{- else }}
@@ -64,13 +50,15 @@ function alias(name) {
 	location.replace('/' + getLanguage() + '/' + name + '/')
 }
 
-switch(location.pathname) {
-	case '/pricing/': alias('pricing'); break;
-	case '/profile/': alias('profile'); break;
-	case '/help/': alias('help'); break;
-	case '/astra-license/': alias('pricing'); break;
-	default: location.replace('{{ .Permalink }}');
-}
+$(function() {
+	switch(location.pathname) {
+		case '/pricing/': alias('pricing'); break;
+		case '/profile/': alias('profile'); break;
+		case '/help/': alias('help'); break;
+		case '/astra-license/': alias('pricing'); break;
+		default: location.replace('{{ .Permalink }}');
+	}
+})
 </script>
 
 {{- end }}

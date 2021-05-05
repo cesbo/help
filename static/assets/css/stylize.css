@@ -164,6 +164,10 @@ details.submenu>summary {
     height: 100%;
 }
 
+details.submenu>summary::-webkit-details-marker {
+    display: none;
+}
+
 details.submenu[open]>summary::before {
     position: fixed;
     content: " ";
