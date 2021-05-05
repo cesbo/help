@@ -13,51 +13,33 @@
 	</noscript>
 </head>
 <body>
-
 <script src="/assets/js/app.js"></script>
+
+{{- $list := slice "404/" "pricing/" "profile/" "help/" }}
 
 {{- if not $.Page }}
 
 <script>
 $(function() {
 	const params = new URLSearchParams(location.search);
-
-	let lang = params.get('lang');
-	if(!!lang) {
-		lang = checkLanguage(lang);
-		setLanguage(lang);
-	} else {
-		lang = getLanguage();
-	}
-
 	const next = params.get('next') || '/';
-	location.replace('/' + lang + next);
+	location.replace('/' + getLanguage() + next);
 })
 </script>
 
-{{- else if eq .File.Dir "404/" }}
+{{- else if in $list .File.Dir }}
 
 <script>
 $(function() {
-	location.replace('/' + getLanguage() + '/404/')
+	location.replace('/' + getLanguage() + '/{{ trim .File.Dir "/" }}/')
 })
 </script>
 
 {{- else }}
 
 <script>
-function alias(name) {
-	location.replace('/' + getLanguage() + '/' + name + '/')
-}
-
 $(function() {
-	switch(location.pathname) {
-		case '/pricing/': alias('pricing'); break;
-		case '/profile/': alias('profile'); break;
-		case '/help/': alias('help'); break;
-		case '/astra-license/': alias('pricing'); break;
-		default: location.replace('{{ .Permalink }}');
-	}
+	location.replace('{{ .Permalink }}');
 })
 </script>
 

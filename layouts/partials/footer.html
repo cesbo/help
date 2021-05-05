@@ -12,7 +12,7 @@
 			</summary>
 			<div class="flex-column" style="width: 160px;">
 				{{- range .Translations }}
-				<a href="{{ .RelPermalink }}" onClick="setLanguage('{{ .Language.Lang }}')">{{ .Language.LanguageName }}</a>
+				<a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
 				{{- end }}
 			</div>
 		</details>
