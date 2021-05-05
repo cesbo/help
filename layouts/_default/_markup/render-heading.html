@@ -2,7 +2,7 @@
 	{{- .Text | safeHTML -}}
 	{{- if and (ge .Level 2) (le .Level 3) -}}
 		<a href="#{{ .Anchor | safeURL }}" aria-hidden="true">
-			<svg viewBox="0 0 24 24" fill="currentColor"><use xlink:href="/assets/img/icon-pack.svg#link"></use></svg>
+			{{ partial "icon-pack" "link" }}
 		</a>
 	{{- end -}}
 </h{{ .Level }}>

@@ -7,15 +7,11 @@
 	<title>Redirect...</title>
 
 	<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-	<link rel="canonical" href="{{ .Permalink }}" />
-	<noscript>
-		<meta http-equiv="refresh" content="0; url={{ .Permalink }}" />
-	</noscript>
 </head>
 <body>
 <script src="/assets/js/app.js"></script>
 
-{{- $list := slice "404/" "pricing/" "profile/" "help/" }}
+{{- $list := slice "404/" "pricing/" "account/" "help/" }}
 
 {{- if not $.Page }}
 

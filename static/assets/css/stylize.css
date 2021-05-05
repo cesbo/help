@@ -130,6 +130,11 @@ nav a.active {
     color: var(--blue-dark);
 }
 
+nav .icon {
+    width: var(--space-md);
+    height: var(--space-md);
+}
+
 /* SIDE MENU */
 
 nav.sidemenu {

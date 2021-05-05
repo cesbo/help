@@ -5,10 +5,8 @@
 		{{- if .IsTranslated }}
 		<details class="submenu submenu-up submenu-right">
 			<summary>
-				<svg viewBox="0 0 24 24" width="1.4em" height="1.4em" fill="currentColor">
-					<use xlink:href="/assets/img/icon-pack.svg#lang"></use>
-				</svg>
-				<span class="hide-sm">{{ .Language.LanguageName }}</span>
+				{{ partial "icon-pack" "language" }}
+				<span class="hide-sm" style="margin-left: var(--space-xs);">{{ .Language.LanguageName }}</span>
 			</summary>
 			<div class="flex-column" style="width: 160px;">
 				{{- range .Translations }}
