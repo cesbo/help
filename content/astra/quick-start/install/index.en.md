@@ -20,7 +20,7 @@ curl -Lo /usr/bin/astra http://cesbo.com/astra-latest
 chmod +x /usr/bin/astra
 ```
 
-A valid license file is required to use Astra {{< link href="astra/quick-start/license" title="Get License" >}}
+A valid license file is required to use Astra [](astra/quick-start/license)
 
 After installation, register service in the systemd - system service manager in most Linux distributions:
 
@@ -69,6 +69,6 @@ astra -v
 
 ## Archived guides
 
-- {{< link href="astra/quick-start/archive/firewalld" >}}
-- {{< link href="astra/quick-start/archive/init-d" >}}
-- {{< link href="astra/quick-start/archive/monit" >}}
+- [](astra/quick-start/archive/firewalld)
+- [](astra/quick-start/archive/init-d)
+- [](astra/quick-start/archive/monit)

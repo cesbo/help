@@ -1,7 +1,36 @@
+{{- $page := .Page }}
 {{- $link := .Destination }}
 {{- $isExternal := or (strings.HasPrefix $link "https://") (strings.HasPrefix $link "http://") }}
+{{- $text := .Text }}
+
+{{- if $isExternal -}}
+	{{ if not $text }}
+		{{ $text = $link }}
+	{{ end }}
+{{ else }}
+	{{ $url := urls.Parse $link }}
+	{{ with $url.Path }}
+		{{ with $page.GetPage . }}
+			{{ $link = .RelPermalink }}
+
+			{{ if not $text }}
+				{{ $text = .Title }}
+			{{ end }}
+		{{ else }}
+			{{ $link = "" }}
+			{{ warnf "%s: link %s is not resolved" $page.File.Path . }}
+		{{ end }}
+	{{ else }}
+		{{ $link = "" }}
+	{{ end }}
+
+	{{ with $url.Fragment }}
+		{{ $link = printf "%s#%s" $link . }}
+	{{ end }}
+{{- end -}}
+
 <a
 	href="{{ $link | safeURL }}"
 	{{- with .Title}}title="{{ . }}"{{ end }}
 	{{- if $isExternal }}target="_blank"{{ end }}
->{{ .Text | safeHTML }}</a>
+>{{ $text | safeHTML }}</a>

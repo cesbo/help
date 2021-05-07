@@ -1,1 +1,1 @@
-<div class="notice alert">{{ .Inner | markdownify }}</div>
+<div class="notice alert">{{ .Inner | .Page.RenderString }}</div>

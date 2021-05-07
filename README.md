@@ -25,7 +25,7 @@ Between options and content should be one empty line.
 
 ### Heading
 
-Only 2 levels available:
+Only 2 levels is available:
 
 - `##` - second-level heading;
 - `###` - third-level heading.
@@ -65,3 +65,24 @@ The `details` block provides more information in the hidden block with a link to
 More information...
 {{< /details >}}
 ```
+
+### External Links
+
+External links begins with `https://` or `http://`
+
+```
+[Optional Link Text](https://cesbo.com)
+```
+
+External links will be openned in the new browser tab.
+If the link text is not defined will be used url.
+
+### Internal Links
+
+For internal link defined path in the content folder without `index.md` file:
+
+```
+[Optional Link Text](astra/quick-start/install)
+```
+
+If the link text is not defined will be used page title.

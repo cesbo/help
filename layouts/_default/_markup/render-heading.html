@@ -8,6 +8,6 @@
 			</svg>
 		</a>
 	{{- else -}}
-		{{ errorf "%s: Heading with level %d is not permitted" .Page.File.Path .Level }}
+		{{ warnf "%s: Heading with level %d is not permitted" .Page.File.Path .Level }}
 	{{- end -}}
 </h{{ .Level }}>

@@ -4,20 +4,20 @@ weight: 3
 ---
 
 Grafana is an open source analytics and interactive visualization web application.
-It works in pair with {{< link href="astra/monitoring/influxdb" >}} to visualize status of the Astra, stream, and adapters.
+It works in pair with [](astra/monitoring/influxdb) to visualize status of the Astra, stream, and adapters.
 
 ## Install
 
-Before Grafana installation, make sure that InfluxDB installed and configured: {{< link href="astra/monitoring/influxdb" title="Read more..." >}}
+Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](astra/monitoring/influxdb)
 
 Download latest version from
 
-1. Go to Grafana site: https://grafana.com/grafana/download
+1. Go to Grafana site: [](https://grafana.com/grafana/download)
 2. Choose Grafana v.7
 3. Choose your platform
 4. Launch commands from the instruction on the Grafana site
 
-Find out more information on official site: https://grafana.com/docs/grafana/latest/
+Find out more information on official site: [](https://grafana.com/docs/grafana/latest/)
 
 ## Grafana configuration
 

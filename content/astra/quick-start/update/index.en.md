@@ -5,7 +5,7 @@ weight: 4
 ---
 
 {{< alert >}}
-Before update please make a {{< link href="astra/quick-start/backup" >}}
+Before update please [Make a Backup](astra/quick-start/backup)
 {{< /alert >}}
 
 ## Install update

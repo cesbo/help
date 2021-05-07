@@ -1,9 +1,0 @@
-{{- $self := $.Page }}
-{{- $page := string (.Get "href") }}
-{{- $title := .Get "title" }}
-
-{{- with $.Site.GetPage $page }}
-<a href="{{ .RelPermalink }}">{{ $title | default .Title }}</a>
-{{- else }}
-{{ errorf "%s: link %s not resolved" $self.File.Path $page }}
-{{- end }}

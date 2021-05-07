@@ -48,4 +48,4 @@ any of the rights mentioned in the Your Rights section above, please contact us:
 
 ## Privacy Policy Changes
 
-Although most changes are likely to be minor, Cesbo may change its Privacy Policy from time to time, and in Cesbo's sole discretion. Cesbo encourages visitors to frequently check this page for any changes to its Privacy Policy. You may find changes on the [repository]({{< param "repository" >}})
+Although most changes are likely to be minor, Cesbo may change its Privacy Policy from time to time, and in Cesbo's sole discretion. Cesbo encourages visitors to frequently check this page for any changes to its Privacy Policy. You may find changes on the out repository

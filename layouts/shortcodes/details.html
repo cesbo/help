@@ -4,5 +4,5 @@
 	{{- with .Get "open" }}open{{ end }}
 >
 <summary>{{ $summary }}</summary>
-{{ .Inner | markdownify }}
+{{ .Inner | .Page.RenderString }}
 </details>
