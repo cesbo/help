@@ -1,5 +1,27 @@
 {{ define "aside" }}
-{{ partial "docs-aside.html" . }}
+<nav class="sidemenu hide-sm">
+	{{- $docs := $.GetPage $.Section }}
+	<a href="{{ $docs.RelPermalink }}"
+		{{- if eq . $docs }} class="active"{{ end -}}
+	>{{ $docs.Title }}</a>
+
+	{{- range where $docs.Pages "IsNode" false }}
+	<a href="{{ .RelPermalink }}"
+		{{- if eq . $.Page }} class="active"{{ end -}}
+	>{{ .Title }}</a>
+	{{- end }}
+
+	{{- range $docs.Sections }}
+	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
+		<summary>{{ .Title }}</summary>
+		{{- range .Pages }}
+		<a href="{{ .RelPermalink }}"
+			{{- if eq . $.Page }} class="active"{{ end -}}
+		>{{ .Title }}</a>
+		{{- end }}
+	</details>
+	{{- end }}
+</nav>
 {{ end }}
 
 

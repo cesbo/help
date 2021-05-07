@@ -78,7 +78,7 @@ h1>a, h2>a, h3>a {
     float: right;
 }
 
-h1>a>svg, h2>a>svg, h3>a>svg {
+h1>a>.icon, h2>a>.icon, h3>a>.icon {
     width: 1.2rem;
     height: 1.2rem;
 }
@@ -128,11 +128,6 @@ nav details.submenu[open]>summary {
 nav a.active {
     font-weight: 600;
     color: var(--blue-dark);
-}
-
-nav .icon {
-    width: var(--space-md);
-    height: var(--space-md);
 }
 
 /* SIDE MENU */
@@ -391,6 +386,13 @@ table[border="1"] td {
 .flex-row { display: flex; flex-direction: row; }
 .flex-column { display: flex; flex-direction: column; }
 .flex-expand { flex-grow: 1; }
+
+.icon {
+    display: inline-block;
+    width: var(--space-md);
+    height: var(--space-md);
+    fill: currentColor;
+}
 
 /* NOTICE */
 

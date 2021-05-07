@@ -1,12 +1,7 @@
 {{- range . }}
 <a href="{{ .URL }}" title="{{ .Title }}">
-	{{- if .Pre -}}
-		{{- partial "icon-pack" .Pre }}
-		{{- if .Name }}
-			<span class="hide-sm" style="margin-left: var(--space-xs);">{{ .Name }}</span>
-		{{- end }}
-	{{- else -}}
-		{{- .Name -}}
-	{{- end -}}
+	{{- if .Pre }}{{ .Pre | safeHTML }}{{ end -}}
+	{{- if .Name }}{{ .Name }}{{ end -}}
+	{{- if .Post }}{{ .Post | safeHTML }}{{ end -}}
 </a>
 {{- end }}
