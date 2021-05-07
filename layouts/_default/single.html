@@ -1,1 +1,6 @@
-{{ define "main" }}{{ .Content }}{{ end }}
+{{ define "main" }}
+{{- if .Title }}
+<h1>{{ .Title }}{{ partial "edit-page" . }}</h1>
+{{- end }}
+{{ .Content }}
+{{ end }}

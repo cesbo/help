@@ -2,8 +2,6 @@
 title: "Privacy Policy"
 ---
 
-# Privacy Policy
-
 This privacy policy (hereinafter the "Privacy Policy") of Cesbo OÜ (registry number: 14226966,
 address: Sepapaja 6, 15551, Tallinn, Estonia, hereinafter "Cesbo") regulates the use and
 processing of all data and information disclosed to Cesbo while using the website https://cesbo.com,

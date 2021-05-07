@@ -1,4 +1,4 @@
-{{- $href := .Get 0 }}
+{{- $href := .Get "href" }}
 {{- $name := .Get "name" | default $href }}
 {{- $title := .Get "title" | default (path.Base $href) }}
 <a

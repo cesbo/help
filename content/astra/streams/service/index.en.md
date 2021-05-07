@@ -32,4 +32,4 @@ has the ability to download the contents of the transmission and interactive com
 
 ## Conditional Access
 
-Encryption service with CAS. [Read more]({{< relref "/astra/settings/cas" >}})
+Encryption service with CAS. {{< link href="astra/settings/cas" title="Read more..." >}}

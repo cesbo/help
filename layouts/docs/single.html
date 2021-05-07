@@ -1,4 +1,4 @@
-{{ define "aside" }}
+{{ define "main" }}
 <nav class="sidemenu hide-sm">
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
@@ -14,7 +14,7 @@
 	{{- range $docs.Sections }}
 	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
 		<summary>{{ .Title }}</summary>
-		{{- range .Pages }}
+		{{- range where .Pages "IsPage" true }}
 		<a href="{{ .RelPermalink }}"
 			{{- if eq . $.Page }} class="active"{{ end -}}
 		>{{ .Title }}</a>
@@ -22,10 +22,7 @@
 	</details>
 	{{- end }}
 </nav>
-{{ end }}
 
-
-{{ define "main" }}
 <article class="flex-expand">
 <h1>{{ .Title }}{{ partial "edit-page" . }}</h1>
 {{ .Content }}

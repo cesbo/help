@@ -8,7 +8,6 @@
 
 {{- partial "header" . }}
 <main class="flex-expand {{ .Type }}">
-	{{ block "aside" . }}{{ end }}
 	{{ block "main" . }}{{ end }}
 </main>
 {{- partial "footer" . }}

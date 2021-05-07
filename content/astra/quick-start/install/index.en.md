@@ -6,16 +6,14 @@ weight: 1
 
 Cesbo Astra installation is a simple process - just copy single binary file to your server.
 
-## Prepare
-
-Check is curl installed in your system (for Debian)
-
-```sh
-apt update
-apt install -y curl
-```
-
 ## Install
+
+{{< notice >}}
+### Prepare your system
+
+In this guide we use the `curl` command to download files.
+Most Linux distribution has pre-installed `curl`.
+{{< /notice >}}
 
 Download binary file and set execute permission. On the server you may use next command:
 
@@ -24,7 +22,7 @@ curl -Lo /usr/bin/astra http://cesbo.com/astra-latest
 chmod +x /usr/bin/astra
 ```
 
-A valid license file is required to use Astra: [Get License](license/)
+A valid license file is required to use Astra {{< link href="astra/quick-start/license" title="Get License" >}}
 
 After installation, register service in the systemd - system service manager in most Linux distributions:
 
@@ -38,7 +36,10 @@ Launch Astra:
 systemctl start astra
 ```
 
-After start web-interface will be available on: http://server-address:8000. Default login and password: admin By the default, for web-interface and control Astra used port 8000, you may define any port:
+After start web-interface will be available on: http://server-address:8000.
+Default login and password: `admin`.
+
+Astra used port `8000` by the default, you may set any custom port:
 
 ```sh
 astra init 4000
@@ -68,19 +69,8 @@ After installation or after update you may check installed version:
 astra -v
 ```
 
-## Firewall on CentOS
-
-```sh
-# Add service:
-firewall-cmd --permanent --new-service=astra
-firewall-cmd --permanent --service=astra --add-port=8000/tcp
-# Add service to zone:
-firewall-cmd --permanent --zone=public --add-service=astra
-# Reload firewall:
-firewall-cmd --reload
-```
-
 ## Archived guides
 
-- [Autorun with init.d script]()
-- [Autorun with Monit]()
+- {{< link href="astra/quick-start/archive/firewalld" >}}
+- {{< link href="astra/quick-start/archive/init-d" >}}
+- {{< link href="astra/quick-start/archive/monit" >}}
