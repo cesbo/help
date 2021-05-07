@@ -109,9 +109,13 @@ main.docs figure img {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.hide-sm {
 		display: none;
+	}
+
+	main.docs {
+		flex-direction: column;
 	}
 
 	footer {
@@ -129,10 +133,6 @@ main.docs figure img {
 		align-items: flex-start;
 		margin-top: 0;
 	}
-}
-
-@media only screen and (max-width: 1000px) {
-
 }
 
 /* CODE */

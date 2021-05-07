@@ -385,7 +385,7 @@ table[border="1"] td {
 
 .flex-row { display: flex; flex-direction: row; }
 .flex-column { display: flex; flex-direction: column; }
-.flex-expand { flex-grow: 1; }
+.flex-expand { flex: 1 1 auto; min-width: 0; }
 
 .icon {
     display: inline-block;
