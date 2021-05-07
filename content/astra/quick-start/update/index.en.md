@@ -4,9 +4,13 @@ description: Update Astra
 weight: 4
 ---
 
+{{< alert >}}
 Before update please make a {{< link href="astra/quick-start/backup" >}}
+{{< /alert >}}
 
 ## Install update
+
+Download latest binary file:
 
 ```sh
 rm -f /usr/bin/astra

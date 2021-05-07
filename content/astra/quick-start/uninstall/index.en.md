@@ -4,7 +4,9 @@ description: Uninstall Astra
 weight: 5
 ---
 
+{{< alert >}}
 Before uninstall please make {{< link href="astra/quick-start/backup" >}}
+{{< /alert >}}
 
 ## Disable service
 

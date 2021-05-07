@@ -19,6 +19,11 @@ header>nav>.logo {
 	align-items: center;
 }
 
+header>nav>.logo>svg {
+	height: var(--space-lg);
+	fill: var(--blue);
+}
+
 header>nav>.logo:hover {
 	background-color: transparent;
 }

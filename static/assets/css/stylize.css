@@ -4,26 +4,34 @@
     --font-content: "Roboto", "Helvetica Neue", sans-serif;
     --font-monospace: monospace;
 
-    --brand-color: #519ed4;
     --background: #ffffff;
 
-    --blue: #519ed4;
-    --blue-dark: #31708f;
-    --blue-lighter: #d9edf7;
+    --color-dark: 40%;
+    --color-normal: 60%;
+    --color-light: 96%;
 
-    --green: #66bb6a;
+    --blue-dark: hsl(210, 100%, var(--color-dark));
+    --blue: hsl(210, 100%, var(--color-normal));
+    --blue-light: hsl(210, 100%, var(--color-light));
 
-    --red: #b71c1c;
-    --red-lighter: #f2dede;
+    --green-dark: hsl(150, 100%, var(--color-dark));
+    --green: hsl(150, 100%, var(--color-normal));
+    --green-light: hsl(150, 100%, var(--color-light));
 
-    --yellow: #ffeaa7;
+    --red-dark: hsl(0, 100%, var(--color-dark));
+    --red: hsl(0, 100%, var(--color-normal));
+    --red-light: hsl(0, 100%, var(--color-light));
+
+    --yellow-dark: hsl(60, 100%, var(--color-dark));
+    --yellow: hsl(60, 100%, var(--color-normal));
+    --yellow-light: hsl(60, 100%, var(--color-light));
 
     --text: #212121;
     --text-med: #626262;
     --text-light: #9a9a9a;
     --text-lighter: #f6f7f6;
 
-    --border-radius: 3px;
+    --border-radius: 5px;
 
     --button-shadow: 0 0 4px 0 var(--text-light);
 
@@ -121,7 +129,7 @@ nav a:hover,
 nav details.submenu>summary:hover,
 nav details.submenu[open]>summary {
     color: var(--blue-dark);
-    background-color: var(--blue-lighter);
+    background-color: var(--blue-light);
     text-decoration: none;
 }
 
@@ -229,10 +237,15 @@ sup {
 pre {
     display: block;
     width: 100%;
-    border-radius: var(--border-radius);
     padding: 1.25em 1em;
     line-height: 1.25;
     background-color: var(--text-lighter);
+
+    border: 1px solid var(--text-light);
+    border-left-width: 4px;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -397,9 +410,12 @@ table[border="1"] td {
 /* NOTICE */
 
 .notice {
+    padding: var(--space-lg);
+    background-color: var(--blue-light);
     border: 1px solid var(--blue);
     border-left-width: 4px;
-    padding: var(--space-lg);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .notice>h3 {
@@ -414,7 +430,7 @@ table[border="1"] td {
 
 .notice.alert {
     border-color: var(--red);
-    background-color: var(--red-lighter);
+    background-color: var(--red-light);
 }
 
 .notice.alert>h3 {
