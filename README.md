@@ -32,29 +32,23 @@ Only 2 levels is available:
 
 The first-level heading appends automatically to each page and based on the `title` option.
 
-### Notice
+### Note
 
-The `notice` blocks for additional information:
+The `note` blocks for additional information:
 
 ```
-{{< notice >}}
-### Optional header
-
-Notice content
-{{< /notice >}}
+{{< note "Optional header" >}}
+Note content
+{{< /note >}}
 ```
 
 The `alert` block for alerts:
 
 ```
-{{< alert >}}
-### Optional header
-
+{{< alert "Optional header" >}}
 Alert content
 {{< /alert >}}
 ```
-
-Only third-level heading is available in the notice beginning.
 
 ### Details
 

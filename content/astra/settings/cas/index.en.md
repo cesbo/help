@@ -28,7 +28,7 @@ Conditional Access (CA) or Conditional Access System (CAS) is the protection of 
 - ECM Private Data - the data of the conditional access system is added to the description of the ECM stream in the PMT table. If these parameters do not exist, you do not need to add them
 - Access Criteria - this data will be provided by the CAS provider or defined on the CAS server
 
-{{< notice >}}
+{{< note >}}
 Several different CAS can be used for one stream. For example: `Conax` with `DRE Crypt`.
 Encryption will be performed with single key
-{{< /notice >}}
+{{< /note >}}

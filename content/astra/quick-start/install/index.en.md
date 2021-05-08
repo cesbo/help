@@ -8,10 +8,10 @@ Cesbo Astra installation is a simple process - just copy single binary file to y
 
 ## Install
 
-{{< notice >}}
+{{< note >}}
 In this guide we use the `curl` command to download files.
 Most Linux distribution has pre-installed `curl`.
-{{< /notice >}}
+{{< /note >}}
 
 Download binary file and set execute permission. On the server you may use next command:
 

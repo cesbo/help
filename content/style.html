@@ -1,0 +1,240 @@
+---
+title: Style Guide
+description: Website style guide
+url: /style/
+---
+
+<h2>Lists</h2>
+
+Ordered list:
+
+<ol>
+	<li>Item #1</li>
+	<li>Item #2</li>
+	<li>Item #3</li>
+	<li>Item #4</li>
+</ol>
+
+Unordered list:
+
+<ul>
+	<li>Item #1</li>
+	<li>Item #2</li>
+	<li>Item #3</li>
+	<li>Item #4</li>
+</ul>
+
+<h2>Links</h2>
+
+<table class="border" style="width:100%;">
+	<tr>
+		<td>
+			External Link with text description
+		</td>
+		<td>
+			<code>[Our Website](https://cesbo.com)</code>
+		</td>
+		<td>
+			<a href="https://cesbo.com" target="_blank">Our Website</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			External Link without text
+		</td>
+		<td>
+		<code>[](https://cesbo.com)</code>
+		</td>
+		<td>
+			<a href="https://cesbo.com" target="_blank">https://cesbo.com</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Internal Link with text description
+		</td>
+		<td>
+			<code>[Quick-Start Guide](astra/quick-start/install)</code>
+		</td>
+		<td>
+			<a href="/en/astra/quick-start/install/">Quick-Start Guide</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Internal Link without text
+		</td>
+		<td>
+			<code>[](astra/quick-start/install)</code>
+		</td>
+		<td>
+			<a href="/en/astra/quick-start/install/">Install</a>
+		</td>
+	</tr>
+</table>
+
+<h2>Colors</h2>
+
+<table class="border" style="width:100%;">
+	<thead>
+		<tr>
+			<th>Dark</th>
+			<th>Normal</th>
+			<th>Light</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="background-color: var(--red-dark); color: var(--red-light)">var(--red-dark)</td>
+			<td style="background-color: var(--red);">var(--red)</td>
+			<td style="background-color: var(--red-light); color: var(--red-dark)">var(--red-light)</td>
+		</tr>
+		<tr>
+			<td style="background-color: var(--green-dark); color: var(--green-light)">var(--green-dark)</td>
+			<td style="background-color: var(--green);">var(--green)</td>
+			<td style="background-color: var(--green-light); color: var(--green-dark)">var(--green-light)</td>
+		</tr>
+		<tr>
+			<td style="background-color: var(--blue-dark); color: var(--blue-light)">var(--blue-dark)</td>
+			<td style="background-color: var(--blue);">var(--blue)</td>
+			<td style="background-color: var(--blue-light); color: var(--blue-dark)">var(--blue-light)</td>
+		</tr>
+		<tr>
+			<td style="background-color: var(--yellow-dark); color: var(--yellow-light)">var(--yellow-dark)</td>
+			<td style="background-color: var(--yellow);">var(--yellow)</td>
+			<td style="background-color: var(--yellow-light); color: var(--yellow-dark)">var(--yellow-light)</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Spacing</h2>
+
+<table class="border" style="width:100%;">
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-xs); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-xs)
+		</td>
+		<td>
+			Usually for top/bottom padding
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-sm); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-sm)
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-unit); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-unit)
+		</td>
+		<td>Is equal to 1em</td>
+	</tr>
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-md); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-md)
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-lg); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-lg)
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<div style="display: inline-block; width: var(--space-xl); background-color: var(--blue);">&nbsp;</div>
+		</td>
+		<td>
+			var(--space-xl)
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<h2>Note</h2>
+
+<div class="note">
+<p>Additional information</p>
+</div>
+
+<p></p>
+
+<div class="note">
+<h3>Header</h3>
+<p>Additional information with header</p>
+</div>
+
+<p>Note block defines with shortcode</p>
+
+{{< highlight hugo >}}
+{{</* note "Optional header" */>}}
+Information content
+{{</* /note */>}}
+{{< /highlight >}}
+
+<h2>Alert</h2>
+
+<div class="note alert">
+<p>Attention message</p>
+</div>
+
+<p></p>
+
+<div class="note alert">
+<h3>Header</h3>
+<p>Attention message with header</p>
+</div>
+
+<p>Alert block defines with shortcode</p>
+
+{{< highlight hugo >}}
+{{</* alert "Optional header" */>}}
+Attention content
+{{</* /alert */>}}
+{{< /highlight >}}
+
+<h2>Code Block</h2>
+
+{{< highlight rust >}}
+fn main() {
+	println!("Hello, world!");
+}
+{{< /highlight >}}
+
+<p>Code block defines with standard markdown syntax - three ticks arround code block.</p>
+
+<h2>Details</h2>
+
+<details>
+	<summary>Example block</summary>
+	<div class="spoiler">
+	<p>Hidden content</p>
+	</div>
+</details>
+
+<p>Details block defines with shortcode:</p>
+
+{{< highlight hugo >}}
+{{</* details "Optional summary text" */>}}
+Hidden content
+{{</* /details */>}}
+{{< /highlight >}}
+
+<p>If summary text is not defined will be "Read more..."</p>

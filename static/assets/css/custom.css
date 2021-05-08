@@ -1,8 +1,4 @@
 
-main {
-	padding: 1.5em 0;
-}
-
 /* HEADER */
 
 header {
@@ -58,7 +54,7 @@ footer>nav.legal>.copyright {
 /* PAGES */
 
 main.page {
-	padding: 0 var(--space-unit);
+	padding: var(--space-unit);
 }
 
 /* DOCS */
@@ -66,6 +62,7 @@ main.page {
 main.docs {
 	display: flex;
 	flex-direction: row;
+	padding: var(--space-unit) 0; /* padding-right in article, left in sidebar nav */
 }
 
 main.docs>.sidemenu {

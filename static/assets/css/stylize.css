@@ -52,7 +52,7 @@ html {
     font-size: 16px;
 }
 
-body{
+body {
     font-family: var(--font-content);
     line-height: 1.5rem;
     font-size: var(--space-unit);
@@ -68,14 +68,13 @@ body{
 /* Headings */
 
 h1, h2, h3 {
-    margin: .3em 0;
-    padding: .3em 0;
+    margin: var(--space-sm) 0 var(--space-xs) 0;
+    padding: var(--space-sm) 0;
 }
 
 h1 {
     font-size: var(--space-xl);
     margin-top: 0;
-    padding-top: 0;
 }
 h2 { font-size: var(--space-lg); }
 h3 { font-size: var(--space-md); }
@@ -122,13 +121,11 @@ nav details>summary {
     line-height: 1;
     padding: var(--space-xs) var(--space-unit);
     white-space: nowrap;
-    color: var(--blue);
 }
 
 nav a:hover,
 nav details.submenu>summary:hover,
 nav details.submenu[open]>summary {
-    color: var(--blue-dark);
     background-color: var(--blue-light);
     text-decoration: none;
 }
@@ -237,7 +234,7 @@ sup {
 pre {
     display: block;
     width: 100%;
-    padding: 1.25em 1em;
+    padding: var(--space-md);
     line-height: 1.25;
     background-color: var(--text-lighter);
 
@@ -274,8 +271,31 @@ ul, ol {
 
 /* Details */
 
-summary {
+details>summary {
     cursor: pointer;
+    color: var(--blue);
+}
+
+details>summary:hover {
+    color: var(--blue-dark);
+}
+
+details>.spoiler {
+    width: 100%;
+    padding: var(--space-md);
+
+    border: 1px solid var(--text-light);
+    border-left-width: 4px;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+details>.spoiler>:first-child {
+    margin-top: 0;
+}
+
+details>.spoiler>:last-child {
+    margin-bottom: 0;
 }
 
 /* Form elements */
@@ -384,9 +404,9 @@ table td {
     vertical-align: middle;
 }
 
-table[border="1"],
-table[border="1"] th,
-table[border="1"] td {
+table.border,
+table.border th,
+table.border td {
     border: 1px solid var(--text-light);
 }
 
@@ -407,10 +427,10 @@ table[border="1"] td {
     fill: currentColor;
 }
 
-/* NOTICE */
+/* NOTE */
 
-.notice {
-    padding: var(--space-lg);
+.note {
+    padding: var(--space-md);
     background-color: var(--blue-light);
     border: 1px solid var(--blue);
     border-left-width: 4px;
@@ -418,21 +438,25 @@ table[border="1"] td {
     border-bottom-right-radius: var(--border-radius);
 }
 
-.notice>h3 {
+.note>h3 {
     padding-top: 0;
     margin-top: 0;
     border-bottom: thin solid var(--blue);
 }
 
-.notice>:last-child {
+.note>:first-child {
+    margin-top: 0;
+}
+
+.note>:last-child {
     margin-bottom: 0;
 }
 
-.notice.alert {
+.note.alert {
     border-color: var(--red);
     background-color: var(--red-light);
 }
 
-.notice.alert>h3 {
+.note.alert>h3 {
     border-bottom-color: var(--red);
 }

@@ -18,7 +18,7 @@ Service Provider and Codepage could be defined in the [Network Settings]()
 
 - link to the HbbTV server
 
-{{< notice >}}
+{{< note >}}
 HbbTV provides additional information from the Internet web sites to the TV.
 
 To receive specially prepared web pages in CE-HTML format (Consumer Electronics HTML),
@@ -28,7 +28,7 @@ an additional HbbTV receiver. It is also possible to receive a signal via satell
 has the ability to download the contents of the transmission and interactive components
 
 [Read more](https://en.wikipedia.org/wiki/Hybrid_Broadcast_Broadband_TV)
-{{< /notice >}}
+{{< /note >}}
 
 ## Conditional Access
 
