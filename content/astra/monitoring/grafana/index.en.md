@@ -40,7 +40,7 @@ Find out more information on official site: [](https://grafana.com/docs/grafana/
 
 ## Append dashboard
 
-1. Download our template for Grafana: {{< download href="dashboard.json" >}}
+1. Download our template for Grafana: [](!dashboard.json)
 2. Open: Create -> Import
 3. Click "Upload JSON file"
 4. Choose downloaded file

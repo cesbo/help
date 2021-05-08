@@ -1,7 +1,0 @@
-{{- $href := .Get "href" }}
-{{- $name := .Get "name" | default $href }}
-{{- $title := .Get "title" | default (path.Base $href) }}
-<a
-	href="{{ $href }}"
-	download="{{ $name }}"
->{{ $title }}</a>
