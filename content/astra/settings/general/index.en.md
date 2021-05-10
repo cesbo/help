@@ -4,7 +4,7 @@ title: General
 
 - Monitoring - This line specifies the url of the server to which statistics will be sent.
 - HTTP Sessions - Enable/Disable HTTP sessions. Sessions used to authenticate HTTP/HLS clients. Sessions are enabled by default.
-- TLS Certificate Chain - full path to the certificate chain (for example - /etc/letsencrypt/live/example.com/fullchain.pem). Will be used HTTPS protocol for Web-interface, [HTTP Play](http-play.md), and for `https://` - outputs. To get free certificate check [Let's Encrypt](https://letsencrypt.org/)
+- TLS Certificate Chain - full path to the certificate chain (for example - /etc/letsencrypt/live/example.com/fullchain.pem). Will be used HTTPS protocol for Web-interface, [HTTP Play](astra/settings/http-play), and for `https://` - outputs. To get free certificate check [Let's Encrypt](https://letsencrypt.org/)
 - TLS Certificate Key - full path to the certificate key (for example - /etc/letsencrypt/live/example.com/privkey.pem)
 
 Default stream settings:

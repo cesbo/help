@@ -17,7 +17,7 @@ header>nav>.logo {
 
 header>nav>.logo>svg {
 	height: var(--space-lg);
-	fill: var(--blue);
+	fill: var(--blue-normal);
 }
 
 header>nav>.logo:hover {

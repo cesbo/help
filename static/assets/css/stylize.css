@@ -6,25 +6,80 @@
 
     --background: #ffffff;
 
-    --color-dark: 40%;
-    --color-normal: 60%;
-    --color-light: 96%;
+    --hue-red: 0;
+    --hue-yellow: 60;
+    --hue-green: 120;
+    --hue-blue: 210;
 
-    --blue-dark: hsl(210, 100%, var(--color-dark));
-    --blue: hsl(210, 100%, var(--color-normal));
-    --blue-light: hsl(210, 100%, var(--color-light));
+    --saturation: 60%;
 
-    --green-dark: hsl(150, 100%, var(--color-dark));
-    --green: hsl(150, 100%, var(--color-normal));
-    --green-light: hsl(150, 100%, var(--color-light));
+    --lightness-dark: 35%;
+    --lightness-normal: 65%;
+    --lightness-light: 95%;
 
-    --red-dark: hsl(0, 100%, var(--color-dark));
-    --red: hsl(0, 100%, var(--color-normal));
-    --red-light: hsl(0, 100%, var(--color-light));
+    --red-dark: hsl(
+        var(--hue-red),
+        var(--saturation),
+        var(--lightness-dark)
+    );
+    --red-normal: hsl(
+        var(--hue-red),
+        var(--saturation),
+        var(--lightness-normal)
+    );
+    --red-light: hsl(
+        var(--hue-red),
+        var(--saturation),
+        var(--lightness-light)
+    );
 
-    --yellow-dark: hsl(60, 100%, var(--color-dark));
-    --yellow: hsl(60, 100%, var(--color-normal));
-    --yellow-light: hsl(60, 100%, var(--color-light));
+    --yellow-dark: hsl(
+        var(--hue-yellow),
+        var(--saturation),
+        var(--lightness-dark)
+    );
+    --yellow-normal: hsl(
+        var(--hue-yellow),
+        var(--saturation),
+        var(--lightness-normal)
+    );
+    --yellow-light: hsl(
+        var(--hue-yellow),
+        var(--saturation),
+        var(--lightness-light)
+    );
+
+    --green-dark: hsl(
+        var(--hue-green),
+        var(--saturation),
+        var(--lightness-dark)
+    );
+    --green-normal: hsl(
+        var(--hue-green),
+        var(--saturation),
+        var(--lightness-normal)
+    );
+    --green-light: hsl(
+        var(--hue-green),
+        var(--saturation),
+        var(--lightness-light)
+    );
+
+    --blue-dark: hsl(
+        var(--hue-blue),
+        var(--saturation),
+        var(--lightness-dark)
+    );
+    --blue-normal: hsl(
+        var(--hue-blue),
+        var(--saturation),
+        var(--lightness-normal)
+    );
+    --blue-light: hsl(
+        var(--hue-blue),
+        var(--saturation),
+        var(--lightness-light)
+    );
 
     --text: #212121;
     --text-med: #626262;
@@ -94,13 +149,21 @@ h1>a>.icon, h2>a>.icon, h3>a>.icon {
 
 a {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--blue-normal);
     background-color: transparent;
 }
 
 a:hover {
     color: var(--blue-dark);
     text-decoration: underline;
+}
+
+a.alert {
+    color: var(--red-normal);
+}
+
+a.alert:hover {
+    color: var(--red-dark);
 }
 
 /* Navigation Links*/
@@ -216,7 +279,7 @@ p {
 }
 
 mark {
-    background-color: var(--yellow);
+    background-color: var(--yellow-normal);
     color: #333333;
 }
 
@@ -273,7 +336,7 @@ ul, ol {
 
 details>summary {
     cursor: pointer;
-    color: var(--blue);
+    color: var(--blue-normal);
 }
 
 details>summary:hover {
@@ -378,7 +441,7 @@ progress[value] {
     width: 15em;
     height: 0.75em;
     background-color: var(--text-light);
-    color: var(--blue);
+    color: var(--blue-normal);
 }
 
 progress[value]::-webkit-progress-bar {
@@ -386,7 +449,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: var(--blue);
+    background-color: var(--blue-normal);
 }
 
 /* Table Elements */
@@ -432,7 +495,7 @@ table.border td {
 .note {
     padding: var(--space-md);
     background-color: var(--blue-light);
-    border: 1px solid var(--blue);
+    border: 1px solid var(--blue-normal);
     border-left-width: 4px;
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
@@ -441,7 +504,7 @@ table.border td {
 .note>h3 {
     padding-top: 0;
     margin-top: 0;
-    border-bottom: thin solid var(--blue);
+    border-bottom: thin solid var(--blue-normal);
 }
 
 .note>:first-child {
@@ -453,10 +516,10 @@ table.border td {
 }
 
 .note.alert {
-    border-color: var(--red);
+    border-color: var(--red-normal);
     background-color: var(--red-light);
 }
 
 .note.alert>h3 {
-    border-bottom-color: var(--red);
+    border-bottom-color: var(--red-normal);
 }

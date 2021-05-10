@@ -1,53 +1,52 @@
-{{- $page := .Page }}
-{{- $link := .Destination }}
-{{- $isExternal := or (strings.HasPrefix $link "https://") (strings.HasPrefix $link "http://") }}
-{{- $isResource := strings.HasPrefix $link "!" }}
-{{- $text := .Text }}
+{{- $page := .Page -}}
+{{- $link := .Destination -}}
+{{- $isExternal := or (strings.HasPrefix $link "https://") (strings.HasPrefix $link "http://") -}}
+{{- $isResource := strings.HasPrefix $link "!" -}}
+
+{{- $text := .Text -}}
+{{- $class := "" -}}
+{{- $download := "" -}}
+{{- $class := slice -}}
 
 {{- if $isExternal -}}
-	{{ if not $text }}
-		{{ $text = $link }}
-	{{ end }}
+	{{- if not $text -}}
+		{{- $text = $link -}}
+	{{- end -}}
+{{- else if $isResource -}}
+	{{- $link = strings.TrimPrefix "!" $link -}}
+	{{- $download = path.Base $link -}}
+	{{- if not $text -}}
+		{{- $text = $download -}}
+	{{- end -}}
+{{- else -}}
+	{{- $url := urls.Parse $link -}}
 
-	<a
-		href="{{ $link | safeURL }}"
-		{{- with .Title}} title="{{ . }}"{{ end }}
-		target="_blank"
-	>{{ $text | safeHTML }}</a>
-{{ else if $isResource }}
-	{{ $link = strings.TrimPrefix "!" $link }}
-	{{ $name := path.Base $link }}
-	{{ if not $text }}
-		{{ $text = $name }}
-	{{ end }}
+	{{- with $url.Path -}}
+		{{- with $page.GetPage . -}}
+			{{- $link = .RelPermalink -}}
 
-	<a
-		href="{{ $link }}"
-		download="{{ $name }}"
-	>{{ $text | safeHTML }}</a>
-{{ else }}
-	{{ $url := urls.Parse $link }}
-	{{ with $url.Path }}
-		{{ with $page.GetPage . }}
-			{{ $link = .RelPermalink }}
+			{{- if not $text -}}
+				{{- $text = .Title -}}
+			{{- end -}}
+		{{- else -}}
+			{{- $class = "alert" -}}
+			{{- $link = printf "%s?path=/%s/%s/" ($page.GetPage "404").RelPermalink $page.Language.Lang $url.Path -}}
+			{{- warnf "%s: link %s is not resolved" $page.File.Path . -}}
+		{{- end -}}
+	{{- else -}}
+		{{- $link = "" -}}
+	{{- end -}}
 
-			{{ if not $text }}
-				{{ $text = .Title }}
-			{{ end }}
-		{{ else }}
-			{{ $link = "" }}
-			{{ warnf "%s: link %s is not resolved" $page.File.Path . }}
-		{{ end }}
-	{{ else }}
-		{{ $link = "" }}
-	{{ end }}
-
-	{{ with $url.Fragment }}
-		{{ $link = printf "%s#%s" $link . }}
-	{{ end }}
-
-	<a
-		href="{{ $link | safeURL }}"
-		{{- with .Title}} title="{{ . }}"{{ end }}
-	>{{ $text | safeHTML }}</a>
+	{{- with $url.Fragment -}}
+		{{- $link = printf "%s#%s" $link . -}}
+	{{- end -}}
 {{- end -}}
+
+<a href="{{ $link }}"
+	{{- with .Title}} title="{{ . }}"{{ end -}}
+	{{- if $isExternal }} target="_blank"{{ end -}}
+	{{- if $download }} download="{{ $download }}"{{ end -}}
+	{{- if $class }} class="{{ $class }}"{{ end -}}
+>{{ $text | safeHTML }}</a>
+
+{{- "" -}}
