@@ -29,9 +29,14 @@
 				{{- $text = .Title -}}
 			{{- end -}}
 		{{- else -}}
+			{{- warnf "%s: link %s is not resolved" $page.File.Path . -}}
+
 			{{- $class = "alert" -}}
 			{{- $link = printf "%s?path=/%s/%s/" ($page.GetPage "404").RelPermalink $page.Language.Lang $url.Path -}}
-			{{- warnf "%s: link %s is not resolved" $page.File.Path . -}}
+
+			{{- if not $text -}}
+				{{- $text = $url.Path -}}
+			{{- end -}}
 		{{- end -}}
 	{{- else -}}
 		{{- $link = "" -}}

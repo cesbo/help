@@ -4,67 +4,6 @@ description: Website style guide
 url: /style/
 ---
 
-<h2>Lists</h2>
-
-Ordered list:
-
-<ol>
-	<li>Item #1</li>
-	<li>Item #2</li>
-	<li>Item #3</li>
-	<li>Item #4</li>
-</ol>
-
-Unordered list:
-
-<ul>
-	<li>Item #1</li>
-	<li>Item #2</li>
-	<li>Item #3</li>
-	<li>Item #4</li>
-</ul>
-
-<h2>Links</h2>
-
-<table class="border" style="width:100%;">
-	<tr>
-		<td>
-			External link
-		</td>
-		<td>
-		<code>[](https://cesbo.com)</code>
-		</td>
-		<td>
-			<a href="https://cesbo.com" target="_blank">https://cesbo.com</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			Internal link
-		</td>
-		<td>
-			<code>[](astra/quick-start/install)</code>
-		</td>
-		<td>
-			<a href="/en/astra/quick-start/install/">Install</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			Link to the page resource
-		</td>
-		<td>
-			<code>[](!index.html)</code>
-		</td>
-		<td>
-			<a href="index.html" download="index.html">index.html</a>
-		</td>
-	</tr>
-</table>
-
-<p>In this examples link text is not defined and depend of the link type.
-You may redefine link text in squared quotes for any type</p>
-
 <h2>Colors</h2>
 
 <table class="border" style="width:100%;">
@@ -163,13 +102,7 @@ You may redefine link text in squared quotes for any type</p>
 <h2>Note</h2>
 
 <div class="note">
-<p>Additional information</p>
-</div>
-
-<p></p>
-
-<div class="note">
-<h3>Header</h3>
+<h3>Optional Header</h3>
 <p>Additional information with header</p>
 </div>
 
@@ -184,13 +117,7 @@ Information content
 <h2>Alert</h2>
 
 <div class="note alert">
-<p>Attention message</p>
-</div>
-
-<p></p>
-
-<div class="note alert">
-<h3>Header</h3>
+<h3>Optional Header</h3>
 <p>Attention message with header</p>
 </div>
 
@@ -206,7 +133,7 @@ Attention content
 
 {{< highlight rust >}}
 fn main() {
-	println!("Hello, world!");
+    println!("Hello, world!");
 }
 {{< /highlight >}}
 
