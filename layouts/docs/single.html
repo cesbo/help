@@ -14,11 +14,13 @@
 	{{- range $docs.Sections }}
 	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
 		<summary>{{ .Title }}</summary>
-		{{- range where .Pages "IsPage" true }}
-		<a href="{{ .RelPermalink }}"
-			{{- if eq . $.Page }} class="active"{{ end -}}
-		>{{ .Title }}</a>
-		{{- end }}
+		<nav>
+			{{- range where .Pages "IsPage" true }}
+			<a href="{{ .RelPermalink }}"
+				{{- if eq . $.Page }} class="active"{{ end -}}
+			>{{ .Title }}</a>
+			{{- end }}
+		</nav>
 	</details>
 	{{- end }}
 </nav>

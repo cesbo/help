@@ -135,24 +135,8 @@ nav details>summary {
     white-space: nowrap;
 }
 
-nav details>summary { list-style: none; }
-
-details.submenu>summary::-webkit-details-marker { display: none; }
-
-nav details>summary::before {
-    content: "\25BA";
-    font-size: .8em;
-    margin-right: var(--space-xs);
-    line-height: 1.5;
-}
-
-nav details[open]>summary::before {
-    content: "\25BC";
-}
-
 nav a:hover,
-nav details.submenu>summary:hover,
-nav details.submenu[open]>summary {
+nav details>summary:hover {
     background-color: var(--blue-light);
     text-decoration: none;
 }
@@ -174,30 +158,20 @@ nav.sidemenu>* {
     width: 100%;
 }
 
-nav.sidemenu details {
-    display: flex;
-    flex-direction: column;
-}
-
 nav.sidemenu details>summary {
+    display: block;
     font-weight: 600;
     color: var(--grey-normal);
-    width: 100%;
 }
 
 /* SUB MENU */
 
-details.submenu {
-    position: relative;
-}
+details.submenu { position: relative; }
 
 details.submenu>summary {
-    list-style: none;
-    height: 100%;
-}
-
-details.submenu>summary::-webkit-details-marker {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 details.submenu[open]>summary::before {
@@ -213,7 +187,7 @@ details.submenu[open]>summary::before {
     background: transparent;
 }
 
-details.submenu[open]>summary+* {
+details.submenu[open]>nav {
     position: absolute;
     z-index: 51;
     background-color: var(--background);
@@ -223,10 +197,10 @@ details.submenu[open]>summary+* {
     overflow: hidden;
 }
 
-details.submenu-up[open]>summary+* { bottom: calc(100% + .25em); }
-details.submenu-right[open]>summary+* { right: .25em; }
-details.submenu-down[open]>summary+* { top: calc(100% + .25em); }
-details.submenu-left[open]>summary+* { left: .25em; }
+details.submenu-up[open]>nav { bottom: calc(100% + .25em); }
+details.submenu-right[open]>nav { right: .25em; }
+details.submenu-down[open]>nav { top: calc(100% + .25em); }
+details.submenu-left[open]>nav { left: .25em; }
 
 /* Horizontal Line */
 
@@ -307,6 +281,7 @@ ul, ol {
 details>summary {
     cursor: pointer;
     color: var(--blue-normal);
+    width: 100%;
 }
 
 details>summary:hover {
@@ -329,6 +304,10 @@ details>.spoiler>:first-child {
 
 details>.spoiler>:last-child {
     margin-bottom: 0;
+}
+
+details>nav {
+    flex-direction: column;
 }
 
 /* Form elements */
