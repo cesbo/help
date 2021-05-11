@@ -2,7 +2,7 @@
 /* HEADER */
 
 header {
-	box-shadow: var(--button-shadow);
+	border-bottom: thin solid var(--blue-normal);
 }
 
 header>nav {
@@ -30,7 +30,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--text-lighter);
+	background-color: var(--grey-light);
 	padding: var(--space-sm) 0;
 }
 
@@ -44,7 +44,7 @@ footer>nav.legal {
 }
 
 footer>nav.legal>.copyright {
-	color: var(--text-light);
+	color: var(--grey-normal);
 	padding: var(--space-xs) var(--space-unit);
 	display: flex;
 	align-items: center;
@@ -91,7 +91,7 @@ main.docs>article {
 }
 
 main.docs a[href=""] {
-	color: var(--text-light) !important;
+	color: var(--grey-normal) !important;
 	background-color: transparent !important;
 	text-decoration: none !important;
 	cursor: default;

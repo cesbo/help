@@ -4,7 +4,8 @@
     --font-content: "Roboto", "Helvetica Neue", sans-serif;
     --font-monospace: monospace;
 
-    --background: #ffffff;
+    --background: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 10%);
 
     --hue-red: 0;
     --hue-yellow: 60;
@@ -13,82 +14,33 @@
 
     --saturation: 60%;
 
-    --lightness-dark: 35%;
-    --lightness-normal: 65%;
-    --lightness-light: 95%;
+    --lightness-dark: 30%;
+    --lightness-normal: 63%;
+    --lightness-light: 96%;
 
-    --red-dark: hsl(
-        var(--hue-red),
-        var(--saturation),
-        var(--lightness-dark)
-    );
-    --red-normal: hsl(
-        var(--hue-red),
-        var(--saturation),
-        var(--lightness-normal)
-    );
-    --red-light: hsl(
-        var(--hue-red),
-        var(--saturation),
-        var(--lightness-light)
-    );
+    --red-dark: hsl(var(--hue-red), var(--saturation), var(--lightness-dark));
+    --red-normal: hsl(var(--hue-red), var(--saturation), var(--lightness-normal));
+    --red-light: hsl(var(--hue-red), var(--saturation), var(--lightness-light));
 
-    --yellow-dark: hsl(
-        var(--hue-yellow),
-        var(--saturation),
-        var(--lightness-dark)
-    );
-    --yellow-normal: hsl(
-        var(--hue-yellow),
-        var(--saturation),
-        var(--lightness-normal)
-    );
-    --yellow-light: hsl(
-        var(--hue-yellow),
-        var(--saturation),
-        var(--lightness-light)
-    );
+    --yellow-dark: hsl(var(--hue-yellow), var(--saturation), var(--lightness-dark));
+    --yellow-normal: hsl(var(--hue-yellow), var(--saturation), var(--lightness-normal));
+    --yellow-light: hsl(var(--hue-yellow), var(--saturation), var(--lightness-light));
 
-    --green-dark: hsl(
-        var(--hue-green),
-        var(--saturation),
-        var(--lightness-dark)
-    );
-    --green-normal: hsl(
-        var(--hue-green),
-        var(--saturation),
-        var(--lightness-normal)
-    );
-    --green-light: hsl(
-        var(--hue-green),
-        var(--saturation),
-        var(--lightness-light)
-    );
+    --green-dark: hsl(var(--hue-green), var(--saturation), var(--lightness-dark));
+    --green-normal: hsl(var(--hue-green), var(--saturation), var(--lightness-normal));
+    --green-light: hsl(var(--hue-green), var(--saturation), var(--lightness-light));
 
-    --blue-dark: hsl(
-        var(--hue-blue),
-        var(--saturation),
-        var(--lightness-dark)
-    );
-    --blue-normal: hsl(
-        var(--hue-blue),
-        var(--saturation),
-        var(--lightness-normal)
-    );
-    --blue-light: hsl(
-        var(--hue-blue),
-        var(--saturation),
-        var(--lightness-light)
-    );
+    --blue-dark: hsl(var(--hue-blue), var(--saturation), var(--lightness-dark));
+    --blue-normal: hsl(var(--hue-blue), var(--saturation), var(--lightness-normal));
+    --blue-light: hsl(var(--hue-blue), var(--saturation), var(--lightness-light));
 
-    --text: #212121;
-    --text-med: #626262;
-    --text-light: #9a9a9a;
-    --text-lighter: #f6f7f6;
+    --grey-dark: hsl(0, 0%, var(--lightness-dark));
+    --grey-normal: hsl(0, 0%, var(--lightness-normal));
+    --grey-light: hsl(0, 0%, var(--lightness-light));
 
     --border-radius: 5px;
 
-    --button-shadow: 0 0 4px 0 var(--text-light);
+    --box-shadow: 0 0 4px 0 var(--grey-normal);
 
     --space-unit: 1em;
     --space-xs: calc(0.4 * var(--space-unit));
@@ -123,15 +75,19 @@ body {
 /* Headings */
 
 h1, h2, h3 {
-    margin: var(--space-sm) 0 var(--space-xs) 0;
-    padding: var(--space-sm) 0;
+    margin: var(--space-sm) 0;
+    padding: var(--space-xs) 0;
 }
 
 h1 {
     font-size: var(--space-xl);
     margin-top: 0;
+    border-bottom: thin dotted var(--blue-normal);
 }
-h2 { font-size: var(--space-lg); }
+h2 {
+    font-size: var(--space-lg);
+    border-bottom: thin dotted var(--blue-normal);
+}
 h3 { font-size: var(--space-md); }
 
 h4, h5, h6 { display: none; }
@@ -217,7 +173,7 @@ nav.sidemenu details {
 
 nav.sidemenu details>summary {
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--grey-normal);
     width: 100%;
 }
 
@@ -255,7 +211,7 @@ details.submenu[open]>summary+* {
     background-color: var(--background);
     background-clip: padding-box;
     border-radius: var(--border-radius);
-    box-shadow: var(--button-shadow);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
 }
 
@@ -267,7 +223,7 @@ details.submenu-left[open]>summary+* { left: .25em; }
 /* Horizontal Line */
 
 hr {
-    border: 1px solid var(--text-med);
+    border: 1px solid var(--grey-normal);
     border-bottom: 0px;
     height:0px;
 }
@@ -299,9 +255,8 @@ pre {
     width: 100%;
     padding: var(--space-md);
     line-height: 1.25;
-    background-color: var(--text-lighter);
-
-    border: 1px solid var(--text-light);
+    background-color: var(--grey-light);
+    border: 1px solid var(--grey-normal);
     border-left-width: 4px;
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
@@ -311,7 +266,7 @@ pre {
 }
 
 blockquote {
-    border-left: 4px solid var(--text-light);
+    border-left: 4px solid var(--grey-normal);
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     margin: 1em 0;
@@ -324,6 +279,13 @@ samp {
     font-family: var(--font-monospace);
     font-size: 1rem;
     line-height: 1.5;
+    color: var(--red-normal);
+}
+
+pre code {
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 
 /* List items */
@@ -347,7 +309,7 @@ details>.spoiler {
     width: 100%;
     padding: var(--space-md);
 
-    border: 1px solid var(--text-light);
+    border: 1px solid var(--grey-normal);
     border-left-width: 4px;
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
@@ -364,7 +326,7 @@ details>.spoiler>:last-child {
 /* Form elements */
 
 fieldset {
-    border: 1px solid var(--text);
+    border: 1px solid var(--grey-normal);
     border-radius: var(--border-radius);
 }
 
@@ -389,7 +351,7 @@ a[role="button"] {
     line-height: 1.5;
     margin: 0;
     padding: 0.33em;
-    border: 1px solid var(--text-light);
+    border: 1px solid var(--grey-normal);
     border-radius: var(--border-radius);
     overflow: hidden;
 }
@@ -405,7 +367,7 @@ input[type="submit"],
 a[role="button"] {
     padding: 0.33em 0.66em;
     cursor: pointer;
-    background-color: var(--text-lighter);
+    background-color: var(--grey-light);
     color: var(--text);
     text-decoration: none;
 }
@@ -414,7 +376,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 a[role="button"]:hover {
-    background-color: var(--text-light);
+    background-color: var(--grey-normal);
 }
 
 a[role="button"] {
@@ -425,8 +387,8 @@ button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled,
 a[role="button"]:disabled {
-    background-color: var(--text-lighter);
-    color: var(--text-light);
+    background-color: var(--grey-light);
+    color: var(--grey-normal);
     cursor: not-allowed;
 }
 
@@ -440,12 +402,12 @@ progress[value] {
     border: none;
     width: 15em;
     height: 0.75em;
-    background-color: var(--text-light);
+    background-color: var(--grey-normal);
     color: var(--blue-normal);
 }
 
 progress[value]::-webkit-progress-bar {
-    background-color: var(--text-light);
+    background-color: var(--grey-normal);
 }
 
 progress[value]::-webkit-progress-value {
@@ -461,7 +423,7 @@ table {
 table,
 table th,
 table td {
-    border-bottom: 1px solid var(--text-light);
+    border-bottom: 1px solid var(--grey-normal);
     padding: 0.33em 0.66em;
     text-align: left;
     vertical-align: middle;
@@ -470,7 +432,7 @@ table td {
 table.border,
 table.border th,
 table.border td {
-    border: 1px solid var(--text-light);
+    border: 1px solid var(--grey-normal);
 }
 
 /* Utility classes */
