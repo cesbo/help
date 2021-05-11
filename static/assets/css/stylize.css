@@ -2,41 +2,34 @@
 
 :root {
     --font-content: "Roboto", "Helvetica Neue", sans-serif;
-    --font-monospace: monospace;
+    --font-monospace: "Consolas", monospace;
 
     --background: hsl(0, 0%, 100%);
     --text: hsl(0, 0%, 10%);
 
-    --hue-red: 0;
-    --hue-yellow: 60;
-    --hue-green: 120;
-    --hue-blue: 210;
-
-    --saturation: 60%;
-
     --lightness-dark: 30%;
-    --lightness-normal: 63%;
-    --lightness-light: 96%;
+    --lightness-normal: 60%;
+    --lightness-light: 90%;
 
-    --red-dark: hsl(var(--hue-red), var(--saturation), var(--lightness-dark));
-    --red-normal: hsl(var(--hue-red), var(--saturation), var(--lightness-normal));
-    --red-light: hsl(var(--hue-red), var(--saturation), var(--lightness-light));
+    --red-dark: hsl(0, 60%, var(--lightness-dark));
+    --red-normal: hsl(0, 60%, var(--lightness-normal));
+    --red-light: hsla(0, 60%, var(--lightness-light), .5);
 
-    --yellow-dark: hsl(var(--hue-yellow), var(--saturation), var(--lightness-dark));
-    --yellow-normal: hsl(var(--hue-yellow), var(--saturation), var(--lightness-normal));
-    --yellow-light: hsl(var(--hue-yellow), var(--saturation), var(--lightness-light));
+    --yellow-dark: hsl(60, 60%, var(--lightness-dark));
+    --yellow-normal: hsl(60, 60%, var(--lightness-normal));
+    --yellow-light: hsla(60, 60%, var(--lightness-light), .5);
 
-    --green-dark: hsl(var(--hue-green), var(--saturation), var(--lightness-dark));
-    --green-normal: hsl(var(--hue-green), var(--saturation), var(--lightness-normal));
-    --green-light: hsl(var(--hue-green), var(--saturation), var(--lightness-light));
+    --green-dark: hsl(120, 60%, var(--lightness-dark));
+    --green-normal: hsl(120, 60%, var(--lightness-normal));
+    --green-light: hsla(120, 60%, var(--lightness-light), .5);
 
-    --blue-dark: hsl(var(--hue-blue), var(--saturation), var(--lightness-dark));
-    --blue-normal: hsl(var(--hue-blue), var(--saturation), var(--lightness-normal));
-    --blue-light: hsl(var(--hue-blue), var(--saturation), var(--lightness-light));
+    --blue-dark: hsl(210, 60%, var(--lightness-dark));
+    --blue-normal: hsl(210, 60%, var(--lightness-normal));
+    --blue-light: hsla(210, 60%, var(--lightness-light), .5);
 
     --grey-dark: hsl(0, 0%, var(--lightness-dark));
     --grey-normal: hsl(0, 0%, var(--lightness-normal));
-    --grey-light: hsl(0, 0%, var(--lightness-light));
+    --grey-light: hsla(0, 0%, var(--lightness-light), .5);
 
     --border-radius: 5px;
 
@@ -140,6 +133,21 @@ nav details>summary {
     line-height: 1;
     padding: var(--space-xs) var(--space-unit);
     white-space: nowrap;
+}
+
+nav details>summary { list-style: none; }
+
+details.submenu>summary::-webkit-details-marker { display: none; }
+
+nav details>summary::before {
+    content: "\25BA";
+    font-size: .8em;
+    margin-right: var(--space-xs);
+    line-height: 1.5;
+}
+
+nav details[open]>summary::before {
+    content: "\25BC";
 }
 
 nav a:hover,
