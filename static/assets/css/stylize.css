@@ -13,23 +13,23 @@
 
     --red-dark: hsl(0, 60%, var(--lightness-dark));
     --red-normal: hsl(0, 60%, var(--lightness-normal));
-    --red-light: hsla(0, 60%, var(--lightness-light), .5);
+    --red-light: hsla(0, 60%, var(--lightness-light), .25);
 
     --yellow-dark: hsl(60, 60%, var(--lightness-dark));
     --yellow-normal: hsl(60, 60%, var(--lightness-normal));
-    --yellow-light: hsla(60, 60%, var(--lightness-light), .5);
+    --yellow-light: hsla(60, 60%, var(--lightness-light), .25);
 
     --green-dark: hsl(120, 60%, var(--lightness-dark));
     --green-normal: hsl(120, 60%, var(--lightness-normal));
-    --green-light: hsla(120, 60%, var(--lightness-light), .5);
+    --green-light: hsla(120, 60%, var(--lightness-light), .25);
 
     --blue-dark: hsl(210, 60%, var(--lightness-dark));
     --blue-normal: hsl(210, 60%, var(--lightness-normal));
-    --blue-light: hsla(210, 60%, var(--lightness-light), .5);
+    --blue-light: hsla(210, 60%, var(--lightness-light), .25);
 
     --grey-dark: hsl(0, 0%, var(--lightness-dark));
     --grey-normal: hsl(0, 0%, var(--lightness-normal));
-    --grey-light: hsla(0, 0%, var(--lightness-light), .5);
+    --grey-light: hsla(0, 0%, var(--lightness-light), .25);
 
     --border-radius: 5px;
 
@@ -89,7 +89,7 @@ h1>a, h2>a, h3>a {
     float: right;
 }
 
-h1>a>.icon, h2>a>.icon, h3>a>.icon {
+h1>a>.icon::before, h2>a>.icon::before, h3>a>.icon::before {
     width: 1.2rem;
     height: 1.2rem;
 }
@@ -159,7 +159,6 @@ nav.sidemenu>* {
 }
 
 nav.sidemenu details>summary {
-    display: block;
     font-weight: 600;
     color: var(--grey-normal);
 }
@@ -317,17 +316,6 @@ fieldset {
     border-radius: var(--border-radius);
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance : none;
-    appearance : none;
-    background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M00h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 50%;
-}
-
 button,
 input,
 select,
@@ -338,9 +326,16 @@ a[role="button"] {
     line-height: 1.5;
     margin: 0;
     padding: 0.33em;
-    border: 1px solid var(--grey-normal);
+    border: 1px solid var(--blue-normal);
     border-radius: var(--border-radius);
     overflow: hidden;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--blue-dark);
 }
 
 input[type="checkbox"],
@@ -377,6 +372,18 @@ a[role="button"]:disabled {
     background-color: var(--grey-light);
     color: var(--grey-normal);
     cursor: not-allowed;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance : none;
+    appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    padding-right: var(--space-md);
 }
 
 /* Progress Bar */
@@ -432,13 +439,6 @@ table.border td {
 .flex-column { display: flex; flex-direction: column; }
 .flex-expand { flex: 1 1 auto; min-width: 0; }
 
-.icon {
-    display: inline-block;
-    width: var(--space-md);
-    height: var(--space-md);
-    fill: currentColor;
-}
-
 /* NOTE */
 
 .note {
@@ -471,4 +471,28 @@ table.border td {
 
 .note.alert>h3 {
     border-bottom-color: var(--red-normal);
+}
+
+/* ICONS */
+
+.icon::before {
+    content: " ";
+    display: flex;
+    background-color: currentColor;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: var(--space-md);
+    height: var(--space-md);
+}
+
+.icon-edit::before {
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>');
+}
+
+.icon-link::before {
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"/></svg>');
+}
+
+.icon-arrow::before {
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
 }

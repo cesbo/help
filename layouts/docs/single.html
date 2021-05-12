@@ -1,5 +1,11 @@
 {{ define "main" }}
 <nav class="sidemenu hide-sm">
+	<a href="." title="Search" onClick="startSearch(event)">
+		<i class="icon icon-search"></i>
+		<span>Search</span>
+		<span class="hide-sm">&nbsp;(press 'S' to search)</span>
+	</a>
+
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
 		{{- if eq . $docs }} class="active"{{ end -}}
@@ -13,7 +19,7 @@
 
 	{{- range $docs.Sections }}
 	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
-		<summary>{{ .Title }}</summary>
+		<summary class="icon icon-arrow">{{ .Title }}</summary>
 		<nav>
 			{{- range where .Pages "IsPage" true }}
 			<a href="{{ .RelPermalink }}"
