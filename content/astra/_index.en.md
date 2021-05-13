@@ -5,10 +5,6 @@ cascade:
 
 title: Astra
 description: Astra is a professional software for Digital TV Broadcasting. Features list
-
-menu:
-  main:
-    weight: 1
 ---
 
 ## Receiving
