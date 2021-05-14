@@ -1,12 +1,5 @@
 {{ define "main" }}
-<button class="sidemenu-toggle only-sm icon icon-menu" onClick="document.body.classList.toggle('sidemenu-open')"></button>
-
 <nav class="sidemenu hide-sm">
-	<a href="." title="Search" onClick="startSearch(event)">
-		<i class="icon icon-search"></i>
-		<span>Search (press 'S' to search)</span>
-	</a>
-
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
 		{{- if eq . $docs }} class="active"{{ end -}}
@@ -35,11 +28,12 @@
 <article class="flex-expand">
 <h1>{{ .Title }}{{ partial "edit-page" . }}</h1>
 {{ .Content }}
+
+<nav class="sticky">
+<a href="." class="only-sm icon icon-menu" onClick="event.preventDefault(),document.body.classList.toggle('show-sidemenu')"></a>
+{{- with $.GetPage "search" }}
+<a href="{{ .RelPermalink }}" class="icon icon-search" title="Search (press 'S' to search)"></a>
+{{- end }}
+</nav>
 </article>
-{{ end }}
-
-
-{{ define "tail" }}
-<script src="/assets/js/fuse.min.js"></script>
-<script src="/assets/js/search.js"></script>
 {{ end }}
