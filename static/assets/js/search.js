@@ -2,47 +2,71 @@
 'use strict';
 
 
-window.startSearch = function(event) {
-    event.preventDefault();
-    window.scrollTo(0, 0);
+let fuse = null;
+let searchInput = null;
+let searchResult = null;
 
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
 
-    document.body.appendChild(modal);
+function clearSearchResult() {
+    while(searchResult.firstChild) searchResult.removeChild(searchResult.firstChild);
+}
 
-    document.addEventListener('keydown', function(event) {
 
-    })
+function onSearch() {
+    clearSearchResult();
+
+    const value = searchInput.value.trim();
+    if(value.length < 3 || !fuse) { return }
+
+    let results = fuse.search(value);
+    if(results.length === 0) { return }
+
+    for(let item of results.slice(0, 20)) {
+        const page = item.item;
+        const a = document.createElement('a');
+        a.href = page.link;
+        a.textContent = (!!page.parent) ? page.parent + ' > ' + page.title : page.title;
+        searchResult.appendChild(a);
+
+        const matches = item.matches;
+        const text = matches[0].value;
+        if(text != page.title) {
+            const p = document.createElement('p');
+            p.textContent = (text.length > 40) ? (text.slice(0, 40) + '...') : text;
+            searchResult.appendChild(p);
+        }
+    }
 }
 
 
 function init(data) {
-    window.fuse = new Fuse(data, {
+    if(!data) return;
+
+    fuse = new Fuse(data, {
         keys: ['title', 'content'],
         includeMatches: true,
-    });
+        shouldSort: true,
+        location: 0,
+        distance: 100,
+        threshold: 0.4,
+    })
+
+    onSearch()
 }
 
 
 $(function() {
+    searchInput = window['search-input'];
+    searchResult = window['search-result'];
+    if(!searchInput || !searchResult) return;
+
+    searchInput.addEventListener('input', onSearch);
+    searchInput.focus();
+
     fetch('/' + document.documentElement.lang + '/index.json')
-        .then(response => { console.log(response); response.json() })
+        .then(response => response.json())
         .then(json => init(json))
         .catch(error => console.error(error));
-
-    document.addEventListener('keydown', function(event) {
-        if(!(
-            document.activeElement != document.body ||
-            event.altKey ||
-            event.ctrlKey ||
-            event.metaKey ||
-            event.shiftKey ||
-            event.key != 's'
-        )) {
-            startSearch(event)
-        }
-    })
 });
 
 })();

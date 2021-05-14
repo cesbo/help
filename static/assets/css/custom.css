@@ -121,6 +121,26 @@ nav.sticky>a.icon:hover {
 	border-color: currentColor;
 }
 
+/* SEARCH */
+
+.search {
+	margin: var(--space-xl) 0;
+}
+
+.search #search-input {
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.search #search-result a {
+	margin-top: var(--space-xl);
+}
+
+.search #search-result p {
+	margin: 0;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (min-width: 999px) {
