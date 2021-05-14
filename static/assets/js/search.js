@@ -32,7 +32,7 @@ function onSearch() {
         const text = matches[0].value;
         if(text != page.title) {
             const p = document.createElement('p');
-            p.textContent = (text.length > 40) ? (text.slice(0, 40) + '...') : text;
+            p.textContent = (text.length > 80) ? (text.slice(0, 80) + '...') : text;
             searchResult.appendChild(p);
         }
     }

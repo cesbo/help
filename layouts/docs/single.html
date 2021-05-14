@@ -30,9 +30,9 @@
 {{ .Content }}
 
 <nav class="sticky">
-<a href="." class="only-sm icon icon-menu" onClick="event.preventDefault(),document.body.classList.toggle('show-sidemenu')"></a>
+<a href="." class="only-sm icon icon-menu" title="Toggle Menu" onClick="event.preventDefault(),document.body.classList.toggle('show-sidemenu')"></a>
 {{- with $.GetPage "search" }}
-<a href="{{ .RelPermalink }}" class="icon icon-search" title="Search (press 'S' to search)"></a>
+<a href="{{ .RelPermalink }}" class="icon icon-search" title="Search"></a>
 {{- end }}
 </nav>
 </article>
