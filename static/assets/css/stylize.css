@@ -131,7 +131,7 @@ nav details>summary {
     flex-direction: row;
     align-items: center;
     line-height: 1;
-    padding: var(--space-xs) var(--space-unit);
+    padding: var(--space-xs) var(--space-sm);
     white-space: nowrap;
 }
 
@@ -141,7 +141,7 @@ nav a.active {
 }
 
 details>nav {
-    margin-left: var(--space-md);
+    margin-left: var(--space-sm);
     flex-direction: column;
 }
 
@@ -149,14 +149,18 @@ details>nav {
 
 nav.sidemenu {
     z-index: 51;
+
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     overflow-x: hidden;
     background-color: var(--background);
+
+    padding: var(--space-xs) 0;
 }
 
 nav.sidemenu details>summary {
+    font-size: .8em;
     font-weight: 600;
     color: var(--grey-normal);
 }

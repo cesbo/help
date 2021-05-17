@@ -16,7 +16,7 @@ Most Linux distribution has pre-installed `curl`.
 Download binary file and set execute permission. On the server you may use next command:
 
 ```sh
-curl -Lo /usr/bin/astra http://cesbo.com/astra-latest
+curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
 chmod +x /usr/bin/astra
 ```
 
