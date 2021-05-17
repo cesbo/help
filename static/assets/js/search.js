@@ -49,6 +49,7 @@ function init(data) {
         location: 0,
         distance: 100,
         threshold: 0.4,
+        minMatchCharLength: 3,
     })
 
     onSearch()

@@ -1,5 +1,9 @@
 {{ define "main" }}
 <nav class="sidemenu hide-sm">
+	{{- with $.GetPage "search" }}
+	<a href="{{ .RelPermalink }}" class="icon icon-search">Search</a>
+	{{- end }}
+
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
 		{{- if eq . $docs }} class="active"{{ end -}}
@@ -30,10 +34,7 @@
 {{ .Content }}
 
 <nav class="sticky">
-<a href="." class="only-sm icon icon-menu" title="Toggle Menu" onClick="event.preventDefault(),document.body.classList.toggle('show-sidemenu')"></a>
-{{- with $.GetPage "search" }}
-<a href="{{ .RelPermalink }}" class="icon icon-search" title="Search"></a>
-{{- end }}
+<a href="." class="only-sm icon icon-menu" title="Toggle Menu" onClick="event.preventDefault(),event.target.classList.toggle('icon-menu'),event.target.classList.toggle('icon-close'),document.body.classList.toggle('show-sidemenu')"></a>
 </nav>
 </article>
 {{ end }}
