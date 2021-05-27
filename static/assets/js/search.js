@@ -42,7 +42,10 @@ function init(data) {
     if(!data) return;
 
     seacher = elasticlunr(function () {
-        this.use(elasticlunr.multiLanguage('en', 'ru'));
+        if(window.location.pathname.includes('ru')) {
+            this.use(elasticlunr.multiLanguage('en', 'ru'));
+        }
+
         this.addField('title');
         this.addField('content');
         this.setRef('id');
