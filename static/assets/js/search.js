@@ -42,15 +42,14 @@ function init(data) {
     if(!data) return;
 
     seacher = elasticlunr(function () {
+        this.use(elasticlunr.multiLanguage('en', 'ru'));
         this.addField('title');
         this.addField('content');
         this.setRef('id');
     });
 
     data.forEach(e => {
-        const doc = e;
-        e.id = ++counter;
-        seacher.addDoc(doc);
+        seacher.addDoc({ id: ++counter, ...e });
     });
 
     onSearch()
