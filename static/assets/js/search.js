@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-let seacher = null;
+let searcher = null;
 let searchInput = null;
 let searchResult = null;
 
@@ -15,9 +15,9 @@ function onSearch() {
     clearSearchResult();
 
     const value = searchInput.value.trim();
-    if(value.length < 3 || !seacher) { return }
+    if(value.length < 3 || !searcher) { return }
 
-    let results = seacher.search(value);
+    let results = searcher.search(value);
     if(results.length === 0) { return }
 
     for(let item of results.slice(0, 20)) {
@@ -41,7 +41,7 @@ function init(data) {
     let counter = 0;
     if(!data) return;
 
-    seacher = elasticlunr(function () {
+    searcher = elasticlunr(function () {
         if(window.location.pathname.includes('ru')) {
             this.use(elasticlunr.multiLanguage('en', 'ru'));
         }
@@ -52,7 +52,7 @@ function init(data) {
     });
 
     data.forEach(e => {
-        seacher.addDoc({ id: ++counter, ...e });
+        searcher.addDoc({ id: ++counter, ...e });
     });
 
     onSearch()
