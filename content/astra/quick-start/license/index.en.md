@@ -9,15 +9,18 @@ Valid license is required to launch Astra.
 ## New License
 
 You may purchase new license or get demo on our website: [Get License](astra/pricing).
-You will receive new license immediately to your E-mail.
 
-## Apply license in web interface
+You will receive new license after:
 
-Open Astra web-interface and put your serial number from E-mail in the field.
+- purchasing the new license
+- requesting the demo license
+- resetting your current license
 
-## Apply license from file
+You will not receive new license after:
 
-Install license from file if you have old version or don't want to use web interface.
-In the E-mail attachment find file `license.txt`.
-Save this file on your server to `/etc/astra/license.txt`
-Restart Astra from console: [Service Management](astra/quick-start/systemd)
+- renewing your license
+- extending your demo license
+
+To install new license folow the instruction in the email with new license.
+
+Restart Astra from console: `systemctl restart astra`
