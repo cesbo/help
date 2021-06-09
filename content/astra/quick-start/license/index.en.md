@@ -23,4 +23,4 @@ You will not receive new license after:
 
 To install new license folow an instruction in the email with new license.
 
-Restart Astra from console: `systemctl restart astra`
+After license installation restart Astra from console: `systemctl restart astra`
