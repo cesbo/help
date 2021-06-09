@@ -21,6 +21,6 @@ You will not receive new license after:
 - renewing your license
 - extending your demo license
 
-To install new license folow the instruction in the email with new license.
+To install new license folow an instruction in the email with new license.
 
 Restart Astra from console: `systemctl restart astra`
