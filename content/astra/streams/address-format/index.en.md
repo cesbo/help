@@ -40,7 +40,7 @@ udp://[interface@]address[:port][#options]
 rtp://[interface@]address[:port][#options]
 ```
 
-- `interface` - IPv4 address or name of the local interface. The routing table is used by default.
+- `interface` - name of the local interface. The routing table is used by default.
 - `address` - IPv4 address of the stream. Multicast or unicast.
 - `port` - port number. Default: `1234`.
 
@@ -68,11 +68,9 @@ udp://239.255.1.1:1234#cbr=8000
 {{< /details >}}
 
 
-### RTSP
+### RTSP Input
 
 {{< details "Read..." >}}
-
-RTSP protocol is only available for receiving
 
 ```
 rtsp://[login:password@]address[:port][/path][#options]
@@ -146,6 +144,72 @@ HTTP Options:
 
 - `buffer_size=SIZE` - the size of the client buffer, in kilobytes. A buffer is allocated for each connection and prevents data loss during transmission delay. Default: `1024`
 - `buffer_fill=SIZE` - the minimum size of data in kilobytes that must be collected before sending to the client. Default: `buffer_size / 20`
+
+{{< /details >}}
+
+
+### SRT Caller Input
+
+{{< details "Read..." >}}
+
+In the caller mode Astra sends request to the listener side. Listener accept request and sends stream to the Astra Input.
+
+```
+srt://host:port[#options]
+```
+
+- `host` - remote server address
+- `port` - remote port
+
+Options:
+
+- `streamid=ID` - stream identifier
+- `passphrase=PASS` - password for the encrypted transmission. Password length should be in range 10 .. 79 characters
+- `pbkeylen=N` - crypto key length in bytes. Possible values: 16, 24, 32
+- `tsbpdmode` - timestamp-based packet delivery mode
+
+{{< /details >}}
+
+
+### SRT Listener Input
+
+{{< details "Read..." >}}
+
+In the listener mode Astra await a request from the caller side. Caller sends request to the Astra Input and sends stream when connection established.
+
+```
+srt://[interface]@:port[#options]
+```
+
+- `interface` - name of the local interface. If interface is not defined Astra accept requests from any interface
+- `port` - remote port
+
+Options:
+
+- `tsbpdmode` - timestamp-based packet delivery mode
+
+{{< /details >}}
+
+
+### SRT Caller Output
+
+{{< details "Read..." >}}
+
+In the caller mode Astra sends request to the listener side. Astra sends request to the Listener and sends stream when connection established.
+
+```
+srt://host:port[#options]
+```
+
+- `host` - remote server address
+- `port` - remote port
+
+Options:
+
+- `streamid=ID` - stream identifier
+- `passphrase=PASS` - password for the encrypted transmission. Password length should be in range 10 .. 79 characters
+- `pbkeylen=N` - crypto key length in bytes. Possible values: 16, 24, 32
+- `tsbpdmode` - timestamp-based packet delivery mode
 
 {{< /details >}}
 
