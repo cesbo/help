@@ -148,7 +148,7 @@ HTTP Options:
 {{< /details >}}
 
 
-### SRT Caller Input
+### SRT Caller Input [^3]
 
 {{< details "Read..." >}}
 
@@ -171,7 +171,7 @@ Options:
 {{< /details >}}
 
 
-### SRT Listener Input
+### SRT Listener Input [^3]
 
 {{< details "Read..." >}}
 
@@ -191,7 +191,7 @@ Options:
 {{< /details >}}
 
 
-### SRT Caller Output
+### SRT Caller Output [^3]
 
 {{< details "Read..." >}}
 
@@ -234,7 +234,7 @@ Options:
 {{< /details >}}
 
 
-### TBS6004 DVB-C Modulator [^1]
+### TBS6004 DVB-C Modulator [^2]
 
 {{< details "Read..." >}}
 
@@ -337,8 +337,9 @@ np://[login:password@]address[:port][/path]
 - `cc_limit=N` - set CC error limit. If the number of CC errors exceeds the set limit, Astra will switch to the backup source (if available). Default: no limit is set
 - `bitrate_limit=RATE` - set the minimum bitrate for the analyzer in Kbit/s. The source will be considered non-working if the stream bitrate is less than the specified value. Default: `16 Kbit/s` for stream without video data and `128 Kbit/s` for stream with video data
 - `pass_data` - pass the elementary streams containing the data (data-pid). By default, Astra deletes this data
-- `order` [^2] - sort PID in the PMT table. Often used with the `lang` parameter to select a priority audio track. In this example, we will set the English audio track first (default): `map.audio.ita=1475&map.audio.eng=1472&order=1472,1475`
-- `lang` [^2] - set the language property for the audio track. Example: `lang.1241=eng` where: `1241` - pid, `eng` - language code.
+- `order` [^1] - sort PID in the PMT table. Often used with the `lang` parameter to select a priority audio track. In this example, we will set the English audio track first (default): `map.audio.ita=1475&map.audio.eng=1472&order=1472,1475`
+- `lang` [^1] - set the language property for the audio track. Example: `lang.1241=eng` where: `1241` - pid, `eng` - language code.
 
-[^1]: Version 2021-05-01 and newer
-[^2]: Version 5.64 and newer
+[^1]: Version 5.64 and newer
+[^2]: Version 2021-05-01 and newer
+[^3]: Version 2021-07-13 and newer
