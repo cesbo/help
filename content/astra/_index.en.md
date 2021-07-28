@@ -19,6 +19,7 @@ Astra supports receiving streams from different sources:
     - UDP/RTP Multicast or Unicast
     - HTTP MPEG-TS
     - HLS
+    - SRT (Caller, Listener)
     - RTSP
 
 ## Transmitting
@@ -27,6 +28,7 @@ Astra supports receiving streams from different sources:
     - UDP/RTP Multicast or Unicast
     - HTTP MPEG-TS
     - HLS
+    - SRT (Caller)
 
 ## Analyzing and Monitoring
 
