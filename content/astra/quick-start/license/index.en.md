@@ -10,16 +10,17 @@ Valid license is required to launch Astra.
 
 You may purchase new license or get demo on our website: [Get License](astra/pricing).
 
-You will receive new license after:
+You will receive new license if:
 
-- purchasing the new license
-- requesting the demo license
-- resetting your current license
+- purchase the new license
+- request the demo license
+- reset your current license
 
-You will not receive new license after:
+You will not receive new license:
 
-- renewing your license
-- extending your demo license
+- renew your license
+- append more servers to your demo license
+- email in the Spam folder
 
 To install new license folow an instruction in the email with new license.
 
