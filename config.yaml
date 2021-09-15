@@ -13,6 +13,14 @@ params:
 minify:
   minifyOutput: false
 
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      hardWraps: true
+
 outputs:
   home:
   - html
