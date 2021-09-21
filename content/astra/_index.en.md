@@ -12,23 +12,26 @@ description: Astra is a professional software for Digital TV Broadcasting. Featu
 Astra supports receiving streams from different sources:
 
 - Broadcast - Satellite, Cable, or Terrestrials:
-    - ATSC
-    - DVB
-    - ISDB-T
+  - ATSC
+  - DVB
+  - ISDB-T
 - IP
-    - UDP/RTP Multicast or Unicast
-    - HTTP MPEG-TS
-    - HLS
-    - SRT (Caller, Listener)
-    - RTSP
+  - UDP/RTP Multicast or Unicast
+  - HTTP MPEG-TS
+  - HLS
+  - SRT (Caller, Listener)
+  - RTSP
 
 ## Transmitting
 
 - IP
-    - UDP/RTP Multicast or Unicast
-    - HTTP MPEG-TS
-    - HLS
-    - SRT (Caller)
+  - UDP/RTP Multicast or Unicast
+  - HTTP MPEG-TS
+  - HLS
+  - SRT (Caller, Listener)
+- Broadcast:
+  - DigitalDevices RESI DVB-C Modulator
+  - TBS 6004 DVB-C Modulator
 
 ## Analyzing and Monitoring
 
