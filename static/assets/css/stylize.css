@@ -141,7 +141,7 @@ nav a.active {
 }
 
 details>nav {
-    margin-left: var(--space-sm);
+    margin-left: var(--space-md);
     flex-direction: column;
 }
 
@@ -160,8 +160,6 @@ nav.sidemenu {
 }
 
 nav.sidemenu details>summary {
-    font-size: .8em;
-    font-weight: 600;
     color: var(--grey-normal);
 }
 

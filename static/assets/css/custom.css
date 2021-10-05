@@ -1,15 +1,18 @@
 /* HEADER */
 
 header {
-	border-bottom: 2px solid var(--blue-normal);
+	border-bottom: thin solid var(--blue-normal);
 }
 
 header>nav {
+	padding: var(--space-xs) var(--space-unit);
+}
+
+header>nav>a {
 	padding: 0;
 }
 
 header>nav>.logo {
-	padding: 0 var(--space-sm);
 	display: flex;
 	align-items: center;
 }
@@ -32,7 +35,7 @@ footer {
 	justify-content: space-between;
 	background-color: var(--background);
 	padding: var(--space-sm) 0;
-	border-top: 2px solid var(--blue-normal);
+	border-top: thin solid var(--blue-normal);
 }
 
 footer>nav {
@@ -66,7 +69,7 @@ main.docs {
 }
 
 main.docs>article {
-	padding: 0 var(--space-sm);
+	padding: 0 var(--space-unit);
 }
 
 main.docs a[href=""] {
