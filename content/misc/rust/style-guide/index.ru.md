@@ -1,5 +1,6 @@
 ---
 title: Оформление кода
+weight: 1
 ---
 
 Много полезного тут: https://rust-lang.github.io/rustfmt/
