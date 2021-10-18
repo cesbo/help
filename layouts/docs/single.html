@@ -15,7 +15,7 @@
 	>{{ .Title }}</a>
 	{{- end }}
 
-	{{- range $docs.Sections }}
+	{{- range where $docs.Sections "Params.skip" "ne" true  }}
 	<details {{ if eq $.Page.CurrentSection .CurrentSection }}open{{ end }}>
 		<summary class="icon">{{ .Title }}</summary>
 		<nav>

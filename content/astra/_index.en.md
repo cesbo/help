@@ -33,13 +33,6 @@ Astra supports receiving streams from different sources:
   - DigitalDevices RESI DVB-C Modulator
   - TBS 6004 DVB-C Modulator
 
-## Analyzing and Monitoring
-
-- Realtime analyzig available sources
-- Integration with Zabbix for reports and notifications
-- Integration with Grafana for charts and reports
-- Built-in realtime monitoring
-
 ## Processing
 
 - Demultiplexing
@@ -49,6 +42,13 @@ Astra supports receiving streams from different sources:
 - Redundant sources
 - DVB-CI Descrambling
 - Simulcrypt Scrambling
+
+## Analyzing and Monitoring
+
+- Realtime analyzig available sources
+- Integration with Zabbix for reports and notifications
+- Integration with Grafana for charts and reports
+- Built-in realtime monitoring
 
 ## Miscellaneous
 
