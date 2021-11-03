@@ -11,7 +11,7 @@
  * export the module via AMD, CommonJS or as a browser global
  * Export code from https://github.com/umdjs/umd/blob/master/returnExports.js
  */
- ;(function (root, factory) {
+;(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(factory)
@@ -285,9 +285,18 @@
                 var endRegex = new RegExp("[^" + wordCharacters + "]+$")
 
                 return function(token) {
-                    return token
-                        .replace(startRegex, '')
-                        .replace(endRegex, '');
+                    // for lunr version 2
+                    if (typeof token.update === "function") {
+                        return token.update(function (s) {
+                            return s
+                                .replace(startRegex, '')
+                                .replace(endRegex, '');
+                        })
+                    } else { // for lunr version 1
+                        return token
+                            .replace(startRegex, '')
+                            .replace(endRegex, '');
+                    }
                 };
             }
         }

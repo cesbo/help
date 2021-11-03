@@ -1,8 +1,8 @@
 {{ define "main" }}
 <nav class="sidemenu hide-sm">
-	{{- with $.GetPage "search" }}
-	<a href="{{ .RelPermalink }}" class="icon icon-search">Search</a>
-	{{- end }}
+	<div class="search">
+		<input id="search-input" type="search" placeholder="Click or press 'S' to search..." />
+	</div>
 
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
@@ -34,7 +34,17 @@
 {{ .Content }}
 
 <nav class="sticky">
-<a href="." class="only-sm icon icon-menu" title="Toggle Menu" onClick="event.preventDefault(),event.target.classList.toggle('icon-menu'),event.target.classList.toggle('icon-close'),document.body.classList.toggle('show-sidemenu')"></a>
+<a
+	href="."
+	class="only-sm icon icon-menu"
+	title="Toggle Menu"
+	onClick="event.preventDefault(), event.target.classList.toggle('icon-menu'), event.target.classList.toggle('icon-close'), document.body.classList.toggle('show-sidemenu')"
+></a>
 </nav>
 </article>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="/assets/js/lunr.min.js"></script>
+<script src="/assets/js/search.js"></script>
 {{ end }}

@@ -13,8 +13,6 @@
 {{- partial "footer" . }}
 
 <script src="/assets/js/app.js"></script>
-{{- range .Page.Params.scripts }}
-<script src="{{ . }}"></script>
-{{- end }}
+{{- block "scripts" . }}{{ end }}
 </body>
 </html>
