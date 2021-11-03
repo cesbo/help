@@ -151,6 +151,18 @@ nav.sticky>a.icon:hover {
 	border-left: none;
 }
 
+.search #search-result {
+	position: absolute;
+	z-index: 51;
+	width: 100%;
+	max-width: 560px;
+	background-color: var(--background);
+    background-clip: padding-box;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	overflow: hidden;
+}
+
 .search #search-result a {
 	margin-top: var(--space-xl);
 }
