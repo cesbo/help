@@ -1,8 +1,7 @@
 (function () {
 'use strict';
 
-
-let fuse = null;
+let searcher = null;
 let searchInput = null;
 let searchResult = null;
 
@@ -16,20 +15,19 @@ function onSearch() {
     clearSearchResult();
 
     const value = searchInput.value.trim();
-    if(value.length < 3 || !fuse) { return }
+    if(value.length < 3 || !searcher) { return }
 
-    let results = fuse.search(value);
+    let results = searcher.search(value);
     if(results.length === 0) { return }
 
     for(let item of results.slice(0, 20)) {
-        const page = item.item;
+        const page = item.doc;
         const a = document.createElement('a');
         a.href = page.link;
         a.textContent = (!!page.parent) ? page.parent + ' > ' + page.title : page.title;
         searchResult.appendChild(a);
 
-        const matches = item.matches;
-        const text = matches[0].value;
+        const text = page.content;
         if(text != page.title) {
             const p = document.createElement('p');
             p.textContent = (text.length > 80) ? (text.slice(0, 80) + '...') : text;
@@ -40,17 +38,22 @@ function onSearch() {
 
 
 function init(data) {
+    let counter = 0;
     if(!data) return;
 
-    fuse = new Fuse(data, {
-        keys: ['title', 'content'],
-        includeMatches: true,
-        shouldSort: true,
-        location: 0,
-        distance: 100,
-        threshold: 0.4,
-        minMatchCharLength: 3,
-    })
+    searcher = elasticlunr(function () {
+        if(window.location.pathname.includes('ru')) {
+            this.use(elasticlunr.multiLanguage('en', 'ru'));
+        }
+
+        this.addField('title');
+        this.addField('content');
+        this.setRef('id');
+    });
+
+    data.forEach(e => {
+        searcher.addDoc({ id: ++counter, ...e });
+    });
 
     onSearch()
 }
