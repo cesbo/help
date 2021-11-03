@@ -1,7 +1,7 @@
 {{- $.Scratch.Add "index" slice }}
 {{- range where .Site.Pages "Section" "astra" }}
     {{- if .IsPage }}
-        {{- $.Scratch.Add "index" (dict "title" .Title "content" (htmlUnescape .Plain) "link" .RelPermalink "parent" .CurrentSection.Title ) }}
+        {{- $.Scratch.Add "index" (dict "title" .Title "content" (htmlUnescape .Plain) "link" .RelPermalink "category" .CurrentSection.Title ) }}
     {{- end }}
 {{- end }}
 {{- $.Scratch.Get "index" | jsonify }}
