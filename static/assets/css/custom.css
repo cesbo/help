@@ -138,6 +138,7 @@ nav.sticky>a.icon:hover {
 .search {
 	padding: 0 var(--space-sm);
 	margin-bottom: var(--space-sm);
+	box-shadow: var(--box-shadow);
 }
 
 .search #search-input {
@@ -157,18 +158,10 @@ nav.sticky>a.icon:hover {
 	width: 100%;
 	max-width: 560px;
 	background-color: var(--background);
-    background-clip: padding-box;
+	background-clip: padding-box;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	overflow: hidden;
-}
-
-.search #search-result a {
-	margin-top: var(--space-xl);
-}
-
-.search #search-result p {
-	margin: 0;
 }
 
 /* RESPONSIVE */

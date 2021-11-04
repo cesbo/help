@@ -18,15 +18,6 @@ Data encoding is necessary to reduce data size transferred over network. Most co
 - DCT
 - Compressing with RLE and Huffman coding
 
-## Frames type
-
-- I-frame (Intra-coded frame, keyframe)
-- P-frame (Predicted frame)
-- B-frame (Bi-predicted frame)
-- D-frame (Direct-coded picture)
-
-// TODO: about GOP
-
 ## Macroblock
 
 - Y - luma component
@@ -39,3 +30,28 @@ Data encoding is necessary to reduce data size transferred over network. Most co
 - 4:2:2
 - 4:2:1
 - 4:2:0
+
+## Frames type
+
+- I-frame (Intra-coded frame, keyframe)
+- P-frame (Predicted frame)
+- B-frame (Bi-predicted frame)
+- D-frame (Direct-coded picture)
+
+// TODO: short intro to GOP
+
+## GOP
+
+![Scan](gop.jpg)
+
+For example, on the chart is a same stream with average bitrate about 3Mbit/s.
+Left part of chart is an encoded stream with GOP 7.
+Right part of chart is an encoded stream with GOP 1.
+
+## PTS
+
+Each frame should be decoded in the certain time.
+
+// TODO: more about PTS
+
+## DTS
