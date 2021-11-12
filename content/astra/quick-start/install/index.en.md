@@ -43,6 +43,12 @@ Astra used port `8000` by the default, you may set any custom port:
 astra init 4000
 ```
 
+After changing port on existing service it should be restarted:
+
+```sh
+systemctl restart astra
+```
+
 Enable automatically launch on system startup:
 
 ```sh

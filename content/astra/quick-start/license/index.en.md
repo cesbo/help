@@ -25,3 +25,15 @@ You will not receive new license:
 To install new license folow an instruction in the email with new license.
 
 After license installation restart Astra from console: `systemctl restart astra`
+
+## Renew License
+
+You may renew your subscription in your profile on our website: [Profile](/profile).
+
+Your serial number will be same as before, so not needed any additional actions.
+
+## Upgrade License
+
+You may append more servers to your subscription in your profile on our website: [Profile](/profile).
+
+Price of upgrade calculated from remain days of the subscription with discount for additional server. You may check price in our calculator.
