@@ -1,5 +1,6 @@
 import algoliasearch from 'algoliasearch/lite'
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js'
+import { renderItem } from './render'
 
 import './style/custom.css'
 import '@algolia/autocomplete-theme-classic'
@@ -32,20 +33,8 @@ if(window['autocomplete']) {
                     return item.link
                 },
                 templates: {
-                    item({ item, createElement, Fragment }) {
-                        return createElement('div', {
-                            dangerouslySetInnerHTML: {
-__html: `<a className="aa-ItemLink" href="${item.link}">
-    <div className="aa-ItemContent">
-        <div className="aa-ItemContentBody">
-            <div className="aa-ItemContentTitle">
-                ${item.category}: ${item.title}
-            </div>
-        </div>
-    </div>
-</a>`
-                            }
-                        })
+                    item({ item, components }) {
+                        return renderItem(item, components)
                     }
                 },
             }]
