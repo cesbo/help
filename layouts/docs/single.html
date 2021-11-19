@@ -1,10 +1,5 @@
 {{ define "main" }}
 <nav class="sidemenu hide-sm">
-	<div class="search">
-		<input id="search-input" type="search" placeholder="Click or press 'S' to search..." />
-		<div id="search-result"></div>
-	</div>
-
 	{{- $docs := $.GetPage $.Section }}
 	<a href="{{ $docs.RelPermalink }}"
 		{{- if eq . $docs }} class="active"{{ end -}}
@@ -43,9 +38,4 @@
 ></a>
 </nav>
 </article>
-{{ end }}
-
-{{ define "scripts" }}
-<script src="/assets/js/lunr.min.js"></script>
-<script src="/assets/js/search.js"></script>
 {{ end }}

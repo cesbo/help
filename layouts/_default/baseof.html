@@ -3,6 +3,9 @@
 <head>
 {{- partial "head" . }}
 {{- block "head" . }}{{ end }}
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+
 </head>
 <body class="flex-column">
 
@@ -12,7 +15,7 @@
 </main>
 {{- partial "footer" . }}
 
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.umd.js"></script>
 {{- block "scripts" . }}{{ end }}
 </body>
 </html>
