@@ -5,20 +5,22 @@ header {
 }
 
 header>nav {
-	padding: var(--space-xs) var(--space-unit);
+	padding: var(--space-xs) var(--space-sm);
 }
 
 header>nav>a {
 	padding: 0;
+	margin-left: var(--space-sm);
 }
 
 header>nav>.logo {
 	display: flex;
 	align-items: center;
+	margin-left: 0;
 }
 
 header>nav>.logo>svg {
-	height: var(--space-lg);
+	height: var(--space-xl);
 	fill: var(--blue-normal);
 }
 

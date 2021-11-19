@@ -499,8 +499,8 @@ table.border td {
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    width: var(--space-md);
-    height: var(--space-md);
+    width: var(--space-lg);
+    height: var(--space-lg);
 }
 
 .icon-edit::before {

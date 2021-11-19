@@ -9,34 +9,28 @@
 	<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 </head>
 <body>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.umd.js"></script>
 
 {{- $list := slice "404/" "pricing/" "account/" "help/" }}
 
 {{- if not $.Page }}
 
 <script>
-$(function() {
-	const params = new URLSearchParams(location.search);
-	const next = params.get('next') || '/';
-	location.replace('/' + getLanguage() + next);
-})
+const params = new URLSearchParams(location.search)
+const next = params.get('next') || '/'
+location.replace('/' + App.getLanguage() + next)
 </script>
 
 {{- else if in $list .File.Dir }}
 
 <script>
-$(function() {
-	location.replace('/' + getLanguage() + '/{{ trim .File.Dir "/" }}/')
-})
+location.replace('/' + App.getLanguage() + '/{{ trim .File.Dir "/" }}/')
 </script>
 
 {{- else }}
 
 <script>
-$(function() {
-	location.replace('{{ .Permalink }}');
-})
+location.replace('{{ .Permalink }}')
 </script>
 
 {{- end }}
