@@ -2,6 +2,7 @@
     --font-content: "Roboto", "Helvetica Neue", sans-serif;
     --font-monospace: "Consolas", monospace;
 
+    --base-z-index: 100;
     --space-unit: 1em;
 
     --background: hsl(0, 0%, 100%);
@@ -40,6 +41,8 @@
     --space-md: calc(1.2 * var(--space-unit));
     --space-lg: calc(1.6 * var(--space-unit));
     --space-xl: calc(2.0 * var(--space-unit));
+
+    --modal-max-width: 680px;
 }
 
 *, ::after, ::before {
@@ -101,7 +104,8 @@ a {
     background-color: transparent;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: var(--blue-dark);
     text-decoration: underline;
 }

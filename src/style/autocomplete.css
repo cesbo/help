@@ -1,0 +1,57 @@
+.aa-Autocomplete {
+    height: 100%;
+}
+
+.aa-DetachedSearchButton {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--blue-normal);
+    height: 100%;
+}
+
+.aa-DetachedSearchButton:hover,
+.aa-DetachedSearchButton:focus {
+    color: var(--blue-dark);
+    box-shadow: none;
+}
+
+.aa-DetachedSearchButton:active {
+    box-shadow: none;
+}
+
+.aa-DetachedSearchButtonIcon ,
+.aa-DetachedSearchButtonPlaceholder {
+    display: none;
+}
+
+.aa-DetachedOverlay {
+    background-color: var(--grey-light);
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: calc(var(--base-z-index) - 1);
+}
+
+.aa-DetachedContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+
+    border-radius: var(--border-radius);
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: var(--modal-max-width);
+    position: absolute;
+    top: 3%;
+
+    z-index: var(--base-z-index);
+}

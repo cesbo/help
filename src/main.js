@@ -4,7 +4,7 @@ import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js'
 import { renderItem } from './render'
 
 import './style/custom.css'
-import '@algolia/autocomplete-theme-classic'
+import './style/autocomplete.css'
 
 
 if(window['autocomplete']) {
@@ -16,6 +16,9 @@ if(window['autocomplete']) {
     autocomplete({
         container: '#autocomplete',
         detachedMediaQuery: '',
+        classNames: {
+            detachedSearchButton: 'icon icon-search'
+        },
         getSources() {
             return [{
                 sourceId: 'hits',

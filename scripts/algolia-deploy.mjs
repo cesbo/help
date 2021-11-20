@@ -14,11 +14,29 @@ function deployIndex(lang) {
 
     index
         .saveObjects(data)
-        .then(({ objectIDs }) => {
-            console.log(objectIDs)
+        .then(() => {
+            console.log('saveObjects() done')
         })
         .catch((err) => {
-            console.log(err);
+            console.error(err)
+        })
+
+    const indexLanguages = ['en']
+    if(lang != indexLanguages[0]) {
+        indexLanguages.unshift(lang)
+    }
+
+    index
+        .setSettings({
+            searchableAttributes: ['title', 'content'],
+            ranking: ['asc(weight)'],
+            indexLanguages,
+        })
+        .then(() => {
+            console.log('setSettings() done')
+        })
+        .catch((err) => {
+            console.error(err)
         })
 }
 
