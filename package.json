@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@algolia/autocomplete-js": "^1.5.0",
+        "@algolia/autocomplete-theme-classic": "^1.5.0",
         "algoliasearch": "^4.11.0",
         "preact": "^10.5.15"
     }

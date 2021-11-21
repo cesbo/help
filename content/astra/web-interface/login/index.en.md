@@ -3,7 +3,7 @@ title: Login
 weight: 1
 ---
 
-After installation default login and password will be: `admin`
+Default login and password will be: `admin`
 
 ![Login Form](form.png)
 

@@ -4,6 +4,7 @@ import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js'
 import { renderItem } from './render'
 
 import './style/custom.css'
+import '@algolia/autocomplete-theme-classic'
 import './style/autocomplete.css'
 
 
@@ -13,7 +14,7 @@ if(window['autocomplete']) {
         '9c19b1c1caa4b8aaa859e0cf3be89152'
     )
 
-    autocomplete({
+    const search = autocomplete({
         container: '#autocomplete',
         detachedMediaQuery: '',
         classNames: {
@@ -44,6 +45,14 @@ if(window['autocomplete']) {
                 },
             }]
         },
+    })
+
+    document.addEventListener('keyup', (event) => {
+        const x = event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
+        if(!x && document.activeElement == document.body && event.key == 's') {
+            event.preventDefault()
+            search.setIsOpen(true)
+        }
     })
 }
 
