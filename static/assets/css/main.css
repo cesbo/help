@@ -163,6 +163,7 @@ nav.sidemenu {
 
 nav.sidemenu details>summary {
     color: var(--grey-normal);
+    padding-bottom: 0;
 }
 
 nav.sidemenu details>summary.icon::before {
