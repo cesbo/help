@@ -1,6 +1,0 @@
-{{ define "main" }}
-{{- if and .Title (not .Page.Params.notitle) }}
-<h1>{{ .Title }}</h1>
-{{- end }}
-{{ .Content }}
-{{ end }}

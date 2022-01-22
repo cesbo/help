@@ -1,9 +1,0 @@
-{{- $.Scratch.Add "index" slice }}
-{{- $v1 := where .Site.Pages "Section" "==" "astra" -}}
-{{- $v2 := where $v1 "CurrentSection.Params.skip" "!=" true -}}
-{{- range $v2  }}
-    {{- if .IsPage }}
-        {{- $.Scratch.Add "index" (dict "objectID" .UniqueID "title" .Title "content" (htmlUnescape .Plain) "link" .RelPermalink "category" .CurrentSection.Title "weight" .CurrentSection.Weight ) }}
-    {{- end }}
-{{- end }}
-{{- $.Scratch.Get "index" | jsonify }}

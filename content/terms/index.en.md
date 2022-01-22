@@ -1,3 +1,0 @@
----
-title: "Terms and Conditions"
----

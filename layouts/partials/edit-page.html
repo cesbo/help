@@ -1,9 +1,0 @@
-{{- if and (isset .Site.Params "repository") (.File) }}
-<a
-	href="{{ .Site.Params.repository }}/edit/main/content/{{ .File.Path }}"
-	target="_blank"
-	title="Edit this page on GitHub"
->
-	<i class="icon icon-edit"></i>
-</a>
-{{- end }}

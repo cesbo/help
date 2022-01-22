@@ -1,7 +1,0 @@
-{{- range . }}
-<a href="{{ .URL }}" title="{{ .Title }}">
-	{{- if .Pre }}{{ .Pre | safeHTML }}{{ end -}}
-	{{- if .Name }}{{ .Name }}{{ end -}}
-	{{- if .Post }}{{ .Post | safeHTML }}{{ end -}}
-</a>
-{{- end }}
