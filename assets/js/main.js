@@ -1,9 +1,16 @@
 
 function touchSidebar(hook) {
 	hook.doneEach(_ => {
-		const sidebar = Docsify.dom.find('.sidebar')
-		const item = Docsify.dom.find(sidebar, 'details a[href="'+location.hash+'"]')
+		const item = Docsify.dom.find('.sidebar details a[href="'+location.hash+'"]')
 		if(item) item.parentElement.parentElement.parentElement.open = true;
+
+		const sections = Docsify.dom.findAll('.sidebar summary')
+		for(const item of sections) {
+			Docsify.dom.on(item, 'click', (event) => {
+				console.log('on click!')
+				event.stopPropagation()
+			})
+		}
 	})
 }
 
@@ -11,7 +18,7 @@ function searchHotkey(hook) {
 	hook.ready(_ => {
 		const input = Docsify.dom.find('.sidebar .search input')
 
-		document.addEventListener('keyup', (event) => {
+		Docsify.dom.on(document, 'keyup', (event) => {
 			const x = event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
 			if(!x && document.activeElement == document.body && event.key == 's') {
 				event.preventDefault()
@@ -20,7 +27,7 @@ function searchHotkey(hook) {
 			}
 		})
 
-		input.addEventListener('keyup', (event) => {
+		Docsify.dom.on(input, 'keyup', (event) => {
 			if(event.key == 'Escape') {
 				event.target.value = ''
 				event.target.dispatchEvent(new Event('input', {
