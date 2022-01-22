@@ -17,3 +17,6 @@
 - **Transmitting**
     - [SRT](output/srt.md "SRT Transmitting - Astra - Cesbo")
     - [UDP](output/udp.md "UDP Transmitting - Astra - Cesbo")
+- **Monitoring**
+    - [InfluxDB](monitoring/influxdb.md "InfluxDB - Astra - Cesbo")
+    - [Grafana](monitoring/grafana.md "Grafana - Astra - Cesbo")
