@@ -1,7 +1,8 @@
 
 function touchSidebar(hook) {
 	hook.doneEach(_ => {
-		const item = Docsify.dom.find('.sidebar details a[href="'+location.hash+'"]')
+		const hash = location.hash.split('?')[0]
+		const item = Docsify.dom.find('.sidebar details a[href="'+hash+'"]')
 		if(item) item.parentElement.parentElement.parentElement.open = true;
 
 		const sections = Docsify.dom.findAll('.sidebar summary')
