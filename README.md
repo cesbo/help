@@ -12,7 +12,7 @@ Languages:
 Categories:
 
 - `astra` - About Cesbo Astra, how to use our software
-- `codex` - TV and Media
+- `book` - TV and Media
 - `linux` - System administration
 
 ## Heading

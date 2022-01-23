@@ -1,6 +1,6 @@
 # HLS
 
-HLS (HTTP Live Streaming) is a most popular HTTP-based protocol for media delivery. [Read more](/en/codex/#/protocols/hls)
+HLS (HTTP Live Streaming) is a most popular HTTP-based protocol for media delivery. [Read more](/en/book/#/delivery/hls)
 
 ## Address format
 

@@ -152,7 +152,7 @@ main {
 	padding: var(--space-xs) var(--space-sm);
 }
 
-.sidebar li.active a {
+.sidebar li.active>a {
 	font-weight: 600;
 }
 

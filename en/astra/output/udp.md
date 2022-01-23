@@ -1,6 +1,6 @@
 # UDP
 
-UDP is a low latency protocol for local networks. [Read more](/en/codex/#/protocols/udp)
+UDP is a low latency protocol for local networks. [Read more](/en/book/#/delivery/udp)
 
 ## Address format
 

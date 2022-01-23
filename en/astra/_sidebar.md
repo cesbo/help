@@ -2,7 +2,7 @@
 - [Pricing](pricing.md "Pricing - Astra - Cesbo")
 
 <details>
-<summary class="icon">Quick Start</summary>
+<summary>Quick Start</summary>
 
 - [Install](quick-start/install.md "Install - Astra - Cesbo")
 - [License](quick-start/license.md "License - Astra - Cesbo")
@@ -15,7 +15,7 @@
 </details>
 
 <details>
-<summary class="icon">Receiving</summary>
+<summary>Receiving</summary>
 
 - [HLS](input/hls.md "HLS Receiving - Astra - Cesbo")
 - [HTTP MPEG-TS](input/http.md "HTTP MPEG-TS Receiving - Astra - Cesbo")
@@ -26,7 +26,7 @@
 </details>
 
 <details>
-<summary class="icon">Transmitting</summary>
+<summary>Transmitting</summary>
 
 - [SRT](output/srt.md "SRT Transmitting - Astra - Cesbo")
 - [UDP](output/udp.md "UDP Transmitting - Astra - Cesbo")
@@ -34,7 +34,7 @@
 </details>
 
 <details>
-<summary class="icon">Monitoring</summary>
+<summary>Monitoring</summary>
 
 - [InfluxDB](monitoring/influxdb.md "InfluxDB - Astra - Cesbo")
 - [Grafana](monitoring/grafana.md "Grafana - Astra - Cesbo")
