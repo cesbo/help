@@ -40,3 +40,12 @@
 - [Grafana](monitoring/grafana.md "Grafana - Astra - Cesbo")
 
 </details>
+
+<details>
+<summary>API</summary>
+
+- [System Status](api/sysinfo.md "System Status - Astra - Cesbo")
+- [Streams](api/stream.md "Streams - Astra - Cesbo")
+- [Adapters](api/adapter.md "Adapters - Astra - Cesbo")
+
+</details>
