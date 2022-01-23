@@ -58,16 +58,18 @@ To stop `tcpdump` press `Ctrl+C`
 
 </details>
 
-### UDP Input is not working
+### Not working
 
-First of all check traffic on the network interface with `tcpdump` tool. If there is no information about incoming packets need to check network configuration or source configuration.
+Not working means a zero bitrate in the Astra MPEG-TS Analyzer output.
+
+First of all check traffic on the network interface with `tcpdump` tool. If there is no information about incoming packets, then need to check network configuration or source configuration.
 
 <details>
-<summary>UDP Input is not working (IGMP version)</summary>
+<summary>Not working: No packets in tcpdump output. Check IGMP version</summary>
 
-Many operating systems send a subscription request to the multicast group with IGMPv3 protocol.
+Most Linux distributions uses IGMPv3 protocol to manage subscription to the multicast group.
 
-If the network switch cannot work with this protocol, or the protocol is not configured - the attempt to subscribe to the multicast group will fail. IGMPv2 is supported by most switches:
+If network switch doesn't support IPGMv3 protocol or protocol is not configured on the switch, then need to turn IGMPv2 in the Linux settings. IGMPv2 is supported by most switches.
 
 Append to the file `/etc/sysctl.conf` next line:
 
@@ -90,16 +92,14 @@ tcpdump -i eth1 igmp
 </details>
 
 <details>
-<summary>UDP Input is not working (Firewall)</summary>
+<summary>Not working: Check firewall configuration</summary>
 
 If `tcpdump` shows information about packets need to check **Firewall** configuration. Firewall depend of your Linux Distribution and better to check manual to your operation system.
 
 </details>
 
 <details>
-<summary>UDP Input is not working (RP Filter)</summary>
-
-If firewall is configured correctly or turned off need to check **RP filter**.
+<summary>Not working: Check RP filter configuration</summary>
 
 **RP filter** - is a technology that provides protection and security of the server when using multicast mailings. If your server has several network interfaces, recommend to set routes for multicast groups. If this is not possible, change the RP filter settings:
 
@@ -119,10 +119,12 @@ sysctl -p
 
 ### Too many errors on receiving UDP
 
-!> CC (Continuity Counter) error. Indicates that packets continuity is corrupted. Can be caused by packets loss or excess
+CC errors in the Astra MPEG-TS Analyzer output can be caused by packets loss or excess.
+
+!> CC (Continuity Counter) error. Indicates that packets continuity is corrupted
 
 <details>
-<summary>Too many errors on receiving UDP (packets excess)</summary>
+<summary>Too many errors on receiving UDP: Packets excess</summary>
 
 On excess packets you will see in the `tcpdump` output packets from different sources. For example:
 
@@ -141,7 +143,7 @@ In both cases need to check remote server configuration. If this is not possible
 </details>
 
 <details>
-<summary>Too many errors on receiving UDP (packets loss)</summary>
+<summary>Too many errors on receiving UDP: Packets loss</summary>
 
 First of all need to check losses and errors on the network interface:
 

@@ -8,7 +8,6 @@ function touchSidebar(hook) {
 		const sections = Docsify.dom.findAll('.sidebar summary')
 		for(const item of sections) {
 			Docsify.dom.on(item, 'click', (event) => {
-				console.log('on click!')
 				event.stopPropagation()
 			})
 		}
