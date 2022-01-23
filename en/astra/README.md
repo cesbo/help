@@ -9,19 +9,21 @@ Astra is a professional software for TV streaming.
     - DVB
     - ISDB-T
 - IP
-    - UDP/RTP Multicast or Unicast
-    - HTTP MPEG-TS
-    - HLS
-    - SRT
-    - RTSP
+    - [UDP Multicast or Unicast](input/udp.md)
+    - [HTTP MPEG-TS](input/http.md)
+    - [HLS](input/hls.md)
+    - [SRT](input/srt.md)
+    - [RTSP](input/rtsp.md)
+    - RTP
 
 ## Transmitting
 
 - IP
-    - UDP/RTP Multicast or Unicast
+    - [UDP Multicast or Unicast](output/udp.md)
     - HTTP MPEG-TS
     - HLS
-    - SRT
+    - [SRT](output/srt.md)
+    - RTP
 - Broadcast
     - DigitalDevices RESI DVB-C Modulator
     - TBS 6004 DVB-C Modulator
