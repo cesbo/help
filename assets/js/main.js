@@ -41,7 +41,18 @@ function searchHotkey(hook) {
 	})
 }
 
+function fixLinksTarget(hook) {
+	hook.doneEach(_ => {
+		const content = Docsify.dom.find('main>.content')
+		const links = Docsify.dom.findAll(content, 'a[target=_blank][href^="/"]')
+		for(const item of links) {
+			item.removeAttribute('target')
+		}
+	})
+}
+
 $docsify.plugins = [
 	touchSidebar,
 	searchHotkey,
+	fixLinksTarget,
 ].concat($docsify.plugins)

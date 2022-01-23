@@ -126,7 +126,7 @@ CC errors in the Astra MPEG-TS Analyzer output can be caused by packets loss or 
 <details>
 <summary>Too many errors on receiving UDP: Packets excess</summary>
 
-On excess packets you will see in the `tcpdump` output packets from different sources. For example:
+Excess packets looks in the `tcpdump` output as packets from different sources to the same destination:
 
 ```
 21:38:42.143839 IP 192.168.88.100.33610 > 239.255.1.1.1234: UDP, length 1316
