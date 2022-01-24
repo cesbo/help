@@ -5,7 +5,9 @@ UDP is a low latency protocol for local networks. [Read more](/en/book/#/deliver
 ## Address format
 
 ```
-udp://[interface@]address[:port][#options]
+udp://address
+udp://address:port
+udp://interface@address:port#options
 ```
 
 - `interface` – name of the local interface. The system routing table used by the default;
@@ -18,6 +20,11 @@ Options:
 - `sync` – receives UDP in separate thread with bitrate syncing
 - `renew=Seconds` – renewing multicast group subscription after a specified time
 - `socket_size=Bytes` – size of the system socket. Default: `sysctl net.core.rmem_default`
+
+For example:
+
+- `udp://127.0.0.1:10001` - receiver stream to localhost with port 10001. Useful to transfer stream between different services. For example receive transcoded stream from FFmpeg
+- `udp://eth0@239.255.1.1#pnr=1` - receive multicast group 239.255.1.1 on interface eth0. Option `pnr` enables stream demultiplexing and selects program with number 1
 
 ## Web Interface
 

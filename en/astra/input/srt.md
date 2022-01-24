@@ -8,7 +8,7 @@ SRT (Secure Reliable Transport) is an UDP based protocol with high stability and
 In the caller mode receiver sends request to the transmitter.
 
 ```
-srt://host:port[#options]
+srt://host:port#options
 ```
 
 - `host` – remote server address
@@ -26,7 +26,8 @@ Options:
 In the listener mode receiver awaits request from the transmitter.
 
 ```
-srt://[interface]@:port[#options]
+srt://@:port
+srt://interface@:port#options
 ```
 
 - `interface` – name of the local interface. If interface is not defined Astra accept requests from any interface

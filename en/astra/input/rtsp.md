@@ -5,10 +5,12 @@ RTSP (Real Time Streaming Protocol) is a protocol used mostly for IP cameras. [R
 ## Address format
 
 ```
-rtsp://[login:password@]address[:port][/path][#options]
+rtsp://address
+rtsp://address:port/path
+rtsp://login:password@address:port/path#options
 ```
 
-- `login:password` – username and password for rtsp authorization
+- `login:password` – login and password for RTSP authentication. Supports Basic and Digest authentication methods
 - `address` – IPv4 server address or domain name
 - `port` – port number. Default: **554**
 - `path` – the path to the resource. Default: **/**

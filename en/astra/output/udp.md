@@ -5,7 +5,9 @@ UDP is a low latency protocol for local networks. [Read more](/en/book/#/deliver
 ## Address format
 
 ```
-udp://[interface@]address[:port][#options]
+udp://address
+udp://address:port
+udp://interface@address:port#options
 ```
 
 - `interface` – name of the local interface. The system routing table used by the default;
