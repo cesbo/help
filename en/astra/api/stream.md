@@ -1,19 +1,41 @@
 # Streams API
 
-## Stream information
+In all methods `id` is a unique stream identifier.
 
-!> Version: 2021-04-12 or later
+## Get stream configuration (all versions)
 
-Request: `GET /api/stream-info/{id}`
+Request:
 
-- `id` - unique stream identifier
+```json
+{
+    "cmd": "get-stream",
+    "id": "..."
+}
+```
 
 Response:
 
 ```json
 {
-    "name": "...",
+    "get-stream": "ok",
+    "stream": {}
+}
+```
+
+- `stream` - stream configuration
+
+## Get stream configuration (new versions)
+
+!> Version: 2021-04-12 or later
+
+Request: `GET /api/stream-info/{id}`
+
+Response:
+
+```json
+{
     "id": "...",
+    "name": "...",
     "type": "...",
     "enable": true,
     "input": [
@@ -23,19 +45,93 @@ Response:
 ```
 
 - `name` - stream name;
-- `id` - unique stream identifier;
 - `type` - stream type `spts` or `mpts`;
 - `enable` - `true` if stream is enabled;
 - `input` - list of the stream inputs;
 - other options depends of the stream configuration.
+
+## Set stream configuration
+
+Request:
+
+```json
+{
+    "id": "...",
+    "cmd": "set-stream",
+    "stream": {
+        "enable": true,
+        "type": "spts",
+        "id": "...",
+        "name": "...",
+        "input": [],
+        "output": []
+    }
+}
+```
+
+- `id` - option required to modify exist stream. If option is not defined Astra generates stream identifier self;
+- `enable` - required field, enabled srteam or not;
+- `type` - required field, stream type. Available values: spts or mpts;
+- `id` - unique stream identifier;
+- `name` - stream name;
+- `input` - list of the stream sources;
+- `output` - list of the stream destinations.
+
+## Toggle stream
+
+Turn stream on/off. Request:
+
+```json
+{
+    "cmd": "toggle-stream",
+    "id": "..."
+}
+```
+
+## Restart stream
+
+Request:
+
+```json
+{
+    "cmd": "restart-stream",
+    "id": "..."
+}
+```
+
+## Switch active input
+
+Choose active input. Works only for streams with next backup types: passive, disable. Request:
+
+```json
+{
+    "cmd": "set-stream-input",
+    "id": "...",
+    "input": "..."
+}
+```
+
+- `input` – input number. Numbering starts from 1. If option not defined will be started next input after the active input
+
+## Remove stream
+
+Request:
+
+```json
+{
+    "cmd": "set-stream",
+    "id": "...",
+    "stream": {
+        "remove": true
+    }
+}
+```
 
 ## Stream status
 
 !> Version: 2021-04-12 or later
 
 Request: `GET /api/stream-status/{id}`
-
-- `id` - unique stream identifier
 
 Optional query parameters: `GET /api/stream-status/{id}?t={time}`
 

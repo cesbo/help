@@ -44,6 +44,7 @@
 <details>
 <summary>API</summary>
 
+- [Call API Methods](api/call.md "Call API Methods - Astra - Cesbo")
 - [System Status](api/sysinfo.md "System Status - Astra - Cesbo")
 - [Streams](api/stream.md "Streams - Astra - Cesbo")
 - [Adapters](api/adapter.md "Adapters - Astra - Cesbo")
