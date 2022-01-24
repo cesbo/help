@@ -16,6 +16,7 @@ https://[auth@]host[:port][/path][#options]
 
 Options:
 
+- `pnr=Number` - select program from MPTS (Multi-Program Transport Stream)
 - `ua=Name` – custom User-Agent header
 - `buffer_time=Seconds` – incoming buffer size in seconds. Default: **3**
 - `no_sync` – disables bufferization

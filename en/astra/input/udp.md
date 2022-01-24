@@ -14,6 +14,7 @@ udp://[interface@]address[:port][#options]
 
 Options:
 
+- `pnr=Number` - select program from MPTS (Multi-Program Transport Stream)
 - `sync` – receives UDP in separate thread with bitrate syncing
 - `renew=Seconds` – renewing multicast group subscription after a specified time
 - `socket_size=Bytes` – size of the system socket. Default: `sysctl net.core.rmem_default`
