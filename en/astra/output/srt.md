@@ -35,3 +35,17 @@ srt://[interface]@:port[#options]
 Options:
 
 - `tsbpdmode` – timestamp-based packet delivery mode
+
+## Web Interface
+
+In the web interface SRT Output options available in the Stream options. You can write destination address directly to the Output address line:
+
+![Output address](output-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Output configuration form. SRT Caller options:
+
+![SRT Caller Output options](srt-caller-696w.png ':size=696')
+
+SRT Listener options:
+
+![SRT Listener Output options](srt-listener-696w.png ':size=696')

@@ -79,7 +79,10 @@ main {
 	}
 
 	body .sidebar-toggle {
-		display: block;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 5px;
 	}
 
 	body.close .sidebar {
@@ -106,7 +109,7 @@ main {
 
 	border: 1px solid var(--blue-normal);
 	border-radius: var(--border-radius);
-	background-color: var(--blue-light);
+	background-color: hsl(210, 60%, 95%);
 	color: var(--blue-normal);
 
 	cursor: pointer;
@@ -115,10 +118,14 @@ main {
 	z-index: 101;
 }
 
+.sidebar-toggle::before {
+	content: attr(aria-label);
+}
+
 .sidebar-toggle-button {
 	display: flex;
 	flex-direction: column;
-	gap: 4px;
+	gap: 2px;
 	width: var(--space-lg);
 	padding: 4px 2px;
 }
@@ -126,7 +133,8 @@ main {
 .sidebar-toggle-button span {
 	display: block;
 	width: 100%;
-	border-bottom: 4px solid var(--blue-normal);
+	border: 2px solid var(--blue-normal);
+	border-radius: 2px;
 }
 
 .sidebar {

@@ -18,6 +18,16 @@ Options:
 - `renew=Seconds` – renewing multicast group subscription after a specified time
 - `socket_size=Bytes` – size of the system socket. Default: `sysctl net.core.rmem_default`
 
+## Web Interface
+
+In the web interface UDP Input options available in the Stream options. You can write source address directly to the Input address line:
+
+![Input address](input-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Input configuration form:
+
+![UDP Input options](udp-696w.png ':size=696')
+
 ## Troubleshooting
 
 In most cases issue cause is a system or network configuration. To find a solution needed:

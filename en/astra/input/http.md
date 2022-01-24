@@ -20,3 +20,15 @@ Options:
 - `buffer_time=Seconds` – incoming buffer size in seconds. Default: **3**
 - `no_sync` – disables bufferization
 - `debug` – log all receiving information: HTTP headers
+
+## Web Interface
+
+In the web interface HTTP Input options available in the Stream options. You can write source address directly to the Input address line:
+
+![Input address](input-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Input configuration form:
+
+![HTTP Input options](http-696w.png ':size=696')
+
+## Troubleshooting

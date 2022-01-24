@@ -22,3 +22,13 @@ Options:
 ## Mulsticast
 
 We recommend to use multicast addresses in range `239.0.0.0 - 239.255.255.255` . More information on [www.iana.org](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml).
+
+## Web Interface
+
+In the web interface UDP Output options available in the Stream options. You can write destination address directly to the Output address line:
+
+![Output address](output-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Output configuration form:
+
+![UDP Output options](udp-696w.png ':size=696')

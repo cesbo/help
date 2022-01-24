@@ -17,3 +17,15 @@ Options:
 
 - `tcp` – interleaved mode. receive stream over TCP instead UDP
 - `ua=Name` – custom User-Agent header
+
+## Web Interface
+
+In the web interface RTSP Input options available in the Stream options. You can write source address directly to the Input address line:
+
+![Input address](input-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Input configuration form:
+
+![RTSP Input options](rtsp-696w.png ':size=696')
+
+## Troubleshooting

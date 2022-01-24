@@ -35,3 +35,19 @@ srt://[interface]@:port[#options]
 Options:
 
 - `tsbpdmode` – timestamp-based packet delivery mode
+
+## Web Interface
+
+In the web interface SRT Input options available in the Stream options. You can write source address directly to the Input address line:
+
+![Input address](input-list-696w.png ':size=696')
+
+Or click to the gear icon and use an Input configuration form. SRT Caller options:
+
+![SRT Caller Input options](srt-caller-696w.png ':size=696')
+
+SRT Listener options:
+
+![SRT Listener Input options](srt-listener-696w.png ':size=696')
+
+## Troubleshooting
