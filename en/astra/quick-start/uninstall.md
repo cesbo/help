@@ -1,6 +1,6 @@
 # Uninstall
 
-?> Before uninstall please [Make a Backup](quick-start/backup.md)!
+?> Before uninstall please [Make a Backup](backup.md)!
 
 ## Disable service
 

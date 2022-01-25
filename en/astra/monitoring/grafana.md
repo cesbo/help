@@ -1,11 +1,11 @@
 # Grafana
 
 Grafana is an open source analytics and interactive visualization web application.
-It works in pair with [InfluxDB](monitoring/influxdb.md) to visualize status of the Astra, stream, and adapters.
+It works in pair with [InfluxDB](influxdb.md) to visualize status of the Astra, stream, and adapters.
 
 ## Install
 
-Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](monitoring/influxdb.md)
+Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](influxdb.md)
 
 Download latest version from
 
@@ -37,7 +37,7 @@ Find out more information on official site: https://grafana.com/docs/grafana/lat
 
 ## Append dashboard
 
-1. Download our template for Grafana: [dashboard.json](monitoring/dashboard.json ':ignore')
+1. Download our template for Grafana: [dashboard.json](dashboard.json ':ignore')
 2. Open: Create -> Import
 3. Click "Upload JSON file"
 4. Choose downloaded file

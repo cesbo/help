@@ -12,6 +12,8 @@
 	<div id="app"></div>
 	<script>
 		window.$docsify = {
+			routerMode: 'history',
+			relativePath: true,
 			notFoundPage: true,
 			loadSidebar: true,
 			maxLevel: 3,
@@ -28,6 +30,9 @@
 				hideOtherSidebarContent: true,
 				namespace: 'en-linux',
 			},
+			alias: {
+				'/en/linux/.*/_sidebar.md': '/en/linux/_sidebar.md',
+			}
 		}
 	</script>
 	<!-- Docsify v4 -->

@@ -1,1 +1,1 @@
-- [Linux Guide]( "Linux Guide - Cesbo")
+- [Linux Guide](/en/linux/ "Linux Guide - Cesbo")

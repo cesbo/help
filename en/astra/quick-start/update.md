@@ -1,6 +1,6 @@
 # Update
 
-?> Before update please [Make a Backup](quick-start/backup.md)!
+?> Before update please [Make a Backup](backup.md)!
 
 ## Install update
 

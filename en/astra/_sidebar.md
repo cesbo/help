@@ -1,52 +1,52 @@
-- [Astra]( "Astra - Cesbo")
-- [Pricing](pricing.md "Pricing - Astra - Cesbo")
+- [Astra](/en/astra/ "Astra - Cesbo")
+- [Pricing](/en/astra/pricing.md "Pricing - Astra - Cesbo")
 
 <details>
 <summary>Quick Start</summary>
 
-- [Install](quick-start/install.md "Install - Astra - Cesbo")
-- [License](quick-start/license.md "License - Astra - Cesbo")
-- [Backup](quick-start/backup.md "Backup - Astra - Cesbo")
-- [Update](quick-start/update.md "Update - Astra - Cesbo")
-- [Uninstall](quick-start/uninstall.md "Uninstall - Astra - Cesbo")
-- [Reset Password](quick-start/reset-password.md "Reset Password - Astra - Cesbo")
-- [Service Setup](quick-start/service-setup.md "Service Setup - Astra - Cesbo")
+- [Install](/en/astra/quick-start/install.md "Install - Astra - Cesbo")
+- [License](/en/astra/quick-start/license.md "License - Astra - Cesbo")
+- [Backup](/en/astra/quick-start/backup.md "Backup - Astra - Cesbo")
+- [Update](/en/astra/quick-start/update.md "Update - Astra - Cesbo")
+- [Uninstall](/en/astra/quick-start/uninstall.md "Uninstall - Astra - Cesbo")
+- [Reset Password](/en/astra/quick-start/reset-password.md "Reset Password - Astra - Cesbo")
+- [Service Setup](/en/astra/quick-start/service-setup.md "Service Setup - Astra - Cesbo")
 
 </details>
 
 <details>
 <summary>Receiving</summary>
 
-- [HLS](input/hls.md "HLS Receiving - Astra - Cesbo")
-- [HTTP MPEG-TS](input/http.md "HTTP MPEG-TS Receiving - Astra - Cesbo")
-- [RTSP](input/rtsp.md "RTSP Receiving - Astra - Cesbo")
-- [SRT](input/srt.md "SRT Receiving - Astra - Cesbo")
-- [UDP](input/udp.md "UDP Receiving - Astra - Cesbo")
+- [HLS](/en/astra/input/hls.md "HLS Receiving - Astra - Cesbo")
+- [HTTP MPEG-TS](/en/astra/input/http.md "HTTP MPEG-TS Receiving - Astra - Cesbo")
+- [RTSP](/en/astra/input/rtsp.md "RTSP Receiving - Astra - Cesbo")
+- [SRT](/en/astra/input/srt.md "SRT Receiving - Astra - Cesbo")
+- [UDP](/en/astra/input/udp.md "UDP Receiving - Astra - Cesbo")
 
 </details>
 
 <details>
 <summary>Transmitting</summary>
 
-- [SRT](output/srt.md "SRT Transmitting - Astra - Cesbo")
-- [UDP](output/udp.md "UDP Transmitting - Astra - Cesbo")
+- [SRT](/en/astra/output/srt.md "SRT Transmitting - Astra - Cesbo")
+- [UDP](/en/astra/output/udp.md "UDP Transmitting - Astra - Cesbo")
 
 </details>
 
 <details>
 <summary>Monitoring</summary>
 
-- [InfluxDB](monitoring/influxdb.md "InfluxDB - Astra - Cesbo")
-- [Grafana](monitoring/grafana.md "Grafana - Astra - Cesbo")
+- [InfluxDB](/en/astra/monitoring/influxdb.md "InfluxDB - Astra - Cesbo")
+- [Grafana](/en/astra/monitoring/grafana.md "Grafana - Astra - Cesbo")
 
 </details>
 
 <details>
 <summary>API</summary>
 
-- [Call API Methods](api/call.md "Call API Methods - Astra - Cesbo")
-- [System Status](api/sysinfo.md "System Status - Astra - Cesbo")
-- [Streams](api/stream.md "Streams - Astra - Cesbo")
-- [Adapters](api/adapter.md "Adapters - Astra - Cesbo")
+- [Call API Methods](/en/astra/api/call.md "Call API Methods - Astra - Cesbo")
+- [System Status](/en/astra/api/sysinfo.md "System Status - Astra - Cesbo")
+- [Streams](/en/astra/api/stream.md "Streams - Astra - Cesbo")
+- [Adapters](/en/astra/api/adapter.md "Adapters - Astra - Cesbo")
 
 </details>
