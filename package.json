@@ -1,0 +1,11 @@
+{
+  "name": "cesbo-docs",
+  "description": "cesbo.com docs",
+  "license": "UNLICENSED",
+  "scripts": {
+    "serve": "node serve.js"
+  },
+  "devDependencies": {
+    "express": "^4.17.2"
+  }
+}
