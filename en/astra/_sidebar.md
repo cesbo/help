@@ -11,6 +11,7 @@
 - [Uninstall](/en/astra/quick-start/uninstall.md "Uninstall - Astra - Cesbo")
 - [Reset Password](/en/astra/quick-start/reset-password.md "Reset Password - Astra - Cesbo")
 - [Service Setup](/en/astra/quick-start/service-setup.md "Service Setup - Astra - Cesbo")
+- [MPEG-TS Analyzer](/en/astra/quick-start/analyzer.md "MPEG-TS Analyzer - Astra - Cesbo")
 
 </details>
 
