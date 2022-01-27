@@ -1,6 +1,6 @@
 - [Book](/en/book/ "Book - Cesbo")
 
-<details>
+<details class="marker">
 <summary>Inside of the streams</summary>
 
 - [MPEG-TS](/en/book/packets/mpegts.md "MPEG-TS - Book - Cesbo")
@@ -9,7 +9,7 @@
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Streams delivery</summary>
 
 </details>

@@ -1,7 +1,7 @@
 - [Astra](/en/astra/ "Astra - Cesbo")
 - [Pricing](/en/astra/pricing.md "Pricing - Astra - Cesbo")
 
-<details>
+<details class="marker">
 <summary>Quick Start</summary>
 
 - [Install](/en/astra/quick-start/install.md "Install - Astra - Cesbo")
@@ -15,7 +15,7 @@
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Receiving</summary>
 
 - [HLS](/en/astra/input/hls.md "HLS Receiving - Astra - Cesbo")
@@ -26,7 +26,7 @@
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Transmitting</summary>
 
 - [SRT](/en/astra/output/srt.md "SRT Transmitting - Astra - Cesbo")
@@ -34,7 +34,7 @@
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Monitoring</summary>
 
 - [InfluxDB](/en/astra/monitoring/influxdb.md "InfluxDB - Astra - Cesbo")
@@ -42,7 +42,7 @@
 
 </details>
 
-<details>
+<details class="marker">
 <summary>API</summary>
 
 - [Call API Methods](/en/astra/api/call.md "Call API Methods - Astra - Cesbo")

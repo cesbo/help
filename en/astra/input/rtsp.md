@@ -1,6 +1,6 @@
 # RTSP
 
-RTSP (Real Time Streaming Protocol) is a protocol used mostly for IP cameras. [Read more](/en/book/#/delivery/rtsp)
+RTSP (Real Time Streaming Protocol) is a protocol used mostly for IP cameras. [Read more](/en/book/delivery/rtsp)
 
 ## Address format
 

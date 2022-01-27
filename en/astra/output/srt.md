@@ -1,7 +1,7 @@
 # SRT
 
 SRT (Secure Reliable Transport) is an UDP based protocol with high stability and security.
-[Read more](/en/book/#/delivery/srt)
+[Read more](/en/book/delivery/srt)
 
 ## Caller address format
 

@@ -1,6 +1,6 @@
 # UDP
 
-UDP is a low latency protocol for local networks. [Read more](/en/book/#/delivery/udp)
+UDP is a low latency protocol for local networks. [Read more](/en/book/delivery/udp)
 
 ## Address format
 
@@ -40,7 +40,7 @@ Or click to the gear icon and use an Input configuration form:
 
 In most cases issue cause is a system or network configuration. To find a solution needed:
 
-<details>
+<details class="marker">
 <summary>Astra MPEG-TS analyzer</summary>
 
 With Astra you can analyze any supported source. Just launch in console next command:
@@ -53,7 +53,7 @@ To stop `astra` press `Ctrl+C`
 
 </details>
 
-<details>
+<details class="marker">
 <summary>TCPDUMP</summary>
 
 `tcpdump` is a common tool to check network traffic. For example, command to check UDP multicast receiving to group `239.255.1.1` on the interface `eth0`:
@@ -82,7 +82,7 @@ Not working means a zero bitrate in the Astra MPEG-TS Analyzer output.
 
 First of all check traffic on the network interface with `tcpdump` tool. If there is no information about incoming packets, then need to check network configuration or source configuration.
 
-<details>
+<details class="marker">
 <summary>Not working: No packets in tcpdump output. Check IGMP version</summary>
 
 Most Linux distributions uses IGMPv3 protocol to manage subscription to the multicast group.
@@ -109,14 +109,14 @@ tcpdump -i eth1 igmp
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Not working: Check firewall configuration</summary>
 
 If `tcpdump` shows information about packets need to check **Firewall** configuration. Firewall depend of your Linux Distribution and better to check manual to your operation system.
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Not working: Check RP filter configuration</summary>
 
 **RP filter** - is a technology that provides protection and security of the server when using multicast mailings. If your server has several network interfaces, recommend to set routes for multicast groups. If this is not possible, change the RP filter settings:
@@ -141,7 +141,7 @@ CC errors in the Astra MPEG-TS Analyzer output can be caused by packets loss or 
 
 !> CC (Continuity Counter) error. Indicates that packets continuity is corrupted
 
-<details>
+<details class="marker">
 <summary>Too many errors on receiving UDP: Packets excess</summary>
 
 Excess packets looks in the `tcpdump` output as packets from different sources to the same destination:
@@ -160,7 +160,7 @@ In both cases need to check remote server configuration. If this is not possible
 
 </details>
 
-<details>
+<details class="marker">
 <summary>Too many errors on receiving UDP: Packets loss</summary>
 
 First of all need to check losses and errors on the network interface:

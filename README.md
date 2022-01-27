@@ -44,7 +44,7 @@ Second row
 The details block provides more information in the hidden block with a link to turn block visible.
 
 ```
-<details>
+<details class="merker">
 <summary>Read more...</summary>
 More information...
 </details>

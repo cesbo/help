@@ -1,10 +1,12 @@
 
 function touchSidebar(hook) {
 	hook.doneEach(_ => {
-		const item = Docsify.dom.find('.sidebar details a[href="'+location.pathname+'"]')
+		const sidebar = Docsify.dom.find('aside.sidebar')
+
+		const item = Docsify.dom.find(sidebar, 'details a[href="'+location.pathname+'"]')
 		if(item) item.parentElement.parentElement.parentElement.open = true;
 
-		const sections = Docsify.dom.findAll('.sidebar summary')
+		const sections = Docsify.dom.findAll(sidebar, 'summary')
 		for(const item of sections) {
 			Docsify.dom.on(item, 'click', (event) => {
 				event.stopPropagation()
@@ -15,7 +17,7 @@ function touchSidebar(hook) {
 
 function searchHotkey(hook) {
 	hook.ready(_ => {
-		const input = Docsify.dom.find('.sidebar .search input')
+		const input = Docsify.dom.find('aside.sidebar .search input')
 
 		Docsify.dom.on(document, 'keyup', (event) => {
 			const x = event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
@@ -42,7 +44,7 @@ function searchHotkey(hook) {
 
 function fixLinksTarget(hook) {
 	hook.doneEach(_ => {
-		const content = Docsify.dom.find('main>.content')
+		const content = Docsify.dom.find('section.content')
 		const links = Docsify.dom.findAll(content, 'a[target=_blank][href^="/"]')
 		for(const item of links) {
 			item.removeAttribute('target')
