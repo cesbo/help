@@ -78,7 +78,12 @@ To stop `tcpdump` press `Ctrl+C`
 
 ### Not working
 
-Not working means a zero bitrate in the Astra MPEG-TS Analyzer output.
+Not working means a zero bitrate in the Astra MPEG-TS Analyzer output. Example:
+
+```
+Jan 27 09:00:00: INFO: Bitrate: 0 Kbit/s
+Jan 27 09:00:01: INFO: Bitrate: 0 Kbit/s
+```
 
 First of all check traffic on the network interface with `tcpdump` tool. If there is no information about incoming packets, then need to check network configuration or source configuration.
 
@@ -137,9 +142,14 @@ sysctl -p
 
 ### Too many errors on receiving UDP
 
-CC errors in the Astra MPEG-TS Analyzer output can be caused by packets loss or excess.
+CC (Continuity Counter) errors indicates that packets continuity is corrupted. Error can be caused by packets loss or excess. Example output with CC errors in the Astra MPEG-TS Analyzer:
 
-!> CC (Continuity Counter) error. Indicates that packets continuity is corrupted
+```
+Jan 27 09:00:00: INFO: Bitrate: 13259 Kbit/s
+Jan 27 09:00:00: ERROR: CC: PID:18=3 PID:20=3 PID:256=24
+Jan 27 09:00:01: INFO: Bitrate: 13261 Kbit/s
+Jan 27 09:00:01: ERROR: CC: PID:18=5 PID:20=2
+```
 
 <details class="marker">
 <summary>Too many errors on receiving UDP: Packets excess</summary>
