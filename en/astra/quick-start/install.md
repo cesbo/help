@@ -33,7 +33,7 @@ Astra used port **8000** by the default, you may set any custom port:
 astra init 4000
 ```
 
-After changing port on existing service it should be restarted.
+After changing port on existing service it should be restarted. Read more about service configuration in [Service Setup](service-setup.md)
 
 ## Process management
 

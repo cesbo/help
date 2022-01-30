@@ -52,8 +52,32 @@ function fixLinksTarget(hook) {
 	})
 }
 
+function contentEditor(hook) {
+	hook.ready(_ => {
+		const content = Docsify.dom.find('section.content')
+
+		const icon = document.createElement('i')
+		icon.classList.add('icon', 'icon-edit')
+
+		const link = document.createElement('button')
+		link.classList.add('editor-toggle')
+		link.title = 'Edit this page'
+		link.appendChild(icon)
+
+		link.addEventListener('click', _ => {
+			const page = document.body.dataset.page
+			Docsify.get(page).then(result => {
+				//
+			})
+		})
+
+		content.insertBefore(link, content.firstChild)
+	})
+}
+
 $docsify.plugins = [
 	touchSidebar,
 	searchHotkey,
 	fixLinksTarget,
+	contentEditor,
 ].concat($docsify.plugins)

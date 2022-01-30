@@ -48,8 +48,8 @@ html {
 
 body {
 	font-family: var(--font-content);
-	line-height: 1.5rem;
-	font-size: var(--space-unit);
+	line-height: var(--space-lg);
+	font-size: var(--font-size);
 	background-color: var(--background);
 	color: var(--text);
 	margin: 0;
@@ -260,6 +260,20 @@ main {
 	padding: 0 var(--space-unit);
 	flex-grow: 2;
 	overflow-x: hidden;
+}
+
+.content .editor-toggle {
+	background-color: transparent;
+	border: none;
+	color: var(--blue-normal);
+	cursor: pointer;
+
+	float: right;
+	margin: var(--space-sm) 0;
+}
+
+.content .editor-toggle:hover {
+	color: var(--blue-dark);
 }
 
 /* Headings */
@@ -475,4 +489,9 @@ details.marker[open]>summary::before {
 	-webkit-mask-repeat: no-repeat;
 	width: var(--space-lg);
 	height: var(--space-lg);
+}
+
+.icon-edit::before {
+	mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>');
+	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>');
 }

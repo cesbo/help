@@ -14,6 +14,7 @@ const docs = [
 
 app.disable('x-powered-by')
 
+app.use('/README.md', express.static(path.join(root, 'README.md')))
 app.use('/assets/', express.static(path.join(root, 'assets')))
 
 for(const d of docs) {
