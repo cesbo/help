@@ -18,6 +18,7 @@
 <details class="marker">
 <summary>Receiving</summary>
 
+- [DVB, ATSC, ISDB-T](/en/astra/input/dvb.md "DVB Receiving - Astra - Cesbo")
 - [HLS](/en/astra/input/hls.md "HLS Receiving - Astra - Cesbo")
 - [HTTP MPEG-TS](/en/astra/input/http.md "HTTP MPEG-TS Receiving - Astra - Cesbo")
 - [RTSP](/en/astra/input/rtsp.md "RTSP Receiving - Astra - Cesbo")
