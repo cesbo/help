@@ -49,6 +49,17 @@ By the standard interval between PCR packets should be between 20-250 millisecon
 
 ## Troubleshooting
 
+### Not working
+
+<details class="marker">
+<summary>VLC/FFmpeg can't receive stream</summary>
+
+VLC/FFmpeg requires `@` symbol before address. For example: `udp://@239.255.1.1:1234`
+
+</details>
+
+### Bitrate syncing errors
+
 <details class="marker">
 <summary>mpegts/sync failed. buffer empty</summary>
 
