@@ -34,3 +34,38 @@ In the web interface UDP Output options available in the Stream options. You can
 Or click to the gear icon and use an Output configuration form:
 
 ![UDP Output options](udp-696w.png ':size=696')
+
+## Bitrate syncing
+
+Bitrate syncing - this feature normalizes interval between UDP packets. Bitrate syncing calculates real stream bitrate by PCR (Program Clock References) timestamps.
+
+UDP Output turns on a bitrate syncing with next options:
+
+- `sync` - just normalize UDP jitter
+- `cbr` - normalize UDP jitter and appends NULL-TS packets to the stream for constant bitrate
+- Settings -> General -> Use multithreading for UDP - just normalize UDP jitter for all UDP outputs
+
+By the standard interval between PCR packets should be between 20-250 millisecond.
+
+## Troubleshooting
+
+<details class="marker">
+<summary>mpegts/sync failed. buffer empty</summary>
+
+Astra sent all packets from output buffer and new packets is not arrived.
+
+</details>
+
+<details class="marker">
+<summary>mpegts/sync failed. buffer overflow</summary>
+
+Astra sends packets slower then receives it.
+
+</details>
+
+<details class="marker">
+<summary>mpegts/sync failed. next PCR not found</summary>
+
+Interval between packets with PCR timestamp is too large.
+
+</details>
