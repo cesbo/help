@@ -15,14 +15,9 @@ Options:
 
 - `pnr=Number` - select program from MPTS (Multi-Program Transport Stream)
 
-## Web Interface: Adapter options
+## Common adapter options
 
-### Common adapters options
-
-Options for any adapter type
-
-<details class="marker">
-<summary>Common: General options</summary>
+### General options
 
 ![General Options](dvb-general.png ':size=200')
 
@@ -33,10 +28,7 @@ Options for any adapter type
 - `Adapter` - select system devices;
 - `Type` - select adapter standard.
 
-</details>
-
-<details class="marker">
-<summary>Common: General options</summary>
+### Advanced options
 
 ![Advanced Options](dvb-advanced.png ':size=200')
 
@@ -50,14 +42,11 @@ Options for any adapter type
 - `Budget Mode` - disable hardware PID filtering. In budget mode Astra receives whole transponder from adapter;
 - `CA Delay` - delay between sending control packets to Conditional Access Module (CAM).
 
-</details>
-
-### DVB-S/S2 adapter options
+## DVB-S/S2
 
 DVB-S/S2 is a standard for Satellite Television.
 
-<details class="marker">
-<summary>DVB-S/S2: General options</summary>
+### DVB-S/S2: General options
 
 ![DVB-S/S2 Tuner](dvb-s.png ':size=200')
 
@@ -65,10 +54,7 @@ DVB-S/S2 is a standard for Satellite Television.
 - `Polarization` - signal polarization. For linear polarization: Vertical, Horizontal. For circular polarization: Right, Left;
 - `Symbolrate` - symbol rate (1000-50000 Kbaud).
 
-</details>
-
-<details class="marker">
-<summary>DVB-S/S2: LNB (Low-Noise Block) options</summary>
+### DVB-S/S2: LNB (Low-Noise Block) options
 
 ![DVB-S/S2 LNB](dvb-s-lnb.png ':size=200')
 
@@ -111,10 +97,7 @@ Available LNB modes:
 - `Unicable I (EN50494)` - Provides simultaneous access to multiple LNB’s over a single coaxial cable for several receivers. Version I provide access up to 8 satellite sources;
 - `Unicable II (EN50607)` - provides access to up to 32 satellite sources.
 
-</details>
-
-<details class="marker">
-<summary>DVB-S/S2: Advanced options</summary>
+### DVB-S/S2: Advanced options
 
 ![DVB-S/S2 Advanced](dvb-s-advanced.png ':size=200')
 
@@ -123,50 +106,36 @@ Available LNB modes:
 - `Roll-Off` - spectrum efficiency. Only for DVB-S2. Default: 35;
 - `Stream ID` - PLP stream ID for multistream transponders. Only for DVB-S2.
 
-</details>
-
-### DVB-T/T2 adapter options
+## DVB-T/T2
 
 DVB-T/T2 is a standard for the broadcast transmission of digital terrestrial television.
 
-<details class="marker">
-<summary>DVB-T/T2: General options</summary>
+### DVB-T/T2: General options
 
 ![DVB-T/T2 Tuner](dvb-t.png ':size=200')
 
 - `Frequency` - carrier frequency (0-1000 MHz).
 
-</details>
-
-<details class="marker">
-<summary>DVB-T/T2: Advanced options</summary>
+### DVB-T/T2: Advanced options
 
 ![DVB-T/T2 Advanced](dvb-t-advanced.png ':size=200')
 
-</details>
-
-### DVB-C adapter options
+## DVB-C
 
 DVB-C is a standard for the broadcast transmission of digital television over cable.
 
-<details class="marker">
-<summary>DVB-C: General options</summary>
+### DVB-C: General options
 
 ![DVB-C Tuner](dvb-c.png ':size=200')
 
 - `Frequency` - carrier frequency (80-1000 MHz);
 - `Symbolrate` - symbol rate (1000-10000 Kbaud).
 
-</details>
-
-<details class="marker">
-<summary>DVB-C: Advanced options</summary>
+### DVB-C: Advanced options
 
 ![DVB-C Advanced](dvb-c-advanced.png ':size=200')
 
-</details>
-
-## Web Interface: Stream options
+## Stream options
 
 In the web interface DVB Input options available in the Stream options. You can write source address directly to the Input address line:
 
@@ -176,7 +145,7 @@ Or click to the gear icon and use an Input configuration form:
 
 ![DVB Input options](dvb.png ':size=200')
 
-## Web Interface: Scan Adapter
+## Scan Adapter
 
 Press "Scan" button to scan an adapter and get available information:
 
