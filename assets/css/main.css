@@ -5,6 +5,7 @@
 
 	--background: hsl(0, 0%, 100%);
 	--text: hsl(0, 0%, 10%);
+	--overlay: hsla(0, 0%, 90%, .5);
 
 	--border-radius: 5px;
 
@@ -247,7 +248,7 @@ main {
 
 .sidebar .search .search-keyword {
 	font-style: normal;
-	color: var(--green-normal);
+	color: var(--blue-normal);
 }
 
 .sidebar .search .matching-post {
@@ -397,6 +398,10 @@ details.marker[open]>summary::before {
 	padding: var(--space-unit);
 	border: 1px solid var(--green-normal);
 	border-left-width: 4px;
+}
+
+.content details[open] {
+	box-shadow: 0 0 2px var(--grey-normal);
 }
 
 .content details~details {
