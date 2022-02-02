@@ -36,6 +36,8 @@
 	--space-xl: calc(2.0 * var(--space-unit));
 
 	--modal-max-width: 680px;
+
+	--docsifytabs-tab-color--active: var(--blue-normal);
 }
 
 *, ::after, ::before {
@@ -413,6 +415,12 @@ details.marker[open]>summary::before {
 	flex-direction: row;
 	align-items: center;
 	gap: var(--space-sm);
+}
+
+/* Tabs */
+
+.content .docsify-tabs__tab {
+	cursor: pointer;
 }
 
 /* Notifications */
