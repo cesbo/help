@@ -24,7 +24,7 @@ Options for any adapter type
 <details class="marker">
 <summary>Common: General options</summary>
 
-![General Options](dvb-general.png ':size=696')
+![General Options](dvb-general.png ':size=200')
 
 - `Enable` - turn adapter on/off;
 - `Name` - adapter name;
@@ -38,7 +38,7 @@ Options for any adapter type
 <details class="marker">
 <summary>Common: General options</summary>
 
-![Advanced Options](dvb-advanced.png ':size=696')
+![Advanced Options](dvb-advanced.png ':size=200')
 
 - `Enable monitoring` - enable telemetry sending to Zabbix or InfluxDB;
 - `Timeout` - check DVR errors in defined interval. Default: 120;
@@ -59,7 +59,7 @@ DVB-S/S2 is a standard for Satellite Television.
 <details class="marker">
 <summary>DVB-S/S2: General options</summary>
 
-![DVB-S/S2 Tuner](dvb-s.png ':size=696')
+![DVB-S/S2 Tuner](dvb-s.png ':size=200')
 
 - `Frequency` - carrier frequency (950-13250 MHz);
 - `Polarization` - signal polarization. For linear polarization: Vertical, Horizontal. For circular polarization: Right, Left;
@@ -70,7 +70,7 @@ DVB-S/S2 is a standard for Satellite Television.
 <details class="marker">
 <summary>DVB-S/S2: LNB (Low-Noise Block) options</summary>
 
-![DVB-S/S2 LNB](dvb-s-lnb.png ':size=696')
+![DVB-S/S2 LNB](dvb-s-lnb.png ':size=200')
 
 Default options depends of the adapter frequency:
 
@@ -116,7 +116,7 @@ Available LNB modes:
 <details class="marker">
 <summary>DVB-S/S2: Advanced options</summary>
 
-![DVB-S/S2 Advanced](dvb-s-advanced.png ':size=696')
+![DVB-S/S2 Advanced](dvb-s-advanced.png ':size=200')
 
 - `Modulation` - signal modulation. Default: QPSK for DVB-S, PSK8 for DVB-S2;
 - `FEC` - forward error correction. Default: Auto;
@@ -132,7 +132,7 @@ DVB-T/T2 is a standard for the broadcast transmission of digital terrestrial tel
 <details class="marker">
 <summary>DVB-T/T2: General options</summary>
 
-![DVB-T/T2 Tuner](dvb-t.png ':size=696')
+![DVB-T/T2 Tuner](dvb-t.png ':size=200')
 
 - `Frequency` - carrier frequency (0-1000 MHz).
 
@@ -141,7 +141,7 @@ DVB-T/T2 is a standard for the broadcast transmission of digital terrestrial tel
 <details class="marker">
 <summary>DVB-T/T2: Advanced options</summary>
 
-![DVB-T/T2 Advanced](dvb-t-advanced.png ':size=696')
+![DVB-T/T2 Advanced](dvb-t-advanced.png ':size=200')
 
 </details>
 
@@ -152,7 +152,7 @@ DVB-C is a standard for the broadcast transmission of digital television over ca
 <details class="marker">
 <summary>DVB-C: General options</summary>
 
-![DVB-C Tuner](dvb-c.png ':size=696')
+![DVB-C Tuner](dvb-c.png ':size=200')
 
 - `Frequency` - carrier frequency (80-1000 MHz);
 - `Symbolrate` - symbol rate (1000-10000 Kbaud).
@@ -162,7 +162,7 @@ DVB-C is a standard for the broadcast transmission of digital television over ca
 <details class="marker">
 <summary>DVB-C: Advanced options</summary>
 
-![DVB-C Advanced](dvb-c-advanced.png ':size=696')
+![DVB-C Advanced](dvb-c-advanced.png ':size=200')
 
 </details>
 
@@ -170,11 +170,11 @@ DVB-C is a standard for the broadcast transmission of digital television over ca
 
 In the web interface DVB Input options available in the Stream options. You can write source address directly to the Input address line:
 
-![Input address](input-list-696w.png ':size=696')
+![Input address](input-list.png ':size=200')
 
 Or click to the gear icon and use an Input configuration form:
 
-![DVB Input options](dvb-input.png ':size=696')
+![DVB Input options](dvb.png ':size=200')
 
 ## Web Interface: Scan Adapter
 
@@ -184,7 +184,7 @@ Press "Scan" button to scan an adapter and get available information:
 - Transponder information;
 - Available channels.
 
-![DVB Scan](dvb-scan.jpg ':size=696')
+![DVB Scan](dvb-scan.jpg ':size=200')
 
 Check all channels you want to append and press "Apply" button.
 

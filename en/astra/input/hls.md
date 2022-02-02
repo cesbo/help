@@ -26,10 +26,10 @@ Options:
 
 In the web interface HLS Input options available in the Stream options. You can write source address directly to the Input address line:
 
-![Input address](input-list-696w.png ':size=696')
+![Input address](input-list.png ':size=200')
 
 Or click to the gear icon and use an Input configuration form:
 
-![HLS Input options](http-696w.png ':size=696')
+![HLS Input options](http.png ':size=200')
 
 ## Troubleshooting

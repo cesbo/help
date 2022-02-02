@@ -24,10 +24,10 @@ Options:
 
 In the web interface RTSP Input options available in the Stream options. You can write source address directly to the Input address line:
 
-![Input address](input-list-696w.png ':size=696')
+![Input address](input-list.png ':size=200')
 
 Or click to the gear icon and use an Input configuration form:
 
-![RTSP Input options](rtsp-696w.png ':size=696')
+![RTSP Input options](rtsp.png ':size=200')
 
 ## Troubleshooting

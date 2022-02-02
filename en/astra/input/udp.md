@@ -30,11 +30,11 @@ For example:
 
 In the web interface UDP Input options available in the Stream options. You can write source address directly to the Input address line:
 
-![Input address](input-list-696w.png ':size=696')
+![Input address](input-list.png ':size=200')
 
 Or click to the gear icon and use an Input configuration form:
 
-![UDP Input options](udp-696w.png ':size=696')
+![UDP Input options](udp.png ':size=200')
 
 ## Troubleshooting
 
