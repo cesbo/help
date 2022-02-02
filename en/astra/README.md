@@ -4,7 +4,7 @@ Astra is a professional software for TV streaming.
 
 ## Receiving
 
-- Broadcast – Satellite, Cable, or Terrestrials:
+- [Broadcast – Satellite, Cable, or Terrestrials](input/dvb.md):
     - ATSC
     - DVB
     - ISDB-T

@@ -25,23 +25,49 @@ Adapter options depends of the delivery system:
 
 <!-- tabs:start -->
 
+#### **General Options**
+
+General options for all adapters:
+
+![General Options](dvb-general-696w.png ':size=696')
+
+Advanced options for all adapters:
+
+![Advanced Options](dvb-advanced-696w.png ':size=696')
+
 #### **DVB-S/S2**
 
-General options include base tuner configuration:
+General options with base tuner configuration:
 
 ![DVB-S/S2 Tuner](dvb-s-696w.png ':size=696')
 
 LNB (Low-Noise Block) options:
 
-![DVB-S/S2 Tuner](dvb-s-696w.png ':size=696')
+![DVB-S/S2 LNB](dvb-s-lnb-696w.png ':size=696')
+
+Advanced options:
+
+![DVB-S/S2 Advanced](dvb-s-advanced-696w.png ':size=696')
 
 #### **DVB-T/T2**
 
-For DVB-T/T2
+General options with base tuner configuration:
+
+![DVB-T/T2 Tuner](dvb-t-696w.png ':size=696')
+
+Advanced options:
+
+![DVB-T/T2 Advanced](dvb-t-advanced-696w.png ':size=696')
 
 #### **DVB-C**
 
-For DVB-C
+General options with base tuner configuration:
+
+![DVB-C Tuner](dvb-c-696w.png ':size=696')
+
+Advanced options:
+
+![DVB-C Advanced](dvb-c-advanced-696w.png ':size=696')
 
 <!-- tabs:end -->
 
