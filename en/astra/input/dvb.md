@@ -120,6 +120,11 @@ DVB-T/T2 is a standard for the broadcast transmission of digital terrestrial tel
 
 ![DVB-T/T2 Advanced](dvb-t-advanced.png ':size=200')
 
+- `Bandwidth` - Signal bandwidth in kHz. Default: 8000;
+- `Guard` - Guard interval;
+- `Transmit` - Transmission mode;
+- `Hierarchy` -
+
 ## DVB-C
 
 DVB-C is a standard for the broadcast transmission of digital television over cable.
