@@ -170,13 +170,13 @@ DVB-C is a standard for the broadcast transmission of digital television over ca
 
 In the web interface DVB Input options available in the Stream options. You can write source address directly to the Input address line:
 
-![Input address](input-list.png ':size=696')
+![Input address](input-list-696w.png ':size=696')
 
 Or click to the gear icon and use an Input configuration form:
 
 ![DVB Input options](dvb-input.png ':size=696')
 
-## Scan Adapter
+## Web Interface: Scan Adapter
 
 Press "Scan" button to scan an adapter and get available information:
 
