@@ -26,6 +26,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - nl2br
 
 nav:
   - 'Features': 'en/astra/index.md'
