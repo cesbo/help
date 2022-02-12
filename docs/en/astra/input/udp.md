@@ -1,6 +1,6 @@
 # UDP
 
-UDP is a low latency protocol for local networks. [Read more](/en/book/delivery/udp)
+UDP is a low latency protocol for local networks. [Read more](/en/book/protocols/udp/)
 
 ## Address format
 
@@ -62,8 +62,11 @@ To stop `astra` press `Ctrl+C`
 tcpdump -pnni eth0 udp and host 239.255.1.1
 ```
 
-!> If you don't know actual interface you may find it with command:
-`ip route get 239.255.1.1`
+If you don't know actual interface you may find it with command:
+
+```
+ip route get 239.255.1.1
+```
 
 The `tcpdump` output looks like many lines with information about packets source, destination, and length. For example:
 

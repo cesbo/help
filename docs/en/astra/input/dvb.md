@@ -1,19 +1,6 @@
 # DVB, ATSC, ISDB-T
 
-DVB (Digital Video Broadcast) is a set of international open standards for digital television [Read more](/en/book/delivery/dvb)
-
-## Address format
-
-```
-dvb://adapter-id
-dvb://adapter-id#options
-```
-
-- `adapter-id` - adapter identifier
-
-Options:
-
-- `pnr=Number` - select program from MPTS (Multi-Program Transport Stream)
+DVB (Digital Video Broadcast) is a set of international open standards for digital television [Read more](/en/book/protocols/dvb/)
 
 ## Common adapter options
 
@@ -140,16 +127,6 @@ DVB-C is a standard for the broadcast transmission of digital television over ca
 
 ![DVB-C Advanced](dvb-c-advanced.png){: width="400"}
 
-## Stream options
-
-In the web interface DVB Input options available in the Stream options. You can write source address directly to the Input address line:
-
-![Input address](input-list.png){: width="400"}
-
-Or click to the gear icon and use an Input configuration form:
-
-![DVB Input options](dvb.png){: width="400"}
-
 ## Scan Adapter
 
 Press "Scan" button to scan an adapter and get available information:
@@ -161,6 +138,29 @@ Press "Scan" button to scan an adapter and get available information:
 ![DVB Scan](dvb-scan.jpg){: width="400"}
 
 Check all channels you want to append and press "Apply" button.
+
+## Address format
+
+```
+dvb://adapter-id
+dvb://adapter-id#options
+```
+
+- `adapter-id` - adapter identifier
+
+Options:
+
+- `pnr=Number` - select program from MPTS (Multi-Program Transport Stream)
+
+## Stream options
+
+In the web interface DVB Input options available in the Stream options. You can write source address directly to the Input address line:
+
+![Input address](input-list.png){: width="400"}
+
+Or click to the gear icon and use an Input configuration form:
+
+![DVB Input options](dvb.png){: width="400"}
 
 ## Troubleshooting
 

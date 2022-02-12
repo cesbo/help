@@ -1,9 +1,10 @@
 # SRT
 
 SRT (Secure Reliable Transport) is an UDP based protocol with high stability and security.
-[Read more](/en/book/delivery/srt)
+[Read more](/en/book/protocols/srt/)
 
-!> Version: 2021-12-21 or later
+!!! note
+    Version: 2021-12-21 or later
 
 ## Caller address format
 
@@ -43,12 +44,12 @@ Options:
 
 In the web interface SRT Output options available in the Stream options. You can write destination address directly to the Output address line:
 
-![Output address](output-list-696w.png){: width="400"}
+![Output address](output-list.png){: width="400"}
 
 Or click to the gear icon and use an Output configuration form. SRT Caller options:
 
-![SRT Caller Output options](srt-caller-696w.png){: width="400"}
+![SRT Caller Output options](srt-caller.png){: width="400"}
 
 SRT Listener options:
 
-![SRT Listener Output options](srt-listener-696w.png){: width="400"}
+![SRT Listener Output options](srt-listener.png){: width="400"}

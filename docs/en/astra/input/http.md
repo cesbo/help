@@ -1,6 +1,6 @@
 # HTTP MPEG-TS
 
-Receiving stream with a single HTTP request like downloading an infinity file. [Read more](/en/book/delivery/http)
+Receiving stream with a single HTTP request like downloading an infinity file. [Read more](/en/book/protocols/http/)
 
 ## Address format
 

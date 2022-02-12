@@ -2,7 +2,8 @@
 
 ## System statis
 
-!> Version: 2021-04-12 or later
+!!! note
+    Version: 2021-04-12 or later
 
 Request: `GET /api/system-status`
 

@@ -26,7 +26,8 @@ Response:
 
 ## Get adapter configuration (new versions)
 
-!> Version: 2021-04-12 or later
+!!! note
+    Version: 2021-04-12 or later
 
 Request: `GET /api/adapter-info/{id}`
 
@@ -108,7 +109,8 @@ Request:
 
 ## Adapter status
 
-!> Version: 2021-04-12 or later
+!!! note
+    Version: 2021-04-12 or later
 
 Request: `GET /api/adapter-status/{id}`
 

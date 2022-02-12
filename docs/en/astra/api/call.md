@@ -8,7 +8,8 @@ You may use `curl` in the console to call an API method.
 
 Call **GET** method:
 
-!> Only for versions since 2021-04-12 or later
+!!! note
+    Only for versions since 2021-04-12 or later
 
 ```
 curl \

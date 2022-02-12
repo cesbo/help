@@ -26,7 +26,8 @@ Response:
 
 ## Get stream configuration (new versions)
 
-!> Version: 2021-04-12 or later
+!!! note
+    Version: 2021-04-12 or later
 
 Request: `GET /api/stream-info/{id}`
 
@@ -129,7 +130,8 @@ Request:
 
 ## Stream status
 
-!> Version: 2021-04-12 or later
+!!! note
+    Version: 2021-04-12 or later
 
 Request: `GET /api/stream-status/{id}`
 

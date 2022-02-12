@@ -1,6 +1,6 @@
 # UDP
 
-UDP is a low latency protocol for local networks. [Read more](/en/book/delivery/udp)
+UDP is a low latency protocol for local networks. [Read more](/en/book/protocols/udp/)
 
 ## Address format
 
@@ -29,11 +29,11 @@ We recommend to use multicast addresses in range `239.0.0.0 - 239.255.255.255` .
 
 In the web interface UDP Output options available in the Stream options. You can write destination address directly to the Output address line:
 
-![Output address](output-list-696w.png){: width="400"}
+![Output address](output-list.png){: width="400"}
 
 Or click to the gear icon and use an Output configuration form:
 
-![UDP Output options](udp-696w.png){: width="400"}
+![UDP Output options](udp.png){: width="400"}
 
 ## Bitrate syncing
 
