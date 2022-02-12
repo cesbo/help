@@ -4,7 +4,7 @@ Valid license is required to launch Astra.
 
 ## New License
 
-You may purchase new license or get demo on our website: [Get License](/en/astra/pricing.md). You will receive new license if:
+You may purchase new license or get demo on our website: [Get License](../pricing.md). You will receive new license if:
 
 - purchase the new license
 - request the demo license
