@@ -30,6 +30,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - nl2br
+  - pymdownx.superfences
 
 nav:
   - 'Features': 'index.md'
