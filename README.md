@@ -28,13 +28,13 @@ Only 3 levels is available:
 The general tip block for additional information:
 
 ```
-??? note Notice content
+!!! note Notice content
     Second row
 ```
 
 The alert block for attention:
 
 ```
-??? danger Alert content
+!!! danger Alert content
     Second row
 ```
