@@ -54,6 +54,8 @@ nav:
   - 'Transmitting':
     - 'SRT': 'output/srt.md'
     - 'UDP': 'output/udp.md'
+  - 'Authorization':
+    - 'HTTP Backend': 'auth/backend.md'
   - 'Monitoring':
     - 'InfluxDB': 'monitoring/influxdb.md'
     - 'Grafana': 'monitoring/grafana.md'
