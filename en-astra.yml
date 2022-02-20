@@ -56,6 +56,9 @@ nav:
     - 'UDP': 'output/udp.md'
   - 'Authorization':
     - 'HTTP Backend': 'auth/backend.md'
+  - 'Broadcasting':
+    - 'MPTS': 'broadcasting/mpts.md'
+    - 'CAS and Simulcrypt': 'broadcasting/cas.md'
   - 'Monitoring':
     - 'InfluxDB': 'monitoring/influxdb.md'
     - 'Grafana': 'monitoring/grafana.md'
