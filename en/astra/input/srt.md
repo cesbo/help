@@ -23,6 +23,7 @@ Options:
 - `passphrase=PASS` – password for the encrypted transmission. Password length should be in range 10 .. 79 characters
 - `pbkeylen=N` – crypto key length in bytes. Possible values: 16, 24, 32
 - `tsbpdmode` – timestamp-based packet delivery mode
+- `packetfilter` - injecting extra processing instructions at the beginning and/or end of a transmission to implement Forward Error Correction (FEC). [Read more](https://github.com/Haivision/srt/blob/master/docs/features/packet-filtering-and-fec.md)
 
 ## Listener address format
 
