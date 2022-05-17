@@ -6,5 +6,4 @@ all: en-astra
 
 en-astra:
 	@echo "Astra"
-	@mkdocs build -c -f en-astra.yml -d build/en/astra
-
+	@mkdocs build -c -f en-astra.yml

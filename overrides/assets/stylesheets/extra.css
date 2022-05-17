@@ -1,0 +1,15 @@
+.md-typeset :is(.admonition, details) {
+font-size: .8rem;
+}
+
+.md-typeset :is(.admonition-title, summary) {
+font-weight: normal;
+}
+
+.md-typeset details[open] {
+padding-bottom: .6rem;
+}
+
+.md-typeset details[open]>summary {
+margin-bottom: .6rem;
+}

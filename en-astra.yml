@@ -10,6 +10,9 @@ site_dir: site/en/astra
 repo_url: https://github.com/cesbo/docs/
 edit_uri: edit/master/en/astra/
 
+extra_css:
+  - assets/stylesheets/extra.css
+
 theme:
   name: material
   custom_dir: 'overrides'
