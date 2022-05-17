@@ -7,6 +7,8 @@ extra:
 
 docs_dir: en/astra
 site_dir: site/en/astra
+repo_url: https://github.com/cesbo/docs/
+edit_uri: edit/master/en/astra/
 
 theme:
   name: material
