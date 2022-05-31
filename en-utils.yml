@@ -48,3 +48,5 @@ nav:
     - 'Dehydrated': 'net/dehydrated.md'
   - 'DVB':
     - 'Minisatip': 'dvb/minisatip.md'
+  - 'TV':
+    - 'EIT Stream': 'tv/eit-stream.md'
