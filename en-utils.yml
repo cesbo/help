@@ -1,14 +1,14 @@
-site_name: Linux Docs
+site_name: Utils for Linux
 site_description: Linux Administration
 
 copyright: 'Copyright &copy; <a href="https://cesbo.com" target="_blank">Cesbo</a>, 2022'
 extra:
   generator: false
 
-docs_dir: en/linux
-site_dir: site/en/linux
+docs_dir: en/utils
+site_dir: site/en/utils
 repo_url: https://github.com/cesbo/www/
-edit_uri: edit/master/en/linux/
+edit_uri: edit/master/en/utils/
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -42,8 +42,9 @@ nav:
   - 'Drivers':
     - 'DigitalDevices': 'drivers/dd.md'
     - 'TBS': 'drivers/tbs.md'
-  - 'Utils':
+  - 'Network and Web':
     - 'SSH': 'utils/ssh.md'
     - 'Socat': 'utils/socat.md'
-    - 'Minisatip': 'utils/minisatip.md'
     - 'Dehydrated': 'utils/dehydrated.md'
+  - 'DVB':
+    - 'Minisatip': 'utils/minisatip.md'
