@@ -43,8 +43,8 @@ nav:
     - 'DigitalDevices': 'drivers/dd.md'
     - 'TBS': 'drivers/tbs.md'
   - 'Network and Web':
-    - 'SSH': 'utils/ssh.md'
-    - 'Socat': 'utils/socat.md'
-    - 'Dehydrated': 'utils/dehydrated.md'
+    - 'SSH': 'net/ssh.md'
+    - 'Socat': 'net/socat.md'
+    - 'Dehydrated': 'net/dehydrated.md'
   - 'DVB':
-    - 'Minisatip': 'utils/minisatip.md'
+    - 'Minisatip': 'dvb/minisatip.md'
