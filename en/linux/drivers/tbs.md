@@ -1,11 +1,11 @@
-# DigitalDevices Drivers
+# TBS Drivers
 
 ## Automatic Installation
 
 For installation by script just launch command:
 
 ```
-curl http://cesbo.com/download/astra/scripts/drv-dd.sh | bash
+curl http://cesbo.com/download/astra/scripts/drv-tbs.sh | bash
 ```
 
 ## Manual Installation
@@ -24,7 +24,8 @@ Install system utilities to build drivers from the source code:
 apt-get install build-essential \
     patchutils \
     libproc-processtable-perl \
-    linux-headers-$(uname -r)
+    linux-headers-$(uname -r) \
+    git
 ```
 
 Remove old media drivers:
@@ -40,37 +41,25 @@ rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
 Download latest driver from the official repository:
 
 ```
-git clone -b 0.9.37 --depth=1 https://github.com/DigitalDevices/dddvb /usr/src/dddvb
-cd /usr/src/dddvb
+git clone --depth=1 https://github.com/tbsdtv/media_build.git /usr/src/media_build
+git clone --depth=1 https://github.com/tbsdtv/linux_media.git -b latest /usr/src/media
+cd /usr/src/media_build
 ```
 
 Build drivers and install it:
 
 ```
+make dir DIR=../media
+make allyesconfig
 make
 make install
 ```
 
-Update dirver dependencies:
+Install firmware for DVB adapters:
 
 ```
-mkdir -p /etc/depmod.d
-echo 'search extra updates built-in' | tee /etc/depmod.d/extra.conf
-depmod -a
+curl -L http://www.tbsdtv.com/download/document/linux/tbs-tuner-firmwares_v1.0.tar.bz2 | tar -C /lib/firmware/ -jxf -
 ```
-
-Create driver configuration for DigitalDevices MaxS8:
-
-```
-echo 'options ddbridge fmode=0' | tee /etc/modprobe.d/ddbridge.conf
-```
-
-For MaxS8 available next `fmode` values instead of `0`:
-
-- `fmode=0` - 4 tuner mode (internal multiswitch disabled)
-- `fmode=1` - Quad LNB / normal outputs of multiswitches
-- `fmode=2` - Quattro - LNB / cascade outputs of multiswitches
-- `fmode=3` - Unicable LNB or JESS / Unicabel output of the multiswitch
 
 ## Restart System
 
@@ -113,25 +102,9 @@ lspci | grep Multimedia
 If adapters connected to the PCIe properly you will see listing of the PCIe adapters. For example:
 
 ```
-01:00.0 Multimedia controller: Digital Devices GmbH Cine V7
+01:00.0 Multimedia controller: TBS Technologies DVB-S2 4 Tuner PCIe Card
 ```
 
 Try to reinstall driver. If this not helps, please contact with hardware vendor.
-
-</details>
-
-<details class="marker">
-<summary>Signal is fine, but channels not working</summary>
-
-Check dmesg output for i2c errors:
-
-```
-dmesg | grep i2c
-```
-
-if you see messages like `i2c_write error` then turn off MSI (Message Signaled Interrupts) in the driver:
-
-Open `/etc/modprobe.d/ddbridge.conf` in any text editor. Find line `options ddbridge`.
-After the `ddbridge` append `msi=0` option. For example: `options ddbridge msi=0 fmode=1`.
 
 </details>
