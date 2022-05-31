@@ -7,7 +7,7 @@ extra:
 
 docs_dir: en/astra
 site_dir: site/en/astra
-repo_url: https://github.com/cesbo/docs/
+repo_url: https://github.com/cesbo/www/
 edit_uri: edit/master/en/astra/
 
 extra_css:

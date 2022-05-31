@@ -7,7 +7,7 @@ extra:
 
 docs_dir: en/linux
 site_dir: site/en/linux
-repo_url: https://github.com/cesbo/docs/
+repo_url: https://github.com/cesbo/www/
 edit_uri: edit/master/en/linux/
 
 extra_css:
