@@ -1,4 +1,4 @@
-# SSH
+# ssh
 
 SSH - is the primary protocol and tool for the remote servers management.
 Also allows you to create tunnels and transfer files.
