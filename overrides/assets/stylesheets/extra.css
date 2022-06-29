@@ -1,15 +1,23 @@
+html {
+    font-size: 22px;
+}
+
+.md-main__inner {
+    margin-top: 0;
+}
+
 .md-typeset :is(.admonition, details) {
-font-size: .8rem;
+    font-size: .8rem;
 }
 
 .md-typeset :is(.admonition-title, summary) {
-font-weight: normal;
+    font-weight: normal;
 }
 
 .md-typeset details[open] {
-padding-bottom: .6rem;
+    padding-bottom: .6rem;
 }
 
 .md-typeset details[open]>summary {
-margin-bottom: .6rem;
+    margin-bottom: .6rem;
 }
