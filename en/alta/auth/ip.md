@@ -5,7 +5,7 @@ IP List checks client IP address in the lists.
 ## Configuration
 
 ```
-"auth": [
+"auth": {
     "ip": [
         { "allow": "127.0.0.1" },
         { "deny": "192.168.0.100" },
@@ -13,7 +13,7 @@ IP List checks client IP address in the lists.
         { "skip": "fd32:ce04:8a5c::1/64" },
         { "deny": "*" }
     ]
-]
+}
 ```
 
 - `127.0.0.1` - allow single local IP;

@@ -19,7 +19,7 @@ Response status could be `200` - allow access or `403` - deny access.
 ```
 
 - `backend` - list of URL addresses to backend;
-- `default` - default action if backend is not available.
+- `default` - default action if backend is not available. Could be `allow` or `deny`.
 
 ## Session information
 

@@ -11,9 +11,10 @@ Languages:
 
 Categories:
 
-- `astra` - About Cesbo Astra, how to use our software
+- `alta` - About Cesbo Alta
+- `astra` - About Cesbo Astra
 - `book` - About protocols, transport, and encoding
-- `linux` - System administration
+- `utils` - System administration
 
 ## Heading
 
