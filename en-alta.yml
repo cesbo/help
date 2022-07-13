@@ -50,3 +50,4 @@ nav:
     - 'HTTP Backend': 'auth/backend.md'
     - 'Ministra': 'auth/ministra.md'
     - 'IPTVPORTAL': 'auth/iptvportal.md'
+    - 'Smarty': 'auth/smarty.md'
