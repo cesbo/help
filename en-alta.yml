@@ -45,3 +45,8 @@ nav:
     - 'Uninstall': 'quick-start/uninstall.md'
   - 'Channel':
     - 'Options': 'channel/options.md'
+  - 'Authorization':
+    - 'IP': 'auth/ip.md'
+    - 'HTTP Backend': 'auth/backend.md'
+    - 'Ministra': 'auth/ministra.md'
+    - 'IPTVPORTAL': 'auth/iptvportal.md'
