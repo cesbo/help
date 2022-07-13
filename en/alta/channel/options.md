@@ -6,8 +6,8 @@ Each channel has next options:
 - `index`: [Index File](#index-file)
 - `path`: [Channel Path](#path)
 - `variant`: [Channel Variant](#variant)
-- `media_access`: [HLS Media File](#media-file)
-- `vod_access`: [HLS VOD File](#vod-file)
+- `media_access`: [HLS Media File](#hls-media-file)
+- `vod_access`: [HLS VOD File](#hls-vod-file)
 - `address`: source address
 
 ## Index File
