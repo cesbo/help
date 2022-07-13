@@ -16,7 +16,7 @@ Arguements:
 ## Video on Demand Mode
 
 Video on Demand (VOD) mode provides access to the whole archive in requested time range.
-To enable this mode set a name for [HLS VOD File](../options.md#hls-vod-file). For example, with name `vod` full URL will be:
+To enable this mode set a name for [HLS VOD File](../channel/options.md#hls-vod-file). For example, with name `vod` full URL will be:
 
 - HLS: `https://example.com/channel-path/vod.m3u8?start=unixtime&duration=seconds`
 

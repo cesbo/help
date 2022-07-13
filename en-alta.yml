@@ -45,6 +45,9 @@ nav:
     - 'Uninstall': 'quick-start/uninstall.md'
   - 'Channel':
     - 'Options': 'channel/options.md'
+  - 'Archive':
+    - 'Access': 'archive/access.md'
+    - 'Unixtime': 'archive/unixtime.md'
   - 'Authorization':
     - 'IP': 'auth/ip.md'
     - 'HTTP Backend': 'auth/backend.md'
