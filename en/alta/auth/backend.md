@@ -18,9 +18,9 @@ Response status `200` allows access to the content. Any other response denies ac
 - `backend` - list of the Backend URL addresses;
 - `default` - default action if backend is not available. Could be `allow` or `deny`.
 
-## Session information
+## Request to Backend
 
-Alta sends next HTTP headers to the backend:
+Request to Backend is a HTTP GET request with following headers:
 
 - `X-Session-Id` - unique session number;
 - `X-Real-Ip` - client IP address;
@@ -28,17 +28,11 @@ Alta sends next HTTP headers to the backend:
 - `X-Real-Origin` - request origin with scheme, host, and port.
 - `X-Real-Ua` - client User-Agent;
 
-## Query string
-
-Query string is a part of address after `?` symbol. Alta pass query from request to the backend.
-
-## Example
-
 For example:
 
-1. Your backend address is: `http://127.0.0.1:6000/auth`;
-2. Client tries to start channel: `https://live.example.com/channel-path/index.m3u8?token=123`;
-3. Full address to HTTP Backend will be: `http://127.0.0.1:6000/auth?token=123`;
+1. Your Backend URL is: `http://127.0.0.1:6000/auth`;
+2. Client started channel: `https://live.example.com/channel-path/index.m3u8?token=123`;
+3. Full address to Backend will be: `http://127.0.0.1:6000/auth?token=123`;
 4. In headers will be:
     - `X-Real-Origin: https://live.example.com`;
     - `X-Real-Path: /channel-path/index.m3u8`;
