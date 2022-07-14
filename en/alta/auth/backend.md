@@ -18,7 +18,7 @@ Response status could be `200` - allow access or any other to deny access.
 }
 ```
 
-- `backend` - list of URL addresses to backend;
+- `backend` - list of the Backend URL addresses;
 - `default` - default action if backend is not available. Could be `allow` or `deny`.
 
 ## Session information
@@ -47,7 +47,7 @@ For example:
     - `X-Real-Path: /channel-path/index.m3u8`;
     - other headers depends of the client request.
 
-## Ministra/Stalker
+## Ministra
 
 TV Platform by [Infomir](https://www.infomir.eu/). Backend URL:
 
@@ -55,7 +55,7 @@ TV Platform by [Infomir](https://www.infomir.eu/). Backend URL:
 http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
 ```
 
-In the Ministra/Stalker settings turn on option "Temporary URL - Flussonic support"
+In the Ministra / Stalker settings turn on option "Temporary URL - Flussonic support"
 
 ## IPTVPORTAL
 
