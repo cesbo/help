@@ -55,4 +55,6 @@ Proof of Concept (POC)
 ## Birthday
 
 First commit: 28 Nov 2021
-Language: Go
+Total Commits: 979 (14 Jul 2021)
+Language: [Go](https://go.dev)
+FFMpeg: no. without any dependencies
