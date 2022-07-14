@@ -47,9 +47,8 @@ nav:
     - 'Options': 'channel/options.md'
   - 'Archive':
     - 'Access': 'archive/access.md'
-    - 'Unixtime': 'archive/unixtime.md'
   - 'Authorization':
     - 'Intro': 'auth/index.md'
     - 'IP': 'auth/ip.md'
     - 'Securetoken': 'auth/securetoken.md'
-    - 'HTTP Backend': 'auth/backend.md'
+    - 'Backend': 'auth/backend.md'
