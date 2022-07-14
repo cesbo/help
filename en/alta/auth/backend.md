@@ -1,11 +1,8 @@
 # Backend
 
-Backend Authorization is an extensible system to verify client request with external service.
-
-## Backend
-
-Backend is a HTTP service to verify client's request by the own rules and return response to Alta.
-Response status could be `200` - allow access or any other to deny access.
+Backend Authorization is an extensible system to verify client request with external HTTP service.
+HTTP service verifies client request by the own rules and return response to Alta.
+Response status `200` allows access to the content. Any other response denies access.
 
 ## Configuration
 
