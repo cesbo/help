@@ -33,9 +33,6 @@ Minimum Viable Product (MVP)
 - hls: empty m3u8/ts on error
 - hls: multibitrate
 
-<details class="marker">
-<summary>Archive</summary>
-
 ## v2202
 
 Proof of Concept (POC)
@@ -59,5 +56,3 @@ Proof of Concept (POC)
 
 First commit: 28 Nov 2021
 Language: Go
-
-</details>
