@@ -50,7 +50,7 @@ Proof of Concept (POC)
 - archive: access to hls segments on disk
 - archive: remove old segments from disk
 
-![Organic Growth](https://www.monkeyuser.com/assets/images/2021/233-organic-growth.png)
+![Organic Growth](https://www.monkeyuser.com/assets/images/2021/233-organic-growth.png){: width="400"}
 
 ## Birthday
 
