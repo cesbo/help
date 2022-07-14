@@ -52,3 +52,4 @@ nav:
     - 'IP': 'auth/ip.md'
     - 'Securetoken': 'auth/securetoken.md'
     - 'Backend': 'auth/backend.md'
+  - 'Changelog': 'changelog.md'
