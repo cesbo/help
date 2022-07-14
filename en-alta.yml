@@ -49,8 +49,7 @@ nav:
     - 'Access': 'archive/access.md'
     - 'Unixtime': 'archive/unixtime.md'
   - 'Authorization':
+    - 'Intro': 'auth/index.md'
     - 'IP': 'auth/ip.md'
+    - 'Securetoken': 'auth/securetoken.md'
     - 'HTTP Backend': 'auth/backend.md'
-    - 'Ministra': 'auth/ministra.md'
-    - 'IPTVPORTAL': 'auth/iptvportal.md'
-    - 'Smarty': 'auth/smarty.md'

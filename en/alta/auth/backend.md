@@ -1,11 +1,11 @@
-# HTTP Backend
+# Backend
 
-HTTP Backend implements client authorization with a request to the backend.
+Backend Authorization is an extensible system to verify client request with external service.
 
 ## Backend
 
-Backend is a simple HTTP server checks request from Alta and returns a response.
-Response status could be `200` - allow access or `403` - deny access.
+Backend is a HTTP service to verify client's request by the own rules and return response to Alta.
+Response status could be `200` - allow access or any other to deny access.
 
 ## Configuration
 
@@ -39,14 +39,62 @@ Query string is a part of address after `?` symbol. Alta pass query from request
 
 For example:
 
-1. Your backend address is: `http://127.0.0.1:6000`;
+1. Your backend address is: `http://127.0.0.1:6000/auth`;
 2. Client tries to start channel: `https://live.example.com/channel-path/index.m3u8?token=123`;
-3. Full address to HTTP backend will be: `http://127.0.0.1:6000?token=123`;
-4. In headers will be `X-Real-Path: /play/a001/index.m3u8` and other headers depending of the client request.
+3. Full address to HTTP Backend will be: `http://127.0.0.1:6000/auth?token=123`;
+4. In headers will be:
+    - `X-Real-Origin: https://live.example.com`;
+    - `X-Real-Path: /channel-path/index.m3u8`;
+    - other headers depends of the client request.
 
-## Backend example with PHP
+## Ministra/Stalker
 
-Create a file `auth.php` with the following code:
+TV Platform by [Infomir](https://www.infomir.eu/). Backend URL:
+
+```
+http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
+```
+
+In the Ministra/Stalker settings turn on option "Temporary URL - Flussonic support"
+
+## IPTVPORTAL
+
+Platform for managing IPTV and OTT solutions by [IptvPortal](https://iptvportal.cloud/). Backend URL:
+
+```
+https://go.iptvportal.cloud/auth/arescrypt/
+```
+
+In the portal settings open "Keys" menu and create a new key:
+
+- Name: `Alta`
+- Algorithm: `ARESSTREAM`
+- Mode: `SM`
+- Key Length: `1472 bit`
+- Update Rate: `1:00:00`
+
+In channel settings:
+
+- Auth: `arescrypt`
+- Encoded: turn on
+- Key: `Alta`
+
+## Microimpulse Smarty
+
+Platform for creating an independent IPTV/OTT service by [Microimpulse](https://microimpulse.ru/en/). Backend URL:
+
+```
+http://example.com/tvmiddleware/api/streamservice/token/check/
+```
+
+## Simple Backend with PHP
+
+PHP script that validate token and allows access if token is equal to `123`.
+
+<details class="marker">
+<summary>Script</summary>
+
+Create new file `auth.php` with the following code:
 
 ```php
 <?php
@@ -59,9 +107,9 @@ if ($token == '123') {
     // Write headers to console and allow access
     error_log(
         "\n" .
-        " Session ID: " . $_SERVER['HTTP_X_SESSION_ID'] . "\n" .
-        "    Real IP: " . $_SERVER['HTTP_X_REAL_IP'] . "\n" .
-        "  Real Path: " . $_SERVER['HTTP_X_REAL_PATH'] . "\n" .
+        " Session ID: " . $_SERVER['HTTP_X_SESSION_ID']  . "\n" .
+        "    Real IP: " . $_SERVER['HTTP_X_REAL_IP']     . "\n" .
+        "  Real Path: " . $_SERVER['HTTP_X_REAL_PATH']   . "\n" .
         "Real Origin: " . $_SERVER['HTTP_X_REAL_ORIGIN'] . "\n" .
         "    Real UA: " . $_SERVER['HTTP_X_REAL_UA']
     );
@@ -72,7 +120,15 @@ if ($token == '123') {
 }
 ```
 
-Launch backend with `php -S 127.0.0.1:6000 auth.php`
+Launch backend: `php -S 127.0.0.1:6000 auth.php`. For production you may use `nginx` with `php-fpm` or any other solution.
+
+</details>
+
+Backend URL:
+
+```
+http://127.0.0.1:6000
+```
 
 ## Troubleshooting
 
