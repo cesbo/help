@@ -1,4 +1,4 @@
-# Secure Token
+# Securetoken
 
 Protects unauthorized access to content with temporary token.
 Token generated with:

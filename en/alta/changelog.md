@@ -1,8 +1,8 @@
 # Changelog
 
-## v2208 (Next)
+## Next version
 
-Public Alpha
+Alpha
 
 - http server: [authorization](auth/index.md)
 - http server: [ip authorization](auth/ip.md)
@@ -50,11 +50,8 @@ Proof of Concept (POC)
 - archive: access to hls segments on disk
 - archive: remove old segments from disk
 
-![Organic Growth](https://www.monkeyuser.com/assets/images/2021/233-organic-growth.png){: width="400"}
-
 ## Birthday
 
 First commit: 28 Nov 2021
 Total Commits: 979 (14 Jul 2021)
 Language: [Go](https://go.dev)
-FFMpeg: no. without any dependencies

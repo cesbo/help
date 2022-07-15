@@ -38,18 +38,19 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - 'Features': 'index.md'
+  - 'index.md'
   - 'Quick Start':
-    - 'Install': 'quick-start/install.md'
-    - 'Backup': 'quick-start/backup.md'
-    - 'Uninstall': 'quick-start/uninstall.md'
+    - 'quick-start/install.md'
+    - 'quick-start/backup.md'
+    - 'quick-start/uninstall.md'
   - 'Channel':
-    - 'Options': 'channel/options.md'
+    - 'channel/path.md'
+    - 'channel/multibitrate.md'
   - 'Archive':
     - 'Access': 'archive/access.md'
   - 'Authorization':
     - 'Intro': 'auth/index.md'
-    - 'IP': 'auth/ip.md'
-    - 'Securetoken': 'auth/securetoken.md'
-    - 'Backend': 'auth/backend.md'
-  - 'Changelog': 'changelog.md'
+    - 'auth/ip.md'
+    - 'auth/securetoken.md'
+    - 'auth/backend.md'
+  - 'changelog.md'

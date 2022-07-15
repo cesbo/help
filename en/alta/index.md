@@ -1,3 +1,3 @@
-# Cesbo Alta
+# Features
 
-Alta is a media streaming software for Live and VOD content.
+Cesbo Alta is a media streaming software for Live and VOD content.
