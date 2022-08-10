@@ -6,16 +6,13 @@ Response status `200` allows access to the content. Any other response denies ac
 
 ## Configuration
 
-```
-"auth": {
-    "backend": [
-        "http://127.0.0.1:6000"
-    ],
-    "default": "allow"
-}
+```ini
+[auth]
+backend = http://127.0.0.1:6000
+default = allow
 ```
 
-- `backend` - list of the Backend URL addresses;
+- `backend` - Backend URL addresses;
 - `default` - default action if backend is not available. Could be `allow` or `deny`.
 
 ## Request to Backend

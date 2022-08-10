@@ -11,13 +11,10 @@ Token generated with:
 
 ## Configuration
 
-```
-{
-    "auth": {
-        "securetoken": "SECRET-KEY",
-        "default": "deny"
-    }
-}
+```ini
+[auth]
+securetoken = SECRET-KEY
+default = deny
 ```
 
 ## Backend example with PHP
