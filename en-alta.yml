@@ -44,10 +44,11 @@ nav:
     - 'quick-start/backup.md'
     - 'quick-start/uninstall.md'
   - 'Channel':
-    - 'channel/path.md'
+    - 'channel/config.md'
     - 'channel/multibitrate.md'
   - 'Archive':
     - 'Access': 'archive/access.md'
+    - 'Local': 'archive/local.md'
   - 'Authorization':
     - 'Intro': 'auth/index.md'
     - 'auth/ip.md'
