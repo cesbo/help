@@ -7,7 +7,6 @@ All docs separated by language and category.
 Languages:
 
 - `en`
-- `ru`
 
 Categories:
 

@@ -6,10 +6,19 @@ Response status `200` allows access to the content. Any other response denies ac
 
 ## Configuration
 
-```ini
-[auth]
-backend = http://127.0.0.1:6000
-default = allow
+```json
+{
+    "ott": {
+        "authorizers": {
+            "main": {
+                "backend": [
+                    "http://127.0.0.1:6000"
+                ],
+                "default": "allow"
+            }
+        }
+    }
+}
 ```
 
 - `backend` - Backend URL addresses;

@@ -5,9 +5,17 @@ Each channel has an unique path. For example `travel-tv/1080p`:
 - `travel-tv` is a Base Path;
 - `1080p` is a Variant Name.
 
-```ini
-[channel travel-tv/1080p]
-name = Travel TV HD
+```json
+{
+    "ott": {
+        "channels": {
+            "travel-tv/1080p": {
+                "enable": true,
+                "name": "Travel TV HD"
+            }
+        }
+    }
+}
 ```
 
 ## Base Path
@@ -21,12 +29,21 @@ Channel base path is a location of the channel resources on the server. In examp
 
 Channel could have one or more variants with different qualities. For example:
 
-```ini
-[channel travel-tv/1080p]
-name = Travel TV HD
-
-[channel travel-tv/480p]
-name = Travel TV SD
+```json
+{
+    "ott": {
+        "channels": {
+            "travel-tv/1080p": {
+                "enable": true,
+                "name": "Travel TV HD"
+            },
+            "travel-tv/480p": {
+                "enable": true,
+                "name": "Travel TV SD"
+            }
+        }
+    }
+}
 ```
 
 Both channels should have same base path `travel-tv` and same index. But different variant names: `1080p` and `480p`.
@@ -42,12 +59,36 @@ Index file is a main file of the channel. By default file name is `index`. Full 
 
 For example with next configuration channel will be available by the address `https://example.com/travel-tv/main.m3u8`:
 
-```ini
-[channel travel-tv/1080p]
-name = Travel TV HD
-index = main
+```json
+{
+    "ott": {
+        "channels": {
+            "travel-tv/1080p": {
+                "enable": true,
+                "name": "Travel TV HD",
+                "index": "main"
+            }
+        }
+    }
+}
 ```
 
 ## HLS Media File
 
 Media file contains links to the segments - files with video and audio data. Each variant has own media file. By the default session number used as a media file name. But you can define a custom media file name to get direct access to the segments.
+
+For example with next configuration media playlist with segments will be available by the address `https://example.com/travel-tv/1080p.m3u8`:
+
+```json
+{
+    "ott": {
+        "channels": {
+            "travel-tv/1080p": {
+                "enable": true,
+                "name": "Travel TV HD",
+                "media_access": "1080p"
+            }
+        }
+    }
+}
+```

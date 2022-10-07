@@ -14,15 +14,22 @@ IP Authorization supports IPv4 and IPv6 addresses with CIDR notation.
 
 ## Configuration
 
-```ini
-[auth]
-ip = """
-    allow 127.0.0.1
-    deny 192.168.0.100
-    pass 192.168.0.0/24
-    pass fd32:ce04:8a5c::1/64
-    deny any
-"""
+```json
+{
+    "ott": {
+        "authorizers": {
+            "main": {
+                "ip": [
+                    "allow 127.0.0.1",
+                    "deny 192.168.0.100",
+                    "pass 192.168.0.0/24",
+                    "pass fd32:ce04:8a5c::1/64",
+                    "deny any"
+                ]
+            }
+        }
+    }
+}
 ```
 
 - `127.0.0.1` - allow single IP;

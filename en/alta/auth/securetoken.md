@@ -11,10 +11,17 @@ Token generated with:
 
 ## Configuration
 
-```ini
-[auth]
-securetoken = SECRET-KEY
-default = deny
+```json
+{
+    "ott": {
+        "authorizers": {
+            "main": {
+                "securetoken": "SECRET-KEY",
+                "default": "deny"
+            }
+        }
+    }
+}
 ```
 
 ## Backend example with PHP
