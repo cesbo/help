@@ -8,7 +8,7 @@ HLS provides mechanisms for players to adapt to unreliable network conditions wi
 
 ## HLS architecture
 
-HTTP Live Streaming uses a conventional web server, that implements support for HLS, to distribute audiovisual content and requires specific software to fit the content into a proper format (codec) for transmission in real time over a network. The service architecture comprises:
+HLS uses a conventional web server, that implements support for HLS, to distribute audiovisual content and requires specific software to fit the content into a proper format (codec) for transmission in real time over a network. The service architecture comprises:
 
 - Server
 - Distributor
