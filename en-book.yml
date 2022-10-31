@@ -41,6 +41,7 @@ nav:
   - 'index.md'
   - 'Protocols':
     - 'protocols/udp.md'
+    - 'protocols/hls.md'
   - 'Transport':
     - 'transport/mpegts.md'
   - 'Encoding':
