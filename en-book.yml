@@ -1,14 +1,14 @@
-site_name: Utils for Linux
-site_description: Linux Administration
+site_name: Book
+site_description: Introduction to media transport and protocols
 
 copyright: 'Copyright &copy; <a href="https://cesbo.com" target="_blank">Cesbo</a>, 2022'
 extra:
   generator: false
 
-docs_dir: en/utils
-site_dir: site/en/utils
+docs_dir: en/book
+site_dir: site/en/book
 repo_url: https://github.com/cesbo/www/
-edit_uri: edit/master/en/utils/
+edit_uri: edit/master/en/book/
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -38,16 +38,11 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - 'Intro': 'index.md'
-  - 'Drivers':
-    - 'DigitalDevices': 'drivers/dd.md'
-    - 'TBS': 'drivers/tbs.md'
-  - 'Network and Web':
-    - 'iptables': 'net/iptables.md'
-    - 'ssh': 'net/ssh.md'
-    - 'socat': 'net/socat.md'
-    - 'Dehydrated': 'net/dehydrated.md'
-  - 'DVB':
-    - 'Minisatip': 'dvb/minisatip.md'
-  - 'TV':
-    - 'EIT Stream': 'tv/eit-stream.md'
+  - 'index.md'
+  - 'Protocols':
+    - 'protocols/udp.md'
+  - 'Transport':
+    - 'transport/mpegts.md'
+  - 'Encoding':
+    - 'Audio': 'encoding/audio.md'
+    - 'Video': 'encoding/video.md'

@@ -15,3 +15,7 @@ en-astra:
 en-utils:
 	@echo "Utils"
 	@mkdocs build -c -f en-utils.yml
+
+en-book:
+	@echo "Book"
+	@mkdocs build -c -f en-book.yml
