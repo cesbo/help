@@ -2,9 +2,9 @@
 
 HLS (HTTP Live Streaming protocol) - is an HTTP-based adaptive bitrate streaming communications protocol. HLS protocol is based on the division of one media file into many chanks. This allows the user to access the media file piece by piece in real time. Detailed description available in the [RFC 8216][RFC] standard.
 
-HLS is based on standard HTTP transactions. HLS compatible with any firewall or proxy server that lets through standard HTTP traffic. It also allows HLC to use a standard encryption mechanism and secure-key distribution using HTTPS.
+HTTP Live Streaming protocol is based on standard HTTP transactions. It’s compatible with any firewall or proxy server that lets through standard HTTP traffic. It also allows HLC to use a standard encryption mechanism and secure-key distribution using HTTPS.
 
-HLS provides mechanisms for players to adapt to unreliable network conditions without causing user-visible playback stalling. To enable a player to adapt to the bandwidth of the network, the original video is encoded in several distinct quality levels. The server serves an index, called a "master playlist", of these encodings, called "variant streams". The player can then choose between the variant streams during playback, changing back and forth seamlessly as network conditions change.
+The protocol provides mechanisms for players to adapt to unreliable network conditions without causing user-visible playback stalling. To enable a player to adapt to the bandwidth of the network, the original video is encoded in several distinct quality levels. The server serves an index, called a "master playlist", of these encodings, called "variant streams". The player can then choose between the variant streams during playback, changing back and forth seamlessly as network conditions change.
 
 ## HLS architecture
 
@@ -13,6 +13,8 @@ HLS uses a conventional web server, that implements support for it, to distribut
 - Server
 - Distributor
 - Client
+
+![HLS architecture](/en/book/protocols/img/HLS-architecture.png)
 
 ### Server 
 
@@ -24,7 +26,7 @@ The stream is divided into fragments of equal length. It also creates a Playlist
 
 Playlist contains a list of Media Segments, which, when played sequentially, will play the full media file. A Media Playlist contains a series of Media Segments that make up the full media file. A Media Segment is specified by a URI or byte range.
 
-Each Media Segment in a Media Playlist contains a part of the full media file and has a unique integer Media Sequence Number. The Media Sequence Number of the first segment in the Media Playlist is either 0 or declared in the Playlist. The Media Sequence Number of every other segment is equal to the Media Sequence Number of the segment that precedes it plus one. This allows you to combine Media Segments into one sequence.
+Each Media Segment in a Media Playlist contains a part of the full media file and has a unique integer Media Sequence Number. The Media Sequence Number of the first segment in the Media Playlist is either 0 or declared in the Playlist. Number of every other segment is equal to the Media Sequence Number of the segment that precedes it plus one. This allows the protocol to combine Media Segments into one sequence.
 
 ### Distributor
 
