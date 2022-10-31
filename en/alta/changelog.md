@@ -4,10 +4,10 @@
 
 Alpha
 
-- http server: [authorization](auth/index.md)
-- http server: [ip authorization](auth/ip.md)
-- http server: [backend authorization](auth/backend.md)
-- http server: [secure authorization](auth/securetoken.md)
+- http server: [authorization](ott/authorizers/index.md)
+- http server: [ip authorization](ott/authorizers/ip.md)
+- http server: [backend authorization](ott/authorizers/backend.md)
+- http server: [secure authorization](ott/authorizers/securetoken.md)
 - receiver/rtsp
 - receiver/file: loop
 - api: channel settings
