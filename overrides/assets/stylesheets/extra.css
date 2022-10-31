@@ -25,3 +25,14 @@ html {
 .md-typeset details[open]>summary {
     margin-bottom: .6rem;
 }
+
+a[target="_blank"]::after {
+    content: '\2197';
+    margin-left: .2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    font-size: .8em;
+}

@@ -4,6 +4,8 @@ HLS (HTTP Live Streaming protocol) - is an HTTP-based adaptive bitrate streaming
 
 HLS is based on standard HTTP transactions. It’s compatible with any firewall or proxy server that lets through standard HTTP traffic. It also allows HLS to use a standard encryption mechanism and secure-key distribution using HTTPS.
 
+## Multibitrate
+
 The protocol provides mechanisms for players to adapt to unreliable network conditions without causing user-visible playback stalling. To enable a player to adapt to the bandwidth of the network, the original video is encoded in several distinct quality levels. The server serves an index, called a "master playlist", of these encodings, called "variant streams". The player can then choose between the variant streams during playback, changing back and forth seamlessly as network conditions change.
 
 ## HLS architecture
@@ -16,9 +18,9 @@ HLS uses a web server, that implements support for it, to distribute audiovisual
 
 ![HLS architecture](/en/book/protocols/img/HLS-architecture.png)
 
-### Server 
+### Server
 
-Server codifies and encapsulates the input video flow in a proper format for the delivery. Then it is prepared for distribution by segmenting it into different chunks (Media Segments) and creating an index file (Playlist). 
+Server codifies and encapsulates the input video flow in a proper format for the delivery. Then it is prepared for distribution by segmenting it into different chunks (Media Segments) and creating an index file (Playlist).
 
 Video files codified in H.264, H.265 format and audio in AAC, MP3, AC-3 or EC-3. This is encapsulated by MPEG-2 Transport Stream or MP4 to carry it.
 
