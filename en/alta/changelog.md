@@ -10,7 +10,7 @@ Alpha
 - http server: [secure authorization](ott/authorizers/securetoken.md)
 - receiver/rtsp
 - receiver/file: loop
-- api: channel settings
+- api: channel settings [api docs](/en/alta/api/){target=_blank}
 - h265: extract frames information
 - archive: write files to disk without cache (Direct I/O)
 - archive: send files to remote server
