@@ -2,6 +2,10 @@ html {
     font-size: 22px;
 }
 
+.md-logo img {
+    filter: brightness(0) invert(1)
+}
+
 .md-main__inner {
     margin-top: 0;
 }
