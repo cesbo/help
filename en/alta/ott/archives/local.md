@@ -10,11 +10,7 @@ Writing archive to the filesystem
         "archives": {
             "main": {
                 "duration": 6,
-                "local": {
-                    "locations": [
-                        "/opt/demo-storage"
-                    ]
-                }
+                "local": "/opt/demo-storage"
             }
         }
     }
@@ -22,4 +18,4 @@ Writing archive to the filesystem
 ```
 
 - `duration` - archive duration in hours;
-- `locations` - list of directories on your server.
+- `local` - archive directory on your server.

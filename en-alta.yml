@@ -43,15 +43,16 @@ nav:
     - 'quick-start/install.md'
     - 'quick-start/backup.md'
     - 'quick-start/uninstall.md'
-  - 'Channel':
-    - 'channel/config.md'
-    - 'channel/multibitrate.md'
-  - 'Archive':
-    - 'Access': 'archive/access.md'
-    - 'Local': 'archive/local.md'
-  - 'Authorization':
-    - 'Intro': 'auth/index.md'
-    - 'auth/ip.md'
-    - 'auth/securetoken.md'
-    - 'auth/backend.md'
+  - 'OTT':
+    - 'Channel':
+      - 'channel/config.md'
+      - 'channel/multibitrate.md'
+    - 'Archive':
+      - 'Access': 'archive/access.md'
+      - 'Local': 'archive/local.md'
+    - 'Authorization':
+      - 'Intro': 'auth/index.md'
+      - 'auth/ip.md'
+      - 'auth/securetoken.md'
+      - 'auth/backend.md'
   - 'changelog.md'
