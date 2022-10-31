@@ -45,14 +45,14 @@ nav:
     - 'quick-start/uninstall.md'
   - 'OTT':
     - 'Channel':
-      - 'channel/config.md'
-      - 'channel/multibitrate.md'
+      - 'ott/channels/config.md'
+      - 'ott/channels/multibitrate.md'
     - 'Archive':
-      - 'Access': 'archive/access.md'
-      - 'Local': 'archive/local.md'
+      - 'Access': 'ott/archives/access.md'
+      - 'Local': 'ott/archives/local.md'
     - 'Authorization':
-      - 'Intro': 'auth/index.md'
-      - 'auth/ip.md'
-      - 'auth/securetoken.md'
-      - 'auth/backend.md'
+      - 'Intro': 'ott/authorizers/index.md'
+      - 'ott/authorizers/ip.md'
+      - 'ott/authorizers/securetoken.md'
+      - 'ott/authorizers/backend.md'
   - 'changelog.md'

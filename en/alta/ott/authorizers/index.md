@@ -20,3 +20,26 @@ All methods works in next order:
 2. `Securetoken` - skips to the next method if token format is not match
 3. `Backend` - skips to the next method if backend is not available
 4. `Default` - default action. If not set, `allow` is used.
+
+## Config
+
+```json
+{
+    "ott": {
+        "authorizers": {
+            "main": {
+                "default": "deny"
+            }
+        },
+        "channels": {
+            "travel-tv/1080p": {
+                "enable": true,
+                "name": "Travel TV HD",
+                "authorizer": "main"
+            }
+        }
+    }
+}
+```
+
+- `authorizer` - selects authorizer for the channel
