@@ -12,16 +12,15 @@ OTT (Over the Top) media service - is a media service offered directly to viewer
 
 ### ABR
 
-One of the inherent problems with serving TV content over the internet is being able to contend with the wide range of network performance. Performance depends on what speed the connection will support (e.g. Fiber, Wi-Fi, LTE, DSL), the display device (e.g. phone, streaming device or laptop), and then how many network hops there are between the provider and the end user. At a high-level, OTT systems and technologies are designed to minimize the impact these parameters have, by providing a “best effort” approach to serving up the content. That is, OTT technology will adjust to the network performance of the entire chain in real-time so that the video and audio are delivered without pauses caused by buffering.
+ABR (Adaptive Bit Rate) - is a set of files each containing 2 to 10 second consecutive chunks of material. When consumers watch the content, the device's player will continuously play these chunks for as long as the content remains available. The OTT service utilizes ABR to provide several video profiles with different bit rates from low to high.
 
-For slower networks it will scale down to lower bit rates. For faster networks it will scale up to provide the best quality.
-It does this with a technique called ABR which stands for Adaptive Bit Rate streaming.
+> One of the inherent problems with serving TV content over the internet is being able to contend with the wide range of network performance. Performance depends on what speed the connection will support (e.g. Fiber, Wi-Fi, LTE, DSL), the display device (e.g. phone, streaming device or laptop), and then how many network hops there are between the provider and the end user. At a high-level, OTT systems and technologies are designed to minimize the impact these parameters have, by providing a “best effort” approach to serving up the content. That is, OTT technology will adjust to the network performance of the entire chain in real-time so that the video and audio are delivered without pauses caused by buffering.
+> For slower networks it will scale down to lower bit rates. For faster networks it will scale up to provide the best quality.
 
-> ABR content - is a set of files each containing 2 to 10 second consecutive chunks of material. When consumers watch the content, the device's player will continuously play these chunks for as long as the content remains available. The OTT service utilizes ABR to provide several video profiles with different bit rates from low to high.
 
 ### VOD abd LIVE
 
-There are two kinds of content distributed within an OTT video delivery environment. The first is Video on Demand (VOD) - finished content such as a movie, ready for the consumer to view. The second is called LIVE - live streaming of content such as a sporting event, for the consumer to view in real time.
+There are two kinds of content distributed within an OTT video delivery environment. The first is VOD (Video on Demand) - finished content such as a movie, ready for the consumer to view. The second is called LIVE (Live Streaming) - content such as a sporting event, for the consumer to view in real time.
 
 > For VOD, content chunks are a bit longer which makes the process more efficient. While it is being viewed, players can cache larger chunks of content far enough ahead to possibly download the entire length of the movie.
 
