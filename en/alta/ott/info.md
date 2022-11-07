@@ -42,4 +42,4 @@ For LIVE, content chunks are minimized to shorten the delay between the actual e
 It also has a user-facing video gallery - an interface through which the consumer is able to select media content.
 
 
-[HLS]: (/en/book/protocols/hls.md){target="_blank"}
+[HLS]: (/en/book/protocols/hls){target="_blank"}
