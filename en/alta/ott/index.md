@@ -6,9 +6,7 @@ OTT (Over the Top)- is a media service offered directly to viewers via the Inter
 
 ![CDN](/en/alta/ott/img/CDR-disc.png)
 
-## How OTT works
-
-### ABR
+## ABR
 
 ABR (Adaptive Bit Rate) - is a set of files each containing a few seconds consecutive chunks of material. When consumers watch the content, the device's player will continuously play these chunks for as long as the content remains available. The OTT service utilizes ABR to provide several video profiles with different bit rates from low to high. ABR will usually rely on an ABR packaging protocol such as HLS[^1] where multiple streams are defined by profiles such as low, medium, and high quality. The ABR streams are divided into chunks of video, between 1 – 15 seconds, so that individual viewing devices can dynamically pick and choose the video chunk that best fits available bandwidth at a given time. ABR streaming for OTT requires the use of an encoder or transcoder which can encode a single video source at multiple bitrates.
 
@@ -16,19 +14,19 @@ ABR (Adaptive Bit Rate) - is a set of files each containing a few seconds consec
 > For slower networks it will scale down to lower bit rates. For faster networks it will scale up to provide the best quality.
 
 
-### VOD
+## VOD
 
 There are two kinds of content distributed within an OTT video delivery environment. The first is VOD (Video on Demand) - finished content such as a movie, ready for the consumer to view.
 
 For VOD, content chunks are a bit longer which makes the process more efficient. While it is being viewed, players can cache larger chunks of content far enough ahead to possibly download the entire length of the movie.
 
-### LIVE
+## LIVE
 
 The second is called LIVE (Live Streaming) - content such as a sporting event, streaming TV, video from CCTV cameras, for the consumer to view in real time.
 
 For LIVE, content chunks are minimized to shorten the delay between the actual event and the remote viewing. The players cannot cache as far ahead, so they need to tune the bit rates in accordance with the actual current performance of the network. During a LIVE event, the service provider will encode and package their feed into small ABR file chunks and push these out into a CDN (Content Delivery Network). The consumer’s device then pulls each of these file chunks from that CDN to produce continuous playback.
 
-### OTT technology in action:
+## In action
 
 1. Service provider installs software to work with OTT video hosting platform
 2. Software adds media streams from used sources (TV, CCTV, Video archive) to OTT video hosting platform
