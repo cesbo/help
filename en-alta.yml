@@ -45,6 +45,7 @@ nav:
     - 'quick-start/backup.md'
     - 'quick-start/uninstall.md'
   - 'OTT':
+    - 'Intro': 'ott/index.md'
     - 'Channel':
       - 'ott/channels/config.md'
     - 'Archive':
