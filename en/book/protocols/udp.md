@@ -47,5 +47,12 @@ In computer networking, telecommunication and information theory, broadcasting i
 
 In computer networking, unicast is a one-to-one transmission from one point in the network to another point; that is, one sender and one receiver, each identified by a network address.
 
+## Protocols main features
+
+- UDP - minimal delay but it loses data packets
+- HTTP MPEG-TS - constant distribution of one file (streaming). A little bit more delay with a better stability. 
+- HLS - long delay but it has best data transfer stability and adaptive bitrate.
+
+
 
 [RFC 768]: https://www.rfc-editor.org/rfc/rfc768
