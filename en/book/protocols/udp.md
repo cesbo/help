@@ -1,15 +1,12 @@
 # UDP
 
-UDP (User Datagram  Protocol) - communication protocol in local networks via the internet, with minimal delays and minimal stability. This protocol provides a procedure for application programs to send messages to receivers.
+UDP (User Datagram  Protocol) - communication protocol in local networks or Internet, with minimal delays and minimal stability. This protocol provides a procedure for application programs to send messages to receivers. That procedure achieved through checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram.
 
-
-This protocol provides a procedure for application programs to send messages to other programs with a minimum of protocol mechanism. UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram.
-
-Detailed description available in the [RFC 768][RFC 768] standard.
+Detailed description available in the RFC768[^1] standard.
 
 ![UDP](img/UDP.png)
 
-### How Does UDP Work?
+## How Does UDP Work?
 
 In comparison to other networking protocols, the process behind UDP is fairly simple. A target computer is identified and the data packets, called “datagrams,” are sent to it. There is nothing in place to indicate the order in which the packets should arrive. There is also no process for checking if the datagrams reached the destination.
 
@@ -34,7 +31,7 @@ In computer networking, multicast is group communication where data transmission
 
 ![Multicast](img/multicast.png)
 
-Group communication may either be application layer multicast or network-assisted multicast, where the latter makes it possible for the source to efficiently send to the group in a single transmission. Copies are automatically created in other network elements, such as routers, switches and cellular network base stations, but only to network segments that currently contain members of the group. Network assisted multicast may be implemented at the data link layer using one-to-many addressing and switching such as Ethernet multicast addressing, ATM (Asynchronous Transfer Mode), P2MP (point-to-multipoint virtual circuits) or InfiniBand multicast. Network-assisted multicast may also be implemented at the Internet layer using IP multicast. In IP multicast the implementation of the multicast concept occurs at the IP routing level, where routers create optimal distribution paths for datagrams sent to a multicast destination address.
+Group communication may either be application layer multicast or network-assisted multicast, where the latter makes it possible for the source to efficiently send to the group in a single transmission. Copies are automatically created in other network elements, such as routers, switches and cellular network base stations, but only to network segments that currently contain members of the group. Network assisted multicast may be implemented at the data link layer using one-to-many addressing and switching such as Ethernet multicast addressing, ATM (Asynchronous Transfer Mode) and P2MP (point-to-multipoint virtual circuits). In IP multicast the implementation of the multicast concept occurs at the IP routing level, where routers create optimal distribution paths for datagrams sent to a multicast destination address.
 
 Multicast is often employed in Internet Protocol (IP) applications of streaming media, such as IPTV and multipoint video conferencing.
 
@@ -46,13 +43,16 @@ In computer networking, telecommunication and information theory, broadcasting i
 ## Unicast
 
 In computer networking, unicast is a one-to-one transmission from one point in the network to another point; that is, one sender and one receiver, each identified by a network address.
+Unicast is commonly used in higher layer protocols such as RTSP and SRT.
 
-## Protocols main features
+## Protocols comparison
 
 - UDP - minimal delay but it loses data packets
-- HTTP MPEG-TS - constant distribution of one file (streaming). A little bit more delay with a better stability. 
-- HLS - long delay but it has best data transfer stability and adaptive bitrate.
+- HTTP MPEG-TS - A little bit more delay with a better stability. 
+- HLS[^2] - long delay but it has best data transfer stability and adaptive bitrate.
 
 
 
-[RFC 768]: https://www.rfc-editor.org/rfc/rfc768
+[^1]: RFC 768 [Read more](https://www.rfc-editor.org/rfc/rfc768){target="_blank"}
+
+[^2]: HLS - HTTP Live Streaming protocol. [Read more](/en/book/protocols/hls/){target="_blank"}
