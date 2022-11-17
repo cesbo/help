@@ -25,6 +25,10 @@ alta version
 
 After installation need to prepare service for launch with initialization wizard:
 
+```
+alta init
+```
+
 <video controls style="width:400px;">
     <source src="/en/alta/quick-start/alta-init.webm" type="video/webm" />
 </video>
