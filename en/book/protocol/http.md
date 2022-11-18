@@ -1,4 +1,4 @@
-# HTTP - MPEG-TS
+# HTTP MPEG-TS
 
 HTTP (The Hypertext Transfer Protocol) - is an application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems.
 
@@ -27,5 +27,3 @@ Read more about [MPEG-TS](/en/book/transport/mpegts/){target="_blank"}
 | Error checking mechanism     | TCP provides extensive error-checking mechanisms. It is because it provides flow control and acknowledgment of data.   | UDP has only the basic error checking mechanism using checksums.      |
 | Sequence     | Sequencing of data is a feature of Transmission Control Protocol (TCP). this means that packets arrive in order at the receiver.   | Sequencing of data is a feature of Transmission Control Protocol (TCP). this means that packets arrive in order at the receiver.      |
 | Overall     | TCP is slower than UDP due to the specific of the protocol and requires more resources. But it provides better stability and media access control.   | UDP is faster, simpler, and more efficient than TCP. But sometimes it loses some data     |
-
-[ISO]: [https://](https://ocw.unican.es/pluginfile.php/171/course/section/78/iso13818-1.pdf)

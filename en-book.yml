@@ -23,7 +23,11 @@ theme:
     primary: blue
     accent: indigo
   features:
-    - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
 
 plugins:
   - search:
@@ -40,11 +44,15 @@ markdown_extensions:
 
 nav:
   - 'index.md'
-  - 'Protocols':
-    - 'protocols/udp.md'
-    - 'protocols/hls.md'
+  - 'Protocol':
+    - 'protocol/index.md'
+    - 'protocol/udp.md'
+    - 'protocol/http.md'
+    - 'protocol/hls.md'
   - 'Transport':
+    - 'transport/index.md'
     - 'transport/mpegts.md'
   - 'Encoding':
+    - 'encoding/index.md'
     - 'Audio': 'encoding/audio.md'
     - 'Video': 'encoding/video.md'
