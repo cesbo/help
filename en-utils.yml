@@ -23,7 +23,11 @@ theme:
     primary: blue
     accent: indigo
   features:
-    - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
 
 plugins:
   - search:
@@ -39,16 +43,20 @@ markdown_extensions:
   - footnotes
 
 nav:
-  - 'Intro': 'index.md'
+  - 'index.md'
   - 'Drivers':
-    - 'DigitalDevices': 'drivers/dd.md'
-    - 'TBS': 'drivers/tbs.md'
-  - 'Network and Web':
+    - 'drivers/index.md'
+    - 'DigitalDevices': 'drivers/dvb/dd.md'
+    - 'TBS': 'drivers/dvb/tbs.md'
+  - 'Network Tools':
+    - 'net/index.md'
     - 'iptables': 'net/iptables.md'
     - 'ssh': 'net/ssh.md'
     - 'socat': 'net/socat.md'
     - 'Dehydrated': 'net/dehydrated.md'
-  - 'DVB':
+  - 'DVB Tools':
+    - 'dvb/index.md'
     - 'Minisatip': 'dvb/minisatip.md'
-  - 'TV':
+  - 'TV Tools':
+    - 'tv/index.md'
     - 'EIT Stream': 'tv/eit-stream.md'
