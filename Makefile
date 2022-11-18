@@ -1,8 +1,8 @@
 MAKEFLAGS = -rR --no-print-directory
 
-.PHONY: all en-alta en-astra en-utils
+.PHONY: all en-alta en-astra en-linux en-book
 
-all: en-alta en-astra en-utils
+all: en-alta en-astra en-linux en-book
 
 en-alta:
 	@echo "Alta"
@@ -12,9 +12,9 @@ en-astra:
 	@echo "Astra"
 	@mkdocs build -c -f en-astra.yml
 
-en-utils:
+en-linux:
 	@echo "Utils"
-	@mkdocs build -c -f en-utils.yml
+	@mkdocs build -c -f en-linux.yml
 
 en-book:
 	@echo "Book"

@@ -4,16 +4,12 @@ Docs with [mkdocs](https://www.mkdocs.org/). Just write Markdown files
 
 All docs separated by language and category.
 
-Languages:
-
-- `en`
-
 Categories:
 
-- `alta` - About Cesbo Alta
-- `astra` - About Cesbo Astra
-- `book` - About protocols, transport, and encoding
-- `utils` - System administration
+- `alta` - Cesbo Alta
+- `astra` - Cesbo Astra
+- `book` - Rrotocols, Transports, and Encoding
+- `linux` - System administration
 
 ## Heading
 

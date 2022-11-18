@@ -8,7 +8,7 @@ extra:
 docs_dir: en/utils
 site_dir: site/en/utils
 repo_url: https://github.com/cesbo/www/
-edit_uri: edit/master/en/utils/
+edit_uri: edit/master/en/linux/
 
 extra_css:
   - assets/stylesheets/extra.css
