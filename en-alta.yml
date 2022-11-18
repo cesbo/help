@@ -23,7 +23,11 @@ theme:
     primary: blue
     accent: indigo
   features:
-    - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
 
 plugins:
   - search:
@@ -41,18 +45,18 @@ markdown_extensions:
 nav:
   - 'index.md'
   - 'Quick Start':
-    - 'quick-start/install.md'
+    - 'quick-start/index.md'
     - 'quick-start/backup.md'
     - 'quick-start/uninstall.md'
   - 'OTT':
-    - 'Intro': 'ott/index.md'
+    - 'ott/index.md'
     - 'Channel':
       - 'ott/channels/config.md'
     - 'Archive':
       - 'Access': 'ott/archives/access.md'
       - 'Local': 'ott/archives/local.md'
     - 'Authorization':
-      - 'Intro': 'ott/authorizers/index.md'
+      - 'ott/authorizers/index.md'
       - 'ott/authorizers/ip.md'
       - 'ott/authorizers/securetoken.md'
       - 'ott/authorizers/backend.md'

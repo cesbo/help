@@ -1,4 +1,11 @@
-# Install
+# Quick Start
+
+## Requirements
+
+- Any Linux based operation system
+- 64bit CPU: x86 or ARM
+
+## Install
 
 Cesbo Alta installation is a simple process – just copy single binary file to your server.
 
@@ -21,12 +28,15 @@ After installation or after update you may check installed version:
 alta version
 ```
 
-## Service initialization
+## Start service
 
-After installation need to prepare service for launch with initialization wizard:
+!!! note
+    Service is an application process with specified name and own configuration. You may launch on your server one or more services depends on your need.
+
+After installation need to prepare service for launch with wizard:
 
 ```
-alta init
+sudo alta init
 ```
 
 <video controls style="width:400px;">
