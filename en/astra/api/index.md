@@ -1,6 +1,6 @@
-# Call API Methods
+# API
 
-Application Programming Interface (API) is a methods to access data and interact with external software components.
+Application Programming Interface (API) is a methods to access data and interact with software components.
 
 ## Call API with curl
 
@@ -34,7 +34,7 @@ curl \
 - `-d '{...}'` - request content in JSON format
 - `server:8000` - server address and primary port
 
-## Call API with php
+## Call API with PHP
 
 ```php
 $req = json_encode(array(

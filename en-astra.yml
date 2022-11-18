@@ -23,7 +23,11 @@ theme:
     primary: blue
     accent: indigo
   features:
-    - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
 
 plugins:
   - search:
@@ -39,37 +43,43 @@ markdown_extensions:
   - footnotes
 
 nav:
-  - 'Features': 'index.md'
-  - 'Pricing': 'pricing.md'
+  - 'index.md'
   - 'Quick Start':
-    - 'Install': 'quick-start/install.md'
+    - 'quick-start/index.md'
     - 'License': 'quick-start/license.md'
     - 'Backup': 'quick-start/backup.md'
     - 'Update': 'quick-start/update.md'
     - 'Uninstall': 'quick-start/uninstall.md'
     - 'Reset Password': 'quick-start/reset-password.md'
     - 'Service Setup': 'quick-start/service-setup.md'
-    - 'MPEG-TS Analyzer': 'quick-start/analyzer.md'
-  - 'Receiving':
+  - 'Input':
+    - 'input/index.md'
     - 'DVB, ATSC, ISDB-T': 'input/dvb.md'
     - 'HLS': 'input/hls.md'
     - 'HTTP MPEG-TS': 'input/http.md'
     - 'RTSP': 'input/rtsp.md'
     - 'SRT': 'input/srt.md'
     - 'UDP': 'input/udp.md'
-  - 'Transmitting':
+  - 'Output':
+    - 'output/index.md'
+    - 'Broadcasting':
+      - 'UDP': 'output/broadcast/udp.md'
+      - 'MPTS': 'output/broadcast/mpts.md'
+      - 'CAS and Simulcrypt': 'output/broadcast/cas.md'
+    - 'OTT':
+      - 'HTTP Backend': 'output/ott/backend.md'
     - 'SRT': 'output/srt.md'
-    - 'UDP': 'output/udp.md'
-  - 'Authorization':
-    - 'HTTP Backend': 'auth/backend.md'
-  - 'Broadcasting':
-    - 'MPTS': 'broadcasting/mpts.md'
-    - 'CAS and Simulcrypt': 'broadcasting/cas.md'
   - 'Monitoring':
-    - 'InfluxDB': 'monitoring/influxdb.md'
-    - 'Grafana': 'monitoring/grafana.md'
+    - 'monitoring/index.md'
+    - 'monitoring/influxdb.md'
+    - 'monitoring/grafana.md'
+  - 'Tools':
+    - 'tools/index.md'
+    - 'tools/analyzer.md'
+    - 'tools/relay.md'
+    - 'tools/dvbls.md'
   - 'API':
-    - 'Call API Methods': 'api/call.md'
+    - 'api/index.md'
     - 'System Status': 'api/sysinfo.md'
     - 'Streams': 'api/stream.md'
     - 'Adapters': 'api/adapter.md'

@@ -29,7 +29,7 @@ We recommend to use multicast addresses in range `239.0.0.0 - 239.255.255.255` .
 
 In the web interface UDP Output options available in the Stream options. You can write destination address directly to the Output address line:
 
-![Output address](output-list.png){: width="400"}
+![Output address](../output-list.png){: width="400"}
 
 Or click to the gear icon and use an Output configuration form:
 

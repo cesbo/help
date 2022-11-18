@@ -1,6 +1,8 @@
-# Astra MPEG-TS Analyzer
+# MPEG-TS Analyzer
 
 Astra has builtin stream analyzer. Analyzer supports any receiving format supported by Astra.
+
+![MPEG-TS Analyzer Interface](analyzer.png)
 
 ## Usage
 

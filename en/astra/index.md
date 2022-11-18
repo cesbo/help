@@ -1,6 +1,12 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Cesbo Astra
 
-Astra is a professional software for TV streaming.
+Astra is a professional software for TV broadcasting in Cable, Terrestrial, Satellite, and IP networks.
 
 ## Receiving
 
@@ -19,7 +25,7 @@ Astra is a professional software for TV streaming.
 ## Transmitting
 
 - IP
-    - [UDP Multicast or Unicast](output/udp.md)
+    - [UDP Multicast or Unicast](output/broadcast/udp.md)
     - HTTP MPEG-TS
     - HLS
     - [SRT](output/srt.md)
@@ -40,10 +46,9 @@ Astra is a professional software for TV streaming.
 
 ## Analyzing and Monitoring
 
-- Realtime analyzig active inputs
 - Integration with Zabbix for reports and notifications
 - Integration with Grafana for charts and reports
-- Built-in realtime monitoring
+- Built-in realtime monitoring and analyzer
 
 ## Miscellaneous
 
