@@ -5,8 +5,8 @@ copyright: 'Copyright &copy; <a href="https://cesbo.com" target="_blank">Cesbo</
 extra:
   generator: false
 
-docs_dir: en/utils
-site_dir: site/en/utils
+docs_dir: en/linux
+site_dir: site/en/linux
 repo_url: https://github.com/cesbo/www/
 edit_uri: edit/master/en/linux/
 
