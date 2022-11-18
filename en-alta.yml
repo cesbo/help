@@ -60,5 +60,5 @@ nav:
       - 'ott/authorizers/ip.md'
       - 'ott/authorizers/securetoken.md'
       - 'ott/authorizers/backend.md'
-  - 'API': 'api/index.html'
+  - 'API': 'api/index.md'
   - 'changelog.md'
