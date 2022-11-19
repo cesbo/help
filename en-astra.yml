@@ -46,12 +46,12 @@ nav:
   - 'index.md'
   - 'Quick Start':
     - 'quick-start/index.md'
+    - 'Service Setup': 'quick-start/service-setup.md'
     - 'License': 'quick-start/license.md'
     - 'Backup': 'quick-start/backup.md'
     - 'Update': 'quick-start/update.md'
     - 'Uninstall': 'quick-start/uninstall.md'
     - 'Reset Password': 'quick-start/reset-password.md'
-    - 'Service Setup': 'quick-start/service-setup.md'
   - 'Input':
     - 'input/index.md'
     - 'DVB, ATSC, ISDB-T': 'input/dvb.md'

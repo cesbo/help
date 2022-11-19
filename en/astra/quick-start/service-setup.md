@@ -1,7 +1,8 @@
 # Service Setup
 
-Most Linux distributions uses systemd for the system service management by the default.
-To configure Astra as a system service you may use built-in commands:
+Systemd is a service manager for the Linux based systems. Systemd needed to control service status, check service logs, and launch service on system startup.
+
+After installation, Astra could be registered as a service in the Systemd:
 
 ```
 astra init
@@ -35,8 +36,27 @@ This service will use next files:
 
 ## Remove additional service
 
+To remove service launch next commands:
+
 ```
 systemctl stop astra-8001
 systemctl disable astra-8001
 astra remove astra-8001
 ```
+
+This command removes only service from systemd. Configuration file and logs could be removed manually. To get more info please check: [Uninstall](uninstall.md)
+
+## Service management
+
+!!! note
+    In this example used default service name: `astra`.
+    On your system service name depends on your settings.
+
+| Command | Description |
+| --- | --- |
+| `systemctl restart astra` | Restart service |
+| `systemctl start astra` | Start service |
+| `systemctl stop astra` | Stop service |
+| `systemctl status astra` | Service status |
+| `systemctl enable astra` | Enable autorun |
+| `systemctl disable astra` | Disable autorun |

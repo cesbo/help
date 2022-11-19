@@ -60,9 +60,9 @@ sudo alta init
 | Command | Description |
 | --- | --- |
 | `systemctl restart alta` | Restart service |
-| `systemctl enable alta` | Enable autorun |
-| `systemctl disable alta` | Disable autorun |
 | `systemctl start alta` | Start service |
 | `systemctl stop alta` | Stop service |
 | `systemctl status alta` | Service status |
+| `systemctl enable alta` | Enable autorun |
+| `systemctl disable alta` | Disable autorun |
 | `journalctl -fu alta` | Service logs |

@@ -15,6 +15,14 @@ curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
 chmod +x /usr/bin/astra
 ```
 
+## Check version
+
+After installation or after update you may check installed version:
+
+```
+astra -v
+```
+
 ## Start service
 
 !!! note
@@ -42,27 +50,3 @@ astra init 4000
 ```
 
 After changing port on existing service it should be restarted. Read more about service configuration in [Service Setup](service-setup.md)
-
-## Service management
-
-!!! note
-    In this example used default service name: `astra`.
-    On your system service name depends on your settings.
-
-| Command | Description |
-| --- | --- |
-| `systemctl restart astra` | Restart service |
-| `systemctl enable astra` | Enable autorun |
-| `systemctl disable astra` | Disable autorun |
-| `systemctl start astra` | Start service |
-| `systemctl stop astra` | Stop service |
-| `systemctl status astra` | Service status |
-| `journalctl -fu astra` | Service logs |
-
-## Check version
-
-After installation or after update you may check installed version:
-
-```
-astra -v
-```
