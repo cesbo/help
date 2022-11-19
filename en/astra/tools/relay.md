@@ -33,14 +33,16 @@ Request address has next format:
 
 Channel aslias let to use short name instead of full address. Alias list example:
 
-```
+```lua
+-- /etc/astra/relay.conf
+
 channels = {
     ["demo"] = "udp://239.255.1.1:1234",
     ["travel-channel"] = "http://example.com/travel-channel"
 }
 ```
 
-Save file to `/etc/astra/relay.conf` and append path to the file to command line argument:
+Launch relay with path to the alias list:
 
 ```
 astra --relay -p 8000 /etc/astra/relay.conf
