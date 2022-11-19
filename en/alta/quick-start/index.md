@@ -31,7 +31,8 @@ alta version
 ## Start service
 
 !!! note
-    Service is an application process with specified name and own configuration. You may launch on your server one or more services depends on your need.
+    Service is an application process with specified name and own configuration.
+    You may launch on your server one or more services depends on your need.
 
 After installation need to prepare service for launch with wizard:
 
@@ -62,7 +63,7 @@ sudo alta init
 | `systemctl restart alta` | Restart service |
 | `systemctl start alta` | Start service |
 | `systemctl stop alta` | Stop service |
-| `systemctl status alta` | Service status |
-| `systemctl enable alta` | Enable autorun |
+| `systemctl status alta` | Service status and recent logs |
+| `systemctl enable alta` | Launch service on system startup |
 | `systemctl disable alta` | Disable autorun |
 | `journalctl -fu alta` | Service logs |

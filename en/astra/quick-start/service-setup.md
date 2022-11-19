@@ -58,5 +58,5 @@ This command removes only service from systemd. Configuration file and logs coul
 | `systemctl start astra` | Start service |
 | `systemctl stop astra` | Stop service |
 | `systemctl status astra` | Service status |
-| `systemctl enable astra` | Enable autorun |
+| `systemctl enable astra` | Launch service on system startup |
 | `systemctl disable astra` | Disable autorun |
