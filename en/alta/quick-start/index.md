@@ -16,7 +16,7 @@ Cesbo Alta installation is a simple process – just copy single binary file to 
 Download binary file and set execute permission. On the server you may use next command:
 
 ```
-curl -Lo /usr/bin/alta https://cesbo.com/and/alta-2211
+curl -Lo /usr/bin/alta https://cesbo.com/alta-latest
 chmod +x /usr/bin/alta
 ```
 
