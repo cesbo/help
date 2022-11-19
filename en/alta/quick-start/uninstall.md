@@ -5,7 +5,7 @@
 
 ## Remove service
 
-If you use Systemd first of all stop your service:
+If you use Systemd, first of all stop your service:
 
 ```
 systemctl stop alta

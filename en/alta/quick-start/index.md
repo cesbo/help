@@ -40,7 +40,7 @@ After installation need to prepare service for launch with wizard:
 sudo alta init
 ```
 
-<video controls style="width:400px;">
+<video controls>
     <source src="/en/alta/quick-start/alta-init.webm" type="video/webm" />
 </video>
 

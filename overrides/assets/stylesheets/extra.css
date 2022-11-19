@@ -36,3 +36,8 @@ a[target="_blank"]::after {
     text-align: center;
     font-size: .8em;
 }
+
+.md-typeset video {
+    width: 100%;
+    max-width: min(80vh, 100vw);
+}
