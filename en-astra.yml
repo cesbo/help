@@ -66,9 +66,10 @@ nav:
       - 'UDP': 'output/broadcast/udp.md'
       - 'MPTS': 'output/broadcast/mpts.md'
       - 'CAS and Simulcrypt': 'output/broadcast/cas.md'
-    - 'OTT':
-      - 'HTTP Backend': 'output/ott/backend.md'
-    - 'SRT': 'output/srt.md'
+    - 'HTTP/HLS':
+      - 'HTTP Auth': 'output/http/backend.md'
+    - 'Other':
+      - 'SRT': 'output/srt.md'
   - 'Monitoring':
     - 'monitoring/index.md'
     - 'monitoring/influxdb.md'
