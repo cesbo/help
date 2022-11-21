@@ -43,11 +43,7 @@ Options:
 
 ## Web Interface
 
-In the web interface SRT Input options available in the Stream options. You can write source address directly to the Input address line:
-
-![Input address](input-list.png){: width="400"}
-
-Or click to the gear icon and use an Input configuration form. SRT Caller options:
+You can write source address directly to the Input address line in the Stream settings, or click to the gear icon and use an Input configuration form. SRT Caller options:
 
 ![SRT Caller Input options](srt-caller.png){: width="400"}
 
