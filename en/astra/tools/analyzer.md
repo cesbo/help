@@ -1,6 +1,6 @@
 # MPEG-TS Analyzer
 
-Astra has builtin stream analyzer. Analyzer supports any receiving format supported by Astra.
+Astra has builtin stream analyzer.
 
 ![MPEG-TS Analyzer Interface](analyzer.png)
 
@@ -14,13 +14,26 @@ Options:
 
 - `-n seconds` - stop analyzer after defined time
 - `-o file` - save stream received stream to the file
+- `-p port` - launch analyzer with web interface. In this case Address option is not needed
 
-Address format described in documents about stream receiving.
+## Address format
 
-## Example
+Analyzer supports any receiving format supported by Astra. For example:
 
 ```
-astra --analyze "udp://239.255.1.1:1234"
+udp://239.255.1.1:1234
+http://example.com/media.m3u8
+dvb://#adapter=0&type=s2&tp=11044:v:43200
+```
+
+More information described in the [Astra: Input](../input/index.md)
+
+## Console
+
+When astra launced with address in command line argument it print information directly to the console. For example:
+
+```
+> astra --analyze "udp://239.255.1.1:1234"
 
 Nov 28 00:59:28: INFO: [main] Starting Astra (commit:b871b4e3 date:2022-01-12)
 Nov 28 00:59:29: INFO: PAT tsid:1 version:1

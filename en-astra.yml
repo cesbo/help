@@ -67,7 +67,7 @@ nav:
       - 'MPTS': 'output/broadcast/mpts.md'
       - 'CAS and Simulcrypt': 'output/broadcast/cas.md'
     - 'HTTP/HLS':
-      - 'HTTP Auth': 'output/http/backend.md'
+      - 'HTTP Auth': 'output/http/auth.md'
     - 'Other':
       - 'SRT': 'output/srt.md'
   - 'Monitoring':
