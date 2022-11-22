@@ -40,9 +40,7 @@ After installation need to prepare service for launch with wizard:
 sudo alta init
 ```
 
-<video controls>
-    <source src="https://cdn.cesbo.com/alta/docs/video/alta-init.webm" type="video/webm" />
-</video>
+<div style="position: relative; padding-top: 87.5%;"><iframe src="https://customer-jmuojszo6d9hxk3k.cloudflarestream.com/7148481fadc65b275ecdab0c1235bf0d/iframe?poster=https%3A%2F%2Fcustomer-jmuojszo6d9hxk3k.cloudflarestream.com%2F7148481fadc65b275ecdab0c1235bf0d%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D28s%26height%3D600" style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
 
 - `Service name` - name of the service in the system it could be used for configuration file name and to manage service;
 - `Config path` - full path to the configuration file. Wizard makes parent directories as needed;
