@@ -29,3 +29,7 @@ You can write source address directly to the Input address line in the Stream se
 ![HLS Input options](http.png){: width="400"}
 
 ## Troubleshooting
+
+### request failed. code:404
+
+Stream not avilable on the remote server or wrong address
