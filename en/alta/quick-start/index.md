@@ -41,7 +41,7 @@ sudo alta init
 ```
 
 <video controls>
-    <source src="/en/alta/quick-start/alta-init.webm" type="video/webm" />
+    <source src="https://cdn.cesbo.com/alta/docs/video/alta-init.webm" type="video/webm" />
 </video>
 
 - `Service name` - name of the service in the system it could be used for configuration file name and to manage service in the system;
