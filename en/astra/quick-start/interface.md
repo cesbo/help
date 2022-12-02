@@ -21,12 +21,12 @@ The dashboard is an interface for viewing the status of each channel. It also al
 
 ![Dashboard](/en/astra/quick-start/materials/dashboard-int.png)
 
-1. Streams and Adapters - View a list of streams and adapters. Checking the status of streams and adapters. Customization and configuration of streams and adapters.
-2. Main menu - button to go to the main web-interface page.
+1. Streams and Adapters - View a list of streams and adapters. Checking the status of streams and adapters. Customization and configuration of streams and adapters
+2. Main menu - button to go to the main web-interface page
 3. Sessions - display the list of active sessions
 4. Settings - list of the main Astra settings 
 5. Log - list of the current messages. It contains a detailed description of data streams in Astra
-6. Search - quick search for channels and adapters. Press S for fast access to this function.
+6. Search - quick search for channels and adapters. Press S for fast access to this function
 7. New Adapter - add a new DVB adapter
 8. New Stream - add a new Stream
 9. View - settings channel grouping or display categories.

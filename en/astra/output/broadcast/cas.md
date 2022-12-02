@@ -25,7 +25,7 @@ Conditional Access (CA) or Conditional Access System (CAS) is the protection of 
 ![Cas2](/en/astra/output/broadcast/materials/cas2.png)
 
 - ECM PID - PID for ECM packages (User defined)
-- ECM Private Data - the data of the conditional access system is added to the description of the ECM stream in the PMT table. If these parameters do not exist, you do not need to add them
+- ECM Private Data - the data of the conditional access system is added to the description of the ECM stream in the PMT table. If these parameters do not exist, you do not need to add thems
 - Access Criteria - this data will be provided by the CAS provider or defined on the CAS server
 
 !!! note
