@@ -1,7 +1,7 @@
 # Interface
 
-After executing the installation script, you will be able to get the full functionality of Astra through its web interface.
-You can access it via this link:  ```https://web-page:8000```
+After launching Astra, you will be able to get the full functionality of it through web interface.
+You can access it via this link:  `https://web-page:8000`
 
 ## Web interface
 
@@ -9,11 +9,11 @@ The first time you click on the link, you will be presented with a login interfa
 
 ![Login](/en/astra/quick-start/materials/login.png)
 
-Default login and password: ```admin```
+Default login and password: `admin`
 
 This data is the default settings. Login and password must be changed after the first login to the web interface.
 
-If you forgot your password read the: [Reset password](https://www.cesbo.com/quick-start/password.html){target="_blank"}
+If you forgot your password read the: [Reset password](/en/astra/quick-start/reset-password/){target="_blank"}
 
 ## Dashboard
 
