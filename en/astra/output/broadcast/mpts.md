@@ -58,8 +58,8 @@ The NIT table (Network Information Table) contains the parameters of the data tr
 ![MPTS5](/en/astra/output/broadcast/materials/mpts5.png)
 
 - **LCN Version** - logical channel number version. This setting may vary from country to country
-  - EACEM (default)
-  - Nordig v1
+    - EACEM (default)
+    - Nordig v1
 - **Delivery Type** - in this menu, we select the type of signal delivery: DVB-S/C/T (usually DVB-C) and fill in the fields that appear
 - **Frequency** - transponder frequency. Specified in MHz
 - **Symbolrate** - symbol rate. Specified in KBaud
@@ -71,9 +71,9 @@ The NIT table (Network Information Table) contains the parameters of the data tr
 Focusing on these parameters, modern dvb-tuner and TVs can perform the Quick Search. Not to perform on the set-top boxes and TV full channel search (which usually takes a long time), set up this simple and necessary service:
 
 1. Create all necessary mpts streams and fill in Delivery Type parameters in them. For example:
-   - mpts_1 with frequency 378
-   - mpts_2 with frequency 386
-   - mpts_3 with frequency 394
+    - mpts_1 with frequency 378
+    - mpts_2 with frequency 386
+    - mpts_3 with frequency 394
 2. Go to settings mpts_1 and open the NIT tab. Check all related multiplexes
 3. Done!
 
