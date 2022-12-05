@@ -51,6 +51,7 @@ nav:
     - 'protocol/udp.md'
     - 'protocol/http.md'
     - 'protocol/hls.md'
+    - 'protocol/rtsp.md'
   - 'Transport':
     - 'transport/index.md'
     - 'transport/mpegts.md'
