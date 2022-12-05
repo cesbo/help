@@ -1,8 +1,8 @@
 MAKEFLAGS = -rR --no-print-directory
 
-.PHONY: all en-alta en-astra en-linux en-book
+.PHONY: all en-alta en-astra en-codex
 
-all: en-alta en-astra en-linux en-book cloudflare-deploy
+all: en-alta en-astra en-codex cloudflare-deploy
 
 cloudflare-deploy:
 	@echo "Preparing configs for Cloudflare Pages"
@@ -19,10 +19,6 @@ en-astra:
 	@echo "Astra"
 	@mkdocs build -c -f en-astra.yml
 
-en-linux:
-	@echo "Utils"
-	@mkdocs build -c -f en-linux.yml
-
-en-book:
-	@echo "Book"
-	@mkdocs build -c -f en-book.yml
+en-codex:
+	@echo "Codex"
+	@mkdocs build -c -f en-codex.yml
