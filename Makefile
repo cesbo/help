@@ -6,8 +6,10 @@ all: en-alta en-astra en-linux en-book cloudflare-deploy
 
 cloudflare-deploy:
 	@echo "Preparing configs for Cloudflare Pages"
-	@cp _headers site/
-	@cp _redirects site/
+	@cp static/_headers site/
+	@cp static/_redirects site/
+	@cp static/robots.txt site/
+	@cp static/404.html site/
 
 en-alta:
 	@echo "Alta"

@@ -1,0 +1,4 @@
+User-agent: *
+
+# Widgets
+Disallow: /en/alta/widget
