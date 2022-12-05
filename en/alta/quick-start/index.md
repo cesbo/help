@@ -9,7 +9,7 @@ Cesbo Alta installation is a simple process – just copy single binary file to 
 
 ## Install
 
-!!! note
+!!! note ""
     In this guide we use the `curl` command to download files.
     Most Linux distribution has pre-installed `curl`
 

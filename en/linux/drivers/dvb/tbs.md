@@ -83,28 +83,22 @@ adapter0 adapter1 adapter2 adapter3 adapter4 adapter5 adapter6 adapter7
 
 ## Troubleshooting
 
-<details class="marker">
-<summary>All works fine until server reboot</summary>
+??? question "All works fine until server reboot"
 
-Probably Linux kernel has been updated with autoupdate or manually. Try to reinstall driver.
+    Probably Linux kernel has been updated with autoupdate or manually. Try to reinstall driver.
 
-</details>
+??? question "DVB adapters are not available"
 
-<details class="marker">
-<summary>DVB adapters are not available</summary>
+    If command `ls /dev/dvb` shows error `No such file or directory`, then first of all need to check is hardware is visible by the system:
 
-If command `ls /dev/dvb` shows error `No such file or directory`, then first of all need to check is hardware is visible by the system:
+    ```
+    lspci | grep Multimedia
+    ```
 
-```
-lspci | grep Multimedia
-```
+    If adapters connected to the PCIe properly you will see listing of the PCIe adapters. For example:
 
-If adapters connected to the PCIe properly you will see listing of the PCIe adapters. For example:
+    ```
+    01:00.0 Multimedia controller: TBS Technologies DVB-S2 4 Tuner PCIe Card
+    ```
 
-```
-01:00.0 Multimedia controller: TBS Technologies DVB-S2 4 Tuner PCIe Card
-```
-
-Try to reinstall driver. If this not helps, please contact with hardware vendor.
-
-</details>
+    Try to reinstall driver. If this not helps, please contact with hardware vendor.

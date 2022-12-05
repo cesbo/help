@@ -51,32 +51,21 @@ By the standard interval between PCR packets should be between 20-250 millisecon
 
 ### Not working
 
-<details class="marker">
-<summary>VLC/FFmpeg can't receive stream</summary>
+??? question "VLC/FFmpeg can't receive stream"
 
-VLC/FFmpeg requires `@` symbol before address. For example: `udp://@239.255.1.1:1234`
+    VLC/FFmpeg requires `@` symbol before address. For example: `udp://@239.255.1.1:1234`
 
-</details>
 
 ### Bitrate syncing errors
 
-<details class="marker">
-<summary>mpegts/sync failed. buffer empty</summary>
+??? question "mpegts/sync failed. buffer empty"
 
-Astra sent all packets from output buffer and new packets is not arrived.
+    Astra sent all packets from output buffer and new packets is not arrived.
 
-</details>
+??? question "mpegts/sync failed. buffer overflow"
 
-<details class="marker">
-<summary>mpegts/sync failed. buffer overflow</summary>
+    Astra sends packets slower then receives it.
 
-Astra sends packets slower then receives it.
+??? question "mpegts/sync failed. next PCR not found"
 
-</details>
-
-<details class="marker">
-<summary>mpegts/sync failed. next PCR not found</summary>
-
-Interval between packets with PCR timestamp is too large.
-
-</details>
+    Interval between packets with PCR timestamp is too large.

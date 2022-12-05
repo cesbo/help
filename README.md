@@ -19,18 +19,55 @@ Only 3 levels is available:
 - `##` - second-level heading;
 - `###` - third-level heading.
 
+## Keyboard keys
+
+To display keyboard keys use `++`:
+
+```
+++ctrl+c++
+```
+
+Should be in lowercase without spaces.
+
 ## Note
 
-The general tip block for additional information:
+### General tip
+
+Used for additional information
 
 ```
-!!! note Notice content
+!!! note ""
     Second row
 ```
 
-The alert block for attention:
+### Alert block
+
+For attention
 
 ```
-!!! danger Alert content
+!!! danger ""
     Second row
 ```
+
+### Expandable block for troubleshooting
+
+```
+??? question "Not working..."
+
+    Description
+```
+
+All content inside block should be indented with 4 spaces.
+
+### Expandable block for examples
+
+```
+??? example "Example script on PHP"
+
+    ```php
+    <?php
+    echo "Hello world!";
+    ```
+```
+
+All content inside block should be indented with 4 spaces.

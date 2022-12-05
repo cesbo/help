@@ -26,7 +26,7 @@ If your system does not have systemd you may launch process manually:
 alta /etc/alta/alta.conf
 ```
 
-Process will be launched in the foreground and your console will be taken by process until it finish. To stop process just press Ctrl + C on your keyboard.
+Process will be launched in the foreground and your console will be taken by process until it finish. To stop process just press ++ctrl+c++ on your keyboard.
 
 For launching process in background append symbol `&` after the command line:
 

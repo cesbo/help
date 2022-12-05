@@ -39,6 +39,8 @@ markdown_extensions:
   - attr_list
   - def_list
   - nl2br
+  - pymdownx.keys
+  - pymdownx.details
   - pymdownx.superfences
   - footnotes
 

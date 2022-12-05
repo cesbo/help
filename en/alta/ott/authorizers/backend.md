@@ -26,134 +26,106 @@ For example:
 
 ## Middleware
 
-<details class="marker" id="ministra">
-<summary>Ministra / Stalker</summary>
+??? abstract "Ministra / Stalker"
 
-<p>
-TV Platform by <a href="https://www.infomir.eu/" target="_blank">Infomir</a>.
-</p>
+    TV Platform by [Infomir](https://www.infomir.eu/){target="_blank"}.
 
-<p>Backend URL:</p>
+    Backend URL:
 
-```
-http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
-```
+    ```
+    http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
+    ```
 
-<p>
-In the Ministra / Stalker settings turn on option "Temporary URL - Flussonic support"
-</p>
+    In the Ministra / Stalker settings turn on option "Temporary URL - Flussonic support"
 
-</details>
+??? abstract "IPTVPORTAL"
 
-<details class="marker" id="iptvportal">
-<summary>IPTVPORTAL</summary>
+    Platform for managing IPTV and OTT solutions by [IPTVPORTAL](https://iptvportal.cloud/){target="_blank"}.
 
-<p>
-Platform for managing IPTV and OTT solutions by <a href="https://iptvportal.cloud/" target="_blank">IPTVPORTAL</a>.
-</p>
+    Backend URL:
 
-<p>Backend URL:</p>
+    ```
+    https://go.iptvportal.cloud/auth/arescrypt/
+    ```
 
-```
-https://go.iptvportal.cloud/auth/arescrypt/
-```
+    In the portal settings open "Keys" menu and create a new key:
 
-<p>In the portal settings open "Keys" menu and create a new key:</p>
+    - Name: `Alta`
+    - Algorithm: `ARESSTREAM`
+    - Mode: `SM`
+    - Key Length: `1472 bit`
+    - Update Rate: `1:00:00`
 
-<ul>
-<li>Name: <code>Alta</code></li>
-<li>Algorithm: <code>ARESSTREAM</code></li>
-<li>Mode: <code>SM</code></li>
-<li>Key Length: <code>1472 bit</code></li>
-<li>Update Rate: <code>1:00:00</code></li>
-</ul>
+    In channel settings:
 
-<p>In channel settings:</p>
+    - Auth: `arescrypt`
+    - Encoded: `turn on`
+    - Key: `Alta`
 
-<ul>
-<li>Auth: <code>arescrypt</code></li>
-<li>Encoded: <code>turn on</code></li>
-<li>Key: <code>Alta</code></li>
-</ul>
+??? abstract "Microimpulse Smarty"
 
-</details>
+    Platform for creating an independent IPTV/OTT service by [Microimpulse](https://microimpulse.ru/en/){target="_blank"}.
 
-<details class="marker">
-<summary>Microimpulse Smarty</summary>
+    Backend URL:
 
-<p>
-Platform for creating an independent IPTV/OTT service by <a href="https://microimpulse.ru/en/" target="_blank">Microimpulse</a>.
-</p>
+    ```
+    http://example.com/tvmiddleware/api/streamservice/token/check/
+    ```
 
-<p>Backend URL:</p>
+??? example "Selfmade on PHP"
 
-```
-http://example.com/tvmiddleware/api/streamservice/token/check/
-```
+    You may create own backend on any programming language. For example in this guide we create extremally simple backend on PHP. It allows access if token is equal to `123`.
 
-</details>
+    Create new file `auth.php` with the following code:
 
-<details class="marker" id="selfmade-on-php">
-<summary>Selfmade on PHP</summary>
+    ```php
+    <?php
 
-<p>
-You may create own backend on any programming language. For example in this guide we create extremally simple backend on PHP. It allows access if token is equal to <strong>123</strong>.
-</p>
+    // Get token from query string
+    $token = $_GET['token'];
 
-<p>Create new file <code>auth.php</code> with the following code:</p>
+    // Check token
+    if ($token == '123') {
+        // Write headers to console and allow access
+        error_log(
+            "\n" .
+            " Session ID: " . $_SERVER['HTTP_X_SESSION_ID']  . "\n" .
+            "    Real IP: " . $_SERVER['HTTP_X_REAL_IP']     . "\n" .
+            "  Real Path: " . $_SERVER['HTTP_X_REAL_PATH']   . "\n" .
+            "Real Origin: " . $_SERVER['HTTP_X_REAL_ORIGIN'] . "\n" .
+            "    Real UA: " . $_SERVER['HTTP_X_REAL_UA']
+        );
+        http_response_code(200);
+    } else {
+        // Deny access
+        http_response_code(403);
+    }
+    ```
 
-```php
-<?php
+    Launch backend on the server with Alta:
 
-// Get token from query string
-$token = $_GET['token'];
+    ```
+    php -S 127.0.0.1:6000 auth.php
+    ```
 
-// Check token
-if ($token == '123') {
-    // Write headers to console and allow access
-    error_log(
-        "\n" .
-        " Session ID: " . $_SERVER['HTTP_X_SESSION_ID']  . "\n" .
-        "    Real IP: " . $_SERVER['HTTP_X_REAL_IP']     . "\n" .
-        "  Real Path: " . $_SERVER['HTTP_X_REAL_PATH']   . "\n" .
-        "Real Origin: " . $_SERVER['HTTP_X_REAL_ORIGIN'] . "\n" .
-        "    Real UA: " . $_SERVER['HTTP_X_REAL_UA']
-    );
-    http_response_code(200);
-} else {
-    // Deny access
-    http_response_code(403);
-}
-```
+    Backend URL:
 
-<p>Launch backend on the server with Alta:</p>
+    ```
+    http://127.0.0.1:6000
+    ```
 
-```
-php -S 127.0.0.1:6000 auth.php
-```
-
-<p>Backend URL:</p>
-
-```
-http://127.0.0.1:6000
-```
-
-<p>For production you may use nginx with php-fpm or any other solution.</p>
-
-</details>
+    For production you may use nginx with php-fpm or any other solution.
 
 ## Troubleshooting
 
-### Unexpected access
+??? question "Unexpected access"
 
-If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
+    If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
 
-```
-curl -v "http://127.0.0.1:6000?token=123"
-```
+    ```
+    curl -v "http://127.0.0.1:6000?token=123"
+    ```
 
-Of course address should be same as in your settings.
+    Of course address should be same as in your settings.
 
-If you see something like `Connection refused` or connection is stuck without any response, then issue with access to the backend.
-
-### No access
+    If you see something like **Connection refused** or connection is stuck without any response, then issue with access to the backend.

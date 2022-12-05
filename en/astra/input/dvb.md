@@ -160,16 +160,10 @@ You can write source address directly to the Input address line in the Stream se
 
 ## Troubleshooting
 
-<details class="marker">
-<summary>failed to open frontend: Device or resource busy</summary>
+??? question "failed to open frontend: Device or resource busy"
 
-Adapter is taken by another process. Maybe Astra started twice.
+    Adapter is taken by another process. Maybe Astra started twice.
 
-</details>
+??? question "failed to open frontend: No such file or directory"
 
-<details class="marker">
-<summary>failed to open frontend: No such file or directory</summary>
-
-DVB Driver is not installed in system.
-
-</details>
+    DVB Driver is not installed in system.
