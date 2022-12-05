@@ -51,7 +51,9 @@ nav:
     - 'Backup': 'quick-start/backup.md'
     - 'Update': 'quick-start/update.md'
     - 'Uninstall': 'quick-start/uninstall.md'
-    - 'Reset Password': 'quick-start/reset-password.md'
+    - 'Web Interface':
+        - 'Dashboard': 'quick-start/interface.md'
+        - 'Reset Password': 'quick-start/reset-password.md'
   - 'Input':
     - 'input/index.md'
     - 'DVB, ATSC, ISDB-T': 'input/dvb.md'

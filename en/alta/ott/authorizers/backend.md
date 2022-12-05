@@ -2,96 +2,105 @@
 
 Backend Authorization is an extensible system to verify client request with external HTTP service.
 HTTP service verifies client request by the own rules and return response to Alta.
-Response status `200` allows access to the content. Any other response denies access.
-
-## Configuration
-
-```json
-{
-    "ott": {
-        "authorizers": {
-            "main": {
-                "backend": [
-                    "http://127.0.0.1:6000"
-                ],
-                "default": "allow"
-            }
-        }
-    }
-}
-```
-
-- `backend` - Backend URL addresses;
-- `default` - default action if backend is not available. Could be `allow` or `deny`.
+Response status **200** allows access to the content. Any other response denies access.
 
 ## Request to Backend
 
 Request to Backend is a HTTP GET request with following headers:
 
-- `X-Session-Id` - unique session number;
-- `X-Real-Ip` - client IP address;
-- `X-Real-Path` - path to the requested content;
-- `X-Real-Origin` - request origin with scheme, host, and port.
-- `X-Real-Ua` - client User-Agent;
+- **X-Session-Id** - unique session number
+- **X-Real-Ip** - client IP address
+- **X-Real-Path** - path to the requested content
+- **X-Real-Origin** - request origin with scheme, host, and port
+- **X-Real-Ua** - client User-Agent
 
 For example:
 
-1. Your Backend URL is: `http://127.0.0.1:6000/auth`;
-2. Client started channel: `https://live.example.com/channel-path/index.m3u8?token=123`;
-3. Full address to Backend will be: `http://127.0.0.1:6000/auth?token=123`;
+1. Your Backend URL is: `http://127.0.0.1:6000/auth`
+2. Client started channel: `https://live.example.com/channel-path/index.m3u8?token=123`
+3. Full address to Backend will be: `http://127.0.0.1:6000/auth?token=123`
 4. In headers will be:
-    - `X-Real-Origin: https://live.example.com`;
-    - `X-Real-Path: /channel-path/index.m3u8`;
-    - other headers depends of the client request.
+    - `X-Real-Origin: https://live.example.com`
+    - `X-Real-Path: /channel-path/index.m3u8`
+    - other headers depends of the client request
 
-## Ministra
+## Middleware
 
-TV Platform by [Infomir](https://www.infomir.eu/). Backend URL:
+<details class="marker" id="ministra">
+<summary>Ministra / Stalker</summary>
+
+<p>
+TV Platform by <a href="https://www.infomir.eu/" target="_blank">Infomir</a>.
+</p>
+
+<p>Backend URL:</p>
 
 ```
 http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
 ```
 
+<p>
 In the Ministra / Stalker settings turn on option "Temporary URL - Flussonic support"
+</p>
 
-## IPTVPORTAL
+</details>
 
-Platform for managing IPTV and OTT solutions by [IptvPortal](https://iptvportal.cloud/). Backend URL:
+<details class="marker" id="iptvportal">
+<summary>IPTVPORTAL</summary>
+
+<p>
+Platform for managing IPTV and OTT solutions by <a href="https://iptvportal.cloud/" target="_blank">IPTVPORTAL</a>.
+</p>
+
+<p>Backend URL:</p>
 
 ```
 https://go.iptvportal.cloud/auth/arescrypt/
 ```
 
-In the portal settings open "Keys" menu and create a new key:
+<p>In the portal settings open "Keys" menu and create a new key:</p>
 
-- Name: `Alta`
-- Algorithm: `ARESSTREAM`
-- Mode: `SM`
-- Key Length: `1472 bit`
-- Update Rate: `1:00:00`
+<ul>
+<li>Name: <code>Alta</code></li>
+<li>Algorithm: <code>ARESSTREAM</code></li>
+<li>Mode: <code>SM</code></li>
+<li>Key Length: <code>1472 bit</code></li>
+<li>Update Rate: <code>1:00:00</code></li>
+</ul>
 
-In channel settings:
+<p>In channel settings:</p>
 
-- Auth: `arescrypt`
-- Encoded: turn on
-- Key: `Alta`
+<ul>
+<li>Auth: <code>arescrypt</code></li>
+<li>Encoded: <code>turn on</code></li>
+<li>Key: <code>Alta</code></li>
+</ul>
 
-## Microimpulse Smarty
+</details>
 
-Platform for creating an independent IPTV/OTT service by [Microimpulse](https://microimpulse.ru/en/). Backend URL:
+<details class="marker">
+<summary>Microimpulse Smarty</summary>
+
+<p>
+Platform for creating an independent IPTV/OTT service by <a href="https://microimpulse.ru/en/" target="_blank">Microimpulse</a>.
+</p>
+
+<p>Backend URL:</p>
 
 ```
 http://example.com/tvmiddleware/api/streamservice/token/check/
 ```
 
-## Simple Backend with PHP
+</details>
 
-PHP script that validate token and allows access if token is equal to `123`.
+<details class="marker" id="selfmade-on-php">
+<summary>Selfmade on PHP</summary>
 
-<details class="marker">
-<summary>Script</summary>
+<p>
+You may create own backend on any programming language. For example in this guide we create extremally simple backend on PHP. It allows access if token is equal to <strong>123</strong>.
+</p>
 
-Create new file `auth.php` with the following code:
+<p>Create new file <code>auth.php</code> with the following code:</p>
 
 ```php
 <?php
@@ -117,15 +126,21 @@ if ($token == '123') {
 }
 ```
 
-Launch backend: `php -S 127.0.0.1:6000 auth.php`. For production you may use `nginx` with `php-fpm` or any other solution.
+<p>Launch backend on the server with Alta:</p>
 
-</details>
+```
+php -S 127.0.0.1:6000 auth.php
+```
 
-Backend URL:
+<p>Backend URL:</p>
 
 ```
 http://127.0.0.1:6000
 ```
+
+<p>For production you may use nginx with php-fpm or any other solution.</p>
+
+</details>
 
 ## Troubleshooting
 

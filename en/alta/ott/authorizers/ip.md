@@ -12,28 +12,10 @@ IP Authorization checks client IP address in the rules list.
 
 IP Authorization supports IPv4 and IPv6 addresses with CIDR notation.
 
-## Configuration
+## Example
 
-```json
-{
-    "ott": {
-        "authorizers": {
-            "main": {
-                "ip": [
-                    "allow 127.0.0.1",
-                    "deny 192.168.0.100",
-                    "pass 192.168.0.0/24",
-                    "pass fd32:ce04:8a5c::1/64",
-                    "deny any"
-                ]
-            }
-        }
-    }
-}
-```
-
-- `127.0.0.1` - allow single IP;
-- `192.168.0.100` - deny single IP;
-- `192.168.0.0/24` - pass IPv4 network to the next autorization method (backend or action);
-- `fd32:ce04:8a5c::1/64` - pass IPv6 network to the next autorization method;
-- `any` - deny any other IP.
+- `allow 127.0.0.1` - allow request from localhost
+- `deny 192.168.0.100` - deny access to single address
+- `pass 192.168.0.0/24` - pass client from the IPv4 network to the next authorizer - securetoken or backend
+- `pass fd32:ce04:8a5c::1/64` - same for IPv6 network
+- `deny any` - deny access for any other addresses

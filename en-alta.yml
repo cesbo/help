@@ -46,6 +46,7 @@ nav:
   - 'index.md'
   - 'Quick Start':
     - 'quick-start/index.md'
+    - 'quick-start/service-management.md'
     - 'quick-start/backup.md'
     - 'quick-start/reset-password.md'
     - 'quick-start/uninstall.md'
@@ -54,6 +55,7 @@ nav:
     - 'Channel':
       - 'ott/channels/config.md'
     - 'Archive':
+      - 'ott/archives/index.md'
       - 'Access': 'ott/archives/access.md'
       - 'Local': 'ott/archives/local.md'
     - 'Authorization':
