@@ -17,7 +17,7 @@ theme:
   name: material
   custom_dir: 'overrides'
   logo: https://cdn.cesbo.com/logo.svg
-  favicon: https://cdn.cesbo.com/favicon.png
+  favicon: https://cdn.cesbo.com/assets/img/favicon.png
   font:
     text: Nunito
   palette:
