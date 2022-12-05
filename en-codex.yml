@@ -1,7 +1,6 @@
 site_name: Codex
 site_description: Introduction to media transport, protocols, and system administration
 
-copyright: 'Copyright &copy; <a href="https://cesbo.com" target="_blank">Cesbo</a>, 2022'
 extra:
   generator: false
 
