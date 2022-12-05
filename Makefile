@@ -2,7 +2,12 @@ MAKEFLAGS = -rR --no-print-directory
 
 .PHONY: all en-alta en-astra en-linux en-book
 
-all: en-alta en-astra en-linux en-book
+all: en-alta en-astra en-linux en-book cloudflare-deploy
+
+cloudflare-deploy:
+	@echo "Preparing configs for Cloudflare Pages"
+	@cp _headers site/
+	@cp _redirects site/
 
 en-alta:
 	@echo "Alta"
