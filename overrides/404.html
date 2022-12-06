@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Cesbo Help Center</title>
-	<style>
-*, ::after, ::before {
-	box-sizing: inherit;
-}
+{% extends "main.html" %}
 
-html {
-	box-sizing: border-box;
-
-	font-family: Roboto, sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1.5rem;
-
-	background-color: white;
-	color: black;
-
-	-webkit-tap-highlight-color: transparent;
-	-webkit-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	text-size-adjust: 100%;
-	text-rendering: optimizeLegibility;
-}
-
-body {
-	width: 100%;
-	margin: 0;
-	padding: 1rem;
-}
-
+{% block content %}
+<style>
 .not-found {
 	display: flex;
 	flex-direction: column;
@@ -49,9 +18,8 @@ body {
 	font-size: .8rem;
 	font-weight: 600;
 }
-	</style>
-</head>
-<body>
+</style>
+
 <div class="not-found">
 	<img src="https://cdn.cesbo.com/assets/img/404.png" alt="404" />
 	<h1>Not Found</h1>
@@ -70,5 +38,4 @@ body {
 		<li><a href="https://twitter.com/cesbo">Twitter</a></li>
 	</ul>
 </div>
-</body>
-</html>
+{% endblock %}
