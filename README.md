@@ -44,8 +44,8 @@ For documentation writing you may start builtin development server:
 mkdocs serve -f en-alta.yml
 ```
 
-Page will be available on http://localhost:8000/en/alta/
-Development server has live reload feature. On save file page will be reloaded automatically.
+Documentation will be served on http://localhost:8000/en/alta/
+Development server has live reload feature - after saving a page will be reloaded automatically.
 
 ## Formatting rules
 
