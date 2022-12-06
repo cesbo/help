@@ -19,7 +19,8 @@ theme:
   logo: https://cdn.cesbo.com/logo.svg
   favicon: https://cdn.cesbo.com/assets/img/favicon.png
   font:
-    text: Nunito
+    text: Roboto
+    code: Roboto Mono
   palette:
     primary: blue
     accent: indigo
