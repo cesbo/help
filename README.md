@@ -8,16 +8,48 @@ Categories:
 
 - `alta` - Cesbo Alta
 - `astra` - Cesbo Astra
-- `book` - Rrotocols, Transports, and Encoding
-- `linux` - System administration
+- `codex` - Protocols, Transports, Encoding, and System Administration
 
 ## Requirements
 
 - Python 3.7+
+- MkDocs 1.4+
 
 To deploy on Cloudflare Pages need to set environment variable `PYTHON_VERSION` to `3.7`
 
-## Heading
+## Installation
+
+MkDocs requires a recent version of Python and the Python package manager, **pip**, to be installed on your system.
+
+You can check if you already have these installed from the command line:
+
+```bash
+$ python --version
+Python 3.10.8
+$ pip --version
+pip 22.2.2 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
+```
+
+If you already have those packages installed, you may install all dependencies with next command:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Development
+
+For documentation writing you may start builtin development server:
+
+```bash
+mkdocs serve -f en-alta.yml
+```
+
+Page will be available on http://localhost:8000/en/alta/
+Development server has live reload feature. On save file page will be reloaded automatically.
+
+## Formatting rules
+
+### Heading
 
 Only 3 levels is available:
 
@@ -25,7 +57,7 @@ Only 3 levels is available:
 - `##` - second-level heading
 - `###` - third-level heading
 
-## Text decoration
+### Text decoration
 
 - Bold - names:
     - Form field
@@ -37,7 +69,7 @@ Only 3 levels is available:
     - Command
     - Example URL
 
-## Keyboard keys
+### Keyboard keys
 
 To display keyboard keys use `++`:
 
@@ -47,9 +79,7 @@ To display keyboard keys use `++`:
 
 Should be in lowercase without spaces.
 
-## Note
-
-### General tip
+### Note: General tip
 
 Used for additional information
 
@@ -58,7 +88,7 @@ Used for additional information
     Second row
 ```
 
-### Alert block
+### Note: Alert block
 
 For attention
 
@@ -67,7 +97,7 @@ For attention
     Second row
 ```
 
-### Expandable block for troubleshooting
+### Expandable block: Troubleshooting
 
 ```
 ??? question "Not working..."
@@ -77,7 +107,7 @@ For attention
 
 All content inside block should be indented with 4 spaces.
 
-### Expandable block for examples
+### Expandable block: Examples
 
 ```
 ??? example "Example script on PHP"

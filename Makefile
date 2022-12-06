@@ -13,12 +13,12 @@ cloudflare-deploy:
 
 en-alta:
 	@echo "Alta"
-	@mkdocs build -c -f en-alta.yml
+	@mkdocs build -f en-alta.yml
 
 en-astra:
 	@echo "Astra"
-	@mkdocs build -c -f en-astra.yml
+	@mkdocs build -f en-astra.yml
 
 en-codex:
 	@echo "Codex"
-	@mkdocs build -c -f en-codex.yml
+	@mkdocs build -f en-codex.yml
