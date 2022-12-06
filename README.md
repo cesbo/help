@@ -1,7 +1,5 @@
 # Cesbo Docs
 
-Docs with [mkdocs](https://www.mkdocs.org/). Just write Markdown files
-
 All docs separated by language and category.
 
 Categories:
@@ -12,8 +10,8 @@ Categories:
 
 ## Requirements
 
-- Python 3.7+
-- MkDocs 1.4+
+- [Python](https://www.python.org/) 3.7+
+- [MkDocs](https://www.mkdocs.org/) 1.4+
 
 To deploy on Cloudflare Pages need to set environment variable `PYTHON_VERSION` to `3.7`
 
@@ -26,6 +24,7 @@ You can check if you already have these installed from the command line:
 ```bash
 $ python --version
 Python 3.10.8
+
 $ pip --version
 pip 22.2.2 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
 ```
