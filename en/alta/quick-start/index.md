@@ -1,3 +1,7 @@
+---
+description: 'Cesbo Alta installation is a simple process – just copy single binary file to your server'
+---
+
 # Quick Start
 
 Cesbo Alta installation is a simple process – just copy single binary file to your server.
