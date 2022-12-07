@@ -6,4 +6,4 @@ hide:
 
 # Cesbo Alta
 
-Cesbo Alta is a media streaming software for Live streaming and Video archives.
+Cesbo Alta is a media delivery solution for Live streaming, Media archives, and much more

@@ -1,3 +1,7 @@
+---
+description: 'Forgotten password could be reset by administrator. There are two ways to do it: web interface and wizard'
+---
+
 # Reset Password
 
 Forgotten password could be reset by administrator. There are two ways to do it: web interface and wizard.
