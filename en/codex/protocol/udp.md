@@ -4,7 +4,7 @@ UDP (User Datagram  Protocol) - communication protocol in local networks or Inte
 
 Detailed description available in the RFC768[^1] standard.
 
-![UDP](img/UDP.png)
+![UDP](img/udp.png)
 
 ## How Does UDP Work?
 
@@ -24,7 +24,7 @@ A number of UDP's attributes make it especially suited for certain applications:
 The lack of retransmission delays makes it suitable for real-time applications such as Voice over IP, online games, and many protocols using Real Time Streaming Protocol.
 - Because it supports multicast, it is suitable for broadcast information such as in many kinds of service discovery and shared information such as Precision Time - Protocol and Routing Information Protocol.
 - It is stateless, suitable for very large numbers of clients, such as in streaming media applications such as IPTV.
-  
+
 ## Multicast
 
 In computer networking, multicast is group communication where data transmission is addressed to a group of destination computers simultaneously. Multicast can be one-to-many or many-to-many distribution.
@@ -48,7 +48,7 @@ Unicast is commonly used in higher layer protocols such as RTSP and SRT.
 ## Protocols comparison
 
 - UDP - minimal delay but it loses data packets
-- HTTP MPEG-TS - A little bit more delay with a better stability. 
+- HTTP MPEG-TS - A little bit more delay with a better stability.
 - HLS[^2] - long delay but it has best data transfer stability and adaptive bitrate.
 
 
