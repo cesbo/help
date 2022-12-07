@@ -14,6 +14,49 @@ html {
     margin-top: 0;
 }
 
+.md-header .md-select.cesbo-menu {
+    position: initial;
+}
+
+.md-header .md-select.cesbo-menu > .md-select__inner {
+    left: 0;
+    width: 100vw;
+    transform: translate3d(0, .3rem, 0);
+}
+
+.md-header .md-select.cesbo-menu:is(:focus-within, :hover) > .md-select__inner {
+    max-height: unset;
+    transform: translate3d(0, 0, 0);
+}
+
+.md-header .md-select.cesbo-menu .md-select__inner::after {
+    display: none;
+}
+
+@media screen and (min-width: 60em) {
+    .md-header .md-select.cesbo-menu {
+        position: relative;
+    }
+
+    .md-header .md-select.cesbo-menu > .md-select__inner {
+        left: 50%;
+        width: auto;
+        transform: translate3d(-50%, .3rem, 0);
+    }
+
+    .md-header .md-select.cesbo-menu:is(:focus-within, :hover) > .md-select__inner {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    .md-header .md-select.cesbo-menu .md-select__inner::after {
+        display: initial;
+    }
+}
+
+.md-header .md-select hr {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
 .md-typeset :is(.admonition, details) {
     font-size: .8rem;
 }

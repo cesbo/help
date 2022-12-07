@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+
+{% block content %}
+<style>
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top: 2rem;
+}
+
+.not-found li.title {
+	margin-top: 1rem;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: .8rem;
+	font-weight: 600;
+}
+</style>
+
+<div class="not-found">
+	<img src="https://cdn.cesbo.com/assets/img/404.png" alt="404" />
+	<h1>Not Found</h1>
+	<p>Sorry, the page you are looking for could not be found</p>
+	<ul>
+		<li><a href="https://cesbo.com">Main Site</a></li>
+		<li><a href="#">Contact Us</a></li>
+		<li class="title">Docs</li>
+		<li><a href="https://help.cesbo.com/en/alta/">Alta - Media Server</a></li>
+		<li><a href="https://help.cesbo.com/en/astra/">Astra - Broadcasting Server</a></li>
+		<li><a href="https://help.cesbo.com/en/codex/">Codex</a></li>
+		<li class="title">Social</li>
+		<li><a href="https://t.me/cesbo_en">Telegram [EN]</a></li>
+		<li><a href="https://t.me/cesbo_ru">Telegram [RU]</a></li>
+		<li><a href="https://t.me/cesbo_es">Telegram [ES]</a></li>
+		<li><a href="https://twitter.com/cesbo">Twitter</a></li>
+	</ul>
+</div>
+{% endblock %}

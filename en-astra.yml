@@ -1,12 +1,12 @@
 site_name: Astra Docs
 site_description: Professional software for TV streaming
 
-copyright: 'Copyright &copy; <a href="https://cesbo.com" target="_blank">Cesbo</a>, 2022'
 extra:
   generator: false
 
 docs_dir: en/astra
 site_dir: site/en/astra
+site_url: http://help.cesbo.com/en/astra/
 repo_url: https://github.com/cesbo/www/
 edit_uri: edit/master/en/astra/
 
@@ -15,11 +15,12 @@ extra_css:
 
 theme:
   name: material
-  custom_dir: 'overrides'
+  custom_dir: overrides
   logo: https://cdn.cesbo.com/logo.svg
-  favicon: https://cdn.cesbo.com/favicon.png
+  favicon: https://cdn.cesbo.com/assets/img/favicon.png
   font:
-    text: Nunito
+    text: Roboto
+    code: Roboto Mono
   palette:
     primary: blue
     accent: indigo
