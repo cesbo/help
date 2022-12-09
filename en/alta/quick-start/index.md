@@ -50,4 +50,5 @@ sudo alta init
 - **Enable service autorun** - this option available only with Systemd. Service will be launched automatically on system startup
 - **Start service** - start service immediately after wizard
 
-Your service is ready to use. You may continue service configuration in the web interface: [alta.cesbo.com](https://alta.cesbo.com)
+Your service is ready to use. 
+You can find more information in: [cesbo.com/alta](https://help.cesbo.com/en/alta/)
