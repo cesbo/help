@@ -51,4 +51,4 @@ sudo alta init
 - **Start service** - start service immediately after wizard
 
 Your service is ready to use. 
-You can find more information in: [cesbo.com/alta](https://help.cesbo.com/en/alta/)
+You can find more information in: [cesbo.com/alta](https://help.cesbo.com/en/alta/){target="_blank"}

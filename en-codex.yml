@@ -61,21 +61,21 @@ nav:
     - 'encoding/index.md'
     - 'Audio': 'encoding/audio.md'
     - 'Video': 'encoding/video.md'
-  - 'Utils':
-    - 'utils/index.md'
+  - 'Admin':
+    - 'system/index.md'
     - 'Drivers':
-      - 'utils/drivers/index.md'
-      - 'DigitalDevices': 'utils/drivers/dvb/dd.md'
-      - 'TBS': 'utils/drivers/dvb/tbs.md'
+      - 'system/drivers/index.md'
+      - 'DigitalDevices': 'system/drivers/dvb/dd.md'
+      - 'TBS': 'system/drivers/dvb/tbs.md'
     - 'Network':
-      - 'utils/net/index.md'
-      - 'iptables': 'utils/net/iptables.md'
-      - 'ssh': 'utils/net/ssh.md'
-      - 'socat': 'utils/net/socat.md'
-      - 'dehydrated': 'utils/net/dehydrated.md'
+      - 'system/net/index.md'
+      - 'iptables': 'system/net/iptables.md'
+      - 'ssh': 'system/net/ssh.md'
+      - 'socat': 'system/net/socat.md'
+      - 'dehydrated': 'system/net/dehydrated.md'
     - 'DVB':
-      - 'utils/dvb/index.md'
-      - 'minisatip': 'utils/dvb/minisatip.md'
+      - 'system/dvb/index.md'
+      - 'minisatip': 'system/dvb/minisatip.md'
     - 'TV Tools':
-      - 'utils/tv/index.md'
-      - 'EIT Stream': 'utils/tv/eit-stream.md'
+      - 'system/tv/index.md'
+      - 'EIT Stream': 'system/tv/eit-stream.md'
