@@ -54,7 +54,7 @@ nav:
     - 'quick-start/backup.md'
     - 'quick-start/reset-password.md'
     - 'quick-start/uninstall.md'
-  - 'Interface'
+  - 'Interface':
     - 'interface/index.md'
   - 'OTT':
     - 'ott/index.md'
