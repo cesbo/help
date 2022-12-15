@@ -34,10 +34,10 @@ You can find detailed information on the website [Zabbix/agent](https://www.zabb
 1. Edit the Agent configuration file: `sudo nano /etc/zabbix/zabbix_agentd.conf`
 2. Find the `Server=` option and in it specify the IP or DNS name of the server where Zabbix is installed
 3. Save the file (Crtl+O) and exit the editor (Ctrl+X)
-4. Download scripts for zabbix-agent: `curl https://cesbo.com/download/astra/zabbix/agent.tar.gz | tar -zxC /opt`
+4. Download scripts for zabbix-agent: `curl https://cdn.cesbo.com/astra/zabbix/agent.tar.gz | tar -zxC /opt`
 5. The scripts will be saved to the directory `/opt/zabbix_agent`
 6. Set permissions: `chmod +x /opt/zabbix_agent/*`
-7. Download the configuration file: `curl -o /etc/zabbix/zabbix_agentd.d/astra.conf https://cesbo.com/download/astra/zabbix/astra.conf`
+7. Download the configuration file: `curl -o /etc/zabbix/zabbix_agentd.d/astra.conf https://cdn.cesbo.com/astra/zabbix/astra.conf`
 8. Install dependencies:
    - for RedHat-like systems: `yum install python3 python3-requests` 
    - for Debian-like systems: `apt-get install python3 python3-requests`
@@ -51,7 +51,7 @@ You can find detailed information on the website [Zabbix/agent](https://www.zabb
 
 ## Setting up Zabbix
 
-1. Download the [Zabbix template](https://cesbo.com/download/astra/zabbix/zbx_astra.xml){target="_blank"} on work computer
+1. Download the [Zabbix template](https://cesbo.com/download/astra/zabbix/zbx_astra.xml){target="_blank" download="zbx_astra.xml"} on work computer
 2. Open the Zabbix interface: `http://zabbix-server`
 3. Go through the authorization procedure: login and password - `Admin`
 4. Open Configuration -> Templates
