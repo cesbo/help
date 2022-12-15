@@ -17,7 +17,7 @@ If you have previously been authorized, then you will see a button to go to an a
 ??? question "Server unreachable"    
    
     - Invalid server address
-    - The user is not connected to the VPN or private company network through which the server is accessed
+    - Your computer is not connected to the VPN or private company network through which the server is accessed
     - Server communication port closed by firewall
     - Service not running on server
     - The server is down or not connected to the network
