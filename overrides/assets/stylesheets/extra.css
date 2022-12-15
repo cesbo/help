@@ -119,6 +119,13 @@ a[target="_blank"]::after {
     top: 8px;
     right: 10px;
     z-index: 2;
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+}
+
+.groove-backdrop-show .groove-close {
+    opacity: 1;
+    transition-delay: .3s;
 }
 
 .groove-close:hover {
