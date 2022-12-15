@@ -6,7 +6,7 @@ Alta settings are accessible through web interface
 
 Web interface available at [alta.cesbo.com](https://alta.cesbo.com){target="_blank"}. After clicking on the link, you will have access to the authorization panel
 
-![Login](login.png)
+![Login](login.png){width="552"}
 
 For authorization you need to enter:
 
