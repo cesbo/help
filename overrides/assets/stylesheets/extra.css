@@ -126,6 +126,20 @@ a[target="_blank"]::after {
     background-color: currentColor;
 }
 
+.groove-backdrop {
+    display: none;
+}
+
+.groove-backdrop-show .groove-backdrop {
+    display: block;
+    content: "";
+    inset: 0;
+    position: fixed;
+    background: grey;
+    z-index: 10;
+    opacity: 0.5;
+}
+
 @media screen and (min-width: 436px) {
     #groove-container-60682fe4-e114-4465-8552-9b19012a4a5d {
         bottom: auto !important;
