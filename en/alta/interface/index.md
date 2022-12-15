@@ -1,21 +1,24 @@
 # Web interface
 
-Alta settings are accessible through this control panel
+Alta settings are accessible through web interface
 
 ## Login
 
 Web interface available at [alta.cesbo.com](https://alta.cesbo.com){target="_blank"}. After clicking on the link, you will have access to the authorization panel
 
-![Login](Login.png)
+![Login](login.png)
 
-For authorization you need to enter your server address, login and password
+For authorization you need to enter:
 
-If you have previously been authorized, then you will see a button to go to an already connected server. Each vatization of a new server adds it to the list of connected servers.
+- Your server address with port. For example: `https://example.com:4008`
+- Login and Password for administrator
+
+If you have previously been authorized, then you will see a button to go to an already connected server. Each authorization of a new server adds it to the list of connected servers.
 
 ## Troubleshooting
 
-??? question "Server unreachable"    
-   
+??? question "Server unreachable"
+
     - Invalid server address
     - Your computer is not connected to the VPN or private company network through which the server is accessed
     - Server communication port closed by firewall
