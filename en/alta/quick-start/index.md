@@ -51,4 +51,4 @@ sudo alta init
 - **Start service** - start service immediately after wizard
 
 Your service is ready to use. 
-Now you may connect to the service and login to it. You can find more information about connecting to an interface in: [cesbo.com/alta](/en/alta/interface/)s
+Now you may connect to the service and login to it. You can find more information about connecting to an interface in: [cesbo.com/alta](/en/alta/interface/)
