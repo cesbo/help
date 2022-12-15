@@ -95,32 +95,52 @@ a[target="_blank"]::after {
     overflow: hidden;
 }
 
+.groove-header {
+    --inner-radius: 0;
+
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    position: absolute;
+    border: 0;
+    background-color: #519ed4;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: var(--inner-radius);
+    border-top-right-radius: var(--inner-radius);
+    z-index: 1;
+}
+
+.groove-backdrop-show .groove-header {
+    opacity: 1;
+}
 
 .groove-close {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 2px;
-    border: 2px solid #474747;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    height: 30px;
-    background-color: #e2e2e2;
-    color: #474747;
     cursor: pointer;
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    color: white;
+    margin-right: 6px;
+    margin-top: 6px;
+    border-radius: 50%;
+    padding: 2px;
 }
 
 .groove-close:hover {
-    background-color: #e6e6e6;
+    background-color: #62a7d8;
 }
 
 .groove-close::before {
     content: "";
-    --close-icon: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M3,5a1,1 0 0 1 2,-2l12,12a1,1 0 0 1 -2,2z M15,3a1,1 0 0 1 2,2l-12,12a1,1 0 0 1 -2,-2z" /></svg>');
     display: block;
-    width: 60%;
-    height: 60%;
+    height: 20px;
+    aspect-ratio: 1;
+    --close-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>');
     mask: var(--close-icon) no-repeat center;
     -webkit-mask: var(--close-icon) no-repeat center;
     background-color: currentColor;
@@ -150,9 +170,15 @@ a[target="_blank"]::after {
         transform: translateX(-50%);
     }
 
-    .groove-close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .groove-header {
+        --inner-radius: 5.5px;
+
+        top: 8px;
+        position: relative;
+
+        right: 6px;
+        left: 6px;
+        width: calc(100% - 6px * 2);
+        height: 30px;
     }
 }
