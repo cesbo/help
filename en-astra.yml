@@ -80,6 +80,7 @@ nav:
     - 'monitoring/index.md'
     - 'monitoring/influxdb.md'
     - 'monitoring/grafana.md'
+    - 'monitoring/zabbix.md'
   - 'Tools':
     - 'tools/index.md'
     - 'tools/analyzer.md'
