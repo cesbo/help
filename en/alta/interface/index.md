@@ -1,10 +1,14 @@
+---
+description: 'Web Interface allows to access and manage Alta directly with your web browser'
+---
+
 # Web interface
 
-Alta settings are accessible through web interface
+Web Interface allows to access and manage Alta directly with your web browser
 
 ## Login
 
-Web interface available at [alta.cesbo.com](https://alta.cesbo.com){target="_blank"}. After clicking on the link, you will have access to the authorization panel
+Access the Alta web interface at [https://alta.cesbo.com](https://alta.cesbo.com){target="_blank"}. After clicking on the link, you will be taken to the login page where you can enter your credentials to gain access to the service.
 
 ![Login](login.png){width="552"}
 
@@ -14,6 +18,10 @@ For authorization you need to enter:
 - Login and Password for administrator
 
 If you have previously been authorized, then you will see a button to go to an already connected server. Each authorization of a new server adds it to the list of connected servers.
+
+## Connection
+
+After loading web interface communicates directly with the Alta without third-party servers. Information about authorized servers stored in the browser's Local Storage.
 
 ## Troubleshooting
 
