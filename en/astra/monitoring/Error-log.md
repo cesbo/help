@@ -58,7 +58,7 @@ Log messages are of the following types:
 
 ??? question "PAT: stream with id * is not found"
 
-    The channel with the specified number (pnr) was not found in the stream. To check the available channels, you need to scan the source.
+    The channel with the specified number (pnr) was not found in the stream. To check the available channels, you need to scan the source
 
 ??? question "Device or resource busy"
 
@@ -126,43 +126,46 @@ Log messages are of the following types:
 
 ??? question "CC-Error"
 
-    CC error, incremented by 1 with each packet counter failure.
-    MPEG-TS stream is divided into packets. Each packet has a number with a value in the range 0-15. The counter value increases with each burst and resets to 0 after 15 bursts.
-    The CC error counter increases by 1 for each lost packet.
+    CC error, incremented by 1 with each packet counter failure
+    MPEG-TS stream is divided into packets. Each packet has a number with a value in the range 0-15. The counter value increases with each burst and resets to 0 after 15 bursts
+    The CC error counter increases by 1 for each lost packet
 
     Possible reasons:
 
-    - Loss of data when receiving UDP/RTP. On Linux, you can check with the `netstat -su` command. If the value of `packet receive errors` increases, you need to check the network connection buffer settings. If possible, run diagnostics on the transmitting server.
+    - Loss of data when receiving UDP/RTP. On Linux, you can check with the `netstat -su` command. If the value of `packet receive errors` increases, you need to check the network connection buffer settings. If possible, run diagnostics on the transmitting server
 
-    - **Weak DVB signal or errors in the signal**. It is necessary to check the signal level and reception errors: `astra –femon -a ADAPTER`.
+    - **Weak DVB signal or errors in the signal**. It is necessary to check the signal level and reception errors: `astra –femon -a ADAPTER`
 
-    - **Duplication of the stream during transmission over UDP**. Multiple streams have the same multicast group and port number.
+    - **Duplication of the stream during transmission over UDP**. Multiple streams have the same multicast group and port number
 
 ??? question "Channel has no active inputs"
 
-    DAn error occurs if the channel does not have available sources to switch.
+    DAn error occurs if the channel does not have available sources to switch
     
-    In the channel settings, you can specify multiple sources (inputs) for redundancy. The sources work in order, in case of failure of the first source, it switches to the second and so on.
+    In the channel settings, you can specify multiple sources (inputs) for redundancy. The sources work in order, in case of failure of the first source, it switches to the second and so on
 
-    An error occurs if the channel does not have healthy available sources to switch to.
+    An error occurs if the channel does not have healthy available sources to switch to
 
-    The cause of the source failure can be identified from other log messages, as it is the result of an earlier error. You can also check the incoming stream using the stream analyzer: `astra--analyze ADDRESS`.
+    The cause of the source failure can be identified from other log messages, as it is the result of an earlier error. You can also check the incoming stream using the stream analyzer: `astra--analyze ADDRESS`
 
 ??? question "ECM Not Found"
 
     The key to decrypt the stream was not found. Possible reason:
 
-    - No subscription or subscription has expired.
-    - Invalid package ID for key packages. When a channel is started, the package ID (PID) is displayed in the `Select ECM pid:* message`. The package ID can be manually selected using the `ecm_pid` or `cas_data` options.
-    `cm_pid` - Sets the package ID. Available identifiers are displayed in the log (`Skip ECM pid:*` messages).
-    `cas_data` - depends on the conditional access system.
-    - Limiting the number of requests to the CA server or access card.
+    - No subscription or subscription has expired
+    - 
+    - Invalid package ID for key packages. When a channel is started, the package ID (PID) is displayed in the `Select ECM pid:* message`. The package ID can be manually selected using the `ecm_pid` or `cas_data` options
+    `cm_pid` - Sets the package ID. Available identifiers are displayed in the log (`Skip ECM pid:*` messages)
+    `cas_data` - depends on the conditional access system
+    - Limiting the number of requests to the CA server or access card
   
 ??? question "Both keys changed"
 
     Violation of the sequence of decryption keys. Usually appears after the `ECM Not Found` message.
-    The keys for decrypting the stream are transmitted in pairs: current and next.
-    After changing the encryption key to the next one, a new pair comes. 
+    The keys for decrypting the stream are transmitted in pairs: current and next
+
+    After changing the encryption key to the next one, a new pair comes
+
     Example:
     ```
     1111110022222200:33333300444444005555550066666600:
@@ -171,20 +174,20 @@ Log messages are of the following types:
 
 ??? question "Receiving timeout. restart input"
 
-    If the data source is unavailable, it is restarted.
+    If the data source is unavailable, it is restarted
     
-    For example, if we have a failure to receive data via the http mpeg-ts protocol and the server closed the connection, an attempt will be made to reconnect to it.
+    For example, if we have a failure to receive data via the http mpeg-ts protocol and the server closed the connection, an attempt will be made to reconnect to it
 
 ??? question "Authentication failed"
 
-    Authorization failed when trying to access the Web interface or API.
+    Authorization failed when trying to access the Web interface or API
     
-    The log also displays the login and IP address with which an attempt was made to authorize.
+    The log also displays the login and IP address with which an attempt was made to authorize
 
 ??? question "Event_request_send"
 
     The status of sending data to the monitoring server.
-    If the HTTP response code is not 200, then an error will be thrown.
+    If the HTTP response code is not 200, then an error will be thrown
 
     Example:
 
@@ -197,7 +200,7 @@ Log messages are of the following types:
 
     Perhaps your license has been compromised or you have exceeded the number of servers in your license.
     
-    Contact support.
+    Contact support
 
 ??? question "SDT checksum error"
 
@@ -210,13 +213,13 @@ Log messages are of the following types:
 
 ??? question "hls sync. wrong pts"
 
-    The value of PTS in the stream is constantly increasing.
+    The value of PTS in the stream is constantly increasing
     
     When the value gets to 8 589 934 591 it should start from 0
     
     Astra considers the difference in PTS as a new value. (It is logical that the new value should be greater than the previous one).
     
-    It happens that in the stream the new value is less than the previous one - this causes an error in the formation of segments.
+    It happens that in the stream the new value is less than the previous one - this causes an error in the formation of segments
 
 ## http client errors
 
