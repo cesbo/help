@@ -1,20 +1,20 @@
 # LOG and error messages
 
-List of commands for viewing program browsing logs:
+List of log output methods:
 
-- **console** - if Astra is running interactively, without the `--daemon option`
+- **console** - if Astra is running interactively. Output messages to the console, disabled by options: `--daemon` or `--no-stdout`
 - **file** - `--log /var/log/astra.log` where `/var/log/astra.log` is the full path to the log file
 - **syslog** - `--syslog astra`, where `astra` is the process name
 - **web interface** - displaying current system messages in the `LOG` tab
 
-Log messages are of the following types:
+Log messages are of the following levels:
 
 - **info** - general information about the program work process
 - **warning** - non-operational failure warning
 - **error** - an error that caused the channel or its source to stop working
 - **debug** - log settings mode, displaying additional information when receiving system messages
 
-## Troubleshoot
+## Adapters
 
 ??? question "fe has lock"
 
@@ -37,28 +37,6 @@ Log messages are of the following types:
     - **snr** - signal to noise ratio
     - **ber** - bit error rate, it's important for determining the reception quality
     - **unc** - invalid data blocks. same as ber, shows reception quality
-
-??? question "Too many open files"
-
-    The error occurs if the number of active connections or open files exceeds the operating system limit
-
-    To check the current limit, use the following command:
-
-    ```
-    grep "open files" /proc/PID/limits
-    ```
-
-    PID is a unique process ID
-    
-    To search for it - run: `ps ax | grep astra`
-
-    To change the system limit, run the `ulimit -n 65536` command and restart Astra
-
-    The command is present in the `init.d` startup script
-
-??? question "PAT: stream with id * is not found"
-
-    The channel with the specified number (pnr) was not found in the stream. To check the available channels, you need to scan the source
 
 ??? question "Device or resource busy"
 
@@ -100,22 +78,11 @@ Log messages are of the following types:
 
     you should replace X with the adapter number
 
-??? question "Address already in use"
+## MPEG-TS
 
-    The error occurs when trying to use a TCP port occupied by another process. To view a list of open ports, use the command:
+??? question "PAT: stream with id * is not found"
 
-    ```
-    netstat -tnlp
-    ```
-
-??? question "Resource temporarily unavailable"
-
-    The network adapter cannot cope with the amount of data coming from Astra. Possible reasons:
-
-    - Check network buffer settings
-    - Check the mode of the network adapter: run the command `ethtool eth*` or `mii-tool eth*`. The speed must match the adapter type 1Gbit, 10Gbit
-    - Network adapter must be Intel or Broadcom
-    - Check your DVB adapters and channels settings. If the budget=true parameter is set in the DVB adapter settings, and the channel number (pnr) is not specified in the channel properties, then the entire transponder will be transmitted
+    The channel with the specified number (pnr) was not found in the stream. To check the available channels, you need to scan the source
 
 ??? question "PES-Error"
 
@@ -138,6 +105,17 @@ Log messages are of the following types:
 
     - **Duplication of the stream during transmission over UDP**. Multiple streams have the same multicast group and port number
 
+??? question "SDT checksum error"
+
+    Error checking the checksum of the SDT table.
+    Usually does not lead to image problems.
+
+??? question "PCR interval out of range"
+
+    Timestamps come less than once every 250ms
+
+## Inputs
+
 ??? question "Channel has no active inputs"
 
     DAn error occurs if the channel does not have available sources to switch
@@ -147,6 +125,69 @@ Log messages are of the following types:
     An error occurs if the channel does not have healthy available sources to switch to
 
     The cause of the source failure can be identified from other log messages, as it is the result of an earlier error. You can also check the incoming stream using the stream analyzer: `astra--analyze ADDRESS`
+
+??? question "Receiving timeout. restart input"
+
+    If the data source is unavailable, it is restarted
+    
+    For example, if we have a failure to receive data via the http mpeg-ts protocol and the server closed the connection, an attempt will be made to reconnect to it
+
+??? question "hls sync. wrong pts"
+
+    The value of PTS in the stream is constantly increasing
+    
+    When the value gets to 8 589 934 591 it should start from 0
+    
+    Astra considers the difference in PTS as a new value. (It is logical that the new value should be greater than the previous one).
+    
+    It happens that in the stream the new value is less than the previous one - this causes an error in the formation of segments
+
+??? question "Http client errors"
+
+    `connection timeout` - connection to the server failed
+
+    `request timeout` - the connection was successful but the server did not accept the request in time
+
+    `response timeout` - the server accepted the request, but did not respond in time
+
+    `receiving timeout` - (hls) - segments are being received too long
+
+## Other
+
+??? question "Too many open files"
+
+    The error occurs if the number of active connections or open files exceeds the operating system limit
+
+    To check the current limit, use the following command:
+
+    ```
+    grep "open files" /proc/PID/limits
+    ```
+
+    PID is a unique process ID
+    
+    To search for it - run: `ps ax | grep astra`
+
+    To change the system limit, run the `ulimit -n 65536` command and restart Astra
+
+    The command is present in the `init.d` startup script
+
+??? question "Address already in use"
+
+    The error occurs when trying to use a TCP port occupied by another process. To view a list of open ports, use the command:
+
+    ```
+    netstat -tnlp
+    ```
+
+??? question "Resource temporarily unavailable"
+
+    The network adapter cannot cope with the amount of data coming from Astra. Possible reasons:
+
+    - Check network buffer settings
+    - Check the mode of the network adapter: run the command `ethtool eth*` or `mii-tool eth*`. The speed must match the adapter type 1Gbit, 10Gbit
+    - Network adapter must be Intel or Broadcom
+    - Check your DVB adapters and channels settings. If the budget=true parameter is set in the DVB adapter settings, and the channel number (pnr) is not specified in the channel properties, then the entire transponder will be transmitted
 
 ??? question "ECM Not Found"
 
@@ -172,12 +213,6 @@ Log messages are of the following types:
     33333300444444005555550066666600:7777770088888800
     ```
 
-??? question "Receiving timeout. restart input"
-
-    If the data source is unavailable, it is restarted
-    
-    For example, if we have a failure to receive data via the http mpeg-ts protocol and the server closed the connection, an attempt will be made to reconnect to it
-
 ??? question "Authentication failed"
 
     Authorization failed when trying to access the Web interface or API
@@ -201,33 +236,3 @@ Log messages are of the following types:
     Perhaps your license has been compromised or you have exceeded the number of servers in your license.
     
     Contact support
-
-??? question "SDT checksum error"
-
-    Error checking the checksum of the SDT table.
-    Usually does not lead to image problems.
-
-??? question "PCR interval out of range"
-
-    Timestamps come less than once every 250ms
-
-??? question "hls sync. wrong pts"
-
-    The value of PTS in the stream is constantly increasing
-    
-    When the value gets to 8 589 934 591 it should start from 0
-    
-    Astra considers the difference in PTS as a new value. (It is logical that the new value should be greater than the previous one).
-    
-    It happens that in the stream the new value is less than the previous one - this causes an error in the formation of segments
-
-## http client errors
-
-`connection timeout` - connection to the server failed
-
-`request timeout` - the connection was successful but 
-the server did not accept the request in time
-
-`response timeout` - the server accepted the request, but did not respond in time
-
-`receiving timeout` - (hls) - segments are being received too long
