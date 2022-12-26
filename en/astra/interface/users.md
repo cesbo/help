@@ -10,4 +10,4 @@ Go to Settings -> Users, and in the upper right corner click on the `NEW USER` b
 - **TYPE** - user type:
     - **User** - not access to web interface. The account is used only for authorization when viewing streams.
     - **Observer** - read-only access to web interface.
-    - **Administrator** - full access.s
+    - **Administrator** - full access.
