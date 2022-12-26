@@ -36,6 +36,8 @@ plugins:
       separator: '[\s\-\_]+'
 
 markdown_extensions:
+  - toc:
+      toc_depth : "1-1"
   - abbr
   - admonition
   - attr_list
