@@ -132,27 +132,23 @@ Log messages are of the following levels:
     
     For example, if we have a failure to receive data via the http mpeg-ts protocol and the server closed the connection, an attempt will be made to reconnect to it
 
-??? question "hls sync. wrong pts"
+??? question "hls sync failed"
 
     The value of PTS in the stream is constantly increasing
     
     When the value gets to 8 589 934 591 it should start from 0
     
-    Astra considers the difference in PTS as a new value. (It is logical that the new value should be greater than the previous one).
-    
-    It happens that in the stream the new value is less than the previous one - this causes an error in the formation of segments
+    Astra cannot determine the bitrate of the incoming stream, because the timestamp was not found in the stream or its value is out of range
 
-??? question "Http client errors"
+??? question "Connection timeout / Request timeout"
 
-    `connection timeout` - connection to the server failed
+    Probable cause of the error can be when receiving streams via HTTP, HLS, RTSP. Server not responding to connection
 
-    `request timeout` - the connection was successful but the server did not accept the request in time
+??? question "Response timeout / Receiving timeout"
 
-    `response timeout` - the server accepted the request, but did not respond in time
+    Probable cause of the error may be when receiving streams via HTTP, HLS, RTSP, DVB, UDP. No data from source
 
-    `receiving timeout` - (hls) - segments are being received too long
-
-## Other
+## Others
 
 ??? question "Too many open files"
 
