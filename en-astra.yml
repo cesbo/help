@@ -55,7 +55,8 @@ nav:
     - 'Backup': 'quick-start/backup.md'
     - 'Update': 'quick-start/update.md'
     - 'Uninstall': 'quick-start/uninstall.md'
-  - 'Interface': 'interface/index.md'
+  - 'Interface':
+    - 'interface/index.md'
     - 'Reset Password': 'quick-start/reset-password.md'
   - 'Input':
     - 'input/index.md'
