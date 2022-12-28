@@ -21,28 +21,17 @@ Influxdb is used for a storage of statistics on the operation of channels. You m
 ## HTTP Settings
 
 - **HTTP Access Log** - shows the full path to the file for writing the request log to the HTTP server
-
 - **HTTP Sessions** - Enable/disable the ability to monitor http sessions. After disabling this feature , the tab "Sessions" will be removed and the parameters of HLS generation will be changed (the intermediate index file used to check the session will be removed). Sessions are enabled by default
-
 - **HTTP Access Log** - shows the full path to the file for writing the request log to the HTTP server
-
 - **Sessions Backend Address** - URL for sending an HTTP POST request with information about the start/end of the session
-
 - **Minimal Session Time** - the function allows you to send information on sessions longer than the specified time
 
 When filling in these fields-the web interface will switch to the https protocol, it will be possible to use the https protocol in the output line and HTTP play will work over the https protocol.
 It is possible to get certificates, for example, from the service [letsencrypt](https://letsencrypt.org/)
-
-- **TLS certificate chain** - full path to the certificate chain
-
-!!! note ""
-    for example - /etc/letsencrypt/live/cesbo.com/fullchain.pem
+For example - `/etc/letsencrypt/live/cesbo.com/fullchain.pem`
 
 - **TLS certificate key** - full path to the certificate key 
-  
-!!! note ""
-    for example - /etc/letsencrypt/live/cesbo.com/privkey.pem
-  
+For example - `/etc/letsencrypt/live/cesbo.com/privkey.pem`
 - **Disable TLS on primary port** - https only for ports with channels. for a port with a web interface https is not used
 
 **These settings are global for all streams (unless overridden in the stream settings)**
