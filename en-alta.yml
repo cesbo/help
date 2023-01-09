@@ -24,6 +24,8 @@ theme:
   palette:
     primary: blue
     accent: indigo
+  static_templates:
+    - widget.html
   features:
     - navigation.instant
     - navigation.tabs
@@ -32,6 +34,8 @@ theme:
     - navigation.indexes
 
 plugins:
+  - contexty:
+      output: contexty.json
   - search:
       separator: '[\s\-\_]+'
 
