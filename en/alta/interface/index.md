@@ -1,4 +1,6 @@
 ---
+contexty:
+  - /login
 description: 'Web Interface allows to access and manage Alta directly with your web browser'
 ---
 

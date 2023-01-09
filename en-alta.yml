@@ -34,6 +34,8 @@ theme:
     - navigation.indexes
 
 plugins:
+  - contexty:
+      output: contexty.json
   - search:
       separator: '[\s\-\_]+'
 
