@@ -24,6 +24,8 @@ theme:
   palette:
     primary: blue
     accent: indigo
+  static_templates:
+    - widget.html
   features:
     - navigation.instant
     - navigation.tabs
