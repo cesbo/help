@@ -1,4 +1,6 @@
 ---
+contexty:
+  - /login
 description: 'Cesbo Alta installation is a simple process – just copy single binary file to your server'
 ---
 
@@ -50,5 +52,5 @@ sudo alta init
 - **Enable service autorun** - this option available only with Systemd. Service will be launched automatically on system startup
 - **Start service** - start service immediately after wizard
 
-Your service is ready to use. 
-Now you may connect to the service and login to it. You can find more information about connecting to an interface in: [cesbo.com/alta](/en/alta/interface/)
+Your service is ready to use.
+Now you may connect to the service and login to it. You can find more information about connecting to an interface in: [Interface Guide](/en/alta/interface/)

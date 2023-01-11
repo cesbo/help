@@ -1,8 +1,12 @@
 MAKEFLAGS = -rR --no-print-directory
 
-.PHONY: all en-alta en-astra en-codex
+.PHONY: all prepare en-alta en-astra en-codex
 
-all: en-alta en-astra en-codex cloudflare-deploy
+all: prepare en-alta en-astra en-codex cloudflare-deploy
+
+prepare:
+	@echo "Install plugins"
+	@python3 -m pip install -e src/contexty
 
 cloudflare-deploy:
 	@echo "Preparing configs for Cloudflare Pages"
