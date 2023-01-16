@@ -24,7 +24,7 @@ By the default HTTP Play disabled. To activate it open Settings -> HTTP Play.
 
 ## Channel Logo
 
-To install the logo, you need to specify the path to the logo file. The name of the stream must match the name of the icon. For example:
+To install the logo, you need to specify the path to the logo catalog and current file. The name of the stream must match the name of the icon. For example:
 
 ```
 mkdir /var/lib/astra
