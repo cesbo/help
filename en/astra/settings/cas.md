@@ -1,6 +1,6 @@
 # CAS
 
-Conditional Access System - a system for encrypting channels, protecting them from unauthorized access. The Astra interface allows you to interact with similar systems by connecting to them and using their functionality
+Conditional Access System - a system for encrypting channels, protecting them from unauthorized access. The Astra interface allows you to set up a connection to conditional access systems using the [DVB Simulcrypt protocol](https://dvb.org/?standard=implementation-guidelines-of-the-dvb-simulcrypt-standard){target="_blank"}
 
 ![cas-1](cas-1.png)
 
@@ -19,9 +19,9 @@ Conditional Access System - a system for encrypting channels, protecting them fr
 - **ECMG Port** - the parameter contains the port of the ECMG server to which the encryption keys will be sent
 - **Crypto period** - parameter defines the interval for changing the channel encryption key. The parameter value is described in seconds. The standard value of the parameter is 10
 - **EMMG Protocol** - the drop-down list defines the protocol of interaction with the EMMG server
-- **EMMG Port** - the parameter contains the port through which the connection to the EMG server takes place. This port is on the side of the server where the Astra interface is located.
+- **EMMG Port** - the parameter contains the port through which the connection to the EMG server takes place. This port is on the side of the server where the Astra interface is located
 - **EMM PID** - the parameter contains the PID for EMM packages in system
-- **EMM Private Data (HEX)** - the parameter contains the data to add to the CAT table. 
+- **EMM Private Data (HEX)** - the parameter contains the data to add to the CAS table
 
 !!! note ""
     EMM Private Data is issued by the CAS provider. If you do not have data, then this parameter is not filled

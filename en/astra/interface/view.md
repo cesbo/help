@@ -13,11 +13,11 @@ This tab allows you to customize the visual style of the Astra interface and cha
 
 ## Dashboard view
 
-- **Arrange by** - this drop-down list allows to sorting servers and channels in the Dashboard tab according to certain parameters
+- **Arrange by** - this drop-down list allows to grouping servers and channels in the Dashboard tab according to certain parameters
   - **Default: None**
   - **Type**
   - **Servers**
-  - **Adapter**
+  - **Adapter** - this option allows you to group by a [specific category](/en/astra/settings/grops.md). The category name appears in the list of sort options. Once selected, Dashboard streams and kunkles are sorted into groups of that category
 - **Hide disabled items** - the checkbox that hides streams and channels that have lost their functionality due to errors
 - **Hide inactive items** - the checkbox that hides shuted down streams and channels
 - **Hide items without error** - checkbox that hides running streams and channels with no errors

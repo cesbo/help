@@ -28,5 +28,5 @@ The dashboard is an interface for viewing the status of each channel. It also al
 5. Log - list of the current messages. It contains a detailed description of data streams in Astra
 6. Search - quick search for channels and adapters. Press S for fast access to this function
 7. New Adapter - add a new DVB adapter
-8. New Stream - add a new Stream
+8. [New Stream](/en/astra/quick-start/channel.md) - add a new Stream
 9. [View](/en/astra/settings/view.md) - settings channel grouping or display categories.
