@@ -14,29 +14,28 @@ Groups/categories are used to sort channels in [http play](/astra/settings/http-
 - **Groups** - the Groups panel allows you to add groups to it and manage their order
 - **Remove Category** - the Delete Category check box allows to completely delete this category. After checking the box, you need to click on the APPLY button
 
-## "Streams" button
+## Streams
 
-When you click the Threads button, a new window will open. It presents a channel that can be combined into groups.
+When you choose it, a new window will open. It presents a channel that can be combined into groups.
 
 ![group-3](group-3.png)
 
 - **Channels** - the drop-down list allows to select the desired group of channels
 - **Сheckboxes** - the list shows all available channels. Checking the box next to a channel adds it to the group
 
-!!! note ""
-    For example
-    ```
-    Genre [category]
-     - movies [group]
-       - movie channel 1 [stream/channel]
-       - movie channel 2 [stream/channel]
-     - travel [group]
-       - travel channel 1 [stream/channel]
-       - travel channel 2 [stream/channel]
-     -  - sport [group]
-        - sport channel 1 [stream/channel]
-        - sport channel 1 [stream/channel]
-    ```
+For example
+  ```
+  Genre [category]
+    - movies [group]
+      - movie channel 1 [stream/channel]
+      - movie channel 2 [stream/channel]
+    - travel [group]
+      - travel channel 1 [stream/channel]
+      - travel channel 2 [stream/channel]
+    - sport [group]
+      - sport channel 1 [stream/channel]
+      - sport channel 1 [stream/channel]
+  ```
 
 !!! danger ""
     A stream cannot consist of multiple groups and categories at the same time

@@ -8,7 +8,7 @@ The tab allows you to enter the current configuration and Astra license data.
 - **TYPE** - field that describing type of license being added or edited
   - **Demo**
   - **Subscription**
-  - **Lifetime** - this paragraph implies that you can use any version of the Astra interface released up to date
+  - **Lifetime** - this paragraph implies that you can use any version of the Astra interface released up to date or released before purchase
 - **LICENSET TO** - field that contains the e-mail to which the license was purchased
 - **EXPIRATION DATE** - field that contains expiration date of the license. For Lifetime licenses field shows the date of license purchase
 - **ACTIVATE LICENSE** - field that contains the contents of the file `license.txt`, that allows you to authorize and activate a specific version of Astra
