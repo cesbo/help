@@ -58,6 +58,18 @@ nav:
   - 'Interface':
     - 'interface/index.md'
     - 'Reset Password': 'quick-start/reset-password.md'
+    - 'Settings':
+      - 'settings/general.md'
+      - 'CAS and Simulcrypt': 'settings/cas.md'
+      - 'Edit config': 'settings/cas.md'
+      - 'HLS settings': 'settings/hls.md'
+      - 'HTTP-play settings': 'settings/http-play.md'
+      - 'Import settings': 'settings/import.md'
+      - 'Servers settings': 'settings/servers.md'
+      - 'Groups settings': 'settings/groups.md'
+      - 'License settings': 'settings/license.md'
+      
+
   - 'Input':
     - 'input/index.md'
     - 'DVB, ATSC, ISDB-T': 'input/dvb.md'
@@ -71,7 +83,6 @@ nav:
     - 'Broadcasting':
       - 'UDP': 'output/broadcast/udp.md'
       - 'MPTS': 'output/broadcast/mpts.md'
-      - 'CAS and Simulcrypt': 'output/broadcast/cas.md'
     - 'HTTP/HLS':
       - 'HTTP Auth': 'output/http/auth.md'
     - 'Other':
