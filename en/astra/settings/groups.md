@@ -23,19 +23,18 @@ When you choose it, a new window will open. It presents a channel that can be co
 - **Channels** - the drop-down list allows to select the desired group of channels
 - **Сheckboxes** - the list shows all available channels. Checking the box next to a channel adds it to the group
 
-For example
-  ```
-  Genre [category]
-    - movies [group]
-      - movie channel 1 [stream/channel]
-      - movie channel 2 [stream/channel]
-    - travel [group]
-      - travel channel 1 [stream/channel]
-      - travel channel 2 [stream/channel]
-    - sport [group]
-      - sport channel 1 [stream/channel]
-      - sport channel 1 [stream/channel]
-  ```
+For example:
+
+  - **Genre [category]** - the largest part of the hierarchical sorting structure, including groups of streams and channels
+    - **movies [group]** - the middle part of the hierarchical sorting structure, including channels and streams that fit the topic of the group
+      - **movie channel 1 [stream/channel]** - the smallest part of the sort hierarchical structure, are sort objects
+      - **movie channel 2 [stream/channel]**
+    - **travel [group]**
+      - **travel channel 1 [stream/channel]**
+      - **travel channel 2 [stream/channel]**
+    - **sport [group]**
+      - **sport channel 1 [stream/channel]**
+      - **sport channel 1 [stream/channel]**
 
 !!! danger ""
     A stream cannot consist of multiple groups and categories at the same time
