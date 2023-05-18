@@ -1,6 +1,0 @@
----
-hide:
-  - toc
----
-
-# System Administration

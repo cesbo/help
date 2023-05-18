@@ -6,115 +6,52 @@ Categories:
 
 - `alta` - Cesbo Alta
 - `astra` - Cesbo Astra
-- `codex` - Protocols, Transports, Encoding, and System Administration
-
-## Requirements
-
-- [Python](https://www.python.org/) 3.7+
-- [MkDocs](https://www.mkdocs.org/) 1.4+
-
-To deploy on Cloudflare Pages need to set environment variable `PYTHON_VERSION` to `3.7`
-
-## Installation
-
-MkDocs requires a recent version of Python and the Python package manager, **pip**, to be installed on your system.
-
-You can check if you already have these installed from the command line:
-
-```bash
-$ python --version
-Python 3.10.8
-
-$ pip --version
-pip 22.2.2 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
-```
-
-If you already have those packages installed, you may install all dependencies with next command:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Development
-
-For documentation writing you may start builtin development server:
-
-```bash
-mkdocs serve -f en-alta.yml
-```
-
-Documentation will be served on http://localhost:8000/en/alta/
-Development server has live reload feature - after saving a page will be reloaded automatically.
+- `misc` - Tools, Utilities, System Administration, etc
 
 ## Formatting rules
 
 ### Heading
 
-Only 3 levels is available:
+Only 2 levels is available:
 
-- `#` - first-level is available only in the first row
 - `##` - second-level heading
 - `###` - third-level heading
 
+## Lists
+
+Nested lists is illegal
+
 ### Text decoration
 
-- Bold - names:
-    - Form field
-    - Button
-    - Menu item
-    - Application name
-- Code - examples and example parts:
-    - Part of the log
-    - Command
-    - Example URL
+Bold - names:
 
-### Keyboard keys
+- Form field
+- Button
+- Menu item
+- Application name
 
-To display keyboard keys use `++`:
+Code - examples and example parts:
 
-```
-++ctrl+c++
-```
+- Part of the log
+- Command
+- Example URL
 
-Should be in lowercase without spaces.
-
-### Note: General tip
+### General note
 
 Used for additional information
 
 ```
-!!! note ""
-    Second row
+::note
+New feature now available! Check it out
+::
 ```
 
-### Note: Alert block
+### Alert block
 
 For attention
 
 ```
-!!! danger ""
-    Second row
+::alert
+Please update your password immediately
+::
 ```
-
-### Expandable block: Troubleshooting
-
-```
-??? question "Not working..."
-
-    Description
-```
-
-All content inside block should be indented with 4 spaces.
-
-### Expandable block: Examples
-
-```
-??? example "Example script on PHP"
-
-    ```php
-    <?php
-    echo "Hello world!";
-    ```
-```
-
-All content inside block should be indented with 4 spaces.
