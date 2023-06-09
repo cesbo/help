@@ -25,7 +25,7 @@ We suggest considering the Astra software, which boasts powerful and flexible fe
 
 ## Hardware
 
-![Hospitality TV diagram](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/hospitality-tv_dprq18.svg)
+![Hospitality TV diagram](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/hospitality-tv.svg)
 
 This simple diagram is used for the illustration. We have a Satellite signal, Linux-based Server PC with DVB-S/S2 card(s), and RESI DVB-C FSM Modulator card(s).
 
@@ -33,7 +33,7 @@ This simple diagram is used for the illustration. We have a Satellite signal, Li
 
 For receiving satellite channels you may use any DVB-S/S2 adapter with drivers for Linux.
 
-![DigitalDevices Max SX8](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/maxsx82018_bpotp9.jpg)
+![DigitalDevices Max SX8](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/maxsx82018.jpg)
 
 Most popular DVB receivers are:
 
@@ -45,7 +45,7 @@ Most popular DVB receivers are:
 
 In this article, we consider simple steps on How to set up Astra for DVB-C Modulation using [RESI DVB-C FSM 8](https://www.digital-devices.eu/shop/en/business-tv/qam-sdr-modulator/). Also you may use [TBS6004](https://www.tbsdtv.com/products/tbs6004-dvb-c-4-qam-pcie-card.html) modulator.
 
-![DigitalDevices RESI DVB-C Modulator](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/resi-fsm-8-16-24-002_fezzvv.png)
+![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/resi-fsm.png)
 
 Short description:
 
@@ -107,25 +107,25 @@ To configure receiving channels from satellite we recommend to having a look at 
 
 Below provided screenshot of example adapter settings:
 
-![DVB-S2 Example](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/dvb-s-settings_1yhsy70.png)
+![DVB-S2 Example](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
 
 ## Make a scan and select the required channels
 
 When we figured out how to configure our Adapters, we may make a scan of the required Transponder (frequency) and append channels to Astra by selecting all the programs you want to add.
 
-![Scan configured adapter](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/scan_1e3o45i.png)
+![Scan configured adapter](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/scan.png)
 
-![Added channels on dashboard](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/dashboard_nubwl9.png)
+![Added channels on dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
 
 ## Create New Stream with MPTS
 
 MPTS is a Multi Program Transport Stream (or multiplex) is a stream containing several services (programs). It is used to transfer channels to ip-qam/ip-asi modulators and multiplexers. Below are screenshots of most general configuration pages
 
-![MPTS General Settings](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-general_1tx7z2k.png)
+![MPTS General Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-general.png)
 
-![MPTS Input List](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-input_11mmp98.png)
+![MPTS Input List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-input.png)
 
-![MPTS SDT Settings](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-sdt_1hz842c.png)
+![MPTS SDT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-sdt.png)
 
 In the SDT settings should be provided all information about channel:
 
@@ -133,7 +133,7 @@ In the SDT settings should be provided all information about channel:
 - **PNR** - program number should be same as in the input list
 - **LCN** - logical number defines what channel number will be on the TV set
 
-![MPTS NIT Settings](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-nit_1j5x7s2.png)
+![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
 
 In the NIT settings provide information for DVB-C transponder.
 
@@ -158,11 +158,11 @@ In the output - we get the number of the adapter and its modulators like:
 
 Now it is a turn to configure the Output signal to the RESI DVB-C modulator in the MPTS settings
 
-![MPTS Output List](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-output_17iwo2p.png)
+![MPTS Output List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-output.png)
 
 As a result, we should get a fully configured Stream, as shown in the screenshot:
 
-![MPTS on Dashboard](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/mpts-dashboard_1iyrrrt.png)
+![MPTS on Dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
 
 ## Monitor and manage
 
@@ -170,11 +170,11 @@ With Astra, you may  Analyze the quality and stability of transport streams. Exp
 
 Also at any time you may open Astra Web Interface to simply check out the Dashboard. Here you will see already configured Adapters, created Streams, and some useful options like signal strength/quality, bitrate at channels, and so on.
 
-![Astra Web Interface](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/astra-dashboard_yi2v62.png)
+![Astra Web Interface](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/astra-dashboard.png)
 
-![Zabbix](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/zabbix_1x26m74.png)
+![Zabbix](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/zabbix.png)
 
-![Grafana](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/grafana_1cch4re.png)
+![Grafana](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/grafana.png)
 
 ## Checking the output DVB-C signal
 
@@ -182,7 +182,7 @@ With these simple steps, we have set up our Stream. Now we have the channels con
 
 The best way to check the output signal is to use an analyzer. There are many different models from many manufacturers. For example, Telestar:
 
-![Telestar Analyzer](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/telestar_bhbn5h.jpg)
+![Telestar Analyzer](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/telestar.jpg)
 
 Also, we can connect the coaxial cable from RESI to the TV set, and in the TV settings make a new DVB-C channel scan, either Full Scan or Network Scan (or specify the scan parameters manually). Channels search settings fully depend on the TV manufacturer, but in general, they are very similar.
 
