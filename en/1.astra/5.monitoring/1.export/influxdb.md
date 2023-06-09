@@ -20,7 +20,7 @@ InfluxDB is an open-source time series database.
 
 ## InfluxDB Configuration
 
-Open the InfluxDB Admin interface at http://db-server:8086.
+Open the InfluxDB Admin interface at `http://db-server:8086`.
 
 First, create a new bucket. A bucket serves as storage for all data received from Astra. You can find buckets in the left sidebar under the "Load Data" group. To create a new bucket:
 

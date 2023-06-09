@@ -9,7 +9,7 @@ Astra allows you to export monitoring events with the status of incoming streams
 
 The address of the monitoring server can be specified in the web interface: Settings -> General -> Monitoring:
 
-![monitoring](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/snimok-ekrana-2023-03-01-v-103_12pyymi.png)
+![Monitoring Options](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
 
 Address has the following parameters:
 

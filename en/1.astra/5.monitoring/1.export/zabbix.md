@@ -89,6 +89,6 @@ Save changes. After about 10 minutes, you will see graphs and triggers about the
 
 ## Chart examples
 
-![Channels in Zabbix](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/zabbix-channel_1ssigtm.png)
+![Channels in Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-channel.png)
 
-![DVB in Zabbix](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/zabbix-dvb_12hy5vj.png)
+![DVB in Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-dvb.png)
