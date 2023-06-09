@@ -13,7 +13,7 @@ Virtual Adapter available for versions released after 20 Sep 2022
 
 For quick and simple configuration of MPTS reception, you may use the Virtual Adapter. Click on "New Adapter" in the main menu:
 
-![Virtual Adapter for MPTS](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/virtual-mpts_1vu4fcy.png)
+![Virtual Adapter for MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
 
 In the **Address** field set the source UDP, for example `udp://239.255.1.1:1234`. Read more about UDP address format in [Receive UDP with Astra](receiving-udp).
 

@@ -42,7 +42,7 @@ One of the biggest challenges of working with the Secure Reliable Transport (SRT
 
 To add a new SRT input in Astra, users can navigate to the "New Stream" tab or the settings of an existing stream and select the "Input Type" option as either SRT
 
-![](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/srt-listener_1vhul0u.png)
+![SRT Listener](https://cdn.cesbo.com/help/astra/receiving/ip/srt/listener.png)
 
 - **Input type** - this parameter is the first option on the SRT settings tab and is used to select the input type. To configure SRT reception, select "SRT" from the drop-down list. This enables the SRT-specific configuration options and allows you to enter the necessary information to receive an SRT stream
 - **SRT mode** - this parameter determines whether Astra will act as the caller or listener when establishing an SRT connection. To receive an SRT stream, select "Listener" from the drop-down list. This tells Astra to wait for incoming connections from the SRT stream's sender

@@ -36,7 +36,7 @@ Examples of UDP addresses:
 
 To configure a new UDP input using the Web Interface, begin by selecting "New Stream" from the main menu. Then, in the Input List, click on the gear icon and set the "Input Type" to UDP. Alternatively, you can modify an existing stream by opening its settings, adding a New Input, and clicking on the corresponding gear icon.
 
-![](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/udp_816vrf.png)
+![UDP Options](https://cdn.cesbo.com/help/astra/receiving/ip/udp/options.png)
 
 Most options presented in the web interface correspond directly to the components of the UDP address, as described in the "Media Address Format" section. However, there are also some additional options you might find useful:
 
@@ -47,7 +47,7 @@ Most options presented in the web interface correspond directly to the component
 
 There are also advanced options available for further customization:
 
-![Advanced Options](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/snimok-ekrana-2023-05-08-v-153_mpaf1m.png)
+![Advanced Options](https://cdn.cesbo.com/help/astra/receiving/ip/udp/advanced.png)
 
 Please use the advanced options only if you understand their implications
 

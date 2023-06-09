@@ -29,7 +29,7 @@ Options:
 
 To set up an RSTP input in Astra, you can either enter the source address directly into the "Input address" field in the Stream settings or use the "Input configuration" form accessed by clicking on the gear icon form:
 
-![](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/rtsp_17fogqz.png)
+![RTSP Options](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
 
 - **RSTP address** - source address of the RSTP stream
 - **Interleaved mode** - by the default Astra uses UDP to receive media data from camera, interleaved mode force camera to send data over TCP
