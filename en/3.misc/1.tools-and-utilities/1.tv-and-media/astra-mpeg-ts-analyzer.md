@@ -5,7 +5,7 @@ date: 2023-02-23
 
 Astra MPEG-TS Analyzer is built-in tool to analyze MPEG-TS streams.
 
-![Astra MPEG-TS Analyzer Interface](https://storage.crisp.chat/users/helpdesk/website/ba41e739dc7e3800/analyzer_snbpya.png)
+![Astra MPEG-TS Analyzer Interface](https://cdn.cesbo.com/help/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer/analyzer.png)
 
 ## Launch with Web Interface
 
