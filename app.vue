@@ -6,8 +6,29 @@
         <NuxtPage />
     </div>
     <SiteFooter />
+
+    <Teleport to="body">
+        <noscript>
+            <img
+                src="https://sa-help.cesbo.com/noscript.gif?hostname=help.cesbo.com&collect-dnt=true"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade"
+            />
+        </noscript>
+    </Teleport>
 </div>
 </template>
+
+<script setup lang="ts">
+onMounted(() => {
+    const script = document.createElement('script')
+    script.setAttribute('data-collect-dnt', 'true')
+    script.setAttribute('async', '')
+    script.setAttribute('defer', '')
+    script.setAttribute('src', 'https://sa-help.cesbo.com/latest.js')
+    document.head.appendChild(script)
+})
+</script>
 
 <style lang="scss">
 @tailwind base;
