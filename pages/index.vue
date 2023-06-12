@@ -99,11 +99,34 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 
+const title = 'Cesbo Help Center'
+
 useHead({
-    title: 'Cesbo Help Center',
+    title,
 })
 
-// TODO: SEO description
+// Only for SSR
+if(process.server) {
+    const absolutePageUrl = 'https://help.cesbo.com' + useRoute().fullPath
+    const description = 'Welcome to the Cesbo Help Center: your guide to setting up Digital TV headend systems for Internet Providers, Broadcasters, and the Hospitality industry. Dive into our knowledge base for step-by-step tutorials, in-depth articles, and troubleshooting support to make the most out of your Cesbo solutions'
+    const image = 'https://cdn.cesbo.com/help/og-image.png'
+
+    useSeoMeta({
+        description,
+
+        twitterCard: 'summary_large_image',
+        twitterSite: '@cesbo',
+        twitterTitle: title,
+        twitterDescription: description,
+        twitterImage: image,
+
+        ogType: 'website',
+        ogUrl: absolutePageUrl,
+        ogTitle: title,
+        ogDescription: description,
+        ogImage: image,
+    })
+}
 
 const query: QueryBuilderParams = {
     sort: [

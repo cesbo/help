@@ -51,61 +51,32 @@ const props = defineProps<{
 }>()
 
 const route = useRoute()
+const page = await queryContent(route.path).findOne()
 
-const { data: page } = await useAsyncData(
-    'site-content',
-    async (ctx) => {
-        const page = await queryContent(route.path).findOne()
+const title = `${ page.title } - ${ props.title }`
 
-        useHead({
-            title: `${ page.title } - ${ props.title }`,
-        })
+useHead({
+    title,
+})
 
-        // Only for SSR
-        if(process.server && !process.dev) {
-            let absolutePageUrl: string | undefined
-            let absoluteImageUrl: string | undefined
+// Only for SSR
+if(process.server) {
+    const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
 
-            const req = ctx?.ssrContext?.event.node.req
-            if(req && req.headers.host) {
-                const proto =
-                    (req.headers['x-forwarded-proto'] as string) ||
-                    ('encryped' in req.socket ? 'https' : 'http')
-                const host = req.headers['x-forwarded-host'] || req.headers.host
-                const origin = proto + '://' + host
+    useSeoMeta({
+        description: page.description,
 
-                absolutePageUrl = origin + route.fullPath
+        twitterCard: page.image ? 'summary_large_image' : 'summary',
+        twitterSite: '@cesbo',
+        twitterTitle: title,
+        twitterDescription: page.description,
+        ...( page.image ? { twitterImage: page.image } : {} ),
 
-                if(page.image) {
-                    absoluteImageUrl = origin + page.image
-                }
-            }
-
-            useSeoMeta({
-                description: page.description,
-
-                twitterCard: 'summary_large_image',
-                twitterSite: '@cesbo',
-                twitterTitle: page.title,
-                twitterDescription: page.description,
-                twitterImage: absoluteImageUrl,
-
-                ogType: 'website',
-                ogTitle: page.title,
-                ogDescription: page.description,
-                ogImage: absoluteImageUrl,
-                ogUrl: absolutePageUrl,
-            })
-        }
-
-        return page
-    }
-)
-
-if(!page.value) {
-    throw createError({
-        statusCode: 404,
-        statusMessage: 'Page Not Found',
+        ogType: 'website',
+        ogUrl: absolutePageUrl,
+        ogTitle: title,
+        ogDescription: page.description,
+        ...( page.image ? { ogImage: page.image } : {} ),
     })
 }
 </script>

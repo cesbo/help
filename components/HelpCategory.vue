@@ -79,12 +79,6 @@ const props = defineProps<{
     title: string,
 }>()
 
-useHead({
-    title: props.title,
-})
-
-// TODO: SEO description
-
 const route = useRoute()
 
 const query: QueryBuilderParams = {
@@ -99,28 +93,56 @@ const query: QueryBuilderParams = {
 }
 
 type Category = {
-    title: string,
-    color: string,
-    children: NavItem[],
+    title: string
+    description?: string
+    image?: string
+    color: string
+    children: NavItem[]
 }
 
-const { data: navigation } = await useAsyncData<Category>(
-    `content-navigation-${ route.path }`,
-    async () => {
-        const result: Category = {
-            title: '',
-            color: '',
-            children: [],
-        }
-
-        const [ astra ] = await fetchContentNavigation(query)
-        const [ category ]: NavItem[] = astra.children!
-
-        result.color = astra.color
-        result.title = category.title
-        result.children = category.children!
-
-        return result
+const navigation = await (async () => {
+    const result: Category = {
+        title: '',
+        color: '',
+        children: [],
     }
-)
+
+    const [ astra ] = await fetchContentNavigation(query)
+    const [ category ]: NavItem[] = astra.children!
+
+    result.color = astra.color
+    result.title = category.title
+    result.description = category.description
+    result.image = category.image
+    result.children = category.children!
+
+    return result
+})()
+
+const title = `${ navigation.title } - ${ props.title }`
+
+useHead({
+    title,
+})
+
+// Only for SSR
+if(process.server) {
+    const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
+
+    useSeoMeta({
+        description: navigation.description,
+
+        twitterCard: navigation.image ? 'summary_large_image' : 'summary',
+        twitterSite: '@cesbo',
+        twitterTitle: title,
+        twitterDescription: navigation.description,
+        ...( navigation.image ? { twitterImage: navigation.image } : {} ),
+
+        ogType: 'website',
+        ogUrl: absolutePageUrl,
+        ogTitle: title,
+        ogDescription: navigation.description,
+        ...( navigation.image ? { ogImage: navigation.image } : {} ),
+    })
+}
 </script>

@@ -37,10 +37,8 @@ export default defineNuxtConfig({
         },
     },
 
-    $production: {
-        routeRules: {
-            '/**': { static: true },
-        },
+    routeRules: {
+        '/**': { prerender: true },
     },
 
     algolia: {
