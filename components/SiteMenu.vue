@@ -175,7 +175,7 @@ import {
 
 const navigation = [
     { name: 'Home', to: 'https://cesbo.com' },
-    { name: 'Help', to: 'https://help.cesbo.com' },
+    { name: 'Help', to: '/' },
     { name: 'Profile', to: 'https://cesbo.com/profile' },
 ]
 

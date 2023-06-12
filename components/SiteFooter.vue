@@ -8,6 +8,7 @@
         flex
         flex-col md:flex-row
         items-center
+        justify-between
         max-w-screen-xl
         mx-auto
         pb-20
@@ -16,39 +17,31 @@
         gap-y-4
     "
 >
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <div class="md:grid md:grid-cols-3 md:gap-8">
-            <ul
-                role="list"
-                class="
-                    text-gray-600
-                    gap-4
-                    flex
-                "
-            >
-                <li v-for="(item, index) in links" :key="index">
-                    <NuxtLink
-                        :to="item.to"
-                        class="hover:text-gray-900"
-                    >{{ item.name }}</NuxtLink>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="flex gap-2">
+    <div
+        class="
+            text-lg
+            font-medium
+            text-color-900
+        "
+    >Need additional help or information?</div>
+    <div>
         <a
-            v-for="(item, index) in social"
-            :key="index"
-            :href="item.href"
-            :title="item.title"
-            target="_blank"
+            href="mailto:support@cesbo.com"
+            title="Send us an Email"
             class="
+                flex
+                items-center
+                text-base
+                font-normal
+                gap-x-2
                 rounded
                 hover:bg-gray-100 dark:hover:bg-zinc-600
+                hover:text-red-500
             "
-            :class="[ item.hover ]"
-        ><component :is="item.icon" class="w-6 h-6" /></a>
+        >
+            <AtSymbolIcon class="w-6 h-6" />
+            <span>Email Us</span>
+        </a>
     </div>
 </div>
 
@@ -70,21 +63,6 @@
             dark:text-gray-400
         "
     >&copy; 2023, Cesbo</div>
-
-    <NuxtLink
-        to="https://cesbo.com/terms"
-        class="
-            hover:text-black
-            dark:hover:text-white
-        "
-    >Terms</NuxtLink>
-    <NuxtLink
-        to="https://cesbo.com/privacy"
-        class="
-            hover:text-black
-            dark:hover:text-white
-        "
-    >Privacy</NuxtLink>
 </div>
 </footer>
 </template>
