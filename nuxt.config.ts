@@ -4,6 +4,14 @@ export default defineNuxtConfig({
         '@nuxt/content',
     ],
 
+    nitro: {
+        prerender: {
+            routes: [
+                '/sitemap.xml',
+            ],
+        }
+    },
+
     app: {
         head: {
             charset: 'utf-8',

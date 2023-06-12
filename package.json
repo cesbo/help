@@ -19,7 +19,8 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^20.2.6",
     "nuxt": "^3.5.3",
-    "sass": "^1.63.3"
+    "sass": "^1.63.3",
+    "sitemap": "^7.1.1"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.1.3",
