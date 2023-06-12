@@ -72,14 +72,14 @@
     >&copy; 2023, Cesbo</div>
 
     <NuxtLink
-        to="/terms"
+        to="https://cesbo.com/terms"
         class="
             hover:text-black
             dark:hover:text-white
         "
     >Terms</NuxtLink>
     <NuxtLink
-        to="/privacy"
+        to="https://cesbo.com/privacy"
         class="
             hover:text-black
             dark:hover:text-white
@@ -92,7 +92,6 @@
 <script setup lang="ts">
 import {
     AtSymbolIcon,
-    RssIcon,
 } from '@heroicons/vue/20/solid'
 
 const links = [
@@ -136,12 +135,6 @@ const social = [
         icon: TwitterIcon,
         href: 'https://twitter.com/cesbo',
         hover: 'hover:text-sky-500',
-    },
-    {
-        title: 'RSS',
-        icon: RssIcon,
-        href: '/rss.xml',
-        hover: 'hover:text-amber-500',
     },
 ]
 </script>
