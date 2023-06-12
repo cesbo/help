@@ -6,16 +6,6 @@
         <NuxtPage />
     </div>
     <SiteFooter />
-
-    <Teleport to="body">
-        <noscript>
-            <img
-                src="https://sa-help.cesbo.com/noscript.gif?hostname=help.cesbo.com&collect-dnt=true"
-                alt=""
-                referrerpolicy="no-referrer-when-downgrade"
-            />
-        </noscript>
-    </Teleport>
 </div>
 </template>
 
