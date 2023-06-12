@@ -56,6 +56,21 @@ Please update your password immediately
 ::
 ```
 
+### Badge
+
+```
+:badge[Version]
+:badge[Warning]{type="warning"}
+:badge[Error]{type="error"}
+```
+
+### YouTube
+
+```
+:youtube[Description]{id="video-id"}
+```
+
+
 ## Search Index
 
 ### Configure Language
