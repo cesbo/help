@@ -75,6 +75,14 @@ import { DocumentTextIcon } from '@heroicons/vue/24/outline'
 
 import type { QueryBuilderParams, NavItem } from '@nuxt/content/dist/runtime/types'
 
+type Category = {
+    title: string
+    description?: string
+    image?: string
+    color: string
+    children: NavItem[]
+}
+
 const props = defineProps<{
     title: string,
 }>()
@@ -90,14 +98,6 @@ const query: QueryBuilderParams = {
     sort: [
         { date: -1 },
     ],
-}
-
-type Category = {
-    title: string
-    description?: string
-    image?: string
-    color: string
-    children: NavItem[]
 }
 
 const navigation = await (async () => {
