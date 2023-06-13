@@ -3,7 +3,22 @@
     <SiteMenu />
     <div class="grow">
         <NuxtLoadingIndicator />
-        <NuxtPage />
+
+        <div class="px-4 py-20">
+            <div class="relative mx-auto max-w-xl h-14 mb-20">
+                <div
+                    class="
+                        absolute
+                        w-full
+                        z-10
+                    "
+                >
+                    <SiteSearch />
+                </div>
+            </div>
+
+            <NuxtPage />
+        </div>
     </div>
     <SiteFooter />
 </div>
