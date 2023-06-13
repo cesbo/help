@@ -13,43 +13,102 @@
         </div>
     </div>
 
-    <div class="mx-auto max-w-3xl">
-        <HelpCategory v-if="isCategory" :title="title" />
-        <ArticleContent v-else :title="title" />
+    <div class="mx-auto max-w-3xl text-gray-900">
+        <ContentRenderer :value="page">
+            <ArticleDate v-if="page.date" :date="page.date" />
+
+            <h1
+                class="
+                    text-3xl
+                    lg:text-4xl
+                    pb-5
+                    mb-5
+                    font-bold
+                "
+            >{{ page.title }}</h1>
+
+            <div v-if="page.body.toc?.links">
+                <ul role="list" class="text-base leading-6 pb-6">
+                    <li
+                        v-for="item in page.body.toc.links"
+                        :key="item.id"
+                    >
+                        <NuxtLink
+                            :to="`#${ item.id }`"
+                            :class="{
+                                'pl-0': item.depth == 2,
+                                'pl-6': item.depth == 3,
+                            }"
+                            class="
+                                text-sky-500
+                                underline
+                                cursor-pointer
+                            "
+                        >{{ item.text }}</NuxtLink>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="
+                    prose
+                    lg:prose-xl
+                    prose-img:rounded-2xl
+                    prose-h2:text-gray-900 prose-h2:text-2xl lg:prose-h2:text-3xl
+                    prose-h3:text-gray-500 prose-h3:text-xl lg:prose-h3:text-2xl
+                    prose-pre:leading-6
+                "
+            >
+                <ContentRendererMarkdown :value="page" />
+            </div>
+
+            <div class="pt-20">
+                <ArticleFeedback />
+            </div>
+        </ContentRenderer>
     </div>
 </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
+const page = await queryContent(route.path).findOne()
 
-const [ title, isCategory ] = ((path: string): [ string, boolean ] => {
-    const prefixes = [
-        { prefix: '/astra/getting-started', title: 'Cesbo Astra' },
-        { prefix: '/astra/admin-guide', title: 'Cesbo Astra' },
-        { prefix: '/astra/receiving', title: 'Cesbo Astra' },
-        { prefix: '/astra/processing', title: 'Cesbo Astra' },
-        { prefix: '/astra/monitoring', title: 'Cesbo Astra' },
-        { prefix: '/astra/delivery', title: 'Cesbo Astra' },
-
-        { prefix: '/alta/getting-started', title: 'Cesbo Alta' },
-        { prefix: '/alta/admin-guide', title: 'Cesbo Alta' },
-        { prefix: '/alta/ott-settings', title: 'Cesbo Alta' },
-
-        { prefix: '/misc/tools-and-utilities', title: 'Cesbo Docs' },
-        { prefix: '/misc/terms-and-conditions', title: 'Cesbo Docs' },
-        { prefix: '/misc/troubleshooting', title: 'Cesbo Docs' },
-    ]
-
-    for(const item of prefixes) {
-        if(path.startsWith(item.prefix)) {
-            return [
-                item.title,
-                path.length === item.prefix.length,
-            ]
-        }
+const title = (() => {
+    switch(route.path.split('/', 2)[1]) {
+        case 'astra':
+            return `${ page.title } - Cesbo Astra`
+        case 'alta':
+            return `${ page.title } - Cesbo Alta`
+        case 'misc':
+            return `${ page.title } - Cesbo Docs`
+        default:
+            return `${ page.title } - Cesbo`
     }
+})()
 
-    return [ 'Cesbo', false ]
-})(route.path)
+useHead({
+    title,
+})
+
+// Only for SSR
+if(process.server) {
+    const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
+
+    useSeoMeta({
+        description: page.description,
+
+        twitterCard: page.image ? 'summary_large_image' : 'summary',
+        twitterSite: '@cesbo',
+        twitterTitle: title,
+        twitterDescription: page.description,
+        ...( page.image ? { twitterImage: page.image } : {} ),
+
+        ogType: 'website',
+        ogUrl: absolutePageUrl,
+        ogTitle: title,
+        ogDescription: page.description,
+        ...( page.image ? { ogImage: page.image } : {} ),
+    })
+}
 </script>

@@ -68,7 +68,7 @@
                                 <span class="absolute inset-0" aria-hidden="true" />
                                 <h3
                                     :style="{
-                                        'background-color': product.color || 'black',
+                                        'background-color': category.color || 'black',
                                     }"
                                     class="
                                         text-white
