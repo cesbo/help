@@ -59,8 +59,6 @@
 const route = useRoute()
 const page = await queryContent(route.path).findOne()
 
-console.log(page)
-
 const title = (() => {
     switch(route.path.split('/', 2)[1]) {
         case 'astra':

@@ -57,7 +57,8 @@ export default defineNuxtConfig({
             { path: '/alta/ott-settings', category: 'Alta > OTT Settings' },
 
             { path: '/misc/tools-and-utilities', category: 'Tools & Utilities' },
-            { path: '/misc/terms-and-conditions', category: 'Terms & Conditions' },
+            { path: '/misc/articles/terms-and-conditions', category: 'Terms & Conditions' },
+            { path: '/misc/articles/protocols', category: 'Protocols & Standards' },
             { path: '/misc/troubleshooting', category: 'Troubleshooting' },
         ],
     },
