@@ -1,5 +1,6 @@
 ---
 title: "OTT Settings"
+noindex: true
 navigation:
   color: "#ff9a00"
   icon: https://cdn.cesbo.com/help/icons/alta/ott-settings.svg

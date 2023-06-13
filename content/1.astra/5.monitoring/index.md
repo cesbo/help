@@ -1,5 +1,6 @@
 ---
 title: "Monitoring"
+noindex: true
 navigation:
   color: "#519ed3"
   icon: https://cdn.cesbo.com/help/icons/astra/monitoring.svg
