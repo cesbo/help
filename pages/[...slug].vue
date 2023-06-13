@@ -59,6 +59,8 @@
 const route = useRoute()
 const page = await queryContent(route.path).findOne()
 
+console.log(page)
+
 const title = (() => {
     switch(route.path.split('/', 2)[1]) {
         case 'astra':
@@ -79,21 +81,22 @@ useHead({
 // Only for SSR
 if(process.server) {
     const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
+    const description = page.description || page.navigation.description
 
     useSeoMeta({
-        description: page.description,
+        description,
 
         twitterCard: page.image ? 'summary_large_image' : 'summary',
         twitterSite: '@cesbo',
         twitterTitle: title,
         twitterDescription: page.description,
-        ...( page.image ? { twitterImage: page.image } : {} ),
+        twitterImage: page.image,
 
         ogType: 'website',
         ogUrl: absolutePageUrl,
         ogTitle: title,
         ogDescription: page.description,
-        ...( page.image ? { ogImage: page.image } : {} ),
+        ogImage: page.image,
     })
 }
 </script>

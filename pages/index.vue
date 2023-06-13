@@ -69,9 +69,9 @@
                             >{{ category.title }}</h3>
                             <div
                                 class="
-                                    truncate
                                     text-sm
                                     text-gray-800
+                                    line-clamp-2
                                 "
                             >{{ category.description }}</div>
                         </NuxtLink>
