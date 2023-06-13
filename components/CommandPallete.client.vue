@@ -162,16 +162,16 @@
                 "
             >
                 <div class="flex gap-x-1 items-center">
-                    <Kbd>&ShortDownArrow;</Kbd>
-                    <Kbd>&ShortUpArrow;</Kbd>
+                    <Hotkey>&ShortDownArrow;</Hotkey>
+                    <Hotkey>&ShortUpArrow;</Hotkey>
                     <span>to navigate</span>
                 </div>
                 <div class="flex gap-x-1 items-center">
-                    <Kbd>Enter</Kbd>
+                    <Hotkey>Enter</Hotkey>
                     <span>to select</span>
                 </div>
                 <div class="flex gap-x-1 items-center">
-                    <Kbd>Esc</Kbd>
+                    <Hotkey>Esc</Hotkey>
                     <span>to cancel</span>
                 </div>
             </div>
