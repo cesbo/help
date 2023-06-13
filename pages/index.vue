@@ -45,7 +45,7 @@
                         <img
                             v-if="category.icon"
                             :src="category.icon"
-                            class="h-30 w-30 rounded-full"
+                            class="h-30 w-30"
                         />
                     </div>
                     <div class="min-w-0 flex-1 pt-3">
