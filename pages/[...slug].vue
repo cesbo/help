@@ -72,6 +72,8 @@ const title = (() => {
     }
 })()
 
+console.log(page)
+
 useHead({
     title,
 })
@@ -79,7 +81,7 @@ useHead({
 // Only for SSR
 if(process.server) {
     const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
-    const description = page.description || page.navigation.description
+    const description = page.description || page.navigation?.description
 
     useSeoMeta({
         description,
