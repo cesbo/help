@@ -238,7 +238,11 @@ function onSelect(item: any) {
     if(item.objectID) {
         navigateTo(item.objectID)
     }
-    searchValue.value = ''
+
+    onSearch('')
+    nextTick(() => {
+        document.getElementById('searchInput')?.blur()
+    })
 }
 
 function onKeyDown(event: KeyboardEvent) {

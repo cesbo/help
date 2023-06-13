@@ -72,8 +72,6 @@ const title = (() => {
     }
 })()
 
-console.log(page)
-
 useHead({
     title,
 })
