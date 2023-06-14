@@ -4,7 +4,7 @@
         text-xs
         text-gray-500
     "
-    datetime="{{ date }}"
+    :datetime="date"
 >{{ dateFormat(date) }}</time>
 </template>
 
