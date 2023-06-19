@@ -1,6 +1,7 @@
 ---
 title: "Cable Television with Astra for Hospitality Industry"
 date: 2023-05-04
+image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
 ---
 
 Hospitality TV, offering an excellent TV solution with high-quality broadcasts and a selection of the best channels, is an essential part of hotel service.
@@ -25,7 +26,7 @@ We suggest considering the Astra software, which boasts powerful and flexible fe
 
 ## Hardware
 
-![Hospitality TV diagram](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/hospitality-tv.svg)
+![Hospitality TV diagram](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
 
 This simple diagram is used for the illustration. We have a Satellite signal, Linux-based Server PC with DVB-S/S2 card(s), and RESI DVB-C FSM Modulator card(s).
 
