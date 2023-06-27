@@ -5,19 +5,17 @@ date: 2023-05-26
 
 In this article, we will try to describe the most common optical connectors that are used in data networks and television networks.
 
-## The fiber ferrule:
+## The fiber ferrule
 
 The fiber ferrule is a ceramic part of a cylindrical connector. An optical fiber is inserted into the center of the ferrule. It is used to pass laser radiation through two optical fibers.
 
 The most common fiber ferrule diameters are 2.5 mm (in FC, SC, ST type connectors) and 1.25 mm (in LC type connectors).
 
-![Connector](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/types-of-optic-connectors/connector.jpeg)
-
----
+![Connector](https://cdn.cesbo.com/help/misc/hardware-and-drivers/types-of-optic-connectors/connector.jpeg)
 
 ## SC Connector
 
-![SC](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/types-of-optic-connectors/sc.png)
+![SC](https://cdn.cesbo.com/help/misc/hardware-and-drivers/types-of-optic-connectors/sc.png)
 
 SC Connector was developed by Nippon Telegraph and Telephone. The invention has become the most popular due to lower production costs.
 
@@ -31,11 +29,9 @@ SC Connector was developed by Nippon Telegraph and Telephone. The invention has 
 * loss of 0.25 dB.;
 * used in FTTH, telephony, cable TV, etc.
 
----
-
 ## FC Connector
 
-![FC](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/types-of-optic-connectors/fc.png)
+![FC](https://cdn.cesbo.com/help/misc/hardware-and-drivers/types-of-optic-connectors/fc.png)
 
 
 FC Connector was developed by Nippon Telegraph and Telephone. It was the first optical connector, that used a ceramic tip. This was the first optical connector that used a ceramic tip. It is not currently used due to the more popular SC and LC connectors.
@@ -48,11 +44,9 @@ FC Connector was developed by Nippon Telegraph and Telephone. It was the first o
 * used with singlemode fiber;
 * loss of 0.3 dB.
 
----
-
 ## LC Connector
 
-![LC](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/types-of-optic-connectors/lc.png)
+![LC](https://cdn.cesbo.com/help/misc/hardware-and-drivers/types-of-optic-connectors/lc.png)
 
 LC connector was developed by Lucent Technologies and released in 1997.
 
@@ -63,8 +57,6 @@ LC connector was developed by Lucent Technologies and released in 1997.
 * used in structured cable networks, telecommunications and data centers;
 * used with singlemode and multimode fiber;
 * loss of 0.10 dB.
-
----
 
 ## ST Connector
 
@@ -77,8 +69,6 @@ ST Connector was developed in the United States by AT&T and used in professional
 * less convenient in connection than SC connector, but more convenient than FC connector;
 * used with multimode fiber;
 * loss of 0.25 dB.
-
----
 
 ## Types of polish on fiber optic connectors
 
@@ -94,7 +84,7 @@ You can determine the type of connector/port polishing by its color:
 * UPC-blue
 * APC-green
 
-![Polir](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/types-of-optic-connectors/polir.png)
+![Polir](https://cdn.cesbo.com/help/misc/hardware-and-drivers/types-of-optic-connectors/polir.png)
 
 ### PC: Physical Contact
 
