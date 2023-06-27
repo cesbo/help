@@ -16,21 +16,36 @@
         <div v-if="page.body.toc?.links">
             <ul role="list" class="text-base leading-6 pb-6">
                 <li
-                    v-for="item in page.body.toc.links"
-                    :key="item.id"
+                    v-for="i2 in page.body.toc.links"
+                    :key="i2.id"
                 >
                     <NuxtLink
-                        :to="`#${ item.id }`"
-                        :class="{
-                            'pl-0': item.depth == 2,
-                            'pl-6': item.depth == 3,
-                        }"
+                        :to="`#${ i2.id }`"
                         class="
                             text-sky-500
+                            hover:text-sky-600
                             underline
-                            cursor-pointer
                         "
-                    >{{ item.text }}</NuxtLink>
+                    >{{ i2.text }}</NuxtLink>
+                    <ul
+                        v-if="i2.children"
+                        role="list"
+                        class="pl-6"
+                    >
+                        <li
+                            v-for="i3 in i2.children"
+                            :key="i3.id"
+                        >
+                            <NuxtLink
+                                :to="`#${ i3.id }`"
+                                class="
+                                    text-sky-500
+                                    hover:text-sky-600
+                                    underline
+                                "
+                            >{{ i3.text }}</NuxtLink>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -43,6 +58,9 @@
                 prose-h2:text-gray-900 prose-h2:text-2xl lg:prose-h2:text-3xl
                 prose-h3:text-gray-500 prose-h3:text-xl lg:prose-h3:text-2xl
                 prose-pre:leading-6
+                prose-a:text-sky-500
+                hover:prose-a:text-sky-600
+                prose-a:font-normal
             "
         >
             <ContentRendererMarkdown :value="page" />
