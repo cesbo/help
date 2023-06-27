@@ -1,45 +1,43 @@
 ---
-title: "The comparison of transmission protocols, HLS, UDP and HTTP"
+title: "The comparison of transmission protocols: UDP, HTTP, and HLS"
 date: 2023-03-17
 ---
 
-The article describes the difference of 3 protocols
+Digital TV transmission employs different protocols for broadcasting media content, specifically, User Datagram Protocol (UDP), Hypertext Transfer Protocol (HTTP), and HTTP Live Streaming (HLS). These protocols each possess distinctive characteristics that affect their efficiency, reliability, and compatibility with various devices and networks. The following comparison will delve into their core functions, benefits, and drawbacks to provide a clear understanding of their use in the digital TV landscape.
 
-## UDP (multicast)
+## UDP Multicast
 
-Multicast is UDP packets transmitted from one source to a group of subscribers. The address to which such packets are sent is typically between 224.0.0.0 and 239.255.255.255, but 224.0.0.0/8 is not recommended because of the large number of specialized addresses.
-The oldest way to deliver a TV signal to the user: stream is sent as udp-packets broadcast.
+![UDP Multicast](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
-UDP-similar to the transfer of goods by catapult, that means launched and forgotten. Whether the package reached its destination or not, received it or not, it's not the concern of the one who launched.
+The User Datagram Protocol (UDP) multicast operates on a one-to-many basis. This means it can deliver packets from a single source to multiple subscribers simultaneously. Typically, UDP multicast finds its primary use within local network environments due to its broadcast capabilities and network limitations.
 
-This is a significant drawback: the broadcaster cannot diagnose the problem with the client, that is, if there is a loss of udp packets, cubes and scattering will appear on the TV screen.
+UDP multicast functions within an IP range from 224.0.0.0 to 239.255.255.255. However, the range from 224.0.0.0 to 224.255.255.255, is generally avoided due to a high concentration of specialized addresses. These addresses are reserved for network protocols, and using them can lead to conflicts.
 
-Multicast can be used only in local networks, as Internet routers do not route multicast. For routing in a local network-special multicast pim-routers are used.
-Multicast requires high-quality network equipment and if it is configured incorrectly, it greatly overloads the network.
-Of the advantages: good compatibility with old set-top boxes and saving network bandwidth. For example: if one switch 5 users watch the first channel - in the uplink of the switch will be only 1 subscription instead of 5.
+The UDP multicast behavior can be compared to a catapult launching goods. Once the payload is launched, the sender does not control or monitor its path. The operator is not concerned about the packet's condition after it has been launched, mirroring UDP's lack of delivery guarantees and reliability checks.
 
-Authorization / restriction of viewing is possible only by means of stream encryption.
+Access control can be established through two methods:
 
-## UDP (unicast)
+- encrypting the streams for secure data transmission
+- managing ports on the commutation equipment
 
-Unicast-UDP packets transmitted from one source to the receiver address.
-For example: a server with the ip address 192.168.8.1 reports to the address 192.168.8.2
-Reception is made by the client at his own address: 192.168.8.2
-Suitable for transmission of streams of real-time inside the head stations or receiving equipment on server decoding - transcoding.
+## UDP Unicast
 
-## HTTP - MPEG-TS
+UDP unicast serves as a one-to-one transmission method. It is typically utilized for sending streams between different servers in a headend. An instance of this would be transmitting streams from a receiver to a transcoder, and then from the transcoder to a multiplexor.
 
-It is a protocol for the transmission of audio and video data.
-The principle of broadcasting is similar to downloading an infinite file. It is well compatible with old set-top boxes, but with an unstable connection, transmission breaks are possible - just as when downloading a file via the Internet with an unstable connection.
+## HTTP MPEG-TS
 
-The principle of delivery is similar to the delivery of goods on the conveyor belt-deliver, but if if there not have time to unload, or be some other problems in the movement of the tape - delivery will stop.
+HTTP MPEG-TS protocol base on HTTP protocol and works like downloading an infinite file, continually sending data to the receiver in a constant stream. This approach enables good compatibility with older set-top boxes that were designed with this protocol in mind.
 
-Authorization by login/password, ip/mac and encryption of biss or cas stream is possible.
+However, this protocol is more susceptible to unstable connections and is sensitive to delays. Any disruption or lag can result in playback issues, similar to how a conveyor belt delivering goods would halt whenever there's a delay.
+
+Regarding access control, HTTP MPEG-TS can leverage standard HTTP methods for authorization, eliminating the need for encryption, though encryption is possible via Transport Layer Security (TLS) if required for additional security.
 
 ## HLS
 
-HLS (HTTP Live Streaming) is a relatively new communication protocol for HTTP-based media streaming developed by Apple as part of QuickTime, Safari, OS x and iOS software. The work is based on the principle of splitting the whole stream into small fragments - chunks, consistently downloaded over HTTP. The flow is continuous and can theoretically be infinite. At the beginning of the session, a playlist in M3U format containing metadata about the existing nested streams is downloaded.
+![HLS Diagram](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/diagram.svg)
 
-HLS-similar to the delivery of cargo containers - deliver a lot of chunk at once, and while it is unloaded, we will bring more. If a container is not reached - we have plenty of time to deliver it again.
+HTTP Live Streaming (HLS) is a protocol for streaming media content over the internet. It's designed to deliver sizable chunks of data at once, similar to the delivery of cargo containers. As one chunk (container) is being unloaded and processed by the client, the next chunk is already being prepared and sent. This allows for efficient handling of data and helps to ensure smoother, continuous playback, even in fluctuating network conditions.
 
-Authorization by login / password, tokens, ip / mac is possible.
+HLS offers several advantages, including multibitrate streaming, which allows the protocol to adapt the video quality to the viewer's network conditions in real-time. It also supports the delivery of chunks through a Content Delivery Network (CDN), enabling efficient data distribution and improved scalability, particularly beneficial for handling large volumes of concurrent viewers.
+
+Access control provided with HTTP methods like a HTTP MPEG-TS
