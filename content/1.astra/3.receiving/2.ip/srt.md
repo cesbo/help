@@ -3,38 +3,61 @@ title: "Receiving SRT"
 date: 2023-03-23
 ---
 
-The Secure Reliable Transport (SRT) protocol is a data transfer protocol designed to enable secure and reliable delivery of high-quality video over unpredictable networks. The Astra interface supports SRT as an input protocol, allowing users to receive SRT streams from remote sources
+The Secure Reliable Transport (SRT) protocol is an open-source video streaming protocol designed to provide low-latency, high-quality video streaming over unreliable networks. SRT uses end-to-end encryption and provides a range of features designed to enhance reliability and security, including error correction, congestion control, and retransmission of lost packets. SRT is often used for live video streaming applications, such as sports and news broadcasts, where maintaining a reliable, high-quality connection is critical.
 
 ::alert
 Available for Astra versions released after 2021-12-21
 ::
 
-## SRT protocol
-
-The Secure Reliable Transport (SRT) protocol is an open-source video streaming protocol designed to provide low-latency, high-quality video streaming over unreliable networks. SRT uses end-to-end encryption and provides a range of features designed to enhance reliability and security, including error correction, congestion control, and retransmission of lost packets. SRT is often used for live video streaming applications, such as sports and news broadcasts, where maintaining a reliable, high-quality connection is critical
-
 ## Address format
 
-SRT address is used to identify the location of the media stream that is being transmitted over the network
+SRT could be received in two modes:
+
+- **Caller mode** - Astra sends request to the SRT server and receives content in response. This is the most popular variant
+- **Listener mode** - Astra waits when SRT server established connection and receives content in request. This is point-to-point mode
+
+Address format depends on selected mode.
+
+### Caller mode
 
 ```
-srt://@:port
-srt://interface@:port#options
+srt://address:port[#options]
 ```
 
-SRT Options:
+- `address` - remote server IPv4 address or hostname
+- `port` - remote port
 
-- `streamid=ID` – stream identifier
-- `passphrase=PASS` – password for the encrypted transmission. Password length should be in range 10 .. 79 characters
-- `pbkeylen=N` – crypto key length in bytes. Possible values: 16, 24, 32
-- `tsbpdmode` – timestamp-based packet delivery mode
-- `packetfilter` - injecting extra processing instructions at the beginning and/or end of a transmission to implement Forward Error Correction (FEC)
-- `interface` – name of the local interface. If interface is not defined Astra accept requests from any interface
-- `port` – local port
+Example:
 
-Additional Options:
+- `src://example.com:3001` - send request to the example.com
 
-- `tsbpdmode` – timestamp-based packet delivery mode
+### Listener mode
+
+In listener mode, the address format is similar to the UDP address, with the addition of the `@` symbol to indicate the local interface name.
+
+```
+srt://[interface]@:port[#options]
+```
+
+- `interface` - local interface name where to listen for connection. By the default Astra will wait connection on all interfaces
+- `port` - local port to accept incomming connection
+- `options` - additional options for SRT protocol
+
+Examples:
+
+- `srt://@:3001` - wait for connection on any interface
+- `srt://eth0@:3001` - wait for connection on interface `eth0`
+
+### Options
+
+- `timeout=N` - restarts the receiver if no data is received within a defined interval, seconds. Default value: `5` seconds
+- `latency=N` - maximum accepted transmission latency, milliseconds. Default value: `120` millisecond
+- `packetfilter=S` - injecting extra processing instructions at the beginning and/or end of a transmission to implement Forward Error Correction (FEC). [Read more](https://github.com/Haivision/srt/blob/master/docs/features/packet-filtering-and-fec.md#configuring-the-fec-filter){target="_blank"} in official documentation
+- `passphrase=S` – password for the encrypted transmission. Password length should be in range 10 .. 79 characters
+- `pbkeylen=N` – crypto key length in bytes. Possible values: 16, 24, 32. Default value: `0`
+- `streamid=ID` – stream identifier, provided to the SRT server in caller mode
+- `no_tsbpdmode` – turn off timestamp-based packet delivery mode
+- `oheadbw` - limits bandwidth overhead, percents. Possible values in range: 5 - 100. Default value: `25`
 
 ## Web Interface
 
