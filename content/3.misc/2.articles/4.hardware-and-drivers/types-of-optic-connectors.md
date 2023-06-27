@@ -99,4 +99,6 @@ The connectors are similar to the PC type. Due to a clearer bevel curve, losses 
 
 APC polished connectors provide less reflected signal towards the source.The surface of the ferrule is beveled at an angle of 8-9 degrees. Because of this, the signal is not reflected from the connector at a 180-degree angle, so the reflected signal does not return to the transmitter at all, or returns with less power. APC polished connectors are used in systems with a high-power signal. This is why they are common in cable TV and PON networks.
 
-⚠️ It is forbidden to connect the APC and UPC connectors. This causes damage to the connectors and increases the risk of signal attenuation and reflection.
+::alert
+It is forbidden to connect the APC and UPC connectors. This causes damage to the connectors and increases the risk of signal attenuation and reflection.
+::
