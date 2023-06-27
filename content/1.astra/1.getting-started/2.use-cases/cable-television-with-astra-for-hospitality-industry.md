@@ -84,7 +84,9 @@ Software:
 - DVB Card drivers
 - Internet Browser on your PC. Chrome, Safari, or Firefox
 
-## Install and prepare Astra
+## Configure Astra
+
+### Install Astra
 
 First of all, we need to prepare our server machine and install Linux and Astra. Information about Ubuntu installation could be found on the [official web site](https://ubuntu.com/tutorials/install-ubuntu-server)
 
@@ -96,7 +98,7 @@ Quite often customers forget to configure their Adapters before the next steps. 
 - [TBS Driver Installation](../../../misc/tools-and-utilities/dvb/tbs-driver)
 - For other adapters you may find information on the vender web site
 
-## Receiving channels with Astra
+### Receiving channels with Astra
 
 Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](../../receiving).
 
@@ -110,7 +112,7 @@ Below provided screenshot of example adapter settings:
 
 ![DVB-S2 Example](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
 
-## Make a scan and select the required channels
+### Scan and select the required channels
 
 When we figured out how to configure our Adapters, we may make a scan of the required Transponder (frequency) and append channels to Astra by selecting all the programs you want to add.
 
@@ -118,7 +120,7 @@ When we figured out how to configure our Adapters, we may make a scan of the req
 
 ![Added channels on dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
 
-## Create New Stream with MPTS
+### Create New Stream with MPTS
 
 MPTS is a Multi Program Transport Stream (or multiplex) is a stream containing several services (programs). It is used to transfer channels to ip-qam/ip-asi modulators and multiplexers. Below are screenshots of most general configuration pages
 
@@ -138,7 +140,7 @@ In the SDT settings should be provided all information about channel:
 
 In the NIT settings provide information for DVB-C transponder.
 
-## Setting up the Modulator
+### Setting up the Modulator
 
 At this point, we have already found and added all the necessary channels in Astra, created a New Stream, and configured the MPTS, which should be sent to the modulator. To configure the Output signal to the RESI DVB-C modulator we need to know the Number of RESI adapters in the system.
 
