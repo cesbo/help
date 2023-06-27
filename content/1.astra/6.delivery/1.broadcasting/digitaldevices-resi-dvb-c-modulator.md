@@ -3,7 +3,7 @@ title: "DigitalDevices RESI DVB-C Modulator"
 date: 2023-06-23
 ---
 
-![DigitalDevices RESI DVB-C Modulator](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/digitaldevices-resi-dvb-c-modulator/resi.png)
+![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/misc/hardware-and-drivers/digitaldevices-resi-dvb-c-modulator/resi.png)
 
 RESI is a DVB-C modulator by the DigitalDevices
 
@@ -14,7 +14,8 @@ QAM: 16, 32, 64, 128, 256
 Signal / Noise ratio: 42dB
 Output with 8 channels (per channel): 101 dBµV
 
-Configuring the adapter:
+## Configuring the adapter
+
 Find the card number and modulators using the command:
 
 ```sh
@@ -38,10 +39,11 @@ root@dvb:~# find "/dev/dvb" -name "mod*"
 adapter0 - adapter number in the system
 mod0 - 7 - this is 8 modulators on this card (8 frequencies)
 
-Settings in Astra:
+## Settings in Astra
+
 [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) must be sent to the modulator input
 In the output setting, select the transfer type-RESI:
-![RESI astra](https://cesbo.b-cdn.net/help/misc/hardware-and-drivers/digitaldevices-resi-dvb-c-modulator/resi-astra.png)
+![RESI astra](https://cdn.cesbo.com/help/misc/hardware-and-drivers/digitaldevices-resi-dvb-c-modulator/resi-astra.png)
 
 *Adapter* - number of the adapter in the system. (in our example, 0)
 *Device* - number of the modulator on the adapter. (in our example-4 modulator)
