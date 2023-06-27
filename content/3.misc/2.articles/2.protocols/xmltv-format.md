@@ -49,7 +49,7 @@ Sample XMLTV file :
 </tv>
 ```
 
-### DESCRIPTION OF THE MARKUP FILE OF THE TV PROGRAM:
+### Description of the markup file of the tv program
 
 `<?xml version="1.0" encoding="UTF-8"?>` - a header indicating that the file contains XML markup
 
@@ -59,7 +59,7 @@ Sample XMLTV file :
 
 `<tv generator-info-name="Some tv generator">` - Between the tags contains all data about the program, generator-info-name indicates the name of the generator that created this XML file, is an optional parameter.
 
-## A DESCRIPTION OF THE MARKUP OF THE CHANNELS
+## A description of the markup of the channels
 
 ```
 <channel id="1">
