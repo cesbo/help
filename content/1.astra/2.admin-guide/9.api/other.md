@@ -1,11 +1,13 @@
 ---
-title: "Other Methods"
-date: 2023-03-23
+title: "Other API Methods"
+date: 2023-06-30
 ---
 
 ## Sessions
 
-The method returns a list of current sessions. Answer format:
+Sessions is a list of active connections to HTTP MPEG-TS or HLS outputs.
+
+### Get session list
 
 ```
 {
@@ -13,7 +15,7 @@ The method returns a list of current sessions. Answer format:
 }
 ```
 
-The format of the session information: SESSION-INFO:
+In response will be array of active sessions:
 
 ```
 {
@@ -29,13 +31,13 @@ The format of the session information: SESSION-INFO:
 }
 ```
 
-* `client_id` — unique number of the session
-* `channel_id` — stream ID
-* `channel_name` — stream name
-* `addr` — The IP address of the client. To get the IP address from HTTP header X-Real-IP or X-Forwarded-For, while proxying requests, you must use the auth_request.
-* `uptime` — time, in seconds, since the beginning of the session
+- `client_id` — unique session identifier
+- `channel_id` — unique channel identifier
+- `channel_name` — channel name
+- `addr` — client IP address
+- `uptime` — the time in seconds, for which the session has been running
 
-To end the session, you must use the close-session method:
+### Close session
 
 ```
 {
@@ -44,13 +46,9 @@ To end the session, you must use the close-session method:
 }
 ```
 
-* `id` — session number
+- `id` — session identifier
 
-## Other
-
-### Restart astra
-
-Request:
+## Restart astra
 
 ```
 {
@@ -58,9 +56,7 @@ Request:
 }
 ```
 
-### Getting the configuration
-
-Request:
+## Download configuration
 
 ```
 {
@@ -68,28 +64,20 @@ Request:
 }
 ```
 
-The answer is the contents of the configuration file.
+In the response will be whole configuration file.
 
-### Loading конфигурации
-
-Request:
+## Upload configuration
 
 ```
 {
-    {"cmd":"upload","config":{...}}
+    "cmd": "upload"
+    "config": {}
 }
 ```
 
-### Get user config
+- `config` - whole configuration file
 
-```
-{
-    "cmd": "get-user",
-    "id": "login"
-}
-```
-
-### Set serial number
+## Set serial number
 
 ```
 {
@@ -98,12 +86,17 @@ Request:
 }
 ```
 
-### Set image in stream tile:
+- `license` - license serial number
+
+## Set image to the stream tile:
 
 ```
 {
-   "cmd":"set-stream-image",
-   "id":"a001",
-   "url":"http://..."
+   "cmd": "set-stream-image",
+   "id": "a001",
+   "url": "http://..."
 }
 ```
+
+- `id` - stream identifier
+- `url` - image address, as well could be used data-format, for example: `data:image/png;base64,...`
