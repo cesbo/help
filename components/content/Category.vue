@@ -6,6 +6,7 @@
         :key="section.path"
     >
         <h2
+            v-if="navigation.showTitle"
             class="
                 text-sm
                 font-bold
@@ -43,10 +44,7 @@
                     "
                 >
                     <DocumentTextIcon
-                        class="w-4 h-4"
-                        :style="{
-                            'color': navigation.color,
-                        }"
+                        class="w-4 h-4 text-sky-500"
                     />
                     <span
                         class="
@@ -87,8 +85,13 @@ const { data: navigation } = await useAsyncData(route.path, async () => {
     const [ navigation ] = await fetchContentNavigation(query)
     const [ category ] = navigation.children!
 
-    // remove self from children
-    category.children = category.children?.filter((item) => item._path != route.path)
+    if(category._path == route.path) {
+        // category
+        category.showTitle = true
+        // remove self from children
+        category.children = category.children?.filter((item) => item._path != route.path)
+    }
+
     return category
 })
 </script>
