@@ -1,7 +1,7 @@
 <template>
 <div class="mx-auto max-w-3xl text-gray-900">
     <ContentRenderer :value="page">
-        <ArticleBreadcrumb v-if="page._path" :path="page._path" class="mb-2" />
+        <ArticleBreadcrumb v-if="page._path" :path="page._path" class="mb-5" />
 
         <h1
             class="
@@ -12,10 +12,8 @@
         >{{ page.title }}</h1>
         <!-- <ArticleDate v-if="page.date" :date="page.date" /> -->
 
-        <div class="mb-10"></div>
-
-        <div v-if="page.body.toc?.links">
-            <ul role="list" class="text-base leading-6 pb-6">
+        <div v-if="page.body.toc?.links" class="mt-5">
+            <ul role="list" class="text-base leading-6">
                 <li
                     v-for="i2 in page.body.toc.links"
                     :key="i2.id"
@@ -53,6 +51,7 @@
 
         <div
             class="
+                mt-10
                 prose
                 lg:prose-xl
                 prose-img:rounded-2xl
