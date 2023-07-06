@@ -3,7 +3,7 @@ title: "Receiving MPTS via UDP"
 date: 2023-03-10
 ---
 
-With Cesbo Astra, you can receive MPTS (Multi Program Transport Stream) from different sources, including UDP. The received MPTS can be demultiplexed into several SPTS (Single Program Transport Stream) channels.
+With Astra, you can receive MPTS (Multi Program Transport Stream) from different sources, including UDP. The received MPTS can be demultiplexed into several SPTS (Single Program Transport Stream) channels.
 
 ## Virtual Adapter
 
