@@ -99,6 +99,17 @@ if(process.server) {
     const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
     const description = page.description || page.navigation?.description
 
+    if(page.noindex) {
+        useHead({
+            meta: [
+                {
+                    name: 'robots',
+                    content: 'noindex',
+                }
+            ],
+        })
+    }
+
     useSeoMeta({
         description,
 
