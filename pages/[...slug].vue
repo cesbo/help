@@ -1,17 +1,18 @@
 <template>
 <div class="mx-auto max-w-3xl text-gray-900">
     <ContentRenderer :value="page">
-        <ArticleDate v-if="page.date" :date="page.date" />
+        <ArticleBreadcrumb v-if="page._path" :path="page._path" class="mb-2" />
 
         <h1
             class="
                 text-3xl
                 lg:text-4xl
-                pb-5
-                mb-5
                 font-bold
             "
         >{{ page.title }}</h1>
+        <!-- <ArticleDate v-if="page.date" :date="page.date" /> -->
+
+        <div class="mb-10"></div>
 
         <div v-if="page.body.toc?.links">
             <ul role="list" class="text-base leading-6 pb-6">
