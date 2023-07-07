@@ -1,6 +1,7 @@
 ---
 title: "TBS6004 DVB-C modulator"
 date: 2023-06-23
+image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/tbs-dvb-c.jpeg
 ---
 
 ::badge[Astra 2021.08.09 and newer]
