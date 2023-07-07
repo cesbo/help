@@ -5,7 +5,7 @@ date: 2023-06-23
 
 The RESI, a DVB-C modulator by Digital Devices, outputs a DVB-C compatible data stream into an existing 75-ohm coaxial cabling.
 
-![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-modulator/resi.png)
+![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/resi.png)
 
 Technical specifications:
 
@@ -18,7 +18,9 @@ Technical specifications:
 
 ## Find modulator in system
 
-Instal TBS driver according [manual](/misc/tools-and-utilities/dvb/dd-driver). Use the following command to find the adapter number and the modulator device number:
+Use our guide to [Install DigitalDevices driver](/misc/tools-and-utilities/dvb/dd-driver).
+
+Use the following command to find the adapter number and the modulator device number:
 
 ```sh
 find "/dev/dvb" -name "mod*"
@@ -26,7 +28,7 @@ find "/dev/dvb" -name "mod*"
 
 The output will display a list of devices in the system:
 
-```sh
+```
 /dev/dvb/adapter0/mod0
 /dev/dvb/adapter0/mod1
 ```
@@ -60,4 +62,4 @@ If you attempt to find the adapter number and encounter an error:
 find: ‘/dev/dvb’: No such file or directory
 ```
 
-it is likely that the DigitalDevices driver is not installed. Please [install driver](/misc/tools-and-utilities/dvb/dd-driver)
+it is likely that the DigitalDevices driver is not installed. Please [Install DigitalDevices driver](/misc/tools-and-utilities/dvb/dd-driver)
