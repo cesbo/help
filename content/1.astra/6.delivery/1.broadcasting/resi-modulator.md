@@ -18,7 +18,7 @@ Technical specifications:
 
 ## Find modulator in system
 
-Use the following command to find the adapter number and the modulator device number:
+Instal TBS driver according [manual](/misc/tools-and-utilities/dvb/dd-driver). Use the following command to find the adapter number and the modulator device number:
 
 ```sh
 find "/dev/dvb" -name "mod*"
@@ -29,35 +29,26 @@ The output will display a list of devices in the system:
 ```sh
 /dev/dvb/adapter0/mod0
 /dev/dvb/adapter0/mod1
-/dev/dvb/adapter0/mod2
 ```
 
 - `adapter0` - adapter number
-- `mod2` - device number
+- `mod1` - device (modulator) number
 
-## Configure Astra
+## Astra settings
 
-For DVB-C network channels should be grouped int single stream - multiplex (or MPTS, Multi Program Transport Stream). It is used to transfer channels to ip-qam/ip-asi modulators and multiplexers. [Read more](/astra/delivery/broadcasting/mpts-settings) how to create MPTS in Astra. In the output setting, select the transfer type-RESI:
+1. Prepare [MPTS](/astra/delivery/broadcasting/mpts-settings) for modulator
+2. In the output setting, specify the address: resi://#adapter=0&device=1 (0 - adapter number, 1 - modulator)
+3. In the MPTS NIT settings, configure transponder options
 
-![RESI astra](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-modulator/resi-astra.png)
-
-- **Adapter** - number of the adapter in the system. (in our example, 0)
-- **Device** - number of the modulator on the adapter. (in our example-4 modulator)
-- **Attenuator** - reduces the power of a signal without appreciably distorting its waveform
-
-Transponder options could be defined manually, by the default this is not needed, Astra use options from MPTS settings:
-
-- **Frequency** - transponder frequency
-- **Modulation** - signal modulation
-- **Symbol Rate** - number of signal changes per second
-
-Next options could be added to the address:
-
-- `gain=N` - value could be in range from 0 to 100
-- `buffer_size=N` - buffer size in megabytes. Default: `256`
-- `legacy` - compatibility mode with old RESI modulator for 10 transpodners
+![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts-nit-dvb-c.png)
 
 Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
+
+### Additional options
+
+- `gain=N` - signal level in range from 0 to 100
+- `buffer_size=N` - buffer size in megabytes. Default: `256`
+- `legacy` - compatibility mode with old RESI modulator for 10 transpodners
 
 ## Troubleshooting
 
