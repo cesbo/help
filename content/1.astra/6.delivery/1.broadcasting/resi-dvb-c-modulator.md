@@ -1,6 +1,7 @@
 ---
 title: "DigitalDevices RESI DVB-C Modulator"
 date: 2023-06-23
+image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/resi.png
 ---
 
 The RESI, a DVB-C modulator by Digital Devices, outputs a DVB-C compatible data stream into an existing 75-ohm coaxial cabling.
