@@ -43,6 +43,11 @@ In the output of the command, we will get the numbers of the modulators:
 
 1. Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator
 2. In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
+3. In the MPTS NIT settings, configure transponder options
+
+![MPTS NIT Settings](https://cesbo.b-cdn.net/help/astra/delivery/broadcasting/mpts-nit-dvb-t.png)
+
+Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
 
 ### Additional options
 
