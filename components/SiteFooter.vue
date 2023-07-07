@@ -57,7 +57,12 @@
         text-gray-600 dark:text-gray-300
     "
 >
-    <span>&copy; 2023, Cesbo</span>
+    <div
+        class="
+            text-gray-500
+            dark:text-gray-400
+        "
+    >&copy; 2023, Cesbo</div>
 </div>
 </footer>
 </template>
