@@ -25,7 +25,6 @@
                 class="
                     flex
                     items-center
-                    text-sky-500
                     mr-auto
                 "
                 title="Cesbo Help Center"
@@ -41,7 +40,7 @@
                 ></div>
             </NuxtLink>
 
-            <div class="w-auto hidden md:block" id="navbar-default">
+            <div class="w-auto">
                 <ul class="flex flex-row font-medium gap-x-8">
                     <li v-for="item in navigation" :key="item.name">
                         <NuxtLink
@@ -50,48 +49,21 @@
                                 block
                                 py-1
                                 rounded
-                                hover:text-sky-400
+                                hover:text-brand
                             "
                         >{{ item.name }}</NuxtLink>
                     </li>
                 </ul>
             </div>
-
-            <button
-                class="
-                    md:hidden
-                    py-1
-                    hover:text-sky-400
-                "
-                @click="openMenu = true"
-            >
-                <span class="sr-only">Open Menu</span>
-                <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-            </button>
         </div>
     </nav>
 </header>
 </template>
 
 <script setup lang="ts">
-import {
-    Dialog,
-    DialogPanel,
-    DialogTitle,
-    TransitionChild,
-    TransitionRoot,
-} from '@headlessui/vue'
-
-import {
-    Bars3Icon,
-    XMarkIcon,
-} from '@heroicons/vue/20/solid'
-
 const navigation = [
     { name: 'Home', to: 'https://cesbo.com' },
     { name: 'Help', to: '/' },
     { name: 'Profile', to: 'https://cesbo.com/profile' },
 ]
-
-const openMenu = ref(false)
 </script>

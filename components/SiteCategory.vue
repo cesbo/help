@@ -36,7 +36,7 @@
                 "
             >
                 <DocumentTextIcon
-                    class="w-4 h-4 text-sky-500"
+                    class="w-4 h-4 text-brand"
                 />
                 <span
                     class="
@@ -44,7 +44,7 @@
                         font-semibold
                         leading-7
                         text-gray-900
-                        hover:text-sky-400
+                        hover:text-brand
                     "
                 >{{ item.title }}</span>
             </NuxtLink>
