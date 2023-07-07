@@ -1,6 +1,6 @@
 ---
 title: "Low-Noise Block for satellite dishes"
-date: 2023-06-23
+date: 2023-07-07
 image: https://cdn.cesbo.com/help/misc/articles/hardware/lnb/lnb.jpg
 ---
 
