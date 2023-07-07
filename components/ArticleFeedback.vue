@@ -22,7 +22,7 @@
                     gap-x-1
                     text-green-400
                     cursor-pointer
-                    hover:text-green-300
+                    hover:text-green-500
                 "
                 :class="{
                     'opacity-30': variant != '' && variant != 'like'
@@ -37,9 +37,9 @@
                     flex
                     items-center
                     gap-x-1
-                    text-sky-400
+                    text-brand
                     cursor-pointer
-                    hover:text-sky-300
+                    hover:text-sky-600
                 "
                 :class="{
                     'opacity-30': variant != '' && variant != 'message'
@@ -56,7 +56,7 @@
                     gap-x-1
                     text-red-400
                     cursor-pointer
-                    hover:text-red-300
+                    hover:text-red-500
                 "
                 :class="{
                     'opacity-30': variant != '' && variant != 'dislike'
@@ -75,7 +75,7 @@
                 class="
                     border-0
                     ring-1 ring-inset ring-gray-300
-                    focus:ring-inset focus:ring-sky-500
+                    focus:ring-inset focus:ring-brand
                     rounded
                     resize-none
                     w-full
@@ -91,7 +91,7 @@
                 class="
                     border-0
                     ring-1 ring-inset ring-gray-300
-                    focus:ring-inset focus:ring-sky-500
+                    focus:ring-inset focus:ring-brand
                     rounded
                     w-full
                 "
@@ -108,8 +108,8 @@
                         py-1
                         border-0
                         rounded
-                        bg-sky-500
-                        hover:bg-sky-400
+                        bg-brand
+                        hover:bg-sky-600
                         text-white
                     "
                     @click="sendMessage()"

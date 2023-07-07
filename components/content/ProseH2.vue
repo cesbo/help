@@ -32,9 +32,9 @@
                     font-normal
                     leading-6
                     px-2
-                    border border-sky-400
+                    border border-brand
                     bg-sky-50
-                    text-sky-900
+                    text-brand
                     rounded-full
                     mr-2
                     hidden
@@ -47,7 +47,8 @@
             class="
                 w-7
                 h-7
-                text-sky-400
+                text-brand
+                hover:text-sky-600
             "
         />
     </a>

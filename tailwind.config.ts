@@ -11,4 +11,11 @@ module.exports = {
         'text-black',
         'dark:text-white',
     ],
+    theme: {
+        extend: {
+            colors: {
+                brand: '#519ed4',
+            },
+        },
+    },
 }

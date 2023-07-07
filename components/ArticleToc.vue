@@ -7,7 +7,7 @@
         <NuxtLink
             :to="`#${ item.id }`"
             class="
-                text-sky-500
+                text-brand
                 hover:text-sky-600
                 underline
             "

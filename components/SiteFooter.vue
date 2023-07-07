@@ -35,7 +35,6 @@
                 font-normal
                 gap-x-2
                 rounded
-                hover:bg-gray-100 dark:hover:bg-zinc-600
                 hover:text-red-500
             "
         >
