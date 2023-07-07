@@ -12,42 +12,11 @@
         >{{ page.title }}</h1>
         <!-- <ArticleDate v-if="page.date" :date="page.date" /> -->
 
-        <div v-if="page.body.toc?.links" class="mt-5">
-            <ul role="list" class="text-base leading-6">
-                <li
-                    v-for="i2 in page.body.toc.links"
-                    :key="i2.id"
-                >
-                    <NuxtLink
-                        :to="`#${ i2.id }`"
-                        class="
-                            text-sky-500
-                            hover:text-sky-600
-                            underline
-                        "
-                    >{{ i2.text }}</NuxtLink>
-                    <ul
-                        v-if="i2.children"
-                        role="list"
-                        class="pl-6"
-                    >
-                        <li
-                            v-for="i3 in i2.children"
-                            :key="i3.id"
-                        >
-                            <NuxtLink
-                                :to="`#${ i3.id }`"
-                                class="
-                                    text-sky-500
-                                    hover:text-sky-600
-                                    underline
-                                "
-                            >{{ i3.text }}</NuxtLink>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <ArticleToc
+            v-if="page.body.toc?.links"
+            :items="page.body.toc.links"
+            class="mt-5"
+        />
 
         <div
             class="
