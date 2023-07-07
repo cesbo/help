@@ -2,7 +2,7 @@
 <nav class="flex" aria-label="Breadcrumb">
     <ol role="list" class="flex items-center space-x-2">
         <li>
-            <NuxtLink href="/" class="text-gray-400 hover:text-gray-500">
+            <NuxtLink href="/" class="text-gray-400 hover:text-brand">
                 <HomeIcon
                     class="h-4 w-4 flex-shrink-0"
                     aria-hidden="true"
@@ -10,6 +10,7 @@
                 <span class="sr-only">Home</span>
             </NuxtLink>
         </li>
+
         <li
             v-for="item in breadcrumb" :key="item.path"
             class="flex items-center"
@@ -24,7 +25,7 @@
                     ml-2
                     text-sm
                     text-gray-500
-                    hover:text-gray-700
+                    hover:text-brand
                 "
                 :aria-current="item.current ? 'page' : undefined"
             >{{ item.title }}</NuxtLink>

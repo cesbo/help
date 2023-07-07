@@ -28,8 +28,8 @@
                 prose-h3:text-gray-500 prose-h3:text-xl lg:prose-h3:text-2xl
                 prose-pre:leading-6
                 prose-a:text-brand
-                hover:prose-a:text-sky-600
                 prose-a:font-normal
+                hover:prose-a:text-sky-600
             "
         >
             <ContentRendererMarkdown :value="page" />
