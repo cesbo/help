@@ -1,6 +1,6 @@
 <template>
 <footer
-    class="bg-gray-100 dark:bg-zinc-900"
+    class="bg-gray-50 dark:bg-zinc-900"
     aria-labelledby="footer-heading"
 >
 <div
@@ -57,12 +57,7 @@
         text-gray-600 dark:text-gray-300
     "
 >
-    <div
-        class="
-            text-gray-500
-            dark:text-gray-400
-        "
-    >&copy; 2023, Cesbo</div>
+    <span>&copy; 2023, Cesbo</span>
 </div>
 </footer>
 </template>

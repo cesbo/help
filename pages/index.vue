@@ -33,7 +33,7 @@
                         hover:shadow-lg
                         ring-inset
                         bg-white
-                        pl-2 pr-6
+                        pl-1 pr-5
                         py-2
                         shadow-none
                         focus-within:ring-2
@@ -42,11 +42,16 @@
                     "
                 >
                     <div class="flex-shrink-0">
-                        <img
+                        <div
                             v-if="category.icon"
-                            :src="category.icon"
-                            class="h-30 w-30"
-                        />
+                            class="
+                                h-24 w-24
+                                bg-contain bg-center bg-no-repeat
+                            "
+                            :style="{
+                                backgroundImage: `url(${ category.icon })`,
+                            }"
+                        ></div>
                     </div>
                     <div class="min-w-0 flex-1 pt-3">
                         <NuxtLink
@@ -56,7 +61,7 @@
                             <span class="absolute inset-0" aria-hidden="true" />
                             <h3
                                 :style="{
-                                    'background-color': category.color || 'black',
+                                    backgroundColor: category.color || 'black',
                                 }"
                                 class="
                                     text-white

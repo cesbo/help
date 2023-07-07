@@ -21,19 +21,24 @@
             "
         >
             <NuxtLink
-                to="https://cesbo.com"
+                to="/"
                 class="
                     flex
                     items-center
                     text-sky-500
                     mr-auto
                 "
+                title="Cesbo Help Center"
             >
-                <img
-                    src="https://cdn.cesbo.com/logo.svg"
-                    alt="Cesbo Logo"
-                    class="h-8"
-                />
+                <div
+                    class="
+                        h-[30px] w-[110px]
+                        bg-contain bg-center bg-no-repeat
+                    "
+                    :style="{
+                        backgroundImage: 'url(https://cdn.cesbo.com/logo.svg)',
+                    }"
+                ></div>
             </NuxtLink>
 
             <div class="w-auto hidden md:block" id="navbar-default">
