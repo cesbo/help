@@ -1,14 +1,14 @@
 ---
-title: "PT100 DVB-T modulator"
+title: "HiDes DVB-T modulator"
 date: 2023-06-23
-image: https://cdn.cesbo.com/help/misc/hardware-and-drivers/pt100-dvb-t-modulator/pt100.jpeg
+image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg
 ---
 
 ::bage[Astra 2021.08.09 and newer]
 
-PT100 is a DVB-T modulator by HiDes.
+PT100 is a DVB-T modulator for 4 frequencies by HiDes
 
-![PT100 DVB-T modulator](https://cdn.cesbo.com/help/misc/hardware-and-drivers/pt100-dvb-t-modulator/pt100.jpeg)
+![PT100 DVB-T modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg)
 
 Features:
 
@@ -44,11 +44,8 @@ In the output of the command, we will get the numbers of the modulators:
 1. Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator
 2. In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
 
-That's all. Modulator get transponder options from the MPTS settings.
+### Additional options
 
-![MPTS General settings](https://cdn.cesbo.com/help/misc/hardware-and-drivers/pt100-dvb-t-modulator/step-2-2.png)
-![MPTS Service options](https://cdn.cesbo.com/help/misc/hardware-and-drivers/pt100-dvb-t-modulator/step-3.jpeg)
-![MPTS Transponder options](https://cdn.cesbo.com/help/misc/hardware-and-drivers/pt100-dvb-t-modulator/step-4.png)
+Additional options could be added to the output address:
 
-Additionally you can configure signal level with option `gain=x` where `x` is value in the range from 0 to 100
-
+- `gain=N` - signal level in range from 0 to 100
