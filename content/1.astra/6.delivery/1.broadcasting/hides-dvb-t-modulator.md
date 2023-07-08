@@ -4,7 +4,7 @@ date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg
 ---
 
-::bage[Astra 2021.08.09 and newer]
+::badge[Astra 2021.08.09 and newer]
 
 PT100 is a DVB-T modulator for 4 frequencies by HiDes
 
@@ -45,7 +45,7 @@ In the output of the command, we will get the numbers of the modulators:
 2. In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
 3. In the MPTS NIT settings, configure transponder options
 
-![MPTS NIT Settings](https://cesbo.b-cdn.net/help/astra/delivery/broadcasting/mpts-nit-dvb-t.png)
+![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 
 Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
 

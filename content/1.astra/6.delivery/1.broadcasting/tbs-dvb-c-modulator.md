@@ -41,7 +41,7 @@ In the output - we will see the numbers of modulators:
 2. In the output setting, specify the address: `tbs://#adapter=0&device=1` (0 - adapter number, 1 - modulator)
 3. In the MPTS NIT settings, configure transponder options
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts-nit-dvb-c.png)
+![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/mpts-nit.png)
 
 Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
 
