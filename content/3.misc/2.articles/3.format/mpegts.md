@@ -1,9 +1,10 @@
 ---
-title: MPEG-TS
+title: "MPEG-TS"
 date: 2023-06-13
 ---
+
 MPEG-TS (Transport Stream) - is a transport format for transmission video, audio, and other data over IP or broadband networks.
-Detailed description available in the `ISO 13818-1` standard.
+Detailed description available in the [ISO 13818-1](https://www.iso.org/standard/74427.html) standard.
 
 ## Packetized Elementary Stream
 
@@ -47,13 +48,3 @@ TS Header contains next information:
 
 Elementary streams (video, audio) and information tables are packed to the TS-packets. Each packet has unique identifier - PID.
 The PID value must be between 0 and 8191. The range 0 to 31 and 8191 is reserved and should not be used. You can use any PID in the range from 32 to 8190.
-
-### How to find PID values in the stream?
-
-* With VLC player:
-  Play the stream, then open Tools - Media Information - Codec. The "Original ID" field contains PID value.
-* With Astra analyzer:
-  Launch in console:
-```sh
-astra --analyze "stream address"
-```
