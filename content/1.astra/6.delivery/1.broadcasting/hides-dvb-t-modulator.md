@@ -4,7 +4,7 @@ date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg
 ---
 
-::badge[Astra 2021.08.09 and newer]
+:badge[Astra 2021.08.09 and newer]
 
 PT100 is a DVB-T modulator for 4 frequencies by HiDes
 
