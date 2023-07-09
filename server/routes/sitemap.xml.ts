@@ -5,6 +5,9 @@ export default defineEventHandler(async (event) => {
     const docs = await serverQueryContent(event)
         .where({
             _partial: false,
+            noindex: {
+                $ne: true,
+            },
         })
         .find()
 
