@@ -48,17 +48,25 @@ export default defineNuxtConfig({
             { path: '/astra/getting-started/first-steps', category: 'Astra > Getting Started > First Steps' },
             { path: '/astra/getting-started/use-cases', category: 'Astra > Getting Started > Use Cases' },
             { path: '/astra/getting-started/advanced', category: 'Astra > Getting Started > Advanced' },
+
             { path: '/astra/admin-guide/administration', category: 'Astra > Admin Guide > Administration' },
             { path: '/astra/admin-guide/stream', category: 'Astra > Admin Guide > Stream' },
             { path: '/astra/admin-guide/settings', category: 'Astra > Admin Guide > Settings' },
             { path: '/astra/admin-guide/api', category: 'Astra > Admin Guide > API' },
+
             { path: '/astra/receiving/dvb', category: 'Astra > Receiving > DVB, ATSC, ISDB-T' },
             { path: '/astra/receiving/ip', category: 'Astra > Receiving > IP Sources' },
+
             { path: '/astra/processing/utilities', category: 'Astra > Processing > Utilities' },
             { path: '/astra/processing/cas', category: 'Astra > Processing > CAS' },
+
             { path: '/astra/monitoring/export', category: 'Astra > Monitoring > Export' },
+
             { path: '/astra/delivery/broadcasting', category: 'Astra > Delivery > Broadcasting' },
-            { path: '/astra/delivery/http-hls', category: 'Astra > Delivery > HTTP / HLS' },
+            { path: '/astra/delivery/cas', category: 'Astra > Delivery > Broadcasting Access Control' },
+            { path: '/astra/delivery/hardware', category: 'Astra > Delivery > Broadcasting Hardware' },
+            { path: '/astra/delivery/http-hls', category: 'Astra > Delivery > HTTP/HLS' },
+            { path: '/astra/delivery/http-hls-auth', category: 'Astra > Delivery > Authentication for HTTP/HLS' },
 
             { path: '/alta/getting-started', category: 'Alta > Getting Started' },
             { path: '/alta/admin-guide', category: 'Alta > Admin Guide' },
