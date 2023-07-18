@@ -3,7 +3,8 @@ import { LogSnag } from 'logsnag'
 type FeedbackReaction = 'like' | 'dislike'
 
 type FeedbackRequest = {
-    path: string,
+    title: string,
+    href: string,
     reaction?: FeedbackReaction,
     message?: string,
     email?: string,
@@ -37,7 +38,7 @@ export default defineEventHandler(async (ev) => {
         token: config.logsnag.token,
     })
 
-    let description = [ `**Path**: ${ body.path }` ]
+    let description = [ `[${ body.title }](${ body.href })` ]
 
     const forwardedFor = ev.node.req.headers['x-forwarded-for']
     if(forwardedFor) {

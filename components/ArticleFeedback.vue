@@ -146,6 +146,11 @@ import {
     ChatBubbleOvalLeftEllipsisIcon,
 } from '@heroicons/vue/24/outline'
 
+const props = defineProps<{
+    title: string
+    href: string
+}>()
+
 const variant = ref('')
 const showMessageFeedback = ref(false)
 const message = ref('')
@@ -153,12 +158,12 @@ const email = ref('')
 
 async function send(body: any) {
     variant.value = 'all'
-    const route = useRoute()
 
     const { data } = await useFetch('/api/feedback', {
         method: 'POST',
         body: {
-            path: route.path,
+            title: props.title,
+            href: props.href,
             ...body,
         },
     })
