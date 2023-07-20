@@ -62,8 +62,8 @@
 
 <script setup lang="ts">
 const navigation = [
-    { name: 'Home', to: 'https://cesbo.com' },
+    { name: 'Home', to: 'https://www.cesbo.com' },
     { name: 'Help', to: '/' },
-    { name: 'Profile', to: 'https://cesbo.com/profile' },
+    { name: 'Profile', to: 'https://cesbo.com/accounts/profile/' },
 ]
 </script>

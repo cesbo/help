@@ -15,7 +15,7 @@ For quick and simple configuration of MPTS reception, you may use the Virtual Ad
 
 ![Virtual Adapter for MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
 
-In the **Address** field set the source UDP, for example `udp://239.255.1.1:1234`. Read more about UDP address format in [Receive UDP with Astra](receiving-udp).
+In the **Address** field set the source UDP, for example `udp://239.255.1.1:1234`. Read more about UDP address format in [Receiving UDP/RTP](./udp).
 
 Apply changes, and then you can scan the adapter to get a list of available channels. Select the channels you want to add and click apply.
 

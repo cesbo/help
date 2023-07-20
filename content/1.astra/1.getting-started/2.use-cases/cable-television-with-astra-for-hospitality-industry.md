@@ -104,9 +104,9 @@ Now is the time to configure all our Adapters and find channels, which we want t
 
 To configure receiving channels from satellite we recommend to having a look at these articles:
 
-- [Introduction to DVB Adapter Tuning](../../receiving/dvb/introduction-to-dvb-adapter-tuning)
-- [DVB-S/S2 Tuner Options](../../receiving/dvb/dvb-s-tuner-options)
-- [Scan DVB Adapter](../../receiving/dvb/scan-dvb-adapter)
+- [Introduction to DVB Adapter Tuning](../../receiving/dvb/intro)
+- [DVB-S/S2 Tuner Options](../../receiving/dvb/s)
+- [Scan DVB Adapter](../../receiving/dvb/scan)
 
 Below provided screenshot of example adapter settings:
 
@@ -191,6 +191,6 @@ Also, we can connect the coaxial cable from RESI to the TV set, and in the TV se
 
 ## Troubleshooting DVB receiving
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](../../../misc/troubleshooting/receiving/dvb-receiving)
+In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](../../../misc/troubleshooting/receiving/dvb)
 
 We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.

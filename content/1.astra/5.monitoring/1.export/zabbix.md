@@ -61,7 +61,7 @@ systemctl restart zabbix-agent
 
 ### Install Zabbix Template for Astra
 
-Download the [Template](https://cesbo.com/download/astra/zabbix/zbx_astra.xml) to your computer and import this file to Zabbix:
+Download the [Template](https://cdn.cesbo.com/astra/zabbix/zbx_astra.xml) to your computer and import this file to Zabbix:
 
 In Zabbix Web Interface open Configuration -> Templates, then click the **Import** button in the upper right corner. Click **Browse** and select the downloaded template file, then click **Import** button. After successful import, you will see a green message **Imported successfully**
 

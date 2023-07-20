@@ -41,7 +41,7 @@ Click "Save & Test", you should see green notification: "Bucket found"
 
 ## Append dashboard
 
-1. Download our template for Grafana: [dashboard.json](https://cdb.cesbo.com/astra/grafana/dashboard.json)
+1. Download our template for Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
 2. Open: Create -> Import
 3. Click "Upload JSON file"
 4. Choose downloaded file
