@@ -100,7 +100,7 @@ useHead({
 // Only for SSR
 if(process.server) {
     const absolutePageUrl = 'https://help.cesbo.com' + useRoute().fullPath
-    const description = 'Welcome to the Cesbo Help Center: your guide to setting up Digital TV headend systems for Internet Providers, Broadcasters, and the Hospitality industry. Dive into our knowledge base for step-by-step tutorials, in-depth articles, and troubleshooting support to make the most out of your Cesbo solutions'
+    const description = 'Cesbo Help Center: your ultimate guide to build Digital TV headend systems. Leverage our in-depth tutorials, articles, and troubleshooting aids for enhanced utilization of Cesbo solutions in Broadcasting, Internet, and Hospitality sectors.'
     const image = 'https://cdn.cesbo.com/help/og-image.png'
 
     useSeoMeta({

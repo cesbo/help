@@ -1,5 +1,5 @@
 ---
-title: "The comparison of transmission protocols: UDP, HTTP, and HLS"
+title: "Comparing UDP, HTTP & HLS Protocols"
 date: 2023-03-17
 ---
 

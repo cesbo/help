@@ -50,7 +50,7 @@ Click "Save & Test", you should see green notification: "Bucket found"
 
 ## Dashboard
 
-![](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
+![Grafana Dashboard](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
 
 Dashboard has next variables:
 

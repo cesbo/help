@@ -15,6 +15,11 @@ export default defineEventHandler(async (event) => {
         hostname: 'https://help.cesbo.com'
     })
 
+    sitemap.write({
+        url: 'https://help.cesbo.com',
+        changefreq: 'monthly'
+    })
+
     for(const doc of docs) {
         sitemap.write({
             url: doc._path,
