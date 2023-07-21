@@ -122,19 +122,21 @@ Although we recommend Intel network cards, we do not recommend these models spec
 
 ## Recommended DVB adapters
 
-### DigitalDevices
+### Digital Devices
 
-All DVB adapters by DigitalDevices work well with Astra.
+All DVB adapters by [Digital Devices](https://www.digital-devices.eu){target="_blank"} work well with Astra.
 
 - DD Max SX8 - 8 tuner S/S2 receiver + multiswitch
 - DD Max A8i - 8 tuner DVB-C2/T2 ISDB-T receiver
 
-Also works well other hardware by DigitalDevices:
+Also works well other hardware by Digital Devices:
 
 - DD RESI DVB-C FSM - DVB-C modulator
 - DD Octopus Twin CI - 2 CI interfaces for channel descrambling
 
 ### TBS
+
+DVB adapters by [TBS](https://www.tbsdtv.com){target="_blank"} are one of the most popular solutions for receiving digital television.
 
 - TBS6904 - 4 tuner S/S2 receiver
 - TBS6909 - 8 tuner S/S2 receiver + multiswitch
