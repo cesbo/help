@@ -26,6 +26,10 @@ On the provided screenshot, we can see the following elementary streams:
 
 Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Remapping in Astra.
 
+## Limitations
+
+Please note that PID value could be in range from 32 to 8190.
+
 ## Input remapping
 
 In order to perform the stream remapping, we will change the PMT PID to 100, the video stream PID to 101, and audio stream PID to 102. This operation can be conducted by appending the `map.pmt=100&map.video=101&map.audio.eng=102` option to the input address
