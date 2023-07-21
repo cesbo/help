@@ -15,7 +15,7 @@ To analyse the channel, follow these steps:
 2. Within the channel settings, click the "Analyze" button. This will initiate the channel analysis process
 3. After a brief moment, the analyzer will display detailed information about the channel, including available audio streams and their PIDs
 
-![Channel Information](https://cdn.cesbo.com/help/astra/processing/utilities/reorder-audio-streams/analyze.png)
+![Channel Information](https://cdn.cesbo.com/help/astra/processing/utilities/order/analyze.png)
 
 In the provided screenshot, we can see that there are video and two audio streams present:
 
@@ -35,7 +35,7 @@ To reorder the audio streams, follow these steps:
 2. To change the order of the audio streams, append the following option to the input address: `order=331,333,332`. The order parameter should include the PIDs of the video stream first, followed by the default audio stream, and then any additional audio streams. In this example, the new order will be: Video (331), Bulgarian audio (333), and English audio (332)
 3. Save the changes by clicking the "Apply" button at the bottom of the channel settings page
 
-![Channel Settings](https://cdn.cesbo.com/help/astra/processing/utilities/reorder-audio-streams/channel-settings.png)
+![Channel Settings](https://cdn.cesbo.com/help/astra/processing/utilities/order/channel-settings.png)
 
 ::alert
 Input options are separated by the `&` symbol, as shown in the example screenshot. The `#` symbol marks the beginning of the options. For instance, if your address does not have any options, the full address with the order options would be `udp://239.255.1.1:1234#order=331,333,332`
