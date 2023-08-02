@@ -37,10 +37,10 @@ modprobe ixgbe allow_unsupported_sfp=1,1,1,1
 
 The above solution only for test and will be flushed after server reboot. For permanent configuration pass option to the kernel via the grub boot loader.
 
-Open file `/etc/default/grub` in any text editor and find the line:
+Open file `/etc/default/grub` in any text editor and find the line started with:
 
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX_DEFAULT=
 ```
 
 add the parameter `ixgbe.allow_unsupported_sfp=1`:
@@ -54,3 +54,5 @@ Save the file and apply the changes:
 ```
 sudo update-grub
 ```
+
+Restart your server
