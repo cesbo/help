@@ -79,7 +79,8 @@ export default defineNuxtConfig({
             { path: '/misc/articles/protocols', category: 'Articles > Protocols & Standards' },
             { path: '/misc/articles/format', category: 'Articles > Format' },
             { path: '/misc/articles/hardware', category: 'Articles > Hardware' },
-            { path: '/misc/troubleshooting', category: 'Troubleshooting' },
+            { path: '/misc/troubleshooting/receiving', category: 'Troubleshooting > Receiving' },
+            { path: '/misc/troubleshooting/dvb', category: 'Troubleshooting > DVB' },
         ],
     },
 })

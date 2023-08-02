@@ -7,4 +7,6 @@ navigation:
   description: "How to Manage Astra on Your Server: General Settings and Basic Administration Guides"
 ---
 
+Learn how to manage Astra from basic administration guides to advanced integration with your service.
+
 :category

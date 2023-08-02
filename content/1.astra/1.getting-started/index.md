@@ -7,4 +7,6 @@ navigation:
   description: "Introduction to Astra for beginners"
 ---
 
+Learn how to start using Astra to build your own headend for digital TV.
+
 :category

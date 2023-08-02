@@ -7,4 +7,6 @@ navigation:
   description: "Broadcasting & Streaming digital television over IP, Satellite, Cable, and Terrestrial networks, and providing access to channels with HTTP, HLS, SRT protocols"
 ---
 
+Broadcasting & Streaming digital television over IP, Satellite, Cable, and Terrestrial networks, and providing access to channels with HTTP, HLS, SRT protocols.
+
 :category

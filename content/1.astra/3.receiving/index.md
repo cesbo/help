@@ -7,4 +7,6 @@ navigation:
   description: "Configure content sources, such as DVB, UDP, HTTP, and RTSP"
 ---
 
+Configure content sources, such as DVB, UDP, HTTP, and RTSP.
+
 :category

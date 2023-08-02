@@ -7,4 +7,6 @@ navigation:
   description: "Prepare channels for delivery using MPEG-TS processing features"
 ---
 
+Prepare channels for delivery using MPEG-TS processing features.
+
 :category

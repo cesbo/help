@@ -7,4 +7,6 @@ navigation:
   description: "Analyze quality and stability of transport streams. Export statistics and events to external systems like Zabbix or Grafana"
 ---
 
+Analyze quality and stability of transport streams. Export statistics and events to external systems like Zabbix or Grafana.
+
 :category
