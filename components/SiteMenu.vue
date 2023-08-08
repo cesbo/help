@@ -64,6 +64,6 @@
 const navigation = [
     { name: 'Home', to: 'https://www.cesbo.com' },
     { name: 'Help', to: '/' },
-    { name: 'Profile', to: 'https://cesbo.com/accounts/profile/' },
+    { name: 'Profile', to: 'https://cesbo.com/accounts/login/?next=/accounts/profile/' },
 ]
 </script>
