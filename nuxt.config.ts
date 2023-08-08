@@ -30,9 +30,9 @@ export default defineNuxtConfig({
 
         public: {
             algolia: {
-                appId: 'LME4M5PZIU',
-                indexName: 'dev_cesbo',
-                siteKey: '9c19b1c1caa4b8aaa859e0cf3be89152',
+                appId: '',
+                indexName: '',
+                siteKey: '',
             },
         },
     },
