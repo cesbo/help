@@ -19,6 +19,13 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'en',
             },
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/png',
+                    href: 'https://cdn.cesbo.com/favicon.png',
+                },
+            ],
         },
     },
 
