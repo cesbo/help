@@ -34,10 +34,17 @@ You can find detailed information on [Zabbix Agent Manuals](https://www.zabbix.c
 
 First of all Zabbix Agent should be configured to allow incoming connections from the Zabbix Server. Open the Agent configuration file located in `/etc/zabbix/zabbix_agentd.conf` with your favorite editor. Find the `Server=` option and set the IP address or hostname of the server with Zabbix Server. Save file.
 
-Zabbix Agent receives all information from Astra with scripts writed on Python. Make sure that on your server installed Python3 with the Requests library:
+Zabbix Agent receives all information from Astra with scripts writed on Python. Make sure that on your server installed Python3:
 
-- for DEB-based systems: `apt install python3 python3-requests`
-- for RPM-based systems: `yum install python3 python3-requests`
+```sh
+sudo apt install python3 python3-pip
+```
+
+for RPM-based system use `yum` instead of `apt`. Next install necessary library for Python:
+
+```sh
+pip3 install requests
+```
 
 Download scripts for Zabbix Agent:
 
