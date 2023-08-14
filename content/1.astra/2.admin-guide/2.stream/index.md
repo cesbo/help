@@ -1,5 +1,5 @@
 ---
-title: "Stream"
+title: "Stream Settings"
 noindex: true
 ---
 

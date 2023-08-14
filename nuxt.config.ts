@@ -57,8 +57,9 @@ export default defineNuxtConfig({
             { path: '/astra/getting-started/advanced', category: 'Astra > Getting Started > Advanced' },
 
             { path: '/astra/admin-guide/administration', category: 'Astra > Admin Guide > Administration' },
-            { path: '/astra/admin-guide/stream', category: 'Astra > Admin Guide > Stream' },
+            { path: '/astra/admin-guide/stream', category: 'Astra > Admin Guide > Stream Settings' },
             { path: '/astra/admin-guide/settings', category: 'Astra > Admin Guide > Settings' },
+            { path: '/astra/admin-guide/log', category: 'Astra > Admin Guide > Astra Logs' },
             { path: '/astra/admin-guide/api', category: 'Astra > Admin Guide > API' },
 
             { path: '/astra/receiving/dvb', category: 'Astra > Receiving > DVB, ATSC, ISDB-T' },
@@ -82,10 +83,12 @@ export default defineNuxtConfig({
             { path: '/misc/tools-and-utilities/tv-and-media', category: 'Tools & Utilities > TV & Media' },
             { path: '/misc/tools-and-utilities/network', category: 'Tools & Utilities > Network' },
             { path: '/misc/tools-and-utilities/dvb', category: 'Tools & Utilities > DVB' },
+
             { path: '/misc/articles/terms-and-conditions', category: 'Articles > Terms & Conditions' },
             { path: '/misc/articles/protocols', category: 'Articles > Protocols & Standards' },
             { path: '/misc/articles/format', category: 'Articles > Format' },
             { path: '/misc/articles/hardware', category: 'Articles > Hardware' },
+
             { path: '/misc/troubleshooting/receiving', category: 'Troubleshooting > Receiving' },
             { path: '/misc/troubleshooting/dvb', category: 'Troubleshooting > DVB' },
         ],

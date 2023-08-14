@@ -1,5 +1,5 @@
 ---
-title: HLS
+title: HLS Protocol
 date: 2023-06-13
 ---
 
