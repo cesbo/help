@@ -39,6 +39,30 @@ Users used to control access to the Astra Web Interface as well as access to the
     - `3` - regular user. without access to the Astra Web Interface
 - `password` - plain password, in the config will be saved the password hash
 
+::spoiler{title="Example"}
+You may create new user by launching next command:
+
+```sh
+curl -X POST -user login -d @- http://server:8000/control/ <<END
+{
+  "cmd": "set-user",
+  "id": "new-admin",
+  "user": {
+    "enable": true,
+    "type": 1,
+    "password": "secret"
+  }
+}
+END
+```
+
+on successful Astra returns:
+
+```
+{ "set-user": "ok" }
+```
+::
+
 ## Remove user
 
 ```
