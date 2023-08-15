@@ -1,8 +1,8 @@
 <template>
 <nav class="flex" aria-label="Breadcrumb">
-    <ol role="list" class="flex items-center space-x-2">
+    <ol role="list" class="flex items-center space-x-2 text-base text-gray-500">
         <li>
-            <NuxtLink href="/" class="text-gray-400 hover:text-brand">
+            <NuxtLink href="/" class="hover:text-brand">
                 <HomeIcon
                     class="h-4 w-4 flex-shrink-0"
                     aria-hidden="true"
@@ -16,15 +16,14 @@
             class="flex items-center"
         >
             <ChevronRightIcon
-                class="h-4 w-4 flex-shrink-0 text-gray-400"
+                class="h-4 w-4 flex-shrink-0"
                 aria-hidden="true"
             />
             <NuxtLink
                 :href="item.path"
                 class="
                     ml-2
-                    text-sm
-                    text-gray-500
+                    text-base
                     hover:text-brand
                 "
                 :aria-current="item.current ? 'page' : undefined"

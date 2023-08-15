@@ -1,7 +1,7 @@
 <template>
 <div class="mx-auto max-w-3xl text-gray-900">
     <ContentRenderer :value="page">
-        <ArticleBreadcrumb v-if="page._path" :path="page._path" class="mb-5" />
+        <ArticleBreadcrumb v-if="page._path" :path="page._path" class="mb-1" />
 
         <h1
             class="
@@ -15,12 +15,12 @@
         <ArticleToc
             v-if="page.body.toc?.links"
             :items="page.body.toc.links"
-            class="mt-5"
+            class="mt-14"
         />
 
         <div
             class="
-                mt-10
+                mt-14
                 prose
                 lg:prose-xl
                 prose-img:rounded-2xl

@@ -1,5 +1,5 @@
 <template>
-<ul role="list" class="text-base leading-6">
+<ul role="list" class="text-base leading-6 space-y-1">
     <li
         v-for="item in items"
         :key="item.id"
