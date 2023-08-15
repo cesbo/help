@@ -61,6 +61,8 @@ async function makeIndex(
 
     const tmpIndex = client.initIndex(index.indexName + '_tmp')
     await client.copySettings(index.indexName, tmpIndex.indexName)
+    await client.copyRules(index.indexName, tmpIndex.indexName)
+    await client.copySynonyms(index.indexName, tmpIndex.indexName)
 
     while(items.length) {
         const { taskIDs } = await tmpIndex.saveObjects(items.splice(0, 1000))
