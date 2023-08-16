@@ -4,7 +4,7 @@ date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/tbs-dvb-c.jpeg
 ---
 
-:badge[Astra 2021.08.09 and newer]
+:badge[Astra 2021.08.09]
 
 TBS6004 is a DVB-C 4 QAM modulator PCIe card.
 

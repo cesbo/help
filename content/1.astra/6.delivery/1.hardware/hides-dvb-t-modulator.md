@@ -4,7 +4,7 @@ date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg
 ---
 
-:badge[Astra 2021.08.09 and newer]
+:badge[Astra 2021.08.09]
 
 PT100 is a DVB-T modulator for 4 frequencies by HiDes
 
@@ -41,16 +41,15 @@ In the output of the command, we will get the numbers of the modulators:
 
 ## Astra settings
 
-1. Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator
-2. In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
-3. In the MPTS NIT settings, configure transponder options
+Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator. In the MPTS NIT settings, configure transponder options:
 
 ![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 
-Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
+In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
 
-### Additional options
+### Additional output options
 
 Additional options could be added to the output address:
 
 - `gain=N` - signal level in range from 0 to 100
+- `fec=1/2` - :badge[Astra 2023.08.16] FEC coding ratio. Values: `1/2`, `2/3`, `3/4`, `5/6`, `7/8`, `none`
