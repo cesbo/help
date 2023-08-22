@@ -11,7 +11,7 @@ In this changelog is a short comparasion with latest stable release 220504
 
 ### SRT
 
-- SRT library updated to v1.5.2
+- SRT library updated to v1.5.1
 - Option `statsout=FILE` to write SRT receiving/transmitting stats to the CSV file. This file can be processed using https://github.com/mbakholdina/srt-stats-plotting.
 - Supports the standard address format, such as `srt://example.com?passphrase=12345`.
 If your address contains the # symbol in the streamid option, it should be changed to `%23`. For example: `srt://example.com?streamid=%23!::r=LaminorTV,m=request`
