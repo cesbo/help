@@ -63,6 +63,7 @@ For hidden content like examples
 ```
 ::spoiler{title="Example"}
 Spoiler content in markdown format
+::
 ```
 
 ### Badge
