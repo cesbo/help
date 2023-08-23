@@ -1,19 +1,18 @@
 <template>
-<div class="text-base space-y-5">
-    <div class="text-gray-400 text-center">Was this page helpful?</div>
-    <form><fieldset
-        :disabled="variant !== ''"
-        class="
-            disabled:pointer-events-none
-        "
+<div>
+    <form
+        v-if="step != 2"
+        class="text-base space-y-5"
     >
-        <div
+        <div class="text-gray-400 text-center">Was this page helpful?</div>
+        <fieldset
+            :disabled="step > 0 || variant !== ''"
             class="
                 flex
                 justify-center
                 gap-x-5
+                disabled:pointer-events-none
             "
-            v-if="!showMessageFeedback"
         >
             <button
                 class="
@@ -27,7 +26,7 @@
                 :class="{
                     'opacity-30': variant != '' && variant != 'like'
                 }"
-                @click="sendReaction('like')"
+                @click="variant = 'like' ; send()"
             >
                 <FaceSmileIcon class="w-10 h-10" />
                 <span>Yes</span>
@@ -44,7 +43,7 @@
                 :class="{
                     'opacity-30': variant != '' && variant != 'message'
                 }"
-                @click="showMessageFeedback = true"
+                @click="variant = 'message'"
             >
                 <ChatBubbleOvalLeftEllipsisIcon class="w-10 h-10" />
                 <span>Comment</span>
@@ -61,15 +60,24 @@
                 :class="{
                     'opacity-30': variant != '' && variant != 'dislike'
                 }"
-                @click="sendReaction('dislike')"
+                @click="variant = 'dislike'"
             >
                 <FaceFrownIcon class="w-10 h-10" />
                 <span>No</span>
             </button>
-        </div>
-        <div
-            v-else
-            class="flex flex-col items-center gap-y-2 w-full sm:w-1/2 mx-auto"
+        </fieldset>
+
+        <fieldset
+            v-if="variant == 'message' || variant == 'dislike'"
+            :disabled="step > 0"
+            class="
+                flex flex-col items-center
+                gap-y-2
+                w-full
+                sm:w-1/2
+                mx-auto
+                disabled:pointer-events-none
+            "
         >
             <textarea
                 class="
@@ -112,7 +120,7 @@
                         hover:bg-sky-600
                         text-white
                     "
-                    @click="sendMessage()"
+                    @click="send()"
                 >Submit</button>
                 <button
                     class="
@@ -124,14 +132,14 @@
                         ring-1 ring-inset ring-gray-300
                         hover:bg-gray-100
                     "
-                    @click="showMessageFeedback = false"
+                    @click="() => { variant = '' ; step = 0 }"
                 >Cancel</button>
             </div>
-        </div>
-    </fieldset></form>
+        </fieldset>
+    </form>
 
     <div
-        v-if="variant != '' && variant != 'all'"
+        v-else
         class="text-base text-center"
     >
         <p>Thank you for your feedback!</p>
@@ -152,35 +160,29 @@ const props = defineProps<{
 }>()
 
 const variant = ref('')
-const showMessageFeedback = ref(false)
 const message = ref('')
 const email = ref('')
+const step = ref(0)
 
-async function send(body: any) {
-    variant.value = 'all'
+async function send() {
+    step.value = 1
 
     const { data } = await useFetch('/api/feedback', {
         method: 'POST',
         body: {
             title: props.title,
             href: props.href,
-            ...body,
+            reaction: variant.value,
+            message: message.value,
+            email: email.value,
         },
     })
 
     if(data.value && data.value.ok === true) {
-        showMessageFeedback.value = false
-        variant.value = body.reaction || 'message'
+        step.value = 2
     } else {
         variant.value = ''
+        step.value = 0
     }
-}
-
-async function sendReaction(reaction: 'like' | 'dislike') {
-    await send({ reaction })
-}
-
-async function sendMessage() {
-    await send({ message: message.value, email: email.value })
 }
 </script>
