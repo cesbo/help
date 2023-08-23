@@ -65,7 +65,13 @@ The provided archive includes logos in PNG format, with filenames matching the c
 
 Some players and middleware solutions display current and upcoming events for channels. The Electronic Program Guide (EPG) can be exported to the player in XMLTV or any other format supported by the player.
 
-In the Astra Settings -> HTTP Play -> M3U Header, set option `url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"`. This line will be added to the playlist header and provide information about EPG location.
+In the Astra Settings -> HTTP Play -> M3U Header, set option
+
+```
+url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
+```
+
+Line will be added to the playlist header and provide information about EPG location.
 This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/astra/admin-guide/stream/epg).
 
 The final step is a configuring channel ID to link your channels with EPG records. Each channel in the XMLTV has unique identifier, like so:
