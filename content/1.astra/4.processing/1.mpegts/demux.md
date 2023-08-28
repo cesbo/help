@@ -32,6 +32,15 @@ Example:
 dvb://a001#pnr=1&no_sdt&no_eit
 ```
 
+## Pass service tables without modification
+
+During the demultiplexing process, Astra keep in EIT and SDT tables information related to the selected channel only. If you want to pass packets as is, without any changes you may use next options:
+
+- `pass_eit` - pass EIT without changes
+- `pass_sdt` - pass SDT without changes
+
+These options is not recommended to use and they are incompatible with `set_pnr` and `set_tsid` options.
+
 ## Packets with private data
 
 During the demultiplexing process, Astra excludes packets containing unknown data and only allows Video and Audio streams to pass through. If you intend to retain private data, use option `pass_data`:
