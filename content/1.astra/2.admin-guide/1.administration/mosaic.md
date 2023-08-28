@@ -1,6 +1,7 @@
 ---
 title: "Mosaic: Channel Screenshots on Dashboard"
 date: 2023-08-28
+image: https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png
 ---
 
 Mosaic is a simple script to create channel screenshots with ffmpeg and set them on Astra Dashboard using Astra API.
@@ -16,7 +17,7 @@ Channel Screenshots helps to visually evaluate quality of the channels.
 
 ## Install Script
 
-[Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script from and save it on your server:
+[Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script and save it on your server:
 
 ```
 curl -Lo /usr/local/bin/mosaic.sh https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh
@@ -32,7 +33,6 @@ Open script with any text editor and change next variables:
 - `SCREENSHOT_PATH` - full path to save screenshots on your server. Default path is `/var/lib/astra/mosaic/`
 - `API_PORT` - port to API
 - `API_AUTH` - admin login and password to access API
-- `LEGACY` - this option for versions older than astra-230501
 
 ## Start script with Systemd
 
@@ -60,4 +60,5 @@ Open Settings -> HTTP Play
 ![HTTP Play Settings](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/http-play.png)
 
 Set path to screenshots, same as in the `SCREENSHOT_PATH` option.
+
 After saving changes and restart, Astra shows screenshot on dashboard.
