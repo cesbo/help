@@ -15,7 +15,7 @@ Channel Screenshots helps to visually evaluate quality of the channels.
 - Astra with enabled [HTTP Play](/astra/delivery/http-hls/http-play)
 - FFmpeg
 
-## Install Script
+## Download and Configure Script
 
 [Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script and save it on your server:
 
@@ -23,8 +23,6 @@ Channel Screenshots helps to visually evaluate quality of the channels.
 curl -Lo /usr/local/bin/mosaic.sh https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh
 chmod +x /usr/local/bin/mosaic.sh
 ```
-
-## Configure Script
 
 Open script with any text editor and change next variables:
 
@@ -36,16 +34,18 @@ Open script with any text editor and change next variables:
 
 ## Start script with Systemd
 
-To start script automatically you may append it to the systemd.
-
-1. Download configuration file: https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.service
-2. Save file on your server to `/etc/systemd/system/mosaic.service`
-3. Start script: `systemctl start mosaic`
-4. Enable autorun: `systemctl enable mosaic`
+To start script automatically you may append it to the systemd. Download configuration file for systemd and save it on your server:
 
 ```
 curl -Lo /etc/systemd/system/mosaic.service https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.service
 ```
+
+Next commands could be used to manage script:
+
+- Start script: `systemctl start mosaic`
+- Stop script: `systemctl stop mosaic`
+- Enable autorun: `systemctl enable mosaic`
+- Disable autorun: `systemctl disable mosaic`
 
 After the start check that new png files are creating in the screenshots directory:
 
