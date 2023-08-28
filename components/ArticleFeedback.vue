@@ -95,19 +95,6 @@
                 v-model="message"
             ></textarea>
 
-            <input
-                class="
-                    border-0
-                    ring-1 ring-inset ring-gray-300
-                    focus:ring-inset focus:ring-brand
-                    rounded
-                    w-full
-                "
-                type="email"
-                placeholder="Email if you want our response"
-                v-model="email"
-            />
-
             <div class="flex gap-x-2">
                 <button
                     class="
@@ -161,7 +148,6 @@ const props = defineProps<{
 
 const variant = ref('')
 const message = ref('')
-const email = ref('')
 const step = ref(0)
 
 async function send() {
@@ -174,7 +160,6 @@ async function send() {
             href: props.href,
             reaction: variant.value,
             message: message.value,
-            email: email.value,
         },
     })
 
