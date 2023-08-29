@@ -37,8 +37,8 @@
                         py-2
                         shadow-none
                         focus-within:ring-2
-                        focus-within:ring-indigo-500
-                        focus-within:ring-offset-2
+                        focus-within:ring-sky-600
+                        focus-within:ring-inset
                     "
                 >
                     <div class="flex-shrink-0">
