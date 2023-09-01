@@ -19,7 +19,7 @@ In response will be array of active sessions:
 {
     "sessions": [
         {
-            "client_id": N,
+            "client_id": "...",
             "channel_id": "...",
             "channel_name": "...",
             "addr": "...",
@@ -40,7 +40,7 @@ In response will be array of active sessions:
 ```
 {
     "cmd": "close-session",
-    "id": N
+    "id": "..."
 }
 ```
 
