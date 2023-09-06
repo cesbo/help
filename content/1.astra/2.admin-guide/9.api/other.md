@@ -3,7 +3,17 @@ title: "Other API Methods"
 date: 2023-06-30
 ---
 
-## Restart astra
+## Astra Version
+
+Request: `POST /control/`
+
+```json
+{
+    "cmd": "version"
+}
+```
+
+## Astra Restart
 
 Request: `POST /control/`
 
