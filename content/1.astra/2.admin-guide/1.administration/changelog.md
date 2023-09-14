@@ -94,3 +94,9 @@ Output:
 - Astra checks port for API and Web interface to prevent launching same process twice
 - Update OpenSSL to v1.1.1t
 - Integrate LibUV v1.44.2 (preparing for switching from internal event processing to libuv)
+
+## Archive Versions
+
+- [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
+- [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
+- [220504](https://cdn.cesbo.com/astra/builds/astra-220504)
