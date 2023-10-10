@@ -25,13 +25,26 @@
 </template>
 
 <script setup lang="ts">
+declare const Weglot: any;
+
+useHead({
+    script: [
+        {
+            src: 'https://cdn.weglot.com/weglot.min.js',
+        },
+        {
+            src: 'https://sa-help.cesbo.com/latest.js',
+            async: true,
+            defer: true,
+            'data-collect-dnt': true,
+        },
+    ],
+})
+
 onMounted(() => {
-    const script = document.createElement('script')
-    script.setAttribute('data-collect-dnt', 'true')
-    script.setAttribute('async', '')
-    script.setAttribute('defer', '')
-    script.setAttribute('src', 'https://sa-help.cesbo.com/latest.js')
-    document.head.appendChild(script)
+    Weglot?.initialize({
+        api_key: 'wg_63cf25295c4412583437ccb39e512a9d7'
+    })
 })
 </script>
 
