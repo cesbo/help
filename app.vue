@@ -1,5 +1,5 @@
 <template>
-<div class="h-full flex flex-col">
+<div class="h-full flex flex-col" id="app">
     <SiteMenu />
     <div class="grow">
         <NuxtLoadingIndicator />
