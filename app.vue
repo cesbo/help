@@ -43,7 +43,8 @@ useHead({
 
 onMounted(() => {
     Weglot?.initialize({
-        api_key: 'wg_63cf25295c4412583437ccb39e512a9d7'
+        api_key: 'wg_63cf25295c4412583437ccb39e512a9d7',
+        cache: true,
     })
 })
 </script>
