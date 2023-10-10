@@ -12,28 +12,28 @@ The first step in reordering audio streams is to analyze the channel and gather 
 To analyse the channel, follow these steps:
 
 1. Open channel settings in the Astra Web Interface
-2. Within the channel settings, click the "Analyze" button. This will initiate the channel analysis process
+2. Within the channel settings, click the `Analyze` button. This will initiate the channel analysis process
 3. After a brief moment, the analyzer will display detailed information about the channel, including available audio streams and their PIDs
 
 ![Channel Information](https://cdn.cesbo.com/help/astra/processing/utilities/order/analyze.png)
 
 In the provided screenshot, we can see that there are video and two audio streams present:
 
-1. VIDEO PID:331
-2. AUDIO PID: 332, Language: eng (English)
-3. AUDIO PID: 333, Language: bul (Bulgarian)
+1. VIDEO PID: `331`
+2. AUDIO PID: `332`, Language: `eng` (English)
+3. AUDIO PID: `333`, Language: `bul` (Bulgarian)
 
 Take note of the stream PIDs, as you will need this information to reorder the audio streams in the next step.
 
 ## Reorder Audio Streams
 
-The final step in reordering audio streams is to modify the channel configuration. Close the channel analyzer by clicking the "Close" button. This will return you to the channel settings.
+The final step in reordering audio streams is to modify the channel configuration. Close the channel analyzer by clicking the `Close` button. This will return you to the channel settings.
 
 To reorder the audio streams, follow these steps:
 
-1. In the channel settings, locate the "Input" section. This is where you will find the input address for your channel
+1. In the channel settings, locate the `Input` section. This is where you will find the input address for your channel
 2. To change the order of the audio streams, append the following option to the input address: `order=331,333,332`. The order parameter should include the PIDs of the video stream first, followed by the default audio stream, and then any additional audio streams. In this example, the new order will be: Video (331), Bulgarian audio (333), and English audio (332)
-3. Save the changes by clicking the "Apply" button at the bottom of the channel settings page
+3. Save the changes by clicking the `Apply` button at the bottom of the channel settings page
 
 ![Channel Settings](https://cdn.cesbo.com/help/astra/processing/utilities/order/channel-settings.png)
 

@@ -40,10 +40,10 @@ To configure a new UDP input using the Web Interface, begin by selecting "New St
 
 Most options presented in the web interface correspond directly to the components of the UDP address, as described in the "Media Address Format" section. However, there are also some additional options you might find useful:
 
-- **PNR** - program number for MPTS streams. When defined, it enables stream demultiplexing and selects the program with the specified number
-- **DD-CI CAM** - this option is now deprecated and has been replaced by virtual adapters. More information can be found in ...
-- **Softcam** - selects a descrambler for the CAM Client. You can learn more about this in ...
-- **BISS Key** - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/astra/processing/cas/decrypt-biss)
+- `PNR` - program number for MPTS streams. When defined, it enables stream demultiplexing and selects the program with the specified number
+- `DD-CI CAM` - this option is now deprecated and has been replaced by virtual adapters. More information can be found in ...
+- `Softcam` - selects a descrambler for the CAM Client. You can learn more about this in ...
+- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/astra/processing/cas/decrypt-biss)
 
 There are also advanced options available for further customization:
 

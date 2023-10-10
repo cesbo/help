@@ -20,9 +20,9 @@ To identify available elementary streams and their PIDs, it's necessary to analy
 
 On the provided screenshot, we can see the following elementary streams:
 
-1. Program Map Table (PMT) - PID: 374
-1. Video - PID: 371
-2. Audio - PID: 376, Language: eng (English)
+1. Program Map Table (PMT) - PID: `374`
+1. Video - PID: `371`
+2. Audio - PID: `376`, Language: `eng` (English)
 
 Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Remapping in Astra.
 
@@ -38,7 +38,7 @@ In order to perform the stream remapping, we will change the PMT PID to 100, the
 
 ## Remapping for all inputs
 
-For stream remapping across all inputs, the "Remap" tab in the channel settings can be used.
+For stream remapping across all inputs, the `Remap` tab in the channel settings can be used.
 
 ![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/remap/remap-options.png)
 

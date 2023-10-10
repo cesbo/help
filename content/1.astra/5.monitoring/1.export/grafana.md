@@ -32,21 +32,21 @@ Open Settings -> Data Sources and click "Append data source", choose InfluxDB an
 - Name: `Astra` or any other
 - Query language: `Flux`
 - HTTP URL: `http://db-server:8086`
-- Turn off "Basic auth"
+- Turn off `Basic auth`
 - Organization: your organization name in InfluxDB Settings
 - Token: your token copied for Astra settings
 - Min time interval: `1m`
 
-Click "Save & Test", you should see green notification: "Bucket found"
+Click `Save & Test`, you should see green notification: `Bucket found`
 
 ## Append dashboard
 
 1. Download our template for Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
 2. Open: Create -> Import
-3. Click "Upload JSON file"
+3. Click `Upload JSON file`
 4. Choose downloaded file
 5. Set any name for dashboard
-6. Click "Import"
+6. Click `Import`
 
 ## Dashboard
 

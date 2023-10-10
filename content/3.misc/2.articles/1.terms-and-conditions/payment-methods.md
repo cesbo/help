@@ -7,8 +7,10 @@ Here are the payment options currently available:
 
 ## Credit Cards
 
-We accept payments from Visa and MasterCard cards.
-Our payment gateway provider, https://every-pay.com, ensures that all transactions are secure and protected.
+We accept payments from Visa and MasterCard cards with PCI-DSS compliant providers:
+
+- https://stripe.com
+- https://every-pay.com
 
 ## PayPal
 

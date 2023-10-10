@@ -23,11 +23,11 @@ Host server-alias
     IdentityFile ~/.ssh/server_ed25519
 ```
 
-- **Host** - server name. This is the name used in the connection command: `ssh server-alias`
-- **HostName** - an optional server address. If HostName is not defined, the proper address or host name should be defined in **Host**
-- **User** - username
-- **Port** - the server port. Default: `22`
-- **IdentityFile** - an optional field that specifies the full path to the private key file
+- `Host` - server name. This is the name used in the connection command: `ssh server-alias`
+- `HostName` - an optional server address. If HostName is not defined, the proper address or host name should be defined in `Host`
+- `User` - username
+- `Port` - the server port. Default: `22`
+- `IdentityFile` - an optional field that specifies the full path to the private key file
 
 ## Key Generation
 

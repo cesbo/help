@@ -70,27 +70,27 @@ systemctl restart zabbix-agent
 
 Download the [Template](https://cdn.cesbo.com/astra/zabbix/zbx_astra.xml) to your computer and import this file to Zabbix:
 
-In Zabbix Web Interface open Configuration -> Templates, then click the **Import** button in the upper right corner. Click **Browse** and select the downloaded template file, then click **Import** button. After successful import, you will see a green message **Imported successfully**
+In Zabbix Web Interface open `Configuration` -> `Templates`, then click the `Import` button in the upper right corner. Click `Browse` and select the downloaded template file, then click `Import` button. After successful import, you will see a green message `Imported successfully`
 
 ### Configure Template
 
-In Zabbix Web Interface open Configuration -> Templates, then select **Astra API monitoring** and open the Macros tab. Fill next values:
+In Zabbix Web Interface open `Configuration` -> `Templates`, then select `Astra API monitoring` and open the Macros tab. Fill next values:
 
 - First line, set administrator password to Astra Web Interface
 - Second line, set administrator username to Astra Web Interface
 - The last line, the port of the Astra web interface. If you have multiple processes, specify all ports separated by commas. For example: `8000,8001,8002`
 
-Click **Update** button to apply changes
+Click `Update` button to apply changes
 
 ### Connect Zabbix to Astra
 
-In Zabbix Web Interface open Configuration -> Hosts, then click **Create host** in the top right corner. Fill following fields:
+In Zabbix Web Interface open Configuration -> Hosts, then click `Create host` in the top right corner. Fill following fields:
 
-- **Hostname** - any name of the server where Astra is installed, for example: Astra
-- **Groups** - select **Cesbo_templates** or create a new group
-- **Interfaces** - click add, select **Agent** and specify the IP address or hostname of the server with Zabbix Agent
+- `Hostname` - any name of the server where Astra is installed, for example: Astra
+- `Groups` - select `Cesbo_templates` or create a new group
+- `Interfaces` - click add, select `Agent` and specify the IP address or hostname of the server with Zabbix Agent
 
-Open the Templates tab and in the field **Link new templates** append **Astra API monitoring**. Also if you want to control the general state of the system, append also **Linux by Zabbix agent**.
+Open the Templates tab and in the field `Link new templates` append `Astra API monitoring`. Also if you want to control the general state of the system, append also `Linux by Zabbix agent`.
 
 Save changes. After about 10 minutes, you will see graphs and triggers about the status of channels and adapters
 

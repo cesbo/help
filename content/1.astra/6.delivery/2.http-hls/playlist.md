@@ -11,8 +11,8 @@ Astra generate simple playlist with links to all enabled channels. This playlist
 
 Astra provide access to playlist in next formats:
 
-- **M3U8** - is a most popular format supported by all media players
-- **XSPF** - is an XML-based playlist format, supported by some players
+- `M3U8` - is a most popular format supported by all media players
+- `XSPF` - is an XML-based playlist format, supported by some players
 
 In this guide we will use M3U8 format.
 
@@ -34,7 +34,7 @@ Where:
 
 For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/astra/admin-guide/settings/channel-groups).
 
-Then select created category in the HTTP Play settings, option "Playlist Arrange".
+Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
 
 ::note
 Some players, like VLC, doesn't support M3U8 groups and shows flat playlist
@@ -57,7 +57,7 @@ unzip it999_transparent_logo.zip
 rm it999_transparent_logo.zip
 ```
 
-In the Settings -> HTTP Play -> Path to TV logos, set the path as `/var/lib/astra/it999_transparent_220x132`. Please, note the directory name is for example above.
+In the Settings -> `HTTP Play` -> `Path to TV logos`, set the path as `/var/lib/astra/it999_transparent_220x132`. Please, note the directory name is for example above.
 
 The provided archive includes logos in PNG format, with filenames matching the channel names. With these steps completed, the playlist will now include the `tvg-logo` option for each channel.
 
@@ -65,7 +65,7 @@ The provided archive includes logos in PNG format, with filenames matching the c
 
 Some players and middleware solutions display current and upcoming events for channels. The Electronic Program Guide (EPG) can be exported to the player in XMLTV or any other format supported by the player.
 
-In the Astra Settings -> HTTP Play -> M3U Header, set option
+In the Astra Settings -> `HTTP Play` -> `M3U Header`, set option
 
 ```
 url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
@@ -82,6 +82,6 @@ The final step is a configuring channel ID to link your channels with EPG record
 </channel>
 ```
 
-In Astra, navigate to the Channel settings, open EPG tab, and set the "XMLTV Channel ID" value to **226**:
+In Astra, navigate to the Channel settings, open EPG tab, and set the `XMLTV Channel ID` value to `226`:
 
 ![Stream EPG options](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/stream-epg.png)

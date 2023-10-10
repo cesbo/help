@@ -132,9 +132,9 @@ MPTS is a Multi Program Transport Stream (or multiplex) is a stream containing s
 
 In the SDT settings should be provided all information about channel:
 
-- **Service Name** - program name
-- **PNR** - program number should be same as in the input list
-- **LCN** - logical number defines what channel number will be on the TV set
+- `Service Name` - program name
+- `PNR` - program number should be same as in the input list
+- `LCN` - logical number defines what channel number will be on the TV set
 
 ![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
 

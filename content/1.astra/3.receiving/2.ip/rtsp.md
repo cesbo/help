@@ -17,8 +17,8 @@ rtsp://login:password@address:port/path#options
 
 - `login:password` – login and password for RTSP authentication. Supports Basic and Digest authentication methods
 - `address` – IPv4 server address or domain name
-- `port` – port number. Default: **554**
-- `path` – the path to the resource. Default: **/**
+- `port` – port number. Default: `554`
+- `path` – the path to the resource. Default: `/`
 
 Options:
 
@@ -27,12 +27,12 @@ Options:
 
 ## Web Interface
 
-To set up an RSTP input in Astra, you can either enter the source address directly into the "Input address" field in the Stream settings or use the "Input configuration" form accessed by clicking on the gear icon form:
+To set up an RSTP input in Astra, you can either enter the source address directly into the `Input address` field in the Stream settings or use the Input configuration form accessed by clicking on the gear icon form:
 
 ![RTSP Options](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
 
-- **RSTP address** - source address of the RSTP stream
-- **Interleaved mode** - by the default Astra uses UDP to receive media data from camera, interleaved mode force camera to send data over TCP
+- `RSTP address` - source address of the RSTP stream
+- `Interleaved mode` - by the default Astra uses UDP to receive media data from camera, interleaved mode force camera to send data over TCP
 
 ## Troubleshooting
 
@@ -42,7 +42,7 @@ The current version of Astra supports H.264 only
 
 ### Timeout errors
 
-The error messages may include "Connection timeout" or "Response timeout", which suggest that the camera is not responding to requests from Astra. One possible cause of this issue is when the camera is stuck and cannot respond to requests
+The error messages may include `Connection timeout` or `Response timeout`, which suggest that the camera is not responding to requests from Astra. One possible cause of this issue is when the camera is stuck and cannot respond to requests
 
 ### Authentication failed
 

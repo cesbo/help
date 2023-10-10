@@ -13,10 +13,10 @@ To identify available elementary streams and their PIDs, it's necessary to analy
 
 On the provided screenshot, we can see the following elementary streams:
 
-1. Video - PID: 1331
-2. Subtitle - PID: 1335, Language: bul (Bulgarian)
-3. Audio - PID: 1332, Language: bul (Bulgarian)
-4. Audio - PID: 1336, Language: eng (English)
+1. Video - PID: `1331`
+2. Subtitle - PID: `1335`, Language: `bul` (Bulgarian)
+3. Audio - PID: `1332`, Language: `bul` (Bulgarian)
+4. Audio - PID: `1336`, Language: `eng` (English)
 
 Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Filtering in Astra.
 
@@ -36,12 +36,12 @@ To verify the results of the applied stream filter, click "Apply" to save the ch
 
 ## Filtering for all inputs
 
-For stream filtering across all inputs, the "Remap" tab in the channel settings can be used. This method is suitable with the remap feature.
+For stream filtering across all inputs, the `Remap` tab in the channel settings can be used. This method is suitable with the remap feature.
 
 ![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/filter/remap-options.png)
 
-In the "Map PIDs" field, `video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
+In the `Map PIDs` field, `video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
 
-Subsequently, in the "Filter PIDs" field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
+Subsequently, in the `Filter PID` field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
 
-Read more: [Remap PIDs]
+Read more: [Remap PIDs](./remap)

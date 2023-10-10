@@ -36,4 +36,4 @@ INFO: PMT pnr:100 version:1
 INFO: PMT pnr:200 version:1
 ```
 
-Next you can create channel by clicking "New Stream" in the main menu. In the channel settings set name and input address with program number (PNR): `udp://239.255.1.1:1234#pnr=100`. And click Apply to save settings.
+Next you can create channel by clicking `New Stream` in the main menu. In the channel settings set name and input address with program number (PNR): `udp://239.255.1.1:1234#pnr=100`. And click Apply to save settings.
