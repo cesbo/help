@@ -34,13 +34,6 @@
         >
             <ContentRendererMarkdown :value="page" />
         </div>
-
-        <div class="pt-20">
-            <ArticleFeedback
-                :title="title"
-                :href="absolutePageUrl"
-            />
-        </div>
     </ContentRenderer>
 </div>
 </template>
