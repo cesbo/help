@@ -32,7 +32,12 @@ You can find detailed information on [Zabbix Agent Manuals](https://www.zabbix.c
 
 ## Zabbix Agent configuration
 
-First of all Zabbix Agent should be configured to allow incoming connections from the Zabbix Server. Open the Agent configuration file located in `/etc/zabbix/zabbix_agentd.conf` with your favorite editor. Find the `Server=` option and set the IP address or hostname of the server with Zabbix Server. Save file.
+First of all Zabbix Agent should be configured to allow incoming connections from the Zabbix Server. Open the Agent configuration file located in `/etc/zabbix/zabbix_agentd.conf` with your favorite editor.
+
+1. Find the `Server=` option and set the IP address or hostname of the server with Zabbix Server;
+2. Find the `UnsafeUserParameters=` option or append new and set value to `1`.
+
+Save file.
 
 Zabbix Agent receives all information from Astra with scripts writed on Python. Make sure that on your server installed Python3:
 
