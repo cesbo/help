@@ -57,6 +57,17 @@ async function makeIndex(
         return 0
     }
 
+    {
+        // add changelog
+        const path = '/astra/admin-guide/administration/changelog'
+        items.push({
+            objectID: path,
+            title: 'Changelog',
+            content: '',
+            category: options.categories?.find(item => path.startsWith(item.path))?.category,
+        })
+    }
+
     const result = items.length
 
     const tmpIndex = client.initIndex(index.indexName + '_tmp')
