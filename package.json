@@ -28,7 +28,6 @@
     "@heroicons/vue": "^2.0.18",
     "@vueuse/components": "^10.6.1",
     "@vueuse/core": "^10.6.1",
-    "algoliasearch": "^4.20.0",
-    "logsnag": "^1.0.0"
+    "algoliasearch": "^4.20.0"
   }
 }
