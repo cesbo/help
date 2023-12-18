@@ -27,7 +27,7 @@
                     items-center
                     mr-auto
                 "
-                title="Cesbo Help Center"
+                title="Cesbo Docs"
             >
                 <div
                     class="
@@ -63,7 +63,8 @@
 <script setup lang="ts">
 const navigation = [
     { name: 'Home', to: 'https://www.cesbo.com' },
-    { name: 'Help', to: '/' },
+    { name: 'Docs', to: '/' },
+    { name: 'Tickets', to: 'https://support.cesbo.com' },
     { name: 'Profile', to: 'https://cesbo.com/accounts/login/?next=/accounts/profile/' },
 ]
 </script>
