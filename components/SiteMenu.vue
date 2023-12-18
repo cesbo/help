@@ -65,6 +65,7 @@ const navigation = [
     { name: 'Home', to: 'https://www.cesbo.com' },
     { name: 'Docs', to: '/' },
     { name: 'Support', to: 'https://support.cesbo.com' },
+    { name: 'Pricing', to: 'https://cesbo.com/astra-license' },
     { name: 'Profile', to: 'https://cesbo.com/accounts/login/?next=/accounts/profile/' },
 ]
 </script>
