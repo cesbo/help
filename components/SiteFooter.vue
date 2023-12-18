@@ -71,13 +71,6 @@ import {
     AtSymbolIcon,
 } from '@heroicons/vue/20/solid'
 
-const links = [
-    { name: 'Home', to: 'https://www.cesbo.com' },
-    { name: 'Help', to: 'https://help.cesbo.com' },
-    { name: 'Status', to: 'https://status.cesbo.com' },
-    { name: 'Profile', to: 'https://cesbo.com/accounts/login/?next=/accounts/profile/' },
-]
-
 const TwitterIcon = defineComponent({
     render: () => h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
         h('path', {
