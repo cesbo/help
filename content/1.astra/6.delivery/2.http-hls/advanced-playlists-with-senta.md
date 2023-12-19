@@ -24,3 +24,5 @@ date:2023-12-19
 ## Configuring Senta.tv as Middleware:
 
 Similar to [HTTP middleware](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#http-reques), specify the following address: `https://senta.tv/check`
+
+If you have any additional questions, you can refer to [senta documentation](https://senta.tv/help)
