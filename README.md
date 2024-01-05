@@ -104,8 +104,15 @@ Append Admin API key to the environment variables:
 ALGOLIA_SECRET_KEY="..."
 ```
 
-Launch build:
+Launch:
 
 ```
-npm run build
+npm run generate
+```
+
+## Deploy
+
+```
+npm run generate
+tar -zHcf - dist | ssh cesbo.dev tar -C /opt/help -zxf -
 ```
