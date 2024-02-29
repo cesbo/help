@@ -38,7 +38,7 @@
                 focus:ring-0
                 peer
             "
-            placeholder="Search our knowledge base..."
+            :placeholder="$t('search.placeholder')"
             @change="onSearch($event.target.value)"
         />
         <button

@@ -9,7 +9,7 @@
                     font-bold
                     mb-2
                 "
-            >{{ $t(product.title) }}</h2>
+            >{{ product.title }}</h2>
 
             <div
                 class="
@@ -71,14 +71,14 @@
                                     rounded-sm
                                     mb-2
                                 "
-                            >{{ $t(category.title) }}</h3>
+                            >{{ category.title }}</h3>
                             <div
                                 class="
                                     text-sm
                                     text-gray-800
                                     line-clamp-2
                                 "
-                            >{{ $t(category.description) }}</div>
+                            >{{ category.description }}</div>
                         </NuxtLink>
                     </div>
                 </div>
@@ -122,6 +122,7 @@ if(process.server) {
 }
 
 const query: QueryBuilderParams = {
+    _locale: "ru",
     sort: [
         { date: -1 },
     ],

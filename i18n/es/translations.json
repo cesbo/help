@@ -7,6 +7,9 @@
         "pricing": "Pricing",
         "profile": "Perfil"
     },
+    "search": {
+        "placeholder": "Buscar en nuestra base de conocimientos..."
+    },
     "footer": {
         "need_help_question": "¿Necesita más ayuda o información?",
         "email_us": "Correo electrónico"

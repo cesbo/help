@@ -7,6 +7,9 @@
         "pricing": "Pricing",
         "profile": "Profile"
     },
+    "search": {
+        "placeholder": "Search our knowledge base..."
+    },
     "footer": {
         "need_help_question": "Need additional help or information?",
         "email_us": "Email Us"

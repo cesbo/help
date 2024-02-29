@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     ],
 
     i18n: {
+        detectBrowserLanguage: {
+            useCookie: true
+        },
         locales: [{
             code: 'en',
             name: 'English'
@@ -21,6 +24,10 @@ export default defineNuxtConfig({
         }],
         defaultLocale: 'en',
         vueI18n: './i18n/configuration.ts'
+    },
+
+    content: {
+        locales: ['en', 'ru', 'es']
     },
 
     nitro: {

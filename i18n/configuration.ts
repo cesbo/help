@@ -5,6 +5,7 @@ import es from './es/translations.json'
 export default defineI18nConfig(() => ({
     legacy: false,
     locale: 'en',
+    fallbackLocale: 'en',
     messages: {
         en,
         ru,
