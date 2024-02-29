@@ -62,6 +62,17 @@
             dark:text-gray-400
         "
     >&copy; 2023, Cesbo</div>
+
+    <div>
+    <form>
+      <select v-model="locale">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+      </select>
+      <p>{{ $t('welcome') }}</p>
+    </form>
+  </div>
 </div>
 </footer>
 </template>
@@ -107,4 +118,6 @@ const social = [
         hover: 'hover:text-sky-500',
     },
 ]
+
+const { locale } = useI18n()
 </script>
