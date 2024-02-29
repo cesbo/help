@@ -6,5 +6,9 @@
         "support": "Support",
         "pricing": "Pricing",
         "profile": "Profile"
+    },
+    "footer": {
+        "need_help_question": "Need additional help or information?",
+        "email_us": "Email Us"
     }
 }

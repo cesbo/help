@@ -23,7 +23,7 @@
             font-medium
             text-color-900
         "
-    >Need additional help or information?</div>
+    >{{ $t("footer.need_help_question") }}</div>
     <div>
         <a
             href="mailto:support@cesbo.com"
@@ -39,7 +39,7 @@
             "
         >
             <AtSymbolIcon class="w-6 h-6" />
-            <span>Email Us</span>
+            <span>{{ $t("footer.email_us") }}</span>
         </a>
     </div>
 </div>
@@ -69,9 +69,6 @@
         <option v-for="locale in locales" :value="locale.code">
            {{ locale.name }}
         </option>
-        <!-- <option value="en">English</option>
-        <option value="ru">Русский</option>
-        <option value="es">Español</option> -->
       </select>
     </form>
   </div>
