@@ -2,12 +2,12 @@
 <nav class="flex" aria-label="Breadcrumb">
     <ol role="list" class="flex items-center space-x-2 text-base text-gray-500">
         <li>
-            <NuxtLink href="/" class="hover:text-brand">
+            <NuxtLink :to="localePath('/')" class="hover:text-brand">
                 <HomeIcon
                     class="h-4 w-4 flex-shrink-0"
                     aria-hidden="true"
                 />
-                <span class="sr-only">Home</span>
+                <span class="sr-only">{{ $t("breadcrumbs.home") }}</span>
             </NuxtLink>
         </li>
 
@@ -20,7 +20,7 @@
                 aria-hidden="true"
             />
             <NuxtLink
-                :href="item.path"
+                :to="localePath(item.path)"
                 class="
                     ml-2
                     text-base
@@ -37,17 +37,25 @@
 import {
     ChevronRightIcon,
     HomeIcon,
-} from '@heroicons/vue/20/solid'
+} from '@heroicons/vue/20/solid';
+import { delocalizePath } from './utils/UrlHelper';
+const localePath = useLocalePath()
+const { locale } = useI18n()
 
 const props = defineProps<{
     path: string
 }>()
 
-const [ navigation ] = await fetchContentNavigation({
+const { data } = await useAsyncData('breadcrumbs', () => fetchContentNavigation({
     where: [
-        { _path: props.path },
+        {
+            _path: props.path,
+            _locale: locale.value,
+        },
     ],
-})
+}))
+
+let navigation = data.value!![0]
 
 type BreadcrumbItem = {
     title: string
@@ -60,11 +68,18 @@ const breadcrumb: BreadcrumbItem[] = []
     let children = navigation.children
     while(children) {
         const item = children[0]
-        const current = item._path == props.path
+        const current = delocalizePath(item._path, locale.value) === props.path
+
+        // Unfortunately, fetchContentNavigation does not translate titles of parent nodes
+        // Therefore, the current solution is to manually query titles with clarified locale
+        const localizedPage = await queryContent().where({
+            _path: item._path,
+            _locale: locale.value
+        }).only('title').findOne()
 
         breadcrumb.push({
-            title: item.title,
-            path: item._path,
+            title: localizedPage.title ?? item.title,
+            path: localePath(item._path),
             current
         })
 
