@@ -1,9 +1,14 @@
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/i18n',
         '@nuxt/content',
-        '@nuxt/image',
+        '@nuxt/image',   
     ],
+
+    i18n: {
+        vueI18n: './i18n/configuration.ts'
+    },
 
     nitro: {
         prerender: {
