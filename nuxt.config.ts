@@ -3,10 +3,23 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxtjs/i18n',
         '@nuxt/content',
-        '@nuxt/image',   
+        '@nuxt/image',
     ],
 
     i18n: {
+        locales: [{
+            code: 'en',
+            name: 'English'
+        },
+        {
+            code: 'ru',
+            name: 'Русский'
+        },
+        {
+            code: 'es',
+            name: 'Español'
+        }],
+        defaultLocale: 'en',
         vueI18n: './i18n/configuration.ts'
     },
 
@@ -22,9 +35,9 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            htmlAttrs: {
-                lang: 'en',
-            },
+            // htmlAttrs: {
+            //     lang: 'en',
+            // },
             link: [
                 {
                     rel: 'icon',

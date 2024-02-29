@@ -66,11 +66,13 @@
     <div>
     <form>
       <select v-model="locale">
-        <option value="en">English</option>
+        <option v-for="locale in locales" :value="locale.code">
+           {{ locale.name }}
+        </option>
+        <!-- <option value="en">English</option>
         <option value="ru">Русский</option>
-        <option value="es">Español</option>
+        <option value="es">Español</option> -->
       </select>
-      <p>{{ $t('welcome') }}</p>
     </form>
   </div>
 </div>
@@ -119,5 +121,5 @@ const social = [
     },
 ]
 
-const { locale } = useI18n()
+const { locale, locales } = useI18n()
 </script>

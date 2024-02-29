@@ -51,7 +51,7 @@
                                 rounded
                                 hover:text-brand
                             "
-                        >{{ item.name }}</NuxtLink>
+                        >{{ $t(item.name) }}</NuxtLink>
                     </li>
                 </ul>
             </div>
@@ -61,11 +61,13 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+
 const navigation = [
-    { name: 'Home', to: 'https://www.cesbo.com' },
-    { name: 'Docs', to: '/' },
-    { name: 'Support', to: 'https://support.cesbo.com' },
-    { name: 'Pricing', to: 'https://app.cesbo.com/orders/software/astra/buy/' },
-    { name: 'Profile', to: 'https://app.cesbo.com/accounts/login/?next=/accounts/profile/' },
+    { name: 'menu.home', to: 'https://www.cesbo.com' },
+    { name: 'menu.docs', to: '/' },
+    { name: 'menu.support', to: 'https://support.cesbo.com' },
+    { name: 'menu.pricing', to: 'https://app.cesbo.com/orders/software/astra/buy/' },
+    { name: 'menu.profile', to: 'https://app.cesbo.com/accounts/login/?next=/accounts/profile/' },
 ]
 </script>

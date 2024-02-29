@@ -9,7 +9,7 @@
                     font-bold
                     mb-2
                 "
-            >{{ product.title }}</h2>
+            >{{ $t(product.title) }}</h2>
 
             <div
                 class="
@@ -55,7 +55,7 @@
                     </div>
                     <div class="min-w-0 flex-1 pt-3">
                         <NuxtLink
-                            :to="category._path"
+                            :to="localePath(category._path)"
                             class="focus:outline-none"
                         >
                             <span class="absolute inset-0" aria-hidden="true" />
@@ -71,14 +71,14 @@
                                     rounded-sm
                                     mb-2
                                 "
-                            >{{ category.title }}</h3>
+                            >{{ $t(category.title) }}</h3>
                             <div
                                 class="
                                     text-sm
                                     text-gray-800
                                     line-clamp-2
                                 "
-                            >{{ category.description }}</div>
+                            >{{ $t(category.description) }}</div>
                         </NuxtLink>
                     </div>
                 </div>
@@ -90,6 +90,7 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const localePath = useLocalePath()
 
 const title = 'Cesbo Help Center'
 
