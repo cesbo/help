@@ -90,6 +90,7 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const title = 'Cesbo Help Center'
@@ -122,7 +123,7 @@ if(process.server) {
 }
 
 const query: QueryBuilderParams = {
-    _locale: "ru",
+    where: [{ _locale: locale.value.toLowerCase() }],
     sort: [
         { date: -1 },
     ],

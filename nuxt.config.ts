@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     ],
 
     i18n: {
+        strategy: "prefix_and_default",
         detectBrowserLanguage: {
             useCookie: true
         },
@@ -44,9 +45,6 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            // htmlAttrs: {
-            //     lang: 'en',
-            // },
             link: [
                 {
                     rel: 'icon',

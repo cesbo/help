@@ -63,15 +63,7 @@
         "
     >&copy; 2023, Cesbo</div>
 
-    <div>
-    <form>
-      <select v-model="locale">
-        <option v-for="locale in locales" :value="locale.code">
-           {{ locale.name }}
-        </option>
-      </select>
-    </form>
-  </div>
+    <LangSelector />
 </div>
 </footer>
 </template>
@@ -118,5 +110,6 @@ const social = [
     },
 ]
 
-const { locale, locales } = useI18n()
+const { locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 </script>
