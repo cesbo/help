@@ -1,3 +1,5 @@
+import { localeNames } from "./i18n/setup";
+
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
@@ -27,7 +29,7 @@ export default defineNuxtConfig({
     },
 
     content: {
-        locales: ['en', 'ru', 'es']
+        locales: localeNames
     },
 
     nitro: {
