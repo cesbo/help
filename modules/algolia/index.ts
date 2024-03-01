@@ -19,18 +19,40 @@ import type {
     AlgoliaIndexObject,
     AlgoliaConfig,
 } from './types'
+import type { LocaleObject } from '@nuxtjs/i18n'
 
 const name = '@cesbo/search'
+
+async function makeIndexes(
+    nitro: Nitro,
+    client: SearchClient,
+    indexSuffix: string,
+    options: AlgoliaConfig,
+): Promise<number> {
+    const { locales } = useI18n()
+
+    const totalIndexAmount = Promise.all(
+        locales.value.map(locale => 
+            makeIndex(nitro, client, indexSuffix, locale, options)
+    ))
+    .then(indexAmounts => {
+        return indexAmounts.reduce((a, b) => a + b, 0)
+    });
+
+    return totalIndexAmount;
+}
 
 async function makeIndex(
     nitro: Nitro,
     client: SearchClient,
-    index: SearchIndex,
+    indexSuffix: string,
+    locale: LocaleObject,
     options: AlgoliaConfig,
 ): Promise<number> {
-    const items: AlgoliaIndexObject[] = []
+    const index = client.initIndex(`${locale.code}_${indexSuffix}`)
 
-    const keys = await nitro.storage.getKeys('cache:content:parsed')
+    const items: AlgoliaIndexObject[] = []
+    const keys = await nitro.storage.getKeys(`cache:content:parsed:${locale.code}`)
     for(const key of keys) {
         const item: any = await nitro.storage.getItem(key)
         if(!item.parsed) {
@@ -113,17 +135,24 @@ export default defineNuxtModule({
         const indexName = process.env.NUXT_PUBLIC_ALGOLIA_INDEX_NAME
         const secretKey = process.env.ALGOLIA_SECRET_KEY
 
+        nuxt.hooks.hook('nitro:init', async (nitro) => {
+            nitro.hooks.hook('compiled', async (nitro) => {
+                const keys = await nitro.storage.getKeys('cache:content:parsed')
+                logger.info('Keys without language: ')
+                logger.info(keys)
+            })
+        })
+
         if(!secretKey || !appId || !indexName) {
             logger.info('Skip Algolia indexing')
             return
         }
 
         const client = algoliasearch(appId, secretKey)
-        const index = client.initIndex(indexName)
 
         nuxt.hooks.hook('nitro:init', async (nitro) => {
             nitro.hooks.hook('compiled', async (nitro) => {
-                const num = await makeIndex(nitro, client, index, options)
+                const num = await makeIndexes(nitro, client, indexName, options)
                 logger.info(`Algolia index ready. Uploaded ${ num } items`)
             })
         })

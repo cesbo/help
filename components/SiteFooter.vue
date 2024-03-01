@@ -109,7 +109,4 @@ const social = [
         hover: 'hover:text-sky-500',
     },
 ]
-
-const { locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
 </script>
