@@ -1,12 +1,12 @@
 ---
-title: "Getting Started"
+title: "Primeros pasos"
 noindex: true
 navigation:
   color: "#519ed3"
   icon: https://cdn.cesbo.com/help/icons/astra/getting-started.svg
-  description: "Introduction to Astra for beginners"
+  description: "Introducción a Astra para principiantes"
 ---
 
-Learn how to start using Astra to build your own headend for digital TV.
+Aprenda a utilizar Astra para construir su propia cabecera de TV digital.
 
 :category

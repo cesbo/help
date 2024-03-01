@@ -1,12 +1,12 @@
 ---
-title: "Delivery"
+title: "Entrega"
 noindex: true
 navigation:
   color: "#519ed3"
   icon: https://cdn.cesbo.com/help/icons/astra/delivery.svg
-  description: "Broadcasting & Streaming digital television over IP, Satellite, Cable, and Terrestrial networks, and providing access to channels with HTTP, HLS, SRT protocols"
+  description: "Difusión y streaming de televisión digital por IP, satélite, cable y redes terrestres, y acceso a canales con protocolos HTTP, HLS y SRT"
 ---
 
-Broadcasting & Streaming digital television over IP, Satellite, Cable, and Terrestrial networks, and providing access to channels with HTTP, HLS, SRT protocols.
+Difusión y streaming de televisión digital por IP, satélite, cable y redes terrestres, y acceso a canales con protocolos HTTP, HLS y SRT.
 
 :category

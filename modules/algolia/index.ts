@@ -135,14 +135,6 @@ export default defineNuxtModule({
         const indexName = process.env.NUXT_PUBLIC_ALGOLIA_INDEX_NAME
         const secretKey = process.env.ALGOLIA_SECRET_KEY
 
-        nuxt.hooks.hook('nitro:init', async (nitro) => {
-            nitro.hooks.hook('compiled', async (nitro) => {
-                const keys = await nitro.storage.getKeys('cache:content:parsed')
-                logger.info('Keys without language: ')
-                logger.info(keys)
-            })
-        })
-
         if(!secretKey || !appId || !indexName) {
             logger.info('Skip Algolia indexing')
             return

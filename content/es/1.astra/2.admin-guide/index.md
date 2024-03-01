@@ -1,12 +1,12 @@
 ---
-title: "Admin Guide"
+title: "Guía del administrador"
 noindex: true
 navigation:
   color: "#519ed3"
   icon: https://cdn.cesbo.com/help/icons/astra/admin-guide.svg
-  description: "How to Manage Astra on Your Server: General Settings and Basic Administration Guides"
+  description: "Cómo administrar Astra en su servidor: Configuración general y guías básicas de administración"
 ---
 
-Learn how to manage Astra from basic administration guides to advanced integration with your service.
+Aprenda a gestionar Astra desde las guías básicas de administración hasta la integración avanzada con su servicio.
 
 :category
