@@ -7,8 +7,15 @@
         "pricing": "Pricing",
         "profile": "Perfil"
     },
+    "breadcrumbs": {
+        "home": "Inicio"
+    },
     "search": {
-        "placeholder": "Buscar en nuestra base de conocimientos..."
+        "placeholder": "Buscar en nuestra base de conocimientos...",
+        "nothing_found": "No pudimos encontrar ningún artículo con esa petición.",
+        "hotkey_to_navigate_description": "para navegar",
+        "hotkey_to_select_description": "para seleccionar",
+        "hotkey_to_cancel_description": "para cancelar"
     },
     "footer": {
         "need_help_question": "¿Necesita más ayuda o información?",

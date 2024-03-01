@@ -68,7 +68,7 @@
         "
     >
         <OnClickOutside @trigger="onSearch('')">
-            <p class="text-sm text-gray-900">We couldn't find any articles with that request.</p>
+            <p class="text-sm text-gray-900">{{ $t("search.nothing_found") }}</p>
         </OnClickOutside>
     </div><!-- not found -->
 
@@ -164,15 +164,15 @@
                 <div class="flex gap-x-1 items-center">
                     <Hotkey>&ShortDownArrow;</Hotkey>
                     <Hotkey>&ShortUpArrow;</Hotkey>
-                    <span>to navigate</span>
+                    <span>{{ $t("search.hotkey_to_navigate_description") }}</span>
                 </div>
                 <div class="flex gap-x-1 items-center">
                     <Hotkey>Enter</Hotkey>
-                    <span>to select</span>
+                    <span>{{ $t("search.hotkey_to_select_description") }}</span>
                 </div>
                 <div class="flex gap-x-1 items-center">
                     <Hotkey>Esc</Hotkey>
-                    <span>to cancel</span>
+                    <span>{{ $t("search.hotkey_to_cancel_description") }}</span>
                 </div>
             </div>
         </OnClickOutside>

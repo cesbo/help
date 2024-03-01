@@ -11,7 +11,11 @@
         "home": "Home"
     },
     "search": {
-        "placeholder": "Search our knowledge base..."
+        "placeholder": "Search our knowledge base...",
+        "nothing_found": "We couldn't find any articles with that request.",
+        "hotkey_to_navigate_description": "to navigate",
+        "hotkey_to_select_description": "to select",
+        "hotkey_to_cancel_description": "to cancel"
     },
     "footer": {
         "need_help_question": "Need additional help or information?",
