@@ -7,6 +7,9 @@
         "pricing": "Pricing",
         "profile": "Profile"
     },
+    "breadcrumbs": {
+        "home": "Home"
+    },
     "search": {
         "placeholder": "Search our knowledge base..."
     },

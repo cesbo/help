@@ -1,4 +1,4 @@
-import { localeNames } from "./i18n/setup";
+import { defaultLocale, localeNames, localesLayout } from "./i18n/setup";
 
 export default defineNuxtConfig({
     modules: [
@@ -9,28 +9,18 @@ export default defineNuxtConfig({
     ],
 
     i18n: {
-        strategy: "prefix_and_default",
         detectBrowserLanguage: {
-            useCookie: true
+            useCookie: true,
+            fallbackLocale: defaultLocale
         },
-        locales: [{
-            code: 'en',
-            name: 'English'
-        },
-        {
-            code: 'ru',
-            name: 'Русский'
-        },
-        {
-            code: 'es',
-            name: 'Español'
-        }],
-        defaultLocale: 'en',
+        locales: localesLayout,
+        defaultLocale: defaultLocale,
         vueI18n: './i18n/configuration.ts'
     },
 
     content: {
-        locales: localeNames
+        locales: localeNames,
+        defaultLocale: defaultLocale
     },
 
     nitro: {

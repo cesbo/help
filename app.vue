@@ -27,6 +27,16 @@
 <script setup lang="ts">
 declare const Weglot: any;
 
+const i18nHead = useLocaleHead({
+  addSeoAttributes: true
+})
+
+useHead({
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang
+  }
+})
+
 useHead({
     script: [
         {
