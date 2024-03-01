@@ -1,12 +1,12 @@
 ---
-title: Processing
+title: Обработка
 noindex: true
 navigation:
   color: "#519ed3"
   icon: https://cdn.cesbo.com/help/icons/astra/processing.svg
-  description: "Prepare channels for delivery using MPEG-TS processing features"
+  description: "Подготовка каналов к передаче с использованием функций обработки MPEG-TS"
 ---
 
-Prepare channels for delivery using MPEG-TS processing features.
+Подготовка каналов к передаче с использованием функций обработки MPEG-TS.
 
 :category
