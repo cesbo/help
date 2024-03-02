@@ -7,7 +7,7 @@
                     class="h-4 w-4 flex-shrink-0"
                     aria-hidden="true"
                 />
-                <span class="sr-only">{{ $t("breadcrumb.home") }}</span>
+                <span class="sr-only">{{ $t("breadcrumbs.home") }}</span>
             </NuxtLink>
         </li>
 

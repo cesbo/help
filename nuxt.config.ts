@@ -10,7 +10,10 @@ export default defineNuxtConfig({
 
     i18n: {
         detectBrowserLanguage: {
-            fallbackLocale: defaultLocale
+            fallbackLocale: defaultLocale,
+            useCookie: true,
+            cookieKey: "i18n_loc",
+            alwaysRedirect: true
         },
         locales: localesLayout,
         defaultLocale: defaultLocale,

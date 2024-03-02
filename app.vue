@@ -25,7 +25,6 @@
 </template>
 
 <script setup lang="ts">
-declare const Weglot: any;
 
 const i18nHead = useLocaleHead({
   addSeoAttributes: true
@@ -40,9 +39,6 @@ useHead({
 useHead({
     script: [
         {
-            src: 'https://cdn.weglot.com/weglot.min.js',
-        },
-        {
             src: 'https://sa-help.cesbo.com/latest.js',
             async: true,
             defer: true,
@@ -51,12 +47,6 @@ useHead({
     ],
 })
 
-onMounted(() => {
-    Weglot?.initialize({
-        api_key: 'wg_63cf25295c4412583437ccb39e512a9d7',
-        cache: true,
-    })
-})
 </script>
 
 <style lang="scss">
