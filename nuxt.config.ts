@@ -1,9 +1,29 @@
+import { defaultLocale, localeNames, localesLayout } from "./i18n/setup";
+
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/i18n',
         '@nuxt/content',
         '@nuxt/image',
     ],
+
+    i18n: {
+        detectBrowserLanguage: {
+            fallbackLocale: defaultLocale,
+            useCookie: true,
+            cookieKey: "i18n_loc",
+            alwaysRedirect: true
+        },
+        locales: localesLayout,
+        defaultLocale: defaultLocale,
+        vueI18n: './i18n/configuration.ts'
+    },
+
+    content: {
+        locales: localeNames,
+        defaultLocale: defaultLocale
+    },
 
     nitro: {
         prerender: {
@@ -17,9 +37,6 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            htmlAttrs: {
-                lang: 'en',
-            },
             link: [
                 {
                     rel: 'icon',

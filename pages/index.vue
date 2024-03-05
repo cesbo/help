@@ -55,7 +55,7 @@
                     </div>
                     <div class="min-w-0 flex-1 pt-3">
                         <NuxtLink
-                            :to="category._path"
+                            :to="localePath(category._path)"
                             class="focus:outline-none"
                         >
                             <span class="absolute inset-0" aria-hidden="true" />
@@ -90,8 +90,10 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
 
-const title = 'Cesbo Help Center'
+const title = t("main_title")
 
 useHead({
     title,
@@ -121,6 +123,7 @@ if(process.server) {
 }
 
 const query: QueryBuilderParams = {
+    where: [{ _locale: locale.value }],
     sort: [
         { date: -1 },
     ],

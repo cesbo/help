@@ -23,7 +23,7 @@
             font-medium
             text-color-900
         "
-    >Need additional help or information?</div>
+    >{{ $t("footer.need_help_question") }}</div>
     <div>
         <a
             href="mailto:support@cesbo.com"
@@ -39,7 +39,7 @@
             "
         >
             <AtSymbolIcon class="w-6 h-6" />
-            <span>Email Us</span>
+            <span>{{ $t("footer.email_us") }}</span>
         </a>
     </div>
 </div>
@@ -62,6 +62,8 @@
             dark:text-gray-400
         "
     >&copy; 2023, Cesbo</div>
+
+    <LangSelector />
 </div>
 </footer>
 </template>

@@ -39,8 +39,12 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 const route = useRoute()
-const page = await queryContent(route.path).findOne()
+const routeWithoutLocale = route.path.replace("/"+locale.value + "/", '/')
+
+const {data} = await useAsyncData("pageContents", () => queryContent(routeWithoutLocale).locale(locale.value).findOne())
+const page = data.value!!
 
 const title = (() => {
     switch(route.path.split('/', 2)[1]) {
