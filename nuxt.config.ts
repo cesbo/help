@@ -1,4 +1,4 @@
-import { defaultLocale, localeNames, localesLayout } from "./i18n/setup";
+import { defaultLocale, localeNames, localesLayout } from './i18n/setup'
 
 export default defineNuxtConfig({
     modules: [
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         detectBrowserLanguage: {
             fallbackLocale: defaultLocale,
             useCookie: true,
-            cookieKey: "i18n_loc",
+            cookieKey: 'i18n_loc',
             alwaysRedirect: true
         },
         locales: localesLayout,

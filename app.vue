@@ -27,13 +27,13 @@
 <script setup lang="ts">
 
 const i18nHead = useLocaleHead({
-  addSeoAttributes: true
+    addSeoAttributes: true
 })
 
 useHead({
-  htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs!.lang
-  }
+    htmlAttrs: {
+        lang: i18nHead.value.htmlAttrs!.lang
+    }
 })
 
 useHead({

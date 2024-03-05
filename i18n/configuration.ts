@@ -1,4 +1,4 @@
-import { defaultLocale, localesWeUse } from "./setup";
+import { defaultLocale, localesWeUse } from './setup'
 
 export default defineI18nConfig(() => ({
     legacy: false,

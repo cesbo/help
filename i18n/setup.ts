@@ -8,17 +8,20 @@ import es from './locales/es.json'
 
 export const localesLayout = [{
     code: 'en',
-    name: 'English'
+    name: 'English',
+    iso: 'en-US',
 },
 {
     code: 'ru',
-    name: 'Русский'
+    name: 'Русский',
+    iso: 'ru-RU',
 },
 {
     code: 'es',
-    name: 'Español'
+    name: 'Español',
+    iso: 'es-ES',
 }]
 
-export const defaultLocale = "en"
+export const defaultLocale = 'en'
 export const localesWeUse = { en, ru, es }
 export const localeNames = Object.keys(localesWeUse)
