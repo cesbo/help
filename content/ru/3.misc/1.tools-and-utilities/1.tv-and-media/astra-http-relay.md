@@ -1,5 +1,5 @@
 ---
-title: "Astra HTTP Relay"
+title: "Astra HTTP реле"
 date: 2023-02-23
 ---
 

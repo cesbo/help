@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 
     i18n: {
         detectBrowserLanguage: {
+            alwaysRedirect: true,
             useCookie: true,
             redirectOn: 'root'
         },

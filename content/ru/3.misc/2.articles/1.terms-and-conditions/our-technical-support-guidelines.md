@@ -1,5 +1,5 @@
 ---
-title: "Our Technical Support Guidelines"
+title: "Руководство по технической поддержке"
 date: 2023-02-22
 ---
 

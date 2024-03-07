@@ -1,5 +1,5 @@
 ---
-title: "EIT Stream"
+title: "EIT поток"
 date: 2023-03-17
 ---
 

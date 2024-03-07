@@ -1,5 +1,5 @@
 ---
-title: "Configure IGMP Version"
+title: "Настройка IGMP версии"
 date: 2023-03-02
 ---
 
