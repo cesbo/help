@@ -8,14 +8,17 @@ import es from './locales/es.json'
 
 export const localesLayout = [{
     code: 'en',
+    iso: 'en-US',
     name: 'English'
 },
 {
     code: 'ru',
+    iso: 'ru-RU',
     name: 'Русский'
 },
 {
     code: 'es',
+    iso: 'es-ES',
     name: 'Español'
 }]
 
