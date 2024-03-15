@@ -13,8 +13,8 @@
         <!-- <ArticleDate v-if="page.date" :date="page.date" /> -->
 
         <ArticleToc
-            v-if="page.body.toc?.links"
-            :items="page.body.toc.links"
+            v-if="page.body?.toc?.links"
+            :items="page.body?.toc?.links"
             class="mt-14"
         />
 
@@ -39,11 +39,19 @@
 </template>
 
 <script setup lang="ts">
+import { delocalizePath } from '~/components/utils/UrlHelper'
+
 const { locale } = useI18n()
 const route = useRoute()
-const routeWithoutLocale = route.path.replace("/"+locale.value + "/", '/')
+const localePath = useLocalePath()
+const routeWithoutLocale = delocalizePath(route.path, locale.value)
 
-const {data} = await useAsyncData("pageContents", () => queryContent(routeWithoutLocale).locale(locale.value).findOne())
+const { data } = await useAsyncData("pageContents", () => queryContent()
+    .where({
+        _path: routeWithoutLocale,
+        _locale: locale.value
+    })
+    .findOne())
 const page = data.value!!
 
 const title = (() => {
@@ -59,7 +67,7 @@ const title = (() => {
     }
 })()
 
-const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
+const absolutePageUrl = 'https://help.cesbo.com' + localePath(route.fullPath, locale.value)
 
 useHead({
     title,

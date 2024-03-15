@@ -1,7 +1,7 @@
 <template>
 <ul>
     <li
-        v-for="item in nav.children?.filter((x) => x._path != nav._path)"
+        v-for="item in nav?.children?.filter((x) => x._path !== nav._path)"
         :key="item._path"
     >
         <template v-if="item.children">
@@ -25,7 +25,7 @@
 
         <template v-else>
             <NuxtLink
-                :to="item._path"
+                :to="localePath(item._path)"
                 class="
                     flex
                     w-full
@@ -56,6 +56,7 @@
 <script setup lang="ts">
 import { DocumentTextIcon } from '@heroicons/vue/24/outline'
 import type { NavItem } from '@nuxt/content/dist/runtime/types'
+const localePath = useLocalePath()
 
 defineProps<{
     nav: NavItem

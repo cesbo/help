@@ -1,5 +1,5 @@
 ---
-title: "TV & Media"
+title: "ТВ и медиа"
 noindex: true
 ---
 

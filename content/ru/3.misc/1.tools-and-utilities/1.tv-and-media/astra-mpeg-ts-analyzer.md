@@ -1,5 +1,5 @@
 ---
-title: "Astra MPEG-TS Analyzer"
+title: "Astra MPEG-TS анализатор"
 date: 2023-02-23
 ---
 

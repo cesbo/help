@@ -1,5 +1,5 @@
 ---
-title: "Archive"
+title: "Архив"
 noindex: true
 ---
 

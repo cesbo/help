@@ -1,5 +1,5 @@
 ---
-title: "Advanced"
+title: "Для продвинутых пользователей"
 noindex: true
 ---
 

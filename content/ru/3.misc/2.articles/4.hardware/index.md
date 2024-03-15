@@ -1,5 +1,5 @@
 ---
-title: "Hardware"
+title: "Оборудование"
 noindex: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Payment Methods"
+title: "Способы оплаты"
 date: 2023-02-22
 ---
 

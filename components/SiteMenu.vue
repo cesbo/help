@@ -21,7 +21,7 @@
             "
         >
             <NuxtLink
-                to="/"
+                :to="localePath('/')"
                 class="
                     flex
                     items-center
@@ -61,11 +61,11 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const navigation = [
     { name: 'menu.home', to: 'https://www.cesbo.com' },
-    { name: 'menu.docs', to: '/' },
+    { name: 'menu.docs', to: localePath('/') },
     { name: 'menu.support', to: 'https://support.cesbo.com' },
     { name: 'menu.pricing', to: 'https://app.cesbo.com/orders/software/astra/buy/' },
     { name: 'menu.profile', to: 'https://app.cesbo.com/accounts/login/?next=/accounts/profile/' },

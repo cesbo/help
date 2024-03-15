@@ -1,5 +1,5 @@
 ---
-title: "Network"
+title: "Сеть"
 noindex: true
 ---
 

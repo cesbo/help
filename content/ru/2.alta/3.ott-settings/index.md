@@ -1,10 +1,10 @@
 ---
-title: "OTT Settings"
+title: "Настройки OTT"
 noindex: true
 navigation:
   color: "#ff9a00"
   icon: https://cdn.cesbo.com/help/icons/alta/ott-settings.svg
-  description: "Archives, Authorization, and HLS delivery for OTT service with Cesbo Alta"
+  description: "Архивы, авторизация и доставка HLS для OTT-сервисов с помощью Cesbo Alta"
 ---
 
 :category

@@ -1,5 +1,5 @@
 ---
-title: "Launch Astra in console"
+title: "Запустить Astra в консоли"
 date: 2023-02-21
 ---
 

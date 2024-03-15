@@ -1,29 +1,31 @@
 <template>
-<div class="not-prose">
-    <SiteCategory :nav="navigation" />
-</div>
+    <div class="not-prose">
+        <SiteCategory :nav="navigation" />
+    </div>
 </template>
 
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+import { delocalizePath } from '../utils/UrlHelper';
 
 const route = useRoute()
+const { locale } = useI18n()
+const delocalizedPath = delocalizePath(route.path, locale.value)
 
-const query: QueryBuilderParams = {
+let { data } = await useAsyncData('siteCategory', () => fetchContentNavigation({
     where: [
         {
             _path: {
-                $contains: route.path,
+                $contains: delocalizedPath,
             },
+            _locale: locale.value
         },
     ],
     sort: [
         { date: -1 },
     ],
-}
-
-let [ navigation ] = await fetchContentNavigation(query)
-while(navigation && navigation._path != route.path && navigation.children) {
+}))
+let navigation = data.value!![0]
+while (navigation.children && navigation._path !== delocalizedPath && navigation.children) {
     navigation = navigation.children[0]
 }
 </script>

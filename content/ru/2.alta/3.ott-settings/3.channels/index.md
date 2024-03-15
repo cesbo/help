@@ -1,5 +1,5 @@
 ---
-title: "Channels"
+title: "Каналы"
 noindex: true
 ---
 

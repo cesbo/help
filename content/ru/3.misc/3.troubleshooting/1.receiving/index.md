@@ -1,5 +1,5 @@
 ---
-title: "Receiving"
+title: "Приём"
 noindex: true
 ---
 
