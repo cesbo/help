@@ -1,10 +1,10 @@
 <template>
 <div class="h-full flex flex-col" id="app">
     <SiteMenu />
+    <Sidebar />
     <div class="grow">
         <NuxtLoadingIndicator />
         <div class="px-4 py-20">
-            <Sidebar />
             <div class="relative mx-auto max-w-xl h-14 mb-20">
                 <div
                     class="
@@ -16,7 +16,6 @@
                     <SiteSearch />
                 </div>
             </div>
-            <Sidebar />
             <NuxtPage />
         </div>
     </div>
