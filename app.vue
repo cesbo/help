@@ -3,8 +3,8 @@
     <SiteMenu />
     <div class="grow">
         <NuxtLoadingIndicator />
-
         <div class="px-4 py-20">
+            <Sidebar />
             <div class="relative mx-auto max-w-xl h-14 mb-20">
                 <div
                     class="
@@ -16,7 +16,7 @@
                     <SiteSearch />
                 </div>
             </div>
-
+            <Sidebar />
             <NuxtPage />
         </div>
     </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import Sidebar from './components/nav/Sidebar.vue';
 
 const i18nHead = useLocaleHead({
     addSeoAttributes: true
