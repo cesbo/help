@@ -8,12 +8,9 @@
             </svg>
             <NuxtLinkLocale :to="treeItem.url">{{ treeItem.title }}</NuxtLinkLocale>
         </div>
-        <Transition name="expand">
-            <div v-if="isExpanded" class="item-content">
-                <CollapsibleItem v-for="childItem in treeItem.children" :treeItem="childItem" />
-            </div>
-        </Transition>
-
+        <div class="item-content" :class="{ expanded: isExpanded }">
+            <CollapsibleItem v-for="childItem in treeItem.children" :treeItem="childItem" />
+        </div>
     </div>
 </template>
 <script setup>
@@ -27,10 +24,6 @@ const isExpanded = ref(false)
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.wrap-collabsible .item-content {
-    padding-left: 24px;
 }
 
 .wrap-collabsible .item-title svg {
@@ -51,18 +44,15 @@ const isExpanded = ref(false)
     transform: rotate(90deg);
 }
 
-.expand-v-enter-active,
-.expand-v-leave-active {
-    transition: max-height 1.4s ease;
+.wrap-collabsible .item-content {
+    padding-left: 24px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.expand-v-enter-from,
-.expand-v-leave-to {
-    max-height: 0;
-}
-
-.expand-v-enter-to,
-.expand-v-leave-from {
-    max-height: 500px;
+.wrap-collabsible .item-content.expanded {
+    height: auto;
+    max-height: 100dvh;
 }
 </style>
