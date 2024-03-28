@@ -1,55 +1,47 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/types';
 import CollabsibleItem from './CollapsibleItem.vue';
+import { delocalizePath } from '../utils/UrlHelper';
 
+const route = useRoute()
 const { locale } = useI18n()
+const delocalizedPath = delocalizePath(route.path, locale.value)
 
-const query: QueryBuilderParams = {
-    where: [{ _locale: locale.value }],
-    sort: [
-        { date: -1 },
-    ],
-}
-
-const treeItem = {
-    title: "Something 1",
-    children: [
+const { data: navigation } = await useAsyncData('sidebarMenu', () => fetchContentNavigation({
+    where: [
         {
-            title: "Something 1.1",
-            children: [
-                {
-                    title: "Something 1.1.1",
-                },
-                {
-                    title: "Something 1.1.2",
-                },
-                {
-                    title: "Something 1.1.3",
-                },
-            ],
-        }
-    ]
+            _locale: locale.value
+        },
+    ],
+}))
+
+const navigationItemToCollapsibleProp = (navItem) => {
+    if (!navItem) {
+        return undefined
+    }
+    const result = {
+        title: navItem.title,
+        path: navItem._path,
+        children: navItem.children?.map(navigationItemToCollapsibleProp) ?? [],
+    }
+    return result
 }
+
+const byProductNavItems = navigation.value?.map(product => {
+    const navItem = {
+        productName: product.title,
+        navItems: product.children?.map(navigationItemToCollapsibleProp).filter(childItem => childItem !== undefined) ?? []
+    }
+    return navItem
+}) ?? []
 
 </script>
 <template>
     <aside class="fixed top-20 left-0 pl-8">
-        <CollabsibleItem :treeItem="treeItem" />
-        <transition name="fade">
-            <ContentNavigation v-slot="{ navigation }" :query="query">
-                <div class="flex flex-col gap-6">
-                    <div v-for="product in navigation" :key="product._path">
-                        <p class="text-2xl">{{ product.title }}</p>
-                        <ul>
-                            <li class="my-1" v-for="category in product.children">
-                                <NuxtLinkLocale class="text-m" :to="category._path">{{ category.title }}
-                                </NuxtLinkLocale>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </ContentNavigation>
-        </transition>
+        <div v-for="productNavItem in byProductNavItems">
+            <h2>{{ productNavItem.productName }}</h2>
+            <CollabsibleItem v-for="navItem in productNavItem.navItems" :treeItem="navItem" />
+        </div>
     </aside>
 
 </template>
