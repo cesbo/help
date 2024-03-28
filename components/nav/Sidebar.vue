@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/types';
+import CollabsibleItem from './CollapsibleItem.vue';
 
 const { locale } = useI18n()
 
@@ -10,9 +11,30 @@ const query: QueryBuilderParams = {
     ],
 }
 
+const treeItem = {
+    title: "Something 1",
+    children: [
+        {
+            title: "Something 1.1",
+            children: [
+                {
+                    title: "Something 1.1.1",
+                },
+                {
+                    title: "Something 1.1.2",
+                },
+                {
+                    title: "Something 1.1.3",
+                },
+            ],
+        }
+    ]
+}
+
 </script>
 <template>
     <aside class="fixed top-20 left-0 pl-8">
+        <CollabsibleItem :treeItem="treeItem" />
         <transition name="fade">
             <ContentNavigation v-slot="{ navigation }" :query="query">
                 <div class="flex flex-col gap-6">
