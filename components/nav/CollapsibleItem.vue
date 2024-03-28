@@ -45,7 +45,7 @@ const isExpanded = ref(false)
 }
 
 .wrap-collabsible .item-content {
-    padding-left: 24px;
+    /* padding-left: 24px; */
     max-height: 0px;
     overflow: hidden;
     transition: all 0.3s ease;

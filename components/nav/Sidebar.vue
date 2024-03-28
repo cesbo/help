@@ -37,11 +37,15 @@ const byProductNavItems = navigation.value?.map(product => {
 
 </script>
 <template>
-    <aside class="fixed top-20 left-0 pl-8">
-        <div v-for="productNavItem in byProductNavItems">
-            <h2>{{ productNavItem.productName }}</h2>
+    <aside class="border-r border-gray-200 dark:border-zinc-600">
+        <div v-for="productNavItem in byProductNavItems" class="mt-4">
+            <h2 class="text-gray-900
+                    text-md sm:text-xl
+                    font-bold
+                    mb-1">
+                {{ productNavItem.productName }}
+            </h2>
             <CollabsibleItem v-for="navItem in productNavItem.navItems" :treeItem="navItem" />
         </div>
     </aside>
-
 </template>

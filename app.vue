@@ -1,26 +1,23 @@
 <template>
-<div class="h-full flex flex-col" id="app">
-    <SiteMenu />
-    <Sidebar />
-    <div class="grow">
-        <NuxtLoadingIndicator />
-        <div class="px-4 py-20">
-            <div class="relative mx-auto max-w-xl h-14 mb-20">
-                <div
-                    class="
-                        absolute
-                        w-full
-                        z-10
-                    "
-                >
-                    <SiteSearch />
+    <div id="app" class="w-full h-full flex flex-col items-center px-6 py-3">
+        <SiteMenu class="w-full" />
+        <div class="max-w-screen-2xl flex">
+            <Sidebar class="flex-none w-60"/>
+            <div class="flex-1 w-full">
+                <NuxtLoadingIndicator />
+                <div class="px-4 py-20">
+                    <div class="mx-auto h-14 mb-20">
+                        <div class="
+                        z-10">
+                            <SiteSearch />
+                        </div>
+                    </div>
+                    <NuxtPage />
                 </div>
             </div>
-            <NuxtPage />
         </div>
+        <SiteFooter class="w-full" />
     </div>
-    <SiteFooter />
-</div>
 </template>
 
 <script setup lang="ts">
@@ -58,9 +55,11 @@ useHead({
     html {
         @apply h-full;
     }
+
     body {
         @apply h-full bg-white text-black dark:bg-zinc-800 dark:text-white;
     }
+
     #__nuxt {
         @apply h-full;
     }
