@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import CollabsibleItem from './CollapsibleItem.vue';
-import { delocalizePath } from '../utils/UrlHelper';
 import type { NavItem } from "@nuxt/content/types";
 
 const route = useRoute()
@@ -11,7 +10,7 @@ const menuItems = ref<ByProductNavItem[]>([])
 interface ContentNavItem {
     title: string,
     path: string,
-    children?: ContentNavItem[]
+    children: ContentNavItem[]
 }
 
 interface ByProductNavItem {
