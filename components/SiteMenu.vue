@@ -7,10 +7,7 @@
             dark:bg-gray-800/50
             dark:border-zinc-600
             backdrop-blur backdrop-filter">
-        <nav class="
-            w-full
-            max-w-screen-2xl
-        ">
+        <ContainerSection>
             <div class="
                 flex
                 flex-wrap
@@ -46,11 +43,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </ContainerSection>
     </header>
 </template>
 
 <script setup lang="ts">
+import ContainerSection from './layout/ContainerSection.vue';
 const localePath = useLocalePath()
 
 const navigation = [

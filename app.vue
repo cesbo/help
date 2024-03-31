@@ -1,27 +1,26 @@
 <template>
     <div id="app" class="w-full h-full flex flex-col items-center px-6 py-3">
         <SiteMenu class="w-full" />
-        <div class="max-w-screen-2xl flex">
+        <ContainerSection class="flex">
             <Sidebar class="flex-none w-60"/>
             <div class="flex-1 w-full">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
-                    <div class="mx-auto h-14 mb-20">
-                        <div class="
-                        z-10">
-                            <SiteSearch />
-                        </div>
+                    <div class="max-w-xl mx-auto h-14 mb-20 z-10">
+                        <SiteSearch />
                     </div>
                     <NuxtPage />
                 </div>
             </div>
-        </div>
+            <div class="flex-none w-60"/>
+        </ContainerSection>
         <SiteFooter class="w-full" />
     </div>
 </template>
 
 <script setup lang="ts">
 import Sidebar from './components/nav/Sidebar.vue';
+import ContainerSection from './components/layout/ContainerSection.vue';
 
 const i18nHead = useLocaleHead({
     addSeoAttributes: true

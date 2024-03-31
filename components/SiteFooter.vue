@@ -3,20 +3,17 @@
     class="bg-gray-50 dark:bg-zinc-900"
     aria-labelledby="footer-heading"
 >
-<div
-    class="
+<ContainerSection class="
         flex
         flex-col md:flex-row
         items-center
         justify-between
-        max-w-screen-xl
         mx-auto
         pb-20
         pt-20
         px-4 xl:px-0
         gap-y-4
-    "
->
+    ">
     <div
         class="
             text-lg
@@ -42,7 +39,7 @@
             <span>{{ $t("footer.email_us") }}</span>
         </a>
     </div>
-</div>
+</ContainerSection>
 
 <div
     class="
@@ -72,6 +69,7 @@
 import {
     AtSymbolIcon,
 } from '@heroicons/vue/20/solid'
+import ContainerSection from './layout/ContainerSection.vue';
 
 const TwitterIcon = defineComponent({
     render: () => h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
