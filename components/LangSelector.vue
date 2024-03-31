@@ -4,7 +4,7 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-    <NuxtLink v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
-        {{ locale.name }}
-    </NuxtLink>
+    <SwitchLocalePathLink  v-for="l in locales" :key="l.code" :locale="l.code">
+        {{ l.name }}
+    </SwitchLocalePathLink >
 </template>
