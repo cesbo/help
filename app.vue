@@ -2,7 +2,7 @@
     <div id="app" class="w-full h-full flex flex-col items-center px-6 py-3">
         <SiteMenu class="w-full" />
         <ContainerSection class="flex">
-            <Sidebar class="flex-none w-60"/>
+            <Sidebar v-if="isContentPage" class="flex-none w-60"/>
             <div class="flex-1 w-full px-4">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
@@ -12,15 +12,20 @@
                     <NuxtPage />
                 </div>
             </div>
-            <div class="flex-none w-60"/>
+            <div v-if="isContentPage" class="flex-none w-60"/>
         </ContainerSection>
         <SiteFooter class="w-full" />
     </div>
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from "vue"
 import Sidebar from './components/nav/Sidebar.vue';
 import ContainerSection from './components/layout/ContainerSection.vue';
+import { delocalizePath } from './components/utils/UrlHelper';
+import { useRoute } from 'vue-router';
+const { locale } = useI18n()
+const route = useRoute()
 
 const i18nHead = useLocaleHead({
     addSeoAttributes: true
@@ -42,6 +47,15 @@ useHead({
         },
     ],
 })
+
+const isContentPage = ref(false)
+
+watch(route, (oldPage, newPage) => {
+    const currentLocale = locale.value
+    const currentRoute = oldPage?.path
+    const contentPage = currentRoute ? delocalizePath(currentRoute, currentLocale) !== "/" : false
+    isContentPage.value = contentPage
+}, {immediate: true})
 
 </script>
 
