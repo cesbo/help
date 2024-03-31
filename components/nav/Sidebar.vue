@@ -38,7 +38,7 @@ const byProductNavItems = navigation.value?.map(product => {
 </script>
 <template>
     <aside class="border-r border-gray-200 dark:border-zinc-600">
-        <div v-for="productNavItem in byProductNavItems" class="mt-4">
+        <div v-for="productNavItem in byProductNavItems" class="pr-2 mt-4">
             <h2 class="text-gray-900
                     text-md sm:text-xl
                     font-bold

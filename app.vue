@@ -3,7 +3,7 @@
         <SiteMenu class="w-full" />
         <ContainerSection class="flex">
             <Sidebar class="flex-none w-60"/>
-            <div class="flex-1 w-full">
+            <div class="flex-1 w-full px-4">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
                     <div class="max-w-xl mx-auto h-14 mb-20 z-10">
