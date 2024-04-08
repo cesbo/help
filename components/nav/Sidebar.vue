@@ -9,7 +9,8 @@ const menuItems = ref<ByProductNavItem[]>([])
 interface ContentNavItem {
     title: string,
     path: string,
-    children: ContentNavItem[]
+    children: ContentNavItem[],
+    isTopLevelGroup: boolean
 }
 
 interface ByProductNavItem {
@@ -27,7 +28,10 @@ watch(locale, async (oldLocale) => {
     }))
 
     const byProductNavItems: ByProductNavItem[] = navigation.value?.map(product => {
-        const childNavItems: ContentNavItem[] = product.children?.map(navigationItemToCollapsibleProp).filter(Boolean).flatMap(childItem => childItem || []) ?? []
+        const childNavItems: ContentNavItem[] = product.children
+            ?.map(n => navigationItemToCollapsibleProp(n, true))
+            .filter(Boolean)
+            .flatMap(childItem => childItem || []) ?? []
         const navItem: ByProductNavItem = {
             productName: product.title,
             navItems: childNavItems,
@@ -41,14 +45,15 @@ watch(locale, async (oldLocale) => {
 )
 
 
-const navigationItemToCollapsibleProp = (navItem: NavItem): ContentNavItem => {
+const navigationItemToCollapsibleProp = (navItem: NavItem, isTopLevelGroup: boolean = false): ContentNavItem => {
     const result = {
         title: navItem.title,
         path: navItem._path,
         children: navItem.children
-            ?.map(navigationItemToCollapsibleProp)
+            ?.map(n => navigationItemToCollapsibleProp(n))
             .flatMap((x) => x || [])
             .filter((x) => x.path !== navItem._path) ?? [],
+        isTopLevelGroup: isTopLevelGroup
     }
     return result
 }

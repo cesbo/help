@@ -6,7 +6,10 @@
                 @click="isExpanded = !isExpanded">
                 <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
             </svg>
-            <NuxtLinkLocale class="hover:underline hover:underline-offset-2 hover:decoration-dotted" :to="treeItem.path">{{ treeItem.title }}</NuxtLinkLocale>
+            <NuxtLinkLocale
+                :class="{ 'font-semibold' : treeItem.isTopLevelGroup}"
+                class="hover:underline hover:underline-offset-2 hover:decoration-dotted"
+                :to="treeItem.path">{{ treeItem.title }}</NuxtLinkLocale>
         </div>
         <div class="item-content max-h-0 overflow-hidden pl-6 pt-1" :class="{ expanded: isExpanded }">
             <CollapsibleItem v-for="childItem in treeItem.children" :treeItem="childItem" />
