@@ -11,7 +11,7 @@
         mx-auto
         pb-20
         pt-20
-        px-4 xl:px-0
+        px-4
         gap-y-4
     ">
     <div

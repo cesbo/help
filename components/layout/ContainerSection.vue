@@ -5,6 +5,6 @@
 </template>
 <style scoped>
 section.container {
-    max-width: 120em; /* 1920px */
+    max-width: 160em; /* 2560px */
 }
 </style>
