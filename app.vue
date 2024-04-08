@@ -2,7 +2,7 @@
     <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
         <SiteMenu class="w-full" />
         <ContainerSection class="flex grow">
-            <Sidebar v-if="isContentPage" class="hidden md:inline-block flex-none md:w-60 xl:w-80"/>
+            <Sidebar v-if="isContentPage" class="hidden lg:inline-block flex-none lg:w-60 xl:w-80"/>
             <div class="flex-1 w-full px-4">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
