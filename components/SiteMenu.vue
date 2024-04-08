@@ -6,6 +6,7 @@
             bg-white/50
             dark:bg-gray-800/50
             dark:border-zinc-600
+            px-6
             backdrop-blur backdrop-filter">
         <ContainerSection>
             <div class="

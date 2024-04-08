@@ -1,18 +1,16 @@
 <template>
 <footer
-    class="bg-gray-50 dark:bg-zinc-900"
+    class="bg-gray-50 dark:bg-zinc-900 flex flex-col items-center"
     aria-labelledby="footer-heading"
 >
 <ContainerSection class="
         flex
         flex-col md:flex-row
         items-center
-        justify-between
-        mx-auto
-        pb-20
-        pt-20
-        px-4
+        md:justify-between
+        py-20
         gap-y-4
+        px-6
     ">
     <div
         class="
@@ -42,13 +40,13 @@
 </ContainerSection>
 
 <div
-    class="
-        flex
+    class="w-full flex
         gap-5
         justify-center
         border-t
         border-gray-200 dark:border-zinc-600
         py-6
+        px-6
         text-xs leading-5
         text-gray-600 dark:text-gray-300
     "

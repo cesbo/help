@@ -60,7 +60,7 @@ const navigationItemToCollapsibleProp = (navItem: NavItem, isTopLevelGroup: bool
 
 </script>
 <template>
-    <aside class="border-r border-gray-200 dark:border-zinc-600">
+    <aside class="border-r border-gray-200 dark:border-zinc-600 px-6">
         <div v-for="productNavItem in menuItems" class="pr-2 mt-4">
             <h2 class="text-gray-900
                     text-md sm:text-xl

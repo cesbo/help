@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center px-6 py-3">
+    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
         <SiteMenu class="w-full" />
         <ContainerSection class="flex grow">
             <Sidebar v-if="isContentPage" class="hidden md:inline-block flex-none md:w-60 xl:w-80"/>
