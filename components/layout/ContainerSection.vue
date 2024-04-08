@@ -1,5 +1,10 @@
 <template>
-    <div class="w-full max-w-screen-2xl">
+    <section class="w-full container">
         <slot />
-    </div>
+    </section>
 </template>
+<style scoped>
+section.container {
+    max-width: 120em; /* 1920px */
+}
+</style>
