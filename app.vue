@@ -2,7 +2,7 @@
     <div id="app" class="w-full h-full flex flex-col relative items-center px-6 py-3">
         <SiteMenu class="w-full" />
         <ContainerSection class="flex">
-            <Sidebar v-if="isContentPage" class="flex-none w-60"/>
+            <Sidebar v-if="isContentPage" class="flex-none w-80"/>
             <div class="flex-1 w-full px-4">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
@@ -12,7 +12,7 @@
                     <NuxtPage />
                 </div>
             </div>
-            <div v-if="isContentPage" class="flex-none w-60"/>
+            <div v-if="isContentPage" class="flex-none w-80"/>
         </ContainerSection>
         <SiteFooter class="w-full" />
     </div>
