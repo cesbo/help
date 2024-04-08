@@ -3,7 +3,6 @@ import { ref, watch } from "vue";
 import CollabsibleItem from './CollapsibleItem.vue';
 import type { NavItem } from "@nuxt/content/types";
 
-const route = useRoute()
 const { locale } = useI18n()
 const menuItems = ref<ByProductNavItem[]>([])
 
@@ -18,7 +17,7 @@ interface ByProductNavItem {
     navItems: ContentNavItem[]
 }
 
-watch(locale, async (oldLocale, newLocale) => {
+watch(locale, async (oldLocale) => {
     const { data: navigation } = await useAsyncData('sidebarMenu', () => fetchContentNavigation({
         where: [
             {
@@ -38,7 +37,7 @@ watch(locale, async (oldLocale, newLocale) => {
 
     menuItems.value = byProductNavItems
 },
-{ immediate: true }
+    { immediate: true }
 )
 
 
@@ -46,7 +45,10 @@ const navigationItemToCollapsibleProp = (navItem: NavItem): ContentNavItem => {
     const result = {
         title: navItem.title,
         path: navItem._path,
-        children: navItem.children?.map(navigationItemToCollapsibleProp).flatMap((x) => x || []) ?? [],
+        children: navItem.children
+            ?.map(navigationItemToCollapsibleProp)
+            .flatMap((x) => x || [])
+            .filter((x) => x.path !== navItem._path) ?? [],
     }
     return result
 }

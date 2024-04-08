@@ -1,12 +1,12 @@
 <template>
-    <div class="wrap-collabsible">
-        <div class="item-title flex justify-start items-top">
+    <div class="wrap-collabsible text-sm">
+        <div class="item-title flex justify-start items-center">
             <svg class="expansion-handle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960"
                 :class="{ rotate: isExpanded }" v-if="treeItem.children && treeItem.children.length > 0"
                 @click="isExpanded = !isExpanded">
                 <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
             </svg>
-            <NuxtLinkLocale class="transition hover:underline hover:underline-offset-2 hover:decoration-dotted" :to="treeItem.path">{{ treeItem.title }}</NuxtLinkLocale>
+            <NuxtLinkLocale class="hover:underline hover:underline-offset-2 hover:decoration-dotted" :to="treeItem.path">{{ treeItem.title }}</NuxtLinkLocale>
         </div>
         <div class="item-content max-h-0 overflow-hidden pl-6 pt-1" :class="{ expanded: isExpanded }">
             <CollapsibleItem v-for="childItem in treeItem.children" :treeItem="childItem" />
