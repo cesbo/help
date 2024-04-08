@@ -1,8 +1,8 @@
 <template>
     <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center px-6 py-3">
         <SiteMenu class="w-full" />
-        <ContainerSection class="flex">
-            <Sidebar v-if="isContentPage" class="flex-none w-80"/>
+        <ContainerSection class="flex grow">
+            <Sidebar v-if="isContentPage" class="hidden md:inline-block flex-none md:w-60 xl:w-80"/>
             <div class="flex-1 w-full px-4">
                 <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
@@ -12,7 +12,7 @@
                     <NuxtPage />
                 </div>
             </div>
-            <div v-if="isContentPage" class="flex-none w-80"/>
+            <aside v-if="isContentPage" class="hidden xl:inline-block flex-none w-80"/>
         </ContainerSection>
         <SiteFooter class="w-full" />
     </div>
