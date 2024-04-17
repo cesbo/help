@@ -18,11 +18,11 @@ interface ByProductNavItem {
     navItems: ContentNavItem[]
 }
 
-watch(locale, async (oldLocale) => {
+watch(locale, async (currentLocale) => {
     const { data: navigation } = await useAsyncData('sidebarMenu', () => fetchContentNavigation({
         where: [
             {
-                _locale: oldLocale
+                _locale: currentLocale
             },
         ],
     }))
