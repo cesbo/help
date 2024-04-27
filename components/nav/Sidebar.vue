@@ -18,11 +18,11 @@ interface ByProductNavItem {
     navItems: ContentNavItem[]
 }
 
-watch(locale, async (currentLocale) => {
+const reloadSidebarContents = async (localeToUse) => {
     const { data: navigation } = await useAsyncData('sidebarMenu', () => fetchContentNavigation({
         where: [
             {
-                _locale: currentLocale
+                _locale: localeToUse
             },
         ],
     }))
@@ -40,10 +40,9 @@ watch(locale, async (currentLocale) => {
     }) ?? []
 
     menuItems.value = byProductNavItems
-},
-    { immediate: true }
-)
+} 
 
+watch(locale, reloadSidebarContents, { immediate: true })
 
 const navigationItemToCollapsibleProp = (navItem: NavItem, isTopLevelGroup: boolean = false): ContentNavItem => {
     const result = {
