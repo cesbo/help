@@ -93,10 +93,6 @@ export default defineNuxtConfig({
             { path: '/astra/delivery/http-hls', category: 'Astra > Delivery > HTTP/HLS' },
             { path: '/astra/delivery/http-hls-auth', category: 'Astra > Delivery > Authentication for HTTP/HLS' },
 
-            { path: '/alta/getting-started', category: 'Alta > Getting Started' },
-            { path: '/alta/admin-guide', category: 'Alta > Admin Guide' },
-            { path: '/alta/ott-settings', category: 'Alta > OTT Settings' },
-
             { path: '/misc/tools-and-utilities/tv-and-media', category: 'Tools & Utilities > TV & Media' },
             { path: '/misc/tools-and-utilities/network', category: 'Tools & Utilities > Network' },
             { path: '/misc/tools-and-utilities/dvb', category: 'Tools & Utilities > DVB' },
