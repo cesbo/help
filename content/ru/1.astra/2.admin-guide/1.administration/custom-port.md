@@ -3,18 +3,18 @@ title: "Custom port for Astra Web Interface"
 date: 2023-02-21
 ---
 
-Default port for Astra Web Interface is `8000`. You may set any port you want:
+Порт по умолчанию для веб-интерфейса Astra - это `8000`. Вы можете установить любой порт:
 
 ```
 astra init 4000 astra
 ```
 
-`astra` at the end of command is a default service name.
+`astra` в конце команды - это имя службы по умолчанию.
 
-Finally restart service to apply changes:
+Перезапустите сервис для применения изменений:
 
 ```
 systemctl restart astra
 ```
 
-Now web interface will be available on new port: `http://your-server:4000`
+Теперь веб-интерфейс будет доступен на новом порту: `http://your-server:4000`
