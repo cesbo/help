@@ -1,42 +1,41 @@
 ---
-title: "Reorder audio streams"
+title: "Упорядочивание аудиопотоков"
 date: 2023-04-01
 ---
 
-In this article, we will explore how to change the order of audio streams in a channel using Astra. When broadcasting a channel with multiple audio streams the order of the streams can be crucial for viewers convenience. Most TV and other media players automatically select the first audio stream by default. By reordering the audio streams, you can ensure that your preferred language is set as the default option.
+В этой статье мы рассмотрим, как изменить порядок аудиопотоков на канале с помощью программы Astra. При трансляции канала с несколькими аудиопотоками порядок их следования может иметь решающее значение для удобства зрителей. Большинство телевизоров и других медиаплееров по умолчанию автоматически выбирают первый аудиопоток. Изменив порядок аудиопотоков, можно добиться того, чтобы выбранный язык был установлен по умолчанию.
 
-## Analyze Channel
+## Анализ канала[](https://help.cesbo.com/astra/processing/mpegts/order#analyze-channel)
 
-The first step in reordering audio streams is to analyze the channel and gather information about the available audio streams and their respective Packet Identifiers (PIDs). This will help you identify the current order of audio streams in your channel and make the necessary changes accordingly.
+Первым шагом в переупорядочивании аудиопотоков является анализ канала и сбор информации о доступных аудиопотоках и их соответствующих идентификаторах пакетов (PID). Это поможет определить текущий порядок аудиопотоков в канале и внести необходимые изменения.
 
-To analyse the channel, follow these steps:
+Для анализа канала выполните следующие действия:
 
-1. Open channel settings in the Astra Web Interface
-2. Within the channel settings, click the `Analyze` button. This will initiate the channel analysis process
-3. After a brief moment, the analyzer will display detailed information about the channel, including available audio streams and their PIDs
+1. Настройки открытого канала в веб-интерфейсе Astra
+2. В настройках канала нажмите кнопку `Analyze` кнопка. В результате начнется процесс анализа канала
+3. Через некоторое время на экране анализатора появится подробная информация о канале, включая доступные аудиопотоки и их PID
 
-![Channel Information](https://cdn.cesbo.com/help/astra/processing/utilities/order/analyze.png)
+![Информация о канале](https://cdn.cesbo.com/help/astra/processing/utilities/order/analyze.png)
 
-In the provided screenshot, we can see that there are video and two audio streams present:
+На представленном скриншоте видно, что присутствуют видео- и два аудиопотока:
 
 1. VIDEO PID: `331`
-2. AUDIO PID: `332`, Language: `eng` (English)
-3. AUDIO PID: `333`, Language: `bul` (Bulgarian)
+2. AUDIO PID: `332`, Язык: `eng` (на английском языке)
+3. AUDIO PID: `333`, Язык: `bul` (Болгарский)
 
-Take note of the stream PIDs, as you will need this information to reorder the audio streams in the next step.
+Обратите внимание на PID потоков, поскольку эта информация понадобится для переупорядочивания аудиопотоков на следующем этапе.
 
-## Reorder Audio Streams
+## Упорядочивание аудиопотоков[](https://help.cesbo.com/astra/processing/mpegts/order#reorder-audio-streams)
 
-The final step in reordering audio streams is to modify the channel configuration. Close the channel analyzer by clicking the `Close` button. This will return you to the channel settings.
+Последним шагом в переупорядочивании аудиопотоков является изменение конфигурации каналов. Закройте анализатор каналов, нажав кнопку `Close` кнопка. Это вернет вас к настройкам канала.
 
-To reorder the audio streams, follow these steps:
+Чтобы изменить порядок следования аудиопотоков, выполните следующие действия:
 
-1. In the channel settings, locate the `Input` section. This is where you will find the input address for your channel
-2. To change the order of the audio streams, append the following option to the input address: `order=331,333,332`. The order parameter should include the PIDs of the video stream first, followed by the default audio stream, and then any additional audio streams. In this example, the new order will be: Video (331), Bulgarian audio (333), and English audio (332)
-3. Save the changes by clicking the `Apply` button at the bottom of the channel settings page
+1. В настройках канала найдите параметр `Input` section. Здесь находится адрес входа для вашего канала
+2. Чтобы изменить порядок следования аудиопотоков, добавьте к адресу входа следующую опцию: `order=331,333,332`. Параметр порядка должен включать в себя сначала PID видеопотока, затем аудиопотока по умолчанию, а затем всех дополнительных аудиопотоков. В данном примере новый порядок будет следующим: Видео (331), аудио на болгарском языке (333) и аудио на английском языке (332).
+3. Сохраните изменения, нажав кнопку `Apply` кнопка в нижней части страницы настроек канала
 
-![Channel Settings](https://cdn.cesbo.com/help/astra/processing/utilities/order/channel-settings.png)
+![Настройки каналов](https://cdn.cesbo.com/help/astra/processing/utilities/order/channel-settings.png)
 
-::alert
-Input options are separated by the `&` symbol, as shown in the example screenshot. The `#` symbol marks the beginning of the options. For instance, if your address does not have any options, the full address with the order options would be `udp://239.255.1.1:1234#order=331,333,332`
+::alert Параметры ввода разделяются символом `&` символ, как показано на примере скриншота. Сайт `#` символ обозначает начало опций. Например, если ваш адрес не содержит никаких опций, то полный адрес с опциями заказа будет выглядеть так `udp://239.255.1.1:1234#order=331,333,332`
 ::
