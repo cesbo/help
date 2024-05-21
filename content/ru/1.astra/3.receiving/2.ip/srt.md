@@ -1,22 +1,20 @@
 ---
-title: "Receiving SRT"
+title: "Прием SRT"
 date: 2023-03-23
 ---
 
-The Secure Reliable Transport (SRT) protocol is an open-source video streaming protocol designed to provide low-latency, high-quality video streaming over unreliable networks. SRT uses end-to-end encryption and provides a range of features designed to enhance reliability and security, including error correction, congestion control, and retransmission of lost packets. SRT is often used for live video streaming applications, such as sports and news broadcasts, where maintaining a reliable, high-quality connection is critical.
+Протокол Secure Reliable Transport (SRT) - это протокол потоковой передачи видео с открытым исходным кодом, предназначенный для обеспечения потоковой передачи высококачественного видео с низкой задержкой в ненадежных сетях. SRT использует сквозное шифрование и предоставляет ряд функций, направленных на повышение надежности и безопасности, включая коррекцию ошибок, контроль перегрузок и повторную передачу потерянных пакетов. SRT часто используется в приложениях для передачи потокового видео в реальном времени, таких как спортивные и новостные трансляции, где поддержание надежного и качественного соединения является критически важным.
 
-::alert
-Available for Astra versions released after 2021-12-21
-::
+::alert Доступно для версий Astra, выпущенных после 2021-12-21 гг. ::
 
-## Address format
+## Формат адреса[](https://help.cesbo.com/astra/receiving/ip/srt#address-format)
 
-SRT could be received in two modes:
+Прием SRT может осуществляться в двух режимах:
 
-- `Caller mode` - Astra sends request to the SRT server and receives content in response. This is the most popular variant
-- `Listener mode` - Astra waits when SRT server established connection and receives content in request. This is point-to-point mode
+- `Caller mode` - Astra посылает запрос на сервер SRT и получает в ответ содержимое. Это наиболее распространенный вариант
+- `Listener mode` - Astra ожидает, когда SRT-сервер установит соединение и получит содержимое запроса. Это режим "точка-точка".
 
-Address format depends on selected mode.
+Формат адреса зависит от выбранного режима.
 
 ### Caller mode
 
@@ -24,55 +22,55 @@ Address format depends on selected mode.
 srt://address:port[#options]
 ```
 
-- `address` - remote server IPv4 address or hostname
-- `port` - remote port
+- `address` - IPv4-адрес или имя хоста удаленного сервера
+- `port` - удалённый порт
 
-Example:
+Пример:
 
-- `src://example.com:3001` - send request to the example.com
+- `src://example.com:3001` - отправить запрос на сайт example.com
 
 ### Listener mode
 
-In listener mode, the address format is similar to the UDP address, with the addition of the `@` symbol to indicate the local interface name.
+В режиме слушателя формат адреса аналогичен формату адреса UDP, с добавлением `@` символ для обозначения имени локального интерфейса.
 
 ```
 srt://[interface]@:port[#options]
 ```
 
-- `interface` - local interface name where to listen for connection. By the default Astra will wait connection on all interfaces
-- `port` - local port to accept incomming connection
-- `options` - additional options for SRT protocol
+- `interface` - имя локального интерфейса, на котором следует ожидать соединения. По умолчанию Astra будет ожидать соединения на всех интерфейсах
+- `port` - локальный порт для приема входящего соединения
+- `options` - дополнительные опции для протокола SRT
 
-Examples:
+Примеры:
 
-- `srt://@:3001` - wait for connection on any interface
-- `srt://eth0@:3001` - wait for connection on interface `eth0`
+- `srt://@:3001` - ожидание соединения на любом интерфейсе
+- `srt://eth0@:3001` - ожидание соединения на интерфейсе `eth0`
 
-### Options
+### Опции
 
-- `timeout=N` - restarts the receiver if no data is received within a defined interval, seconds. Default value: `5` seconds
-- `latency=N` - maximum accepted transmission latency, milliseconds. Default value: `120` millisecond
-- `packetfilter=S` - injecting extra processing instructions at the beginning and/or end of a transmission to implement Forward Error Correction (FEC). [Read more](https://github.com/Haivision/srt/blob/master/docs/features/packet-filtering-and-fec.md#configuring-the-fec-filter){target="_blank"} in official documentation
-- `passphrase=S` – password for the encrypted transmission. Password length should be in range 10 .. 79 characters
-- `pbkeylen=N` – crypto key length in bytes. Possible values: 16, 24, 32. Default value: `0`
-- `streamid=ID` – stream identifier, provided to the SRT server in caller mode
-- `no_tsbpdmode` – turn off timestamp-based packet delivery mode
-- `oheadbw` - limits bandwidth overhead, percents. Possible values in range: 5 - 100. Default value: `25`
+- `timeout=N` - перезапускает приемник, если в течение заданного интервала времени, секунд, не поступает никаких данных. Значение по умолчанию: `5` секунд
+- `latency=N` - максимальная допустимая задержка передачи, миллисекунды. Значение по умолчанию: `120` миллисекунда
+- `packetfilter=S` - введение дополнительных инструкций обработки в начале и/или в конце передачи для реализации прямого исправления ошибок (FEC). [Читать далее](https://github.com/Haivision/srt/blob/master/docs/features/packet-filtering-and-fec.md#configuring-the-fec-filter) в официальной документации
+- `passphrase=S` - пароль для шифрованной передачи. Длина пароля должна быть в диапазоне 10 ... 79 символов
+- `pbkeylen=N` - длина криптографического ключа в байтах. Возможные значения: 16, 24, 32. Значение по умолчанию: `0`
+- `streamid=ID` - идентификатор потока, предоставляемый SRT-серверу в режиме вызывающего абонента
+- `no_tsbpdmode` - отключение режима доставки пакетов на основе временных меток
+- `oheadbw` - ограничивает накладные расходы на пропускную способность, в процентах. Возможные значения в диапазоне: 5 - 100. Значение по умолчанию: `25`
 
-## Web Interface
+## Веб-интерфейс[](https://help.cesbo.com/astra/receiving/ip/srt#web-interface)
 
-One of the biggest challenges of working with the Secure Reliable Transport (SRT) protocol is navigating the range of technical requirements and settings involved in the setup process. Fortunately, Astra streamlines this process by offering a comprehensive set of SRT input configuration options
+Одной из самых сложных задач при работе с протоколом Secure Reliable Transport (SRT) является навигация по ряду технических требований и настроек, задействованных в процессе установки. К счастью, Astra упрощает этот процесс, предлагая полный набор опций конфигурирования входа SRT
 
-To add a new SRT input in Astra, users can navigate to the `New Stream` tab or the settings of an existing stream and select the `Input Type` option as either SRT
+Чтобы добавить новый SRT-вход в Astra, пользователи могут перейти в раздел `New Stream` вкладку или настройки существующего потока и выберите `Input Type` в качестве опции либо SRT
 
-![SRT Listener](https://cdn.cesbo.com/help/astra/receiving/ip/srt/listener.png)
+![Слушатель SRT](https://cdn.cesbo.com/help/astra/receiving/ip/srt/listener.png)
 
-- `Input type` - this parameter is the first option on the SRT settings tab and is used to select the input type. To configure SRT reception, select `SRT` from the drop-down list. This enables the SRT-specific configuration options and allows you to enter the necessary information to receive an SRT stream
-- `SRT mode` - this parameter determines whether Astra will act as the caller or listener when establishing an SRT connection. To receive an SRT stream, select `Listener` from the drop-down list. This tells Astra to wait for incoming connections from the SRT stream's sender
-- `Local interface` - this parameter specifies the network interface that Astra will use to receive the SRT stream. The default value is `Any interface`, which means that Astra will listen for incoming SRT connections according to system routing rules. If you want to restrict Astra to a specific interface, select it from the drop-down list
-- `Port` - this optional parameter specifies the network port that Astra will use to receive the SRT stream
-- `Timeout` - this optional parameter specifies the amount of time (in milliseconds) that Astra will wait for incoming data from the SRT stream before timing out. The default value is 5000 milliseconds (5 second), but you can increase or decrease this value if necessary
-- `Latency` - this optional parameter introduces a specified amount of delay (in milliseconds) into the SRT stream. The default value is 120ms. Increasing the latency can improve stability but increases delay, and decreasing it can reduce delay but may make the connection less stable
-- `Passphrase` - this optional parameter sets a passphrase for secure communication over the SRT stream. The default value is empty. If a passphrase is set, both sender and receiver must use the same one to establish a connection
-- `Crypto key length` - this parameter sets the length of the cryptographic key used to secure the SRT stream. The default value is 128 bits, which is enough for SRT reception to work. However, you can increase or decrease the key length if needed for stronger or weaker security
-- `Timestamp` - based packet delivery mode - this parameter enables or disables the timestamp-based packet delivery mode of SRT. When enabled (checked), SRT uses timestamps to ensure that packets are delivered in the correct order, even if they arrive out of order. This can improve the quality of the stream but may increase latency. The default state of this parameter is disabled
+- `Input type` - этот параметр является первой опцией на вкладке настроек SRT и используется для выбора типа входа. Для настройки приема SRT выберите `SRT` из выпадающего списка. Это позволяет включить опции конфигурации, специфичные для SRT, и ввести необходимую информацию для получения SRT-потока
+- `SRT mode` - этот параметр определяет, будет ли Astra выступать в роли вызывающего или слушающего абонента при установлении SRT-соединения. Для получения SRT-потока выберите `Listener` из выпадающего списка. Это указывает Astra на необходимость ожидания входящих соединений от отправителя SRT-потока
+- `Local interface` - этот параметр задает сетевой интерфейс, который Astra будет использовать для приема потока SRT. По умолчанию используется значение `Any interface`, что означает, что Astra будет прослушивать входящие SRT-соединения в соответствии с системными правилами маршрутизации. Если вы хотите ограничить Astra определенным интерфейсом, выберите его из выпадающего списка
+- `Port` - этот необязательный параметр задает сетевой порт, который Astra будет использовать для приема потока SRT
+- `Timeout` - этот необязательный параметр задает время (в миллисекундах), в течение которого Astra будет ожидать входящих данных из потока SRT, прежде чем прервется работа. По умолчанию это значение равно 5000 миллисекунд (5 секунд), но при необходимости его можно увеличить или уменьшить
+- `Latency` - этот необязательный параметр вносит в поток SRT заданную величину задержки (в миллисекундах). Значение по умолчанию равно 120 мс. Увеличение задержки может улучшить стабильность, но увеличивает задержку, а уменьшение - уменьшить задержку, но может сделать соединение менее стабильным
+- `Passphrase` - этот необязательный параметр задает парольную фразу для безопасного обмена данными по потоку SRT. По умолчанию используется пустое значение. Если парольная фраза задана, то отправитель и получатель должны использовать одну и ту же парольную фразу для установления соединения
+- `Crypto key length` - этот параметр задает длину криптографического ключа, используемого для защиты SRT-потока. По умолчанию используется значение 128 бит, что достаточно для работы SRT-приема. Однако при необходимости можно увеличить или уменьшить длину ключа для усиления или ослабления защиты.
+- `Timestamp` - режим доставки пакетов на основе временных меток - этот параметр включает или выключает режим доставки пакетов SRT на основе временных меток. Если параметр включен (отмечен), SRT использует временные метки для обеспечения доставки пакетов в правильном порядке, даже если они приходят не по порядку. Это может улучшить качество потока, но может увеличить задержку. По умолчанию этот параметр выключен.
