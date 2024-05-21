@@ -1,47 +1,47 @@
 ---
-title: "Filtering Stream PIDs"
+title: "Фильтрация PID-ов"
 date: 2023-07-17
 ---
 
-Stream Filtering removes specific packets within the MPEG-TS stream based on their PIDs. Additionally, the process modifies the corresponding program-specific information tables, such as Program Association Table (PAT) and Program Map Table (PMT), to reflect the removal of the identified packets.
+Фильтрация потока удаляет определенные пакеты в потоке MPEG-TS на основе их PID. Кроме того, процесс модифицирует соответствующие информационные таблицы программ, такие как Program Association Table (PAT) и Program Map Table (PMT), чтобы отразить удаление идентифицированных пакетов.
 
-## Analyze Channel
+## Анализ канала[](https://help.cesbo.com/astra/processing/mpegts/filter#analyze-channel)
 
-To identify available elementary streams and their PIDs, it's necessary to analyze the channel. This can be achieved by launching the built-in MPEG-TS analyzer either from the channel menu or directly from the channel settings.
+Для определения доступных элементарных потоков и их PID необходимо проанализировать канал. Это можно сделать, запустив встроенный анализатор MPEG-TS либо из меню канала, либо непосредственно из настроек канала.
 
-![Analyze Original Stream](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-original.png)
+![Анализ исходного потока](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-original.png)
 
-On the provided screenshot, we can see the following elementary streams:
+На представленном скриншоте мы видим следующие элементарные потоки:
 
-1. Video - PID: `1331`
-2. Subtitle - PID: `1335`, Language: `bul` (Bulgarian)
-3. Audio - PID: `1332`, Language: `bul` (Bulgarian)
-4. Audio - PID: `1336`, Language: `eng` (English)
+1. Видео - ПИД: `1331`
+2. Субтитры - PID: `1335`, Язык: `bul` (Болгарский)
+3. Аудио - PID: `1332`, Язык: `bul` (Болгарский)
+4. Аудио - PID: `1336`, Язык: `eng` (на английском языке)
 
-Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Filtering in Astra.
+Каждый элементарный поток представлен уникальным идентификатором пакета (PID), который может быть использован для фильтрации потоков в Astra.
 
-## Input filtering
+## Входная фильтрация[](https://help.cesbo.com/astra/processing/mpegts/filter#input-filtering)
 
-In order to perform the stream filtering, we will drop the stream with PID 1336. This operation can be conducted by appending the `filter=1336` option to the input address
+Для того чтобы выполнить фильтрацию потока, мы удалим поток с PID 1336. Эту операцию можно выполнить, добавив в поле `filter=1336` опция на входной адрес
 
-![Input Option](https://cdn.cesbo.com/help/astra/processing/utilities/filter/input-options.png)
+![Опция ввода](https://cdn.cesbo.com/help/astra/processing/utilities/filter/input-options.png)
 
-## Inverse input filtering
+## Инверсная фильтрация PID[](https://help.cesbo.com/astra/processing/mpegts/filter#inverse-input-filtering)
 
-To perform inverse filtering and remove all streams except those specified, you can use the tilde symbol (`~`) along with the filter option. For instance, to keep only the video stream and the English audio stream (PIDs 1331 and 1336), you would append the `filter~=1331,1336` option to the input address. This will remove all other streams, leaving only the defined streams.
+Чтобы выполнить инверсную фильтрацию и удалить все пиды кроме указанных, можно использовать символ тильды (`~`) вместе с параметром фильтрации. Например, чтобы сохранить только видеопоток и аудиопоток на английском языке (PID 1331 и 1336), нужно добавить параметр `filter~=1331,1336` к входному адресу. При этом все остальные потоки будут удалены, останутся только заданные потоки.
 
-To verify the results of the applied stream filter, click "Apply" to save the changes. Next, launch the built-in MPEG-TS analyzer again. This will allow you to check if the unnecessary streams have been successfully filtered out.
+Для проверки результатов примененного фильтра потока нажмите кнопку "Применить", чтобы сохранить изменения. Далее снова запустите встроенный анализатор MPEG-TS. Это позволит проверить, успешно ли отфильтрованы ненужные потоки.
 
-![Analyze Filtered Stream](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-filtered.png)
+![Анализ отфильтрованного потока](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-filtered.png)
 
-## Filtering for all inputs
+## Фильтрация для всех входов[](https://help.cesbo.com/astra/processing/mpegts/filter#filtering-for-all-inputs)
 
-For stream filtering across all inputs, the `Remap` tab in the channel settings can be used. This method is suitable with the remap feature.
+Для потоковой фильтрации по всем входам используется параметр `Remap` можно использовать вкладку в настройках канала. Этот метод подходит для работы с функцией remap.
 
-![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/filter/remap-options.png)
+![Параметры перестройки](https://cdn.cesbo.com/help/astra/processing/utilities/filter/remap-options.png)
 
-In the `Map PIDs` field, `video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
+В `Map PIDs` поле, `video=101, audio.eng=102` был установлен. В результате PID видео- и англоязычного аудиопотоков изменяются на 101 и 102, соответственно, по всем входам.
 
-Subsequently, in the `Filter PID` field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
+Впоследствии в `Filter PID` поле, `101, 102` было указано. Это означает, что на выходе будут сохранены только потоки с этими PID, а все остальные элементарные потоки будут отфильтрованы.
 
-Read more: [Remap PIDs](./remap)
+Подробнее: [Ремап ПИДов](https://help.cesbo.com/astra/processing/mpegts/remap)
