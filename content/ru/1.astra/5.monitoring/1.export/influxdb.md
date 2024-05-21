@@ -1,108 +1,108 @@
 ---
-title: "Integration Astra with InfluxDB"
+title: "Интеграция Astra с InfluxDB"
 date: 2023-03-23
 ---
 
-InfluxDB is an open-source time series database.
+InfluxDB - это база данных временных рядов с открытым исходным кодом.
 
-## Install
+## Установка[](https://help.cesbo.com/astra/monitoring/export/influxdb#install)
 
-Download latest version from
+Загрузите последнюю версию с сайта
 
-1. Go to InfluxDB site: https://portal.influxdata.com/downloads/
-2. Choose latest version
-3. Choose your platform
-4. Launch commands from the instruction on the InfluxDB site
+1. Перейти на сайт InfluxDB: [https://portal.influxdata.com/downloads/](https://portal.influxdata.com/downloads/)
+2. Выберите последнюю версию
+3. Выбор платформы
+4. Запуск команд из инструкции на сайте InfluxDB
 
-Find out more information on official site: https://docs.influxdata.com/influxdb/latest/
+Более подробную информацию можно получить на официальном сайте: [https://docs.influxdata.com/influxdb/latest/](https://docs.influxdata.com/influxdb/latest/).
 
-InfluxDB is an open-source time series database.
+InfluxDB - это база данных временных рядов с открытым исходным кодом.
 
-## InfluxDB Configuration
+## Конфигурация InfluxDB[](https://help.cesbo.com/astra/monitoring/export/influxdb#influxdb-configuration)
 
-Open the InfluxDB Admin interface at `http://db-server:8086`.
+Откройте интерфейс InfluxDB Admin по адресу `http://db-server:8086`.
 
-First, create a new bucket. A bucket serves as storage for all data received from Astra. You can find buckets in the left sidebar under the "Load Data" group. To create a new bucket:
+Сначала создайте новый бакет. Ведро служит для хранения всех данных, полученных от Astra. Ведра можно найти на левой боковой панели в группе "Load Data". Чтобы создать новый бакет, выполните следующие действия:
 
-1. Click `Create Bucket`
-2. Set the bucket name, for example, `astra`
-3. Set data retention: in the `Delete Data` section, select `Older than` and choose 30 days or any other value you prefer.
+1. Нажмите `Create Bucket`
+2. Задайте имя ведра, например, `astra`
+3. Установить срок хранения данных: в `Delete Data` выберите раздел `Older than` и выберите 30 дней или любое другое значение, которое вы предпочитаете.
 
-The next step is to grant Astra access to the bucket. In the left sidebar under the `Load Data` group, open `API Tokens`:
+Следующим шагом будет предоставление Astra доступа к ведру. В левой боковой панели под `Load Data` группа, открытая `API Tokens`:
 
-1. Click `Generate API Token` and choose `Custom API Token.`
-2. Set the token description as `astra`
-3. In the Bucket group, set Read and Write permissions for the `astra` bucket.
-4. Click `Generate`
+1. Нажмите `Generate API Token` и выбрать `Custom API Token.`
+2. Задайте описание токена в виде `astra`
+3. В группе Bucket установите разрешения на чтение и запись для группы `astra` ведро.
+4. Нажмите `Generate`
 
-Now, InfluxDB is configured and ready to receive data.
+Теперь InfluxDB настроена и готова к приему данных.
 
-## Astra Configuration
+## Конфигурация Astra[](https://help.cesbo.com/astra/monitoring/export/influxdb#astra-configuration)
 
-Open Settings -> General in the Astra Web Interface. Set options for InfluxDB configuration:
+Откройте Settings -> General в веб-интерфейсе Astra. Установите параметры конфигурации InfluxDB:
 
-- `Instance Name` - by the default is `astra` will be used as bucket in the InfluxDB
-- `InfluxDB Address` - address of the InfluxDB: `http://db-server:8086`
-- `InfluxDB Organization` - your orgranization in the InfluxDB settings
-- `InfluxDB Token` - paste your token generated on previous step
-- Click "Apply & Restart"
+- `Instance Name` - по умолчанию является `astra` будет использоваться в качестве bucket в InfluxDB
+- `InfluxDB Address` - адрес InfluxDB: `http://db-server:8086`
+- `InfluxDB Organization` - вашей организации в настройках InfluxDB
+- `InfluxDB Token` - вставьте свой токен, созданный на предыдущем шаге
+- Нажмите кнопку "Применить и перезапустить"
 
-## InfluxDB data structure
+## Структура данных InfluxDB[](https://help.cesbo.com/astra/monitoring/export/influxdb#influxdb-data-structure)
 
-### Stream
+### Поток
 
-Measurement: `stream`
+Измерения: `stream`
 
-Tags:
+Теги:
 
-- `id` - unique stream identifier
-- `name` - stream name
+- `id` - уникальный идентификатор потока
+- `name` - название потока
 
-Data:
+Данные:
 
-- `active` - `true` if stream is active, or `false` if stream work on demand and inactive
-- `onair` - `true` if active input works without errors
-- `sessions` - uint, number of sessions
-- `bitrate` - uint, stream bitrate in KBit/s
-- `sc_error` - uint, percent of scrambled TS-packets
-- `cc_error` - uint, CC errors counter
-- `pes_error` - uint, percent of invalid PES-packets
-- `sync_error` - uint, HTTP/HLS sync errors
+- `active` - `true` если поток активен, или `false` если поток работает по требованию и неактивен
+- `onair` - `true` если активный вход работает без ошибок
+- `sessions` - uint, количество сеансов
+- `bitrate` - uint, битрейт потока в КБит/с
+- `sc_error` - uint, процент скремблированных TS-пакетов
+- `cc_error` - uint, Счетчик ошибок CC
+- `pes_error` - uint, процент недействительных PES-пакетов
+- `sync_error` - uint, Ошибки синхронизации HTTP/HLS
 
-### Adapter
+### Адаптер
 
-Measurement: `adapter`
+Измерения: `adapter`
 
-Tags:
+Теги:
 
-- `id` - unique adapter identifier
-- `name` - adapter name
+- `id` - уникальный идентификатор адаптера
+- `name` - имя адаптера
 
-Data:
+Данные:
 
-- `lock` - boolean, `true` if tuner has lock and able to receive data
-- `signal` - uint, approximate signal level in percent
-- `signal_db` - float, signal level in dBm
-- `snr` - uint, approximate signal to noise ratio in percent
-- `snr_db` - float, signal to noise ratio in dB
-- `ber` - uint, bit errors counter
-- `unc` - uint, block errors counter
-- `bitrate` - total bitrate in Kbit/s
+- `lock` - булево, `true` если тюнер заблокирован и может принимать данные
+- `signal` - uint, приблизительный уровень сигнала в процентах
+- `signal_db` - float, уровень сигнала в дБм
+- `snr` - uint, приблизительное отношение сигнал/шум в процентах
+- `snr_db` - float, отношение сигнал/шум в дБ
+- `ber` - uint, счетчик битовых ошибок
+- `unc` - uint, счетчик ошибок блока
+- `bitrate` - общий битрейт в Кбит/с
 
-### System information
+### Системная информация
 
-Measurement: `sysinfo`
+Измерения: `sysinfo`
 
-Data:
+Данные:
 
-- `la1` - float, load average for 1 minute
-- `la5` - float, load average for 5 minutes
-- `la15` - float, load average for 15 minutes
-- `threads` - uint, number of the threads
-- `sys_cpu` - uint, total CPU usage. Could be up to: 100 multiplied with the core numbers on all CPUs
-- `app_cpu` - uint, CPU usage by the process and all threads
-- `sys_mem` - uint, total RAM usage
-- `app_mem` - uint, RAM usage by the process and all threads
-- `app_mem_kb` - uint, RAM usage by the process and all threads in kilobytes
-- `sys_uptime` - uint, total system uptime in seconds
-- `app_uptime` - uint, process uptime in seconds
+- `la1` - плавающий, среднее значение нагрузки за 1 минуту
+- `la5` - плавающий, среднее значение нагрузки за 5 минут
+- `la15` - плавающий, средняя нагрузка за 15 минут
+- `threads` - uint, количество потоков
+- `sys_cpu` - uint, общее использование процессора. Может составлять до: 100, умноженное на количество ядер на всех процессорах.
+- `app_cpu` - uint, использование процессора процессом и всеми потоками
+- `sys_mem` - uint, общее использование оперативной памяти
+- `app_mem` - uint, использование оперативной памяти процессом и всеми потоками
+- `app_mem_kb` - uint, использование оперативной памяти процессом и всеми потоками в килобайтах
+- `sys_uptime` - uint, общее время работы системы в секундах
+- `app_uptime` - uint, время работы процесса в секундах
