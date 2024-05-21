@@ -1,11 +1,11 @@
 ---
-title: "Receiving HLS"
+title: "Прием HLS"
 date: 2023-08-10
 ---
 
-HLS or HTTP Live Streaming is an HTTP-based adaptive bitrate video streaming protocol. It is most popular format for streaming over internet (OTT services). Read more about [HLS Protocol](/misc/articles/protocols/hls)
+HLS или HTTP Live Streaming - это протокол потокового видео с адаптивным битрейтом, основанный на HTTP. Это наиболее популярный формат для потокового вещания через Интернет (OTT-сервисы). Подробнее о [протоколе HLS](https://help.cesbo.com/misc/articles/protocols/hls)
 
-## Address format
+## Формат адреса[](https://help.cesbo.com/astra/receiving/ip/hls#address-format)
 
 ```
 http://address
@@ -13,20 +13,20 @@ http://address:port/path
 http://login:password@address:port/path#options
 ```
 
-This is common HTTP address. Astra supports https as well.
+Это обычный HTTP-адрес. Astra также поддерживает https.
 
-- `login:password` – login and password for HTTP authentication. Supports Basic and Digest authentication methods
-- `address` – IPv4 server address or domain name
-- `port` – port number. Default: `80` for http and `443` for https
-- `path` – the path to the resource. Default: `/`
+- `login:password` - логин и пароль для HTTP-аутентификации. Поддерживаются методы аутентификации Basic и Digest
+- `address` - Адрес сервера IPv4 или доменное имя
+- `port` - номер порта. По умолчанию: `80` для http и `443` для https
+- `path` - путь к ресурсу. По умолчанию: `/`
 
-Options:
+Варианты:
 
-- `ua=Name` – custom User-Agent header
-- `timeout=N` - timeout for HLS segments loading. By default, timeout depend of the segment duration
-- `debug` - log response headers. Also should be turned on debug in the log messages
-- `bandwidth=N` - select stream with defined bandwidth. By default, astra select stream with maximal bandwidth value
+- `ua=Name` - пользовательский заголовок User-Agent
+- `timeout=N` - таймаут для загрузки сегментов HLS. По умолчанию таймаут зависит от длительности сегмента
+- `debug` - заголовки ответов в журнале. Также следует включить отладку в сообщениях журнала
+- `bandwidth=N` - выбрать поток с заданной пропускной способностью. По умолчанию astra выбирает поток с максимальным значением пропускной способности
 
-## Web Interface
+## Веб-интерфейс[](https://help.cesbo.com/astra/receiving/ip/hls#web-interface)
 
-To set up HLS input in Astra, just write your source address to the Input field.
+Чтобы настроить HLS-ввод в Astra, достаточно написать адрес источника в поле Input.
