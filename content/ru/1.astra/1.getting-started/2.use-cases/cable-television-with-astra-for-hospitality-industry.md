@@ -4,193 +4,189 @@ date: 2023-05-04
 image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
 ---
 
-Hospitality TV, offering an excellent TV solution with high-quality broadcasts and a selection of the best channels, is an essential part of hotel service.
+Hospitality TV, предлагающее отличное телевизионное решение с высококачественным вещанием и выбором лучших каналов, является неотъемлемой частью гостиничного сервиса.
 
-The number and quality of channels create a positive impression on guests. However, this is where the challenge arises.
-Hotels need to either modernize their existing TV network or design a new one, finding a balance between equipment costs and required services.
-We suggest considering the Astra software, which boasts powerful and flexible features when used in conjunction with a DVB-C modulator. In this article, we will explore the pros and cons of such a solution and walk through the steps to set it up.
+Количество и качество каналов создают положительное впечатление у гостей. Однако именно здесь и возникает проблема. Гостиницам приходится либо модернизировать существующую телевизионную сеть, либо создавать новую, находя баланс между стоимостью оборудования и необходимыми услугами. Мы предлагаем рассмотреть программное обеспечение Astra, которое обладает мощными и гибкими возможностями при использовании в сочетании с DVB-C модулятором. В этой статье мы рассмотрим плюсы и минусы такого решения, а также пройдемся по шагам его настройки.
 
-## Advantages of cable television
+## Преимущества кабельного телевидения[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
 
-- built on a regular TV cable, you can use the existing hotel network
-- a large number of channels with no quality restrictions
-- any TV set is capable of receiving cable TV. You don't need any additional hardware in the guests rooms
-- network reliability
-- broadcasting control such as monitoring, configuration, channel switching, etc. All this is possible with Astra Web Interface
-- last but not least, you can simply expand the number of video sources and channels. Astra allows you to receive an input signal not only from DVB cards, but also from a network (HTTP, HLS, UDP, RTSP), as well as create your TV channels from your video recordings.
+- построенный на обычном телевизионном кабеле, можно использовать существующую сеть отеля
+- большое количество каналов без ограничений по качеству
+- любой телевизор способен принимать кабельное телевидение. Дополнительное оборудование в гостевых комнатах не требуется
+- надежность сети
+- управление вещанием, такое как мониторинг, конфигурирование, переключение каналов и т.д. Все это возможно с помощью Web-интерфейса Astra
+- наконец, можно просто расширить количество источников видеосигнала и каналов. Astra позволяет принимать входной сигнал не только с DVB-карт, но и из сети (HTTP, HLS, UDP, RTSP), а также создавать свои телеканалы из видеозаписей.
 
-## Disadvantages
+## Недостатки[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#disadvantages)
 
-- the cost of the headend, including DVB-C modulator and DVB cards for receiving
-- some old TV sets may not support DVB-C standard for cable TV
+- стоимость головной станции, включая DVB-C модулятор и DVB-карты для приема
+- некоторые старые телевизоры могут не поддерживать стандарт DVB-C для кабельного телевидения
 
-## Hardware
+## Оборудование[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#hardware)
 
-![Hospitality TV diagram](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
+![Схема гостеприимного телевидения](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
 
-This simple diagram is used for the illustration. We have a Satellite signal, Linux-based Server PC with DVB-S/S2 card(s), and RESI DVB-C FSM Modulator card(s).
+Эта простая схема используется для иллюстрации. У нас есть спутниковый сигнал, серверный ПК на базе Linux с картой (картами) DVB-S/S2 и картой (картами) FSM-модулятора RESI DVB-C.
 
-### DVB-S/S2 Receiver
+### Приемник DVB-S/S2
 
-For receiving satellite channels you may use any DVB-S/S2 adapter with drivers for Linux.
+Для приема спутниковых каналов можно использовать любой DVB-S/S2-адаптер с драйверами для Linux.
 
 ![DigitalDevices Max SX8](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/maxsx82018.jpg)
 
-Most popular DVB receivers are:
+Наиболее популярными DVB-ресиверами являются:
 
-- [Digital Devices MAX SX8 Pro](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/340/digital-devices-max-sx8-pro-4/8-8-tuner-tv-card-dvb-s2/dvb-s2x-full-spectrum)
-- [Digital Devices Max M4](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/341/digital-devices-max-m4-4x-multi-band-tuner-tv-card?c=167) - all-rounder for satellite, cable or terrestrial reception
+- [Цифровые устройства MAX SX8 Pro](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/340/digital-devices-max-sx8-pro-4/8-8-tuner-tv-card-dvb-s2/dvb-s2x-full-spectrum)
+- [Digital Devices Max M4](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/341/digital-devices-max-m4-4x-multi-band-tuner-tv-card?c=167) - универсальное устройство для приема спутниковых, кабельных и эфирных сигналов
 - [TBS6909-X](https://www.tbsdtv.com/products/tbs6909-x-dvb-s-s2-s2x-octa-tuner-pcie-card.html)
 
-### DVB-C Modulator
+### DVB-C модулятор
 
-In this article, we consider simple steps on How to set up Astra for DVB-C Modulation using [RESI DVB-C FSM 8](https://www.digital-devices.eu/shop/en/business-tv/qam-sdr-modulator/). Also you may use [TBS6004](https://www.tbsdtv.com/products/tbs6004-dvb-c-4-qam-pcie-card.html) modulator.
+В этой статье мы рассмотрим простые шаги по настройке Astra для модуляции DVB-C с помощью [RESI DVB-C FSM 8](https://www.digital-devices.eu/shop/en/business-tv/qam-sdr-modulator/). Также можно использовать модулятор [TBS6004](https://www.tbsdtv.com/products/tbs6004-dvb-c-4-qam-pcie-card.html).
 
-![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/resi-fsm.png)
+![Модулятор DVB-C от DigitalDevices RESI](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/resi-fsm.png)
 
-Short description:
+Краткое описание:
 
-- RESI DVB-C FSM 8 has 8 transponders according to DVB-C specification
-- Frequency range: 114 - 858 MHz
-- Symbol rates: 1.0 - 7.1 MSym/s
+- RESI DVB-C FSM 8 имеет 8 транспондеров в соответствии со спецификацией DVB-C
+- Диапазон частот: 114 - 858 МГц
+- Скорость передачи символов: 1,0 - 7,1 мсим/с
 - QAM: 16, 32, 64, 128, 256
-- Signal / Noise ratio: 42dB
-- Output with 8 active transponder: 101 dBµV
-- The FSM8 can make up to 7.1 MSym/s and QAM256. The maximum delivered bitrate is about 52Mbps
+- Соотношение сигнал/шум: 42 дБ
+- Выход с 8 активными транспондерами: 101 дБ мкВ
+- FSM8 может принимать до 7,1 MSym/s и QAM256. Максимальный передаваемый битрейт составляет около 52 Мбит/с
 
-::note
-We advise sending no more than 40-42Mbps to a single transponder, especially if the input stream is from the satellite. As sat-channels usually have floating bitrate, which, for example, at HD channel may jump from 6Mbps to 11Mbps.
-::
+Мы советуем передавать на один транспондер не более 40-42 Мбит/с, особенно если входной поток идет со спутника. Так как спутниковые каналы обычно имеют плавающий битрейт, который, например, у HD-канала может скакать от 6 Мбит/с до 11 Мбит/с.
 
-According to that, we may calculate how many channels we may put on a single transponder and on all available transponders:
+В соответствии с этим можно рассчитать, сколько каналов мы можем разместить на одном транспондере и на всех имеющихся транспондерах:
 
-- 4 x HD channels ~7Mbps = 28Mbps
-- 4 x SD channels ~3Mbps = 12Mbps
+- 4 x HD-канала ~7 Мбит/с = 28 Мбит/с
+- 4 x SD-канала ~3 Мбит/с = 12 Мбит/с
 
-Approximately we can get 8 channels at one transponder, multiplied by 8 transponders we can get up to 64 channels in your DVB-C network. This is combination of channels may be different, it is up to your needs. If you need more channels you may get RESI DVB-C FSM 16 or 24.
+Приблизительно мы можем получить 8 каналов на одном транспондере, умножив их на 8 транспондеров, мы можем получить до 64 каналов в вашей сети DVB-C. Это сочетание каналов может быть различным, все зависит от ваших потребностей. Если Вам необходимо большее количество каналов, Вы можете приобрести RESI DVB-C FSM 16 или 24.
 
-## Requirements
+## Требования[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#requirements)
 
-Hardware:
+Аппаратное обеспечение:
 
-- Server PC, at least Quad Core Intel® or AMD® CPU 2.8GHz,  8Gb RAM, with 2 or more PCIe slots, depending on the quantity of PCIe cards
-- DVB-C Modulators (RESI or TBS)
-- DVB-S/S2 or DVB-T/T2 TV Cards (as an example)
+- Серверный ПК, не менее четырехъядерного процессора Intel® или AMD® 2,8 ГГц, 8 Гб оперативной памяти, с 2 или более слотами PCIe, в зависимости от количества карт PCIe
+- Модуляторы DVB-C (RESI или TBS)
+- Телевизионные карты DVB-S/S2 или DVB-T/T2 (в качестве примера)
 
-Software:
+Программное обеспечение:
 
-- Linux-based operation system. We recommend Ubuntu 22.04 LTS
+- Операционная система на базе Linux. Мы рекомендуем Ubuntu 22.04 LTS
 - Cesbo Astra
-- DVB Card drivers
-- Internet Browser on your PC. Chrome, Safari, or Firefox
+- Драйверы DVB-карт
+- Интернет-браузер на компьютере. Chrome, Safari или Firefox
 
-## Configure Astra
+## Настройка Astra[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#configure-astra)
 
-### Install Astra
+### Установка Astra
 
-First of all, we need to prepare our server machine and install Linux and Astra. Information about Ubuntu installation could be found on the [official web site](https://ubuntu.com/tutorials/install-ubuntu-server)
+Прежде всего, необходимо подготовить серверную машину и установить Linux и Astra. Информацию об установке Ubuntu можно найти на [официальном сайте](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](/astra/getting-started/first-steps/install)
+Установка Astra очень проста - достаточно скопировать один бинарный файл на ваш сервер. Здесь подробно описано, как [установить Astra](https://help.cesbo.com/astra/getting-started/first-steps/install)
 
-Quite often customers forget to configure their Adapters before the next steps. So be sure that you have DVB card drivers installed on the server.
+Довольно часто клиенты забывают настроить свои адаптеры перед выполнением следующих шагов. Поэтому убедитесь, что на сервере установлены драйверы DVB-карты.
 
-- [DigitalDevices Driver Installation](/misc/tools-and-utilities/dvb/dd-driver)
-- [TBS Driver Installation](/misc/tools-and-utilities/dvb/tbs-driver)
-- For other adapters you may find information on the vender web site
+- [Установка драйверов DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
+- [Установка драйвера TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver)
+- Информацию о других адаптерах можно найти на сайте производителя
 
-### Receiving channels with Astra
+### Прием каналов с помощью системы Astra
 
-Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](/astra/receiving).
+Теперь самое время настроить все наши адаптеры и найти каналы, которые мы хотим модулировать по DVB-C. Список всех статей о приеме каналов доступен здесь: [Прием с помощью Astra](https://help.cesbo.com/astra/receiving).
 
-To configure receiving channels from satellite we recommend to having a look at these articles:
+Для настройки приема каналов со спутника рекомендуем ознакомиться с этими статьями:
 
-- [Introduction to DVB Adapter Tuning](/astra/receiving/dvb/intro)
-- [DVB-S/S2 Tuner Options](/astra/receiving/dvb/s)
-- [Scan DVB Adapter](/astra/receiving/dvb/scan)
+- [Введение в настройку адаптера DVB](https://help.cesbo.com/astra/receiving/dvb/intro)
+- [Опции тюнера DVB-S/S2](https://help.cesbo.com/astra/receiving/dvb/s)
+- [Сканирование](https://help.cesbo.com/astra/receiving/dvb/scan)
 
-Below provided screenshot of example adapter settings:
+Ниже приведен скриншот примера настроек адаптера:
 
-![DVB-S2 Example](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
+![Пример DVB-S2](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
 
-### Scan and select the required channels
+### Сканирование и выбор необходимых каналов
 
-When we figured out how to configure our Adapters, we may make a scan of the required Transponder (frequency) and append channels to Astra by selecting all the programs you want to add.
+Когда мы разобрались с настройкой наших адаптеров, можно произвести сканирование нужного транспондера (частоты) и добавить каналы в Astra, выбрав все программы, которые необходимо добавить.
 
-![Scan configured adapter](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/scan.png)
+![Сканирование сконфигурированного адаптера](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/scan.png)
 
-![Added channels on dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
+![Добавлены каналы на приборной панели](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
 
-### Create New Stream with MPTS
+### Создание нового потока с помощью MPTS
 
-MPTS is a Multi Program Transport Stream (or multiplex) is a stream containing several services (programs). It is used to transfer channels to ip-qam/ip-asi modulators and multiplexers. Below are screenshots of most general configuration pages
+MPTS - Multi Program Transport Stream (или мультиплекс) - это поток, содержащий несколько сервисов (программ). Он используется для передачи каналов на ip-qam/ip-asi модуляторы и мультиплексоры. Ниже приведены скриншоты наиболее общих страниц конфигурации
 
-![MPTS General Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-general.png)
+![Общие настройки MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-general.png)
 
-![MPTS Input List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-input.png)
+![Список входов MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-input.png)
 
-![MPTS SDT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-sdt.png)
+![Настройки MPTS SDT](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-sdt.png)
 
-In the SDT settings should be provided all information about channel:
+В настройках SDT должна быть представлена вся информация о канале:
 
-- `Service Name` - program name
-- `PNR` - program number should be same as in the input list
-- `LCN` - logical number defines what channel number will be on the TV set
+- `Service Name` - название программы
+- `PNR` - номер программы должен быть таким же, как в списке ввода
+- `LCN` - логический номер определяет, какой номер канала будет на телевизоре
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
+![Настройки MPTS NIT](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
 
-In the NIT settings provide information for DVB-C transponder.
+В настройках NIT укажите информацию для транспондера DVB-C.
 
-### Setting up the Modulator
+### Настройка модулятора
 
-At this point, we have already found and added all the necessary channels in Astra, created a New Stream, and configured the MPTS, which should be sent to the modulator. To configure the Output signal to the RESI DVB-C modulator we need to know the Number of RESI adapters in the system.
+На данном этапе мы уже нашли и добавили все необходимые каналы в Astra, создали Новый поток и настроили MPTS, который должен быть отправлен на модулятор. Для настройки выходного сигнала на модулятор RESI DVB-C нам необходимо знать количество адаптеров RESI в системе.
 
-On the server console find the card number and modulators using the command:
+На консоли сервера найдите номер карты и модуляторы с помощью команды:
 
 ```
 find "/dev/dvb" -name "mod*"
 ```
 
-In the output - we get the number of the adapter and its modulators like:
+На выходе мы получаем номер адаптера и его модуляторы типа:
 
 ```
 /dev/dvb/adapter0/mod0
 ```
 
-- `adapter0` - adapter number in the system
-- `mod0` - device number (transponder) on this adapter. Range from 0 to 7 will be for FSM8 modulator
+- `adapter0` - номер адаптера в системе
+- `mod0` - номер устройства (транспондера) на данном адаптере. Диапазон от 0 до 7 для модулятора FSM8
 
-Now it is a turn to configure the Output signal to the RESI DVB-C modulator in the MPTS settings
+Теперь настала очередь настройки выходного сигнала на модулятор RESI DVB-C в настройках MPTS
 
-![MPTS Output List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-output.png)
+![Список выходов MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-output.png)
 
-As a result, we should get a fully configured Stream, as shown in the screenshot:
+В результате мы должны получить полностью настроенный Stream, как показано на рисунке:
 
-![MPTS on Dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
+![MPTS на приборной панели](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
 
-## Monitor and manage
+## Мониторинг и управление[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
 
-With Astra, you may  Analyze the quality and stability of transport streams. Export statistics and events to external systems like Zabbix or Grafana.
+С помощью Astra можно анализировать качество и стабильность транспортных потоков. Экспортировать статистику и события во внешние системы, такие как Zabbix или Grafana.
 
-Also at any time you may open Astra Web Interface to simply check out the Dashboard. Here you will see already configured Adapters, created Streams, and some useful options like signal strength/quality, bitrate at channels, and so on.
+Также в любой момент можно открыть веб-интерфейс Astra Web Interface, чтобы просто заглянуть в Dashboard. Здесь вы увидите уже настроенные адаптеры, созданные потоки, а также некоторые полезные параметры, такие как уровень/качество сигнала, битрейт на каналах и т.д.
 
-![Astra Web Interface](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/astra-dashboard.png)
+![Веб-интерфейс Astra](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/astra-dashboard.png)
 
 ![Zabbix](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/zabbix.png)
 
 ![Grafana](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/grafana.png)
 
-## Checking the output DVB-C signal
+## Проверка выходного сигнала DVB-C[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
 
-With these simple steps, we have set up our Stream. Now we have the channels converted and modulated with the RESI DVB-C FSM modulator.
+С помощью этих простых шагов мы настроили наш поток. Теперь у нас есть каналы, преобразованные и промодулированные FSM-модулятором RESI DVB-C.
 
-The best way to check the output signal is to use an analyzer. There are many different models from many manufacturers. For example, Telestar:
+Наилучшим способом проверки выходного сигнала является использование анализатора. Существует множество различных моделей от многих производителей. Например, Telestar:
 
-![Telestar Analyzer](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/telestar.jpg)
+![Анализатор Telestar](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/telestar.jpg)
 
-Also, we can connect the coaxial cable from RESI to the TV set, and in the TV settings make a new DVB-C channel scan, either Full Scan or Network Scan (or specify the scan parameters manually). Channels search settings fully depend on the TV manufacturer, but in general, they are very similar.
+Также мы можем подключить коаксиальный кабель от RESI к телевизору и в настройках телевизора произвести новое сканирование каналов DVB-C - Full Scan или Network Scan (или задать параметры сканирования вручную). Настройки поиска каналов полностью зависят от производителя телевизора, но в целом они очень похожи.
 
-## Troubleshooting DVB receiving
+## Поиск и устранение неисправностей при приеме сигнала DVB[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/misc/troubleshooting/dvb)
+В случае возникновения проблем при настройке мы приводим список статей по выявлению проблем и устранению потенциальной причины их возникновения: [Troubleshooting DVB receiving](https://help.cesbo.com/misc/troubleshooting/dvb)
 
-We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.
+Мы заботимся о каждом нашем клиенте и о том, чтобы у вас остались самые лучшие впечатления от работы с Cesbo Astra, поэтому мы предлагаем больше каналов поддержки, таких как Online-помощь и поддержка по электронной почте.
