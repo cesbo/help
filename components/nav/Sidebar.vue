@@ -1,7 +1,19 @@
+<template>
+    <aside class="border-r border-gray-200 dark:border-zinc-600 px-6">
+        <div v-for="productNavItem in menuItems">
+            <!-- <span
+                class="text-gray-900 font-semibold mb-1 text-sm"
+            >{{ productNavItem.productName }}</span> -->
+            <NavSidebarGroup
+                v-for="navItem in productNavItem.navItems"
+                :treeItem="navItem"
+            />
+        </div>
+    </aside>
+</template>
+
 <script setup lang="ts">
-import { ref, watch } from "vue";
-import CollabsibleItem from './CollapsibleItem.vue';
-import type { NavItem } from "@nuxt/content/types";
+import type { NavItem } from '@nuxt/content/types'
 
 const { locale } = useI18n()
 const menuItems = ref<ByProductNavItem[]>([])
@@ -18,7 +30,7 @@ interface ByProductNavItem {
     navItems: ContentNavItem[]
 }
 
-const reloadSidebarContents = async (localeToUse) => {
+const reloadSidebarContents = async (localeToUse: string) => {
     const { data: navigation } = await useAsyncData('sidebarMenu', () => fetchContentNavigation({
         where: [
             {
@@ -40,7 +52,7 @@ const reloadSidebarContents = async (localeToUse) => {
     }) ?? []
 
     menuItems.value = byProductNavItems
-} 
+}
 
 watch(locale, reloadSidebarContents, { immediate: true })
 
@@ -58,16 +70,3 @@ const navigationItemToCollapsibleProp = (navItem: NavItem, isTopLevelGroup: bool
 }
 
 </script>
-<template>
-    <aside class="border-r border-gray-200 dark:border-zinc-600 px-6">
-        <div v-for="productNavItem in menuItems" class="pr-2 mt-4">
-            <h2 class="text-gray-900
-                    text-md sm:text-xl
-                    font-bold
-                    mb-1">
-                {{ productNavItem.productName }}
-            </h2>
-            <CollabsibleItem v-for="navItem in productNavItem.navItems" :treeItem="navItem" />
-        </div>
-    </aside>
-</template>

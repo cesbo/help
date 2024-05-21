@@ -1,12 +1,13 @@
 <template>
     <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
+        <NuxtLoadingIndicator />
         <SiteMenu class="w-full" />
         <ContainerSection class="flex grow">
-            <KeepAlive>
-                <Sidebar v-show="isContentPage" class="hidden lg:inline-block flex-none lg:w-60 xl:w-80"/>
-            </KeepAlive>
+            <NavSidebar
+                v-show="isContentPage"
+                class="hidden lg:inline-block flex-none lg:w-60 xl:w-80"
+            />
             <div class="flex-1 w-full px-4">
-                <NuxtLoadingIndicator />
                 <div class="px-4 py-20">
                     <div class="max-w-xl mx-auto h-14 mb-20 z-10">
                         <SiteSearch />
@@ -21,8 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from "vue"
-import Sidebar from './components/nav/Sidebar.vue';
 import ContainerSection from './components/layout/ContainerSection.vue';
 import { delocalizePath } from './components/utils/UrlHelper';
 import { useRoute } from 'vue-router';
