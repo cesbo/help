@@ -3,35 +3,35 @@ title: "Astra MPEG-TS анализатор"
 date: 2023-02-23
 ---
 
-Astra MPEG-TS Analyzer is built-in tool to analyze MPEG-TS streams.
+Astra MPEG-TS Analyzer - встроенный инструмент для анализа потоков MPEG-TS.
 
-![Astra MPEG-TS Analyzer Interface](https://cdn.cesbo.com/help/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer/analyzer.png)
+![Интерфейс анализатора Astra MPEG-TS](https://cdn.cesbo.com/help/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer/analyzer.png)
 
-## Launch with Web Interface
+## Запуск с помощью веб-интерфейса[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-with-web-interface)
 
 ```
 astra --analyze [OPTIONS] -p PORT
 ```
 
-Options:
+Варианты:
 
-- `-p PORT` - specify the port to use for web interface;
-- `-c FILE` - specifies the path to the channel list, which will be created automatically. This option allows you to save analyzed addresses;
-- `--daemon` - start in daemon mode;
-- `--log` /var/log/relay.log - full path to the log file.
+- `-p PORT` - укажите порт, который будет использоваться для веб-интерфейса;
+- `-c FILE` - указывает путь к списку каналов, который будет создан автоматически. Данная опция позволяет сохранять проанализированные адреса;
+- `--daemon` - запуск в режиме демона;
+- `--log` /var/log/relay.log - полный путь к файлу журнала.
 
-## Launch in console
+## Запуск в консоли[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-in-console)
 
 ```
 astra --analyze [OPTIONS] ADDRESS
 ```
 
-Options:
+Варианты:
 
-- `-n seconds` - stop analyzer after defined time
-- `-o file` - save stream received stream to the file
+- `-n seconds` - остановка анализатора через заданное время
+- `-o file` - сохранить полученный поток в файл
 
-Astra logs information directly to the console. For example:
+Astra регистрирует информацию непосредственно на консоли. Например:
 
 ```
 > astra --analyze "udp://239.255.1.1:1234"
@@ -67,12 +67,12 @@ Nov 28 00:59:32: INFO: Bitrate: 2755 Kbit/s
 Nov 28 00:59:33: INFO: Bitrate: 4446 Kbit/s
 ```
 
-## Address format
+## Формат адреса[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#address-format)
 
-Analyzer supports any receiving format supported by Astra. For example:
+Анализатор поддерживает любой формат приема, поддерживаемый Astra. Например:
 
 - `udp://239.255.1.1:1234`
 - `http://example.com/media.m3u8`
 - `dvb://#adapter=0&type=s2&tp=11044:v:43200`
 
-More information described in the Astra Settings: Input
+Более подробная информация описана в разделе Настройки Astra: Вход
