@@ -1,98 +1,96 @@
 ---
-title: "Integration Astra with Grafana"
+title: "Интеграция Astra с Grafana"
 date: 2023-06-10
 ---
 
-Grafana is an open source analytics and interactive visualization web application.
-It works in pair with [InfluxDB](./influxdb) to visualize status of the Astra, stream, and adapters.
+Grafana - это веб-приложение с открытым исходным кодом для аналитики и интерактивной визуализации. Оно работает в паре с [InfluxDB](https://help.cesbo.com/astra/monitoring/export/influxdb) для визуализации состояния Astra, потока и адаптеров.
 
-## Install
+## Установка[](https://help.cesbo.com/astra/monitoring/export/grafana#install)
 
-Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](./influxdb)
+Перед установкой Grafana убедитесь, что InfluxDB установлена и настроена: [Читать далее...](https://help.cesbo.com/astra/monitoring/export/influxdb)
 
-Download latest version from
+Загрузите последнюю версию с сайта
 
-1. Go to Grafana site: https://grafana.com/grafana/download
-2. Choose latest version
-3. Choose your platform
-4. Launch commands from the instruction on the Grafana site
+1. Перейдите на сайт Grafana: [https://grafana.com/grafana/download](https://grafana.com/grafana/download)
+2. Выберите последнюю версию
+3. Выбор платформы
+4. Запуск команд из инструкции на сайте Grafana
 
-Find out more information on official site: https://grafana.com/docs/grafana/latest/
+Более подробную информацию можно получить на официальном сайте: [https://grafana.com/docs/grafana/latest/](https://grafana.com/docs/grafana/latest/).
 
-## Grafana configuration
+## Конфигурация Grafana[](https://help.cesbo.com/astra/monitoring/export/grafana#grafana-configuration)
 
-1. Open Grafana Admin interface: `http://grafana-server:3000`
-2. On the login page, enter `admin` for username and password
-3. Set new password
+1. Откройте интерфейс администратора Grafana: `http://grafana-server:3000`
+2. На странице входа в систему введите `admin` для ввода имени пользователя и пароля
+3. Установить новый пароль
 
-## Append data source
+## Добавление источника данных[](https://help.cesbo.com/astra/monitoring/export/grafana#append-data-source)
 
-Open Settings -> Data Sources and click "Append data source", choose InfluxDB and set next options:
+Откройте Settings -> Data Sources и нажмите кнопку "Append data source", выберите InfluxDB и установите следующие параметры:
 
-- Name: `Astra` or any other
-- Query language: `Flux`
+- Название: `Astra` или любой другой
+- Язык запросов: `Flux`
 - HTTP URL: `http://db-server:8086`
-- Turn off `Basic auth`
-- Organization: your organization name in InfluxDB Settings
-- Token: your token copied for Astra settings
-- Min time interval: `1m`
+- Выключить `Basic auth`
+- Организация: название вашей организации в настройках InfluxDB
+- Token: ваш токен, скопированный для настроек Astra
+- Минимальный временной интервал: `1m`
 
-Click `Save & Test`, you should see green notification: `Bucket found`
+Нажмите `Save & Test`При этом должно появиться зеленое уведомление: `Bucket found`
 
-## Append dashboard
+## Добавление приборной панели[](https://help.cesbo.com/astra/monitoring/export/grafana#append-dashboard)
 
-1. Download our template for Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
-2. Open: Create -> Import
-3. Click `Upload JSON file`
-4. Choose downloaded file
-5. Set any name for dashboard
-6. Click `Import`
+1. Загрузите наш шаблон для Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
+2. Открыть: Создать -> Импорт
+3. Нажмите `Upload JSON file`
+4. Выберите загруженный файл
+5. Задайте произвольное имя для приборной панели
+6. Нажмите `Import`
 
-## Dashboard
+## Приборная панель[](https://help.cesbo.com/astra/monitoring/export/grafana#dashboard)
 
-![Grafana Dashboard](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
+![Приборная панель Grafana](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
 
-Dashboard has next variables:
+Приборная панель имеет следующие переменные:
 
-- `Source` - choose `Astra` or other name;
-- `Bucket` - this is database name in the InfluxDB. Same as `Instance Name` in the Astra settings.
-If you have several servers or different Astra instances on the same server you can create several
-dashboards for each instance;
-- `Adapter` - All DVB adapters on the instance;
-- `Stream` - All streams on the instance.
+- `Source` - выбирать `Astra` или другое название;
+- `Bucket` - это имя базы данных в InfluxDB. То же, что и `Instance Name` в настройках Astra. При наличии нескольких серверов или различных экземпляров Astra на одном сервере можно создать несколько приборных панелей для каждого экземпляра;
+- `Adapter` - Все DVB-адаптеры на экземпляре;
+- `Stream` - Все потоки на экземпляре.
 
-### Status panels
+### Панели состояния
 
-CPU Usage:
-- The System CPU usage is for all available cores. Max value is a number of cores multiplied by 100
-- The App CPU usage is for all threads on all cores and relative to the System CPU usage
+Использование процессора:
 
-Memory Usage:
+- Использование системного процессора - для всех доступных ядер. Максимальное значение - это количество ядер, умноженное на 100
+- Использование процессора приложения для всех потоков на всех ядрах и относительно использования процессора системы
 
-- The System Memory Usage - is total memory usage by all processes in the system
-- The App Memory Usage - is total memory usage by all app threads. Value is relative to the system memory usage
+Использование памяти:
 
-Status:
+- System Memory Usage - суммарное использование памяти всеми процессами в системе
+- App Memory Usage - суммарное использование памяти всеми потоками приложения. Значение относительно системного использования памяти
 
-- `App uptime` - elapsed time since app launched
-- `Sys uptime` - elapsed time since system startup
-- `LA 1m` - load average for 1 minute
-- `LA 5m` - load average for 5 minutes
-- `LA 15m` - load average for 15 minutes
+Статус:
 
-Failed Streams - list of all incidents ordered by the time. Recent events on top of the table. All values in the table at the event time:
+- `App uptime` - время, прошедшее с момента запуска приложения
+- `Sys uptime` - время, прошедшее с момента запуска системы
+- `LA 1m` - среднее значение нагрузки за 1 минуту
+- `LA 5m` - среднее значение нагрузки в течение 5 минут
+- `LA 15m` - средняя нагрузка в течение 15 минут
 
-- `Name` - stream name
-- `Elapsed time` - time since incidents happened
-- `Sessions` - number of HTTP/HLS sessions
-- `CC Errors` - counter of the detected packet loss events
-- `Sync Errors` - counter of the HTTP/HLS bitrate synchronization errors
-- `PES Errors` - percent of the video/audio packets with the corrupted content
-- `Scrambled` - percent of the scrambled packets
-- `Bitrate` - stream bitrate in KBit/s
+Неудачные потоки - список всех инцидентов, упорядоченный по времени. Последние события в верхней части таблицы. Все значения в таблице на момент события:
 
-Adapters and streams:
+- `Name` - название потока
+- `Elapsed time` - время, прошедшее с момента возникновения инцидентов
+- `Sessions` - количество сеансов HTTP/HLS
+- `CC Errors` - счетчик обнаруженных событий потери пакетов
+- `Sync Errors` - счетчик ошибок синхронизации битрейта HTTP/HLS
+- `PES Errors` - процент видео/аудио пакетов с поврежденным содержимым
+- `Scrambled` - процент зашифрованных пакетов
+- `Bitrate` - битрейт потока в Кбит/с
 
-![Adapters and streams](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/adapters-and-streams.png)
+Адаптеры и потоки:
 
-Charts displayed separately for each selected adapter or streams.
+![Адаптеры и потоки](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/adapters-and-streams.png)
+
+Графики отображаются отдельно для каждого выбранного адаптера или потоков.
