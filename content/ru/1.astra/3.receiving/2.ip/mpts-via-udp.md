@@ -1,39 +1,38 @@
 ---
-title: "Receiving MPTS via UDP"
+title: "Прием MPTS по протоколу UDP"
 date: 2023-03-10
 ---
 
-With Astra, you can receive MPTS (Multi Program Transport Stream) from different sources, including UDP. The received MPTS can be demultiplexed into several SPTS (Single Program Transport Stream) channels.
+С помощью Astra можно принимать MPTS (Multi Program Transport Stream) из различных источников, включая UDP. Полученный MPTS может быть демультиплексирован на несколько каналов SPTS (Single Program Transport Stream).
 
-## Virtual Adapter
+## Виртуальный адаптер[](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp#virtual-adapter)
 
-::alert
-Virtual Adapter available for versions released after 20 Sep 2022
+::alert Виртуальный адаптер доступен для версий, выпущенных после 20 сентября 2022 года
 ::
 
-For quick and simple configuration of MPTS reception, you may use the Virtual Adapter. Click on "New Adapter" in the main menu:
+Для быстрой и простой настройки приема MPTS можно воспользоваться Виртуальным адаптером. Для этого в главном меню нажмите кнопку "Новый адаптер":
 
-![Virtual Adapter for MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
+![Виртуальный адаптер для MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
 
-In the **Address** field set the source UDP, for example `udp://239.255.1.1:1234`. Read more about UDP address format in [Receiving UDP/RTP](./udp).
+В **Адрес** поле задает источник UDP, например `udp://239.255.1.1:1234`. Подробнее о формате адреса UDP читайте в [Прием UDP/RTP](https://help.cesbo.com/astra/receiving/ip/udp).
 
-Apply changes, and then you can scan the adapter to get a list of available channels. Select the channels you want to add and click apply.
+Примените изменения, после чего можно просканировать адаптер, чтобы получить список доступных каналов. Выберите каналы, которые необходимо добавить, и нажмите кнопку Применить.
 
-## Create channels manually
+## Создание каналов вручную[](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp#create-channels-manually)
 
-On any Astra version you may append channels from MPTS stream manually.
+На любой версии Astra можно добавлять каналы из потока MPTS вручную.
 
-First of all analyze UDP MPTS with MPEG-TS Analyzer:
+Прежде всего, проанализируйте UDP MPTS с помощью программы MPEG-TS Analyzer:
 
 ```
 astra --analyze udp://239.255.1.1:1234
 ```
 
-Read more how to analyze streams: [Astra MPEG-TS Analyzer](../../../misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer). Analyzer shows information about available channels, for example:
+Подробнее о том, как анализировать потоки: [Astra MPEG-TS Analyzer](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer). Анализатор показывает информацию о доступных каналах, например:
 
 ```
 INFO: PMT pnr:100 version:1
 INFO: PMT pnr:200 version:1
 ```
 
-Next you can create channel by clicking `New Stream` in the main menu. In the channel settings set name and input address with program number (PNR): `udp://239.255.1.1:1234#pnr=100`. And click Apply to save settings.
+Далее вы можете создать канал, нажав кнопку `New Stream` в главном меню. В настройках канала установите имя и адрес входа с номером программы (PNR): `udp://239.255.1.1:1234#pnr=100`. И нажмите кнопку Применить для сохранения настроек.
