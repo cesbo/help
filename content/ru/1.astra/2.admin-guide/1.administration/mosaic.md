@@ -4,76 +4,76 @@ date: 2023-08-28
 image: https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png
 ---
 
-Mosaic is a simple script to create channel screenshots with ffmpeg and set them on Astra Dashboard using Astra API.
+Mosaic - это простой скрипт для создания скриншотов каналов с помощью ffmpeg и показа их в Astra Dashboard с использованием API.
 
-Channel Screenshots helps to visually evaluate quality of the channels.
+Скриншоты позволяют наглядно оценить работу каналов.
 
-![Dashboard with Screenshots](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
+![Приборная панель со скриншотами](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
 
-## Requirements
+## Требования[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#requirements)
 
-- Astra with enabled [HTTP Play](/astra/delivery/http-hls/http-play)
+- Astra с включенной функцией [HTTP Play](https://help.cesbo.com/astra/delivery/http-hls/http-play)
 - FFmpeg
 
-## Install FFmpeg
+## Установка FFmpeg[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#install-ffmpeg)
 
-Install FFmpeg with system packet manager:
+Установите FFmpeg с помощью менеджера пакетов:
 
 ```
 apt install ffmpeg
 ```
 
-## Configure HTTP Play
+## Настройка HTTP Play[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#configure-http-play)
 
-On you server create new directory to store screenshot images:
+На сервере создайте новый каталог для хранения скриншотов:
 
 ```
 mkdir -p /var/lib/astra/mosaic
 ```
 
-Then open Astra Web interface -> Settings -> HTTP Play:
+Затем откройте веб-интерфейс Astra  и перейдите в -> Настройки -> HTTP Play:
 
-![HTTP Play Settings](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/http-play.png)
+![Настройки воспроизведения по протоколу HTTP](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/http-play.png)
 
-Turn on HTTP Play if disabled and set path to the screenshots directory. Done, HTTP Play now configured and you may save changes.
+Включите HTTP Play, если он отключен, и укажите путь к каталогу со скриншотами. Готово, теперь HTTP Play настроен, и вы можете сохранить изменения.
 
-Also in the HTTP Play settings you may copy link to the `playlist.m3u8`, this file contains links to all enabled channel. Link to playlist lookls like: `https://example.com:8000/playlist.m3u8`
+Также в настройках HTTP Play можно скопировать ссылку на `playlist.m3u8`В этом файле содержатся ссылки на все включенные каналы. Ссылка на плейлист выглядит следующим образом: `https://example.com:8000/playlist.m3u8`
 
-If you use HTTP Authorization, set Token for administrator. Open Astra Web Interface -> Settings -> Users -> select administrator, and set any Token, for example: `c6017ac9`. Append this token to the playlist URL: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
+Если используется HTTP-авторизация, установите Token для администратора. Откройте веб-интерфейс Astra и перейдите в -> Settings -> Users -> выберите администратора и установите любой Токен, например: `c6017ac9`. Добавьте этот токен к URL-адресу плейлиста: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
 
-## Download and Configure Script
+## Скачайте и настройте скрипт[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#download-and-configure-script)
 
-[Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script and save it on your server:
+[Скачайте](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) скрипт и сохраните его на своем сервере:
 
 ```
 curl -Lo /usr/local/bin/mosaic.sh https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh
 chmod +x /usr/local/bin/mosaic.sh
 ```
 
-Open script with any text editor and modify following variables:
+Откройте скрипт в любом текстовом редакторе и измените следующие переменные:
 
-- `THREADS` - number of threads to concurrently capture multiple screenshots. Fewer threads will take more time to update all images, while more threads will increase CPU usage. You may set as many threads as you have CPU cores
-- `PLAYLIST_URL` - URL to `playlist.m3u8` file from previous step
-- `SCREENSHOT_PATH` - path to store screenshots on your server: `/var/lib/astra/mosaic/`
-- `API_PORT` - port to Astra API
-- `API_AUTH` - admin login and password to access Astra API
+- `THREADS` - количество потоков для одновременного создания нескольких скриншотов. Меньшее количество потоков потребует больше времени для обновления всех изображений, а большее количество потоков увеличит загрузку процессора. Вы можете задать столько потоков, сколько у вас ядер процессора
+- `PLAYLIST_URL` - URL to `playlist.m3u8` файл из предыдущего шага
+- `SCREENSHOT_PATH` - путь для хранения скриншотов на вашем сервере: `/var/lib/astra/mosaic/`
+- `API_PORT` - порт для API Astra 
+- `API_AUTH` - логин и пароль admin для доступа к Astra API
 
-## Start script with Systemd
+## Запуск скрипта с помощью Systemd[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#start-script-with-systemd)
 
-To start script automatically you may append it to the systemd. Download configuration file for systemd and save it on your server:
+Для автоматического запуска скрипта его можно добавить в systemd. Загрузите конфигурационный файл для systemd и сохраните его на своем сервере:
 
 ```
 curl -Lo /etc/systemd/system/mosaic.service https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.service
 ```
 
-Next commands could be used to manage script:
+Для управления скриптом могут быть использованы следующие команды:
 
-- Start script: `systemctl start mosaic`
-- Stop script: `systemctl stop mosaic`
-- Enable autorun: `systemctl enable mosaic`
-- Disable autorun: `systemctl disable mosaic`
+- Запустить скрипт: `systemctl start mosaic`
+- Остановить скрипт: `systemctl stop mosaic`
+- Включить автозапуск: `systemctl enable mosaic`
+- Отключить автозапуск: `systemctl disable mosaic`
 
-After the start check that new png files are creating in the screenshots directory:
+После запуска проверьте, что в каталоге screenshots создаются новые png-файлы:
 
 ```
 ls /var/lib/astra/mosaic
