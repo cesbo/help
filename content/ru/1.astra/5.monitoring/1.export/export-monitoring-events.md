@@ -1,28 +1,28 @@
 ---
-title: "Export Monitoring Events"
+title: "Экспорт событий мониторинга"
 date: 2023-03-01
 ---
 
-Astra allows you to export monitoring events with the status of incoming streams or DVB-adapters.
+Astra позволяет экспортировать события мониторинга со статусом входящих потоков или DVB-адаптеров.
 
-## Monitoring URL
+## URL-адрес мониторинга[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#monitoring-url)
 
-The address of the monitoring server can be specified in the web interface: Settings -> General -> Monitoring:
+Адрес сервера мониторинга может быть указан в веб-интерфейсе: Настройки -> Общие -> Мониторинг:
 
-![Monitoring Options](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
+![Варианты мониторинга](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
 
-Address has the following parameters:
+Адрес имеет следующие параметры:
 
-- `interval=30` - this parameter defines the interval for transmitting statistics, measured in seconds. The default value for this parameter is 30.
-- `total=1` - this parameter is used to obtain summary statistics from the data packet
+- `interval=30` - этот параметр определяет интервал передачи статистики, измеряемый в секундах. По умолчанию значение этого параметра равно 30.
+- `total=1` - этот параметр используется для получения сводной статистики из пакета данных
 
-For example with address `http://example.com/api#interval=60&total=1` astra sends HTTP POST request to the `http://example.com/api` every minute, request containing JSON with summary statistics for one minute of stream monitoring.
+Например, с адресом `http://example.com/api#interval=60&total=1` astra отправляет HTTP POST-запрос на `http://example.com/api` ежеминутно, запрос, содержащий JSON со сводной статистикой за одну минуту мониторинга потока.
 
-## Stream Properties
+## Свойства потока[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-properties)
 
-Stream properties Astra send only once on stream startup.
+Свойства потока Astra передаются только один раз при запуске потока.
 
-```json
+```
 [
     {
         "channel": {
@@ -37,13 +37,13 @@ Stream properties Astra send only once on stream startup.
 ]
 ```
 
-- `channel` - whole stream configuration
-- `timestamp` - event time
-- `hostname` - server hostname
+- `channel` - конфигурация всего потока
+- `timestamp` - время события
+- `hostname` - имя хоста сервера
 
-## Stream Status
+## Состояние потока[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-status)
 
-```json
+```
 [
     {
         "count": 0,
@@ -63,27 +63,27 @@ Stream properties Astra send only once on stream startup.
 ]
 ```
 
-This list describes the parameters that provide information about the stream workflow:
+В этом списке описаны параметры, предоставляющие информацию о потоковом рабочем процессе:
 
-- `count` - only for summary data, provide an amount of seconds that has elapsed since the last collection of statistics
-- `timestamp` - event time in Unix format
-- `channel_id` - unique ID of the channel
-- `input_id` - the input number. Starts with 1
-- `current` - indicates that statistics for current active input
-- `onair` - stream status, providing a quick way to check if it's running
-- `scrambled` - indicates whether the stream is encrypted or not
-- `bitrate` - input bitrate in Kbit/s
-- `packets` - total number of TS packets
-- `cc_error` -  total number of occured CC errors
-- `pes_error` -  total number of occured PES errors
+- `count` - только для сводных данных, указать количество секунд, прошедших с момента последнего сбора статистики
+- `timestamp` - время события в формате Unix
+- `channel_id` - уникальный идентификатор канала
+- `input_id` - номер входного сигнала. Начинается с 1
+- `current` - указывает на то, что статистика по текущему активному входу
+- `onair` - статус потока, предоставляя быстрый способ проверить, работает ли он
+- `scrambled` - указывает, зашифрован поток или нет
+- `bitrate` - входной битрейт в Кбит/с
+- `packets` - общее количество пакетов TS
+- `cc_error` - общее количество возникших ошибок CC
+- `pes_error` - общее количество возникших ошибок ПЭС
 
-This data is transmitted in JSON format as an array of several elements, with each element representing one second of observations. The number of elements in the array is determined by the frequency of statistics transmission. If statistics aggregation is enabled, then there is only one element in the array, which contains the total number of errors and the average bitrate for the period equal to the statistics transmission frequency.
+Эти данные передаются в формате JSON в виде массива из нескольких элементов, каждый из которых представляет собой одну секунду наблюдений. Количество элементов в массиве определяется частотой передачи статистики. Если включена агрегация статистики, то в массиве имеется только один элемент, который содержит общее количество ошибок и средний битрейт за период, равный частоте передачи статистики.
 
-## Adapter Properties
+## Свойства адаптера[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-properties)
 
-Adapter properties Astra send only once on adapter startup.
+Свойства адаптера Astra передаются только один раз при запуске адаптера.
 
-```json
+```
 [
     {
         "dvb": {
@@ -97,13 +97,13 @@ Adapter properties Astra send only once on adapter startup.
 ]
 ```
 
-- `dvb` — while adapter configuration
-- `timestamp` — event time
-- `hostname` — server hostname
+- `dvb` - при конфигурации адаптера
+- `timestamp` - время события
+- `hostname` - имя хоста сервера
 
-## Adapter Status
+## Состояние адаптера[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-status)
 
-```json
+```
 [
     {
         "dvb_id": "a0dj",
@@ -120,25 +120,25 @@ Adapter properties Astra send only once on adapter startup.
 ]
 ```
 
-This list describes the parameters that provide information about the adapter workflow:
+В этом списке описаны параметры, предоставляющие информацию о рабочем процессе адаптера:
 
-- `dvb_id` - unique ID of the adapter
-- `timestamp` - event time
-- `status` - signal status
-- `signal` - approximate signal level in percent
-- `signal_db` - signal level in `dBm * 100`
-- `snr` -  approximate signal to noise ratio in percent
-- `snr_db` - signal to noise ratio in `dB * 100`
-- `ber` -  bit errors counter
-- `unc` -  block errors counter
-- `bitrate` - total bitrate in Kbit/s
+- `dvb_id` - уникальный идентификатор адаптера
+- `timestamp` - время события
+- `status` - состояние сигнала
+- `signal` - приблизительный уровень сигнала в процентах
+- `signal_db` - уровень сигнала в `dBm * 100`
+- `snr` - приблизительное отношение сигнал/шум в процентах
+- `snr_db` - отношение сигнал/шум в `dB * 100`
+- `ber` - счетчик битовых ошибок
+- `unc` - счетчик ошибок блока
+- `bitrate` - общий битрейт в Кбит/с
 
-Signal status describe the state of the tuner, described in 5-bit number:
+Состояние сигнала характеризует состояние тюнера, описываемое 5-битовым числом:
 
-- `SIGNAL` — the signal bit will be set when the tuner captures the signal
-- `CARRIER` — stable signal reception
-- `FEC` — reception FEC (forward error correction) data
-- `SYNC` — received information for synchronization
-- `LOCK` — the tuner is set to receive a signal.
+- `SIGNAL` - бит сигнала будет установлен, когда тюнер поймает сигнал
+- `CARRIER` - устойчивый прием сигнала
+- `FEC` - прием данных FEC (forward error correction)
+- `SYNC` - полученная информация для синхронизации
+- `LOCK` - тюнер настроен на прием сигнала.
 
-If the tuner configured successfully and signal is locked, the status parameter will be set to 31
+Если тюнер настроен успешно и сигнал зафиксирован, то параметр status будет иметь значение 31
