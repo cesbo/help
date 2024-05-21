@@ -1,71 +1,71 @@
 ---
-title: "Other API Methods"
+title: "Другие методы API"
 date: 2023-06-30
 ---
 
-## Astra Version
+## Версия Astra[](https://help.cesbo.com/astra/admin-guide/api/other#astra-version)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "version"
 }
 ```
 
-## Astra Restart
+## Перезапуск Astra[](https://help.cesbo.com/astra/admin-guide/api/other#astra-restart)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "restart"
 }
 ```
 
-## Download configuration
+## Конфигурация загрузки[](https://help.cesbo.com/astra/admin-guide/api/other#download-configuration)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "load"
 }
 ```
 
-In the response will be whole configuration file.
+В ответе будет находиться весь конфигурационный файл.
 
-## Upload configuration
+## Загрузка конфигурации[](https://help.cesbo.com/astra/admin-guide/api/other#upload-configuration)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "upload"
     "config": {}
 }
 ```
 
-- `config` - whole configuration file
+- `config` - весь конфигурационный файл
 
-## Set serial number
+## Установить серийный номер[](https://help.cesbo.com/astra/admin-guide/api/other#set-serial-number)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "set-license",
     "license": "xxx"
 }
 ```
 
-- `license` - license serial number
+- `license` - серийный номер лицензии
 
-## Set image to the stream tile
+## Установить изображение на плитку потока[](https://help.cesbo.com/astra/admin-guide/api/other#set-image-to-the-stream-tile)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
    "cmd": "set-stream-image",
    "id": "a001",
@@ -73,7 +73,7 @@ Request: `POST /control/`
 }
 ```
 
-- `id` - stream identifier
-- `url` - image address, as well could be used data-format, for example: `data:image/png;base64,...`
+- `id` - идентификатор потока
+- `url` - адрес изображения, а также может быть использован формат данных, например: `data:image/png;base64,...`
 
-This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](/astra/admin-guide/administration/mosaic)
+Этот метод используется в скрипте для установки скриншотов для плиток потока. Подробнее в разделе [Скриншоты каналов на Dashboard](https://help.cesbo.com/astra/admin-guide/administration/mosaic)
