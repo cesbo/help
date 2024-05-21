@@ -1,30 +1,34 @@
 <template>
-<div class="h-full flex flex-col" id="app">
-    <SiteMenu />
-    <div class="grow">
-        <NuxtLoadingIndicator />
-
-        <div class="px-4 py-20">
-            <div class="relative mx-auto max-w-xl h-14 mb-20">
-                <div
-                    class="
-                        absolute
-                        w-full
-                        z-10
-                    "
-                >
-                    <SiteSearch />
+    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
+        <SiteMenu class="w-full" />
+        <ContainerSection class="flex grow">
+            <KeepAlive>
+                <Sidebar v-show="isContentPage" class="hidden lg:inline-block flex-none lg:w-60 xl:w-80"/>
+            </KeepAlive>
+            <div class="flex-1 w-full px-4">
+                <NuxtLoadingIndicator />
+                <div class="px-4 py-20">
+                    <div class="max-w-xl mx-auto h-14 mb-20 z-10">
+                        <SiteSearch />
+                    </div>
+                    <NuxtPage ref="pageRef" />
                 </div>
             </div>
-
-            <NuxtPage />
-        </div>
+            <aside v-show="isContentPage" class="hidden xl:inline-block flex-none w-80"/>
+        </ContainerSection>
+        <SiteFooter class="w-full" />
     </div>
-    <SiteFooter />
-</div>
 </template>
 
 <script setup lang="ts">
+import { computed, ref, watch } from "vue"
+import Sidebar from './components/nav/Sidebar.vue';
+import ContainerSection from './components/layout/ContainerSection.vue';
+import { delocalizePath } from './components/utils/UrlHelper';
+import { useRoute } from 'vue-router';
+const { locale } = useI18n()
+const route = useRoute()
+const pageRef = ref()
 
 const i18nHead = useLocaleHead({
     addSeoAttributes: true
@@ -47,6 +51,17 @@ useHead({
     ],
 })
 
+const isContentPage = ref(false)
+
+const pageContent = computed(() => pageRef?.value?.pageRef)
+
+watch (pageContent, () => {
+    const currentLocale = locale.value
+    const currentRoute = route.path
+    const contentPage = currentRoute ? delocalizePath(currentRoute, currentLocale) !== "/" : false
+    isContentPage.value = contentPage
+}, {immediate: true})
+
 </script>
 
 <style lang="scss">
@@ -58,9 +73,11 @@ useHead({
     html {
         @apply h-full;
     }
+
     body {
         @apply h-full bg-white text-black dark:bg-zinc-800 dark:text-white;
     }
+
     #__nuxt {
         @apply h-full;
     }
