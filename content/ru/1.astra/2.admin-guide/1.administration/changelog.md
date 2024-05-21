@@ -3,99 +3,99 @@ title: "Changelog"
 noindex: true
 ---
 
-## 230719
+## 230719[](https://help.cesbo.com/astra/admin-guide/administration/changelog#_230719)
 
-[Download Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
+[Скачать Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 
-In this changelog is a short comparasion with latest stable release 220504
+В этом журнале изменений приведено краткое сравнение с последним стабильным релизом 220504
 
 ### SRT
 
-- SRT library updated to v1.5.1
-- Option `statsout=FILE` to write SRT receiving/transmitting stats to the CSV file. This file can be processed using https://github.com/mbakholdina/srt-stats-plotting.
-- Supports the standard address format, such as `srt://example.com?passphrase=12345`.
-If your address contains the # symbol in the streamid option, it should be changed to `%23`. For example: `srt://example.com?streamid=%23!::r=LaminorTV,m=request`
-- Better receiving stability
-- option `oheadbw` - recovery bandwidth overhead above input rate. Default: `25`
-- options `sndbuf` and `rcvbuf` to tune transmitting and receiving buffer size
+- Библиотека SRT обновлена до версии 1.5.1
+- Вариант `statsout=FILE` для записи статистики приема/передачи SRT в CSV-файл. Этот файл может быть обработан с помощью [https://github.com/mbakholdina/srt-stats-plotting](https://github.com/mbakholdina/srt-stats-plotting).
+- Поддерживается стандартный формат адреса, например `srt://example.com?passphrase=12345`. Если ваш адрес содержит символ # в опции streamid, то его следует изменить на `%23`. Например: `srt://example.com?streamid=%23!::r=LaminorTV,m=request`
+- Повышенная стабильность приема
+- опция `oheadbw` - превышение пропускной способности восстановления над входной скоростью. По умолчанию: `25`
+- опционы `sndbuf` и `rcvbuf` для настройки размера буфера передачи и приема
 
-### DVB Virtual adapters
+### Виртуальные адаптеры DVB
 
-Virtual adapters is an option in the Adapter settings for easy setup streams:
-- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](/astra/receiving/ip/mpts-via-udp)
-- CI adapter: you may configure channels descrambling with external CI adapters like DigitalDevices Octopus Twin CI or TBS6900. [Read more](/astra/receiving/dvb/external-ci)
-- SAT>IP adapter: this is replacement for the SAT>IP checkbox in previous versions. [Read more](/astra/receiving/dvb/satip-client)
-- SAT>IP: increase receiving buffer size
-- SAT>IP: more log for HTTP connection errors
+Виртуальные адаптеры - это опция в настройках адаптера для упрощения настройки потоков:
 
-### DVB Tuners & DVB Input
+- MPTS-потоки: можно задать адрес MPTS-потока и просканировать его для добавления всех каналов по отдельности. [Подробнее](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp)
+- CI-адаптер: можно настроить дешифрование каналов с помощью внешних CI-адаптеров, таких как DigitalDevices Octopus Twin CI или TBS6900. [Подробнее](https://help.cesbo.com/astra/receiving/dvb/external-ci)
+- Адаптер SAT>IP: это замена флажка SAT>IP в предыдущих версиях. [Подробнее](https://help.cesbo.com/astra/receiving/dvb/satip-client)
+- SAT>IP: увеличить размер приемного буфера
+- SAT>IP: больше журналов для ошибок HTTP-соединений
 
-- For multistandard adapters available option for manual frontend selection - `fe_device`. This can be found in the web interface: Adapter options -> Advanced -> FE Device
-- Scan DVB adapters before Astra start
+### DVB-тюнеры и DVB-вход
 
-### DigitalDevices RESI modulator
+- Для многостандартных адаптеров доступна опция ручного выбора фронтэнда -. `fe_device`. Это можно найти в веб-интерфейсе: Параметры адаптера -> Дополнительно -> FE Device
+- Сканирование DVB-адаптеров перед запуском Astra
 
-- Fix options `gain` and `attenuator` for latest drivers
-- Default buffer size increased to 64Mb
-- Reset RESI before starting
+### Модулятор RESI от DigitalDevices
+
+- Параметры исправления `gain` и `attenuator` для последних версий драйверов
+- Размер буфера по умолчанию увеличен до 64 Мб
+- Сброс RESI перед запуском
 
 ### HTTP/HLS
 
-Input:
+Вход:
 
-- HLS input supports M3U8 with URLs without scheme. For example: `//example.com/media/001.ts`
-- Bitrate syncing by DTS/PTS timestamps instead of PCR. (many HLS streams has corrupted PCR values)
+- HLS-вход поддерживает M3U8 с URL-адресами без схемы. Например: `//example.com/media/001.ts`
+- Синхронизация битрейта по временным меткам DTS/PTS вместо PCR. (многие потоки HLS имеют искаженные значения PCR)
 
-Output:
+Выход:
 
-- Rewrited authorization algorithms for better performance (moved from Lua scripts to the C-core)
-- HTTP Backend authorization supports redirects
-- Check IP list in HTTP authorization before other methods
-- HLS Output sends empty TS file if file is not found (was 404 error, but some ffplay based players sends many requests trying to reload it)
-- Option Settings -> HLS -> Session Timeout to customize time when session should be closed on inactive
+- Переписаны алгоритмы авторизации для повышения производительности (перенесены из Lua-скриптов в C-ядро)
+- Авторизация по HTTP Backend поддерживает перенаправления
+- Проверка списка IP-адресов при HTTP-авторизации перед другими методами
+- HLS Output отправляет пустой TS-файл, если файл не найден (была ошибка 404, но некоторые плееры на базе ffplay отправляют много запросов, пытаясь перезагрузить его)
+- Параметры -> HLS -> Session Timeout для настройки времени, в течение которого сессия должна быть закрыта при неактивности
 
 ### UDP
 
-- Ignore invalid TS files on Input (previous versions restarted receiving)
-- Option `src=IP` to specify UDP multicast source address for IGMPv3. Example: `udp://eth1@239.255.1.1:1234#src=192.168.88.100`
+- Игнорировать недействительные TS-файлы при вводе (в предыдущих версиях происходил перезапуск приема)
+- Вариант `src=IP` для указания адреса источника многоадресной рассылки UDP для IGMPv3. Пример: `udp://eth1@239.255.1.1:1234#src=192.168.88.100`
 
 ### MPTS
 
-- Change EIT type with enabled `remux_eit` option. If EIT tsid is not equal to the `tsid` option defined in the MPTS settings, then EIT type will be changed from `actual` to `other`
+- Изменение типа EIT с включением `remux_eit` вариант. Если EIT tsid не равен значению `tsid` опция, заданная в настройках MPTS, то тип EIT будет изменен с `actual` на `other`
 
-### Processing
+### Обработка
 
-- option `set_pcr_pid` to change PCR pid if it separated from video
-- T2MI fix issue with CC errors on some streams
+- опция `set_pcr_pid` изменить PCR pid, если он отделился от видео
+- T2MI исправляет проблему с ошибками CC в некоторых потоках
 
-### Monitoring
+### Мониторинг
 
-- Option `interval=SEC` for InfluxDB address to define sending intervals. Default is 60 second. For example: `https://example.com:8086#interval=5`
-- `app_mem_kb` in the [Process status API](/astra/admin-guide/api/process). Process memory usage in kilobytes
-- `video_count` and `audio_count` in the [Stream status API](/astra/admin-guide/api/stream#get-stream-status)
+- Вариант `interval=SEC` для адреса InfluxDB для определения интервалов отправки. По умолчанию это 60 секунд. Например: `https://example.com:8086#interval=5`
+- `app_mem_kb` в [API состояния процесса](https://help.cesbo.com/astra/admin-guide/api/process). Использование памяти процесса в килобайтах
+- `video_count` и `audio_count` в [API состояния потока](https://help.cesbo.com/astra/admin-guide/api/stream#get-stream-status)
 
 ### Master-Slave
 
-- Option `delay` for slave-mode to start process with delay. Default 3 seconds. Example: `astra -c slave.conf -p 8000 --slave "http://master:8000#delay=10"`
+- Вариант `delay` для режима slave-mode для запуска процесса с задержкой. По умолчанию 3 секунды. Пример: `astra -c slave.conf -p 8000 --slave "http://master:8000#delay=10"`
 
-### Web Interface
+### Веб-интерфейс
 
-- Icon
-- Web Interface from `als.cesbo.com` integrated into Astra binary file (`als.cesbo.com` not used anymore)
-- Option to set a custom path to the web interface. This can be found in Settings -> General -> Custom Path. For example, with the path `secret`, the interface will be available at `http://example.com:8000/secret/`
-- Option to modify port for the web interface. This can be found in Settings -> General -> Custom Port. This option customizes the port value defined in the `-p` option. Also supported local interface address, such as `127.0.0.1:8000` - the web will be available only on localhost
-- Option Settings -> HTTP Play -> Path to TV Screenshots - attach channel screenshots to the cards on dashboard
-- Description for channel
-- Modal dialogs to configure stream and adapter settings
+- Иконка
+- Веб-интерфейс из `als.cesbo.com` интегрированный в бинарный файл Astra (`als.cesbo.com` больше не используется)
+- Опция установки пользовательского пути к веб-интерфейсу. Это можно сделать в разделе Настройки -> Общие -> Пользовательский путь. Например, путь `secret`Интерфейс будет доступен по адресу `http://example.com:8000/secret/`
+- Опция изменения порта для веб-интерфейса. Эта опция находится в разделе Настройки -> Общие -> Пользовательский порт. Эта опция настраивает значение порта, определенное в параметре `-p` опция. Также поддерживается адрес локального интерфейса, например `127.0.0.1:8000` - веб будет доступен только на localhost
+- Опция Settings -> HTTP Play -> Path to TV Screenshots - прикрепление скриншотов каналов к карточкам на приборной панели
+- Описание для канала
+- Модальные диалоги для настройки параметров потока и адаптера
 
-### Internal changes
+### Внутренние изменения
 
-- Moved a lot of code from Lua scripts to the Astra Core for better performance
-- Astra checks port for API and Web interface to prevent launching same process twice
-- Update OpenSSL to v1.1.1t
-- Integrate LibUV v1.44.2 (preparing for switching from internal event processing to libuv)
+- Перемещено большое количество кода из Lua-скриптов в Astra Core для повышения производительности
+- Astra проверяет порт для API и Web-интерфейса, чтобы не запускать один и тот же процесс дважды
+- Обновление OpenSSL до версии 1.1.1t
+- Интеграция LibUV v1.44.2 (подготовка к переходу от внутренней обработки событий к libuv)
 
-## Archive Versions
+## Архивные версии[](https://help.cesbo.com/astra/admin-guide/administration/changelog#archive-versions)
 
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 - [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
