@@ -1,66 +1,66 @@
 ---
-title: "DigitalDevices RESI DVB-C Modulator"
+title: "Модулятор DVB-C от DigitalDevices RESI"
 date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/resi.png
 ---
 
-The RESI, a DVB-C modulator by Digital Devices, outputs a DVB-C compatible data stream into an existing 75-ohm coaxial cabling.
+RESI, модулятор DVB-C компании Digital Devices, выводит поток данных, совместимый с DVB-C, в существующий 75-омный коаксиальный кабель.
 
-![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/resi.png)
+![Модулятор DVB-C от DigitalDevices RESI](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/resi.png)
 
-Technical specifications:
+Технические характеристики:
 
-- 4 - 24 Transponder according to DVB-C specification
-- Frequency range: 114 – 858 MHz
-- Symbol rates: 1,0 – 7,1 MSym/s
+- 4 - 24 транспондера в соответствии со спецификацией DVB-C
+- Частотный диапазон: 114 - 858 МГц
+- Скорость передачи символов: 1,0 - 7,1 Мсим/с
 - QAM: 16, 32, 64, 128, 256
-- Signal / Noise ratio: 42dB
-- Output with 8 channels (per channel): 101 dBµV
+- Соотношение сигнал/шум: 42 дБ
+- Выходной сигнал при 8 каналах (на канал): 101 дБ мкВ
 
-## Find modulator in system
+## Найти модулятор в системе[](https://help.cesbo.com/astra/delivery/hardware/resi-dvb-c-modulator#find-modulator-in-system)
 
-Use our guide to [Install DigitalDevices driver](/misc/tools-and-utilities/dvb/dd-driver).
+Воспользуйтесь нашим руководством по [установке драйвера DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver).
 
-Use the following command to find the adapter number and the modulator device number:
+Для поиска номера адаптера и номера устройства модулятора используйте следующую команду:
 
-```sh
+```
 find "/dev/dvb" -name "mod*"
 ```
 
-The output will display a list of devices in the system:
+На выходе будет отображен список устройств в системе:
 
 ```
 /dev/dvb/adapter0/mod0
 /dev/dvb/adapter0/mod1
 ```
 
-- `adapter0` - adapter number
-- `mod1` - device (modulator) number
+- `adapter0` - номер адаптера
+- `mod1` - номер устройства (модулятора)
 
-## Astra settings
+## Настройки Astra[](https://help.cesbo.com/astra/delivery/hardware/resi-dvb-c-modulator#astra-settings)
 
-1. Prepare [MPTS](/astra/delivery/broadcasting/mpts-settings) for modulator
-2. In the output setting, specify the address: resi://#adapter=0&device=1 (0 - adapter number, 1 - modulator)
-3. In the MPTS NIT settings, configure transponder options
+1. Подготовка [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) к работе с модулятором
+2. В настройках вывода укажите адрес: resi://#adapter=0&device=1 (0 - номер адаптера, 1 - модулятора)
+3. В настройках MPTS NIT настройте параметры транспондера
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/mpts-nit.png)
+![Настройки MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/resi-dvb-c-modulator/mpts-nit.png)
 
-Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
+Подробнее в: [Кабельное телевидение с Astra для гостиничного бизнеса](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
 
-### Additional options
+### Дополнительные опции
 
-- `gain=N` - signal level in range from 0 to 100
-- `buffer_size=N` - buffer size in megabytes. Default: `256`
-- `legacy` - compatibility mode with old RESI modulator for 10 transpodners
+- `gain=N` - уровень сигнала в диапазоне от 0 до 100
+- `buffer_size=N` - размер буфера в мегабайтах. По умолчанию: `256`
+- `legacy` - режим совместимости со старым модулятором RESI для 10 трансподнеров
 
-## Troubleshooting
+## Поиск и устранение неисправностей[](https://help.cesbo.com/astra/delivery/hardware/resi-dvb-c-modulator#troubleshooting)
 
-### No such file or directory
+### Нет такого файла или каталога
 
-If you attempt to find the adapter number and encounter an error:
+Если при попытке найти номер адаптера возникает ошибка:
 
 ```
 find: ‘/dev/dvb’: No such file or directory
 ```
 
-it is likely that the DigitalDevices driver is not installed. Please [Install DigitalDevices driver](/misc/tools-and-utilities/dvb/dd-driver)
+то, скорее всего, не установлен драйвер DigitalDevices. Пожалуйста, [установите драйвер DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
