@@ -1,17 +1,17 @@
 ---
-title: "Our Technical Support Guidelines"
+title: "Nuestras directrices de asistencia técnica"
 date: 2023-02-22
 ---
 
-At our company, we offer support free of charge for quick questions related to sales, as well as assistance with first-time installation and issues with our website. However, technical support is only provided to customers who have purchased a Subscription or Lifetime license.
+En nuestra empresa, ofrecemos asistencia gratuita para preguntas rápidas relacionadas con las ventas, así como ayuda con la primera instalación y problemas con nuestro sitio web. Sin embargo, la asistencia técnica solo se ofrece a los clientes que hayan adquirido una suscripción o una licencia vitalicia.
 
-We strive to respond to all support requests as quickly as possible, though we don't currently offer priority support. Rest assured that we will reply to your request as soon as we can.
+Nos esforzamos por responder a todas las solicitudes de asistencia lo antes posible, aunque actualmente no ofrecemos asistencia prioritaria. Tenga la seguridad de que responderemos a su solicitud lo antes posible.
 
-In order to help us prioritize your request, we have a set of guidelines that we follow:
+Para ayudarnos a priorizar su solicitud, tenemos una serie de directrices que seguimos:
 
-- The highest priority have issues related to bugs in our software;
-- Issues with the environment in which our software operates, such as channels for receiving and processing data, hardware, and network issues;
-- Features requests;
-- Maintenance tasks such as installation, configuration and updating.
+- La mayor prioridad la tienen los problemas relacionados con errores en nuestro software;
+- Problemas con el entorno en el que funciona nuestro software, como canales de recepción y procesamiento de datos, hardware y problemas de red;
+- Características peticiones;
+- Tareas de mantenimiento como instalación, configuración y actualización.
 
-We hope this information is helpful and enables us to provide you with the best possible support. If you have any further questions, please don't hesitate to contact us.
+Esperamos que esta información le sea útil y nos permita ofrecerle la mejor asistencia posible. Si tiene más preguntas, no dude en ponerse en contacto con nosotros.
