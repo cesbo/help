@@ -1,70 +1,70 @@
 ---
-title: "MPEG-TS Demultiplexing"
+title: "Desmultiplexación MPEG-TS"
 date: 2023-08-28
 ---
 
-MPEG-TS Demultiplexing is the process of extracting individual audio, video, and data streams from a combined MPEG-TS broadcast, also known as multiplext or MPTS.
+La demultiplexación MPEG-TS es el proceso de extraer flujos individuales de audio, vídeo y datos de una emisión combinada MPEG-TS, también conocida como multiplext o MPTS.
 
-## Extracting single channel from multiplex
+## Extracción de un canal del múltiplex[](https://help.cesbo.com/astra/processing/mpegts/demux#extracting-single-channel-from-multiplex)
 
-In digital TV broadcasting, the stream received from sources such as satellite, terrestrial, or cable networks contains multiple channels. To extract a single channel from this multiplex, Astra provides a specific option: `pnr`.
+En la radiodifusión de televisión digital, el flujo recibido de fuentes como satélite, terrestre o redes de cable contiene múltiples canales. Para extraer un solo canal de este múltiplex, Astra ofrece una opción específica: `pnr`.
 
-For example, to receive a stream from a DVB Adapter with the identifier `a001` and extract channel number `1`, you would use the following input address:
+Por ejemplo, para recibir un flujo de un adaptador DVB con el identificador `a001` y extraer el número de canal `1`utilizaría la siguiente dirección de entrada:
 
 ```
 dvb://a001#pnr=1
 ```
 
-Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](/astra/receiving/dvb/scan) and [Receiving MPTS via UDP](/astra/receiving/ip/mpts-via-udp)
+Astra forma esta dirección automáticamente si escaneas el adaptador DVB y añades canales con la interfaz web. Más información: Escanear adaptador [DVB](https://help.cesbo.com/astra/receiving/dvb/scan) y [recibir MPTS vía UDP](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp)
 
-## Filter service tables
+## Filtrar mesas de servicio[](https://help.cesbo.com/astra/processing/mpegts/demux#filter-service-tables)
 
-In some cases you may want to remove service tables delivered with channel. To do that Astra has additional input options:
+En algunos casos es posible que desee eliminar las tablas de servicio suministradas con el canal. Para ello Astra tiene opciones de entrada adicionales:
 
-- `no_eit` - removes Event Information Table (EIT). EIT provides Electronic Program Guide (EPG)
-- `no_sdt` - removes Service Description Table (SDT). SDT provides information about channel and delivery network
-- `no_tdt` - removes Time and Date Table (TDT). TDT provides current UTC date and time
-- `no_tot` - removes Time Offset Table (TOT). TOT provides current UTC date and time with offset information of the current region time zone
+- `no_eit` - elimina la Mesa de Información de Eventos (EIT). La EIT proporciona la Guía Electrónica de Programas (EPG)
+- `no_sdt` - elimina la tabla de descripción de servicios (SDT). SDT proporciona información sobre el canal y la red de entrega
+- `no_tdt` - elimina la tabla de fecha y hora (TDT). La TDT proporciona la fecha y hora UTC actuales
+- `no_tot` - elimina la tabla de desfase horario (TOT). La TOT proporciona la fecha y la hora UTC actuales con información sobre el desfase de la zona horaria de la región actual.
 
-Example:
+Ejemplo:
 
 ```
 dvb://a001#pnr=1&no_sdt&no_eit
 ```
 
-## Pass service tables without modification
+## Pasar mesas de servicio sin modificar[](https://help.cesbo.com/astra/processing/mpegts/demux#pass-service-tables-without-modification)
 
-During the demultiplexing process, Astra keep in EIT and SDT tables information related to the selected channel only. If you want to pass packets as is, without any changes you may use next options:
+Durante el proceso de demultiplexado, Astra mantiene en las tablas EIT y SDT la información relacionada únicamente con el canal seleccionado. Si quieres pasar los paquetes tal cual, sin ningún cambio, puedes usar las siguientes opciones:
 
-- `pass_eit` - pass EIT without changes
-- `pass_sdt` - pass SDT without changes
+- `pass_eit` - pasar el IET sin cambios
+- `pass_sdt` - aprobar el SDT sin cambios
 
-These options is not recommended to use and they are incompatible with `set_pnr` and `set_tsid` options.
+No se recomienda utilizar estas opciones y son incompatibles con `set_pnr` y `set_tsid` opciones.
 
-## Packets with private data
+## Paquetes con datos privados[](https://help.cesbo.com/astra/processing/mpegts/demux#packets-with-private-data)
 
-During the demultiplexing process, Astra excludes packets containing unknown data and only allows Video and Audio streams to pass through. If you intend to retain private data, use option `pass_data`:
+Durante el proceso de demultiplexado, Astra excluye los paquetes que contienen datos desconocidos y sólo permite el paso de los flujos de Vídeo y Audio. Si desea conservar datos privados, utilice la opción `pass_data`:
 
 ```
 dvb://a001#pnr=1&pass_data
 ```
 
-## Packets with conditional access data
+## Paquetes con datos de acceso condicional[](https://help.cesbo.com/astra/processing/mpegts/demux#packets-with-conditional-access-data)
 
-During the demultiplexing process, Astra discards all packets and associated information related to the Conditional Access System (CAS). If you want to retain this data, use option `cas`:
+Durante el proceso de demultiplexación, Astra descarta todos los paquetes y la información asociada relacionada con el Sistema de Acceso Condicional (CAS). Si desea conservar estos datos, utilice la opción `cas`:
 
 ```
 dvb://a001#pnr=1&cas
 ```
 
-This option becomes essential when descrambling streams using dedicated CAM modules. Read more in our article: [Descrambling channels with External DVB-CI](/astra/receiving/dvb/external-ci)
+Esta opción resulta esencial cuando se descodifican flujos utilizando módulos CAM dedicados. Más información en nuestro artículo: [Descodificación de canales con DVB-CI externo](https://help.cesbo.com/astra/receiving/dvb/external-ci)
 
-## Change program number
+## Cambiar el número de programa[](https://help.cesbo.com/astra/processing/mpegts/demux#change-program-number)
 
-To customize the Program Number (PNR), use option `set_pnr`:
+Para personalizar el número de programa (PNR), utilice la opción `set_pnr`:
 
 ```
 dvb://a001#pnr=1&set_pnr=1000
 ```
 
-PNR value could be in range from 1 to 65535. This feature could be useful if you want to prepare channel for next multiplexing.
+El valor de PNR puede oscilar entre 1 y 65535. Esta función puede ser útil si desea preparar el canal para la siguiente multiplexación.
