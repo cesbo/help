@@ -1,5 +1,5 @@
 ---
-title: "Astra Logs"
+title: "Registros Astra"
 noindex: true
 ---
 
