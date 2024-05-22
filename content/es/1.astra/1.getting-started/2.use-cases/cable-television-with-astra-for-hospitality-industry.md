@@ -1,196 +1,193 @@
 ---
-title: "Cable Television with Astra for Hospitality Industry"
+title: "Televisión por cable con Astra para la hostelería"
 date: 2023-05-04
 image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
 ---
 
-Hospitality TV, offering an excellent TV solution with high-quality broadcasts and a selection of the best channels, is an essential part of hotel service.
+Hospitality TV, que ofrece una excelente solución de televisión con emisiones de alta calidad y una selección de los mejores canales, es una parte esencial del servicio hotelero.
 
-The number and quality of channels create a positive impression on guests. However, this is where the challenge arises.
-Hotels need to either modernize their existing TV network or design a new one, finding a balance between equipment costs and required services.
-We suggest considering the Astra software, which boasts powerful and flexible features when used in conjunction with a DVB-C modulator. In this article, we will explore the pros and cons of such a solution and walk through the steps to set it up.
+El número y la calidad de los canales crean una impresión positiva en los huéspedes. Sin embargo, aquí es donde surge el reto. Los hoteles tienen que modernizar su red de TV existente o diseñar una nueva, buscando un equilibrio entre los costes de los equipos y los servicios necesarios. Le sugerimos que considere el software Astra, que cuenta con funciones potentes y flexibles cuando se utiliza junto con un modulador DVB-C. En este artículo analizaremos los pros y los contras de esta solución y explicaremos los pasos necesarios para configurarla.
 
-## Advantages of cable television
+## Ventajas de la televisión por cable[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
 
-- built on a regular TV cable, you can use the existing hotel network
-- a large number of channels with no quality restrictions
-- any TV set is capable of receiving cable TV. You don't need any additional hardware in the guests rooms
-- network reliability
-- broadcasting control such as monitoring, configuration, channel switching, etc. All this is possible with Astra Web Interface
-- last but not least, you can simply expand the number of video sources and channels. Astra allows you to receive an input signal not only from DVB cards, but also from a network (HTTP, HLS, UDP, RTSP), as well as create your TV channels from your video recordings.
+- construido sobre un cable de TV normal, puede utilizar la red existente del hotel
+- un gran número de canales sin restricciones de calidad
+- cualquier televisor es capaz de recibir televisión por cable. No se necesita ningún hardware adicional en las habitaciones de los huéspedes.
+- fiabilidad de la red
+- control de emisiones, como monitorización, configuración, conmutación de canales, etc. Todo esto es posible con Astra Web Interface
+- Por último, pero no menos importante, puedes ampliar de forma sencilla el número de fuentes y canales de vídeo. Astra te permite recibir una señal de entrada no sólo desde tarjetas DVB, sino también desde una red (HTTP, HLS, UDP, RTSP), así como crear tus canales de TV a partir de tus grabaciones de vídeo.
 
-## Disadvantages
+## Desventajas[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#disadvantages)
 
-- the cost of the headend, including DVB-C modulator and DVB cards for receiving
-- some old TV sets may not support DVB-C standard for cable TV
+- el coste de la cabecera, incluido el modulador DVB-C y las tarjetas DVB para recibir
+- es posible que algunos televisores antiguos no admitan el estándar DVB-C para la televisión por cable
 
-## Hardware
+## Hardware[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#hardware)
 
-![Hospitality TV diagram](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
+![Diagrama de TV para hostelería](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
 
-This simple diagram is used for the illustration. We have a Satellite signal, Linux-based Server PC with DVB-S/S2 card(s), and RESI DVB-C FSM Modulator card(s).
+Este sencillo diagrama se utiliza para la ilustración. Tenemos una señal de satélite, un PC servidor basado en Linux con tarjeta(s) DVB-S/S2 y tarjeta(s) moduladora(s) RESI DVB-C FSM.
 
-### DVB-S/S2 Receiver
+### Receptor DVB-S/S2
 
-For receiving satellite channels you may use any DVB-S/S2 adapter with drivers for Linux.
+Para recibir canales por satélite puede utilizar cualquier adaptador DVB-S/S2 con controladores para Linux.
 
-![DigitalDevices Max SX8](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/maxsx82018.jpg)
+![Dispositivos Digitales Max SX8](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/maxsx82018.jpg)
 
-Most popular DVB receivers are:
+Los receptores DVB más populares son:
 
-- [Digital Devices MAX SX8 Pro](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/340/digital-devices-max-sx8-pro-4/8-8-tuner-tv-card-dvb-s2/dvb-s2x-full-spectrum)
-- [Digital Devices Max M4](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/341/digital-devices-max-m4-4x-multi-band-tuner-tv-card?c=167) - all-rounder for satellite, cable or terrestrial reception
+- [Dispositivos digitales MAX SX8 Pro](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/340/digital-devices-max-sx8-pro-4/8-8-tuner-tv-card-dvb-s2/dvb-s2x-full-spectrum)
+- [Dispositivos digitales Max M4](https://www.digital-devices.eu/shop/en/tv-cards/all-tv-cards/341/digital-devices-max-m4-4x-multi-band-tuner-tv-card?c=167): todoterreno para la recepción por satélite, cable o terrestre
 - [TBS6909-X](https://www.tbsdtv.com/products/tbs6909-x-dvb-s-s2-s2x-octa-tuner-pcie-card.html)
 
-### DVB-C Modulator
+### Modulador DVB-C
 
-In this article, we consider simple steps on How to set up Astra for DVB-C Modulation using [RESI DVB-C FSM 8](https://www.digital-devices.eu/shop/en/business-tv/qam-sdr-modulator/). Also you may use [TBS6004](https://www.tbsdtv.com/products/tbs6004-dvb-c-4-qam-pcie-card.html) modulator.
+En este artículo, consideramos pasos sencillos sobre Cómo configurar Astra para DVB-C Modulación utilizando [RESI DVB-C FSM 8](https://www.digital-devices.eu/shop/en/business-tv/qam-sdr-modulator/). También puede utilizar el modulador [TBS6004](https://www.tbsdtv.com/products/tbs6004-dvb-c-4-qam-pcie-card.html).
 
-![DigitalDevices RESI DVB-C Modulator](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/resi-fsm.png)
+![Modulador DVB-C RESI de DigitalDevices](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/resi-fsm.png)
 
-Short description:
+Breve descripción:
 
-- RESI DVB-C FSM 8 has 8 transponders according to DVB-C specification
-- Frequency range: 114 - 858 MHz
-- Symbol rates: 1.0 - 7.1 MSym/s
+- RESI DVB-C FSM 8 tiene 8 transpondedores según la especificación DVB-C
+- Gama de frecuencias: 114 - 858 MHz
+- Velocidades de símbolos: 1,0 - 7,1 MSym/s
 - QAM: 16, 32, 64, 128, 256
-- Signal / Noise ratio: 42dB
-- Output with 8 active transponder: 101 dBµV
-- The FSM8 can make up to 7.1 MSym/s and QAM256. The maximum delivered bitrate is about 52Mbps
+- Relación señal/ruido: 42 dB
+- Salida con 8 transpondedores activos: 101 dBµV
+- El FSM8 puede emitir hasta 7,1 MSym/s y QAM256. La tasa de bits máxima entregada es de unos 52 Mbps
 
-::note
-We advise sending no more than 40-42Mbps to a single transponder, especially if the input stream is from the satellite. As sat-channels usually have floating bitrate, which, for example, at HD channel may jump from 6Mbps to 11Mbps.
+::note Aconsejamos no enviar más de 40-42Mbps a un solo transpondedor, especialmente si el flujo de entrada procede del satélite. Los canales por satélite suelen tener un bitrate flotante que, por ejemplo, en un canal HD puede pasar de 6 Mbps a 11 Mbps.
 ::
 
-According to that, we may calculate how many channels we may put on a single transponder and on all available transponders:
+Según esto, podemos calcular cuántos canales podemos poner en un solo transpondedor y en todos los transpondedores disponibles:
 
-- 4 x HD channels ~7Mbps = 28Mbps
-- 4 x SD channels ~3Mbps = 12Mbps
+- 4 x canales HD ~7Mbps = 28Mbps
+- 4 x canales SD ~3Mbps = 12Mbps
 
-Approximately we can get 8 channels at one transponder, multiplied by 8 transponders we can get up to 64 channels in your DVB-C network. This is combination of channels may be different, it is up to your needs. If you need more channels you may get RESI DVB-C FSM 16 or 24.
+Aproximadamente podemos obtener 8 canales en un transpondedor, multiplicado por 8 transpondedores podemos obtener hasta 64 canales en su red DVB-C. Esta combinación de canales puede ser diferente, depende de sus necesidades. Si necesita más canales puede obtener RESI DVB-C FSM 16 o 24.
 
-## Requirements
+## Requisitos[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#requirements)
 
 Hardware:
 
-- Server PC, at least Quad Core Intel® or AMD® CPU 2.8GHz,  8Gb RAM, with 2 or more PCIe slots, depending on the quantity of PCIe cards
-- DVB-C Modulators (RESI or TBS)
-- DVB-S/S2 or DVB-T/T2 TV Cards (as an example)
+- PC servidor, CPU Intel® o AMD® de al menos cuatro núcleos a 2,8 GHz, 8 Gb de RAM, con 2 o más ranuras PCIe, en función de la cantidad de tarjetas PCIe.
+- Moduladores DVB-C (RESI o TBS)
+- Tarjetas de TV DVB-S/S2 o DVB-T/T2 (a modo de ejemplo)
 
 Software:
 
-- Linux-based operation system. We recommend Ubuntu 22.04 LTS
+- Sistema operativo basado en Linux. Recomendamos Ubuntu 22.04 LTS
 - Cesbo Astra
-- DVB Card drivers
-- Internet Browser on your PC. Chrome, Safari, or Firefox
+- Controladores de tarjeta DVB
+- Navegador de Internet en tu PC. Chrome, Safari o Firefox
 
-## Configure Astra
+## Configurar Astra[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#configure-astra)
 
-### Install Astra
+### Instalar Astra
 
-First of all, we need to prepare our server machine and install Linux and Astra. Information about Ubuntu installation could be found on the [official web site](https://ubuntu.com/tutorials/install-ubuntu-server)
+En primer lugar, tenemos que preparar nuestra máquina servidor e instalar Linux y Astra. La información sobre la instalación de Ubuntu se puede encontrar en el [sitio web oficial](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](/astra/getting-started/first-steps/install)
+La instalación de Astra es sencilla - sólo tienes que copiar un único archivo binario a tu servidor. Aquí, en detalle, usted puede encontrar cómo [instalar Astra](https://help.cesbo.com/astra/getting-started/first-steps/install)
 
-Quite often customers forget to configure their Adapters before the next steps. So be sure that you have DVB card drivers installed on the server.
+Muy a menudo los clientes olvidan configurar sus Adaptadores antes de los siguientes pasos. Así que asegúrese de que tiene instalados los controladores de la tarjeta DVB en el servidor.
 
-- [DigitalDevices Driver Installation](/misc/tools-and-utilities/dvb/dd-driver)
-- [TBS Driver Installation](/misc/tools-and-utilities/dvb/tbs-driver)
-- For other adapters you may find information on the vender web site
+- [Instalación del controlador DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
+- [Instalación del controlador TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver)
+- Para otros adaptadores, puede encontrar información en el sitio web del vendedor
 
-### Receiving channels with Astra
+### Canales de recepción con Astra
 
-Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](/astra/receiving).
+Ahora es el momento de configurar todos nuestros Adaptadores y encontrar los canales, que queremos Modular sobre DVB-C. Lista de todos los artículos sobre recepción de canales disponible aquí: [Recepción con Astra](https://help.cesbo.com/astra/receiving).
 
-To configure receiving channels from satellite we recommend to having a look at these articles:
+Para configurar la recepción de canales desde satélite te recomendamos que eches un vistazo a estos artículos:
 
-- [Introduction to DVB Adapter Tuning](/astra/receiving/dvb/intro)
-- [DVB-S/S2 Tuner Options](/astra/receiving/dvb/s)
-- [Scan DVB Adapter](/astra/receiving/dvb/scan)
+- [Introducción a la sintonización del adaptador DVB](https://help.cesbo.com/astra/receiving/dvb/intro)
+- [Opciones de sintonizador DVB-S/S2](https://help.cesbo.com/astra/receiving/dvb/s)
+- [Scan DVB Adaptador](https://help.cesbo.com/astra/receiving/dvb/scan)
 
-Below provided screenshot of example adapter settings:
+A continuación se muestra una captura de pantalla de la configuración del adaptador de ejemplo:
 
-![DVB-S2 Example](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
+![DVB-S2 Ejemplo](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dvb-s-settings.png)
 
-### Scan and select the required channels
+### Buscar y seleccionar los canales deseados
 
-When we figured out how to configure our Adapters, we may make a scan of the required Transponder (frequency) and append channels to Astra by selecting all the programs you want to add.
+Una vez configurados nuestros Adaptadores, podemos hacer un escaneo del Transpondedor requerido (frecuencia) y añadir canales a Astra seleccionando todos los programas que queramos añadir.
 
-![Scan configured adapter](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/scan.png)
+![Escanear adaptador configurado](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/scan.png)
 
-![Added channels on dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
+![Canales añadidos en el salpicadero](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/dashboard.png)
 
-### Create New Stream with MPTS
+### Crear un nuevo flujo con MPTS
 
-MPTS is a Multi Program Transport Stream (or multiplex) is a stream containing several services (programs). It is used to transfer channels to ip-qam/ip-asi modulators and multiplexers. Below are screenshots of most general configuration pages
+MPTS es un Multi Program Transport Stream (o multiplex) es un flujo que contiene varios servicios (programas). Se utiliza para transferir canales a moduladores y multiplexores ip-qam/ip-asi. A continuación se muestran capturas de pantalla de la mayoría de las páginas de configuración general
 
-![MPTS General Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-general.png)
+![Configuración general de MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-general.png)
 
-![MPTS Input List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-input.png)
+![Lista de entradas MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-input.png)
 
-![MPTS SDT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-sdt.png)
+![Ajustes MPTS SDT](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-sdt.png)
 
-In the SDT settings should be provided all information about channel:
+En la configuración SDT se debe proporcionar toda la información sobre el canal:
 
-- `Service Name` - program name
-- `PNR` - program number should be same as in the input list
-- `LCN` - logical number defines what channel number will be on the TV set
+- `Service Name` - nombre del programa
+- `PNR` - el número de programa debe ser el mismo que en la lista de entrada
+- `LCN` - El número lógico define el número de canal que aparecerá en el televisor.
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
+![Ajustes MPTS NIT](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-nit.png)
 
-In the NIT settings provide information for DVB-C transponder.
+En los ajustes de NIT proporcione información para el transpondedor DVB-C.
 
-### Setting up the Modulator
+### Configuración del modulador
 
-At this point, we have already found and added all the necessary channels in Astra, created a New Stream, and configured the MPTS, which should be sent to the modulator. To configure the Output signal to the RESI DVB-C modulator we need to know the Number of RESI adapters in the system.
+En este punto, ya hemos encontrado y añadido todos los canales necesarios en Astra, creado un Nuevo Stream, y configurado el MPTS, que debe ser enviado al modulador. Para configurar la señal de salida al modulador DVB-C RESI necesitamos saber el número de adaptadores RESI en el sistema.
 
-On the server console find the card number and modulators using the command:
+En la consola del servidor, busque el número de tarjeta y los moduladores mediante el comando
 
 ```
 find "/dev/dvb" -name "mod*"
 ```
 
-In the output - we get the number of the adapter and its modulators like:
+En la salida - obtenemos el número del adaptador y sus moduladores como:
 
 ```
 /dev/dvb/adapter0/mod0
 ```
 
-- `adapter0` - adapter number in the system
-- `mod0` - device number (transponder) on this adapter. Range from 0 to 7 will be for FSM8 modulator
+- `adapter0` - número de adaptador en el sistema
+- `mod0` - número de dispositivo (transpondedor) en este adaptador. El rango de 0 a 7 será para el modulador FSM8
 
-Now it is a turn to configure the Output signal to the RESI DVB-C modulator in the MPTS settings
+Ahora es el turno de configurar la señal de salida al modulador DVB-C RESI en los ajustes MPTS
 
-![MPTS Output List](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-output.png)
+![Lista de salidas MPTS](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-output.png)
 
-As a result, we should get a fully configured Stream, as shown in the screenshot:
+Como resultado, deberíamos obtener un Stream completamente configurado, como se muestra en la captura de pantalla:
 
-![MPTS on Dashboard](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
+![MPTS en el salpicadero](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
 
-## Monitor and manage
+## Supervisar y gestionar[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
 
-With Astra, you may  Analyze the quality and stability of transport streams. Export statistics and events to external systems like Zabbix or Grafana.
+Con Astra, podrá Analizar la calidad y estabilidad de los flujos de transporte. Exportar estadísticas y eventos a sistemas externos como Zabbix o Grafana.
 
-Also at any time you may open Astra Web Interface to simply check out the Dashboard. Here you will see already configured Adapters, created Streams, and some useful options like signal strength/quality, bitrate at channels, and so on.
+También puedes abrir en cualquier momento la interfaz web de Astra para ver el panel de control. Aquí verás los adaptadores ya configurados, los streams creados y algunas opciones útiles como la intensidad/calidad de la señal, el bitrate de los canales, etc.
 
-![Astra Web Interface](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/astra-dashboard.png)
+![Interfaz web Astra](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/astra-dashboard.png)
 
 ![Zabbix](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/zabbix.png)
 
 ![Grafana](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/grafana.png)
 
-## Checking the output DVB-C signal
+## Comprobación de la señal DVB-C de salida[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
 
-With these simple steps, we have set up our Stream. Now we have the channels converted and modulated with the RESI DVB-C FSM modulator.
+Con estos sencillos pasos hemos configurado nuestro Stream. Ahora tenemos los canales convertidos y modulados con el modulador RESI DVB-C FSM.
 
-The best way to check the output signal is to use an analyzer. There are many different models from many manufacturers. For example, Telestar:
+La mejor manera de comprobar la señal de salida es utilizar un analizador. Hay muchos modelos diferentes de muchos fabricantes. Por ejemplo, Telestar:
 
-![Telestar Analyzer](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/telestar.jpg)
+![Analizador Telestar](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/telestar.jpg)
 
-Also, we can connect the coaxial cable from RESI to the TV set, and in the TV settings make a new DVB-C channel scan, either Full Scan or Network Scan (or specify the scan parameters manually). Channels search settings fully depend on the TV manufacturer, but in general, they are very similar.
+Además, podemos conectar el cable coaxial del RESI al televisor y, en la configuración del televisor, realizar una nueva búsqueda de canales DVB-C, ya sea Búsqueda completa o Búsqueda de red (o especificar los parámetros de búsqueda manualmente). Los ajustes de búsqueda de canales dependen totalmente del fabricante del televisor, pero en general son muy similares.
 
-## Troubleshooting DVB receiving
+## Solución de problemas de recepción DVB[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/misc/troubleshooting/dvb)
+En caso de que surja algún problema durante la configuración, le ofrecemos una lista de artículos sobre cómo identificar problemas y eliminar la posible causa del problema: [Solución de problemas de recepción DVB](https://help.cesbo.com/misc/troubleshooting/dvb)
 
-We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.
+Cuidamos de cada uno de nuestros clientes y de su mejor experiencia de trabajo con Cesbo Astra, por eso ofrecemos más canales de soporte como la ayuda Online y el soporte vía E-mail.
