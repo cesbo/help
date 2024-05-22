@@ -1,65 +1,65 @@
 ---
-title: "Remapping Stream PIDs"
+title: "Reasignación de PID de flujo"
 date: 2023-07-17
 ---
 
-The Remap feature in Astra allows modify the Packet Identifier (PID) for MPEG-TS elementary streams.
+La función Remap de Astra permite modificar el identificador de paquetes (PID) de los flujos elementales MPEG-TS.
 
-## Use Cases
+## Casos prácticos[](https://help.cesbo.com/astra/processing/mpegts/remap#use-cases)
 
-Remapping Stream PIDs is beneficial in various scenarios:
+La reasignación de los PID de flujo es beneficiosa en varios escenarios:
 
-- Smooth Input Redundancy: If primary and backup inputs have differing PIDs for video and audio elementary streams, switching to the backup input may lead to a temporary interruption in playback. By remapping PIDs to ensure uniformity across primary and backup inputs, the transition can be made seamless.
-- Multi Program Stream (MPTS) Preparation: When preparing a channel for inclusion in an MPTS broadcast, each elementary stream within the channel must possess a unique PID. Remapping ensures this PIDs uniqueness, enabling smooth addition of the channel to the MPTS
+- Redundancia de entrada suave: Si las entradas primaria y de reserva tienen PID distintos para los flujos elementales de vídeo y audio, el cambio a la entrada de reserva puede provocar una interrupción temporal de la reproducción. Si se reasignan los PID para garantizar la uniformidad entre las entradas primaria y de reserva, la transición puede realizarse sin problemas.
+- Preparación de flujos multiprograma (MPTS): Al preparar un canal para su inclusión en una emisión MPTS, cada flujo elemental dentro del canal debe poseer un PID único. La reasignación garantiza la unicidad de estos PID, lo que permite añadir sin problemas el canal al MPTS.
 
-## Analyze Channel
+## Analizar el canal[](https://help.cesbo.com/astra/processing/mpegts/remap#analyze-channel)
 
-To identify available elementary streams and their PIDs, it's necessary to analyze the channel. This can be achieved by launching the built-in MPEG-TS analyzer either from the channel menu or directly from the channel settings.
+Para identificar los flujos elementales disponibles y sus PID, es necesario analizar el canal. Para ello, inicia el analizador MPEG-TS integrado desde el menú del canal o directamente desde los ajustes del canal.
 
-![Analyze Original Stream](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-original.png)
+![Analizar el flujo original](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-original.png)
 
-On the provided screenshot, we can see the following elementary streams:
+En la captura de pantalla proporcionada, podemos ver los siguientes flujos elementales:
 
-1. Program Map Table (PMT) - PID: `374`
-1. Video - PID: `371`
-2. Audio - PID: `376`, Language: `eng` (English)
+1. Tabla de mapas de programa (PMT) - PID: `374`
+2. Vídeo - PID: `371`
+3. Audio - PID: `376`Idioma: `eng` (inglés)
 
-Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Remapping in Astra.
+Cada flujo elemental está representado por un identificador de paquete (PID) único, que puede utilizarse para la reasignación de flujos en Astra.
 
-## Limitations
+## Limitaciones[](https://help.cesbo.com/astra/processing/mpegts/remap#limitations)
 
-Please note that PID value could be in range from 32 to 8190.
+Tenga en cuenta que el valor del PID puede estar comprendido entre 32 y 8190.
 
-## Input remapping
+## Reasignación de entradas[](https://help.cesbo.com/astra/processing/mpegts/remap#input-remapping)
 
-In order to perform the stream remapping, we will change the PMT PID to 100, the video stream PID to 101, and audio stream PID to 102. This operation can be conducted by appending the `map.pmt=100&map.video=101&map.audio.eng=102` option to the input address
+Para realizar la reasignación del flujo, cambiaremos el PID del PMT a 100, el PID del flujo de vídeo a 101, y el PID del flujo de audio a 102. Esta operación se puede realizar añadiendo el parámetro `map.pmt=100&map.video=101&map.audio.eng=102` a la dirección de entrada
 
-![Input Option](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
+![Opción de entrada](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
 
-## Remapping for all inputs
+## Reasignación de todas las entradas[](https://help.cesbo.com/astra/processing/mpegts/remap#remapping-for-all-inputs)
 
-For stream remapping across all inputs, the `Remap` tab in the channel settings can be used.
+Para la reasignación de flujos en todas las entradas, la función `Remap` en los ajustes del canal.
 
-![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/remap/remap-options.png)
+![Opciones de reasignación](https://cdn.cesbo.com/help/astra/processing/utilities/remap/remap-options.png)
 
-In the "Map PIDs" field, `pmt=100, video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
+En el campo "Mapear PIDs", `pmt=100, video=101, audio.eng=102` se ha configurado. Esto altera los PID de los flujos de vídeo y audio en inglés a 101 y 102, respectivamente, en todas las entradas.
 
-To verify the results of the applied stream filter, click "Apply" to save the changes. Next, launch the built-in MPEG-TS analyzer again. This will allow you to check if the unnecessary streams have been successfully filtered out.
+Para comprobar los resultados del filtro de flujo aplicado, haga clic en "Aplicar" para guardar los cambios. A continuación, inicie de nuevo el analizador MPEG-TS integrado. Así podrá comprobar si se han filtrado correctamente los flujos innecesarios.
 
-![Analyze Remapped Stream](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
+![Analizar el flujo reasignado](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
 
-## Selectors
+## Selectores[](https://help.cesbo.com/astra/processing/mpegts/remap#selectors)
 
-Selector determinates what PID should be changed to the new value
+El selector determina qué PID debe cambiarse al nuevo valor
 
-- `pmt` - PID for Program Map Table (PMT)
-- `video` - video stream
-- `audio` - any audio stream. You may define this option twice if you have several audio streams, for example: `video=101, audio=102, audio=103`
-- `audio.eng` - audio stream with defined language code
-- `ac3` - AC3 audio stream. The `audio` selector could be used for AC3 streams as well
-- `aac` - AAC audio stream. The `audio` selector could be used for ACC streams as well
-- `371` - original PID
-- `pcr` - PID for packets with PCR. Usually the PCR timestamp delivered with video stream packets
-- `sub` - subtitle stream
-- `ttx` - teletext stream
-- `ait` - PID for Application Information Table (AIT)
+- `pmt` - PID para tabla de mapas de programas (PMT)
+- `video` - flujo de vídeo
+- `audio` - cualquier flujo de audio. Puede definir esta opción dos veces si tiene varios flujos de audio, por ejemplo: `video=101, audio=102, audio=103`
+- `audio.eng` - flujo de audio con código de idioma definido
+- `ac3` - AC3. La dirección `audio` El selector podría utilizarse también para secuencias AC3.
+- `aac` - flujo de audio AAC. La dirección `audio` podría utilizarse también para los flujos ACC
+- `371` - PID original
+- `pcr` - PID para paquetes con PCR. Normalmente la marca de tiempo PCR entregada con paquetes de flujo de vídeo.
+- `sub` - flujo de subtítulos
+- `ttx` - flujo de teletexto
+- `ait` - PID para la tabla de información de la aplicación (AIT)
