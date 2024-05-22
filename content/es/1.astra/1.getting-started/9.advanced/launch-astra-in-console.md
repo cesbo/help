@@ -1,23 +1,23 @@
 ---
-title: "Launch Astra in console"
+title: "Lanzar Astra en consola"
 date: 2023-02-21
 ---
 
-If your system does not have systemd you may launch process manually:
+Si su sistema no tiene systemd puede lanzar el proceso manualmente:
 
 ```
 astra -c /etc/astra/astra.conf -p 8000
 ```
 
-Process will be launched in the foreground and your console will be taken by process until it finish. To stop process just press Ctrl+C on your keyboard.
+El proceso se iniciará en primer plano y tu consola será ocupada por el proceso hasta que termine. Para detener el proceso sólo tiene que pulsar Ctrl + C en el teclado.
 
-To launching process in background append symbol `&` after the command line:
+Para iniciar el proceso en segundo plano, añada el símbolo `&` después de la línea de comandos:
 
 ```
 astra -c /etc/astra/astra.conf -p 8000 &
 ```
 
-Process will be launched in the background and console will be returned to your control immediately. To stop process you may launch command:
+El proceso se iniciará en segundo plano y la consola volverá a su control inmediatamente. Para detener el proceso puede ejecutar el comando:
 
 ```
 killall astra
