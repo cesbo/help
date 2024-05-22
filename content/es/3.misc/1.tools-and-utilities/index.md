@@ -1,5 +1,5 @@
 ---
-title: "Tools & Utilities"
+title: "Herramientas y utilidades"
 noindex: true
 navigation:
   color: "#bd00ff"
