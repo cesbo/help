@@ -1,43 +1,43 @@
 ---
-title: "Comparing UDP, HTTP & HLS Protocols"
+title: "Сравнение протоколов UDP, HTTP и HLS"
 date: 2023-03-17
 ---
 
-Digital TV transmission employs different protocols for broadcasting media content, specifically, User Datagram Protocol (UDP), Hypertext Transfer Protocol (HTTP), and HTTP Live Streaming (HLS). These protocols each possess distinctive characteristics that affect their efficiency, reliability, and compatibility with various devices and networks. The following comparison will delve into their core functions, benefits, and drawbacks to provide a clear understanding of their use in the digital TV landscape.
+При передаче цифрового телевидения используются различные протоколы для трансляции медиаконтента, в частности, User Datagram Protocol (UDP), Hypertext Transfer Protocol (HTTP) и HTTP Live Streaming (HLS). Каждый из этих протоколов обладает своими отличительными характеристиками, которые влияют на их эффективность, надежность и совместимость с различными устройствами и сетями. Ниже мы рассмотрим их основные функции, преимущества и недостатки, чтобы получить четкое представление об их использовании в цифровом телевидении.
 
-## UDP Multicast
+## UDP Multicast[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#udp-multicast)
 
 ![UDP Multicast](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
-The User Datagram Protocol (UDP) multicast operates on a one-to-many basis. This means it can deliver packets from a single source to multiple subscribers simultaneously. Typically, UDP multicast finds its primary use within local network environments due to its broadcast capabilities and network limitations.
+Многоадресная рассылка по протоколу User Datagram Protocol (UDP) работает по принципу "один ко многим". Это означает, что он может доставлять пакеты от одного источника нескольким абонентам одновременно. Как правило, многоадресная рассылка UDP находит свое основное применение в локальных сетях, что обусловлено ее широковещательными возможностями и сетевыми ограничениями.
 
-UDP multicast functions within an IP range from 224.0.0.0 to 239.255.255.255. However, the range from 224.0.0.0 to 224.255.255.255, is generally avoided due to a high concentration of specialized addresses. These addresses are reserved for network protocols, and using them can lead to conflicts.
+UDP multicast функционирует в диапазоне IP-адресов от 224.0.0.0 до 239.255.255.255. Однако диапазон от 224.0.0.0 до 224.255.255.255, как правило, избегается из-за высокой концентрации специализированных адресов. Эти адреса зарезервированы для сетевых протоколов, и их использование может привести к конфликтам.
 
-The UDP multicast behavior can be compared to a catapult launching goods. Once the payload is launched, the sender does not control or monitor its path. The operator is not concerned about the packet's condition after it has been launched, mirroring UDP's lack of delivery guarantees and reliability checks.
+Поведение UDP multicast можно сравнить с катапультой, запускающей груз. После запуска полезной нагрузки отправитель не контролирует и не отслеживает ее путь. Оператор не заботится о состоянии пакета после запуска, что отражает отсутствие в UDP гарантий доставки и проверок надежности.
 
-Access control can be established through two methods:
+Контроль доступа может быть организован двумя способами:
 
-- encrypting the streams for secure data transmission
-- managing ports on the commutation equipment
+- шифрование потоков для безопасной передачи данных
+- управление портами на коммутационном оборудовании
 
-## UDP Unicast
+## UDP Unicast[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#udp-unicast)
 
-UDP unicast serves as a one-to-one transmission method. It is typically utilized for sending streams between different servers in a headend. An instance of this would be transmitting streams from a receiver to a transcoder, and then from the transcoder to a multiplexor.
+Одноадресная рассылка UDP служит методом передачи "один к одному". Обычно он используется для передачи потоков между различными серверами в головной станции. В качестве примера можно привести передачу потоков от приемника к транскодеру, а затем от транскодера к мультиплексору.
 
-## HTTP MPEG-TS
+## HTTP MPEG-TS[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#http-mpeg-ts)
 
-HTTP MPEG-TS protocol base on HTTP protocol and works like downloading an infinite file, continually sending data to the receiver in a constant stream. This approach enables good compatibility with older set-top boxes that were designed with this protocol in mind.
+Протокол HTTP MPEG-TS основан на протоколе HTTP и работает подобно загрузке бесконечного файла, непрерывно отправляя данные на приемник в виде постоянного потока. Такой подход обеспечивает хорошую совместимость со старыми приставками, которые были разработаны с учетом этого протокола.
 
-However, this protocol is more susceptible to unstable connections and is sensitive to delays. Any disruption or lag can result in playback issues, similar to how a conveyor belt delivering goods would halt whenever there's a delay.
+Однако этот протокол более восприимчив к нестабильным соединениям и чувствителен к задержкам. Любой сбой или задержка могут привести к проблемам с воспроизведением, подобно тому, как конвейер, доставляющий товары, останавливается при любой задержке.
 
-Regarding access control, HTTP MPEG-TS can leverage standard HTTP methods for authorization, eliminating the need for encryption, though encryption is possible via Transport Layer Security (TLS) if required for additional security.
+Что касается управления доступом, то для авторизации HTTP MPEG-TS может использовать стандартные методы HTTP, что исключает необходимость шифрования, хотя при необходимости для обеспечения дополнительной безопасности возможно шифрование через Transport Layer Security (TLS).
 
-## HLS
+## HLS[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#hls)
 
-![HLS Diagram](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/diagram.svg)
+![Диаграмма HLS](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/diagram.svg)
 
-HTTP Live Streaming (HLS) is a protocol for streaming media content over the internet. It's designed to deliver sizable chunks of data at once, similar to the delivery of cargo containers. As one chunk (container) is being unloaded and processed by the client, the next chunk is already being prepared and sent. This allows for efficient handling of data and helps to ensure smoother, continuous playback, even in fluctuating network conditions.
+HTTP Live Streaming (HLS) - это протокол для потоковой передачи медиаконтента через Интернет. Он предназначен для одновременной передачи больших объемов данных, подобно доставке грузовых контейнеров. Пока один кусок (контейнер) выгружается и обрабатывается клиентом, следующий кусок уже готовится и отправляется. Это позволяет эффективно обрабатывать данные и обеспечивает более плавное и непрерывное воспроизведение даже в условиях нестабильной работы сети.
 
-HLS offers several advantages, including multibitrate streaming, which allows the protocol to adapt the video quality to the viewer's network conditions in real-time. It also supports the delivery of chunks through a Content Delivery Network (CDN), enabling efficient data distribution and improved scalability, particularly beneficial for handling large volumes of concurrent viewers.
+HLS обладает рядом преимуществ, в том числе мультибитрейтной передачей, которая позволяет протоколу адаптировать качество видео к сетевым условиям зрителя в режиме реального времени. Кроме того, протокол поддерживает доставку фрагментов через сеть доставки контента (CDN), что обеспечивает эффективное распределение данных и улучшенную масштабируемость, особенно полезную при работе с большим количеством одновременных зрителей.
 
-Access control provided with HTTP methods like a HTTP MPEG-TS
+Контроль доступа обеспечивается с помощью методов HTTP, таких как HTTP MPEG-TS
