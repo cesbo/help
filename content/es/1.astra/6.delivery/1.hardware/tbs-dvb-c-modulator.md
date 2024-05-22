@@ -1,65 +1,65 @@
 ---
-title: "TBS6004 DVB-C modulator"
+title: "Modulator TBS6004 DVB-C"
 date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/tbs-dvb-c.jpeg
 ---
 
 :badge[Astra 2021.08.09]
 
-TBS6004 is a DVB-C 4 QAM modulator PCIe card.
+TBS6004 es una tarjeta PCIe moduladora DVB-C 4 QAM.
 
-![TBS DVB-C modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/tbs-dvb-c.jpeg)
+![Modulador DVB-C TBS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/tbs-dvb-c.jpeg)
 
-Technical specifications:
+Especificaciones técnicas:
 
-- 4 modulators on the board
-- Frequencies: 100 ~ 1000 MHz
-- Modulation - 16QAM, 32QAM, 64QAM, 128QAM, 256QAM
-- RF Output Level - 5-120 dBuV
+- 4 moduladores en el tablero
+- Frecuencias: 100 ~ 1000 MHz
+- Modulación - 16QAM, 32QAM, 64QAM, 128QAM, 256QAM
+- Nivel de salida RF - 5-120 dBuV
 
-## Setup
+## Configurar[](https://help.cesbo.com/astra/delivery/hardware/tbs-dvb-c-modulator#setup)
 
-Use our guide to [Install TBS driver](/misc/tools-and-utilities/dvb/tbs-driver). Use the following command to find the adapter number and the modulator device number:
+Utilice nuestra guía para [instalar el controlador TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver). Utilice el siguiente comando para encontrar el número de adaptador y el número de dispositivo modulador:
 
 ```
 find "/dev" -name "mod*"
 ```
 
-In the output - we will see the numbers of modulators:
+En la salida - veremos los números de moduladores:
 
 ```
 /dev/tbsmod0/mod1
 /dev/tbsmod0/mod0
 ```
 
-- `tbsmod0` - adapter number
-- `mod1` - device number
+- `tbsmod0` - número de adaptador
+- `mod1` - número de dispositivo
 
-## Astra settings
+## Ajustes Astra[](https://help.cesbo.com/astra/delivery/hardware/tbs-dvb-c-modulator#astra-settings)
 
-1. Prepare [MPTS](/astra/delivery/broadcasting/mpts-settings) for modulator
-2. In the output setting, specify the address: `tbs://#adapter=0&device=1` (0 - adapter number, 1 - modulator)
-3. In the MPTS NIT settings, configure transponder options
+1. Preparar [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) para modulador
+2. En la configuración de salida, especifique la dirección: `tbs://#adapter=0&device=1` (0 - número de adaptador, 1 - modulador)
+3. En los ajustes MPTS NIT, configure las opciones del transpondedor
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/mpts-nit.png)
+![Ajustes MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/mpts-nit.png)
 
-Read more in: [Cable Television with Astra for Hospitality Industry](/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
+Más información en: [Televisión por cable con Astra para la hostelería](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
 
-### Additional options
+### Opciones adicionales
 
-Additional options could be added to the output address:
+Se podrían añadir opciones adicionales a la dirección de salida:
 
-- `bitrate=N` - default value depends on symbolrate and modulation type. For example for symbolrate 6900 and 256-QAM value will be 55
-- `gain=N` - signal level in range from 0 to 100. Default value: 60
+- `bitrate=N` - El valor por defecto depende de la tasa de símbolos y del tipo de modulación. Por ejemplo, para symbolrate 6900 y 256-QAM el valor será 55
+- `gain=N` - nivel de señal en un rango de 0 a 100. Valor por defecto: 60
 
-## Troubleshooting
+## Solución de problemas[](https://help.cesbo.com/astra/delivery/hardware/tbs-dvb-c-modulator#troubleshooting)
 
 ### No such file or directory
 
-If you attempt to find the adapter number and encounter an error:
+Si intenta encontrar el número de adaptador y se encuentra con un error:
 
 ```
 find: ‘/dev/dvb’: No such file or directory
 ```
 
-it is likely that the TBS driver is not installed. Please [install TBS driver](/misc/tools-and-utilities/dvb/tbs-driver)
+es probable que el controlador TBS no esté instalado. Por favor, [instale el](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver) controlador TBS
