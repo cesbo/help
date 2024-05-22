@@ -1,23 +1,23 @@
 ---
-title: "Astra DVB List"
+title: "Lista Astra DVB"
 date: 2023-02-23
 ---
 
-Astra DVB List is a simple built-in tool to get information about installed DVB adapters.
+Astra DVB List es una sencilla herramienta integrada para obtener información sobre los adaptadores DVB instalados.
 
-## Usage
+## Utilización[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dvbls#usage)
 
 ```
 astra --dvbls [OPTIONS]
 ```
 
-Availabale options:
+Opciones disponibles:
 
-- `-o FILE` - export dvb list to the file
+- `-o FILE` - exportar la lista dvb al archivo
 
-After start program print information about adapters to the console.
+Después de iniciar el programa imprime información sobre los adaptadores en la consola.
 
-Adapter available to use:
+Adaptador disponible para su uso:
 
 ```
 Nov 10 09:00:00: INFO: adapter = 3, device = 0
@@ -26,7 +26,7 @@ Nov 10 09:00:00: INFO:     frontend = Montage DS3103/TS2022
 Nov 10 09:00:00: INFO:     type = S
 ```
 
-Adapter is taken:
+El adaptador está cogido:
 
 ```
 Nov 10 09:00:00: WARNING: adapter = 2, device = 0
@@ -36,26 +36,26 @@ Nov 10 09:00:00: WARNING:     frontend = Montage DS3103/TS2022
 Nov 10 09:00:00: WARNING:     type = S
 ```
 
-An error occurred while accessing the device. Some hardware malfunction or you need to reinstall the driver:
+Se ha producido un error al acceder al dispositivo. Algún mal funcionamiento del hardware o necesitas reinstalar el controlador:
 
 ```
 Nov 10 09:00:00: ERROR: adapter = 1, device = 0
 Nov 10 09:00:00: ERROR:     failed to open [Bad file descriptor]
 ```
 
-## Export DVB list to the file
+## Exportar la lista DVB al archivo[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dvbls#export-dvb-list-to-the-file)
 
-When Astra starts up, it retrieves information about the DVB adapters installed on the system. In some rare cases, this operation can take a long time. To prevent Astra from updating this information on each start, you can save it to a file.
+Cuando Astra se inicia, recupera información sobre los adaptadores DVB instalados en el sistema. En algunos casos excepcionales, esta operación puede tardar mucho tiempo. Para evitar que Astra actualice esta información en cada arranque, puedes guardarla en un archivo.
 
-To do this, follow these steps:
+Para ello, sigue estos pasos:
 
-Create directory for Astra scripts:
+Crear directorio para scripts Astra:
 
 ```
 mkdir -p /etc/astra/mod
 ```
 
-Export the DVB list to a Lua file:
+Exportar la lista DVB a un archivo Lua:
 
 ```
 astra --dvbls -o /etc/astra/mod/dvb.lua
