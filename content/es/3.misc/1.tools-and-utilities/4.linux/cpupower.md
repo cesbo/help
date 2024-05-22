@@ -1,53 +1,53 @@
 ---
-title: "CPU Power Mode"
+title: "Modo de alimentación de la CPU"
 date: 2023-09-28
 ---
 
-In the world of digital TV streaming, every millisecond matters. Delays or lags can significantly impact the quality of service.
+En el mundo de la televisión digital en streaming, cada milisegundo cuenta. Los retrasos pueden afectar a la calidad del servicio.
 
-One of the key factors is the CPU power mode. By default, Linux servers have their CPUs set to a power-saving mode to reduce power consumption and manage heat generation. To ensure optimal performance of your streaming software, it is recommended to set your CPU to its maximum performance mode.
+Uno de los factores clave es el modo de alimentación de la CPU. Por defecto, los servidores Linux tienen la CPU configurada en modo de ahorro de energía para reducir el consumo y gestionar la generación de calor. Para garantizar un rendimiento óptimo del software de streaming, se recomienda configurar la CPU en su modo de máximo rendimiento.
 
-## With cpupower utility
+## Con la utilidad cpupower[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#with-cpupower-utility)
 
-To check the CPU power mode on a Linux server, you can use the `cpupower` utility. This utility is part of the `linux-tools-common` package.
+Para comprobar el modo de alimentación de la CPU en un servidor Linux, puede utilizar la función `cpupower` utilidad. Esta utilidad forma parte del `linux-tools-common` paquete.
 
-### Install cpupower
+### Instalar cpupower
 
 ```
 sudo apt-get update
 sudo apt-get install linux-tools-common
 ```
 
-### Check current settings
+### Comprobar la configuración actual
 
 ```
 cpupower frequency-info
 ```
 
-This command will display the current CPU frequency, governor and other information. If the governor is set to 'powersave' or 'ondemand', then the CPU is in power saving mode.
+Este comando mostrará la frecuencia actual de la CPU, el regulador y otra información. Si el regulador está en "powersave" o "ondemand", la CPU está en modo de ahorro de energía.
 
-### Disable the power saving mode
+### Desactivar el modo de ahorro de energía
 
-If you want to disable the power saving mode, you can set the governor to `performance`. This will make the CPU run at maximum frequency.
+Si desea desactivar el modo de ahorro de energía, puede ajustar el regulador a `performance`. Esto hará que la CPU funcione a la máxima frecuencia.
 
 ```
 cpupower frequency-set -g performance
 ```
 
-This setting will be lost after a reboot. If you want to make it permanent, you can add the above command to `/etc/rc.local` file so that it gets executed at every boot.
+Esta configuración se perderá tras un reinicio. Si desea que sea permanente, puede añadir el comando anterior a `/etc/rc.local` para que se ejecute en cada arranque.
 
-## Check CPU mode manually
+## Comprobar el modo CPU manualmente[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#check-cpu-mode-manually)
 
 ```
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
-This command will display the current CPU governor for each core. Information about current CPU frequency available in the `/proc/cpuinfo` file:
+Este comando mostrará el gobernador de CPU actual para cada núcleo. La información sobre la frecuencia actual de la CPU está disponible en el `/proc/cpuinfo` archivo:
 
 ```
-processor	: 0
-model name	: Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
-cpu MHz		: 1197.109
+processor   : 0
+model name  : Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
+cpu MHz     : 1197.109
 ```
 
-as we can see current CPU frequency is only 1.2GHz.
+como podemos ver la frecuencia actual de la CPU es de sólo 1,2GHz.
