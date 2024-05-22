@@ -1,26 +1,26 @@
 ---
-title: "Change password to Astra Web Interface"
+title: "Cambiar la contraseña de la Interfaz Web de Astra"
 date: 2023-02-22
 ---
 
-To administer the Astra interface, you can change the password of any user through the interface menu. To perform this action, you need:
+Para administrar la interfaz de Astra, puede cambiar la contraseña de cualquier usuario a través del menú de la interfaz. Para realizar esta acción, necesita:
 
-1. Open Settings menu, choose Users. This will take you to the Users page, where you can see a list of all users.
-2. Select the user whose password you want to change.
-3. Enter new password and click Apply.
+1. Abra el menú Configuración, seleccione Usuarios. Esto le llevará a la página Usuarios, donde podrá ver una lista de todos los usuarios.
+2. Seleccione el usuario cuya contraseña desea cambiar.
+3. Introduzca la nueva contraseña y haga clic en Aplicar.
 
-If you've changed your own password, the Astra web interface will be reloaded and you will be required to log in with your new password.
+Si has cambiado tu propia contraseña, la interfaz web de Astra se recargará y deberás iniciar sesión con tu nueva contraseña.
 
-## Reset password
+## Restablecer contraseña[](https://help.cesbo.com/astra/admin-guide/administration/change-password#reset-password)
 
-Astra interface password can also be changed via the server console command:
+La contraseña de la interfaz de Astra también se puede cambiar mediante el comando de la consola del servidor:
 
 ```
 astra --reset-password
 ```
 
-Then you need to enter next details:
+A continuación, deberá introducir los siguientes datos:
 
-- Port to your web interface (Default is 8000)
-- User login
-- New password
+- Puerto de su interfaz web (por defecto es 8000)
+- Inicio de sesión de usuario
+- Nueva contraseña
