@@ -1,47 +1,47 @@
 ---
-title: "Filtering Stream PIDs"
+title: "Filtrado de flujos PID"
 date: 2023-07-17
 ---
 
-Stream Filtering removes specific packets within the MPEG-TS stream based on their PIDs. Additionally, the process modifies the corresponding program-specific information tables, such as Program Association Table (PAT) and Program Map Table (PMT), to reflect the removal of the identified packets.
+El filtrado de secuencias elimina paquetes específicos dentro de la secuencia MPEG-TS en función de sus PID. Además, el proceso modifica las correspondientes tablas de información específicas del programa, como la tabla de asociación de programas (PAT) y la tabla de mapas de programas (PMT), para reflejar la eliminación de los paquetes identificados.
 
-## Analyze Channel
+## Analizar el canal[](https://help.cesbo.com/astra/processing/mpegts/filter#analyze-channel)
 
-To identify available elementary streams and their PIDs, it's necessary to analyze the channel. This can be achieved by launching the built-in MPEG-TS analyzer either from the channel menu or directly from the channel settings.
+Para identificar los flujos elementales disponibles y sus PID, es necesario analizar el canal. Para ello, inicia el analizador MPEG-TS integrado desde el menú del canal o directamente desde los ajustes del canal.
 
-![Analyze Original Stream](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-original.png)
+![Analizar el flujo original](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-original.png)
 
-On the provided screenshot, we can see the following elementary streams:
+En la captura de pantalla proporcionada, podemos ver los siguientes flujos elementales:
 
-1. Video - PID: `1331`
-2. Subtitle - PID: `1335`, Language: `bul` (Bulgarian)
-3. Audio - PID: `1332`, Language: `bul` (Bulgarian)
-4. Audio - PID: `1336`, Language: `eng` (English)
+1. Vídeo - PID: `1331`
+2. Subtítulo - PID: `1335`Idioma: `bul` (búlgaro)
+3. Audio - PID: `1332`Idioma: `bul` (búlgaro)
+4. Audio - PID: `1336`Idioma: `eng` (inglés)
 
-Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Filtering in Astra.
+Cada flujo elemental está representado por un identificador de paquete (PID) único, que puede utilizarse para el filtrado de flujos en Astra.
 
-## Input filtering
+## Filtrado de entrada[](https://help.cesbo.com/astra/processing/mpegts/filter#input-filtering)
 
-In order to perform the stream filtering, we will drop the stream with PID 1336. This operation can be conducted by appending the `filter=1336` option to the input address
+Para poder realizar el filtrado del flujo, eliminaremos el flujo con PID 1336. Esta operación se puede realizar añadiendo el comando `filter=1336` a la dirección de entrada
 
-![Input Option](https://cdn.cesbo.com/help/astra/processing/utilities/filter/input-options.png)
+![Opción de entrada](https://cdn.cesbo.com/help/astra/processing/utilities/filter/input-options.png)
 
-## Inverse input filtering
+## Filtrado de entrada inverso[](https://help.cesbo.com/astra/processing/mpegts/filter#inverse-input-filtering)
 
-To perform inverse filtering and remove all streams except those specified, you can use the tilde symbol (`~`) along with the filter option. For instance, to keep only the video stream and the English audio stream (PIDs 1331 and 1336), you would append the `filter~=1331,1336` option to the input address. This will remove all other streams, leaving only the defined streams.
+Para realizar un filtrado inverso y eliminar todos los flujos excepto los especificados, puede utilizar el símbolo de la tilde (`~`) junto con la opción de filtro. Por ejemplo, para conservar sólo el flujo de vídeo y el flujo de audio en inglés (PIDs 1331 y 1336), se añadiría el parámetro `filter~=1331,1336` a la dirección de entrada. Esto eliminará todos los demás flujos, dejando sólo los flujos definidos.
 
-To verify the results of the applied stream filter, click "Apply" to save the changes. Next, launch the built-in MPEG-TS analyzer again. This will allow you to check if the unnecessary streams have been successfully filtered out.
+Para comprobar los resultados del filtro de flujo aplicado, haga clic en "Aplicar" para guardar los cambios. A continuación, inicie de nuevo el analizador MPEG-TS integrado. Así podrá comprobar si se han filtrado correctamente los flujos innecesarios.
 
-![Analyze Filtered Stream](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-filtered.png)
+![Analizar el flujo filtrado](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-filtered.png)
 
-## Filtering for all inputs
+## Filtrado de todas las entradas[](https://help.cesbo.com/astra/processing/mpegts/filter#filtering-for-all-inputs)
 
-For stream filtering across all inputs, the `Remap` tab in the channel settings can be used. This method is suitable with the remap feature.
+Para el filtrado de flujos en todas las entradas, el `Remap` en los ajustes del canal. Este método es adecuado con la función de reasignación.
 
-![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/filter/remap-options.png)
+![Opciones de reasignación](https://cdn.cesbo.com/help/astra/processing/utilities/filter/remap-options.png)
 
-In the `Map PIDs` field, `video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
+En el `Map PIDs` campo, `video=101, audio.eng=102` se ha configurado. Esto altera los PID de los flujos de vídeo y audio en inglés a 101 y 102, respectivamente, en todas las entradas.
 
-Subsequently, in the `Filter PID` field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
+Posteriormente, en el `Filter PID` campo, `101, 102` se ha especificado. Esto implica que sólo los flujos con estos PID se mantendrán en la salida, mientras que todos los demás flujos elementales se filtrarán.
 
-Read more: [Remap PIDs](./remap)
+Más información: [Reasignar PID](https://help.cesbo.com/astra/processing/mpegts/remap)
