@@ -1,11 +1,11 @@
 ---
-title: "Receiving HLS"
+title: "Recepción de HLS"
 date: 2023-08-10
 ---
 
-HLS or HTTP Live Streaming is an HTTP-based adaptive bitrate video streaming protocol. It is most popular format for streaming over internet (OTT services). Read more about [HLS Protocol](/misc/articles/protocols/hls)
+HLS o HTTP Live Streaming es un protocolo de streaming de vídeo con bitrate adaptativo basado en HTTP. Es el formato más popular para streaming a través de Internet (servicios OTT). Más información sobre el [protocolo HLS](https://help.cesbo.com/misc/articles/protocols/hls)
 
-## Address format
+## Formato de la dirección[](https://help.cesbo.com/astra/receiving/ip/hls#address-format)
 
 ```
 http://address
@@ -13,20 +13,20 @@ http://address:port/path
 http://login:password@address:port/path#options
 ```
 
-This is common HTTP address. Astra supports https as well.
+Esta es una dirección HTTP común. Astra también soporta https.
 
-- `login:password` – login and password for HTTP authentication. Supports Basic and Digest authentication methods
-- `address` – IPv4 server address or domain name
-- `port` – port number. Default: `80` for http and `443` for https
-- `path` – the path to the resource. Default: `/`
+- `login:password` - nombre de usuario y contraseña para la autenticación HTTP. Admite los métodos de autenticación Basic y Digest.
+- `address` - Dirección IPv4 del servidor o nombre de dominio
+- `port` - número de puerto. Por defecto: `80` para http y `443` para https
+- `path` - la ruta al recurso. Por defecto: `/`
 
-Options:
+Opciones:
 
-- `ua=Name` – custom User-Agent header
-- `timeout=N` - timeout for HLS segments loading. By default, timeout depend of the segment duration
-- `debug` - log response headers. Also should be turned on debug in the log messages
-- `bandwidth=N` - select stream with defined bandwidth. By default, astra select stream with maximal bandwidth value
+- `ua=Name` - cabecera User-Agent personalizada
+- `timeout=N` - tiempo de espera para la carga de segmentos HLS. Por defecto, el tiempo de espera depende de la duración del segmento
+- `debug` - cabeceras de respuesta de registro. También se debe activar la depuración en los mensajes de registro
+- `bandwidth=N` - seleccionar flujo con ancho de banda definido. Por defecto, astra selecciona el flujo con el valor máximo de ancho de banda.
 
-## Web Interface
+## Interfaz web[](https://help.cesbo.com/astra/receiving/ip/hls#web-interface)
 
-To set up HLS input in Astra, just write your source address to the Input field.
+Para configurar la entrada HLS en Astra, basta con escribir la dirección de origen en el campo Entrada.
