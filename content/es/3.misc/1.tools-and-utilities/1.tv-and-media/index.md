@@ -1,5 +1,5 @@
 ---
-title: "TV & Media"
+title: "TV y medios de comunicación"
 noindex: true
 ---
 
