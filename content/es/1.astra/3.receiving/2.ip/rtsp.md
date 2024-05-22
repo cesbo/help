@@ -1,13 +1,13 @@
 ---
-title: "Receiving RSTP"
+title: "Recepción RSTP"
 date: 2023-03-23
 ---
 
-RSTP is a popular protocol for streaming media over IP networks and is commonly used in IP cameras due to its low-latency and high-quality video streaming capabilities
+El RSTP es un protocolo muy utilizado para la transmisión de contenidos multimedia a través de redes IP y se suele emplear en cámaras IP por su baja latencia y su capacidad de transmisión de vídeo de alta calidad.
 
-## Address format
+## Formato de la dirección[](https://help.cesbo.com/astra/receiving/ip/rtsp#address-format)
 
-RSTP addresses are used to identify the location of the media stream that is being transmitted over the network
+Las direcciones RSTP se utilizan para identificar la ubicación del flujo de medios que se está transmitiendo por la red
 
 ```
 rtsp://address
@@ -15,39 +15,39 @@ rtsp://address:port/path
 rtsp://login:password@address:port/path#options
 ```
 
-- `login:password` – login and password for RTSP authentication. Supports Basic and Digest authentication methods
-- `address` – IPv4 server address or domain name
-- `port` – port number. Default: `554`
-- `path` – the path to the resource. Default: `/`
+- `login:password` - nombre de usuario y contraseña para la autenticación RTSP. Admite los métodos de autenticación Basic y Digest.
+- `address` - Dirección IPv4 del servidor o nombre de dominio
+- `port` - número de puerto. Por defecto: `554`
+- `path` - la ruta al recurso. Por defecto: `/`
 
-Options:
+Opciones:
 
-- `tcp` – interleaved mode. receive stream over TCP instead UDP
-- `ua=Name` – custom User-Agent header
+- `tcp` - modo intercalado. flujo de recepción a través de TCP en lugar de UDP
+- `ua=Name` - cabecera User-Agent personalizada
 
-## Web Interface
+## Interfaz web[](https://help.cesbo.com/astra/receiving/ip/rtsp#web-interface)
 
-To set up an RSTP input in Astra, you can either enter the source address directly into the `Input address` field in the Stream settings or use the Input configuration form accessed by clicking on the gear icon form:
+Para configurar una entrada RSTP en Astra, puede introducir la dirección de origen directamente en el campo `Input address` en la configuración del flujo o utilice el formulario de configuración de entrada al que se accede haciendo clic en el formulario con el icono del engranaje:
 
-![RTSP Options](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
+![Opciones RTSP](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
 
-- `RSTP address` - source address of the RSTP stream
-- `Interleaved mode` - by the default Astra uses UDP to receive media data from camera, interleaved mode force camera to send data over TCP
+- `RSTP address` - dirección de origen del flujo RSTP
+- `Interleaved mode` - por defecto Astra utiliza UDP para recibir datos multimedia de la cámara, el modo intercalado fuerza a la cámara a enviar datos a través de TCP
 
-## Troubleshooting
+## Solución de problemas[](https://help.cesbo.com/astra/receiving/ip/rtsp#troubleshooting)
 
-### h.265 not working
+### h.265 no funciona
 
-The current version of Astra supports H.264 only
+La versión actual de Astra sólo soporta H.264
 
-### Timeout errors
+### Errores de tiempo de espera
 
-The error messages may include `Connection timeout` or `Response timeout`, which suggest that the camera is not responding to requests from Astra. One possible cause of this issue is when the camera is stuck and cannot respond to requests
+Los mensajes de error pueden incluir `Connection timeout` o `Response timeout`que sugieren que la cámara no está respondiendo a las peticiones de Astra. Una posible causa de este problema es cuando la cámara se bloquea y no puede responder a las peticiones
 
-### Authentication failed
+### Autenticación fallida
 
-Invalid login or password to the RTSP stream
+Nombre de usuario o contraseña no válidos para el flujo RTSP
 
-### Unknown encoding format
+### Formato de codificación desconocido
 
-This may indicate that the data format of the stream is not recognized by Astra. This error can occur when the RSTP stream uses an unsupported data format or encoding method
+Esto puede indicar que el formato de datos del flujo no es reconocido por Astra. Este error puede producirse cuando el flujo RSTP utiliza un formato de datos o un método de codificación no admitidos
