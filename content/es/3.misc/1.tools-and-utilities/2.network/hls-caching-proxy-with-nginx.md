@@ -1,11 +1,11 @@
 ---
-title: "HLS Caching Proxy with Nginx"
+title: "Proxy de caché HLS con Nginx"
 date: 2023-03-01
 ---
 
-Nginx could be used on edge servers to act as an HLS caching proxy. If a request for a file is not found in the cache, it is retrieved from the origin server with address `http://192.168.88.100:8000`. File stored in the `/opt/ramcache` folder, and then served to the client.
+Nginx podría utilizarse en servidores edge para actuar como proxy de caché HLS. Si una solicitud de un archivo no se encuentra en la caché, se recupera del servidor de origen con dirección `http://192.168.88.100:8000`. Archivo almacenado en el `/opt/ramcache` y luego se sirve al cliente.
 
-Create an Nginx configuration file for HLS Caching Proxy in `/etc/nginx/conf.d/hls_proxy.conf`:
+Crear un archivo de configuración Nginx para HLS Caching Proxy en `/etc/nginx/conf.d/hls_proxy.conf`:
 
 ```
 proxy_cache_path "/opt/ramcache" use_temp_path=off keys_zone=hls:1m inactive=30s max_size=10g;
@@ -34,7 +34,7 @@ server {
 }
 ```
 
-and common proxy options in `/etc/nginx/hls_proxy_params.conf`:
+y opciones de representación comunes en `/etc/nginx/hls_proxy_params.conf`:
 
 ```
 proxy_redirect              off;
@@ -61,17 +61,17 @@ proxy_next_upstream         error timeout http_502 http_504;
 proxy_next_upstream_tries   2;
 ```
 
-Create directory for nginx cache and set the owner to the appropriate user:
+Cree un directorio para la caché de nginx y establezca el propietario en el usuario adecuado:
 
 ```
 mkdir -p /opt/ramcache
 chown -R nginx:root /opt/ramcache
 ```
 
-## Expires header
+## Cabecera Expires[](https://help.cesbo.com/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx#expires-header)
 
-Important for the source server to send a response with appropriate headers that define the expiration time for the content being served.
+Es importante que el servidor de origen envíe una respuesta con las cabeceras adecuadas que definan el tiempo de caducidad del contenido que se está sirviendo.
 
-The `Expires` and `X-Accel-Expires` headers can be used to specify the amount of time that a response should be considered fresh and can be cached by nginx. Expires header can be used to specify an absolute expiration time for the content, while the X-Accel-Expires header can be used to specify a relative expiration time in seconds.
+En `Expires` y `X-Accel-Expires` se pueden utilizar para especificar la cantidad de tiempo que una respuesta debe ser considerada fresca y puede ser almacenada en caché por nginx. La cabecera Expires se puede utilizar para especificar un tiempo de caducidad absoluto para el contenido, mientras que la cabecera X-Accel-Expires se puede utilizar para especificar un tiempo de caducidad relativo en segundos.
 
-In Astra settings you may turn on headers in the Settings -> HLS -> Use Expires header
+En los ajustes de Astra puede activar las cabeceras en Ajustes -> HLS -> Usar cabecera Expires
