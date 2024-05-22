@@ -1,101 +1,101 @@
 ---
-title: "Changelog"
+title: "Registro de cambios"
 noindex: true
 ---
 
-## 230719
+## 230719[](https://help.cesbo.com/astra/admin-guide/administration/changelog#_230719)
 
-[Download Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
+[Descargar Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 
-In this changelog is a short comparasion with latest stable release 220504
+En este registro de cambios hay una breve comparación con la última versión estable 220504
 
 ### SRT
 
-- SRT library updated to v1.5.1
-- Option `statsout=FILE` to write SRT receiving/transmitting stats to the CSV file. This file can be processed using https://github.com/mbakholdina/srt-stats-plotting.
-- Supports the standard address format, such as `srt://example.com?passphrase=12345`.
-If your address contains the # symbol in the streamid option, it should be changed to `%23`. For example: `srt://example.com?streamid=%23!::r=LaminorTV,m=request`
-- Better receiving stability
-- option `oheadbw` - recovery bandwidth overhead above input rate. Default: `25`
-- options `sndbuf` and `rcvbuf` to tune transmitting and receiving buffer size
+- Biblioteca SRT actualizada a v1.5.1
+- Opción `statsout=FILE` para escribir las estadísticas de recepción/transmisión de SRT en el archivo CSV. Este archivo se puede procesar con [https://github.com/mbakholdina/srt-stats-plotting](https://github.com/mbakholdina/srt-stats-plotting).
+- Admite el formato de dirección estándar, como `srt://example.com?passphrase=12345`. Si su dirección contiene el símbolo # en la opción streamid, debe cambiarse a `%23`. Por ejemplo: `srt://example.com?streamid=%23!::r=LaminorTV,m=request`
+- Mayor estabilidad de recepción
+- opción `oheadbw` - sobrecarga del ancho de banda de recuperación por encima de la tasa de entrada. Predeterminado: `25`
+- opciones `sndbuf` y `rcvbuf` para ajustar el tamaño del búfer de transmisión y recepción
 
-### DVB Virtual adapters
+### Adaptadores virtuales DVB
 
-Virtual adapters is an option in the Adapter settings for easy setup streams:
-- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](/astra/receiving/ip/mpts-via-udp)
-- CI adapter: you may configure channels descrambling with external CI adapters like DigitalDevices Octopus Twin CI or TBS6900. [Read more](/astra/receiving/dvb/external-ci)
-- SAT>IP adapter: this is replacement for the SAT>IP checkbox in previous versions. [Read more](/astra/receiving/dvb/satip-client)
-- SAT>IP: increase receiving buffer size
-- SAT>IP: more log for HTTP connection errors
+Adaptadores virtuales es una opción en la configuración del adaptador para facilitar la configuración de los flujos:
 
-### DVB Tuners & DVB Input
+- Secuencias MPTS: puede definir la dirección de la secuencia MPTS y escanearla para añadir todos los canales por separado. [Más información](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp)
+- Adaptador CI: puede configurar la descodificación de canales con adaptadores CI externos como DigitalDevices Octopus Twin CI o TBS6900. [Más información](https://help.cesbo.com/astra/receiving/dvb/external-ci)
+- Adaptador SAT>IP: sustituye a la casilla SAT>IP de versiones anteriores. [Más información](https://help.cesbo.com/astra/receiving/dvb/satip-client)
+- SAT>IP: aumentar el tamaño del búfer de recepción
+- SAT>IP: más log para errores de conexión HTTP
 
-- For multistandard adapters available option for manual frontend selection - `fe_device`. This can be found in the web interface: Adapter options -> Advanced -> FE Device
-- Scan DVB adapters before Astra start
+### Sintonizadores DVB y entrada DVB
 
-### DigitalDevices RESI modulator
+- Para adaptadores multiestándar disponibles opción de selección manual de frontales - `fe_device`. Esto se puede encontrar en la interfaz web: Opciones del adaptador -> Avanzadas -> Dispositivo FE
+- Escanear adaptadores DVB antes de iniciar Astra
 
-- Fix options `gain` and `attenuator` for latest drivers
-- Default buffer size increased to 64Mb
-- Reset RESI before starting
+### Modulador RESI de DigitalDevices
+
+- Opciones fijas `gain` y `attenuator` para los controladores más recientes
+- Tamaño del búfer por defecto aumentado a 64Mb
+- Reiniciar RESI antes de empezar
 
 ### HTTP/HLS
 
-Input:
+Entrada:
 
-- HLS input supports M3U8 with URLs without scheme. For example: `//example.com/media/001.ts`
-- Bitrate syncing by DTS/PTS timestamps instead of PCR. (many HLS streams has corrupted PCR values)
+- La entrada HLS soporta M3U8 con URLs sin esquema. Por ejemplo: `//example.com/media/001.ts`
+- Sincronización de bitrate por marcas de tiempo DTS/PTS en lugar de PCR. (muchos flujos HLS tienen valores PCR corruptos).
 
-Output:
+Salida:
 
-- Rewrited authorization algorithms for better performance (moved from Lua scripts to the C-core)
-- HTTP Backend authorization supports redirects
-- Check IP list in HTTP authorization before other methods
-- HLS Output sends empty TS file if file is not found (was 404 error, but some ffplay based players sends many requests trying to reload it)
-- Option Settings -> HLS -> Session Timeout to customize time when session should be closed on inactive
+- Algoritmos de autorización reescritos para mejorar el rendimiento (trasladados de los scripts Lua al núcleo C).
+- La autorización HTTP Backend admite redireccionamientos
+- Comprobar la lista IP en la autorización HTTP antes que otros métodos
+- La salida HLS envía un archivo TS vacío si no se encuentra el archivo (era un error 404, pero algunos reproductores basados en ffplay envían muchas peticiones intentando recargarlo).
+- Opción Configuración -> HLS -> Tiempo de espera de la sesión para personalizar el tiempo en que la sesión debe cerrarse al estar inactiva.
 
 ### UDP
 
-- Ignore invalid TS files on Input (previous versions restarted receiving)
-- Option `src=IP` to specify UDP multicast source address for IGMPv3. Example: `udp://eth1@239.255.1.1:1234#src=192.168.88.100`
+- Ignorar archivos TS no válidos en la entrada (las versiones anteriores reiniciaban la recepción)
+- Opción `src=IP` para especificar la dirección de origen de multidifusión UDP para IGMPv3. Ejemplo: `udp://eth1@239.255.1.1:1234#src=192.168.88.100`
 
 ### MPTS
 
-- Change EIT type with enabled `remux_eit` option. If EIT tsid is not equal to the `tsid` option defined in the MPTS settings, then EIT type will be changed from `actual` to `other`
+- Cambiar el tipo de IET con activado `remux_eit` opción. Si EIT tsid no es igual al `tsid` definida en la configuración del MPTS, el tipo de IET cambiará de `actual` a `other`
 
-### Processing
+### Tratamiento
 
-- option `set_pcr_pid` to change PCR pid if it separated from video
-- T2MI fix issue with CC errors on some streams
+- opción `set_pcr_pid` para cambiar PCR pid si se separó de vídeo
+- T2MI soluciona el problema de los errores de CC en algunos flujos
 
-### Monitoring
+### Supervisión
 
-- Option `interval=SEC` for InfluxDB address to define sending intervals. Default is 60 second. For example: `https://example.com:8086#interval=5`
-- `app_mem_kb` in the [Process status API](/astra/admin-guide/api/process). Process memory usage in kilobytes
-- `video_count` and `audio_count` in the [Stream status API](/astra/admin-guide/api/stream#get-stream-status)
+- Opción `interval=SEC` para que la dirección de InfluxDB defina los intervalos de envío. Por defecto es de 60 segundos. Por ejemplo `https://example.com:8086#interval=5`
+- `app_mem_kb` en el [API de estado del proceso](https://help.cesbo.com/astra/admin-guide/api/process). Uso de la memoria del proceso en kilobytes
+- `video_count` y `audio_count` en el [API de estado del flujo](https://help.cesbo.com/astra/admin-guide/api/stream#get-stream-status)
 
-### Master-Slave
+### Maestro-Esclavo
 
-- Option `delay` for slave-mode to start process with delay. Default 3 seconds. Example: `astra -c slave.conf -p 8000 --slave "http://master:8000#delay=10"`
+- Opción `delay` para que el modo esclavo inicie el proceso con retardo. Por defecto 3 segundos. Ejemplo: `astra -c slave.conf -p 8000 --slave "http://master:8000#delay=10"`
 
-### Web Interface
+### Interfaz web
 
-- Icon
-- Web Interface from `als.cesbo.com` integrated into Astra binary file (`als.cesbo.com` not used anymore)
-- Option to set a custom path to the web interface. This can be found in Settings -> General -> Custom Path. For example, with the path `secret`, the interface will be available at `http://example.com:8000/secret/`
-- Option to modify port for the web interface. This can be found in Settings -> General -> Custom Port. This option customizes the port value defined in the `-p` option. Also supported local interface address, such as `127.0.0.1:8000` - the web will be available only on localhost
-- Option Settings -> HTTP Play -> Path to TV Screenshots - attach channel screenshots to the cards on dashboard
-- Description for channel
-- Modal dialogs to configure stream and adapter settings
+- Icono
+- Interfaz Web de `als.cesbo.com` integrado en el archivo binario de Astra (`als.cesbo.com` ya no se utiliza)
+- Opción para establecer una ruta personalizada a la interfaz web. Esto se puede encontrar en Configuración -> General -> Ruta personalizada. Por ejemplo, con la ruta `secret`la interfaz estará disponible en `http://example.com:8000/secret/`
+- Opción para modificar el puerto de la interfaz web. Se encuentra en Configuración -> General -> Puerto personalizado. Esta opción personaliza el valor del puerto definido en el archivo `-p` opción. También se admite la dirección de interfaz local, como `127.0.0.1:8000` - la web sólo estará disponible en localhost
+- Opción Ajustes -> HTTP Play -> Path to TV Screenshots - adjuntar capturas de pantalla de canales a las tarjetas en el salpicadero
+- Descripción del canal
+- Diálogos modales para configurar el flujo y los adaptadores
 
-### Internal changes
+### Cambios internos
 
-- Moved a lot of code from Lua scripts to the Astra Core for better performance
-- Astra checks port for API and Web interface to prevent launching same process twice
-- Update OpenSSL to v1.1.1t
-- Integrate LibUV v1.44.2 (preparing for switching from internal event processing to libuv)
+- Movido mucho código de los scripts Lua al Astra Core para un mejor rendimiento.
+- Astra comprueba el puerto de la API y de la interfaz web para evitar lanzar el mismo proceso dos veces
+- Actualizar OpenSSL a v1.1.1t
+- Integrar LibUV v1.44.2 (preparando el cambio del procesamiento interno de eventos a libuv)
 
-## Archive Versions
+## Versiones de archivo[](https://help.cesbo.com/astra/admin-guide/administration/changelog#archive-versions)
 
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 - [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
