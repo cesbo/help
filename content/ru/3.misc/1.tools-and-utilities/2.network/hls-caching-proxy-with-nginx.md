@@ -1,5 +1,5 @@
 ---
-title: "HLS Caching Proxy with Nginx"
+title: "Кэширующий прокси-сервер HLS с Nginx"
 date: 2023-03-01
 ---
 
