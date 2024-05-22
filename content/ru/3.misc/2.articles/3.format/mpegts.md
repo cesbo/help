@@ -3,48 +3,42 @@ title: "MPEG-TS"
 date: 2023-06-13
 ---
 
-MPEG-TS (Transport Stream) - is a transport format for transmission video, audio, and other data over IP or broadband networks.
-Detailed description available in the [ISO 13818-1](https://www.iso.org/standard/74427.html) standard.
+MPEG-TS (Transport Stream) - транспортный формат для передачи видео, аудио и других данных по IP или широкополосным сетям. Подробное описание содержится в стандарте [ISO 13818-1](https://www.iso.org/standard/74427.html).
 
-## Packetized Elementary Stream
+## Пакетированный элементарный поток[](https://help.cesbo.com/misc/articles/format/mpegts#packetized-elementary-stream)
 
-Elementary Stream (ES) is a compressed data output from the encoder.
+Элементарный поток (Elementary Stream, ES) - это сжатые данные, выводимые кодером.
 
-Packetized Elementary Stream (PES) is a sequence of the headers with ES information and the ES frames.
-Multiplexing is an operation of the packetizing several elementary streams into single stream.
-Demultiplexing is the reverse process of multiplexing. Demultiplexing single stream into separate components and pass components to processing.
+Пакетированный элементарный поток (PES) - это последовательность заголовков с информацией ЭП и кадров ЭП. Мультиплексирование - это операция пакетирования нескольких элементарных потоков в один поток. Демультиплексирование является обратным процессом мультиплексирования. Демультиплексирование одного потока на отдельные компоненты и передача компонентов на обработку.
 
-## Program-Specific Information
+## Информация по конкретной программе[](https://help.cesbo.com/misc/articles/format/mpegts#program-specific-information)
 
-Program-specific information (PSI) is a packets with information about stream for receiver to demultiplex and decode streams of program.
+Программно-специфическая информация (PSI) - это пакеты с информацией о потоке, предназначенные для демультиплексирования и декодирования потоков программ приемником.
 
-- Program Association Table (PAT) - list of programs. Contains Program Number (PNR) and Packet Identifier (PID) of the associated PMT
-- Program Mapping Table (PMT) - list of program streams. PID's of the associated Video, Audio, and other data
-- Conditional Access Table (CAT) - information about Conditional Access Systems
+- Program Association Table (PAT) - список программ. Содержит номер программы (PNR) и идентификатор пакета (PID) связанного с ним PMT
+- Program Mapping Table (PMT) - список программных потоков. PID-адреса соответствующих видео-, аудио- и других данных
+- Таблица условного доступа (CAT) - информация о системах условного доступа
 
-## Service Information
+## Служебная информация[](https://help.cesbo.com/misc/articles/format/mpegts#service-information)
 
-In addition to the PSI, data is needed to provide identification of services and events for the user:
+В дополнение к PSI необходимы данные, обеспечивающие идентификацию сервисов и событий для пользователя:
 
-- Network Information Table (NIT)
-- Service Description Table (SDT) - information such as service name, provider name, etc
-- Event Information Table (EIT) - contains event information such as event name, start time, etc
-- Time and Date Table (TDT)
-- Time Offset Table (TOT)
+- Таблица сетевой информации (NIT)
+- Таблица описания услуг (SDT) - информация, такая как название услуги, имя провайдера и т.д.
+- Event Information Table (EIT) - содержит информацию о событии, такую как название события, время начала и т.д.
+- Таблица времени и даты (TDT)
+- Таблица временных смещений (TOT)
 
-## Transport Stream
+## Транспортный поток[](https://help.cesbo.com/misc/articles/format/mpegts#transport-stream)
 
-Transport Stream is a sequence of the TS packets.
-TS packets have fixed length in 188 bytes. First byte, also called the sync byte, is always 0x47.
-Next 3 bytes is a header. Remain 184 bytes is a payload (PES, PSI, or SI packets).
+Транспортный поток представляет собой последовательность пакетов TS. Пакеты TS имеют фиксированную длину в 188 байт. Первый байт, называемый также байтом синхронизации, всегда равен 0x47. Следующие 3 байта - это заголовок. Оставшиеся 184 байта - полезная нагрузка (пакеты PES, PSI или SI).
 
-TS Header contains next information:
+Заголовок TS содержит следующую информацию:
 
-- Packet Identifier (PID). It could be in range 0 - 8191
-- Continuity Counter (CC). It could be in range 0 - 15. With a counter the MPEG-TS analyzer able to detect corruption of the packets continuity.
-- Payload Unit Start Indicator - is a single bit indicates is packet contains begining of the payload
+- Идентификатор пакета (PID). Он может находиться в диапазоне 0 - 8191
+- Счетчик непрерывности (CC). Он может находиться в диапазоне 0 - 15. С помощью счетчика анализатор MPEG-TS может обнаружить нарушение непрерывности пакетов.
+- Индикатор начала блока полезной нагрузки - один бит указывает на то, что пакет содержит начало полезной нагрузки
 
-## PID - TS Packet identifier
+## PID - идентификатор пакета TS[](https://help.cesbo.com/misc/articles/format/mpegts#pid-ts-packet-identifier)
 
-Elementary streams (video, audio) and information tables are packed to the TS-packets. Each packet has unique identifier - PID.
-The PID value must be between 0 and 8191. The range 0 to 31 and 8191 is reserved and should not be used. You can use any PID in the range from 32 to 8190.
+В TS-пакеты упаковываются элементарные потоки (видео, аудио) и информационные таблицы. Каждый пакет имеет уникальный идентификатор - PID. Значение PID должно находиться в диапазоне от 0 до 8191. Диапазон от 0 до 31 и 8191 зарезервирован и не должен использоваться. Вы можете использовать любой PID в диапазоне от 32 до 8190.
