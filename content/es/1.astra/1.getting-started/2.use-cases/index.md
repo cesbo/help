@@ -1,5 +1,5 @@
 ---
-title: "Use Cases"
+title: "Casos prácticos"
 noindex: true
 ---
 
