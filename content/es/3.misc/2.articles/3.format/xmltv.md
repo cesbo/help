@@ -3,9 +3,9 @@ title: "XMLTV"
 date: 2023-06-13
 ---
 
-XMLTV is an XML-based format for describing TV schedule information. It provides a mechanism to store channel information, programme schedules, and their associated metadata. 
+XMLTV es un formato basado en XML para describir información sobre la programación de televisión. Proporciona un mecanismo para almacenar información sobre canales, horarios de programas y sus metadatos asociados.
 
-## Example
+## Ejemplo[](https://help.cesbo.com/misc/articles/format/xmltv#example)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -42,9 +42,9 @@ XMLTV is an XML-based format for describing TV schedule information. It provides
 </tv>
 ```
 
-### Channel Properties
+### Propiedades del canal
 
-The `<channel>` element defines individual television channels.
+En `<channel>` define canales de televisión individuales.
 
 ```
 <channel id="1">
@@ -53,18 +53,18 @@ The `<channel>` element defines individual television channels.
 </channel>
 ```
 
-Attributes:
+Atributos:
 
-- `id` - unique channel identifier
+- `id` - identificador único de canal
 
-Nested elements:
+Elementos anidados:
 
-- `display-name` – provides the name of the channel with specified language
-- `icon` – url to the channel logo
+- `display-name` - proporciona el nombre del canal con el idioma especificado
+- `icon` - url al logotipo del canal
 
-### Event Properties
+### Propiedades de los eventos
 
-The `<programme>` element in the XMLTV format represents an individual television show or broadcast event.
+En `<programme>` del formato XMLTV representa un programa de televisión individual o un evento de emisión.
 
 ```
 <programme start="20180920143000 +0300" stop="20180920141500 +0300" channel="2">
@@ -76,23 +76,24 @@ The `<programme>` element in the XMLTV format represents an individual televisio
 </programme>
 ```
 
-Attributes:
+Atributos:
 
-- `start` - event beginning time
-- `stop` - event ending time
-- `channel` - links the programme to a specific channel
+- `start` - hora de inicio del evento
+- `stop` - hora de finalización del evento
+- `channel` - vincula el programa a un canal específico
 
-Nested elements:
+Elementos anidados:
 
-- `title` – provides the name of the programme. The lang attribute can be used to specify the language of the title
-- `desc` – description of the programme
-- `date` – pecifies the release date of the programme
-- `category` – genre or category of the programme. Multiple <category> elements can be included for a single programme to represent multiple genres or categories, with the lang attribute defining the language
+- `title` - proporciona el nombre del programa. El atributo lang puede utilizarse para especificar el idioma del título
+- `desc` - descripción del programa
+- `date` - pecifica la fecha de lanzamiento del programa
+- `category` - género o categoría del programa. Múltiples
+    
 
-## EIT
+## IET[](https://help.cesbo.com/misc/articles/format/xmltv#eit)
 
-The Event Information Table (EIT) is a part of the MPEG-2 Transport Stream (MPEG-TS) used in digital broadcasting. This table contains metadata about the scheduled events or programmes on various channels, similar to the programme guide one might find on a digital TV or set-top box.
+La tabla de información de eventos (EIT) forma parte del flujo de transporte MPEG-2 (MPEG-TS) utilizado en radiodifusión digital. Esta tabla contiene metadatos sobre los eventos o programas programados en varios canales, de forma similar a la guía de programas que se puede encontrar en un televisor digital o descodificador.
 
-XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/misc/tools-and-utilities/tv-and-media/eit-stream)
+El archivo XMLTV se puede convertir al flujo MPEG-TS con paquetes EIT con nuestra herramienta gratuita - EIT Stream. [Más información](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream)
 
-EIT packet could be extracted from MPEG-TS stream and saved to XMLTV files with Astra.
+El paquete EIT puede extraerse del flujo MPEG-TS y guardarse en archivos XMLTV con Astra.
