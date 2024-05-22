@@ -1,30 +1,30 @@
 ---
-title: "RP Filter and Multicast receiving in Linux"
+title: "Filtro RP y recepción multicast en Linux"
 date: 2023-03-01
 ---
 
-The rp_filter technology is a useful tool for enhancing the security and protection of servers that receive UDP multicast traffic, particularly for servers with multiple network interfaces. When configuring servers to receive UDP multicast traffic, there are two options available: configuring system routing for multicast groups or modifying the rp_filter setting.
+La tecnología rp\_filter es una herramienta útil para mejorar la seguridad y protección de los servidores que reciben tráfico UDP multicast, particularmente para servidores con múltiples interfaces de red. Cuando se configuran servidores para recibir tráfico UDP multicast, hay dos opciones disponibles: configurar el enrutamiento del sistema para grupos multicast o modificar la configuración de rp\_filter.
 
-## Configure strict mode for RP filter
+## Configurar el modo estricto para el filtro RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#configure-strict-mode-for-rp-filter)
 
-To modify the rp_filter setting, add the following lines to the `/etc/sysctl.conf` file:
+Para modificar la configuración de rp\_filter, añada las siguientes líneas al archivo `/etc/sysctl.conf` archivo:
 
 ```
 net.ipv4.conf.eth0.rp_filter = 2
 ```
 
-Note that `eth0` should be replaced with the name of the interface being used. To apply the changes, either restart the system or execute the following command:
+Tenga en cuenta que `eth0` debe sustituirse por el nombre de la interfaz que se está utilizando. Para aplicar los cambios, reinicie el sistema o ejecute el siguiente comando:
 
 ```
 sysctl -p
 ```
 
-## RP Filter values
+## Valores del filtro RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#rp-filter-values)
 
-There are three possible values for the rp_filter parameter in Linux:
+Hay tres valores posibles para el parámetro rp\_filter en Linux:
 
-- `0` - disables the rp_filter feature altogether
-- `1` - default setting and enables strict reverse path filtering. In this mode, the kernel checks whether incoming packets arrive on the expected interface according to the routing table, and drops packets that do not
-- `2` - this setting enables loose reverse path filtering. This mode is less strict than strict reverse path filtering and allows packets to arrive on other interfaces, provided that they can be routed back to the source address on the interface from which they were received
+- `0` - desactiva por completo la función rp\_filter
+- `1` - por defecto y activa el filtrado estricto de rutas inversas. En este modo, el kernel comprueba si los paquetes entrantes llegan a la interfaz esperada según la tabla de enrutamiento y descarta los paquetes que no lo hacen.
+- `2` - esta opción activa el filtrado de ruta inversa flexible. Este modo es menos estricto que el filtrado de ruta inversa estricto y permite que los paquetes lleguen a otras interfaces, siempre que se puedan enrutar de vuelta a la dirección de origen en la interfaz desde la que se recibieron.
 
-The choice of rp_filter setting depends on the specific network configuration and security requirements of the system. It is important to select the appropriate setting to ensure optimal security and performance of the network.
+La elección del ajuste rp\_filter depende de la configuración de red específica y de los requisitos de seguridad del sistema. Es importante seleccionar el ajuste adecuado para garantizar una seguridad y un rendimiento óptimos de la red.
