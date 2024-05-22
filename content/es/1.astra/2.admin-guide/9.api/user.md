@@ -1,13 +1,13 @@
 ---
-title: "Users API"
+title: "API de usuarios"
 date: 2023-06-30
 ---
 
-Users used to control access to the Astra Web Interface as well as access to the HTTP MPEG-TS and HLS outputs
+Usuarios utilizados para controlar el acceso a la interfaz web de Astra, así como el acceso a las salidas HTTP MPEG-TS y HLS.
 
-## User configuration
+## Configuración del usuario[](https://help.cesbo.com/astra/admin-guide/api/user#user-configuration)
 
-```json
+```
 {
     "enable": true,
     "type": 0,
@@ -20,40 +20,40 @@ Users used to control access to the Astra Web Interface as well as access to the
 }
 ```
 
-- `enable` – enabled account or not
-- `type` – user type
-    - `1` - admin. full access to the Astra Web Interface
-    - `2` - observer. read only access to the Astra Web Interface
-    - `3` - regular user. without access to the Astra Web Interface
-- `comment` - optional field, for user description
+- `enable` - cuenta habilitada o no
+- `type` - tipo de usuario
+    - `1` - admin. acceso completo a la interfaz web de Astra
+    - `2` - observador. acceso de sólo lectura a la interfaz web de Astra
+    - `3` - usuario normal. sin acceso a la Interfaz Web de Astra
+- `comment` - campo opcional, para la descripción del usuario
 
-Optional fields for buil-in authorization to access HLS or HTTP MPEG-TS channels:
+Campos opcionales para la autorización integrada de acceso a canales HLS o HTTP MPEG-TS:
 
-- `token` - token used in HTTP requests. For example: `http://server:8000/play/a001/index.m3u8?token=secret`
-- `ip` - allow access to the channels by the client IP address
-- `expire` - date in unix timestamp format, when access to channels will be restricted
-- `connlimit` - limit connections to channels
+- `token` - utilizado en las peticiones HTTP. Por ejemplo: `http://server:8000/play/a001/index.m3u8?token=secret`
+- `ip` - permitir el acceso a los canales mediante la dirección IP del cliente
+- `expire` - fecha en formato unix timestamp, en la que se restringirá el acceso a los canales
+- `connlimit` - limitar las conexiones a los canales
 
-## Get user
+## Obtener usuario[](https://help.cesbo.com/astra/admin-guide/api/user#get-user)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "get-user",
     "id": "..."
 }
 ```
 
-- `id` - user login
+- `id` - inicio de sesión de usuario
 
-In response will be JSON with user configuration
+En respuesta será JSON con la configuración del usuario
 
-## Create or update user
+## Crear o actualizar usuario[](https://help.cesbo.com/astra/admin-guide/api/user#create-or-update-user)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "set-user",
     "id": "...",
@@ -65,14 +65,13 @@ Request: `POST /control/`
 }
 ```
 
-- `id` – user login
-- `user` - user configuration
-- `password` - plain password, in the config will be saved the password hash
+- `id` - inicio de sesión de usuario
+- `user` - configuración de usuario
+- `password` - contraseña simple, en la configuración se guardará el hash de la contraseña
 
-::spoiler{title="Example"}
-You may create new user by launching next command:
+::spoiler{title="Ejemplo"} Puede crear un nuevo usuario ejecutando el siguiente comando:
 
-```sh
+```
 curl -X POST -user login -d @- http://server:8000/control/ <<END
 {
   "cmd": "set-user",
@@ -86,18 +85,18 @@ curl -X POST -user login -d @- http://server:8000/control/ <<END
 END
 ```
 
-on successful Astra returns:
+en caso de que Astra regrese con éxito:
 
-```json
-{ "set-user": "ok" }
 ```
+{ "set-user": "ok" }
+``` 
 ::
 
-## Remove user
+## Eliminar usuario[](https://help.cesbo.com/astra/admin-guide/api/user#remove-user)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "set-user",
     "id": "...",
@@ -107,25 +106,24 @@ Request: `POST /control/`
 }
 ```
 
-## Toggle user
+## Alternar usuario[](https://help.cesbo.com/astra/admin-guide/api/user#toggle-user)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-Turn user on or off:
+Activar o desactivar el usuario:
 
-```json
+```
 {
     "cmd": "toggle-user",
     "id": "..."
 }
 ```
 
-- `id` - user login
+- `id` - inicio de sesión de usuario
 
-::spoiler{title="Example"}
-You may enable or disable user by launching next command:
+::spoiler{title="Ejemplo"} Puede activar o desactivar el usuario ejecutando el siguiente comando:
 
-```sh
+```
 curl \
     -X POST \
     -user login \
@@ -133,9 +131,9 @@ curl \
     http://server:8000/control/
 ```
 
-on successful Astra returns:
+en caso de que Astra regrese con éxito:
 
-```json
+```
 { "toggle-user": "ok" }
 ```
 ::
