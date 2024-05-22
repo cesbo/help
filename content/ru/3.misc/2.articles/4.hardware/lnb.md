@@ -1,5 +1,5 @@
 ---
-title: "LNB или "головка""
+title: "LNB или \"головка\""
 date: 2023-07-07
 image: https://cdn.cesbo.com/help/misc/articles/hardware/lnb/lnb.jpg
 ---
