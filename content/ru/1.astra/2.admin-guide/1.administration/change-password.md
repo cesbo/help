@@ -1,5 +1,5 @@
 ---
-title: "Change password to Astra Web Interface"
+title: "Изменение пароля к веб-интерфейсу Astra"
 date: 2023-02-22
 ---
 
