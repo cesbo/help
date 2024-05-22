@@ -1,5 +1,5 @@
 ---
-title: "Administration"
+title: "Administración"
 noindex: true
 ---
 
