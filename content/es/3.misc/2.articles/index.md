@@ -1,5 +1,5 @@
 ---
-title: "Articles"
+title: "Artículos"
 noindex: true
 navigation:
   color: "#bd00ff"
