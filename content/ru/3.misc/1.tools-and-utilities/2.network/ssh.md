@@ -3,17 +3,17 @@ title: "SSH"
 date: 2023-02-28
 ---
 
-SSH - is the primary protocol and tool for the remote servers management. Also allows you to create tunnels and transfer files.
+SSH - основной протокол и инструмент для управления удаленными серверами. Также позволяет создавать туннели и передавать файлы.
 
-## Connection to server
+## Подключение к серверу[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#connection-to-server)
 
 ```
 ssh root@192.168.1.1
 ```
 
-## Client Configuration
+## Конфигурация клиента[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#client-configuration)
 
-The SSH client can work without a configuration file and retrieve all the necessary parameters from command-line arguments. However, you may create a configuration file named `~/.ssh/config`. This file should contain the following information:
+SSH-клиент может работать без конфигурационного файла и получать все необходимые параметры из аргументов командной строки. Однако можно создать конфигурационный файл с именем `~/.ssh/config`. Этот файл должен содержать следующую информацию:
 
 ```
 Host server-alias
@@ -23,61 +23,61 @@ Host server-alias
     IdentityFile ~/.ssh/server_ed25519
 ```
 
-- `Host` - server name. This is the name used in the connection command: `ssh server-alias`
-- `HostName` - an optional server address. If HostName is not defined, the proper address or host name should be defined in `Host`
-- `User` - username
-- `Port` - the server port. Default: `22`
-- `IdentityFile` - an optional field that specifies the full path to the private key file
+- `Host` - имя сервера. Это имя используется в команде подключения: `ssh server-alias`
+- `HostName` - необязательный адрес сервера. Если HostName не определено, то соответствующий адрес или имя хоста должны быть определены в `Host`
+- `User` - имя пользователя
+- `Port` - порт сервера. По умолчанию: `22`
+- `IdentityFile` - необязательное поле, указывающее полный путь к файлу закрытого ключа
 
-## Key Generation
+## Генерация ключей[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#key-generation)
 
-For security reasons, it is strongly recommended to use authentication keys instead of passwords.
+В целях безопасности настоятельно рекомендуется использовать не пароли, а ключи аутентификации.
 
-To generate an authentication key, run the following command:
+Чтобы сгенерировать ключ аутентификации, выполните следующую команду:
 
 ```
 ssh-keygen -t ed25519 -f ~/.ssh/server_ed25519
 ```
 
-- `ed25519` - selects the type of encryption. Ed25519 is the optimal choice
-- `~/.ssh/server_ed25519` - the path to the private key file. The public key will be generated as `~/.ssh/server_ed25519.pub`
+- `ed25519` - выбирается тип шифрования. Ed25519 - оптимальный выбор
+- `~/.ssh/server_ed25519` - путь к файлу с закрытым ключом. Открытый ключ будет сгенерирован в виде `~/.ssh/server_ed25519.pub`
 
-Once the command is started, it will prompt you to enter a password. This password provides an additional level of security and must be entered when connecting to the server.
+После запуска команды будет предложено ввести пароль. Этот пароль обеспечивает дополнительный уровень безопасности и должен вводиться при подключении к серверу.
 
-The public key is a single line with the following format:
+Открытый ключ представляет собой одну строку, имеющую следующий формат:
 
 ```
 ssh-ed25519 AAAA...UUUU user@example.com
 ```
 
-On the server, append this line to the `~/.ssh/authorized_keys` file. This file may contain one or more keys. To append the public key, run the following command:
+На сервере добавьте эту строку в файл `~/.ssh/authorized_keys` файл. Этот файл может содержать один или несколько ключей. Чтобы добавить открытый ключ, выполните следующую команду:
 
 ```
 echo "ssh-ed25519 AAAA...UUUU user@example.com" >>~/.ssh/authorized_keys
 ```
 
-## Copy file to server
+## Копирование файла на сервер[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#copy-file-to-server)
 
-To copy files to the server, use the next command:
+Для копирования файлов на сервер используйте следующую команду:
 
 ```
 scp FILE 192.168.1.1:REMOTE
 ```
 
-- `FILE` - path to the file on the local computer
-- `192.168.1.1` - server address
-- `REMOTE` - absolute path to the file on the server
+- `FILE` - путь к файлу на локальном компьютере
+- `192.168.1.1` - адрес сервера
+- `REMOTE` - абсолютный путь к файлу на сервере
 
-## Port Forwarding
+## Переадресация портов[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#port-forwarding)
 
-To forward traffic from a remote server to a local computer, use the following command:
+Чтобы перенаправить трафик с удаленного сервера на локальный компьютер, используйте следующую команду:
 
 ```
 ssh -L 4000:192.168.88.100:554 192.168.1.1
 ```
 
-- `4000` - the port number on the local computer with ssh client
-- `192.168.88.100:554` - the IP address and port number on the remote computer
-- `-fNT` - additional options to run the SSH client in the background
+- `4000` - номер порта на локальном компьютере с ssh-клиентом
+- `192.168.88.100:554` - IP-адрес и номер порта на удаленном компьютере
+- `-fNT` - дополнительные опции для запуска SSH-клиента в фоновом режиме
 
-For example, if the remote address is an IP camera with the stream address `rtsp://admin:123@192.168.88.100:554/stream1`, SSH will forward all requests to port `4000` to this camera. Once the stream is started, it can be opened in VLC using the following URL: `rtsp://admin:123@127.0.0.1:4000/stream1`.
+Например, если удаленным адресом является IP-камера с потоковым адресом `rtsp://admin:123@192.168.88.100:554/stream1`SSH будет пересылать все запросы на порт `4000` на эту камеру. После запуска потока его можно открыть в VLC, используя следующий URL: `rtsp://admin:123@127.0.0.1:4000/stream1`.
