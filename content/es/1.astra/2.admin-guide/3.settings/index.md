@@ -1,5 +1,5 @@
 ---
-title: "Settings"
+title: "Ajustes"
 noindex: true
 ---
 
