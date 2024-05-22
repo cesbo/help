@@ -3,15 +3,15 @@ title: "Руководство по технической поддержке"
 date: 2023-02-22
 ---
 
-At our company, we offer support free of charge for quick questions related to sales, as well as assistance with first-time installation and issues with our website. However, technical support is only provided to customers who have purchased a Subscription or Lifetime license.
+В нашей компании мы предоставляем бесплатную поддержку по оперативным вопросам, связанным с продажами, а также помощь при первой установке и проблемах с нашим сайтом. Однако техническая поддержка предоставляется только тем клиентам, которые приобрели подписку или пожизненную лицензию.
 
-We strive to respond to all support requests as quickly as possible, though we don't currently offer priority support. Rest assured that we will reply to your request as soon as we can.
+Мы стараемся отвечать на все запросы в службу поддержки как можно быстрее, хотя в настоящее время приоритетная поддержка не предоставляется. Будьте уверены, что мы ответим на ваш запрос, как только сможем.
 
-In order to help us prioritize your request, we have a set of guidelines that we follow:
+Для того чтобы помочь нам определить приоритетность вашего запроса, мы придерживаемся ряда рекомендаций:
 
-- The highest priority have issues related to bugs in our software;
-- Issues with the environment in which our software operates, such as channels for receiving and processing data, hardware, and network issues;
-- Features requests;
-- Maintenance tasks such as installation, configuration and updating.
+- Наибольший приоритет имеют вопросы, связанные с ошибками в нашем программном обеспечении;
+- Проблемы со средой, в которой работает наше программное обеспечение, например, каналы приема и обработки данных, аппаратные и сетевые проблемы;
+- Особенности запросов;
+- Задачи технического обслуживания, такие как установка, настройка и обновление.
 
-We hope this information is helpful and enables us to provide you with the best possible support. If you have any further questions, please don't hesitate to contact us.
+Мы надеемся, что эта информация окажется полезной и позволит нам оказать вам наилучшую поддержку. Если у вас возникнут дополнительные вопросы, пожалуйста, обращайтесь к нам.
