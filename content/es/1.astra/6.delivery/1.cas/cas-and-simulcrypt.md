@@ -1,46 +1,46 @@
 ---
-title: "CAS and Simulcrypt"
+title: "CAS y Simulcrypt"
 date: 2023-02-24
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/og-image.png
 ---
 
-Conditional Access System (CAS) is a complex solution to protect media content from unauthorized access. Astra can communicates with Conditional Access Systems such as Conax via the Simulcrypt protocol and encrypt media content using the Common Scrambling Algorithm (CSA).
+El sistema de acceso condicional (CAS) es una solución compleja para proteger el contenido multimedia de accesos no autorizados. Astra puede comunicarse con sistemas de acceso condicional como Conax a través del protocolo Simulcrypt y cifrar el contenido multimedia mediante el algoritmo de codificación común (CSA).
 
-![CAS diagram](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas.svg)
+![Diagrama CAS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas.svg)
 
 ::note
-Content encryption is effective for protecting broadcast delivery methods such as satellite, cable, and terrestrial. However, for OTT delivery, more suitable methods and combination of content protection techniques are recommended for comprehensive protection against piracy.
+El cifrado de contenidos es eficaz para proteger métodos de difusión como satélite, cable y terrestre. Sin embargo, para la distribución OTT, se recomiendan métodos más adecuados y la combinación de técnicas de protección de contenidos para una protección integral contra la piratería.
 ::
 
-## CAS Configuration
+## Configuración CAS[](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt#cas-configuration)
 
-Choose in main menu Settings and click on CAS.
+Elija en el menú principal Ajustes y haga clic en CAS.
 
-![CAS Selector](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/selector.png)
+![Selector CAS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/selector.png)
 
-Select a CAS profile, or create a new one by selecting the New CAS item.
+Seleccione un perfil CAS o cree uno nuevo seleccionando el elemento Nuevo CAS.
 
-![Simulcrypt Options for CAS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas-options.png)
+![Opciones de Simulcrypt para CAS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas-options.png)
 
-- `Name` - arbitrary name-used for easy identification;
-- `Super CAS ID` - CAS Identifier is an 8 hexadecimal symbols;
-- `Start Stream ID with 1` - by default, stream numbering starts at 0. For some CAS (example: CTI), the numbering should be starts at 1;
-- `ECMG Channel ID` - channel number when connecting to CAS;
-- `ECMG Address` - IP address of the ECMG server;
-- `ECMG Port` - server ECMG port;
-- `Crypto period` - Key change interval, usually 10 seconds;
-- `EMMG Protocol` - The current implementation uses TCP;
-- `EMMG Port` - The port where the Astra will wait for a connection from the EMG server;
-- `EMM PID` - PID for EMM packages in the system (user Defined);
-- `EMM Private Data` - data to add to the CAT table. This data issued in the CAS software. If you do not have data, then this parameter is not filled;
-- `EMM Clone` - this checkbox activates the function of adding EMM to each encrypted CAS channel. EMM package will be available on any channel at the end user.
+- `Name` - Nombre arbitrario: se utiliza para facilitar la identificación;
+- `Super CAS ID` - El identificador CAS son 8 símbolos hexadecimales;
+- `Start Stream ID with 1` - por defecto, la numeración de los flujos comienza en 0. Para algunos CAS (ejemplo: CTI), la numeración debe comenzar en 1;
+- `ECMG Channel ID` - número de canal al conectarse a CAS;
+- `ECMG Address` - Dirección IP del servidor ECMG;
+- `ECMG Port` - puerto ECMG del servidor;
+- `Crypto period` - Intervalo de cambio de tecla, normalmente 10 segundos;
+- `EMMG Protocol` - La implementación actual utiliza TCP;
+- `EMMG Port` - El puerto en el que el Astra esperará una conexión del servidor EMG;
+- `EMM PID` - PID para paquetes EMM en el sistema (definido por el usuario);
+- `EMM Private Data` - datos para añadir a la tabla CAT. Estos datos se emiten en el software CAS. Si usted no tiene datos, entonces este parámetro no se llena;
+- `EMM Clone` - esta casilla activa la función de añadir EMM a cada canal CAS cifrado. El paquete EMM estará disponible en cualquier canal del usuario final.
 
-## Channel Configuration
+## Configuración de canales[](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt#channel-configuration)
 
-The next step is to configure the channels and append one or more Conditional Access Systems (CAS) to each channel. To do this, open the Dashboard and select the channel that you want to protect. Then, go to the Service tab in the channel settings and click "New CAS" to attach the CAS:
+El siguiente paso es configurar los canales y añadir uno o varios Sistemas de Acceso Condicional (CAS) a cada canal. Para ello, abra el panel de control y seleccione el canal que desea proteger. A continuación, vaya a la pestaña Servicio de la configuración del canal y haga clic en "Nuevo CAS" para adjuntar el CAS:
 
-![CAS Options for Channel](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/channel-options.png)
+![Opciones CAS para el canal](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/channel-options.png)
 
-- `ECM PID` - PID for ECM packages (User defined);
-- `ECM Private Data` - the data of the conditional access system is added to the description of the ECM stream in the PMT table. If these parameters do not exist, you do not need to add thems;
-- `Access Criteria` - this data will be provided by the CAS provider or defined on the CAS server.
+- `ECM PID` - PID para paquetes ECM (definidos por el usuario);
+- `ECM Private Data` - los datos del sistema de acceso condicional se añaden a la descripción del flujo ECM en la tabla PMT. Si estos parámetros no existen, no es necesario añadirlos;
+- `Access Criteria` - estos datos serán proporcionados por el proveedor CAS o definidos en el servidor CAS.
