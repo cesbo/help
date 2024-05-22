@@ -3,48 +3,42 @@ title: "MPEG-TS"
 date: 2023-06-13
 ---
 
-MPEG-TS (Transport Stream) - is a transport format for transmission video, audio, and other data over IP or broadband networks.
-Detailed description available in the [ISO 13818-1](https://www.iso.org/standard/74427.html) standard.
+MPEG-TS (Transport Stream) - es un formato de transporte para la transmisión de vídeo, audio y otros datos a través de redes IP o de banda ancha. Encontrará una descripción detallada en la norma [ISO 13818-1](https://www.iso.org/standard/74427.html){target="_blank"}
 
-## Packetized Elementary Stream
+## Flujo elemental empaquetado[](https://help.cesbo.com/misc/articles/format/mpegts#packetized-elementary-stream)
 
-Elementary Stream (ES) is a compressed data output from the encoder.
+El flujo elemental (ES) es una salida de datos comprimidos del codificador.
 
-Packetized Elementary Stream (PES) is a sequence of the headers with ES information and the ES frames.
-Multiplexing is an operation of the packetizing several elementary streams into single stream.
-Demultiplexing is the reverse process of multiplexing. Demultiplexing single stream into separate components and pass components to processing.
+El flujo elemental empaquetado (PES) es una secuencia de cabeceras con información ES y tramas ES. La multiplexación es una operación de paquetización de varios flujos elementales en un único flujo. La demultiplexación es el proceso inverso a la multiplexación. Demultiplexar un único flujo en componentes separados y pasar los componentes a procesamiento.
 
-## Program-Specific Information
+## Información específica del programa[](https://help.cesbo.com/misc/articles/format/mpegts#program-specific-information)
 
-Program-specific information (PSI) is a packets with information about stream for receiver to demultiplex and decode streams of program.
+La información específica del programa (PSI) es un paquete con información sobre el flujo para que el receptor pueda demultiplexar y descodificar los flujos del programa.
 
-- Program Association Table (PAT) - list of programs. Contains Program Number (PNR) and Packet Identifier (PID) of the associated PMT
-- Program Mapping Table (PMT) - list of program streams. PID's of the associated Video, Audio, and other data
-- Conditional Access Table (CAT) - information about Conditional Access Systems
+- Tabla de asociación de programas (PAT): lista de programas. Contiene el número de programa (PNR) y el identificador de paquete (PID) del PMT asociado.
+- Tabla de asignación de programas (PMT) - lista de flujos de programas. PID de los datos de vídeo, audio y otros asociados.
+- Tabla de acceso condicional (CAT): información sobre los sistemas de acceso condicional
 
-## Service Information
+## Información de servicio[](https://help.cesbo.com/misc/articles/format/mpegts#service-information)
 
-In addition to the PSI, data is needed to provide identification of services and events for the user:
+Además de la ISP, se necesitan datos que permitan identificar los servicios y eventos para el usuario:
 
-- Network Information Table (NIT)
-- Service Description Table (SDT) - information such as service name, provider name, etc
-- Event Information Table (EIT) - contains event information such as event name, start time, etc
-- Time and Date Table (TDT)
-- Time Offset Table (TOT)
+- Tabla de información de red (NIT)
+- Tabla de descripción de servicios (SDT): información como el nombre del servicio, el nombre del proveedor, etc.
+- Tabla de información de eventos (EIT): contiene información sobre los eventos, como el nombre, la hora de inicio, etc.
+- Tabla de fecha y hora (TDT)
+- Tabla de tiempos (TOT)
 
-## Transport Stream
+## Corriente de transporte[](https://help.cesbo.com/misc/articles/format/mpegts#transport-stream)
 
-Transport Stream is a sequence of the TS packets.
-TS packets have fixed length in 188 bytes. First byte, also called the sync byte, is always 0x47.
-Next 3 bytes is a header. Remain 184 bytes is a payload (PES, PSI, or SI packets).
+El flujo de transporte es una secuencia de paquetes TS. Los paquetes TS tienen una longitud fija de 188 bytes. El primer byte, también llamado byte de sincronización, es siempre 0x47. Los 3 bytes siguientes son la cabecera. Los 184 bytes restantes son la carga útil (paquetes PES, PSI o SI).
 
-TS Header contains next information:
+La cabecera TS contiene la siguiente información:
 
-- Packet Identifier (PID). It could be in range 0 - 8191
-- Continuity Counter (CC). It could be in range 0 - 15. With a counter the MPEG-TS analyzer able to detect corruption of the packets continuity.
-- Payload Unit Start Indicator - is a single bit indicates is packet contains begining of the payload
+- Identificador de paquete (PID). Puede estar en el rango 0 - 8191
+- Contador de continuidad (CC). Puede estar en el rango 0 - 15. Con un contador el analizador MPEG-TS capaz de detectar la corrupción de la continuidad de los paquetes.
+- Indicador de inicio de la unidad de carga útil: un único bit indica si el paquete contiene el inicio de la carga útil.
 
-## PID - TS Packet identifier
+## PID - Identificador del paquete TS[](https://help.cesbo.com/misc/articles/format/mpegts#pid-ts-packet-identifier)
 
-Elementary streams (video, audio) and information tables are packed to the TS-packets. Each packet has unique identifier - PID.
-The PID value must be between 0 and 8191. The range 0 to 31 and 8191 is reserved and should not be used. You can use any PID in the range from 32 to 8190.
+Los flujos elementales (vídeo, audio) y las tablas de información se empaquetan en los paquetes TS. Cada paquete tiene un identificador único (PID). El valor del PID debe estar comprendido entre 0 y 8191. El rango de 0 a 31 y 8191 está reservado y no debe utilizarse. Se puede utilizar cualquier PID en el rango de 32 a 8190.
