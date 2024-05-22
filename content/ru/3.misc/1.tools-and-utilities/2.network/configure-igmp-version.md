@@ -3,36 +3,36 @@ title: "Настройка IGMP версии"
 date: 2023-03-02
 ---
 
-IGMP (Internet Group Management Protocol) is a communication protocol used by devices on a network to join and leave multicast groups. IGMP has several versions, including IGMPv2 and IGMPv3, which offer different features and improvements.
+IGMP (Internet Group Management Protocol) - это коммуникационный протокол, используемый устройствами в сети для присоединения к многоадресным группам и выхода из них. IGMP имеет несколько версий, включая IGMPv2 и IGMPv3, которые предлагают различные возможности и усовершенствования.
 
-Some network equipment, such as switches or routers, may only support IGMPv2, which can cause issues if your server attempts to join a multicast group using IGMPv3. Therefore, it may be necessary to change the IGMP version used by the server.
+Некоторое сетевое оборудование, например коммутаторы или маршрутизаторы, может поддерживать только IGMPv2, что может вызвать проблемы при попытке сервера присоединиться к многоадресной группе, использующей IGMPv3. Поэтому может потребоваться изменить версию IGMP, используемую сервером.
 
-## Configuration
+## Конфигурация[](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version#configuration)
 
-To change IGMP version on your server, you can modify the `/etc/sysctl.conf` file. First, determine the interface that needs to use a different IGMP version (e.g., eth0). Then, add the following line to the `/etc/sysctl.conf` file:
+Чтобы изменить версию IGMP на сервере, можно изменить параметр `/etc/sysctl.conf` файл. Сначала определите интерфейс, который должен использовать другую версию IGMP (например, eth0). Затем добавьте следующую строку в файл `/etc/sysctl.conf` файл:
 
 ```
 net.ipv4.conf.eth0.force_igmp_version=2
 ```
 
-This line forces your server to use IGMPv2 on the specified interface. To apply the changes, save file and execute the following command:
+Эта строка заставляет ваш сервер использовать IGMPv2 на указанном интерфейсе. Чтобы применить изменения, сохраните файл и выполните следующую команду:
 
 ```
 sudo sysctl -p
 ```
 
-## Check IGMP version
+## Проверка версии IGMP[](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version#check-igmp-version)
 
-To confirm that the IGMP version has been changed successfully, you can use the tcpdump command to capture network traffic on the specified interface. For example, to capture IGMP traffic on eth0, execute the following command:
+Для подтверждения успешного изменения версии IGMP можно воспользоваться командой tcpdump для захвата сетевого трафика на указанном интерфейсе. Например, для захвата IGMP-трафика на интерфейсе eth0 выполните следующую команду:
 
 ```
 sudo tcpdump -i eth1 igmp
 ```
 
-Then try to subscribe to the multicast stream. For example:
+Затем попробуйте подписаться на многоадресный поток. Например:
 
 ```
 astra --analyze udp://eth1@239.255.1.1:1234
 ```
 
-This will display any IGMP packets on the interface. Check the output to confirm that the IGMP version being used is now IGMPv2.
+В результате будут отображены все IGMP-пакеты на интерфейсе. Проверьте вывод, чтобы убедиться, что используемая версия IGMP теперь IGMPv2.
