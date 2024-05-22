@@ -3,7 +3,7 @@ title: "MPEG-TS"
 date: 2023-06-13
 ---
 
-MPEG-TS (Transport Stream) - транспортный формат для передачи видео, аудио и других данных по IP или широкополосным сетям. Подробное описание содержится в стандарте [ISO 13818-1](https://www.iso.org/standard/74427.html).
+MPEG-TS (Transport Stream) - транспортный формат для передачи видео, аудио и других данных по IP или широкополосным сетям. Подробное описание содержится в стандарте [ISO 13818-1](https://www.iso.org/standard/74427.html){target="_blank"}
 
 ## Пакетированный элементарный поток[](https://help.cesbo.com/misc/articles/format/mpegts#packetized-elementary-stream)
 
