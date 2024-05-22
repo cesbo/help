@@ -1,5 +1,5 @@
 ---
-title: "Mosaic: Channel Screenshots on Dashboard"
+title: "Mosaic: Скриншоты каналов в интерфейсе"
 date: 2023-08-28
 image: https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png
 ---
