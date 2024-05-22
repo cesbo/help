@@ -1,22 +1,22 @@
 ---
-title: "EIT Stream"
+title: "Corriente IET"
 date: 2023-03-17
 ---
 
-EIT Stream is a tool to convert [XMLTV files](/misc/articles/format/xmltv) into MPEG-TS stream with Event Information Tables (EIT) for broadcasting networks like DVB, ATSC, ISDB.
+EIT Stream es una herramienta para convertir [archivos XMLTV](https://help.cesbo.com/misc/articles/format/xmltv) en flujo MPEG-TS con Tablas de Información de Eventos (EIT) para redes de difusión como DVB, ATSC, ISDB.
 
-## Installation
+## Instalación[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#installation)
 
-Just download single binary file and set execute permission:
+Sólo tiene que descargar un único archivo binario y establecer el permiso de ejecución:
 
 ```
 curl -Lo /usr/bin/eit-stream http://cesbo.com/and/eit-stream
 chmod +x /usr/bin/eit-stream
 ```
 
-## Configuration
+## Configuración[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#configuration)
 
-Create a configuration file `/etc/eit-stream.conf` with any text editor. Example:
+Crear un archivo de configuración `/etc/eit-stream.conf` con cualquier editor de texto. Ejemplo:
 
 ```
 xmltv = /opt/xmltv.xml
@@ -54,69 +54,67 @@ pnr = 201
 xmltv-id = euronews
 ```
 
-Lines started with symbol `#` is a comment and ignored.
+Líneas iniciadas con el símbolo `#` es un comentario e ignorado.
 
-### General options
+### Opciones generales
 
-- `xmltv` - path to local xmltv file. or http/https link to xmltv or gzip xmltv file. This option could be redefined in `[multiplex]` or in `[multiplex/service]`
-- `output` - destination UDP address
-- `onid` - original network identifier
-- `codepage` - codepage. This option could be redefined in `[multiplex]` or in `[multiplex/service]`
-- `eit-days` - number of days in epg. default is 3
-- `eit-rate` - bitrate in kbit/s. default 15 kbit/s per each service
+- `xmltv` - ruta al archivo xmltv local. o enlace http/https al archivo xmltv o gzip xmltv. Esta opción podría redefinirse en `[multiplex]` o en `[multiplex/service]`
+- `output` - dirección UDP de destino
+- `onid` - identificador de red original
+- `codepage` - codepage. Esta opción podría redefinirse en `[multiplex]` o en `[multiplex/service]`
+- `eit-days` - número de días en epg. por defecto es 3
+- `eit-rate` - bitrate en kbit/s. por defecto 15 kbit/s por cada servicio
 
-### Supported codepages
+### Páginas de código compatibles
 
-Next codepages available for text encoding:
+Próximas páginas de códigos disponibles para la codificación de texto:
 
-- `0` - Default. Latin (ISO 6937)
-- `1` - Western European (ISO 8859-1)
-- `2` - Central European (ISO 8859-2)
-- `3` - South European (ISO 8859-3)
-- `4` - North European (ISO 8859-4)
-- `5` - Cyrillic (ISO 8859-5)
-- `6` - Arabic (ISO 8859-6)
-- `7` - Greek (ISO 8859-7)
-- `8` - Hebrew (ISO 8859-8)
-- `9` - Turkish (ISO 8859-9)
-- `10` - Nordic (ISO 8859-10)
-- `11` - Thai (ISO 8859-11)
-- `13` - Baltic Rim (ISO 8859-13)
-- `14` - Celtic (ISO 8859-14)
-- `15` - Western European (ISO 8859-15)
+- `0` - Por defecto. Latín (ISO 6937)
+- `1` - Europa Occidental (ISO 8859-1)
+- `2` - Centroeuropeo (ISO 8859-2)
+- `3` - Sur de Europa (ISO 8859-3)
+- `4` - Norte de Europa (ISO 8859-4)
+- `5` - Cirílico (ISO 8859-5)
+- `6` - Árabe (ISO 8859-6)
+- `7` - Griego (ISO 8859-7)
+- `8` - Hebreo (ISO 8859-8)
+- `9` - Turco (ISO 8859-9)
+- `10` - Nórdica (ISO 8859-10)
+- `11` - Tailandés (ISO 8859-11)
+- `13` - Borde Báltico (ISO 8859-13)
+- `14` - Celta (ISO 8859-14)
+- `15` - Europa Occidental (ISO 8859-15)
 - `21` - UTF-8
 
-### Time and date options
+### Opciones de fecha y hora
 
-Section `[tdt-tot]`:
+Sección `[tdt-tot]`:
 
-- `country` - country code in format ISO 3166-1 alpha-3
-- `offset` - the signed time offset in minutes from GMT. For example +120 is GMT+2 or -300 is GMT-5
+- `country` - código de país en formato ISO 3166-1 alfa-3
+- `offset` - el desfase horario en minutos con respecto a GMT. Por ejemplo, +120 es GMT+2 o -300 es GMT-5.
 
-### Multiplex options
+### Opciones multiplex
 
-Section `[multiplex]`
+Sección `[multiplex]`
 
-- `tsid` - multiplex transport stream identifier
-- `name` - optional field to describe multiplex
+- `tsid` - identificador de flujo de transporte multiplexado
+- `name` - campo opcional para describir el multiplex
 
-### Service options
+### Opciones de servicio
 
-Section `[multiplex/service]`
+Sección `[multiplex/service]`
 
-- `pnr` - channel number/pnr
-- `xmltv-id` - channel id in xmltv
-- `parental-rating` - age restriction. Value defined in pairs: country and age. For example: `parental-rating = EST 16 USA 14`. Country code in ISO 3166-1 alpha-3 format (3 letters). Age from 4 to 18 (inclusive), 0 - without restrictions.
+- `pnr` - número de canal/pnr
+- `xmltv-id` - id de canal en xmltv
+- `parental-rating` - restricción de edad. Valor definido en pares: país y edad. Por ejemplo: `parental-rating = EST 16 USA 14`. Código de país en formato ISO 3166-1 alfa-3 (3 letras). Edad de 4 a 18 años (inclusive), 0 - sin restricciones.
 
-## Mux stream with EIT to MPTS
+## Flujo Mux con EIT a MPTS[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#mux-stream-with-eit-to-mpts)
 
-With Astra you can append UDP stream with EIT to the MPTS.
-In the MPTS settings append input and set and UDP address, for example in configuration above address is `udp://lo@239.0.0.1:1234`.
-In the MPTS advanced settings turn on option "Pass EIT".
+Con Astra puedes añadir un flujo UDP con EIT al MPTS. En la configuración del MPTS añada la entrada y establezca la dirección UDP, por ejemplo en la configuración anterior la dirección es `udp://lo@239.0.0.1:1234`. En los ajustes avanzados del MPTS, active la opción "Pasar IET".
 
-## Autostart
+## Arranque automático[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#autostart)
 
-Register service in systemd to start service in background and autostart on system startup. Create file `/etc/systemd/system/eit-stream.service`:
+Registrar el servicio en systemd para iniciar el servicio en segundo plano y autoarranque en el arranque del sistema. Crear archivo `/etc/systemd/system/eit-stream.service`:
 
 ```
 [Unit]
@@ -133,16 +131,16 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-Next command could be used to manage service:
+El siguiente comando puede utilizarse para gestionar el servicio:
 
-- start service: `systemctl start eit-stream`
-- stop service: `systemctl stop eit-stream`
-- enable auto-start: `systemctl enable eit-stream`
-- disable auto-start: `systemctl disable eit-stream`
+- iniciar servicio: `systemctl start eit-stream`
+- detener el servicio: `systemctl stop eit-stream`
+- activar autoarranque: `systemctl enable eit-stream`
+- desactivar el arranque automático: `systemctl disable eit-stream`
 
-## Reload
+## Recarga[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#reload)
 
-To restart service once at night append next line into /etc/crontab:
+Para reiniciar el servicio una vez por la noche, añada la siguiente línea a /etc/crontab:
 
 ```
 0   2   *   *   *   root systemctl restart eit-stream
