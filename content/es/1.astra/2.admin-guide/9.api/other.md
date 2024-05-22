@@ -1,71 +1,71 @@
 ---
-title: "Other API Methods"
+title: "Otros métodos de la API"
 date: 2023-06-30
 ---
 
-## Astra Version
+## Versión Astra[](https://help.cesbo.com/astra/admin-guide/api/other#astra-version)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "version"
 }
 ```
 
-## Astra Restart
+## Astra Restart[](https://help.cesbo.com/astra/admin-guide/api/other#astra-restart)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "restart"
 }
 ```
 
-## Download configuration
+## Descargar configuración[](https://help.cesbo.com/astra/admin-guide/api/other#download-configuration)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "load"
 }
 ```
 
-In the response will be whole configuration file.
+En la respuesta estará todo el archivo de configuración.
 
-## Upload configuration
+## Cargar configuración[](https://help.cesbo.com/astra/admin-guide/api/other#upload-configuration)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "upload"
     "config": {}
 }
 ```
 
-- `config` - whole configuration file
+- `config` - archivo de configuración completo
 
-## Set serial number
+## Establecer número de serie[](https://help.cesbo.com/astra/admin-guide/api/other#set-serial-number)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
     "cmd": "set-license",
     "license": "xxx"
 }
 ```
 
-- `license` - license serial number
+- `license` - número de serie de la licencia
 
-## Set image to the stream tile
+## Establecer la imagen en el azulejo de flujo[](https://help.cesbo.com/astra/admin-guide/api/other#set-image-to-the-stream-tile)
 
-Request: `POST /control/`
+Petición: `POST /control/`
 
-```json
+```
 {
    "cmd": "set-stream-image",
    "id": "a001",
@@ -73,7 +73,7 @@ Request: `POST /control/`
 }
 ```
 
-- `id` - stream identifier
-- `url` - image address, as well could be used data-format, for example: `data:image/png;base64,...`
+- `id` - identificador de flujo
+- `url` - dirección de la imagen, también se podría utilizar el formato de datos, por ejemplo: `data:image/png;base64,...`
 
-This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](/astra/admin-guide/administration/mosaic)
+Este método se utiliza en el script para establecer capturas de pantalla para los mosaicos de flujo. Leer más en Capturas de pantalla de [canal en el panel de control](https://help.cesbo.com/astra/admin-guide/administration/mosaic).
