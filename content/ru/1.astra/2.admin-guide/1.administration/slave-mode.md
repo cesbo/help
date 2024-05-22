@@ -1,5 +1,5 @@
 ---
-title: "Fault-tolerant configuration"
+title: "Отказоустойчивая конфигурация"
 date: 2023-08-08
 ---
 
