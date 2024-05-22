@@ -3,20 +3,20 @@ title: "UDP"
 date: 2023-06-13
 ---
 
-UDP (User Datagram Protocol) is a communication protocol utilized in local networks or the Internet, known for its minimal delays and less-than-optimal stability. UDP provides message exchange between application programs and receivers, using checksums to maintain data integrity and port numbers to address various functions at the source and destination of the datagram.
+UDP (User Datagram Protocol) es un protocolo de comunicación utilizado en redes locales o en Internet, conocido por sus retrasos mínimos y su estabilidad poco óptima. UDP permite el intercambio de mensajes entre programas de aplicación y receptores, utilizando sumas de comprobación para mantener la integridad de los datos y números de puerto para direccionar diversas funciones en el origen y el destino del datagrama.
 
-Detailed description available in the [RFC768](https://www.rfc-editor.org/rfc/rfc768){target="_blank"} standard.
+Descripción detallada disponible en la norma [RFC768](https://www.rfc-editor.org/rfc/rfc768){target="_blank"} 
 
-## Multicast
+## Multidifusión[](https://help.cesbo.com/misc/articles/protocols/udp#multicast)
 
-In computer networking, multicast refers to group communication in which data transmission occurs simultaneously to a group of destination receivers. Multicast is especially effective in cases of multiple receivers as it can efficiently use bandwidth by sending a single copy of the data across the network backbone. This ability makes it an ideal protocol for streaming Digital TV.
+En redes informáticas, la multidifusión se refiere a la comunicación de grupo en la que la transmisión de datos se produce simultáneamente a un grupo de receptores de destino. La multidifusión es especialmente eficaz en casos de múltiples receptores, ya que puede utilizar eficazmente el ancho de banda enviando una sola copia de los datos a través de la red troncal. Esta capacidad lo convierte en un protocolo ideal para la transmisión de TV digital.
 
-![UDP Multicast](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
+![Multidifusión UDP](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
-## Broadcast
+## Difusión[](https://help.cesbo.com/misc/articles/protocols/udp#broadcast)
 
-**Never use it for Digital TV!** Broadcasting is a method of transferring a message to all recipients simultaneously.
+**No lo utilice nunca para la televisión digital.** La radiodifusión es un método de transmisión de un mensaje a todos los destinatarios simultáneamente.
 
-## Unicast
+## Unicast[](https://help.cesbo.com/misc/articles/protocols/udp#unicast)
 
-Unicast, a one-to-one transmission, is frequently utilized in higher layer protocols like RTSP and SRT. It can also serve to transmit Digital TV between different servers within a localhost or local network - for example, from a receiver to a transcoder, and then to the HLS segmenter.
+Unicast, una transmisión uno a uno, se utiliza frecuentemente en protocolos de capa superior como RTSP y SRT. También puede servir para transmitir TV Digital entre diferentes servidores dentro de un localhost o red local - por ejemplo, desde un receptor a un transcodificador, y luego al segmentador HLS.
