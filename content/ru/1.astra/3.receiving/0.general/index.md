@@ -1,5 +1,5 @@
 ---
-title: "General"
+title: "Общие сведения"
 noindex: true
 ---
 
