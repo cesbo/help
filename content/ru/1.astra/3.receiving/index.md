@@ -1,5 +1,5 @@
 ---
-title: "Получение"
+title: "Прием"
 noindex: true
 navigation:
   color: "#519ed3"
