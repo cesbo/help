@@ -1,5 +1,5 @@
 ---
-title: "Playlist for HTTP Play"
+title: "Плейлист для HTTP Play"
 date: 2023-08-22
 ---
 
