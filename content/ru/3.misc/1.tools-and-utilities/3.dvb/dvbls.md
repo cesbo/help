@@ -1,5 +1,5 @@
 ---
-title: "Astra DVB List"
+title: "Astra список DVB"
 date: 2023-02-23
 ---
 
