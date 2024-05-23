@@ -1,5 +1,5 @@
 ---
-title: "Astra Logs"
+title: "Журналы Астра"
 noindex: true
 ---
 
