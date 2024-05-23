@@ -1,5 +1,5 @@
 ---
-title: "Broadcasting"
+title: "Вещание"
 noindex: true
 ---
 
