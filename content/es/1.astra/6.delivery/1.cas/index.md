@@ -1,5 +1,5 @@
 ---
-title: "Broadcasting Access Control"
+title: "Control de acceso a la radiodifusión"
 noindex: true
 ---
 

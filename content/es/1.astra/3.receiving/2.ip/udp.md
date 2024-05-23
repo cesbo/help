@@ -1,13 +1,13 @@
 ---
-title: "Receiving UDP/RTP"
+title: "Recepción UDP/RTP"
 date: 2023-03-04
 ---
 
-UDP (User Datagram Protocol) is the most popular protocol for delivering digital TV in local networks, including those in hospitality organizations and internet provider city networks. As a connectionless protocol, UDP does not provide any error-checking or correction mechanisms. This makes it a faster and more lightweight protocol than TCP.
+UDP (Protocolo de Datagramas de Usuario) es el protocolo más popular para la distribución de TV digital en redes locales, incluidas las de organizaciones de hostelería y redes urbanas de proveedores de Internet. Como protocolo sin conexión, UDP no proporciona mecanismos de comprobación o corrección de errores. Esto lo convierte en un protocolo más rápido y ligero que TCP.
 
-## Media Address Format
+## Formato de dirección de medios[](https://help.cesbo.com/astra/receiving/ip/udp#media-address-format)
 
-UDP address is used to identify the location of the media stream that is being transmitted over the network
+La dirección UDP se utiliza para identificar la ubicación del flujo multimedia que se transmite por la red
 
 ```
 udp://address
@@ -15,42 +15,42 @@ udp://address:port
 udp://interface@address:port#options
 ```
 
-- `interface` - name of the network interface, such as `eth0`, to receive UDP stream. If not defined, the UDP stream will be received according to the system routes
-- `address` - IPv4 address of the UDP stream, It could be a multicast group or a local interface IP address to receive unicast streams
-- `port` - network port to receive the UDP stream. If not specified, the default value is `1234`
+- `interface` - nombre de la interfaz de red, por ejemplo `eth0`para recibir el flujo UDP. Si no se define, el flujo UDP se recibirá según las rutas del sistema.
+- `address` - Dirección IPv4 del flujo UDP, puede ser un grupo multidifusión o una dirección IP de interfaz local para recibir flujos unidifusión.
+- `port` - puerto de red para recibir el flujo UDP. Si no se especifica, el valor por defecto es `1234`
 
-Additional Options:
+Opciones adicionales:
 
-- `src=IP` - UDP multicast source address for IGMPv3. Should be enabled IGMPv3 in linux settings: [Configure IGMP Version](/misc/tools-and-utilities/network/configure-igmp-version). Available from version 230303 and later
-- `sync` - receives UDP in separate thread with bitrate syncing
-- `no_sync` - disables bitrate syncing if enabled globally
-- `renew=seconds` - interval for renewing the multicast subscription. Usually operation renew IGMP subscription automatically
-- `socket_size=bytes` - size of the system socket, with the default value taken from: `sysctl net.core.rmem_default`
+- `src=IP` - Dirección de origen de multidifusión UDP para IGMPv3. Debe estar habilitado IGMPv3 en la configuración de linux: [Configurar versión IGMP](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version). Disponible a partir de la versión 230303
+- `sync` - recibe UDP en un hilo separado con sincronización de bitrate
+- `no_sync` - desactiva la sincronización del bitrate si está activada globalmente
+- `renew=seconds` - intervalo para renovar la suscripción multicast. Normalmente la operación renueva la suscripción IGMP automáticamente
+- `socket_size=bytes` - tamaño del socket del sistema, con el valor por defecto tomado de: `sysctl net.core.rmem_default`
 
-Examples of UDP addresses:
+Ejemplos de direcciones UDP:
 
-- `udp://127.0.0.1:10001` - receives the stream on localhost using port 10001. This can be useful for transferring streams between different services, like receiving a transcoded stream from FFmpeg
-- `udp://eth0@239.255.1.1#pnr=100` - receives multicast group 239.255.1.1 on the eth0 interface. The option `pnr` enables stream demultiplexing and selects program number 100
+- `udp://127.0.0.1:10001` - recibe el flujo en localhost usando el puerto 10001. Esto puede ser útil para transferir flujos entre diferentes servicios, como recibir un flujo transcodificado desde FFmpeg.
+- `udp://eth0@239.255.1.1#pnr=100` - recibe el grupo multicast 239.255.1.1 en la interfaz eth0. La opción `pnr` activa la demultiplexación de flujos y selecciona el número de programa 100
 
-## Web Interface
+## Interfaz web[](https://help.cesbo.com/astra/receiving/ip/udp#web-interface)
 
-To configure a new UDP input using the Web Interface, begin by selecting "New Stream" from the main menu. Then, in the Input List, click on the gear icon and set the "Input Type" to UDP. Alternatively, you can modify an existing stream by opening its settings, adding a New Input, and clicking on the corresponding gear icon.
+Para configurar una nueva entrada UDP utilizando la Interfaz Web, comience seleccionando "Nuevo flujo" en el menú principal. A continuación, en la Lista de Entradas, haga clic en el icono del engranaje y ajuste el "Tipo de Entrada" a UDP. Alternativamente, puede modificar un flujo existente abriendo su configuración, añadiendo una Nueva Entrada y haciendo clic en el icono del engranaje correspondiente.
 
-![UDP Options](https://cdn.cesbo.com/help/astra/receiving/ip/udp/options.png)
+![Opciones UDP](https://cdn.cesbo.com/help/astra/receiving/ip/udp/options.png)
 
-Most options presented in the web interface correspond directly to the components of the UDP address, as described in the "Media Address Format" section. However, there are also some additional options you might find useful:
+La mayoría de las opciones presentadas en la interfaz web corresponden directamente a los componentes de la dirección UDP, tal y como se describe en la sección "Formato de dirección de medios". Sin embargo, también hay algunas opciones adicionales que te pueden resultar útiles:
 
-- `PNR` - program number for MPTS streams. When defined, it enables stream demultiplexing and selects the program with the specified number
-- `DD-CI CAM` - this option is now deprecated and has been replaced by virtual adapters. More information can be found in ...
-- `Softcam` - selects a descrambler for the CAM Client. You can learn more about this in ...
-- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/astra/processing/cas/decrypt-biss)
+- `PNR` - Número de programa para secuencias MPTS. Cuando se define, activa la demultiplexación de secuencias y selecciona el programa con el número especificado.
+- `DD-CI CAM` - esta opción está obsoleta y ha sido sustituida por adaptadores virtuales. Más información en ...
+- `Softcam` - selecciona un descodificador para el cliente CAM. Puede obtener más información en ...
+- `BISS Key` - para el descodificador BISS CAS. Más información en [Descifrar flujos con BISS CAS](https://help.cesbo.com/astra/processing/cas/decrypt-biss)
 
-There are also advanced options available for further customization:
+También hay opciones avanzadas disponibles para una mayor personalización:
 
-![Advanced Options](https://cdn.cesbo.com/help/astra/receiving/ip/udp/advanced.png)
+![Opciones avanzadas](https://cdn.cesbo.com/help/astra/receiving/ip/udp/advanced.png)
 
-Please use the advanced options only if you understand their implications
+Utilice las opciones avanzadas sólo si comprende sus implicaciones
 
-## Troubleshooting
+## Solución de problemas[](https://help.cesbo.com/astra/receiving/ip/udp#troubleshooting)
 
-Find more information in [Troubleshooting UDP reception](/misc/troubleshooting/receiving/udp)
+Más información en [Resolución de problemas de recepción UDP](https://help.cesbo.com/misc/troubleshooting/receiving/udp)

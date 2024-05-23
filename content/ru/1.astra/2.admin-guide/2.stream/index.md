@@ -1,5 +1,5 @@
 ---
-title: "Stream Settings"
+title: "Настройки потока"
 noindex: true
 ---
 

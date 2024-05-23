@@ -1,35 +1,35 @@
 ---
-title: "Payment Methods"
+title: "Formas de pago"
 date: 2023-02-22
 ---
 
-Here are the payment options currently available:
+Estas son las opciones de pago disponibles actualmente:
 
-## Credit Cards
+## Tarjetas de crédito[](https://help.cesbo.com/misc/articles/terms-and-conditions/payment-methods#credit-cards)
 
-We accept payments from Visa and MasterCard cards with PCI-DSS compliant providers:
+Aceptamos pagos con tarjetas Visa y MasterCard con proveedores que cumplen la normativa PCI-DSS:
 
-- https://stripe.com
-- https://every-pay.com
+- [https://stripe.com](https://stripe.com/)
+- [https://every-pay.com](https://every-pay.com/)
 
-## PayPal
+## PayPal[](https://help.cesbo.com/misc/articles/terms-and-conditions/payment-methods#paypal)
 
-We also support PayPal payments. PayPal supports more credit card providers and as well as bank transfers.
+También admitimos pagos con PayPal. PayPal admite más proveedores de tarjetas de crédito y transferencias bancarias.
 
-## Bank transfer
+## Transferencia bancaria[](https://help.cesbo.com/misc/articles/terms-and-conditions/payment-methods#bank-transfer)
 
-If you prefer to pay by bank transfer, we accept payments in EUR. Please note that bank transfers may take several business days to be processed, and your account will be updated once we receive confirmation of payment.
+Si prefiere pagar por transferencia bancaria, aceptamos pagos en euros. Tenga en cuenta que las transferencias bancarias pueden tardar varios días laborables en procesarse, y su cuenta se actualizará en cuanto recibamos la confirmación del pago.
 
-## Our Partners
+## Nuestros socios[](https://help.cesbo.com/misc/articles/terms-and-conditions/payment-methods#our-partners)
 
-In addition to the above payment methods, our partners in several countries offer local payment options:
+Además de los métodos de pago mencionados, nuestros socios en varios países ofrecen opciones de pago locales:
 
-- 🇧🇾 Belarus. SP Vitaly Tumashevky
-- 🇷🇺 Russia. SP Vera Dyldina
-- 🇺🇦 Ukraine. TK CESBO LLC
-- 🇩🇪 Germany. Showeikh International GmbH
-- 🇩🇪 Germany. Digital Devices Distribution GmbH
+- 🇧🇾 Bielorrusia. SP Vitaly Tumashevky
+- 🇷🇺 Rusia. SP Vera Dyldina
+- 🇺🇦 Ucrania. TK CESBO LLC
+- 🇩🇪 Alemania. Showeikh International GmbH
+- 🇩🇪 Alemania. Digital Devices Distribution GmbH
 
-## VAT
+## IVA[](https://help.cesbo.com/misc/articles/terms-and-conditions/payment-methods#vat)
 
-VAT - is an European Union (EU) Value-Added Tax. The EU Customers order may be subject to VAT at the rate applicable in your EU Member State
+El IVA es un impuesto sobre el valor añadido de la Unión Europea (UE). El pedido de los clientes de la UE puede estar sujeto al IVA al tipo aplicable en su Estado miembro de la UE

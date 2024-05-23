@@ -1,11 +1,11 @@
 ---
-title: "Receiving HTTP MPEG-TS"
+title: "Прием HTTP MPEG-TS"
 date: 2023-08-10
 ---
 
-HTTP-based protocol for video streaming. Astra receives continuous stream from the server in HTTP response.
+Протокол на основе HTTP для потокового видео. Astra получает непрерывный поток от сервера в виде HTTP-ответа.
 
-## Address format
+## Формат адреса[](https://help.cesbo.com/astra/receiving/ip/http#address-format)
 
 ```
 http://address
@@ -13,21 +13,21 @@ http://address:port/path
 http://login:password@address:port/path#options
 ```
 
-This is common HTTP address. Astra supports https as well.
+Это обычный HTTP-адрес. Astra также поддерживает https.
 
-- `login:password` – login and password for HTTP authentication. Supports Basic and Digest authentication methods
-- `address` – IPv4 server address or domain name
-- `port` – port number. Default: `80` for http and `443` for https
-- `path` – the path to the resource. Default: `/`
+- `login:password` - логин и пароль для HTTP-аутентификации. Поддерживаются методы аутентификации Basic и Digest
+- `address` - Адрес сервера IPv4 или доменное имя
+- `port` - номер порта. По умолчанию: `80` для http и `443` для https
+- `path` - путь к ресурсу. По умолчанию: `/`
 
-Options:
+Варианты:
 
-- `ua=Name` – custom User-Agent header
-- `timeout=N` - timeout for starting receive content from the server. By default `10` seconds
-- `debug` - log response headers. Debug should also be enabled in the log settings
-- `buffer_time=N` - specifies the size of the temporary buffer for receiving stream and synchronizing the bitrate. Astra downloads stream data to the buffer at maximum speed, then sends data evenly for processing
-- `no_sync` - is a short option for `buffer_time=0` turns synchronization off and downloads stream data without any limits
+- `ua=Name` - пользовательский заголовок User-Agent
+- `timeout=N` - таймаут для начала получения содержимого с сервера. По умолчанию `10` секунд
+- `debug` - заголовки ответов журнала. Отладка также должна быть включена в настройках журнала
+- `buffer_time=N` - задает размер временного буфера для приема потока и синхронизации битрейта. Astra загружает данные потока в буфер с максимальной скоростью, затем равномерно отправляет данные на обработку
+- `no_sync` - является коротким вариантом для `buffer_time=0` отключает синхронизацию и загружает потоковые данные без ограничений
 
-## Web Interface
+## Веб-интерфейс[](https://help.cesbo.com/astra/receiving/ip/http#web-interface)
 
-To set up HTTP MPEG-TS input in Astra, just write your source address to the Input field.
+Для настройки входа HTTP MPEG-TS в Astra достаточно записать адрес источника в поле Input.

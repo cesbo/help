@@ -1,5 +1,5 @@
 ---
-title: "Broadcasting Hardware"
+title: "Hardware de radiodifusión"
 noindex: true
 ---
 

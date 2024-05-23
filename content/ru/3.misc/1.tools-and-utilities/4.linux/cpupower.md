@@ -1,53 +1,53 @@
 ---
-title: "CPU Power Mode"
+title: "Режим питания процессора CPU Power"
 date: 2023-09-28
 ---
 
-In the world of digital TV streaming, every millisecond matters. Delays or lags can significantly impact the quality of service.
+В мире потокового цифрового телевидения важна каждая миллисекунда. Задержки или запаздывания могут существенно повлиять на качество обслуживания.
 
-One of the key factors is the CPU power mode. By default, Linux servers have their CPUs set to a power-saving mode to reduce power consumption and manage heat generation. To ensure optimal performance of your streaming software, it is recommended to set your CPU to its maximum performance mode.
+Одним из ключевых факторов является режим энергопотребления процессора. По умолчанию в Linux-серверах процессоры переведены в энергосберегающий режим для снижения энергопотребления и управления тепловыделением. Для обеспечения оптимальной работы потокового ПО рекомендуется перевести процессор в режим максимальной производительности.
 
-## With cpupower utility
+## С помощью утилиты cpupower[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#with-cpupower-utility)
 
-To check the CPU power mode on a Linux server, you can use the `cpupower` utility. This utility is part of the `linux-tools-common` package.
+Для проверки режима энергопотребления процессора на сервере Linux можно воспользоваться командой `cpupower` утилита. Эта утилита входит в состав `linux-tools-common` пакет.
 
-### Install cpupower
+### Установить cpupower
 
 ```
 sudo apt-get update
 sudo apt-get install linux-tools-common
 ```
 
-### Check current settings
+### Проверка текущих настроек
 
 ```
 cpupower frequency-info
 ```
 
-This command will display the current CPU frequency, governor and other information. If the governor is set to 'powersave' or 'ondemand', then the CPU is in power saving mode.
+Эта команда отображает текущую частоту процессора, параметры регулятора и другую информацию. Если регулятор установлен в положение 'powersave' или 'ondemand', то процессор находится в режиме энергосбережения.
 
-### Disable the power saving mode
+### Отключение режима энергосбережения
 
-If you want to disable the power saving mode, you can set the governor to `performance`. This will make the CPU run at maximum frequency.
+Если необходимо отключить режим энергосбережения, можно установить регулятор в положение `performance`. Это заставит процессор работать на максимальной частоте.
 
 ```
 cpupower frequency-set -g performance
 ```
 
-This setting will be lost after a reboot. If you want to make it permanent, you can add the above command to `/etc/rc.local` file so that it gets executed at every boot.
+Эта настройка будет потеряна после перезагрузки. Если вы хотите сделать ее постоянной, то можете добавить приведенную выше команду в `/etc/rc.local` файл, чтобы он выполнялся при каждой загрузке.
 
-## Check CPU mode manually
+## Проверьте режим работы процессора вручную[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#check-cpu-mode-manually)
 
 ```
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
-This command will display the current CPU governor for each core. Information about current CPU frequency available in the `/proc/cpuinfo` file:
+Эта команда отображает текущую частоту процессора для каждого ядра. Информация о текущей частоте процессора доступна в разделе `/proc/cpuinfo` файл:
 
 ```
-processor	: 0
-model name	: Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
-cpu MHz		: 1197.109
+processor   : 0
+model name  : Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz
+cpu MHz     : 1197.109
 ```
 
-as we can see current CPU frequency is only 1.2GHz.
+как мы видим, текущая частота процессора составляет всего 1,2 ГГц.

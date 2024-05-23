@@ -1,65 +1,65 @@
 ---
-title: "Remapping Stream PIDs"
+title: "Переопределение PID потоков"
 date: 2023-07-17
 ---
 
-The Remap feature in Astra allows modify the Packet Identifier (PID) for MPEG-TS elementary streams.
+Функция Remap в Astra позволяет изменять идентификатор пакета (PID) для элементарных потоков MPEG-TS.
 
-## Use Cases
+## Примеры использования[](https://help.cesbo.com/astra/processing/mpegts/remap#use-cases)
 
-Remapping Stream PIDs is beneficial in various scenarios:
+Ремаппинг PID потоков полезен в различных сценариях:
 
-- Smooth Input Redundancy: If primary and backup inputs have differing PIDs for video and audio elementary streams, switching to the backup input may lead to a temporary interruption in playback. By remapping PIDs to ensure uniformity across primary and backup inputs, the transition can be made seamless.
-- Multi Program Stream (MPTS) Preparation: When preparing a channel for inclusion in an MPTS broadcast, each elementary stream within the channel must possess a unique PID. Remapping ensures this PIDs uniqueness, enabling smooth addition of the channel to the MPTS
+- Плавное резервирование входов: Если основной и резервный входы имеют разные PID для элементарных потоков видео и аудио, переключение на резервный вход может привести к временному прерыванию воспроизведения. Перестановка PID для обеспечения единообразия основных и резервных входов позволяет сделать переход плавным.
+- Подготовка многопрограммного потока (MPTS): При подготовке канала к включению в MPTS-вещание каждый элементарный поток в канале должен обладать уникальным PID. Ремаппинг обеспечивает уникальность этого PID, что позволяет плавно добавить канал в MPTS
 
-## Analyze Channel
+## Анализ канала[](https://help.cesbo.com/astra/processing/mpegts/remap#analyze-channel)
 
-To identify available elementary streams and their PIDs, it's necessary to analyze the channel. This can be achieved by launching the built-in MPEG-TS analyzer either from the channel menu or directly from the channel settings.
+Для определения доступных элементарных потоков и их PID необходимо проанализировать канал. Это можно сделать, запустив встроенный анализатор MPEG-TS либо из меню канала, либо непосредственно из настроек канала.
 
-![Analyze Original Stream](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-original.png)
+![Анализ исходного потока](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-original.png)
 
-On the provided screenshot, we can see the following elementary streams:
+На представленном скриншоте мы видим следующие элементарные потоки:
 
-1. Program Map Table (PMT) - PID: `374`
-1. Video - PID: `371`
-2. Audio - PID: `376`, Language: `eng` (English)
+1. Таблица программных карт (PMT) - PID: `374`
+2. Видео - ПИД: `371`
+3. Аудио - PID: `376`, Язык: `eng` (на английском языке)
 
-Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Remapping in Astra.
+Каждый элементарный поток представлен уникальным идентификатором пакета (PID), который может быть использован для ремаппинга потока в Astra.
 
-## Limitations
+## Ограничения[](https://help.cesbo.com/astra/processing/mpegts/remap#limitations)
 
-Please note that PID value could be in range from 32 to 8190.
+Обратите внимание, что значение PID может находиться в диапазоне от 32 до 8190.
 
-## Input remapping
+## Ремаппинг ввода[](https://help.cesbo.com/astra/processing/mpegts/remap#input-remapping)
 
-In order to perform the stream remapping, we will change the PMT PID to 100, the video stream PID to 101, and audio stream PID to 102. This operation can be conducted by appending the `map.pmt=100&map.video=101&map.audio.eng=102` option to the input address
+Для того чтобы выполнить перестановку потоков, изменим PID PMT на 100, PID видеопотока на 101, а PID аудиопотока на 102. Эту операцию можно выполнить, добавив в поле `map.pmt=100&map.video=101&map.audio.eng=102` опция на входной адрес
 
-![Input Option](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
+![Опция ввода](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
 
-## Remapping for all inputs
+## Ремаппинг для всех входов[](https://help.cesbo.com/astra/processing/mpegts/remap#remapping-for-all-inputs)
 
-For stream remapping across all inputs, the `Remap` tab in the channel settings can be used.
+Для ремаппинга потока по всем входам используется параметр `Remap` можно использовать вкладку в настройках канала.
 
-![Remap Options](https://cdn.cesbo.com/help/astra/processing/utilities/remap/remap-options.png)
+![Параметры перестройки](https://cdn.cesbo.com/help/astra/processing/utilities/remap/remap-options.png)
 
-In the "Map PIDs" field, `pmt=100, video=101, audio.eng=102` has been set. This alters the PIDs of the video and English audio streams to 101 and 102, respectively, across all inputs.
+В поле "Map PIDs", `pmt=100, video=101, audio.eng=102` был установлен. В результате PID видео- и англоязычного аудиопотоков изменяются на 101 и 102, соответственно, по всем входам.
 
-To verify the results of the applied stream filter, click "Apply" to save the changes. Next, launch the built-in MPEG-TS analyzer again. This will allow you to check if the unnecessary streams have been successfully filtered out.
+Для проверки результатов примененного фильтра потока нажмите кнопку "Применить", чтобы сохранить изменения. Далее снова запустите встроенный анализатор MPEG-TS. Это позволит проверить, успешно ли отфильтрованы ненужные потоки.
 
-![Analyze Remapped Stream](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
+![Анализ ремаппированного потока](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
 
-## Selectors
+## Селекторы[](https://help.cesbo.com/astra/processing/mpegts/remap#selectors)
 
-Selector determinates what PID should be changed to the new value
+Селектор определяет, какой PID должен быть изменен на новое значение
 
-- `pmt` - PID for Program Map Table (PMT)
-- `video` - video stream
-- `audio` - any audio stream. You may define this option twice if you have several audio streams, for example: `video=101, audio=102, audio=103`
-- `audio.eng` - audio stream with defined language code
-- `ac3` - AC3 audio stream. The `audio` selector could be used for AC3 streams as well
-- `aac` - AAC audio stream. The `audio` selector could be used for ACC streams as well
-- `371` - original PID
-- `pcr` - PID for packets with PCR. Usually the PCR timestamp delivered with video stream packets
-- `sub` - subtitle stream
-- `ttx` - teletext stream
-- `ait` - PID for Application Information Table (AIT)
+- `pmt` - PID для таблицы программных карт (PMT)
+- `video` - видеопоток
+- `audio` - любой аудиопоток. Вы можете задать эту опцию дважды, если у вас, например, несколько аудиопотоков: `video=101, audio=102, audio=103`
+- `audio.eng` - аудиопоток с заданным языковым кодом
+- `ac3` - Аудиопоток AC3. Сайт `audio` селектор может быть использован и для потоков AC3
+- `aac` - Аудиопоток AAC. Сайт `audio` Селектор может быть использован и для потоков ACC
+- `371` - исходный ПИД
+- `pcr` - PID для пакетов с PCR. Обычно временная метка PCR поставляется вместе с пакетами видеопотока
+- `sub` - поток субтитров
+- `ttx` - поток телетекста
+- `ait` - PID для информационной таблицы приложений (AIT)

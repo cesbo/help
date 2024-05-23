@@ -1,55 +1,54 @@
 ---
-title: "Encrypt streams with BISS CAS"
+title: "Шифрование потоков с помощью BISS CAS"
 date: 2023-04-02
 ---
 
-The Basic Interoperable Scrambling System (BISS) is a straightforward and efficient conditional access system that utilizes a static key to protect content from unauthorized access. BISS is based on the Common Scrambling Algorithm (CSA), which scrambles the channel data, ensuring secure transmission of content over satellite and terrestrial broadcasting networks.
+Basic Interoperable Scrambling System (BISS) - это простая и эффективная система условного доступа, использующая статический ключ для защиты контента от несанкционированного доступа. В основе BISS лежит алгоритм Common Scrambling Algorithm (CSA), который скремблирует данные канала, обеспечивая безопасную передачу контента по сетям спутникового и наземного вещания.
 
-::alert
-Although BISS provides a level of content protection, it is essential to note that this system is not recommended due to its weak protection mechanism. The static CSA key used in BISS is susceptible to brute force attacks
+::alert Хотя BISS обеспечивает определенный уровень защиты контента, необходимо отметить, что данная система не рекомендуется к использованию из-за слабого механизма защиты. Статический ключ CSA, используемый в BISS, подвержен атакам грубой силы
 ::
 
-## BISS Key
+## Ключ BISS[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#biss-key)
 
-The BISS key is an 8-byte long sequence, represented as 16 hexadecimal symbols. For example, the key `1234569C789ABCCE` can be broken down as follows:
+Ключ BISS - это последовательность длиной 8 байт, представленная в виде 16 шестнадцатеричных символов. Например, ключ `1234569C789ABCCE` можно разделить следующим образом:
 
-- The first 6 hexadecimal symbols `123456` constitute the first part of the key
-- The 7th and 8th symbols `9C` are a checksum for the first part (calculated as `0x12 + 0x34 + 0x56 = 0x9C`)
-- The 9th to 14th hexadecimal symbols `789ABC` form the second part of the key.
-- The last two symbols `CE` are a checksum for the second part (calculated as `0x78 + 0x9A + 0xBC = 0x1CE`, with only the last byte used for the checksum)
+- Первые 6 шестнадцатеричных символов `123456` составляют первую часть ключа
+- 7-й и 8-й символы `9C` являются контрольной суммой для первой части (вычисляется как `0x12 + 0x34 + 0x56 = 0x9C`)
+- С 9-го по 14-й шестнадцатеричные символы `789ABC` образуют вторую часть ключа.
+- Два последних символа `CE` являются контрольной суммой для второй части (вычисляется как `0x78 + 0x9A + 0xBC = 0x1CE`при этом для контрольной суммы используется только последний байт)
 
-In Astra, you can define the key as `12345600789ABC00`, and Astra will automatically calculate the checksums for you. This simplifies the process and helps ensure the accuracy and integrity of the BISS key
+В Astra ключ можно определить как `12345600789ABC00`, и Astra автоматически рассчитает для вас контрольные суммы. Это упрощает процесс и помогает обеспечить точность и целостность ключа BISS
 
-## Scrambling Transmitted Streams
+## Скремблирование передаваемых потоков[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#scrambling-transmitted-streams)
 
-To scramble a transmitted stream, append the `biss` option with the appropriate key to the Output Address. For example:
+Чтобы скремблировать передаваемый поток, добавьте к нему параметр `biss` опцию с соответствующим ключом к выходному адресу. Например:
 
 ```
 udp://239.255.1.1:1234#biss=12345600789ABC00
 ```
 
-By specifying the BISS key in the Output Address, Astra will automatically scramble the channel using the provided key.
+При указании в выходном адресе ключа BISS, Astra автоматически скремблирует канал с помощью предоставленного ключа.
 
-## Analyze scrambled stream
+## Анализ скремблированного потока[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#analyze-scrambled-stream)
 
-You can verify if a channel is scrambled using Astra MPEG-TS Analyzer. To do this, start the analyzer with the following command:
+Проверить наличие скремблирования канала можно с помощью анализатора Astra MPEG-TS Analyzer. Для этого запустите анализатор следующей командой:
 
 ```
 astra --analyze udp://239.255.1.1:1234
 ```
 
-The analyzer will write messages to the console, indicating that the stream is scrambled.
+Анализатор выдаст на консоль сообщение о том, что поток скремблирован.
 
-## Play scrambled streams with VLC Player
+## Воспроизведение скремблированных потоков с помощью VLC Player[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#play-scrambled-streams-with-vlc-player)
 
-Scrambled streams can be received and viewed using VLC Player. To launch VLC with the appropriate BISS key from the command line, enter the following command:
+Принимать и просматривать скремблированные потоки можно с помощью VLC Player. Чтобы запустить VLC с соответствующим ключом BISS из командной строки, введите следующую команду:
 
 ```
 vlc --ts-csa-ck 1234569C789ABCCE udp://@239.255.1.1:1234
 ```
 
-By using the `--ts-csa-ck` option followed by the BISS key, VLC will be able to decrypt and play the content seamlessly. Make sure you provide the correct BISS key with calculated checksums.
+С помощью `--ts-csa-ck` после указания ключа BISS, VLC сможет расшифровать и воспроизвести содержимое без проблем. Убедитесь, что вы указали правильный ключ BISS с рассчитанными контрольными суммами.
 
-## Receive scrambled streams with Astra
+## Прием скремблированных потоков с помощью системы Astra[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#receive-scrambled-streams-with-astra)
 
-To receive scrambled streams with Astra, please check this guide: [Decrypt streams with BISS CAS](../../processing/cas/decrypt-biss)
+Для получения скремблированных потоков с помощью Astra ознакомьтесь с этим руководством: [Расшифровка потоков с помощью BISS CAS](https://help.cesbo.com/astra/processing/cas/decrypt-biss)

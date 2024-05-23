@@ -1,55 +1,55 @@
 ---
-title: "HiDes DVB-T modulator"
+title: "Modulador HiDes DVB-T"
 date: 2023-06-23
 image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg
 ---
 
 :badge[Astra 2021.08.09]
 
-PT100 is a DVB-T modulator for 4 frequencies by HiDes
+PT100 es un modulador DVB-T para 4 frecuencias de HiDes
 
-![PT100 DVB-T modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg)
+![Modulador PT100 DVB-T](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg)
 
-Features:
+Características:
 
-- 4 modulators on the board
-- Frequency range 50~950MHz step size 1KHz
-- Modulation - 64QAM/16QAM/QPSK
-- Signal/Noise: 45dB
-- RF Output Level -8 dBm (100 dBuV)
+- 4 moduladores en el tablero
+- Gama de frecuencias 50~950MHz tamaño de paso 1KHz
+- Modulación - 64QAM/16QAM/QPSK
+- Señal/ruido: 45 dB
+- Nivel de salida RF -8 dBm (100 dBuV)
 
-[Read more](http://www.hides.com.tw/product_pt100_eng.html)
+[Seguir leyendo](http://www.hides.com.tw/product_pt100_eng.html)
 
-## Setup
+## Configurar[](https://help.cesbo.com/astra/delivery/hardware/hides-dvb-t-modulator#setup)
 
-Driver could be downloaded from [official site](http://www.hides.com.tw/downloads_eng.html)
+El controlador puede descargarse del [sitio oficial](http://www.hides.com.tw/downloads_eng.html)
 
-After installation find the modulators number using the command:
+Después de la instalación encontrar el número de moduladores utilizando el comando:
 
 ```
 find "/dev" -name "it950x*"
 ```
 
-In the output of the command, we will get the numbers of the modulators:
+En la salida del comando, obtendremos los números de los moduladores:
 
 ```
 /dev/usb-it950x1
 /dev/usb-it950x0
 ```
 
-`it950x1` - where 1 is the modulator number
+`it950x1` - donde 1 es el número de modulador
 
-## Astra settings
+## Ajustes Astra[](https://help.cesbo.com/astra/delivery/hardware/hides-dvb-t-modulator#astra-settings)
 
-Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator. In the MPTS NIT settings, configure transponder options:
+Prepare [el](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) MPTS para el modulador. En los ajustes NIT del MPTS, configure las opciones del transpondedor:
 
-![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
+![Ajustes MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 
-In the output setting, specify the type it950x and adapter number: `it950x://#adapter=0` (0 - modulator number)
+En la configuración de salida, especifique el tipo it950x y el número de adaptador: `it950x://#adapter=0` (0 - número de modulador)
 
-### Additional output options
+### Opciones de salida adicionales
 
-Additional options could be added to the output address:
+Se podrían añadir opciones adicionales a la dirección de salida:
 
-- `gain=N` - signal level in range from 0 to 100
-- `fec=1/2` - :badge[Astra 2023.08.16] FEC coding ratio. Values: `1/2`, `2/3`, `3/4`, `5/6`, `7/8`, `none`
+- `gain=N` - nivel de señal de 0 a 100
+- `fec=1/2` - Astra 2023.08.16 Relación de codificación FEC. Valores: `1/2`, `2/3`, `3/4`, `5/6`, `7/8`, `none`

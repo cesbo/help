@@ -1,28 +1,28 @@
 ---
-title: "Export Monitoring Events"
+title: "Exportación de eventos de supervisión"
 date: 2023-03-01
 ---
 
-Astra allows you to export monitoring events with the status of incoming streams or DVB-adapters.
+Astra permite exportar eventos de monitorización con el estado de los flujos entrantes o adaptadores DVB.
 
-## Monitoring URL
+## URL de supervisión[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#monitoring-url)
 
-The address of the monitoring server can be specified in the web interface: Settings -> General -> Monitoring:
+La dirección del servidor de monitorización puede especificarse en la interfaz web: Configuración -> General -> Monitorización:
 
-![Monitoring Options](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
+![Opciones de control](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
 
-Address has the following parameters:
+La dirección tiene los siguientes parámetros:
 
-- `interval=30` - this parameter defines the interval for transmitting statistics, measured in seconds. The default value for this parameter is 30.
-- `total=1` - this parameter is used to obtain summary statistics from the data packet
+- `interval=30` - este parámetro define el intervalo de transmisión de las estadísticas, medido en segundos. El valor por defecto de este parámetro es 30.
+- `total=1` - este parámetro se utiliza para obtener estadísticas resumidas del paquete de datos
 
-For example with address `http://example.com/api#interval=60&total=1` astra sends HTTP POST request to the `http://example.com/api` every minute, request containing JSON with summary statistics for one minute of stream monitoring.
+Por ejemplo, con la dirección `http://example.com/api#interval=60&total=1` astra envía una solicitud HTTP POST al archivo `http://example.com/api` cada minuto, petición que contiene JSON con las estadísticas resumidas de un minuto de monitorización del flujo.
 
-## Stream Properties
+## Propiedades del arroyo[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-properties)
 
-Stream properties Astra send only once on stream startup.
+Las propiedades del flujo Astra sólo se envían una vez al iniciarse el flujo.
 
-```json
+```
 [
     {
         "channel": {
@@ -37,13 +37,13 @@ Stream properties Astra send only once on stream startup.
 ]
 ```
 
-- `channel` - whole stream configuration
-- `timestamp` - event time
-- `hostname` - server hostname
+- `channel` - configuración de todo el flujo
+- `timestamp` - hora del evento
+- `hostname` - nombre del servidor
 
-## Stream Status
+## Estado del flujo[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-status)
 
-```json
+```
 [
     {
         "count": 0,
@@ -63,27 +63,27 @@ Stream properties Astra send only once on stream startup.
 ]
 ```
 
-This list describes the parameters that provide information about the stream workflow:
+Esta lista describe los parámetros que proporcionan información sobre el flujo de trabajo:
 
-- `count` - only for summary data, provide an amount of seconds that has elapsed since the last collection of statistics
-- `timestamp` - event time in Unix format
-- `channel_id` - unique ID of the channel
-- `input_id` - the input number. Starts with 1
-- `current` - indicates that statistics for current active input
-- `onair` - stream status, providing a quick way to check if it's running
-- `scrambled` - indicates whether the stream is encrypted or not
-- `bitrate` - input bitrate in Kbit/s
-- `packets` - total number of TS packets
-- `cc_error` -  total number of occured CC errors
-- `pes_error` -  total number of occured PES errors
+- `count` - sólo para datos resumidos, indique la cantidad de segundos transcurridos desde la última recopilación de estadísticas
+- `timestamp` - hora del evento en formato Unix
+- `channel_id` - ID único del canal
+- `input_id` - el número de entrada. Empieza por 1
+- `current` - indica que las estadísticas de la entrada activa actual
+- `onair` - estado del flujo, proporcionando una forma rápida de comprobar si se está ejecutando
+- `scrambled` - indica si el flujo está cifrado o no
+- `bitrate` - bitrate de entrada en Kbit/s
+- `packets` - número total de paquetes TS
+- `cc_error` - número total de errores CC ocurridos
+- `pes_error` - número total de errores PSE ocurridos
 
-This data is transmitted in JSON format as an array of several elements, with each element representing one second of observations. The number of elements in the array is determined by the frequency of statistics transmission. If statistics aggregation is enabled, then there is only one element in the array, which contains the total number of errors and the average bitrate for the period equal to the statistics transmission frequency.
+Estos datos se transmiten en formato JSON como una matriz de varios elementos, en la que cada elemento representa un segundo de observaciones. El número de elementos de la matriz viene determinado por la frecuencia de transmisión de las estadísticas. Si la agregación de estadísticas está activada, sólo hay un elemento en la matriz, que contiene el número total de errores y el bitrate medio para el periodo igual a la frecuencia de transmisión de estadísticas.
 
-## Adapter Properties
+## Propiedades del adaptador[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-properties)
 
-Adapter properties Astra send only once on adapter startup.
+Propiedades del adaptador Astra enviar sólo una vez en el arranque del adaptador.
 
-```json
+```
 [
     {
         "dvb": {
@@ -97,13 +97,13 @@ Adapter properties Astra send only once on adapter startup.
 ]
 ```
 
-- `dvb` — while adapter configuration
-- `timestamp` — event time
-- `hostname` — server hostname
+- `dvb` - mientras que la configuración del adaptador
+- `timestamp` - hora del evento
+- `hostname` - nombre del servidor
 
-## Adapter Status
+## Estado del adaptador[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-status)
 
-```json
+```
 [
     {
         "dvb_id": "a0dj",
@@ -120,25 +120,25 @@ Adapter properties Astra send only once on adapter startup.
 ]
 ```
 
-This list describes the parameters that provide information about the adapter workflow:
+Esta lista describe los parámetros que proporcionan información sobre el flujo de trabajo del adaptador:
 
-- `dvb_id` - unique ID of the adapter
-- `timestamp` - event time
-- `status` - signal status
-- `signal` - approximate signal level in percent
-- `signal_db` - signal level in `dBm * 100`
-- `snr` -  approximate signal to noise ratio in percent
-- `snr_db` - signal to noise ratio in `dB * 100`
-- `ber` -  bit errors counter
-- `unc` -  block errors counter
-- `bitrate` - total bitrate in Kbit/s
+- `dvb_id` - ID único del adaptador
+- `timestamp` - hora del evento
+- `status` - estado de la señal
+- `signal` - nivel aproximado de la señal en porcentaje
+- `signal_db` - nivel de señal en `dBm * 100`
+- `snr` - relación señal/ruido aproximada en porcentaje
+- `snr_db` - relación señal/ruido en `dB * 100`
+- `ber` - contador de errores de bit
+- `unc` - contador de errores de bloque
+- `bitrate` - bitrate total en Kbit/s
 
-Signal status describe the state of the tuner, described in 5-bit number:
+El estado de la señal describe el estado del sintonizador, descrito en un número de 5 bits:
 
-- `SIGNAL` — the signal bit will be set when the tuner captures the signal
-- `CARRIER` — stable signal reception
-- `FEC` — reception FEC (forward error correction) data
-- `SYNC` — received information for synchronization
-- `LOCK` — the tuner is set to receive a signal.
+- `SIGNAL` - el bit de señal se activará cuando el sintonizador capte la señal
+- `CARRIER` - recepción estable de la señal
+- `FEC` - recepción de datos FEC (forward error correction)
+- `SYNC` - información recibida para la sincronización
+- `LOCK` - el sintonizador está preparado para recibir una señal.
 
-If the tuner configured successfully and signal is locked, the status parameter will be set to 31
+Si el sintonizador se ha configurado correctamente y la señal está bloqueada, el parámetro de estado se ajustará a 31

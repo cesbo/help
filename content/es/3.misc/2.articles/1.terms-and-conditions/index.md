@@ -1,5 +1,5 @@
 ---
-title: "Terms & Conditions"
+title: "Condiciones generales"
 noindex: true
 ---
 

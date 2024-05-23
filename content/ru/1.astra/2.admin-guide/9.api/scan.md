@@ -1,65 +1,65 @@
 ---
-title: "Scan API"
+title: "API сканирования"
 date: 2023-08-03
 ---
 
-## Start Analyzer
+## Запуск анализатора[](https://help.cesbo.com/astra/admin-guide/api/scan#start-analyzer)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "scan-init",
     "scan": "..."
 }
 ```
 
-- `scan` - stream address. Read more about [Media Address Format](/astra/receiving/general/address-format)
+- `scan` - адрес потока. Подробнее о [Формат медиа-адреса](https://help.cesbo.com/astra/receiving/general/address-format)
 
-Response:
+Ответ:
 
-```json
+```
 {
     "scan-init": "ok",
     "id": "..."
 }
 ```
 
-- `id` - identifier of the created analyzer instance
+- `id` - идентификатор созданного экземпляра анализатора
 
-Analyzer will be stopped automatically in 10 seconds. To keep analyzer active for longer, use `scan-check` API method.
+Анализатор будет автоматически остановлен через 10 секунд. Для сохранения активности анализатора в течение более длительного времени используйте `scan-check` Метод API.
 
-## Stop Analyzer
+## Стоп-анализатор[](https://help.cesbo.com/astra/admin-guide/api/scan#stop-analyzer)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "scan-kill",
     "id": "..."
 }
 ```
 
-- `id` - identifier of the analyzer instance
+- `id` - идентификатор экземпляра анализатора
 
-This method stops analyzer immediatelly.
+Этот метод сразу же останавливает анализатор.
 
-## Get Information
+## Получить информацию[](https://help.cesbo.com/astra/admin-guide/api/scan#get-information)
 
-Request: `POST /control/`
+Запрос: `POST /control/`
 
-```json
+```
 {
     "cmd": "scan-check",
     "id": "..."
 }
 ```
 
-- `id` - identifier of the analyzer instance
+- `id` - идентификатор экземпляра анализатора
 
-Response:
+Ответ:
 
-```json
+```
 {
     "scan-check": "ok",
     "scan": [
@@ -75,23 +75,23 @@ Response:
 }
 ```
 
-- `scan` - array with stream information, if no any new information this field will be omitted
+- `scan` - массив с информацией о потоке, при отсутствии новой информации это поле будет опущено
 
-Stream information:
+Информация о потоке:
 
-- `psi` - Program Stream Information (PSI) packet name. Could be: `pat`, `pmt`, `cat`, `nit`, `sdt`
-- `table_id` - PSI identifier
-- `pid` - MPEG-TS packet identifier
-- `version` - PSI packet version
-- `crc32` - PSI packet checksum
+- `psi` - Имя пакета Program Stream Information (PSI). Это может быть: `pat`, `pmt`, `cat`, `nit`, `sdt`
+- `table_id` - Идентификатор PSI
+- `pid` - Идентификатор пакета MPEG-TS
+- `version` - Версия пакета PSI
+- `crc32` - Контрольная сумма пакета PSI
 
-Additional fields depen of the PSI type.
+Дополнительные поля зависят от типа PSI.
 
 ### PAT
 
-Program Association Table (PAT) is a list of programs. Contains Program Number (PNR) and Packet Identifier (PID) of the associated PMT. Additional fields:
+Program Association Table (PAT) - это список программ. Содержит номер программы (PNR) и идентификатор пакета (PID) связанного с ним PMT. Дополнительные поля:
 
-```json
+```
 {
     "psi": "pat",
     "table_id": 0,
@@ -106,21 +106,21 @@ Program Association Table (PAT) is a list of programs. Contains Program Number (
 }
 ```
 
-- `table_id` - always `0`
-- `pid` - always `0`
-- `tsid` - Transport Stream identifier
-- `programs` - list of programs
+- `table_id` - всегда `0`
+- `pid` - всегда `0`
+- `tsid` - Идентификатор транспортного потока
+- `programs` - список программ
 
-Program information:
+Информация о программе:
 
-- `pnr` - program number
-- `pid` - MPEG-TS packet identifier for PMT
+- `pnr` - номер программы
+- `pid` - Идентификатор пакетов MPEG-TS для PMT
 
 ### PMT
 
-Program Mapping Table (PMT) is a list of program elementary streams: Video, Audio, and other data. Additional fields:
+Program Mapping Table (PMT) - это список элементарных потоков программы: Видео, Аудио и другие данные. Дополнительные поля:
 
-```json
+```
 {
     "psi": "pmt",
     "table_id": 2,
@@ -144,15 +144,15 @@ Program Mapping Table (PMT) is a list of program elementary streams: Video, Audi
 }
 ```
 
-- `table_id` - always `2`
-- `pid` - MPEG-TS packet identifier
-- `pnr` - Program Number
-- `pcr` - MPEG-TS packet identifier for packets with the Program Clock Reference (PCR) timestamps
-- `streams` - list of program elementary streams
+- `table_id` - всегда `2`
+- `pid` - Идентификатор пакета MPEG-TS
+- `pnr` - Номер программы
+- `pcr` - Идентификатор пакетов MPEG-TS для пакетов с временными метками Program Clock Reference (PCR)
+- `streams` - перечень программных элементарных потоков
 
-Elementary Stream information:
+Информация об элементарном потоке:
 
-- `pid` - MPEG-TS packet identifier for elementary stream
-- `type_name` - elementary stream type: `VIDEO`, `AUDIO`, `SUB`, `TTX`, `AIT`, `DATA`
-- `type_id` - elementary stream identifier
-- `descriptors` - elementary stream descriptors contains additional information
+- `pid` - Идентификатор пакета MPEG-TS для элементарного потока
+- `type_name` - тип элементарного потока: `VIDEO`, `AUDIO`, `SUB`, `TTX`, `AIT`, `DATA`
+- `type_id` - идентификатор элементарного потока
+- `descriptors` - Дескрипторы элементарных потоков содержат дополнительную информацию

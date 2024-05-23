@@ -1,79 +1,79 @@
 ---
-title: "Mosaic: Channel Screenshots on Dashboard"
+title: "Mosaico: Capturas de pantalla de canales en el panel de control"
 date: 2023-08-28
 image: https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png
 ---
 
-Mosaic is a simple script to create channel screenshots with ffmpeg and set them on Astra Dashboard using Astra API.
+Mosaic es un sencillo script para crear capturas de pantalla de canales con ffmpeg y ponerlas en Astra Dashboard usando Astra API.
 
-Channel Screenshots helps to visually evaluate quality of the channels.
+Las capturas de pantalla de canales ayudan a evaluar visualmente la calidad de los canales.
 
-![Dashboard with Screenshots](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
+![Panel de control con capturas de pantalla](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
 
-## Requirements
+## Requisitos[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#requirements)
 
-- Astra with enabled [HTTP Play](/astra/delivery/http-hls/http-play)
+- Astra con [HTTP Play](https://help.cesbo.com/astra/delivery/http-hls/http-play) activado
 - FFmpeg
 
-## Install FFmpeg
+## Instalar FFmpeg[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#install-ffmpeg)
 
-Install FFmpeg with system packet manager:
+Instala FFmpeg con el gestor de paquetes del sistema:
 
 ```
 apt install ffmpeg
 ```
 
-## Configure HTTP Play
+## Configurar HTTP Play[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#configure-http-play)
 
-On you server create new directory to store screenshot images:
+En su servidor cree un nuevo directorio para almacenar las imágenes de las capturas de pantalla:
 
 ```
 mkdir -p /var/lib/astra/mosaic
 ```
 
-Then open Astra Web interface -> Settings -> HTTP Play:
+A continuación, abra la interfaz web de Astra -> Configuración -> HTTP Play:
 
-![HTTP Play Settings](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/http-play.png)
+![Ajustes de reproducción HTTP](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/http-play.png)
 
-Turn on HTTP Play if disabled and set path to the screenshots directory. Done, HTTP Play now configured and you may save changes.
+Active HTTP Play si está desactivado y establezca la ruta al directorio de capturas de pantalla. Listo, HTTP Play ya está configurado y puede guardar los cambios.
 
-Also in the HTTP Play settings you may copy link to the `playlist.m3u8`, this file contains links to all enabled channel. Link to playlist lookls like: `https://example.com:8000/playlist.m3u8`
+También en la configuración de HTTP Play puede copiar enlace a la `playlist.m3u8`Este archivo contiene enlaces a todos los canales habilitados. Enlace a la lista de reproducción lookls como: `https://example.com:8000/playlist.m3u8`
 
-If you use HTTP Authorization, set Token for administrator. Open Astra Web Interface -> Settings -> Users -> select administrator, and set any Token, for example: `c6017ac9`. Append this token to the playlist URL: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
+Si utiliza Autorización HTTP, establezca un Token para el administrador. Abra la Interfaz Web de Astra -> Configuración -> Usuarios -> seleccione administrador, y establezca cualquier Token, por ejemplo: `c6017ac9`. Añada este token a la URL de la lista de reproducción: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
 
-## Download and Configure Script
+## Descargar y configurar el script[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#download-and-configure-script)
 
-[Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script and save it on your server:
+[Descargue](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) el script y guárdelo en su servidor:
 
 ```
 curl -Lo /usr/local/bin/mosaic.sh https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh
 chmod +x /usr/local/bin/mosaic.sh
 ```
 
-Open script with any text editor and modify following variables:
+Abra el script con cualquier editor de texto y modifique las siguientes variables:
 
-- `THREADS` - number of threads to concurrently capture multiple screenshots. Fewer threads will take more time to update all images, while more threads will increase CPU usage. You may set as many threads as you have CPU cores
-- `PLAYLIST_URL` - URL to `playlist.m3u8` file from previous step
-- `SCREENSHOT_PATH` - path to store screenshots on your server: `/var/lib/astra/mosaic/`
-- `API_PORT` - port to Astra API
-- `API_AUTH` - admin login and password to access Astra API
+- `THREADS` - número de subprocesos para capturar simultáneamente varias pantallas. Menos subprocesos tardarán más tiempo en actualizar todas las imágenes, mientras que más subprocesos aumentarán el uso de la CPU. Puede establecer tantos subprocesos como núcleos de CPU tenga
+- `PLAYLIST_URL` - URL a `playlist.m3u8` archivo del paso anterior
+- `SCREENSHOT_PATH` - para almacenar las capturas de pantalla en su servidor: `/var/lib/astra/mosaic/`
+- `API_PORT` - portar a Astra API
+- `API_AUTH` - login y contraseña admin para acceder a la API de Astra
 
-## Start script with Systemd
+## Iniciar script con Systemd[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#start-script-with-systemd)
 
-To start script automatically you may append it to the systemd. Download configuration file for systemd and save it on your server:
+Para iniciar el script automáticamente puede añadirlo al systemd. Descargue el archivo de configuración para systemd y guárdelo en su servidor:
 
 ```
 curl -Lo /etc/systemd/system/mosaic.service https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.service
 ```
 
-Next commands could be used to manage script:
+Los siguientes comandos pueden utilizarse para gestionar el script:
 
-- Start script: `systemctl start mosaic`
-- Stop script: `systemctl stop mosaic`
-- Enable autorun: `systemctl enable mosaic`
-- Disable autorun: `systemctl disable mosaic`
+- Iniciar guión: `systemctl start mosaic`
+- Detener guión: `systemctl stop mosaic`
+- Activa la ejecución automática: `systemctl enable mosaic`
+- Desactiva la ejecución automática: `systemctl disable mosaic`
 
-After the start check that new png files are creating in the screenshots directory:
+Después del inicio compruebe que se están creando nuevos archivos png en el directorio de capturas de pantalla:
 
 ```
 ls /var/lib/astra/mosaic

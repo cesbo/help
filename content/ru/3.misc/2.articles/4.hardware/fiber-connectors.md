@@ -1,105 +1,101 @@
 ---
-title: "Types of fiber connectors"
+title: "Типы волоконно-оптических соединителей"
 date: 2023-05-26
 image: https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png
 ---
 
-In this article, we will try to describe the most common optical connectors that are used in data networks and television networks.
+В этой статье мы постараемся описать наиболее распространенные оптические разъемы, которые используются в сетях передачи данных и телевизионных сетях.
 
-## The fiber ferrule
+## Ферула[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#the-fiber-ferrule)
 
-The fiber ferrule is a ceramic part of a cylindrical connector. An optical fiber is inserted into the center of the ferrule. It is used to pass laser radiation through two optical fibers.
+Ферула - это керамическая часть коннектора. В центр ферулы вставляется оптическое волокно. Оно используется для пропускания лазерного излучения через два оптических волокна.
 
-The most common fiber ferrule diameters are 2.5 mm (in FC, SC, ST type connectors) and 1.25 mm (in LC type connectors).
+Наиболее распространенные диаметры волоконных ферул - 2,5 мм (в разъемах типа FC, SC, ST) и 1,25 мм (в разъемах типа LC).
 
-![Connector](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
+![Разъем](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
 
-## SC Connector
+## Разъем SC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#sc-connector)
 
 ![SC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/sc.png)
 
-SC Connector was developed by Nippon Telegraph and Telephone. The invention has become the most popular due to lower production costs.
+Разъем SC Connector был разработан компанией Nippon Telegraph and Telephone. Изобретение стало наиболее популярным благодаря более низкой стоимости производства.
 
-Features and applications of SC connectors:
+Особенности и области применения разъемов SC:
 
-- simple installation;
-- high connection speed;
-- high mounting density;
-- plastic shell (quickly wears out, not resistant to vibration);
-- used with singlemode and multimode fiber;
-- loss of 0.25 dB.;
-- used in FTTH, telephony, cable TV, etc.
+- простая установка;
+- высокая скорость соединения;
+- высокая плотность монтажа;
+- пластиковый корпус (быстро изнашивается, не устойчив к вибрациям);
+- используется с одномодовым и многомодовым волокном;
+- потери 0,25 дБ;
+- используемых в FTTH, телефонии, кабельном телевидении и т.д.
 
-## FC Connector
+## Разъем FC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#fc-connector)
 
-![FC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
+![ФК](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
 
+Коннектор FC был разработан компанией Nippon Telegraph and Telephone. Это был первый оптический разъем, в котором использовался керамический наконечник. Это был первый оптический разъем, в котором использовался керамический наконечник. В настоящее время он не используется из-за более популярных разъемов SC и LC.
 
-FC Connector was developed by Nippon Telegraph and Telephone. It was the first optical connector, that used a ceramic tip. This was the first optical connector that used a ceramic tip. It is not currently used due to the more popular SC and LC connectors.
+Особенности и области применения разъемов FC:
 
-Features and applications of FC connectors:
+- металлическая оболочка с резьбовым соединением (не так сильно изнашивается и устойчива к вибрациям);
+- меньшая плотность монтажа (по сравнению с разъемом SC);
+- используется в телекоммуникациях, промышленности и измерительных приборах;
+- используется с одномодовым волокном;
+- потери 0,3 дБ.
 
-- metal shell with threaded connection (not so wear out and resistant to vibration);
-- less mounting density (compared to the SC connector);
-- used in telecommunications, industry and measuring devices;
-- used with singlemode fiber;
-- loss of 0.3 dB.
-
-## LC Connector
+## Разъем LC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#lc-connector)
 
 ![LC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/lc.png)
 
-LC connector was developed by Lucent Technologies and released in 1997.
+LC-коннектор был разработан компанией Lucent Technologies и выпущен в 1997 году.
 
-Features and applications of LC connectors:
+Особенности и области применения разъемов LC:
 
-- high mounting density;
-- the small diameter of the fiber ferrule (this reduces the reliability and resistance to mechanical loads);
-- used in structured cable networks, telecommunications and data centers;
-- used with singlemode and multimode fiber;
-- loss of 0.10 dB.
+- высокая плотность монтажа;
+- малый диаметр волоконного ферула (это снижает надежность и устойчивость к механическим нагрузкам);
+- используемых в структурированных кабельных сетях, телекоммуникациях и центрах обработки данных;
+- используется с одномодовым и многомодовым волокном;
+- потери 0,10 дБ.
 
-## ST Connector
+## Разъем ST[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#st-connector)
 
-ST Connector was developed in the United States by AT&T and used in professional environments: corporate networks, in the military field.
+ST Connector был разработан в США компанией AT&T и использовался в профессиональных средах: корпоративных сетях, в военной сфере.
 
-Features and applications of ST connectors:
+Особенности и области применения разъемов ST:
 
-- metal shell (not so wear out);
-- less mounting density (compared to the SC connector);
-- less convenient in connection than SC connector, but more convenient than FC connector;
-- used with multimode fiber;
-- loss of 0.25 dB.
+- металлический корпус (не так сильно изнашивается);
+- меньшая плотность монтажа (по сравнению с разъемом SC);
+- менее удобен в подключении, чем SC-коннектор, но более удобен, чем FC-коннектор;
+- используется с многомодовым волокном;
+- потери 0,25 дБ.
 
-## Types of polish on fiber optic connectors
+## Виды полировки волоконно-оптических соединителей[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
 
-Over the years, experts have upgraded the shape and characteristics of optical connectors, trying to achieve minimal losses and reflections on the connector.
-It is no secret that losses on the connector connection reduce the signal power, which leads to a decrease in the distance to which it can be transmitted.
-The reflected part of the signal can also introduce errors (BER) and heat the SFP module, which in turn reduces the quality of the transmitted information and leads to a reduction in the service life of the transmitting equipment.
+На протяжении многих лет специалисты совершенствовали форму и характеристики оптических разъемов, стараясь добиться минимальных потерь и отражений на разъеме. Не секрет, что потери на коннекторе снижают мощность сигнала, что приводит к уменьшению расстояния, на которое он может быть передан. Отраженная часть сигнала также может вносить ошибки (BER) и нагревать SFP-модуль, что, в свою очередь, снижает качество передаваемой информации и приводит к сокращению срока службы передающего оборудования.
 
-That is why the types of polishing of optical connectors have been changed. The most popular types of optical connector polishing are PC (physical contact), UPC (ultraphysical contact), and APC (angular physical contact).
+В связи с этим изменились типы полировки оптических разъемов. Наиболее распространенными типами полировки оптических разъемов являются PC (физический контакт), UPC (ультрафизический контакт) и APC (угловой физический контакт).
 
-You can determine the type of connector/port polishing by its color:
+Тип полировки разъема/порта можно определить по его цвету:
 
 - PC-black
-- UPC-blue
+- UPC-синий
 - APC-green
 
-![Polishing](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/polishing.png)
+![Полировка](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/polishing.png)
 
-### PC: Physical Contact
+### ПК: Физический контакт
 
-The ferrule is beveled and processed on a flat surface. This avoids empty spaces between the tips of the connected connectors and provides losses in the range from -30 dB to -40 dB. This type is not relevant now.
+Ферула имеет фаску и обрабатывается на плоской поверхности. Это позволяет избежать пустых пространств между наконечниками соединяемых разъемов и обеспечить потери в диапазоне от -30 дБ до -40 дБ. В настоящее время этот тип не актуален.
 
-### UPC: Ultra Physical contact
+### UPC: Ультрафизический контакт
 
-UPC polished connectors are widely used in data transmission systems.They have a lower cost, then APC. Because of the low signal power in such systems, the reflected signal also has a low value.
-The connectors are similar to the PC type. Due to a clearer bevel curve, losses are reduced to the limit of -40 to -55 dB.
+Полированные разъемы UPC широко используются в системах передачи данных. Они имеют более низкую стоимость, чем APC. Из-за низкой мощности сигнала в таких системах отраженный сигнал также имеет низкое значение. Разъемы аналогичны разъемам типа PC. За счет более четкой кривой скоса потери снижаются до пределов -40...-55 дБ.
 
-### APC: Angled Physical Contact
+### APC: Угловой физический контакт
 
-APC polished connectors provide less reflected signal towards the source.The surface of the ferrule is beveled at an angle of 8-9 degrees. Because of this, the signal is not reflected from the connector at a 180-degree angle, so the reflected signal does not return to the transmitter at all, or returns with less power. APC polished connectors are used in systems with a high-power signal. This is why they are common in cable TV and PON networks.
+Полированные разъемы APC обеспечивают меньшее количество отраженного сигнала в сторону источника. Поверхность ферулы скошена под углом 8-9 градусов. Благодаря этому сигнал не отражается от разъема под углом 180 градусов, поэтому отраженный сигнал не возвращается к передатчику вообще или возвращается с меньшей мощностью. Полированные разъемы APC используются в системах с мощным сигналом. Поэтому они широко распространены в сетях кабельного телевидения и PON.
 
 ::alert
-It is forbidden to connect the APC and UPC connectors. This causes damage to the connectors and increases the risk of signal attenuation and reflection.
+Запрещается соединять разъемы APC и UPC. Это приводит к повреждению разъемов и повышает риск затухания и отражения сигнала.
 ::

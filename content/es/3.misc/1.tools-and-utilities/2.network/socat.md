@@ -1,13 +1,13 @@
 ---
-title: "Port forwarding with socat"
+title: "Reenvío de puertos con socat"
 date: 2023-02-28
 ---
 
-Socat is a command line tool that enables bidirectional data transfer between two streams.
+Socat es una herramienta de línea de comandos que permite la transferencia bidireccional de datos entre dos flujos.
 
-## Exposing local resources
+## Exposición de recursos locales[](https://help.cesbo.com/misc/tools-and-utilities/network/socat#exposing-local-resources)
 
-Request received on port `11554` will be forwarded to `192.168.88.100:554`
+Solicitud recibida en el puerto `11554` se remitirá a `192.168.88.100:554`
 
 ```
 socat tcp-listen:11554,reuseaddr,fork tcp:192.168.88.100:554

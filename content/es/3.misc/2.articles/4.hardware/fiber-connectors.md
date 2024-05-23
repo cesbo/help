@@ -1,105 +1,101 @@
 ---
-title: "Types of fiber connectors"
+title: "Tipos de conectores de fibra"
 date: 2023-05-26
 image: https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png
 ---
 
-In this article, we will try to describe the most common optical connectors that are used in data networks and television networks.
+En este artículo, intentaremos describir los conectores ópticos más comunes que se utilizan en redes de datos y redes de televisión.
 
-## The fiber ferrule
+## La virola de fibra[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#the-fiber-ferrule)
 
-The fiber ferrule is a ceramic part of a cylindrical connector. An optical fiber is inserted into the center of the ferrule. It is used to pass laser radiation through two optical fibers.
+La virola de fibra es una pieza cerámica de un conector cilíndrico. En el centro de la virola se inserta una fibra óptica. Se utiliza para hacer pasar la radiación láser a través de dos fibras ópticas.
 
-The most common fiber ferrule diameters are 2.5 mm (in FC, SC, ST type connectors) and 1.25 mm (in LC type connectors).
+Los diámetros de virola de fibra más comunes son 2,5 mm (en conectores de tipo FC, SC, ST) y 1,25 mm (en conectores de tipo LC).
 
-![Connector](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
+![Conector](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
 
-## SC Connector
+## Conector SC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#sc-connector)
 
 ![SC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/sc.png)
 
-SC Connector was developed by Nippon Telegraph and Telephone. The invention has become the most popular due to lower production costs.
+El conector SC fue desarrollado por Nippon Telegraph and Telephone. El invento se ha convertido en el más popular debido a los menores costes de producción.
 
-Features and applications of SC connectors:
+Características y aplicaciones de los conectores SC:
 
-- simple installation;
-- high connection speed;
-- high mounting density;
-- plastic shell (quickly wears out, not resistant to vibration);
-- used with singlemode and multimode fiber;
-- loss of 0.25 dB.;
-- used in FTTH, telephony, cable TV, etc.
+- instalación sencilla;
+- alta velocidad de conexión;
+- alta densidad de montaje;
+- carcasa de plástico (se desgasta rápidamente, no resiste las vibraciones);
+- utilizado con fibra monomodo y multimodo;
+- pérdida de 0,25 dB.;
+- utilizados en FTTH, telefonía, televisión por cable, etc.
 
-## FC Connector
+## Conector FC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#fc-connector)
 
 ![FC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
 
+El conector FC fue desarrollado por Nippon Telegraph and Telephone. Fue el primer conector óptico que utilizó una punta de cerámica. Fue el primer conector óptico que utilizó una punta cerámica. Actualmente no se utiliza debido a los conectores SC y LC, más populares.
 
-FC Connector was developed by Nippon Telegraph and Telephone. It was the first optical connector, that used a ceramic tip. This was the first optical connector that used a ceramic tip. It is not currently used due to the more popular SC and LC connectors.
+Características y aplicaciones de los conectores FC:
 
-Features and applications of FC connectors:
+- carcasa metálica con conexión roscada (no se desgasta tanto y es resistente a las vibraciones);
+- menor densidad de montaje (en comparación con el conector SC);
+- utilizados en telecomunicaciones, industria y aparatos de medición;
+- utilizado con fibra monomodo;
+- de 0,3 dB.
 
-- metal shell with threaded connection (not so wear out and resistant to vibration);
-- less mounting density (compared to the SC connector);
-- used in telecommunications, industry and measuring devices;
-- used with singlemode fiber;
-- loss of 0.3 dB.
-
-## LC Connector
+## Conector LC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#lc-connector)
 
 ![LC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/lc.png)
 
-LC connector was developed by Lucent Technologies and released in 1997.
+El conector LC fue desarrollado por Lucent Technologies y lanzado al mercado en 1997.
 
-Features and applications of LC connectors:
+Características y aplicaciones de los conectores LC:
 
-- high mounting density;
-- the small diameter of the fiber ferrule (this reduces the reliability and resistance to mechanical loads);
-- used in structured cable networks, telecommunications and data centers;
-- used with singlemode and multimode fiber;
-- loss of 0.10 dB.
+- alta densidad de montaje;
+- el pequeño diámetro de la virola de fibra (esto reduce la fiabilidad y la resistencia a las cargas mecánicas);
+- utilizados en redes de cable estructurado, telecomunicaciones y centros de datos;
+- utilizado con fibra monomodo y multimodo;
+- de 0,10 dB.
 
-## ST Connector
+## Conector ST[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#st-connector)
 
-ST Connector was developed in the United States by AT&T and used in professional environments: corporate networks, in the military field.
+ST Connector fue desarrollado en Estados Unidos por AT&T y se utiliza en entornos profesionales: redes corporativas, en el ámbito militar.
 
-Features and applications of ST connectors:
+Características y aplicaciones de los conectores ST:
 
-- metal shell (not so wear out);
-- less mounting density (compared to the SC connector);
-- less convenient in connection than SC connector, but more convenient than FC connector;
-- used with multimode fiber;
-- loss of 0.25 dB.
+- carcasa metálica (no se desgasta tanto);
+- menor densidad de montaje (en comparación con el conector SC);
+- menos conveniente en la conexión que el conector SC, pero más conveniente que el conector FC;
+- utilizado con fibra multimodo;
+- de 0,25 dB.
 
-## Types of polish on fiber optic connectors
+## Tipos de pulido en conectores de fibra óptica[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
 
-Over the years, experts have upgraded the shape and characteristics of optical connectors, trying to achieve minimal losses and reflections on the connector.
-It is no secret that losses on the connector connection reduce the signal power, which leads to a decrease in the distance to which it can be transmitted.
-The reflected part of the signal can also introduce errors (BER) and heat the SFP module, which in turn reduces the quality of the transmitted information and leads to a reduction in the service life of the transmitting equipment.
+A lo largo de los años, los expertos han perfeccionado la forma y las características de los conectores ópticos, tratando de conseguir pérdidas y reflexiones mínimas en el conector. No es ningún secreto que las pérdidas en la conexión del conector reducen la potencia de la señal, lo que conlleva una disminución de la distancia a la que puede transmitirse. La parte reflejada de la señal también puede introducir errores (BER) y calentar el módulo SFP, lo que a su vez reduce la calidad de la información transmitida y provoca una reducción de la vida útil del equipo transmisor.
 
-That is why the types of polishing of optical connectors have been changed. The most popular types of optical connector polishing are PC (physical contact), UPC (ultraphysical contact), and APC (angular physical contact).
+Por eso han cambiado los tipos de pulido de los conectores ópticos. Los tipos más populares de pulido de conectores ópticos son PC (contacto físico), UPC (contacto ultrafísico) y APC (contacto físico angular).
 
-You can determine the type of connector/port polishing by its color:
+Puede determinar el tipo de pulido del conector/puerto por su color:
 
-- PC-black
-- UPC-blue
-- APC-green
+- PC-negro
+- UPC-azul
+- APC-verde
 
-![Polishing](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/polishing.png)
+![Pulido](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/polishing.png)
 
-### PC: Physical Contact
+### PC: Contacto físico
 
-The ferrule is beveled and processed on a flat surface. This avoids empty spaces between the tips of the connected connectors and provides losses in the range from -30 dB to -40 dB. This type is not relevant now.
+La virola está biselada y procesada sobre una superficie plana. Esto evita espacios vacíos entre las puntas de los conectores conectados y proporciona pérdidas en el rango de -30 dB a -40 dB. Este tipo no es relevante en la actualidad.
 
-### UPC: Ultra Physical contact
+### UPC: Ultra Contacto físico
 
-UPC polished connectors are widely used in data transmission systems.They have a lower cost, then APC. Because of the low signal power in such systems, the reflected signal also has a low value.
-The connectors are similar to the PC type. Due to a clearer bevel curve, losses are reduced to the limit of -40 to -55 dB.
+Los conectores pulidos UPC se utilizan mucho en los sistemas de transmisión de datos. Debido a la baja potencia de la señal en tales sistemas, la señal reflejada también tiene un valor bajo. Los conectores son similares a los de tipo PC. Gracias a una curva biselada más clara, las pérdidas se reducen hasta el límite de -40 a -55 dB.
 
-### APC: Angled Physical Contact
+### APC: Contacto físico en ángulo
 
-APC polished connectors provide less reflected signal towards the source.The surface of the ferrule is beveled at an angle of 8-9 degrees. Because of this, the signal is not reflected from the connector at a 180-degree angle, so the reflected signal does not return to the transmitter at all, or returns with less power. APC polished connectors are used in systems with a high-power signal. This is why they are common in cable TV and PON networks.
+Los conectores pulidos APC proporcionan menos señal reflejada hacia la fuente.La superficie de la virola está biselada en un ángulo de 8-9 grados. Debido a esto, la señal no se refleja desde el conector en un ángulo de 180 grados, por lo que la señal reflejada no vuelve al transmisor en absoluto, o vuelve con menos potencia. Los conectores pulidos APC se utilizan en sistemas con una señal de alta potencia. Por eso son habituales en redes de TV por cable y PON.
 
 ::alert
-It is forbidden to connect the APC and UPC connectors. This causes damage to the connectors and increases the risk of signal attenuation and reflection.
+Está prohibido conectar los conectores APC y UPC. Esto provoca daños en los conectores y aumenta el riesgo de atenuación y reflexión de la señal.
 ::

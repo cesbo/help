@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting"
+title: "Solución de problemas"
 noindex: true
 navigation:
   color: "#bd00ff"

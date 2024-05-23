@@ -1,5 +1,5 @@
 ---
-title: "Advanced"
+title: "Avanzado"
 noindex: true
 ---
 

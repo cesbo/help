@@ -1,41 +1,39 @@
 ---
-title: "Low-Noise Block for satellite dishes"
+title: "LNB или \"головка\""
 date: 2023-07-07
 image: https://cdn.cesbo.com/help/misc/articles/hardware/lnb/lnb.jpg
 ---
 
-The LNB (Low-Noise Block) is a device used in satellite dishes. It operates in specific frequency bands to receive signals, which it then amplifies and converts to a level optimal for transmission over a coaxial cable.
+LNB (Low-Noise Block) - это устройство, используемое в спутниковых антеннах. Он работает в определенных частотных диапазонах для приема сигналов, которые затем усиливает и преобразует до уровня, оптимального для передачи по коаксиальному кабелю.
 
 ![LNB](https://cdn.cesbo.com/help/misc/articles/hardware/lnb/lnb.jpg)
 
-## Power supply
+## Электропитание[](https://help.cesbo.com/misc/articles/hardware/lnb#power-supply)
 
-The power supply for an LNB comes directly from the satellite receiver via the connected coaxial cable. This is usually in the range of 13 to 18 volts, with the voltage level also used to control the polarization of the received signal.
+Питание для LNB поступает непосредственно от спутникового ресивера по подключенному коаксиальному кабелю. Обычно это напряжение находится в диапазоне от 13 до 18 вольт, причем уровень напряжения используется также для управления поляризацией принимаемого сигнала.
 
-- 18 volt is supplied for linear horizontal or circular left polarization, with the switching current typically ranging from 16 to 20 volts
-- 13 volt is used for linear vertical or circular right polarization, with the switching current generally falling between 11 and 14 volts
+- Для линейной горизонтальной или круговой левой поляризации подается напряжение 18 вольт, при этом ток переключения обычно составляет от 16 до 20 вольт
+- 13 вольт используется для линейной вертикальной или круговой правой поляризации, при этом ток переключения обычно находится в диапазоне 11-14 вольт
 
-## Heterodyne frequency
+## Частота гетеродина[](https://help.cesbo.com/misc/articles/hardware/lnb#heterodyne-frequency)
 
-A commonly used type, the Universal LNB, operates in the Ku-band, with frequencies ranging from 10700 to 12750 MHz. This LNB utilizes two Local Oscillators (LOs): one set at 9750 MHz for the low-band (10700 - 11700 MHz) and another set at 10600 MHz for the high-band (11700 - 12750 MHz). When a signal is received, it is mixed with the appropriate LO frequency. This results in an Intermediate Frequency (IF) signal ranging from 950 to 2150 MHz, which can be effectively transmitted over the coaxial cable.
+Один из распространенных типов - универсальный LNB - работает в Ku-диапазоне с частотами от 10700 до 12750 МГц. В этом LNB используются два локальных генератора (LO): один на частоте 9750 МГц для низкого диапазона (10700 - 11700 МГц) и другой на частоте 10600 МГц для высокого диапазона (11700 - 12750 МГц). При приеме сигнала он смешивается с соответствующей частотой LO. В результате получается сигнал промежуточной частоты (ПЧ) в диапазоне от 950 до 2150 МГц, который может быть эффективно передан по коаксиальному кабелю.
 
-The selection between the two Local Oscillators in a Universal LNB is controlled by a 22 kHz tone signal sent by the satellite receiver over the coaxial cable.
+Выбор между двумя локальными генераторами в универсальном LNB управляется тональным сигналом 22 кГц, передаваемым спутниковым ресивером по коаксиальному кабелю.
 
-## Quattro LNB
+## Quattro LNB[](https://help.cesbo.com/misc/articles/hardware/lnb#quattro-lnb)
 
-A Quattro LNB has four outputs, each dedicated to a specific band and polarization. This type of LNB designed for:
+Quattro LNB имеет четыре выхода, каждый из которых предназначен для определенного диапазона и поляризации. Этот тип LNB предназначен для:
 
-- Fiber transmitters
-- Multiswitch systems with up to 32 independent outputs 
-- Multiswitch with Unicable protocol
+- Волоконно-оптические передатчики
+- Мультикоммутационные системы с 32 независимыми выходами
+- Мультисвитч с протоколом Unicable
 
-![Fiber Transmitter](https://cdn.cesbo.com/help/misc/articles/hardware/lnb/fiber.png)
+![Волоконно-оптический передатчик](https://cdn.cesbo.com/help/misc/articles/hardware/lnb/fiber.png)
 
-## Quad LNB
+## Quad LNB[](https://help.cesbo.com/misc/articles/hardware/lnb#quad-lnb)
 
-A Quad LNB has for independent outputs, each capable of accessing all frequencies in the Ku-band.
+Quad LNB имеет независимые выходы, каждый из которых может работать со всеми частотами Ku-диапазона.
 
-::note
-It's important to note that a Quad LNB is designed for consumer use. Quattro LNB is not intended for direct connection to a receiver.
-The two types of LNBs are distinctly different and cannot replace each other in their respective applications. Be careful not to confuse them.
+::note Важно отметить, что Quad LNB предназначен для потребительского использования. Quattro LNB не предназначен для прямого подключения к приемнику. Эти два типа LNB заметно отличаются друг от друга и не могут заменить друг друга в соответствующих приложениях. Будьте осторожны, чтобы не спутать их. 
 ::

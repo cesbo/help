@@ -3,17 +3,17 @@ title: "SSH"
 date: 2023-02-28
 ---
 
-SSH - is the primary protocol and tool for the remote servers management. Also allows you to create tunnels and transfer files.
+SSH - es el principal protocolo y herramienta para la gestión de servidores remotos. También le permite crear túneles y transferir archivos.
 
-## Connection to server
+## Conexión al servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#connection-to-server)
 
 ```
 ssh root@192.168.1.1
 ```
 
-## Client Configuration
+## Configuración de clientes[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#client-configuration)
 
-The SSH client can work without a configuration file and retrieve all the necessary parameters from command-line arguments. However, you may create a configuration file named `~/.ssh/config`. This file should contain the following information:
+El cliente SSH puede funcionar sin un archivo de configuración y recuperar todos los parámetros necesarios de los argumentos de la línea de comandos. Sin embargo, puede crear un archivo de configuración llamado `~/.ssh/config`. Este archivo debe contener la siguiente información:
 
 ```
 Host server-alias
@@ -23,61 +23,61 @@ Host server-alias
     IdentityFile ~/.ssh/server_ed25519
 ```
 
-- `Host` - server name. This is the name used in the connection command: `ssh server-alias`
-- `HostName` - an optional server address. If HostName is not defined, the proper address or host name should be defined in `Host`
-- `User` - username
-- `Port` - the server port. Default: `22`
-- `IdentityFile` - an optional field that specifies the full path to the private key file
+- `Host` - nombre del servidor. Este es el nombre utilizado en el comando de conexión: `ssh server-alias`
+- `HostName` - una dirección de servidor opcional. Si no se define HostName, la dirección o el nombre de host adecuados deben definirse en `Host`
+- `User` - nombre de usuario
+- `Port` - el puerto del servidor. Por defecto: `22`
+- `IdentityFile` - un campo opcional que especifica la ruta completa al archivo de clave privada
 
-## Key Generation
+## Generación de claves[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#key-generation)
 
-For security reasons, it is strongly recommended to use authentication keys instead of passwords.
+Por razones de seguridad, se recomienda encarecidamente utilizar claves de autenticación en lugar de contraseñas.
 
-To generate an authentication key, run the following command:
+Para generar una clave de autenticación, ejecute el siguiente comando:
 
 ```
 ssh-keygen -t ed25519 -f ~/.ssh/server_ed25519
 ```
 
-- `ed25519` - selects the type of encryption. Ed25519 is the optimal choice
-- `~/.ssh/server_ed25519` - the path to the private key file. The public key will be generated as `~/.ssh/server_ed25519.pub`
+- `ed25519` - selecciona el tipo de cifrado. Ed25519 es la elección óptima
+- `~/.ssh/server_ed25519` - la ruta al archivo de la clave privada. La clave pública se generará como `~/.ssh/server_ed25519.pub`
 
-Once the command is started, it will prompt you to enter a password. This password provides an additional level of security and must be entered when connecting to the server.
+Una vez iniciado el comando, le pedirá que introduzca una contraseña. Esta contraseña proporciona un nivel adicional de seguridad y debe introducirse al conectarse al servidor.
 
-The public key is a single line with the following format:
+La clave pública es una sola línea con el siguiente formato:
 
 ```
 ssh-ed25519 AAAA...UUUU user@example.com
 ```
 
-On the server, append this line to the `~/.ssh/authorized_keys` file. This file may contain one or more keys. To append the public key, run the following command:
+En el servidor, añada esta línea al archivo `~/.ssh/authorized_keys` archivo. Este archivo puede contener una o más claves. Para añadir la clave pública, ejecute el siguiente comando:
 
 ```
 echo "ssh-ed25519 AAAA...UUUU user@example.com" >>~/.ssh/authorized_keys
 ```
 
-## Copy file to server
+## Copiar archivo al servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#copy-file-to-server)
 
-To copy files to the server, use the next command:
+Para copiar archivos en el servidor, utilice el siguiente comando:
 
 ```
 scp FILE 192.168.1.1:REMOTE
 ```
 
-- `FILE` - path to the file on the local computer
-- `192.168.1.1` - server address
-- `REMOTE` - absolute path to the file on the server
+- `FILE` - ruta al archivo en el ordenador local
+- `192.168.1.1` - dirección del servidor
+- `REMOTE` - ruta absoluta al archivo en el servidor
 
-## Port Forwarding
+## Reenvío de puertos[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#port-forwarding)
 
-To forward traffic from a remote server to a local computer, use the following command:
+Para reenviar el tráfico de un servidor remoto a un equipo local, utilice el siguiente comando:
 
 ```
 ssh -L 4000:192.168.88.100:554 192.168.1.1
 ```
 
-- `4000` - the port number on the local computer with ssh client
-- `192.168.88.100:554` - the IP address and port number on the remote computer
-- `-fNT` - additional options to run the SSH client in the background
+- `4000` - el número de puerto en el ordenador local con cliente ssh
+- `192.168.88.100:554` - la dirección IP y el número de puerto del ordenador remoto
+- `-fNT` - opciones adicionales para ejecutar el cliente SSH en segundo plano
 
-For example, if the remote address is an IP camera with the stream address `rtsp://admin:123@192.168.88.100:554/stream1`, SSH will forward all requests to port `4000` to this camera. Once the stream is started, it can be opened in VLC using the following URL: `rtsp://admin:123@127.0.0.1:4000/stream1`.
+Por ejemplo, si la dirección remota es una cámara IP con la dirección de flujo `rtsp://admin:123@192.168.88.100:554/stream1`SSH reenviará todas las peticiones al puerto `4000` a esta cámara. Una vez iniciada la transmisión, puede abrirse en VLC utilizando la siguiente URL: `rtsp://admin:123@127.0.0.1:4000/stream1`.

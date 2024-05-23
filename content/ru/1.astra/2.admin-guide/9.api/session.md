@@ -1,11 +1,11 @@
 ---
-title: "Session API"
+title: "API сеанса"
 date: 2023-08-03
 ---
 
-Sessions is a list of active connections to HTTP MPEG-TS or HLS outputs.
+Sessions - это список активных соединений с выходами HTTP MPEG-TS или HLS.
 
-## Get session list
+## Получить список сессий[](https://help.cesbo.com/astra/admin-guide/api/session#get-session-list)
 
 ```
 {
@@ -13,7 +13,7 @@ Sessions is a list of active connections to HTTP MPEG-TS or HLS outputs.
 }
 ```
 
-In response will be array of active sessions:
+В ответ будет получен массив активных сессий:
 
 ```
 {
@@ -29,13 +29,13 @@ In response will be array of active sessions:
 }
 ```
 
-- `client_id` — unique session identifier
-- `channel_id` — unique channel identifier
-- `channel_name` — channel name
-- `addr` — client IP address
-- `uptime` — the time in seconds, for which the session has been running
+- `client_id` - уникальный идентификатор сессии
+- `channel_id` - уникальный идентификатор канала
+- `channel_name` - название канала
+- `addr` - IP-адрес клиента
+- `uptime` - время в секундах, в течение которого выполняется сессия
 
-## Close session
+## Закрыть сессию[](https://help.cesbo.com/astra/admin-guide/api/session#close-session)
 
 ```
 {
@@ -44,4 +44,4 @@ In response will be array of active sessions:
 }
 ```
 
-- `id` — session identifier
+- `id` - идентификатор сессии

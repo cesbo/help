@@ -1,5 +1,5 @@
 ---
-title: Tratamiento
+title: Procesando
 noindex: true
 navigation:
   color: "#519ed3"

@@ -1,53 +1,50 @@
 ---
-title: "Playlist for HTTP Play"
+title: "Плейлист для HTTP Play"
 date: 2023-08-22
 ---
 
-Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](/astra/delivery/http-hls/http-play) feature.
+Astra формирует простой плейлист со ссылками на все включенные каналы. Этот список воспроизведения доступен только для функции [HTTP Play](https://help.cesbo.com/astra/delivery/http-hls/http-play).
 
-![HTTP Play settings](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/http-play.png)
+![Настройки HTTP Play](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/http-play.png)
 
-## Playlist format
+## Формат плейлиста[](https://help.cesbo.com/astra/delivery/http-hls/playlist#playlist-format)
 
-Astra provide access to playlist in next formats:
+Astra предоставляет доступ к списку воспроизведения в следующих форматах:
 
-- `M3U8` - is a most popular format supported by all media players
-- `XSPF` - is an XML-based playlist format, supported by some players
+- `M3U8` - наиболее популярный формат, поддерживаемый всеми медиаплеерами
+- `XSPF` - это формат плейлиста на основе XML, поддерживаемый некоторыми плеерами
 
-In this guide we will use M3U8 format.
+В данном руководстве мы будем использовать формат M3U8.
 
-## Links to the playlist
+## Ссылки на список воспроизведения[](https://help.cesbo.com/astra/delivery/http-hls/playlist#links-to-the-playlist)
 
-Default link to the M3U8 playlist is:
+По умолчанию ссылка на список воспроизведения M3U8:
 
 ```
 http://example.com:8000/playlist.m3u8
 ```
 
-Where:
+Где:
 
-- `example.com` - your server IP address
-- `8000` - is a port to HTTP Play, by default it equal to the Astra Web Interface port, but could be customized in the HTTP Play settings
-- `playlist.m3u8` - playlist file name, also could be customized in the HTTP Play settings
+- `example.com` - IP-адрес вашего сервера
+- `8000` - порт для HTTP Play, по умолчанию он равен порту веб-интерфейса Astra, но может быть изменен в настройках HTTP Play
+- `playlist.m3u8` - имя файла плейлиста, также может быть изменено в настройках HTTP Play
 
-## Channel Groups
+## Группы каналов[](https://help.cesbo.com/astra/delivery/http-hls/playlist#channel-groups)
 
-For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/astra/admin-guide/settings/channel-groups).
+Для более удобной навигации каналы в плейлисте можно сгруппировать. Для этого создайте новую категорию в разделе Настройки -> Группы. Подробнее о том, как создавать [группы каналов](https://help.cesbo.com/astra/admin-guide/settings/channel-groups).
 
-Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
+Затем выберите созданную категорию в окне `HTTP Play` настройки, опция `Playlist Arrange`.
 
-::note
-Some players, like VLC, doesn't support M3U8 groups and shows flat playlist
-::
+::note Некоторые проигрыватели, например VLC, не поддерживают группы M3U8 и показывают плоский плейлист. ::
 
-## Channel Logos
+## Логотипы каналов[](https://help.cesbo.com/astra/delivery/http-hls/playlist#channel-logos)
 
-Some players and middleware solutions display channel logos alongside their names in the channels list.
+Некоторые игроки и промежуточные решения отображают логотипы каналов рядом со своими названиями в списке каналов.
 
-![Channel Logos on Middleware](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/mw.jpg)
+![Логотипы каналов на Middleware](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/mw.jpg)
 
-To begin, download archive with logo images from: https://epg.it999.ru/it999_transparent_logo.zip
-You may download and extract archive on your server using the following commands:
+Для начала скачайте архив с изображениями логотипов по адресу: [https://epg.it999.ru/it999\_transparent\_logo.zip](https://epg.it999.ru/it999_transparent_logo.zip). Скачать и распаковать архив на своем сервере можно с помощью следующих команд:
 
 ```
 mkdir -p /var/lib/astra
@@ -57,31 +54,30 @@ unzip it999_transparent_logo.zip
 rm it999_transparent_logo.zip
 ```
 
-In the Settings -> `HTTP Play` -> `Path to TV logos`, set the path as `/var/lib/astra/it999_transparent_220x132`. Please, note the directory name is for example above.
+В разделе Настройки -> `HTTP Play` -> `Path to TV logos`, задайте путь как `/var/lib/astra/it999_transparent_220x132`. Обратите внимание, что имя каталога указано для примера выше.
 
-The provided archive includes logos in PNG format, with filenames matching the channel names. With these steps completed, the playlist will now include the `tvg-logo` option for each channel.
+В предоставленный архив входят логотипы в формате PNG, имена файлов совпадают с именами каналов. После выполнения этих шагов список воспроизведения теперь будет содержать `tvg-logo` опция для каждого канала.
 
-## Electronic Program Guide
+## Электронный программный гид[](https://help.cesbo.com/astra/delivery/http-hls/playlist#electronic-program-guide)
 
-Some players and middleware solutions display current and upcoming events for channels. The Electronic Program Guide (EPG) can be exported to the player in XMLTV or any other format supported by the player.
+Некоторые плееры и промежуточные решения отображают текущие и предстоящие события для каналов. Электронный программный гид (EPG) может быть экспортирован в плеер в формате XMLTV или в любом другом формате, поддерживаемом плеером.
 
-In the Astra Settings -> `HTTP Play` -> `M3U Header`, set option
+В меню Astra Settings -> `HTTP Play` -> `M3U Header`, установить опцию
 
 ```
 url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
 ```
 
-Line will be added to the playlist header and provide information about EPG location.
-This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/astra/admin-guide/stream/epg).
+Строка будет добавлена в заголовок плейлиста и предоставит информацию о местоположении EPG. Данный URL является лишь примером, вы можете использовать любой другой источник EPG или изучить наше решение, [EPG Aggregator](https://help.cesbo.com/astra/admin-guide/stream/epg).
 
-The final step is a configuring channel ID to link your channels with EPG records. Each channel in the XMLTV has unique identifier, like so:
+Последним шагом является настройка идентификатора канала для связи ваших каналов с записями EPG. Каждый канал в XMLTV имеет уникальный идентификатор, например:
 
-```xml
+```
 <channel id="226">
     <display-name lang="en">Discovery Channel</display-name>
 </channel>
 ```
 
-In Astra, navigate to the Channel settings, open EPG tab, and set the `XMLTV Channel ID` value to `226`:
+В программе Astra перейдите к настройкам канала, откройте вкладку EPG и установите значение `XMLTV Channel ID` значение для `226`:
 
-![Stream EPG options](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/stream-epg.png)
+![Параметры потоковой EPG](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/stream-epg.png)

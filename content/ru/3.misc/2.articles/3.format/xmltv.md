@@ -3,9 +3,9 @@ title: "XMLTV"
 date: 2023-06-13
 ---
 
-XMLTV is an XML-based format for describing TV schedule information. It provides a mechanism to store channel information, programme schedules, and their associated metadata. 
+XMLTV - это формат описания информации о расписании телепередач, основанный на XML. Он предоставляет механизм для хранения информации о каналах, расписании программ и связанных с ними метаданных.
 
-## Example
+## Пример[](https://help.cesbo.com/misc/articles/format/xmltv#example)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -42,9 +42,9 @@ XMLTV is an XML-based format for describing TV schedule information. It provides
 </tv>
 ```
 
-### Channel Properties
+### Свойства канала
 
-The `<channel>` element defines individual television channels.
+Сайт `<channel>` Элемент определяет отдельные телевизионные каналы.
 
 ```
 <channel id="1">
@@ -53,18 +53,18 @@ The `<channel>` element defines individual television channels.
 </channel>
 ```
 
-Attributes:
+Атрибуты:
 
-- `id` - unique channel identifier
+- `id` - уникальный идентификатор канала
 
-Nested elements:
+Вложенные элементы:
 
-- `display-name` – provides the name of the channel with specified language
-- `icon` – url to the channel logo
+- `display-name` - предоставляет имя канала с указанным языком
+- `icon` - url на логотип канала
 
-### Event Properties
+### Свойства события
 
-The `<programme>` element in the XMLTV format represents an individual television show or broadcast event.
+Сайт `<programme>` Элемент в формате XMLTV представляет собой отдельную телепередачу или эфирное событие.
 
 ```
 <programme start="20180920143000 +0300" stop="20180920141500 +0300" channel="2">
@@ -76,23 +76,24 @@ The `<programme>` element in the XMLTV format represents an individual televisio
 </programme>
 ```
 
-Attributes:
+Атрибуты:
 
-- `start` - event beginning time
-- `stop` - event ending time
-- `channel` - links the programme to a specific channel
+- `start` - время начала мероприятия
+- `stop` - время окончания мероприятия
+- `channel` - привязка программы к конкретному каналу
 
-Nested elements:
+Вложенные элементы:
 
-- `title` – provides the name of the programme. The lang attribute can be used to specify the language of the title
-- `desc` – description of the programme
-- `date` – pecifies the release date of the programme
-- `category` – genre or category of the programme. Multiple <category> elements can be included for a single programme to represent multiple genres or categories, with the lang attribute defining the language
+- `title` - содержит название программы. Атрибут lang может быть использован для указания языка заголовка
+- `desc` - описание программы
+- `date` - указывает дату выпуска программы
+- `category` - жанр или категория программы. Несколько
+    
 
-## EIT
+## EIT[](https://help.cesbo.com/misc/articles/format/xmltv#eit)
 
-The Event Information Table (EIT) is a part of the MPEG-2 Transport Stream (MPEG-TS) used in digital broadcasting. This table contains metadata about the scheduled events or programmes on various channels, similar to the programme guide one might find on a digital TV or set-top box.
+Таблица информации о событиях (Event Information Table, EIT) является частью транспортного потока MPEG-2 (MPEG-TS), используемого в цифровом вещании. Эта таблица содержит метаданные о запланированных событиях или программах на различных каналах, подобно программному гиду, который можно найти на цифровом телевизоре или приставке.
 
-XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/misc/tools-and-utilities/tv-and-media/eit-stream)
+Файл XMLTV может быть преобразован в поток MPEG-TS с пакетами EIT с помощью нашего бесплатного инструмента - EIT Stream. [Читать далее](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream)
 
-EIT packet could be extracted from MPEG-TS stream and saved to XMLTV files with Astra.
+Пакет EIT может быть извлечен из потока MPEG-TS и сохранен в файлах XMLTV с помощью программы Astra.

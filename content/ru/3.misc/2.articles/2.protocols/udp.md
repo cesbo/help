@@ -3,20 +3,20 @@ title: "UDP"
 date: 2023-06-13
 ---
 
-UDP (User Datagram Protocol) is a communication protocol utilized in local networks or the Internet, known for its minimal delays and less-than-optimal stability. UDP provides message exchange between application programs and receivers, using checksums to maintain data integrity and port numbers to address various functions at the source and destination of the datagram.
+UDP (User Datagram Protocol) - это коммуникационный протокол, используемый в локальных сетях или Интернете, известный своими минимальными задержками и не слишком высокой стабильностью. UDP обеспечивает обмен сообщениями между прикладными программами и приемниками, используя контрольные суммы для поддержания целостности данных и номера портов для адресации различных функций в источнике и пункте назначения дейтаграммы.
 
-Detailed description available in the [RFC768](https://www.rfc-editor.org/rfc/rfc768){target="_blank"} standard.
+Подробное описание имеется в стандарте [RFC768](https://www.rfc-editor.org/rfc/rfc768){target="_blank"}
 
-## Multicast
+## Multicast[](https://help.cesbo.com/misc/articles/protocols/udp#multicast)
 
-In computer networking, multicast refers to group communication in which data transmission occurs simultaneously to a group of destination receivers. Multicast is especially effective in cases of multiple receivers as it can efficiently use bandwidth by sending a single copy of the data across the network backbone. This ability makes it an ideal protocol for streaming Digital TV.
+В компьютерных сетях под многоадресной рассылкой понимается групповая связь, при которой передача данных происходит одновременно группе получателей. Многоадресная рассылка особенно эффективна в случае множества получателей, поскольку позволяет эффективно использовать полосу пропускания, передавая одну копию данных через сетевую магистраль. Эта способность делает его идеальным протоколом для потокового цифрового телевидения.
 
 ![UDP Multicast](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
-## Broadcast
+## Broadcast[](https://help.cesbo.com/misc/articles/protocols/udp#broadcast)
 
-**Never use it for Digital TV!** Broadcasting is a method of transferring a message to all recipients simultaneously.
+**Никогда не используйте его для цифрового телевидения!** Широковещание - это метод передачи сообщения всем адресатам одновременно.
 
-## Unicast
+## Unicast[](https://help.cesbo.com/misc/articles/protocols/udp#unicast)
 
-Unicast, a one-to-one transmission, is frequently utilized in higher layer protocols like RTSP and SRT. It can also serve to transmit Digital TV between different servers within a localhost or local network - for example, from a receiver to a transcoder, and then to the HLS segmenter.
+Одноадресная передача, т.е. передача "один к одному", часто используется в протоколах верхнего уровня, таких как RTSP и SRT. Она также может служить для передачи цифрового ТВ между различными серверами в пределах локального хоста или локальной сети - например, от приемника к транскодеру, а затем к сегментатору HLS.

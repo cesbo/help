@@ -1,13 +1,13 @@
 ---
-title: "Receiving RSTP"
+title: "Прием RSTP"
 date: 2023-03-23
 ---
 
-RSTP is a popular protocol for streaming media over IP networks and is commonly used in IP cameras due to its low-latency and high-quality video streaming capabilities
+RSTP является популярным протоколом для потоковой передачи мультимедиа по IP-сетям и широко используется в IP-камерах благодаря возможности передачи видеопотока с низкой задержкой и высоким качеством.
 
-## Address format
+## Формат адреса[](https://help.cesbo.com/astra/receiving/ip/rtsp#address-format)
 
-RSTP addresses are used to identify the location of the media stream that is being transmitted over the network
+Адреса RSTP используются для идентификации местоположения медиапотока, передаваемого по сети
 
 ```
 rtsp://address
@@ -15,39 +15,39 @@ rtsp://address:port/path
 rtsp://login:password@address:port/path#options
 ```
 
-- `login:password` – login and password for RTSP authentication. Supports Basic and Digest authentication methods
-- `address` – IPv4 server address or domain name
-- `port` – port number. Default: `554`
-- `path` – the path to the resource. Default: `/`
+- `login:password` - логин и пароль для аутентификации по протоколу RTSP. Поддерживаются методы аутентификации Basic и Digest
+- `address` - Адрес сервера IPv4 или доменное имя
+- `port` - номер порта. По умолчанию: `554`
+- `path` - путь к ресурсу. По умолчанию: `/`
 
-Options:
+Варианты:
 
-- `tcp` – interleaved mode. receive stream over TCP instead UDP
-- `ua=Name` – custom User-Agent header
+- `tcp` - чередующийся режим. принимать поток по TCP вместо UDP
+- `ua=Name` - пользовательский заголовок User-Agent
 
-## Web Interface
+## Веб-интерфейс[](https://help.cesbo.com/astra/receiving/ip/rtsp#web-interface)
 
-To set up an RSTP input in Astra, you can either enter the source address directly into the `Input address` field in the Stream settings or use the Input configuration form accessed by clicking on the gear icon form:
+Для настройки входа RSTP в Astra можно либо ввести адрес источника непосредственно в `Input address` поле в настройках потока или воспользуйтесь формой настройки входа, доступ к которой осуществляется нажатием на значок шестеренки:
 
-![RTSP Options](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
+![Опции RTSP](https://cdn.cesbo.com/help/astra/receiving/ip/rtsp/options.png)
 
-- `RSTP address` - source address of the RSTP stream
-- `Interleaved mode` - by the default Astra uses UDP to receive media data from camera, interleaved mode force camera to send data over TCP
+- `RSTP address` - адрес источника потока RSTP
+- `Interleaved mode` - По умолчанию Astra использует UDP для получения медиаданных от камеры, режим чередования заставляет камеру передавать данные по TCP
 
-## Troubleshooting
+## Поиск и устранение неисправностей[](https://help.cesbo.com/astra/receiving/ip/rtsp#troubleshooting)
 
-### h.265 not working
+### h.265 не работает
 
-The current version of Astra supports H.264 only
+Текущая версия Astra поддерживает только H.264
 
-### Timeout errors
+### Ошибки таймаута
 
-The error messages may include `Connection timeout` or `Response timeout`, which suggest that the camera is not responding to requests from Astra. One possible cause of this issue is when the camera is stuck and cannot respond to requests
+Сообщения об ошибках могут включать `Connection timeout` или `Response timeout`, что свидетельствует о том, что камера не отвечает на запросы от Astra. Одной из возможных причин этой проблемы является ситуация, когда камера застряла и не может ответить на запросы
 
-### Authentication failed
+### Не удалось выполнить аутентификацию
 
-Invalid login or password to the RTSP stream
+Неверный логин или пароль для входа в поток RTSP
 
-### Unknown encoding format
+### Неизвестный формат кодирования
 
-This may indicate that the data format of the stream is not recognized by Astra. This error can occur when the RSTP stream uses an unsupported data format or encoding method
+Это может свидетельствовать о том, что формат данных потока не распознается компанией Astra. Эта ошибка может возникнуть, если в потоке RSTP используется неподдерживаемый формат данных или метод кодирования

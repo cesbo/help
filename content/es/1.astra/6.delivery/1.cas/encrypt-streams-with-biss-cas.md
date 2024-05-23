@@ -1,55 +1,55 @@
 ---
-title: "Encrypt streams with BISS CAS"
+title: "Cifrar flujos con BISS CAS"
 date: 2023-04-02
 ---
 
-The Basic Interoperable Scrambling System (BISS) is a straightforward and efficient conditional access system that utilizes a static key to protect content from unauthorized access. BISS is based on the Common Scrambling Algorithm (CSA), which scrambles the channel data, ensuring secure transmission of content over satellite and terrestrial broadcasting networks.
+El Basic Interoperable Scrambling System (BISS) es un sistema de acceso condicional sencillo y eficaz que utiliza una clave estática para proteger los contenidos de accesos no autorizados. BISS se basa en el algoritmo de codificación común (CSA), que codifica los datos del canal, garantizando la transmisión segura de contenidos a través de redes de radiodifusión por satélite y terrestres.
 
 ::alert
-Although BISS provides a level of content protection, it is essential to note that this system is not recommended due to its weak protection mechanism. The static CSA key used in BISS is susceptible to brute force attacks
+Aunque BISS proporciona un nivel de protección de contenidos, es esencial señalar que este sistema no es recomendable debido a su débil mecanismo de protección. La clave CSA estática utilizada en BISS es susceptible a ataques de fuerza bruta.
 ::
 
-## BISS Key
+## Clave BISS[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#biss-key)
 
-The BISS key is an 8-byte long sequence, represented as 16 hexadecimal symbols. For example, the key `1234569C789ABCCE` can be broken down as follows:
+La clave BISS es una secuencia de 8 bytes de longitud, representada como 16 símbolos hexadecimales. Por ejemplo, la clave `1234569C789ABCCE` puede desglosarse del siguiente modo:
 
-- The first 6 hexadecimal symbols `123456` constitute the first part of the key
-- The 7th and 8th symbols `9C` are a checksum for the first part (calculated as `0x12 + 0x34 + 0x56 = 0x9C`)
-- The 9th to 14th hexadecimal symbols `789ABC` form the second part of the key.
-- The last two symbols `CE` are a checksum for the second part (calculated as `0x78 + 0x9A + 0xBC = 0x1CE`, with only the last byte used for the checksum)
+- Los 6 primeros símbolos hexadecimales `123456` constituyen la primera parte de la clave
+- Los símbolos 7 y 8 `9C` son una suma de comprobación de la primera parte (calculada como `0x12 + 0x34 + 0x56 = 0x9C`)
+- Los símbolos hexadecimales 9º a 14º `789ABC` forman la segunda parte de la clave.
+- Los dos últimos símbolos `CE` son una suma de comprobación de la segunda parte (calculada como `0x78 + 0x9A + 0xBC = 0x1CE`con sólo el último byte utilizado para la suma de comprobación)
 
-In Astra, you can define the key as `12345600789ABC00`, and Astra will automatically calculate the checksums for you. This simplifies the process and helps ensure the accuracy and integrity of the BISS key
+En Astra, puede definir la clave como `12345600789ABC00`y Astra calculará automáticamente las sumas de comprobación por ti. Esto simplifica el proceso y ayuda a garantizar la precisión y la integridad de la clave BISS
 
-## Scrambling Transmitted Streams
+## Codificación de flujos transmitidos[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#scrambling-transmitted-streams)
 
-To scramble a transmitted stream, append the `biss` option with the appropriate key to the Output Address. For example:
+Para codificar un flujo transmitido, añada el parámetro `biss` con la tecla adecuada a la Dirección de Salida. Por ejemplo:
 
 ```
 udp://239.255.1.1:1234#biss=12345600789ABC00
 ```
 
-By specifying the BISS key in the Output Address, Astra will automatically scramble the channel using the provided key.
+Al especificar la clave BISS en la Dirección de Salida, Astra codificará automáticamente el canal utilizando la clave proporcionada.
 
-## Analyze scrambled stream
+## Analizar el flujo codificado[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#analyze-scrambled-stream)
 
-You can verify if a channel is scrambled using Astra MPEG-TS Analyzer. To do this, start the analyzer with the following command:
+Puedes comprobar si un canal está codificado utilizando el analizador Astra MPEG-TS. Para ello, inicia el analizador con el siguiente comando:
 
 ```
 astra --analyze udp://239.255.1.1:1234
 ```
 
-The analyzer will write messages to the console, indicating that the stream is scrambled.
+El analizador escribirá mensajes en la consola, indicando que el flujo está codificado.
 
-## Play scrambled streams with VLC Player
+## Reproducir secuencias codificadas con VLC Player[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#play-scrambled-streams-with-vlc-player)
 
-Scrambled streams can be received and viewed using VLC Player. To launch VLC with the appropriate BISS key from the command line, enter the following command:
+Los flujos codificados pueden recibirse y visualizarse con VLC Player. Para iniciar VLC con la clave BISS adecuada desde la línea de comandos, introduzca el siguiente comando:
 
 ```
 vlc --ts-csa-ck 1234569C789ABCCE udp://@239.255.1.1:1234
 ```
 
-By using the `--ts-csa-ck` option followed by the BISS key, VLC will be able to decrypt and play the content seamlessly. Make sure you provide the correct BISS key with calculated checksums.
+Utilizando el `--ts-csa-ck` seguida de la clave BISS, VLC podrá descifrar y reproducir el contenido sin problemas. Asegúrate de proporcionar la clave BISS correcta con las sumas de comprobación calculadas.
 
-## Receive scrambled streams with Astra
+## Recibe flujos codificados con Astra[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#receive-scrambled-streams-with-astra)
 
-To receive scrambled streams with Astra, please check this guide: [Decrypt streams with BISS CAS](../../processing/cas/decrypt-biss)
+Para recibir flujos codificados con Astra, consulta esta guía: [Descifrar flujos con BISS CAS](https://help.cesbo.com/astra/processing/cas/decrypt-biss)

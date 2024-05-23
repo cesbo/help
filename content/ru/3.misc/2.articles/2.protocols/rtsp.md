@@ -3,18 +3,18 @@ title: "RTSP"
 date: 2023-06-13
 ---
 
-RTSP (Real-Time Streaming Protocol) is an application-level network protocol that manages multimedia transport streams over suitable transport protocols. It's mainly used in entertainment and communications systems to control media servers. The protocol establishes and manages media sessions between endpoints for real-time media streaming, whether from the server to a client or vice versa.
+RTSP (Real-Time Streaming Protocol) - это сетевой протокол прикладного уровня, управляющий транспортными потоками мультимедиа по соответствующим транспортным протоколам. В основном он используется в развлекательных и коммуникационных системах для управления медиасерверами. Протокол устанавливает и управляет сеансами передачи мультимедиа между конечными точками для потоковой передачи мультимедиа в реальном времени, как от сервера к клиенту, так и наоборот.
 
-For a detailed description, please refer to the [RFC 7826](https://www.rfc-editor.org/rfc/rfc7826){target="_blank"} standard.
+Подробное описание приведено в стандарте [RFC 7826](https://www.rfc-editor.org/rfc/rfc7826){target="_blank"}
 
-## RTP
+## RTP[](https://help.cesbo.com/misc/articles/protocols/rtsp#rtp)
 
-While RTSP manages the control of media streams, it delegates the actual transmission of streaming data to other protocols. Most RTSP servers use the Real-Time Transport Protocol (RTP) in conjunction with the Real-Time Control Protocol (RTCP).
+Хотя RTSP управляет управлением медиапотоками, он делегирует фактическую передачу потоковых данных другим протоколам. Большинство серверов RTSP используют транспортный протокол реального времени (RTP) в сочетании с протоколом управления в реальном времени (RTCP).
 
-RTP is a network protocol employed for delivering audio and video over IP networks and is typically utilized in systems involving streaming media, such as telephony, video teleconference applications like WebRTC, and television services.
+RTP - это сетевой протокол, используемый для передачи аудио и видео по IP-сетям и обычно применяемый в системах с потоковым мультимедиа, таких как телефония, приложения для видеоконференций, например WebRTC, и телевизионные сервисы.
 
-## IP Camera Streaming
+## Потоковая передача данных с IP-камер[](https://help.cesbo.com/misc/articles/protocols/rtsp#ip-camera-streaming)
 
-One of the most frequent applications of RTSP is in IP camera streaming. IP cameras, often used in surveillance systems, typically rely on RTSP for streaming live video feeds.
+Одним из наиболее частых применений RTSP является потоковая передача данных с IP-камер. IP-камеры, часто используемые в системах видеонаблюдения, обычно используют RTSP для передачи потокового видео в реальном времени.
 
-In a typical scenario, an IP camera acts as an RTSP server. The camera captures video, then encodes and packetizes the video data to be sent over the network. An end user or system — the RTSP client.
+В типичном сценарии IP-камера выступает в роли RTSP-сервера. Камера производит видеозахват, затем кодирует и упаковывает видеоданные для передачи по сети. Конечный пользователь или система - клиент RTSP.

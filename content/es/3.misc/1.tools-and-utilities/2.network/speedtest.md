@@ -1,28 +1,28 @@
 ---
-title: "Check Internet connection speed"
+title: "Comprobar la velocidad de la conexión a Internet"
 date: 2023-08-08
 ---
 
-Sometimes it is necessary to check the Internet connection speed from the server console.
+A veces es necesario comprobar la velocidad de conexión a Internet desde la consola del servidor.
 
-## Install
+## Instale[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#install)
 
-Download and install command line tool for testing internet bandwidth using speedtest.net
+Descargar e instalar la herramienta de línea de comandos para probar el ancho de banda de Internet utilizando speedtest.net
 
-```sh
+```
 sudo curl -Lo /usr/bin/speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
 sudo chmod +x /usr/bin/speedtest-cli
 ```
 
-## Launch
+## Lanzamiento[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#launch)
 
-To start test launch in console:
+Para iniciar la prueba de lanzamiento en la consola:
 
-```sh
+```
 speedtest-cli
 ```
 
-Result will be printed in console:
+El resultado se imprimirá en la consola:
 
 ```
 Retrieving speedtest.net configuration...
@@ -36,23 +36,23 @@ Testing upload speed..........................
 Upload: 92.25 Mbit/s
 ```
 
-## Select server
+## Seleccionar servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#select-server)
 
-You may list available servers with command:
+Puede listar los servidores disponibles con el comando
 
-```sh
+```
 speedtest-cli --list
 ```
 
-Example output:
+Ejemplo de salida:
 
 ```
  1437) Telia Lietuva, AB (Kaunas, Lithuania) [506.33 km]
 16248) Litnet (Kaunas, Lithuania) [506.33 km]
 ```
 
-Now you may launch speedtest with custom server:
+Ahora puede iniciar speedtest con un servidor personalizado:
 
-```sh
+```
 speedtest-cli --server 16248
 ```

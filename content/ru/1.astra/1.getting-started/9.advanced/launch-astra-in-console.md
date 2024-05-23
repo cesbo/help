@@ -3,21 +3,21 @@ title: "Запустить Astra в консоли"
 date: 2023-02-21
 ---
 
-If your system does not have systemd you may launch process manually:
+Если в системе отсутствует systemd, то можно запустить процесс вручную:
 
 ```
 astra -c /etc/astra/astra.conf -p 8000
 ```
 
-Process will be launched in the foreground and your console will be taken by process until it finish. To stop process just press Ctrl+C on your keyboard.
+Процесс будет запущен на передний план, и ваша консоль будет занята им до тех пор, пока он не завершится. Чтобы остановить процесс, просто нажмите на клавиатуре сочетание клавиш Ctrl+C.
 
-To launching process in background append symbol `&` after the command line:
+Для запуска процесса в фоновом режиме добавьте символ `&` после командной строки:
 
 ```
 astra -c /etc/astra/astra.conf -p 8000 &
 ```
 
-Process will be launched in the background and console will be returned to your control immediately. To stop process you may launch command:
+Процесс будет запущен в фоновом режиме, а консоль будет немедленно возвращена под ваш контроль. Для остановки процесса можно запустить команду:
 
 ```
 killall astra

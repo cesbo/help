@@ -1,28 +1,28 @@
 ---
-title: "HTTPS certificate with Dehydrated"
+title: "Сертификат HTTPS с помощью Dehydrated"
 date: 2023-02-28
 ---
 
-Dehydrated - is a client for signing certificates with an ACME-server (e.g. Let's Encrypt). This client supports both ACME v1 and the new ACME v2 including support for wildcard certificates.
+Dehydrated - клиент для подписания сертификатов на ACME-сервере (например, Let's Encrypt). Этот клиент поддерживает как ACME v1, так и новую версию ACME v2, включая поддержку сертификатов с подстановочными знаками.
 
-## Install Dehydrated
+## Установка Dehydrated[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#install-dehydrated)
 
 ```
 curl -Lo /usr/local/bin/dehydrated https://raw.githubusercontent.com/dehydrated-io/dehydrated/master/dehydrated
 chmod +x /usr/local/bin/dehydrated
 ```
 
-Configuration should be restored from backup to the `/etc/dehydrated` or you may create new configuration.
+Конфигурация должна быть восстановлена из резервной копии на `/etc/dehydrated` или можно создать новую конфигурацию.
 
-## Create new configuration
+## Создание новой конфигурации[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#create-new-configuration)
 
-Make directory for configuration and certificates:
+Создайте каталог для конфигурации и сертификатов:
 
 ```
 mkdir /etc/dehydrated
 ```
 
-Create new configuration file `/etc/dehydrated/config`:
+Создание нового конфигурационного файла `/etc/dehydrated/config`:
 
 ```
 CA="letsencrypt"
@@ -31,67 +31,67 @@ WELLKNOWN="/opt/www/.well-known/acme-challenge"
 CONTACT_EMAIL="name@example.com"
 ```
 
-You can use next certificate authorities:
+Вы можете использовать следующие центры сертификации:
 
 - letsencrypt
 - zerossl
 - buypass
 
-Create domains list file `/etc/dehydrated/domains.txt`:
+Создание файла списка доменов `/etc/dehydrated/domains.txt`:
 
 ```
 example.com www.example.com
 ```
 
-Register your account (only for new configuration!):
+Зарегистрируйте свой аккаунт (только для новой конфигурации!):
 
 ```
 dehydrated --register --accept-terms
 ```
 
-## Launch HTTP server
+## Запуск HTTP-сервера[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#launch-http-server)
 
-Web server should work on port 80 and serve directory `/opt/www`. You can use any other directory, but don't forget to change port in dehydrated config.
+Web-сервер должен работать на порту 80 и обслуживать каталог `/opt/www`. Вы можете использовать любой другой каталог, но не забудьте изменить порт в конфигурации dehydrated.
 
-If you don't have web-server you may launch temporary web server:
+Если у вас нет веб-сервера, то можно запустить временный веб-сервер:
 
 ```
 mkdir -p /opt/www/.well-known/acme-challenge
 python3 -m http.server -d /opt/www 80
 ```
 
-## Create Certificate
+## Создать сертификат[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#create-certificate)
 
-To create a certificate, launch the following command:
+Для создания сертификата запустите следующую команду:
 
 ```
 dehydrated -c
 ```
 
-## Autoupdate Certificate
+## Автообновление сертификата[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#autoupdate-certificate)
 
-To update the certificate automatically, create a script for the daily cron job `/etc/cron.daily/dehydrated.sh`. In this script, write:
+Для автоматического обновления сертификата создайте сценарий для ежедневного задания cron `/etc/cron.daily/dehydrated.sh`. В этом сценарии напишите:
 
-```sh
+```
 #!/bin/sh
 
 dehydrated -c
 ```
 
-Then set execute permission:
+Затем установите разрешение на выполнение:
 
 ```
 chmod +x /etc/cron.daily/dehydrated.sh
 ```
 
-The certificate will be automatically updated when there are 30 days left until expiration.
+Сертификат будет автоматически обновляться, когда до окончания срока действия останется 30 дней.
 
-## Use certificate
+## Использование сертификата[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#use-certificate)
 
-- Certificate path: `/etc/dehydrated/certs/example.com/fullchain.pem`
-- Private key path: `/etc/dehydrated/certs/example.com/privkey.pem`
+- Путь к сертификату: `/etc/dehydrated/certs/example.com/fullchain.pem`
+- Путь к закрытому ключу: `/etc/dehydrated/certs/example.com/privkey.pem`
 
-For example nginx configuration in `/etc/nginx/conf.d/01-ssl.conf`:
+Например, конфигурация nginx в `/etc/nginx/conf.d/01-ssl.conf`:
 
 ```
 server {

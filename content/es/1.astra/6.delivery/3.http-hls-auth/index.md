@@ -1,5 +1,5 @@
 ---
-title: "Authentication for HTTP / HLS"
+title: "Autenticación para HTTP / HLS"
 noindex: true
 ---
 

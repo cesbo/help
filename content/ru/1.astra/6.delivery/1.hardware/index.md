@@ -1,5 +1,5 @@
 ---
-title: "Broadcasting Hardware"
+title: "Вещательное оборудование"
 noindex: true
 ---
 

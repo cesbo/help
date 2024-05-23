@@ -1,98 +1,96 @@
 ---
-title: "Integration Astra with Grafana"
+title: "Integración Astra con Grafana"
 date: 2023-06-10
 ---
 
-Grafana is an open source analytics and interactive visualization web application.
-It works in pair with [InfluxDB](./influxdb) to visualize status of the Astra, stream, and adapters.
+Grafana es una aplicación web de análisis y visualización interactiva de código abierto. Funciona en combinación con [InfluxDB](https://help.cesbo.com/astra/monitoring/export/influxdb) para visualizar el estado de Astra, el flujo y los adaptadores.
 
-## Install
+## Instale[](https://help.cesbo.com/astra/monitoring/export/grafana#install)
 
-Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](./influxdb)
+Antes de instalar Grafana, asegúrate de que InfluxDB está instalado y configurado: [Leer más...](https://help.cesbo.com/astra/monitoring/export/influxdb)
 
-Download latest version from
+Descargue la última versión desde
 
-1. Go to Grafana site: https://grafana.com/grafana/download
-2. Choose latest version
-3. Choose your platform
-4. Launch commands from the instruction on the Grafana site
+1. Ir al sitio de Grafana: [https://grafana.com/grafana/download](https://grafana.com/grafana/download)
+2. Elija la última versión
+3. Elija su plataforma
+4. Lanzar comandos desde las instrucciones en el sitio de Grafana
 
-Find out more information on official site: https://grafana.com/docs/grafana/latest/
+Más información en el sitio oficial: [https://grafana.com/docs/grafana/latest/](https://grafana.com/docs/grafana/latest/)
 
-## Grafana configuration
+## Configuración de Grafana[](https://help.cesbo.com/astra/monitoring/export/grafana#grafana-configuration)
 
-1. Open Grafana Admin interface: `http://grafana-server:3000`
-2. On the login page, enter `admin` for username and password
-3. Set new password
+1. Abra la interfaz de administración de Grafana: `http://grafana-server:3000`
+2. En la página de inicio de sesión, introduzca `admin` para nombre de usuario y contraseña
+3. Establecer nueva contraseña
 
-## Append data source
+## Añadir fuente de datos[](https://help.cesbo.com/astra/monitoring/export/grafana#append-data-source)
 
-Open Settings -> Data Sources and click "Append data source", choose InfluxDB and set next options:
+Abra Configuración -> Fuentes de datos y haga clic en "Añadir fuente de datos", elija InfluxDB y configure las siguientes opciones:
 
-- Name: `Astra` or any other
-- Query language: `Flux`
-- HTTP URL: `http://db-server:8086`
-- Turn off `Basic auth`
-- Organization: your organization name in InfluxDB Settings
-- Token: your token copied for Astra settings
-- Min time interval: `1m`
+- Nombre: `Astra` o cualquier otro
+- Lenguaje de consulta: `Flux`
+- URL HTTP: `http://db-server:8086`
+- Apagar `Basic auth`
+- Organización: el nombre de su organización en InfluxDB Settings
+- Token: tu token copiado para la configuración de Astra
+- Intervalo de tiempo mínimo: `1m`
 
-Click `Save & Test`, you should see green notification: `Bucket found`
+Haga clic en `Save & Test`deberías ver una notificación verde: `Bucket found`
 
-## Append dashboard
+## Añadir cuadro de mandos[](https://help.cesbo.com/astra/monitoring/export/grafana#append-dashboard)
 
-1. Download our template for Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
-2. Open: Create -> Import
-3. Click `Upload JSON file`
-4. Choose downloaded file
-5. Set any name for dashboard
-6. Click `Import`
+1. Descargue nuestra plantilla para Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
+2. Abrir: Crear -> Importar
+3. Haga clic en `Upload JSON file`
+4. Elija el archivo descargado
+5. Cualquier nombre para el cuadro de mandos
+6. Haga clic en `Import`
 
-## Dashboard
+## Cuadro de mandos[](https://help.cesbo.com/astra/monitoring/export/grafana#dashboard)
 
-![Grafana Dashboard](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
+![Panel de control de Grafana](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
 
-Dashboard has next variables:
+El salpicadero tiene las siguientes variables:
 
-- `Source` - choose `Astra` or other name;
-- `Bucket` - this is database name in the InfluxDB. Same as `Instance Name` in the Astra settings.
-If you have several servers or different Astra instances on the same server you can create several
-dashboards for each instance;
-- `Adapter` - All DVB adapters on the instance;
-- `Stream` - All streams on the instance.
+- `Source` - elegir `Astra` u otro nombre;
+- `Bucket` - es el nombre de la base de datos en InfluxDB. Igual que `Instance Name` en la configuración de Astra. Si tienes varios servidores o diferentes instancias de Astra en el mismo servidor puedes crear varios cuadros de mando para cada instancia;
+- `Adapter` - Todos los adaptadores DVB de la instancia;
+- `Stream` - Todos los flujos de la instancia.
 
-### Status panels
+### Paneles de estado
 
-CPU Usage:
-- The System CPU usage is for all available cores. Max value is a number of cores multiplied by 100
-- The App CPU usage is for all threads on all cores and relative to the System CPU usage
+Uso de la CPU:
 
-Memory Usage:
+- El uso de la CPU del sistema es para todos los núcleos disponibles. El valor máximo es el número de núcleos multiplicado por 100.
+- El uso de la CPU de la aplicación es para todos los subprocesos en todos los núcleos y relativo al uso de la CPU del sistema.
 
-- The System Memory Usage - is total memory usage by all processes in the system
-- The App Memory Usage - is total memory usage by all app threads. Value is relative to the system memory usage
+Uso de memoria:
 
-Status:
+- El uso de memoria del sistema - es el uso total de memoria por todos los procesos en el sistema
+- El uso de memoria de la aplicación - es el uso total de memoria por todos los hilos de la aplicación. El valor es relativo al uso de memoria del sistema
 
-- `App uptime` - elapsed time since app launched
-- `Sys uptime` - elapsed time since system startup
-- `LA 1m` - load average for 1 minute
-- `LA 5m` - load average for 5 minutes
-- `LA 15m` - load average for 15 minutes
+Estado:
 
-Failed Streams - list of all incidents ordered by the time. Recent events on top of the table. All values in the table at the event time:
+- `App uptime` - tiempo transcurrido desde el inicio de la aplicación
+- `Sys uptime` - tiempo transcurrido desde el inicio del sistema
+- `LA 1m` - carga media durante 1 minuto
+- `LA 5m` - carga media durante 5 minutos
+- `LA 15m` - carga media durante 15 minutos
 
-- `Name` - stream name
-- `Elapsed time` - time since incidents happened
-- `Sessions` - number of HTTP/HLS sessions
-- `CC Errors` - counter of the detected packet loss events
-- `Sync Errors` - counter of the HTTP/HLS bitrate synchronization errors
-- `PES Errors` - percent of the video/audio packets with the corrupted content
-- `Scrambled` - percent of the scrambled packets
-- `Bitrate` - stream bitrate in KBit/s
+Incidencias - lista de todas las incidencias ordenadas por la hora. Incidentes recientes en la parte superior de la tabla. Todos los valores de la tabla a la hora del incidente:
 
-Adapters and streams:
+- `Name` - nombre del flujo
+- `Elapsed time` - tiempo transcurrido desde que se produjeron los incidentes
+- `Sessions` - número de sesiones HTTP/HLS
+- `CC Errors` - contador de eventos de pérdida de paquetes detectados
+- `Sync Errors` - contador de los errores de sincronización HTTP/HLS bitrate
+- `PES Errors` - porcentaje de los paquetes de vídeo/audio con el contenido dañado
+- `Scrambled` - por ciento de los paquetes codificados
+- `Bitrate` - velocidad de transmisión en KBit/s
 
-![Adapters and streams](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/adapters-and-streams.png)
+Adaptadores y flujos:
 
-Charts displayed separately for each selected adapter or streams.
+![Adaptadores y flujos](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/adapters-and-streams.png)
+
+Los gráficos se muestran por separado para cada adaptador o flujo seleccionado.
