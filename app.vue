@@ -9,7 +9,7 @@
             />
             <div class="flex-1 w-full px-4">
                 <div class="px-4 py-20">
-                    <div class="max-w-xl mx-auto h-14 mb-20 z-10">
+                    <div class="relative max-w-xl mx-auto h-14 mb-20 z-10">
                         <SiteSearch />
                     </div>
                     <NuxtPage ref="pageRef" />

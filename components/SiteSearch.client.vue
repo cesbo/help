@@ -201,7 +201,9 @@ import {
     DocumentMagnifyingGlassIcon,
 } from '@heroicons/vue/24/outline'
 
-const { search, result } = useAlgoliaSearch()
+const { locale } = useI18n()
+const searchValue = ref('')
+const { result } = useAlgoliaSearch(searchValue, locale)
 
 const groups = computed(() => {
     if(result.value === null) {
@@ -227,11 +229,8 @@ const groups = computed(() => {
         })
 })
 
-const searchValue = ref('')
-
 function onSearch(value: string) {
     searchValue.value = value
-    search(value)
 }
 
 function onSelect(item: any) {
