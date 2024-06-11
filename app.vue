@@ -22,9 +22,9 @@
 </template>
 
 <script setup lang="ts">
-import ContainerSection from './components/layout/ContainerSection.vue';
-import { delocalizePath } from './components/utils/UrlHelper';
-import { useRoute } from 'vue-router';
+import ContainerSection from './components/layout/ContainerSection.vue'
+import { delocalizePath } from './components/utils/UrlHelper'
+
 const { locale } = useI18n()
 const route = useRoute()
 const pageRef = ref()
