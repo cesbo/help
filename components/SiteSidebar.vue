@@ -84,22 +84,26 @@ const makeSidebarGroup = (item: NavItem): ContentNavItem => {
     return result
 }
 
-const loadSidebarItems = async (localeToUse: string) => {
-    const navigation = await fetchContentNavigation({
-        where: [
-            {
-                _locale: localeToUse
-            },
-        ],
-    })
+const { data: menuItems } = useAsyncData(
+    'sidebar-items',
+    async () => {
+        const navigation = await fetchContentNavigation({
+            where: [
+                {
+                    _locale: locale.value,
+                },
+            ],
+        })
 
-    return navigation?.map(product => {
-        return {
-            title: product.title,
-            items: product.children?.map(n => makeSidebarGroup(n)),
-        }
-    }) ?? []
-}
-
-const menuItems = await loadSidebarItems(locale.value)
+        return navigation?.map(product => {
+            return {
+                title: product.title,
+                items: product.children?.map(n => makeSidebarGroup(n)),
+            }
+        }) ?? []
+    },
+    {
+        watch: [ locale ]
+    },
+)
 </script>
