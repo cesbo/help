@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
+    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center">
         <NuxtLoadingIndicator />
         <SiteMenu class="w-full" />
         <ContainerSection class="flex grow">

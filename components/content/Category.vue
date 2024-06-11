@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-const path = inject<string>('content-path')
+const route = useRoute()
+const path = '/' + (route.params.slug as string[]).join('/')
 const { locale } = useI18n()
 
 let data = await fetchContentNavigation({

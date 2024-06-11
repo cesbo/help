@@ -43,7 +43,6 @@ const { locale } = useI18n()
 const route = useRoute()
 
 const path = '/' + (route.params.slug as string[]).join('/')
-provide('content-path', path)
 
 const page = await queryContent()
     .where({
