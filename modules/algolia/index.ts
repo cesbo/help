@@ -1,6 +1,8 @@
-import {
+import type {
     SearchClient,
-    SearchIndex,
+} from 'algoliasearch'
+
+import {
     default as algoliasearch
 } from 'algoliasearch'
 
@@ -12,7 +14,7 @@ import {
     useLogger,
 } from 'nuxt/kit'
 
-import { Nitro } from 'nitropack'
+import type { Nitro } from 'nitropack'
 import { astToString } from './ast'
 
 import type {
@@ -46,6 +48,7 @@ async function makeIndex(
     options: AlgoliaConfig,
 ): Promise<number> {
     const index = client.initIndex(`${ locale }_${ indexName }`)
+    const prefix = (locale === options.locales[0]) ? '' : `/${ locale }`
 
     const items: AlgoliaIndexObject[] = []
     const keys = await nitro.storage.getKeys(`cache:content:parsed`)
@@ -67,7 +70,7 @@ async function makeIndex(
         const path = file._path as string
 
         items.push({
-            objectID: path,
+            objectID: prefix + path,
             title: file.title,
             content: astToString(file.body),
             _tags: file.tags,
@@ -79,16 +82,16 @@ async function makeIndex(
         return 0
     }
 
-    // {
-    //     // add changelog
-    //     const path = '/astra/admin-guide/administration/changelog'
-    //     items.push({
-    //         objectID: path,
-    //         title: 'Changelog',
-    //         content: '',
-    //         category: options.categories?.find(item => path.startsWith(item.path))?.category,
-    //     })
-    // }
+    {
+        // add changelog
+        const path = '/astra/admin-guide/administration/changelog'
+        items.push({
+            objectID: prefix + path,
+            title: 'Changelog',
+            content: '',
+            category: options.categories?.find(item => path.startsWith(item.path))?.category,
+        })
+    }
 
     const result = items.length
 
