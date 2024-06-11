@@ -1,8 +1,7 @@
 <template>
-    <aside class="border-r border-gray-200 dark:border-zinc-600 px-4">
+    <aside>
         <nav class="mt-6 space-y-4">
             <div
-                v-show="sidebarShow"
                 v-for="product in menuItems"
                 :key="product.title"
             >
@@ -83,7 +82,6 @@ interface ContentNavItem {
 const localePath = useLocalePath()
 const { locale } = useI18n()
 const route = useRoute()
-const routePath = route.path
 
 const sidebarState = useLocalStorage<{ [key: string]: boolean }>(
     'sidebar-state',
@@ -93,13 +91,6 @@ const sidebarState = useLocalStorage<{ [key: string]: boolean }>(
         initOnMounted: true,
     },
 )
-
-const sidebarShow = ref(false)
-
-onMounted(() => {
-    sidebarShow.value = true
-    console.log(routePath)
-})
 
 const makeSidebarGroup = (item: NavItem, parent?: ContentNavItem): ContentNavItem => {
     const result: ContentNavItem = {

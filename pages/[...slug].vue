@@ -39,20 +39,18 @@
 </template>
 
 <script setup lang="ts">
-import { delocalizePath } from '~/components/utils/UrlHelper'
-
 const { locale } = useI18n()
 const route = useRoute()
-const localePath = useLocalePath()
-const routeWithoutLocale = delocalizePath(route.path, locale.value)
 
-const { data } = await useAsyncData("pageContents", () => queryContent()
+const path = '/' + (route.params.slug as string[]).join('/')
+provide('content-path', path)
+
+const page = await queryContent()
     .where({
-        _path: routeWithoutLocale,
+        _path: path,
         _locale: locale.value
     })
-    .findOne())
-const page = data.value!!
+    .findOne()
 
 const title = (() => {
     switch(route.path.split('/', 2)[1]) {
@@ -67,7 +65,7 @@ const title = (() => {
     }
 })()
 
-const absolutePageUrl = 'https://help.cesbo.com' + localePath(route.fullPath, locale.value)
+const absolutePageUrl = 'https://help.cesbo.com' + route.fullPath
 
 useHead({
     title,
