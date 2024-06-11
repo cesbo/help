@@ -2,6 +2,7 @@
     <aside class="border-r border-gray-200 dark:border-zinc-600 px-4">
         <nav class="mt-6 space-y-4">
             <div
+                v-show="sidebarShow"
                 v-for="product in menuItems"
                 :key="product.title"
             >
@@ -14,6 +15,17 @@
                 <details
                     v-for="group in product.items"
                     :key="group.title"
+                    @toggle="
+                        (ev: Event) => {
+                            const el = ev.target as HTMLDetailsElement
+                            if(el.open) {
+                                sidebarState[group.title] = true
+                            } else {
+                                delete sidebarState[group.title]
+                            }
+                        }
+                    "
+                    :open="sidebarState[group.title] ?? group.open"
                 >
                     <summary
                         class="
@@ -59,23 +71,55 @@
 
 <script setup lang="ts">
 import type { NavItem } from '@nuxt/content/types'
+import { useLocalStorage } from '@vueuse/core'
 
 interface ContentNavItem {
     title: string,
     path: string,
     items: ContentNavItem[] | undefined,
+    open: boolean,
 }
 
+const localePath = useLocalePath()
 const { locale } = useI18n()
+const route = useRoute()
+const routePath = route.path
 
-const makeSidebarGroup = (item: NavItem): ContentNavItem => {
-    return {
+const sidebarState = useLocalStorage<{ [key: string]: boolean }>(
+    'sidebar-state',
+    {},
+    {
+        writeDefaults: false,
+        initOnMounted: true,
+    },
+)
+
+const sidebarShow = ref(false)
+
+onMounted(() => {
+    sidebarShow.value = true
+    console.log(routePath)
+})
+
+const makeSidebarGroup = (item: NavItem, parent?: ContentNavItem): ContentNavItem => {
+    const result: ContentNavItem = {
         title: item.title,
-        path: item._path,
-        items: item.children
-            ?.map(n => makeSidebarGroup(n))
-            .filter(n => item._path !== n.path),
+        path: localePath(item._path),
+        items: undefined,
+        open: false,
     }
+
+    result.items = item.children
+        ?.map((n) => {
+            const g = makeSidebarGroup(n, result)
+            if(parent && g.path === route.path) {
+                parent.open = true
+            }
+            return g
+        })
+        .filter(n => item._path !== n.path)
+
+    return result
 }
 
 const loadSidebarItems = async (localeToUse: string) => {
