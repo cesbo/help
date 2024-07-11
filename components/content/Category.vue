@@ -5,17 +5,15 @@
 </template>
 
 <script setup lang="ts">
-import { delocalizePath } from '../utils/UrlHelper';
-
 const route = useRoute()
+const path = '/' + (route.params.slug as string[]).join('/')
 const { locale } = useI18n()
-const delocalizedPath = delocalizePath(route.path, locale.value)
 
-let { data } = await useAsyncData('siteCategory', () => fetchContentNavigation({
+let data = await fetchContentNavigation({
     where: [
         {
             _path: {
-                $contains: delocalizedPath,
+                $contains: path,
             },
             _locale: locale.value
         },
@@ -23,9 +21,11 @@ let { data } = await useAsyncData('siteCategory', () => fetchContentNavigation({
     sort: [
         { date: -1 },
     ],
-}))
-let navigation = data.value!![0]
-while (navigation.children && navigation._path !== delocalizedPath && navigation.children) {
+})
+
+let navigation = data[0]
+
+while(navigation.children && navigation._path !== path && navigation.children) {
     navigation = navigation.children[0]
 }
 </script>

@@ -38,7 +38,7 @@ import {
     ChevronRightIcon,
     HomeIcon,
 } from '@heroicons/vue/20/solid';
-import { delocalizePath } from './utils/UrlHelper';
+
 const localePath = useLocalePath()
 const { locale } = useI18n()
 
@@ -46,16 +46,16 @@ const props = defineProps<{
     path: string
 }>()
 
-const { data } = await useAsyncData('breadcrumbs', () => fetchContentNavigation({
+const data = await fetchContentNavigation({
     where: [
         {
             _path: props.path,
             _locale: locale.value,
         },
     ],
-}))
+})
 
-let navigation = data.value!![0]
+const navigation = data[0]
 
 type BreadcrumbItem = {
     title: string
@@ -68,17 +68,17 @@ const breadcrumb: BreadcrumbItem[] = []
     let children = navigation.children
     while(children) {
         const item = children[0]
-        const current = delocalizePath(item._path, locale.value) === props.path
+        const current = item._path === props.path
 
         // Unfortunately, fetchContentNavigation does not translate titles of parent nodes
         // Therefore, the current solution is to manually query titles with clarified locale
-        const localizedPage = await queryContent().where({
+        const page = await queryContent().where({
             _path: item._path,
             _locale: locale.value
         }).only('title').findOne()
 
         breadcrumb.push({
-            title: localizedPage.title ?? item.title,
+            title: page.title ?? item.title,
             path: localePath(item._path),
             current
         })

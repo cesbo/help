@@ -1,6 +1,8 @@
-import {
+import type {
     SearchClient,
-    SearchIndex,
+} from 'algoliasearch'
+
+import {
     default as algoliasearch
 } from 'algoliasearch'
 
@@ -12,29 +14,25 @@ import {
     useLogger,
 } from 'nuxt/kit'
 
-import { Nitro } from 'nitropack'
+import type { Nitro } from 'nitropack'
 import { astToString } from './ast'
 
 import type {
     AlgoliaIndexObject,
     AlgoliaConfig,
 } from './types'
-import type { LocaleObject } from '@nuxtjs/i18n'
 
 const name = '@cesbo/search'
 
 async function makeIndexes(
     nitro: Nitro,
     client: SearchClient,
-    indexSuffix: string,
+    indexName: string,
     options: AlgoliaConfig,
 ): Promise<number> {
-    const { locales } = useI18n()
-
     const totalIndexAmount = Promise.all(
-        locales.value.map(locale => 
-            makeIndex(nitro, client, indexSuffix, locale, options)
-    ))
+        options.locales.map(locale => makeIndex(nitro, client, indexName, locale, options))
+    )
     .then(indexAmounts => {
         return indexAmounts.reduce((a, b) => a + b, 0)
     });
@@ -45,14 +43,15 @@ async function makeIndexes(
 async function makeIndex(
     nitro: Nitro,
     client: SearchClient,
-    indexSuffix: string,
-    locale: LocaleObject,
+    indexName: string,
+    locale: string,
     options: AlgoliaConfig,
 ): Promise<number> {
-    const index = client.initIndex(`${locale.code}_${indexSuffix}`)
+    const index = client.initIndex(`${ locale }_${ indexName }`)
+    const prefix = (locale === options.locales[0]) ? '' : `/${ locale }`
 
     const items: AlgoliaIndexObject[] = []
-    const keys = await nitro.storage.getKeys(`cache:content:parsed:${locale.code}`)
+    const keys = await nitro.storage.getKeys(`cache:content:parsed`)
     for(const key of keys) {
         const item: any = await nitro.storage.getItem(key)
         if(!item.parsed) {
@@ -64,10 +63,14 @@ async function makeIndex(
             continue
         }
 
+        if(file._locale !== locale) {
+            continue
+        }
+
         const path = file._path as string
 
         items.push({
-            objectID: path,
+            objectID: prefix + path,
             title: file.title,
             content: astToString(file.body),
             _tags: file.tags,
@@ -83,7 +86,7 @@ async function makeIndex(
         // add changelog
         const path = '/astra/admin-guide/administration/changelog'
         items.push({
-            objectID: path,
+            objectID: prefix + path,
             title: 'Changelog',
             content: '',
             category: options.categories?.find(item => path.startsWith(item.path))?.category,

@@ -1,10 +1,46 @@
-<script setup>
-const { locales } = useI18n()
+<template>
+    <div
+        class="
+            fixed bottom-0 right-10
+            bg-white
+            border border-b-0 rounded-t w-32
+            shadow
+        "
+    >
+        <div
+            v-if="open"
+            class="flex flex-col"
+            @click="open = false"
+        >
+            <NuxtLink
+                v-for="l in locales"
+                :key="l.code"
+                :to="switchLocalePath(l.code)"
+                class="px-4 py-2"
+                :class="[
+                    l.code == locale ? 'font-semibold cursor-default' : 'hover:bg-gray-50',
+                ]"
+            >{{ l.name }}</NuxtLink >
+        </div>
+        <button
+            class="
+                flex items-center gap-x-2
+                px-4 py-2
+                w-full
+            "
+            :class="{
+                'border-t': open
+            }"
+            @click="open = !open"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="m250.73 210.63l-56-112a12 12 0 0 0-21.46 0l-20.52 41A84.2 84.2 0 0 1 114 126.22A107.5 107.5 0 0 0 139.33 68H160a12 12 0 0 0 0-24h-52V32a12 12 0 0 0-24 0v12H32a12 12 0 0 0 0 24h83.13A83.7 83.7 0 0 1 96 110.35A84 84 0 0 1 83.6 91a12 12 0 1 0-21.81 10A107.6 107.6 0 0 0 78 126.24A83.54 83.54 0 0 1 32 140a12 12 0 0 0 0 24a107.47 107.47 0 0 0 64-21.07a108.4 108.4 0 0 0 45.39 19.44l-24.13 48.26a12 12 0 1 0 21.46 10.73L151.41 196h65.17l12.68 25.36a12 12 0 1 0 21.47-10.73M163.41 172L184 130.83L204.58 172Z"/></svg>
+            <span>Language</span>
+        </button>
+    </div>
+</template>
+
+<script setup lang="ts">
+const { locale, locales } = useI18n()
+const open = ref(false)
 const switchLocalePath = useSwitchLocalePath()
 </script>
-
-<template>
-    <SwitchLocalePathLink  v-for="l in locales" :key="l.code" :locale="l.code">
-        {{ l.name }}
-    </SwitchLocalePathLink >
-</template>

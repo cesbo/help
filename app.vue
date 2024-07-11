@@ -1,33 +1,31 @@
 <template>
-    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center py-3">
+    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center">
         <NuxtLoadingIndicator />
         <SiteMenu class="w-full" />
         <ContainerSection class="flex grow">
-            <NavSidebar
-                v-show="isContentPage"
-                class="hidden lg:inline-block flex-none lg:w-60 xl:w-80"
+            <SiteSidebar
+                v-if="!!$route.params.slug"
+                class="
+                    border-r border-gray-200 dark:border-zinc-600
+                    lg:w-60 xl:w-80
+                    px-4
+                "
             />
             <div class="flex-1 w-full px-4">
                 <div class="px-4 py-20">
-                    <div class="max-w-xl mx-auto h-14 mb-20 z-10">
+                    <div class="relative max-w-xl mx-auto h-14 mb-20 z-10">
                         <SiteSearch />
                     </div>
-                    <NuxtPage ref="pageRef" />
+                    <NuxtPage />
                 </div>
             </div>
-            <aside v-show="isContentPage" class="hidden xl:inline-block flex-none w-80"/>
         </ContainerSection>
         <SiteFooter class="w-full" />
     </div>
 </template>
 
 <script setup lang="ts">
-import ContainerSection from './components/layout/ContainerSection.vue';
-import { delocalizePath } from './components/utils/UrlHelper';
-import { useRoute } from 'vue-router';
-const { locale } = useI18n()
-const route = useRoute()
-const pageRef = ref()
+import ContainerSection from './components/layout/ContainerSection.vue'
 
 const i18nHead = useLocaleHead({
     addSeoAttributes: true
@@ -49,18 +47,6 @@ useHead({
         },
     ],
 })
-
-const isContentPage = ref(false)
-
-const pageContent = computed(() => pageRef?.value?.pageRef)
-
-watch (pageContent, () => {
-    const currentLocale = locale.value
-    const currentRoute = route.path
-    const contentPage = currentRoute ? delocalizePath(currentRoute, currentLocale) !== "/" : false
-    isContentPage.value = contentPage
-}, {immediate: true})
-
 </script>
 
 <style lang="scss">

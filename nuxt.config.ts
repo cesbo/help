@@ -57,6 +57,7 @@ export default defineNuxtConfig({
                 appId: '',
                 indexName: '',
                 siteKey: '',
+                locales: ['en', 'ru', 'es'],
             },
         },
     },
@@ -66,6 +67,8 @@ export default defineNuxtConfig({
     },
 
     algolia: {
+        locales: ['en', 'ru', 'es'],
+
         // categories for indexing
         // set ALGOLIA_SECRET_KEY to environment variables before build
         categories: [
