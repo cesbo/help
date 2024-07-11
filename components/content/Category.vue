@@ -1,29 +1,31 @@
 <template>
-<div class="not-prose">
-    <SiteCategory :nav="navigation" />
-</div>
+    <div class="not-prose">
+        <SiteCategory :nav="navigation" />
+    </div>
 </template>
 
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-
 const route = useRoute()
+const path = '/' + (route.params.slug as string[]).join('/')
+const { locale } = useI18n()
 
-const query: QueryBuilderParams = {
+let data = await fetchContentNavigation({
     where: [
         {
             _path: {
-                $contains: route.path,
+                $contains: path,
             },
+            _locale: locale.value
         },
     ],
     sort: [
         { date: -1 },
     ],
-}
+})
 
-let [ navigation ] = await fetchContentNavigation(query)
-while(navigation && navigation._path != route.path && navigation.children) {
+let navigation = data[0]
+
+while(navigation.children && navigation._path !== path && navigation.children) {
     navigation = navigation.children[0]
 }
 </script>

@@ -4,7 +4,6 @@ All docs separated by language and category.
 
 Categories:
 
-- `alta` - Cesbo Alta
 - `astra` - Cesbo Astra
 - `misc` - Tools, Utilities, System Administration, etc
 

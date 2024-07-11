@@ -13,8 +13,8 @@
         <!-- <ArticleDate v-if="page.date" :date="page.date" /> -->
 
         <ArticleToc
-            v-if="page.body.toc?.links"
-            :items="page.body.toc.links"
+            v-if="page.body?.toc?.links"
+            :items="page.body?.toc?.links"
             class="mt-14"
         />
 
@@ -39,8 +39,17 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 const route = useRoute()
-const page = await queryContent(route.path).findOne()
+
+const path = '/' + (route.params.slug as string[]).join('/')
+
+const page = await queryContent()
+    .where({
+        _path: path,
+        _locale: locale.value
+    })
+    .findOne()
 
 const title = (() => {
     switch(route.path.split('/', 2)[1]) {

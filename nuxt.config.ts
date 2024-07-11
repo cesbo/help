@@ -1,9 +1,28 @@
+import { defaultLocale, localeNames, localesLayout } from './i18n/setup'
+
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/i18n',
         '@nuxt/content',
         '@nuxt/image',
     ],
+
+    i18n: {
+        detectBrowserLanguage: {
+            alwaysRedirect: true,
+            useCookie: true,
+            redirectOn: 'root'
+        },
+        locales: localesLayout,
+        defaultLocale: defaultLocale,
+        vueI18n: './i18n/configuration.ts'
+    },
+
+    content: {
+        locales: localeNames,
+        defaultLocale: defaultLocale
+    },
 
     nitro: {
         prerender: {
@@ -17,9 +36,6 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            htmlAttrs: {
-                lang: 'en',
-            },
             link: [
                 {
                     rel: 'icon',
@@ -41,6 +57,7 @@ export default defineNuxtConfig({
                 appId: '',
                 indexName: '',
                 siteKey: '',
+                locales: ['en', 'ru', 'es'],
             },
         },
     },
@@ -50,6 +67,8 @@ export default defineNuxtConfig({
     },
 
     algolia: {
+        locales: ['en', 'ru', 'es'],
+
         // categories for indexing
         // set ALGOLIA_SECRET_KEY to environment variables before build
         categories: [
@@ -76,10 +95,6 @@ export default defineNuxtConfig({
             { path: '/astra/delivery/hardware', category: 'Astra > Delivery > Broadcasting Hardware' },
             { path: '/astra/delivery/http-hls', category: 'Astra > Delivery > HTTP/HLS' },
             { path: '/astra/delivery/http-hls-auth', category: 'Astra > Delivery > Authentication for HTTP/HLS' },
-
-            { path: '/alta/getting-started', category: 'Alta > Getting Started' },
-            { path: '/alta/admin-guide', category: 'Alta > Admin Guide' },
-            { path: '/alta/ott-settings', category: 'Alta > OTT Settings' },
 
             { path: '/misc/tools-and-utilities/tv-and-media', category: 'Tools & Utilities > TV & Media' },
             { path: '/misc/tools-and-utilities/network', category: 'Tools & Utilities > Network' },

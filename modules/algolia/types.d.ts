@@ -8,4 +8,5 @@ export type AlgoliaIndexObject = {
 
 export type AlgoliaConfig = {
     categories: { path: string, category: string }[],
+    locales: string[],
 }

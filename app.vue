@@ -1,37 +1,44 @@
 <template>
-<div class="h-full flex flex-col" id="app">
-    <SiteMenu />
-    <div class="grow">
+    <div id="app" class="w-full h-full min-h-dvh flex flex-col relative items-center">
         <NuxtLoadingIndicator />
-
-        <div class="px-4 py-20">
-            <div class="relative mx-auto max-w-xl h-14 mb-20">
-                <div
-                    class="
-                        absolute
-                        w-full
-                        z-10
-                    "
-                >
-                    <SiteSearch />
+        <SiteMenu class="w-full" />
+        <ContainerSection class="flex grow">
+            <SiteSidebar
+                v-if="!!$route.params.slug"
+                class="
+                    border-r border-gray-200 dark:border-zinc-600
+                    lg:w-60 xl:w-80
+                    px-4
+                "
+            />
+            <div class="flex-1 w-full px-4">
+                <div class="px-4 py-20">
+                    <div class="relative max-w-xl mx-auto h-14 mb-20 z-10">
+                        <SiteSearch />
+                    </div>
+                    <NuxtPage />
                 </div>
             </div>
-
-            <NuxtPage />
-        </div>
+        </ContainerSection>
+        <SiteFooter class="w-full" />
     </div>
-    <SiteFooter />
-</div>
 </template>
 
 <script setup lang="ts">
-declare const Weglot: any;
+import ContainerSection from './components/layout/ContainerSection.vue'
+
+const i18nHead = useLocaleHead({
+    addSeoAttributes: true
+})
+
+useHead({
+    htmlAttrs: {
+        lang: i18nHead.value.htmlAttrs!.lang
+    }
+})
 
 useHead({
     script: [
-        {
-            src: 'https://cdn.weglot.com/weglot.min.js',
-        },
         {
             src: 'https://sa-help.cesbo.com/latest.js',
             async: true,
@@ -39,13 +46,6 @@ useHead({
             'data-collect-dnt': true,
         },
     ],
-})
-
-onMounted(() => {
-    Weglot?.initialize({
-        api_key: 'wg_63cf25295c4412583437ccb39e512a9d7',
-        cache: true,
-    })
 })
 </script>
 
@@ -58,9 +58,11 @@ onMounted(() => {
     html {
         @apply h-full;
     }
+
     body {
         @apply h-full bg-white text-black dark:bg-zinc-800 dark:text-white;
     }
+
     #__nuxt {
         @apply h-full;
     }

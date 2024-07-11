@@ -1,29 +1,24 @@
 <template>
 <footer
-    class="bg-gray-50 dark:bg-zinc-900"
+    class="bg-gray-50 dark:bg-zinc-900 flex flex-col items-center"
     aria-labelledby="footer-heading"
 >
-<div
-    class="
+<ContainerSection class="
         flex
         flex-col md:flex-row
         items-center
-        justify-between
-        max-w-screen-xl
-        mx-auto
-        pb-20
-        pt-20
-        px-4 xl:px-0
+        md:justify-between
+        py-20
         gap-y-4
-    "
->
+        px-6
+    ">
     <div
         class="
             text-lg
             font-medium
             text-color-900
         "
-    >Need additional help or information?</div>
+    >{{ $t("footer.need_help_question") }}</div>
     <div>
         <a
             href="mailto:support@cesbo.com"
@@ -39,19 +34,19 @@
             "
         >
             <AtSymbolIcon class="w-6 h-6" />
-            <span>Email Us</span>
+            <span>{{ $t("footer.email_us") }}</span>
         </a>
     </div>
-</div>
+</ContainerSection>
 
 <div
-    class="
-        flex
+    class="w-full flex
         gap-5
         justify-center
         border-t
         border-gray-200 dark:border-zinc-600
         py-6
+        px-6
         text-xs leading-5
         text-gray-600 dark:text-gray-300
     "
@@ -61,7 +56,9 @@
             text-gray-500
             dark:text-gray-400
         "
-    >&copy; 2023, Cesbo</div>
+    >&copy; 2024, Cesbo</div>
+
+    <LangSelector />
 </div>
 </footer>
 </template>
@@ -70,6 +67,7 @@
 import {
     AtSymbolIcon,
 } from '@heroicons/vue/20/solid'
+import ContainerSection from './layout/ContainerSection.vue';
 
 const TwitterIcon = defineComponent({
     render: () => h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
