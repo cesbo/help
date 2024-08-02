@@ -54,7 +54,7 @@ const localePath = useLocalePath()
 
 const navigation = [
     { name: 'menu.home', to: 'https://www.cesbo.com' },
-    { name: 'menu.docs', to: localePath('/') },
+    { name: 'menu.help', to: localePath('/') },
     { name: 'menu.support', to: 'https://support.cesbo.com' },
     { name: 'menu.pricing', to: 'https://app.cesbo.com/orders/software/astra/buy/' },
     { name: 'menu.profile', to: 'https://app.cesbo.com/accounts/login/?next=/accounts/profile/' },
