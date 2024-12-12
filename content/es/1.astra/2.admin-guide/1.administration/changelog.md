@@ -1,9 +1,47 @@
 ---
-title: "Registro de cambios"
+title: "Changelog"
 noindex: true
 ---
 
-## 230719[](https://help.cesbo.com/astra/admin-guide/administration/changelog#_230719)
+## 241024
+
+[Descargar Astra-241024](https://cdn.cesbo.com/astra/builds/astra-241024)
+
+### SRT
+
+- Biblioteca SRT actualizada a la versión 1.5.3
+- Sesiones para salida SRT en modo oyente
+- Refactorización de salida SRT, mejor estabilidad, corregida fuga de memoria
+- Opciones `streamid` para entrada SRT
+
+### Modulador TBS DVB-T
+
+- Soporte para la tarjeta moduladora cuádruple TBS6104 DVB-T
+
+### HLS
+
+- Salida HLS pasa marcadores SCTE-35
+- Entrada HLS corrige el contador de continuidad si comienza desde 0 en cada segmento
+
+### MPEG-TS
+
+- Soporte para texto codificado con UTF-16, ISO/IEC 10646 BMP en las tablas EIT y SDT
+- Detiene la generación de PSI si no hay datos en la entrada
+
+### Interfaz Web
+
+- Iconos para adaptadores virtuales DVB
+- Corregir estado y bitrate para adaptador SAT>IP en la interfaz web
+- Corregir recarga web al reconectar
+- Corregir eliminación de servidores en la interfaz web
+- Botón de cierre de sesión
+- Pestañas para Settings -> General
+
+### Cambios Internos
+
+- Continúa el traslado de código desde scripts Lua al núcleo de Astra: Métodos API para estado del flujo, reporte del flujo, listas de reproducción, procesamiento JSON y otros
+
+## 230719
 
 [Descargar Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 
@@ -97,6 +135,7 @@ Salida:
 
 ## Versiones de archivo[](https://help.cesbo.com/astra/admin-guide/administration/changelog#archive-versions)
 
+- [241024](https://cdn.cesbo.com/astra/builds/astra-241024)
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 - [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
 - [220504](https://cdn.cesbo.com/astra/builds/astra-220504)

@@ -3,6 +3,44 @@ title: "Changelog"
 noindex: true
 ---
 
+## 241024
+
+[Download Astra-241024](https://cdn.cesbo.com/astra/builds/astra-241024)
+
+### SRT
+
+- SRT library updated to v1.5.3
+- Sessions for SRT output in listener mode
+- SRT output refactoring, better stability, fixed memory leak
+- options `streamid` for SRT input
+
+### TBS DVB-T modulator
+
+- Support TBS6104 DVB-T Quad Modulator Card
+
+### HLS
+
+- HLS Output pass SCTE-35 markers
+- HLS Input corrects Continuity Counter if starts from 0 on each segment
+
+### MPEG-TS
+
+- support text encoded with UTF-16, ISO/IEC 10646 BMP in the EIT and SDT tables
+- stops PSI generation if no data on input
+
+### Web Interface
+
+- icons for DVB Virtual adapters
+- fix status and bitrate for SAT>IP adapter in the web interface
+- fix web reload on reconnect
+- fix servers deletion in the web interface
+- logout button
+- tabs for Settings -> General
+
+### Internal changes
+
+- keep moving code from Lua scripts to the Astra Core: API methods for stream-status, stream-report, playlists, JSON processing and others
+
 ## 230719
 
 [Download Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
@@ -97,6 +135,7 @@ Output:
 
 ## Archive Versions
 
+- [241024](https://cdn.cesbo.com/astra/builds/astra-241024)
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 - [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
 - [220504](https://cdn.cesbo.com/astra/builds/astra-220504)
