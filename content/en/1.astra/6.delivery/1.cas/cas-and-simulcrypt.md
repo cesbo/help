@@ -44,3 +44,11 @@ The next step is to configure the channels and append one or more Conditional Ac
 - `ECM PID` - PID for ECM packages (User defined);
 - `ECM Private Data` - the data of the conditional access system is added to the description of the ECM stream in the PMT table. If these parameters do not exist, you do not need to add thems;
 - `Access Criteria` - this data will be provided by the CAS provider or defined on the CAS server.
+
+## Conditional Access System
+
+TVCAS4 is a Conditional Access System (CAS) that provides a secure and reliable solution for protecting media content.
+
+TVCAS4 is a software-based solution that can be installed on a server and integrated with Astra via the Simulcrypt protocol. On the client side you may use a CAM module or a set-top box with a built-in Virtual CAS.
+
+Check the [tvcas.com](https://tvcas.com/en/) for more information.

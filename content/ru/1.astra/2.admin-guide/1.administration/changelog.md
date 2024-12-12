@@ -3,7 +3,45 @@ title: "Changelog"
 noindex: true
 ---
 
-## 230719[](https://help.cesbo.com/astra/admin-guide/administration/changelog#_230719)
+[Скачать Astra-241024](https://cdn.cesbo.com/astra/builds/astra-241024)
+
+## 241024
+
+### SRT
+
+- Обновлена библиотека SRT до версии 1.5.3
+- Сессии для SRT-выхода в режиме прослушивания
+- Рефакторинг SRT-выхода, улучшена стабильность, исправлена утечка памяти
+- Опция `streamid` для SRT-входа
+
+### TBS DVB-T модулятор
+
+- Поддержка TBS6104 DVB-T Quad Modulator Card
+
+### HLS
+
+- HLS-выход передает метки SCTE-35
+- HLS-вход корректирует счётчик непрерывности, если он начинается с 0 на каждом сегменте
+
+### MPEG-TS
+
+- Поддержка текста, закодированного с UTF-16, ISO/IEC 10646 BMP в таблицах EIT и SDT
+- Останов генерации PSI, если нет данных на входе
+
+### Веб-интерфейс
+
+- Иконки для DVB виртуальных адаптеров
+- Исправления статуса и битрейта для адаптера SAT>IP в веб-интерфейсе
+- Исправление перезагрузки веба при переподключении
+- Исправление удаления серверов в веб-интерфейсе
+- Кнопка выхода
+- Вкладки для Settings -> General
+
+### Внутренние изменения
+
+- Перенос кода из Lua скриптов в Astra Core: методы API для статуса потока, отчёта по потоку, плейлистов, обработки JSON и другие
+
+## 230719
 
 [Скачать Astra-230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 
@@ -95,8 +133,9 @@ noindex: true
 - Обновление OpenSSL до версии 1.1.1t
 - Интеграция LibUV v1.44.2 (подготовка к переходу от внутренней обработки событий к libuv)
 
-## Архивные версии[](https://help.cesbo.com/astra/admin-guide/administration/changelog#archive-versions)
+## Архивные версии
 
+- [241024](https://cdn.cesbo.com/astra/builds/astra-241024)
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)
 - [230307](https://cdn.cesbo.com/astra/builds/astra-230307)
 - [220504](https://cdn.cesbo.com/astra/builds/astra-220504)
