@@ -3,6 +3,43 @@ title: "Changelog"
 noindex: true
 ---
 
+## 250205
+
+[Download Alta-250205](https://cdn.cesbo.com/alta/builds/alta-250205)
+
+### Dashboard
+
+- Channels and Receivers overview
+- By clicking on the channel card you can see: bitrate for each variant, storage usage, and active sessions
+
+![Dashboard](https://cdn.cesbo.com/help/alta/admin-guide/changelog/250205_ui_dashboard.png)
+
+### Receivers
+
+- Receiver restart on error with receiving media
+
+### Channels
+
+- HLS multibitrate, you can add multiple variants for each channel
+- The "Media Enable" option is now a simple checkbox to turn on direct access to the media playlist. Default URL to the media playlist will be: `http://your-server/channel-path/variant-name/media.m3u8`
+- The "VOD Enable" option is now a simple checkbox to turn on direct access to the VOD playlist. Default URL to the VOD playlist will be: `http://your-server/channel-path/variant-name/vod.m3u8?start=unix-timestamp&duration=minutes`
+
+![Channel Variants](https://cdn.cesbo.com/help/alta/admin-guide/changelog/250205_ui_variants.png)
+
+### Catchup
+
+- Catchup provides a media player (such as Kodi, Televizo) with information on how to access media content from storage.
+- If storage is configured for channel, then the catchup options will be added to the exported playlist.
+- You can configure the `tvg_id` option in the channel settings to link the channel with related xmltv data.
+
+### RTSP
+
+- RTSP now supports the ip cameras with the h.265 codec
+
+### Other
+
+- Better performance and memory management.
+
 ## 241210
 
 ::alert
