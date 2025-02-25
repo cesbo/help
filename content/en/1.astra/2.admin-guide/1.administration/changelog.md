@@ -3,6 +3,35 @@ title: "Changelog"
 noindex: true
 ---
 
+## 250221
+
+[Download Astra-250221](https://cdn.cesbo.com/astra/builds/astra-250221)
+
+### SRT
+
+- SRT library downgraded to v1.4.3 due to packet loss and CC errors
+- SRT input automatically restarts connections when the bitrate dropped to zero
+
+### DVB
+
+- Option `restart_adapter` to restart DVB adapter with channel analyzer. When channel receives stream with errors it send command to restart adapter.
+- Fixed crash on starting DVB from Lua scripts
+- SAT>IP sends options to the SAT>IP server for Multistream/PLS
+
+### UDP
+
+- Fixed logs storm with message "UDP recv buffer overflow"
+- Added option `join` for UDP output to send Multicast Join request (required by some network switches)
+- Added option `ts_size=204` for MPEG-TS with 204 byte packets (ISDB-T streams in Brazil and Japan)
+
+### MPEG-TS
+
+- Fixed remap for AIT packets
+
+### Web Interface
+
+- Links to m3u-playlists with different sources (HLS, HTTP MPEG-TS, UDP): Settings -> HTTP Play
+
 ## 241024
 
 [Download Astra-241024](https://cdn.cesbo.com/astra/builds/astra-241024)

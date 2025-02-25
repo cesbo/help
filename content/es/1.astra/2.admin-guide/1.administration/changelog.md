@@ -3,6 +3,35 @@ title: "Changelog"
 noindex: true
 ---
 
+## 250221
+
+[Descarga Astra-250221](https://cdn.cesbo.com/astra/builds/astra-250221)
+
+### SRT
+
+- Biblioteca SRT degradada a v1.4.3 debido a errores de pérdida de paquetes y CC
+- La entrada SRT reinicia automáticamente las conexiones cuando el bitrate cae a cero
+
+### DVB
+
+- Opción `restart_adapter` para reiniciar el adaptador DVB con el analizador de canales. Cuando el canal recibe una transmisión con errores, envía un comando para reiniciar el adaptador.
+- Corregido fallo al iniciar DVB desde scripts Lua
+- SAT>IP envía opciones al servidor SAT>IP para Multistream/PLS
+
+### UDP
+
+- Corregida tormenta de registros con mensaje "UDP recv buffer overflow"
+- Añadida opción `join` para salida UDP para enviar solicitud Multicast Join (requerido por algunos switches de red)
+- Añadida opción `ts_size=204` para MPEG-TS con paquetes de 204 bytes (transmisiones ISDB-T en Brasil y Japón)
+
+### MPEG-TS
+
+- Corregido remap para paquetes AIT
+
+### Interfaz Web
+
+- Enlaces a listas m3u con diferentes fuentes (HLS, HTTP MPEG-TS, UDP): Configuración -> HTTP Play
+
 ## 241024
 
 [Descargar Astra-241024](https://cdn.cesbo.com/astra/builds/astra-241024)
