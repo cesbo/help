@@ -3,6 +3,19 @@ title: "Changelog"
 noindex: true
 ---
 
+## 250314
+
+[Download Alta-250205](https://cdn.cesbo.com/alta/builds/alta-250314)
+
+### Interface
+
+- Filter bar for channels, receivers, and dashboard
+
+### Channels
+
+- Fixed issue with receiving interruptions due to PTS/DTS handling
+- Enhanced logging for PTS/DTS errors and demuxer monitoring
+
 ## 250205
 
 [Download Alta-250205](https://cdn.cesbo.com/alta/builds/alta-250205)
