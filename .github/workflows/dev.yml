@@ -1,0 +1,70 @@
+name: Development build
+run-name: 🚀 ${{ github.actor }} - ${{ github.event.head_commit.message }}
+
+on:
+  push:
+    branches:
+      - dev**
+    paths-ignore:
+      - '**/README.md'
+
+env:
+  VERSION_NODE: 22.x
+  IMAGE_NAME: cesbo/senta-docs
+  IMAGE_REGISTRY_URL: 103.249.134.120:5000
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.VERSION_NODE }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+  deploy-docker:
+    runs-on: ubuntu-latest
+    name: Deploy to Docker
+    env:
+      BRANCH_NAME: ${{ github.ref_name }}
+    steps:
+      - name: 🐳 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          install: true
+      - name: Configure Docker to use insecure registry
+        run: |
+          echo '{"insecure-registries": ["${{ env.IMAGE_REGISTRY_URL }}"]}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker
+      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: 🛠️ Build Docker image
+        run: |
+          docker build \
+            --load \
+            --file ./deploy/Dockerfile \
+            --tag ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }} \
+            --tag ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:latest \
+            .
+      - name: Check Docker Registry
+        run: curl -v ${{ env.IMAGE_REGISTRY_URL }}/v2/
+      - name: Push Docker image
+        run: |
+          docker push ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }}
+          docker push ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:latest
