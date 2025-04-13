@@ -18,8 +18,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    name: Build
 
     steps:
       - name: Checkout code
@@ -37,9 +38,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-  deploy-docker:
+  publish-docker:
     runs-on: ubuntu-latest
-    name: Deploy to Docker
+    name: Publish to Docker
     env:
       BRANCH_NAME: ${{ github.ref_name }}
     steps:
@@ -54,17 +55,23 @@ jobs:
       
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Prepare the image tag
+        run: |
+          export IMAGE_TAG=$(echo "$BRANCH_NAME" | sed 's/[\/\\]/-/g')
+          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+
       - name: 🛠️ Build Docker image
         run: |
           docker build \
             --load \
             --file ./deploy/Dockerfile \
-            --tag ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }} \
+            --tag ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
             --tag ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:latest \
             .
       - name: Check Docker Registry
         run: curl -v ${{ env.IMAGE_REGISTRY_URL }}/v2/
       - name: Push Docker image
         run: |
-          docker push ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }}
+          docker push ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           docker push ${{ env.IMAGE_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:latest
