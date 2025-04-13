@@ -59,4 +59,9 @@ export default defineConfig({
         prefetchAll: true,
         defaultStrategy: "tap",
     },
+    redirects: {
+        "/": "/en",
+        "/profile": "https://cesbo.com/accounts/profile/",
+        "/assets/img/logo.svg": "https://cdn.cesbo.com/logo.svg",
+    },
 });
