@@ -4,7 +4,6 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import starlightImageZoom from 'starlight-image-zoom';
-import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
 import starlightAutoSidebar from 'starlight-auto-sidebar';
 
 // https://astro.build/config
@@ -55,7 +54,6 @@ export default defineConfig({
       ],
       plugins: [
         starlightImageZoom(),
-        viewTransitions(),
         starlightAutoSidebar(),
       ],
       }),
