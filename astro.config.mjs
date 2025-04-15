@@ -38,7 +38,11 @@ export default defineConfig({
           {
               label: 'Alta',
               translations: { es: 'Alta', ru: 'Альта' },
-              autogenerate: { directory: 'alta' }
+              items: [
+                 { label: 'Getting Started', autogenerate: { directory: 'alta/getting-started' } },
+                 { label: 'Admin Guide', autogenerate: { directory: 'alta/admin-guide' } },
+                 { label: 'OTT Settings', autogenerate: { directory: 'alta/ott-settings' } },
+              ],
           },
           {
               label: 'Miscelaneous',

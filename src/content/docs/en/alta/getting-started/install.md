@@ -1,6 +1,8 @@
 ---
 title: "Install"
 date: 2023-03-10
+sidebar:
+    order: 1
 ---
 
 Download single binary file to your server and start service in few simple steps.

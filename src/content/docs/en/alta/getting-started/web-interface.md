@@ -1,6 +1,8 @@
 ---
 title: "Web Interface"
 date: 2023-03-10
+sidebar:
+    order: 2
 ---
 
 Alta provides a web interface that you can use to manage and configure the software.
