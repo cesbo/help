@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import starlightImageZoom from 'starlight-image-zoom';
 import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
+import starlightAutoSidebar from 'starlight-auto-sidebar';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,21 +36,18 @@ export default defineConfig({
           {
               label: 'Astra',
               translations: { es: 'Astra', ru: 'Астра' },
-              autogenerate: { directory: 'astra' }
+              autogenerate: { directory: 'astra' },
+              collapsed: true,
           },
           {
               label: 'Alta',
               translations: { es: 'Alta', ru: 'Альта' },
-              items: [
-                 { label: 'Getting Started', autogenerate: { directory: 'alta/getting-started' } },
-                 { label: 'Admin Guide', autogenerate: { directory: 'alta/admin-guide' } },
-                 { label: 'OTT Settings', autogenerate: { directory: 'alta/ott-settings' } },
-              ],
+              autogenerate: { directory: 'alta' },
           },
           {
               label: 'Miscelaneous',
               translations: { es: 'Misceláneo', ru: 'Разное' },
-              autogenerate: { directory: 'misc' }
+              autogenerate: { directory: 'misc' },
           },
       ],
       customCss: [
@@ -58,6 +56,7 @@ export default defineConfig({
       plugins: [
         starlightImageZoom(),
         viewTransitions(),
+        starlightAutoSidebar(),
       ],
       }),
       mdx(),
