@@ -1,6 +1,8 @@
 ---
 title: "Change Password to Alta Web Interface"
 date: 2023-02-24
+sidebar:
+    order: 2
 ---
 
 Password could be changed by administrator. There are two ways to do it: web interface and console wizard.

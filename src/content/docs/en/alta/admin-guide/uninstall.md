@@ -1,6 +1,8 @@
 ---
 title: "Uninstall"
 date: 2023-02-24
+sidebar:
+    order: 4
 ---
 
 If Alta is not needed anymore you can remove it completely from your server.

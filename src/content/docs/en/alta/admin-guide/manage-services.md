@@ -1,6 +1,8 @@
 ---
 title: "Manage Alta Services"
 date: 2023-03-04
+sidebar:
+    order: 1
 ---
 
 Service is an application process with specified name and own configuration. You may launch on your server one or more services depends on your need.

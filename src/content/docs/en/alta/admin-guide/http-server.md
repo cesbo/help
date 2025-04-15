@@ -1,6 +1,8 @@
 ---
 title: "HTTP Server"
 date: 2024-09-09
+sidebar:
+    order: 5
 ---
 
 In the Cesbo Alta system, the HTTP server configuration allows you to manage server settings for application management and for OTT streaming. The following parameters are customizable:

@@ -1,6 +1,8 @@
 ---
 title: "Backup"
 date: 2023-02-24
+sidebar:
+    order: 3
 ---
 
 Backups is an important part of system administration!
