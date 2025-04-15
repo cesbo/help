@@ -1,6 +1,8 @@
 ---
 title: "Channel Settings"
 date: 2023-02-24
+sidebar:
+    order: 7
 ---
 
 Channel is a media stream that can contain a single video stream, or no video at all, along with any number of audio streams or no audio. Channels are commonly used for broadcasting television programs, live events, security camera streams, and other multimedia content.

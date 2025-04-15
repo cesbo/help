@@ -1,6 +1,8 @@
 ---
 title: "Securetoken Authorization"
 date: 2023-02-24
+sidebar:
+    order: 6
 ---
 
 Protects unauthorized access to content with temporary tokens

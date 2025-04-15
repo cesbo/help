@@ -1,6 +1,8 @@
 ---
 title: "IP Authorization"
 date: 2023-02-24
+sidebar:
+    order: 4
 ---
 
 IP Authorization checks client IP address in the rules list.

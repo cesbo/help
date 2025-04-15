@@ -1,6 +1,8 @@
 ---
 title: "HTTP Backend Authorization"
 date: 2023-02-24
+sidebar:
+    order: 5
 ---
 
 Backend Authorization is a system for verifying client requests with an external HTTP service in an extensible way.

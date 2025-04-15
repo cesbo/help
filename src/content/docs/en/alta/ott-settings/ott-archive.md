@@ -1,6 +1,8 @@
 ---
 title: "OTT Archive"
 date: 2023-02-24
+sidebar:
+    order: 1
 ---
 
 Alta OTT Archive is a storage for media content on the local or remote server.

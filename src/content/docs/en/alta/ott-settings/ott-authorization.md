@@ -1,6 +1,8 @@
 ---
 title: "OTT Authorization"
 date: 2023-02-24
+sidebar:
+    order: 3
 ---
 
 Authorization is a process of granting a user access to protected content.

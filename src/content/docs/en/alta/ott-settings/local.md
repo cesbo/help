@@ -1,6 +1,8 @@
 ---
 title: "Write OTT Archive to Disk"
 date: 2023-02-24
+sidebar:
+    order: 2
 ---
 
 Writing archive to the filesystem
