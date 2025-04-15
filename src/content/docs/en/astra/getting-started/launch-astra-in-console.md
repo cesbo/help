@@ -1,6 +1,8 @@
 ---
 title: "Launch Astra in console"
 date: 2023-02-21
+sidebar:
+    order: 8
 ---
 
 If your system does not have systemd you may launch process manually:

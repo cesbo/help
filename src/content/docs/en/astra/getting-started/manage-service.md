@@ -1,6 +1,8 @@
 ---
 title: "Manage Astra Service"
 date: 2023-02-21
+sidebar:
+    order: 5
 ---
 
 Service is an application process with specified name and own configuration.

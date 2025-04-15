@@ -1,7 +1,9 @@
 ---
-title: "Cable Television with Astra for Hospitality Industry"
+title: "Use case: Cable Television with Astra for Hospitality Industry"
 date: 2023-05-04
 image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
+sidebar:
+    order: 7
 ---
 
 Hospitality TV, offering an excellent TV solution with high-quality broadcasts and a selection of the best channels, is an essential part of hotel service.

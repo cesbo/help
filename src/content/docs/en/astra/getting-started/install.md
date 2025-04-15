@@ -1,6 +1,8 @@
 ---
 title: "Install"
 date: 2023-02-21
+sidebar:
+    order: 2
 ---
 
 Astra installation is a simple process – just copy single binary file to your server.

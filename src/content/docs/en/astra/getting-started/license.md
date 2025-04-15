@@ -1,6 +1,8 @@
 ---
 title: "License"
 date: 2023-02-21
+sidebar:
+    order: 3
 ---
 
 Valid license is required to launch Astra.

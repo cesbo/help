@@ -36,7 +36,6 @@ export default defineConfig({
               label: 'Astra',
               translations: { es: 'Astra', ru: 'Астра' },
               autogenerate: { directory: 'astra' },
-              collapsed: true,
           },
           {
               label: 'Alta',

@@ -1,6 +1,8 @@
 ---
 title: "Features"
 date: 2024-08-02
+sidebar:
+    order: 1
 ---
 
 ## System Requirements
