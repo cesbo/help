@@ -48,6 +48,11 @@ export default defineConfig({
               translations: { es: 'Misceláneo', ru: 'Разное' },
               autogenerate: { directory: 'misc' },
           },
+          {
+              label: 'Senta',
+              translations: { es: 'Senta', ru: 'Сента' },
+              autogenerate: { directory: 'senta' },
+          }
       ],
       customCss: [
         './src/tailwind.css',
