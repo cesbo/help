@@ -11,9 +11,9 @@ import starlightAutoSidebar from 'starlight-auto-sidebar';
 export default defineConfig({
   integrations: [starlight({
       title: {
-          en: 'Senta Help',
-          ru: 'Справочный центр Senta',
-          es: 'Senta Ayuda',
+          en: 'Cesbo Help',
+          ru: 'Справочный центр Cesbo',
+          es: 'Cesbo Ayuda',
       },
       social: [
           { icon: 'email', label: 'Email', href: 'mailto:support@cesbo.com' },
