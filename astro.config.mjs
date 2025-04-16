@@ -66,6 +66,7 @@ export default defineConfig({
         applyBaseStyles: false,
       }),
     ],
+    site: "https://help.cesbo.com",
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "tap",
