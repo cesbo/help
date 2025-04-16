@@ -10,7 +10,7 @@ on:
 
 env:
   VERSION_NODE: 22.x
-  IMAGE_NAME: cesbo/senta-help
+  IMAGE_NAME: cesbo/cesbo-help
   IMAGE_REGISTRY_URL: 103.249.134.120:5000
 
 concurrency:
