@@ -56,6 +56,7 @@ export default defineConfig({
       customCss: [
         './src/tailwind.css',
       ],
+      favicon: "/favicon.ico",
       plugins: [
         starlightImageZoom(),
         starlightAutoSidebar(),
