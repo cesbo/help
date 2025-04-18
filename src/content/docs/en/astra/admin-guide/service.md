@@ -1,6 +1,8 @@
 ---
 title: "Stream Service Settings"
 date: 2023-08-14
+sidebar:
+    order: 8
 ---
 
 The Service Settings offers option to customize the stream information delivered to the players.

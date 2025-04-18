@@ -1,6 +1,8 @@
 ---
 title: "Stream Backup Settings"
 date: 2023-08-14
+sidebar:
+    order: 10
 ---
 
 Configure the redundancy behaviour to automatically switch stream inputs in case of a failure.

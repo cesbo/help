@@ -1,6 +1,8 @@
 ---
 title: "Change password to Astra Web Interface"
 date: 2023-02-22
+sidebar:
+    order: 4
 ---
 
 To administer the Astra interface, you can change the password of any user through the interface menu. To perform this action, you need:

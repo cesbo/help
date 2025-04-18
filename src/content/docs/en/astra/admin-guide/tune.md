@@ -1,6 +1,8 @@
 ---
 title: "System Tune"
 date: 2024-01-07
+sidebar:
+    order: 3
 ---
 
 Broadcasting TV is a resource-intensive task that demands maximum performance and minimal latency from your server. To meet these critical needs, system optimization is key.

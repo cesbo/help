@@ -1,6 +1,8 @@
 ---
 title: "Create New Stream"
 date: 2023-05-22
+sidebar:
+    order: 6
 ---
 
 A Stream is a central aspect of Astra configuration, includes a list of Inputs for media reception and Outputs for distributing or providing access. Each stream also contains options for data processing.
