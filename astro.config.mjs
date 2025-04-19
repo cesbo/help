@@ -36,22 +36,26 @@ export default defineConfig({
               label: 'Astra',
               translations: { es: 'Astra', ru: 'Астра' },
               autogenerate: { directory: 'astra' },
+              collapsed: true,
           },
           {
               label: 'Alta',
               translations: { es: 'Alta', ru: 'Альта' },
               autogenerate: { directory: 'alta' },
-          },
-          {
-              label: 'Miscelaneous',
-              translations: { es: 'Misceláneo', ru: 'Разное' },
-              autogenerate: { directory: 'misc' },
+              collapsed: true,
           },
           {
               label: 'Senta',
               translations: { es: 'Senta', ru: 'Сента' },
               autogenerate: { directory: 'senta' },
-          }
+              collapsed: true,
+          },
+          {
+              label: 'Miscelaneous',
+              translations: { es: 'Misceláneo', ru: 'Разное' },
+              autogenerate: { directory: 'misc' },
+              collapsed: true,
+          },
       ],
       customCss: [
         './src/tailwind.css',
