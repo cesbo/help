@@ -1,1 +1,1 @@
-go run ./cmd/main.go
+node index.js
