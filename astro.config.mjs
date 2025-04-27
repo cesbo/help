@@ -14,6 +14,11 @@ export default defineConfig({
           ru: 'Справочный центр Cesbo',
           es: 'Cesbo Ayuda',
       },
+      logo: {
+         src: './src/assets/logo.svg',
+         alt: 'Cesbo logo',
+         replacesTitle: true,
+      },
       social: [
           { icon: 'email', label: 'Email', href: 'mailto:support@cesbo.com' },
           { icon: 'telegram', label: 'Telegram', href: 'https://t.me/cesbo' },
