@@ -12,6 +12,7 @@
   "dependencies": {
     "remark-mdx": "^3.1.0",
     "remark-parse": "^11.0.0",
+    "translate": "^3.0.1",
     "unified": "^11.0.5",
     "unist-util-remove-position": "^5.0.0"
   }
