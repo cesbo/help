@@ -2,7 +2,7 @@
 title: "Web Interface"
 date: 2023-02-22
 sidebar:
-    order: 4
+    order: 5
 ---
 
 Astra provides a web interface that you can use to manage and configure the software.

@@ -1,5 +1,5 @@
 ---
-title: "Use case: Cable Television with Astra for Hospitality Industry"
+title: "Cable Television with Astra for Hospitality Industry"
 date: 2023-05-04
 image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
 sidebar:

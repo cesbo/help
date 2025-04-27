@@ -2,7 +2,7 @@
 title: "Stream General Settings"
 date: 2023-08-14
 sidebar:
-    order: 7
+    order: 11
 ---
 
 The Single Program Stream (SPTS) commonly used to form TV channels. It can utilize multiple inputs for redundancy purposes, enhancing the reliability of the stream.

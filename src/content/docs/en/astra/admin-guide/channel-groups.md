@@ -1,6 +1,8 @@
 ---
 title: "Channel Groups"
 date: 2023-03-23
+sidebar:
+    order: 18
 ---
 
 Channel Grouping in Astra helps you organize and manage your media content. By using categories and groups, you can make channel packages to fit each customer's subscription plan. Also, it makes arranging channels on your dashboard easier for better management.

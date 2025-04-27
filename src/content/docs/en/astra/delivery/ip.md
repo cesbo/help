@@ -1,0 +1,22 @@
+---
+title: "IP Authorization"
+date: 2023-06-19
+sidebar:
+    order: 15
+---
+
+IP Authorization compares the requests IP address with the predetermined list of IP addresses. Access to the content will be granted only for allowed IP addresses.
+
+![IP Auth](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/ip.svg)
+
+## Global IP list
+
+Global IP list available in Settings -> HTTP Auth
+
+![Global IP list](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/ip-list.png)
+
+In this list you can define single IPv4 addresses and IPv4 network address in CIDR notation.
+
+## User IP settings
+
+In the user settings you can define IPv4 address. In this case session could be linked to the user.

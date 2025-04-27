@@ -2,7 +2,7 @@
 title: "Custom port for Astra Web Interface"
 date: 2023-02-21
 sidebar:
-    order: 4
+    order: 7
 ---
 
 Default port for Astra Web Interface is `8000`. You may set any port you want:

@@ -2,7 +2,7 @@
 title: "Stream EPG Export Settings"
 date: 2023-08-14
 sidebar:
-    order: 11
+    order: 15
 ---
 
 Configure the EPG Export to extract Electronic Programme Guide from stream

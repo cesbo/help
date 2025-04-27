@@ -2,7 +2,7 @@
 title: "Fault-tolerant configuration"
 date: 2023-08-08
 sidebar:
-    order: 4
+    order: 9
 ---
 
 With a fault-tolerant configuration, you can launch a second server to replace the primary in case of failure.

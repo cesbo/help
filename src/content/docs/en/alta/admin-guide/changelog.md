@@ -1,6 +1,8 @@
 ---
 title: "Changelog"
 noindex: true
+sidebar:
+    order: 5
 ---
 
 ## 250314

@@ -2,7 +2,7 @@
 title: "Changelog"
 noindex: true
 sidebar:
-    order: 4
+    order: 6
 ---
 
 ## 250221
