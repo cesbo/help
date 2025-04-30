@@ -36,6 +36,9 @@ export default defineConfig({
               label: 'Español',
           },
       },
+      components: {
+          SiteTitle: './src/components/SiteTitle.astro',
+      },
       sidebar: [
           {
               label: 'Astra',
