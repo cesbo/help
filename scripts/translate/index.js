@@ -1,13 +1,10 @@
 import fs from 'node:fs'
-import remarkParse from 'remark-parse'
-import { unified } from 'unified'
+import {remark} from 'remark'
+import remarkMdx from 'remark-mdx'
 import { removePosition } from 'unist-util-remove-position'
+import { translateTo } from './translator.js'
 
-const LIBRE_TRANSLATE_URL = 'http://103.249.134.120:10000'
 const PAGE_WITH_EN_DOCS = '../../src/content/docs/en'
-
-const processor = unified()
-    .use(remarkParse)
 
 let page
 
@@ -17,25 +14,16 @@ try {
     console.error(err)
 }
 
-const parseTree = processor.parse(page)
-const tree = await processor.run(parseTree)
+const parser = remark()
+	.use(remarkMdx)
 
-// removePosition(tree, { force: true })
-// console.dir(tree, { depth: null })
+const tree = parser.parse(page)
 
-const toTranslate = page.substring(0, 100)
-console.log(toTranslate)
+// console.log(page)
+removePosition(tree, { force: true })
+console.dir(tree, { depth: null })
 
-const res = await fetch(`${LIBRE_TRANSLATE_URL}/translate`, {
-	method: "POST",
-	body: JSON.stringify({
-		q: toTranslate,
-		source: "en",
-		target: "ru",
-		format: "text",
-		alternatives: 1
-	}),
-	headers: { "Content-Type": "application/json" }
-});
-
-console.log(await res.json());
+// const toTranslate = page.substring(0, 100)
+// console.log(toTranslate)
+// translateTo(toTranslate, "ru")
+	// .then(console.log)
