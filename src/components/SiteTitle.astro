@@ -10,9 +10,9 @@ const urlSenta = getRelativeLocaleUrl(locale, "/senta");
 const urlMisc = getRelativeLocaleUrl(locale, "/misc");
 ---
 
-<nav class="flex items-center gap-4">
-    <Default />
-    <a class="ml-4" href={urlAstra}>{Astro.locals.t("product.astra")}</a>
+<Default />
+<nav class="hidden xl:flex ml-4 flex-nowrap items-center gap-4">
+    <a href={urlAstra}>{Astro.locals.t("product.astra")}</a>
     <a href={urlAlta}>{Astro.locals.t("product.alta")}</a>
     <a href={urlSenta}>{Astro.locals.t("product.senta")}</a>
     <a href={urlMisc}>{Astro.locals.t("product.misc")}</a>
