@@ -3,12 +3,17 @@ import Default from '@astrojs/starlight/components/SiteTitle.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const locale = Astro.currentLocale ?? Astro.preferredLocale ?? "en";
+
+const urlAstra = getRelativeLocaleUrl(locale, '/astra');
+const urlAlta = getRelativeLocaleUrl(locale, '/alta');
+const urlSenta = getRelativeLocaleUrl(locale, '/senta');
+const urlMisc = getRelativeLocaleUrl(locale, '/misc');
 ---
 
 <nav class="flex items-center gap-4">
     <Default />
-    <a href={getRelativeLocaleUrl(locale, '/astro')}">{Astro.locals.t('product.astra')}</a>
-    <a href={getRelativeLocaleUrl(locale, '/alta')}>{Astro.locals.t('product.alta')}</a>
-    <a href={getRelativeLocaleUrl(locale, '/senta')}>{Astro.locals.t('product.senta')}</a>
-    <a href={getRelativeLocaleUrl(locale, '/misc')}>{Astro.locals.t('product.misc')}</a>
+    <a href={urlAstra}>{Astro.locals.t('product.astra')}</a>
+    <a href={urlAlta}>{Astro.locals.t('product.alta')}</a>
+    <a href={urlSenta}>{Astro.locals.t('product.senta')}</a>
+    <a href={urlMisc}>{Astro.locals.t('product.misc')}</a>
 </nav>

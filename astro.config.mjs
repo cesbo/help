@@ -36,6 +36,7 @@ export default defineConfig({
               label: 'Español',
           },
       },
+      routeMiddleware: './src/components/sidebar-middleware.ts',
       components: {
           SiteTitle: './src/components/SiteTitle.astro',
       },
