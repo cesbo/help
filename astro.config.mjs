@@ -38,6 +38,7 @@ export default defineConfig({
       },
       routeMiddleware: './src/components/sidebar-middleware.ts',
       components: {
+          Sidebar: './src/components/Sidebar.astro',
           SiteTitle: './src/components/SiteTitle.astro',
       },
       sidebar: [
