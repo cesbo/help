@@ -15,7 +15,7 @@ export default defineConfig({
           es: 'Cesbo Ayuda',
       },
       logo: {
-         src: './src/assets/logo.svg',
+         src: './src/assets/logo.png',
          alt: 'Cesbo logo',
          replacesTitle: true,
       },
@@ -89,6 +89,5 @@ export default defineConfig({
     redirects: {
         "/": "/en",
         "/profile": "https://cesbo.com/accounts/profile/",
-        "/assets/img/logo.svg": "https://cdn.cesbo.com/logo.svg",
     },
 });
