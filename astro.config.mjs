@@ -1,10 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import starlightImageZoom from 'starlight-image-zoom';
 import starlightAutoSidebar from 'starlight-auto-sidebar';
+
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -68,7 +69,7 @@ export default defineConfig({
           },
       ],
       customCss: [
-        './src/tailwind.css',
+        './src/styles/global.css',
       ],
       favicon: "/favicon.ico",
       plugins: [
@@ -77,17 +78,21 @@ export default defineConfig({
       ],
       }),
       mdx(),
-      tailwind({
-        applyBaseStyles: false,
-      }),
     ],
-    site: "https://help.cesbo.com",
-    prefetch: {
-        prefetchAll: true,
-        defaultStrategy: "tap",
-    },
-    redirects: {
-        "/": "/en",
-        "/profile": "https://cesbo.com/accounts/profile/",
-    },
+
+  site: "https://help.cesbo.com",
+
+  prefetch: {
+      prefetchAll: true,
+      defaultStrategy: "tap",
+  },
+
+  redirects: {
+      "/": "/en",
+      "/profile": "https://cesbo.com/accounts/profile/",
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
