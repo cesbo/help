@@ -5,7 +5,7 @@ sidebar:
   hidden: true
 tableOfContents: false
 hero:
-  title: Astra
+  title: Cesbo Astra
   tagline: TV Broadcasting simplified
   image:
     alt: Astra architecture diagram
