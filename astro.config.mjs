@@ -1,11 +1,12 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-import mdx from '@astrojs/mdx';
-import starlightImageZoom from 'starlight-image-zoom';
-import starlightAutoSidebar from 'starlight-auto-sidebar';
+import { defineConfig } from 'astro/config'
+import starlight from '@astrojs/starlight'
+import mdx from '@astrojs/mdx'
+import starlightImageZoom from 'starlight-image-zoom'
+import starlightAutoSidebar from 'starlight-auto-sidebar'
+import starlightLlmsTxt from 'starlight-llms-txt'
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
@@ -75,6 +76,7 @@ export default defineConfig({
       plugins: [
         starlightImageZoom(),
         starlightAutoSidebar(),
+        starlightLlmsTxt(),
       ],
       }),
       mdx(),
@@ -95,4 +97,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-});
+})
