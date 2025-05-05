@@ -13,9 +13,9 @@ Download single binary file to your server and start service in few simple steps
 - x86 64bit CPU
 - Connection to the internet on your server
 
-::note
+:::note
 In this guide we use the **curl** command to download files. Most Linux distribution has pre-installed **curl**
-::
+:::
 
 ## Install Alta
 
