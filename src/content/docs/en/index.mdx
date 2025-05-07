@@ -3,19 +3,44 @@ title: Welcome
 description: Configure your media delivery system with ease
 template: splash
 hero:
-  title: Welcome to Cesbo Help
-  tagline: Configure your media delivery system with ease
+  title: Cesbo Help Center
+  tagline: Configure your media delivery with ease
 ---
-import ProductCard from './src/components/ProductCard.astro'
+import ProductLayout from '../../../components/ProductLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
 
+<ProductLayout>
+    <ProductCard
+      title="Astra"
+      description="TV Broadcasting simplified"
+      mainLink="/en/astra"
+      links={{
+        "/en/astra/getting-started/install": "Get Started",
+        "/en/astra/getting-started/features": "Learn"
+      }}
+    />
+    <ProductCard
+      title="Alta"
+      description="Add description here"
+      mainLink="/en/alta"
+      links={{
+        "/en/alta/getting-started/install": "Get Started",
+        "/en/alta/admin-guide/manage-services": "Learn"
+      }}
+    />
+    <ProductCard
+      title="Senta"
+      description="Bring your streams to the next level"
+      mainLink="/en/senta"
+      links={{
+        "/en/senta/getting-started/installation": "Get Started",
+        "/en/senta/getting-started": "Learn"
+      }}
+    />
+</ProductLayout>
 <ProductCard
-   title="Senta"
-    description="Senta is a media delivery system that allows you to deliver your media content to your audience."
-    mainLink="/en/senta/getting-started/"
-    links={[
-        <a href="/en/senta/getting-started/">Getting Started</a>,
-        <a href="/en/senta/guides/">Guides</a>,
-        <a href="/en/senta/references/">References</a>
-    ]}
-/>
-  /> 
+  title="Knowledge base"
+  description="Explore advanced articles and guides"
+  mainLink="/en/misc"
+  class="col-span-3"
+  />

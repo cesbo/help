@@ -6,7 +6,7 @@ sidebar:
 tableOfContents: false
 hero:
   title: Cesbo Senta
-  tagline: Bring media streaming to the new levels
+  tagline: Bring your streams to the next level
   actions:
     - text: Install
       link: /en/senta/getting-started/installation

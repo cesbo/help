@@ -1,13 +1,17 @@
 ---
-const { title, description, mainLink, links } = Astro.props
+import { LinkButton } from '@astrojs/starlight/components';
+
+const { title, description, mainLink, links } = Astro.props;
 ---
-<div class="border rounded-md p-4 flex flex-col">
-    <a href={mainLink}>
-        <h2>{title}</h2>
-    </a>
+<div class="flex flex-col border rounded-md p-4">
+    <h3>
+        <a href={mainLink}>{title}</a>
+    </h3>
     <p>{description}</p>
 
-    <div class="flex flex-row gap-2">
-        {links}
+    <div class="flex-1 mt-2 flex items-center gap-1">
+        {Object.entries(links ?? {}).map(([link, text]) => (
+            <LinkButton href={link}>{text}</LinkButton>
+        ))}
     </div>
 </div>

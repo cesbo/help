@@ -1,7 +1,9 @@
 ---
 import Default from "@astrojs/starlight/components/SiteTitle.astro"
 import ProductLinks from "./ProductLinks.astro"
+
+const isNotHome = Astro.url.pathname.split("/").length > 2;
 ---
 <Default />
 <div class="w-4" />
-<ProductLinks showOnDesktop={true} />
+{isNotHome && <ProductLinks showOnDesktop={true} />}
