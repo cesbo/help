@@ -6,6 +6,7 @@ sidebar:
 tableOfContents: false
 hero:
   title: Cesbo Alta
+  desctiption: Digital recording solution
   actions:
     - text: Install
       link: /en/alta/getting-started/install
