@@ -11,7 +11,7 @@ const { title, description, mainLink, links } = Astro.props;
 
     <div class="flex-1 mt-2 flex items-center gap-1">
         {Object.entries(links ?? {}).map(([link, text]) => (
-            <LinkButton href={link}>{text}</LinkButton>
+            <LinkButton href={link} variant="secondary">{text}</LinkButton>
         ))}
     </div>
 </div>
