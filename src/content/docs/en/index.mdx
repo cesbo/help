@@ -6,3 +6,16 @@ hero:
   title: Welcome to Cesbo Help
   tagline: Configure your media delivery system with ease
 ---
+import ProductCard from './src/components/ProductCard.astro'
+
+<ProductCard
+   title="Senta"
+    description="Senta is a media delivery system that allows you to deliver your media content to your audience."
+    mainLink="/en/senta/getting-started/"
+    links={[
+        <a href="/en/senta/getting-started/">Getting Started</a>,
+        <a href="/en/senta/guides/">Guides</a>,
+        <a href="/en/senta/references/">References</a>
+    ]}
+/>
+  /> 

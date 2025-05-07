@@ -1,0 +1,13 @@
+---
+const { title, description, mainLink, links } = Astro.props
+---
+<div class="border rounded-md p-4 flex flex-col">
+    <a href={mainLink}>
+        <h2>{title}</h2>
+    </a>
+    <p>{description}</p>
+
+    <div class="flex flex-row gap-2">
+        {links}
+    </div>
+</div>
