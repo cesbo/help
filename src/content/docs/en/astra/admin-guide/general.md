@@ -1,5 +1,5 @@
 ---
-title: "Stream General Settings"
+title: Stream General Settings
 date: 2023-08-14
 sidebar:
     order: 11
@@ -21,26 +21,26 @@ The Single Program Stream (SPTS) commonly used to form TV channels. It can utili
 
 ## Input List
 
-Configure one or more inputs to receive stream content. To set up inputs, you can use the [Media Address Format](/astra/receiving/general/address-format) or the configuration dialog.
+Configure one or more inputs to receive stream content. To set up inputs, you can use the [Media Address Format](../receiving/address-format) or the configuration dialog.
 
 Read more information in our guides for protocol specific configuration:
 
-- [HLS](/astra/receiving/ip/hls)
-- [HTTP MPEG-TS](/astra/receiving/ip/http)
-- [UDP/RTP](/astra/receiving/ip/udp)
-- [SRT](/astra/receiving/ip/srt)
-- [RSTP](/astra/receiving/ip/rtsp)
-- [How to receive MPTS via UDP](/astra/receiving/ip/mpts-via-udp)
-- [How to configure DVB, ATSC, ISDB-T, SAT>IP](/astra/receiving/dvb)
+- [HLS](../receiving/hls)
+- [HTTP MPEG-TS](../receiving/http)
+- [UDP/RTP](../receiving/udp)
+- [SRT](../receiving/srt)
+- [RSTP](../receiving/rtsp)
+- [How to receive MPTS via UDP](.../receiving/mpts-via-udp)
+- [How to configure DVB, ATSC, ISDB-T, SAT>IP](dvb)
 
 ## Output List
 
-Configure one or more outputs to provide content to clients. Outputs are optional. You can use the [HTTP Play](/astra/delivery/http-hls/http-play) feature to provide access to channels with HLS or HTTP MPEG-TS.
+Configure one or more outputs to provide content to clients. Outputs are optional. You can use the [HTTP Play](../delivery/http-play) feature to provide access to channels with HLS or HTTP MPEG-TS.
 
 Read more information in our guides for protocol specific configuration:
 
-- [UDP](/astra/delivery/broadcasting/udp)
-- [DVB with Broadcasting hardware](/astra/delivery/hardware)
+- [UDP](../delivery/udp)
+- [DVB with Broadcasting hardware](../delivery/hardware)
 
 ## Save
 

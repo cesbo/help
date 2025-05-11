@@ -13,7 +13,7 @@ UDP (User Datagram Protocol) - communication protocol in local networks or Inter
 
 With Astra you can analyze any supported source. Just launch in console next command:
 
-```
+```sh
 astra --analyze "udp://eth0@239.255.1.1:1234"
 ```
 
@@ -23,13 +23,13 @@ To stop Astra analyzer press Ctrl+C. Read more about [Astra MPEG-TS Analyzer](..
 
 Tcpdump is a common tool to check network traffic. For example, command to check UDP multicast receiving to group 239.255.1.1 on the interface eth0:
 
-```
+```sh
 tcpdump -pnni eth0 udp and host 239.255.1.1
 ```
 
 If you don't know actual interface you may find it with command:
 
-```
+```sh
 ip route get 239.255.1.1
 ```
 
@@ -99,15 +99,15 @@ In both cases need to check remote server configuration. If this is not possible
 
 First of all need to check losses and errors on the network interface:
 
-```
+```sh
 ip -s link show eth0
 ```
 
 You need to look at RX Errors. Some network cards provide more detailed information about the nature of the loss:
 
-```
+```sh
 ethtool -S eth1
 ```
 
-Losses can be not only on the network cards of your server. They can also be on the network equipment port. You can find the informaton how to see it in the documentation of the network equipment manufacturer.
+Losses can be not only on the network cards of your server. They can also be on the network equipment port. You can find the information how to see it in the documentation of the network equipment manufacturer.
 Where eth0 is an interface name. After the RX-row will be row with numbers. Third number is an UDP receiving errors.
