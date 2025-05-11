@@ -1,5 +1,5 @@
 ---
-title: "Other API Methods"
+title: Other API Methods
 date: 2023-06-30
 sidebar:
     order: 27
@@ -78,4 +78,4 @@ Request: `POST /control/`
 - `id` - stream identifier
 - `url` - image address, as well could be used data-format, for example: `data:image/png;base64,...`
 
-This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](/astra/admin-guide/administration/mosaic)
+This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](mosaic)

@@ -26,7 +26,7 @@ After that, you can start the application with the command:
 
 The application will start and you can access the web interface at `http://address_your_server:8018` (you can change port in config.json file)
 
-Next you can [make senta as demon](/getting-started/installation/#set-as-demon) and set profiles and streams
+Next you can [make senta as demon](#set-as-demon) and set profiles and streams
 
 ## Set as demon
 

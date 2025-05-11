@@ -1,5 +1,5 @@
 ---
-title: "HTTP Play"
+title: HTTP Play
 date: 2023-03-23
 sidebar:
     order: 10
@@ -14,20 +14,20 @@ By the default HTTP Play is disabled. To activate it open: Settings -> HTTP Play
 - `Allow HTTP access to all streams` - this option allows to enable access to the channels with HTTP MPEG-TS protocol
 - `Allow HLS access to all streams` - this option allows to enable access to the channels with HLS protocol
 
-::alert
+:::caution
 HLS Protocol turns off starting streams on demand and channels will works permanently. Also HLS Protocol use a lot of RAM, about 4Mb per 1Mbit
-::
+:::
 
 - `HTTP play port` - parameter allows you to assign a port that will be used to transfer the playlist and media streams. It is used to separate the web interface and the playlist
 - `Disable TLS on HTTP Play port` - this setting disables the use of HTTPS for this media playlist
 - `Path to TV logos` - the parameter is used to specify the path to the directory with logo files
 - `Custom name for playlist` - the parameter renames `playlist.m3u8` to an arbitrary name
 - `Playlist arrange` - this option allows to select a category for grouping channels. You may configure groups in the Settings -> Groups
-- `playlist.m3u8` - this is a link to the channels playlist. You may use playlist on the mobile devices, computer, TV, or Set-top-Box. You may append authentication details to the playlist, for example `https://your-server/playlist.m3u8?token=xxx`. [Read more](/astra/delivery/http-hls/playlist)
+- `playlist.m3u8` - this is a link to the channels playlist. You may use playlist on the mobile devices, computer, TV, or Set-top-Box. You may append authentication details to the playlist, for example `https://your-server/playlist.m3u8?token=xxx`. [Read more](playlist)
 
-::alert
+:::caution
 By default, access authentication is disabled. Without authentication, access to the channels is not restricted, allowing anyone to potentially gain access to the content. To restrict access to your channels, please consider enabling Access Authorization or utilizing a System Firewall to limit access to your server. This will help ensure that your content remains secure and accessible only to authorized users.
-::
+:::
 
 ## Channel Logo
 
@@ -36,5 +36,5 @@ By adding logos to your channel playlists, you provide your viewers with a more 
 With the "Path to TV logos" option, you can specify the location of the images directory on your server. Astra loads images with the same name as the channel name and appends the logo to the playlist information.
 
 1. Create a directory: `/var/lib/astra/tvg-logo`
-2. In the `Path to TV logos`, set the full path to this directory: `/var/lib/astra/tvg-logo`
-3. Save channel logos to the directory. Use the same file name as the channel name. For example: `Travel Channel.png`
+1. In the `Path to TV logos`, set the full path to this directory: `/var/lib/astra/tvg-logo`
+1. Save channel logos to the directory. Use the same file name as the channel name. For example: `Travel Channel.png`

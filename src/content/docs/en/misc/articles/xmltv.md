@@ -9,7 +9,7 @@ XMLTV is an XML-based format for describing TV schedule information. It provides
 
 ## Example
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
 <tv generator-info-name="Some tv generator">
@@ -48,7 +48,7 @@ XMLTV is an XML-based format for describing TV schedule information. It provides
 
 The `<channel>` element defines individual television channels.
 
-```
+```xml
 <channel id="1">
   <display-name lang="en">Channel 1</display-name>
   <icon src="http://site.domain/1.png" />
@@ -68,7 +68,7 @@ Nested elements:
 
 The `<programme>` element in the XMLTV format represents an individual television show or broadcast event.
 
-```
+```xml
 <programme start="20180920143000 +0300" stop="20180920141500 +0300" channel="2">
   <title lang="en">Program title 3</title>
   <desc lang="en">Program description 3</title>
@@ -95,6 +95,6 @@ Nested elements:
 
 The Event Information Table (EIT) is a part of the MPEG-2 Transport Stream (MPEG-TS) used in digital broadcasting. This table contains metadata about the scheduled events or programmes on various channels, similar to the programme guide one might find on a digital TV or set-top box.
 
-XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/misc/tools-and-utilities/tv-and-media/eit-stream)
+XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](../tools-and-utilities/eit-stream)
 
 EIT packet could be extracted from MPEG-TS stream and saved to XMLTV files with Astra.

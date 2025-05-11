@@ -1,5 +1,5 @@
 ---
-title: "TLS certificate for HTTPS"
+title: TLS certificate for HTTPS"
 date: 2025-01-04
 sidebar:
     order: 12
@@ -9,7 +9,7 @@ TLS certificate is required to enable HTTPS for the Astra web interface and medi
 
 ## Configuration
 
-You can obtain a TLS certificate with [Dehydrated](/misc/tools-and-utilities/network/dehydrated) for free.
+You can obtain a TLS certificate with [Dehydrated](/en/misc/tools-and-utilities/dehydrated) for free.
 
 In the Astra web interface, navigate to `Settings` -> `General` -> `HTTP Server` and set paths to the certificate and private key files.
 

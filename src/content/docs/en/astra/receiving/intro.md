@@ -1,5 +1,5 @@
 ---
-title: "Introduction to DVB Adapter Tuning"
+title: Introduction to DVB Adapter Tuning
 date: 2023-02-28
 sidebar:
     order: 2
@@ -21,15 +21,15 @@ Key components of a DVB adapter:
 
 We recommend DVB adapters by:
 
-- [TBS](https://www.tbsdtv.com){target="_blank"}
-- [Digital Devices](https://www.digital-devices.eu){target="_blank"}
+- [TBS](https://www.tbsdtv.com)
+- [Digital Devices](https://www.digital-devices.eu)
 
 ## Prepare you system
 
 Before you begin, make sure that the DVB Adapter is connected to your server and that the appropriate Linux driver is installed:
 
-- [TBS Driver Installation](/misc/tools-and-utilities/dvb/tbs-driver)
-- [DigitalDevices Driver Installation](/misc/tools-and-utilities/dvb/dd-driver)
+- [TBS Driver Installation](/en/misc/tools-and-utilities/tbs-driver)
+- [DigitalDevices Driver Installation](/en/misc/tools-and-utilities/dd-driver)
 
 ## General options
 
@@ -63,14 +63,14 @@ To create new adapter click "New Adapter" in the main menu.
 
 Other options depends of the selected adapter type:
 
-- [DVB-S/S2](./s)
-- [DVB-T/T2](./t)
-- [DVB-C](./c)
+- [DVB-S/S2](s)
+- [DVB-T/T2](t)
+- [DVB-C](c)
 
 ## Scan
 
-Once your adapter is configured, you can check the signal quality and scan it for available channels. Read more: [Scan DVB Adapter](./scan)
+Once your adapter is configured, you can check the signal quality and scan it for available channels. Read more: [Scan DVB Adapter](scan)
 
 ## Troubleshooting
 
-If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](/misc/troubleshooting/dvb)
+If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](../admin-guide/dvb)

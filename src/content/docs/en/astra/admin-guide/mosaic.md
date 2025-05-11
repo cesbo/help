@@ -14,14 +14,14 @@ Channel Screenshots helps to visually evaluate quality of the channels.
 
 ## Requirements
 
-- Astra with enabled [HTTP Play](/astra/delivery/http-hls/http-play)
+- Astra with enabled [HTTP Play](../delivery/http-play)
 - FFmpeg
 
 ## Install FFmpeg
 
 Install FFmpeg with system packet manager:
 
-```
+```sh
 apt install ffmpeg
 ```
 
@@ -29,7 +29,7 @@ apt install ffmpeg
 
 On you server create new directory to store screenshot images:
 
-```
+```sh
 mkdir -p /var/lib/astra/mosaic
 ```
 
@@ -47,7 +47,7 @@ If you use HTTP Authorization, set Token for administrator. Open Astra Web Inter
 
 [Download](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) script and save it on your server:
 
-```
+```sh
 curl -Lo /usr/local/bin/mosaic.sh https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh
 chmod +x /usr/local/bin/mosaic.sh
 ```
@@ -64,7 +64,7 @@ Open script with any text editor and modify following variables:
 
 To start script automatically you may append it to the systemd. Download configuration file for systemd and save it on your server:
 
-```
+```sh
 curl -Lo /etc/systemd/system/mosaic.service https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.service
 ```
 
@@ -77,6 +77,6 @@ Next commands could be used to manage script:
 
 After the start check that new png files are creating in the screenshots directory:
 
-```
+```sh
 ls /var/lib/astra/mosaic
 ```

@@ -1,5 +1,5 @@
 ---
-title: "MPEG-TS Demultiplexing"
+title: MPEG-TS Demultiplexing
 date: 2023-08-28
 sidebar:
     order: 1
@@ -17,7 +17,7 @@ For example, to receive a stream from a DVB Adapter with the identifier `a001` a
 dvb://a001#pnr=1
 ```
 
-Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](/astra/receiving/dvb/scan) and [Receiving MPTS via UDP](/astra/receiving/ip/mpts-via-udp)
+Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](../receiving/scan) and [Receiving MPTS via UDP](../receiving/mpts-via-udp)
 
 ## Filter service tables
 
@@ -59,7 +59,7 @@ During the demultiplexing process, Astra discards all packets and associated inf
 dvb://a001#pnr=1&cas
 ```
 
-This option becomes essential when descrambling streams using dedicated CAM modules. Read more in our article: [Descrambling channels with External DVB-CI](/astra/receiving/dvb/external-ci)
+This option becomes essential when descrambling streams using dedicated CAM modules. Read more in our article: [Descrambling channels with External DVB-CI](../receiving/external-ci)
 
 ## Change program number
 

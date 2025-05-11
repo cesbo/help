@@ -109,4 +109,4 @@ adapter0 adapter1 adapter2 adapter3 ...
 
 ## Troubleshooting
 
-If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/misc/troubleshooting/dvb)
+If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/astra/admin-guide/dvb)

@@ -1,5 +1,5 @@
 ---
-title: "Features"
+title: Features
 date: 2024-08-02
 sidebar:
     order: 1
@@ -21,7 +21,7 @@ Astra supports various types of sources:
 - SRT protocol in caller or listenner modes
 - RTSP streams from IP cameras
 
-[Read more...](/astra/receiving)
+[Read more...](../receiving/intro)
 
 ## Processing content
 
@@ -33,7 +33,7 @@ Astra prepares received channels for delivery using MPEG-TS processing features:
 - Analyzing streams
 - Stream redundancy by automatically switching to backup sources
 
-[Read more...](/astra/processing)
+[Read more...](../processing/demux)
 
 ## Delivering content
 
@@ -45,7 +45,7 @@ Broadcasting & Streaming content over different networks:
 - Delivery streams over IP networks with UDP Multicast
 - SRT protocol in listenner or caller modes
 
-[Read more...](/astra/delivery)
+[Read more...](../delivery/mpts-settings)
 
 ## Management
 

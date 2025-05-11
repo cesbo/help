@@ -1,5 +1,5 @@
 ---
-title: "System Requirements"
+title: System Requirements
 date: 2023-09-12
 sidebar:
     order: 3
@@ -56,7 +56,7 @@ Use server-grade network adapters with as many Tx queues as possible
 
 ### Scaling
 
-Due to HLS nature all clients connected directly to the server. For load balancing we recommend to use caching servers. Read more in [HLS Caching Proxy with Nginx](/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+Due to HLS nature all clients connected directly to the server. For load balancing we recommend to use caching servers. Read more in [HLS Caching Proxy with Nginx](/en/misc/tools-and-utilities/hls-caching-proxy-with-nginx)
 
 ## Receiving channels
 

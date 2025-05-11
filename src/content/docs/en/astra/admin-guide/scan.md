@@ -1,5 +1,5 @@
 ---
-title: "Scan API"
+title: Scan API
 date: 2023-08-03
 sidebar:
     order: 28
@@ -16,7 +16,7 @@ Request: `POST /control/`
 }
 ```
 
-- `scan` - stream address. Read more about [Media Address Format](/astra/receiving/general/address-format)
+- `scan` - stream address. Read more about [Media Address Format](../receiving/address-format)
 
 Response:
 

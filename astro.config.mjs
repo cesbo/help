@@ -5,6 +5,7 @@ import mdx from '@astrojs/mdx'
 import starlightImageZoom from 'starlight-image-zoom'
 import starlightAutoSidebar from 'starlight-auto-sidebar'
 import starlightLlmsTxt from 'starlight-llms-txt'
+import starlightLinksValidator from 'starlight-links-validator'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -77,6 +78,10 @@ export default defineConfig({
         starlightImageZoom(),
         starlightAutoSidebar(),
         starlightLlmsTxt(),
+        starlightLinksValidator({
+            errorOnLocalLinks: false,
+            errorOnRelativeLinks: false,
+        }),
       ],
       }),
       mdx(),

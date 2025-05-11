@@ -1,11 +1,11 @@
 ---
-title: "Playlist for HTTP Play"
+title: Playlist for HTTP Play
 date: 2023-08-22
 sidebar:
     order: 13
 ---
 
-Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](/astra/delivery/http-hls/http-play) feature.
+Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](http-play) feature.
 
 ![HTTP Play settings](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/http-play.png)
 
@@ -34,13 +34,13 @@ Where:
 
 ## Channel Groups
 
-For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/astra/admin-guide/settings/channel-groups).
+For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](../admin-guide/channel-groups).
 
 Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
 
-::note
+:::note
 Some players, like VLC, doesn't support M3U8 groups and shows flat playlist
-::
+:::
 
 ## Channel Logos
 
@@ -51,7 +51,7 @@ Some players and middleware solutions display channel logos alongside their name
 To begin, download archive with logo images from: https://epg.it999.ru/it999_transparent_logo.zip
 You may download and extract archive on your server using the following commands:
 
-```
+```sh
 mkdir -p /var/lib/astra
 cd /var/lib/astra
 curl -LO https://epg.it999.ru/it999_transparent_logo.zip
@@ -74,7 +74,7 @@ url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
 ```
 
 Line will be added to the playlist header and provide information about EPG location.
-This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/astra/admin-guide/stream/epg).
+This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](../admin-guide/epg).
 
 The final step is a configuring channel ID to link your channels with EPG records. Each channel in the XMLTV has unique identifier, like so:
 

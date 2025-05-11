@@ -6,7 +6,7 @@ sidebar:
 ---
 ## Add stream
 
-After [add profile](/getting-started/add-profile), you can add stream. Set input and output parameters.
+After [add profile](add-profile), you can add stream. Set input and output parameters.
 
 In this example, we download a ts-file to the server and specify the path in the input field, then set udp-stream as the output.
 

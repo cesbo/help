@@ -35,7 +35,7 @@ ffmpeg -y -hide_banner -i ${i} -map 0:0 -map 0:1 -c:v h264_nvenc -preset fast -p
 NAME "HD h264"
 ```
 
-Next, you can add custom [variables](/profiles/variables) after keyword `WHERE`
+Next, you can add custom [variables](variables) after keyword `WHERE`
 
 Example
 
