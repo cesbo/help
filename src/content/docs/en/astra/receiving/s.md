@@ -1,5 +1,5 @@
 ---
-title: "Options for DVB-S/S2"
+title: Options for DVB-S/S2
 date: 2023-02-28
 sidebar:
     order: 4
@@ -35,9 +35,9 @@ Default options depends on the adapter frequency:
 | 2500 .. 2700 | 3650 | 0 | 0 |
 | 950 .. 2150 | 0 | 0 | 0 |
 
-::alert
+:::tip
 For circular polarized converters (e.g. 36°E, 56°E), set 10750 in LOF1
-::
+:::
 
 ## LNB Polarization
 

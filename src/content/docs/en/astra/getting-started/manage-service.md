@@ -1,5 +1,5 @@
 ---
-title: "Manage Astra Service"
+title: Manage Astra Service
 date: 2023-02-21
 sidebar:
     order: 6
@@ -7,15 +7,15 @@ sidebar:
 
 Service is an application process with specified name and own configuration.
 
-::alert
-In most Linux distributions serivces managed with `systemd`. Systemd controls service status, checks service logs, and launches service on system startup.
-::
+:::tip
+In most Linux distributions services are managed with `systemd`. Systemd controls service status, checks service logs, and launches service on system startup.
+:::
 
 ## Launch additional services
 
 You may launch on your server one or more services depends on your need.
 
-```
+```sh
 astra init 8001 astra-1
 ```
 
@@ -39,14 +39,14 @@ In this example service name is default: `astra`
 
 Before removing service, stop it and turn off autorun:
 
-```
+```sh
 systemctl stop astra-1
 systemctl disable astra-1
 ```
 
 Then, remove service from systemd:
 
-```
+```sh
 astra remove astra-1
 ```
 

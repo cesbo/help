@@ -1,5 +1,5 @@
 ---
-title: "Receiving UDP/RTP"
+title: Receiving UDP/RTP
 date: 2023-03-04
 sidebar:
     order: 14

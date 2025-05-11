@@ -1,5 +1,5 @@
 ---
-title: "Changelog"
+title: Changelog
 noindex: true
 sidebar:
     order: 5
@@ -65,12 +65,12 @@ sidebar:
 
 ## 241210
 
-::alert
+:::danger
 This version has breaking changes!
 
 Before update please save a copy of your configuration file.
 Default configuration file is located in `/etc/alta/alta.conf`
-::
+:::
 
 [Download Alta-241210](https://cdn.cesbo.com/alta/builds/alta-241210)
 

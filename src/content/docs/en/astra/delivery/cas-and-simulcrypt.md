@@ -1,18 +1,19 @@
 ---
-title: "CAS and Simulcrypt"
+title: CAS and Simulcrypt
 date: 2023-02-24
-image: https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/og-image.png
 sidebar:
     order: 5
 ---
+
+![Thumbnail](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/og-image.png)
 
 Conditional Access System (CAS) is a complex solution to protect media content from unauthorized access. Astra can communicates with Conditional Access Systems such as Conax via the Simulcrypt protocol and encrypt media content using the Common Scrambling Algorithm (CSA).
 
 ![CAS diagram](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas.svg)
 
-::note
+:::note
 Content encryption is effective for protecting broadcast delivery methods such as satellite, cable, and terrestrial. However, for OTT delivery, more suitable methods and combination of content protection techniques are recommended for comprehensive protection against piracy.
-::
+:::
 
 ## CAS Configuration
 

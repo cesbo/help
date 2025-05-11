@@ -1,5 +1,5 @@
 ---
-title: "HTTP Backend Authorization"
+title: HTTP Backend Authorization
 date: 2023-02-24
 sidebar:
     order: 5
@@ -93,7 +93,7 @@ if ($token == '123') {
 
 To launch the backend on the server with Alta, run the following command:
 
-```
+```sh
 php -S 127.0.0.1:6000 auth.php
 ```
 
@@ -105,9 +105,9 @@ http://127.0.0.1:6000
 
 For production environments, you can use nginx with php-fpm or any other suitable solution.
 
-::alert
+:::caution
 Note that this is just an example and you should implement your own backend logic according to your specific requirements.
-::
+:::
 
 ## Troubleshooting
 
@@ -115,7 +115,7 @@ Note that this is just an example and you should implement your own backend logi
 
 If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
 
-```
+```sh
 curl -v "http://127.0.0.1:6000?token=123"
 ```
 

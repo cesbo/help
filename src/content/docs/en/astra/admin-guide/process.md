@@ -1,5 +1,5 @@
 ---
-title: "Process Status API"
+title: Process Status API
 date: 2023-03-23
 sidebar:
     order: 26
@@ -9,9 +9,9 @@ In Astra, you can manage process and control it status using HTTP API methods.
 
 ## System status
 
-::alert
+:::caution
 Version: 2021-04-12 or later
-::
+:::
 
 Request: `GET /api/system-status`
 

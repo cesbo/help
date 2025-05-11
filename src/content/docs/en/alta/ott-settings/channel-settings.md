@@ -1,5 +1,5 @@
 ---
-title: "Channel Settings"
+title: Channel Settings
 date: 2023-02-24
 sidebar:
     order: 7
@@ -34,9 +34,9 @@ As a result, the channel will be available through HLS on the same address: `htt
 
 ## Address
 
-::alert
-⚠️ this is temporary field and will be removed in next versions
-::
+:::caution
+this is temporary field and will be removed in next versions
+:::
 
 Source address supports next protocols:
 

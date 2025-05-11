@@ -1,5 +1,5 @@
 ---
-title: "Encrypt streams with BISS CAS"
+title: Encrypt streams with BISS CAS
 date: 2023-04-02
 sidebar:
     order: 6
@@ -7,9 +7,9 @@ sidebar:
 
 The Basic Interoperable Scrambling System (BISS) is a straightforward and efficient conditional access system that utilizes a static key to protect content from unauthorized access. BISS is based on the Common Scrambling Algorithm (CSA), which scrambles the channel data, ensuring secure transmission of content over satellite and terrestrial broadcasting networks.
 
-::alert
+:::caution
 Although BISS provides a level of content protection, it is essential to note that this system is not recommended due to its weak protection mechanism. The static CSA key used in BISS is susceptible to brute force attacks
-::
+:::
 
 ## BISS Key
 
@@ -36,7 +36,7 @@ By specifying the BISS key in the Output Address, Astra will automatically scram
 
 You can verify if a channel is scrambled using Astra MPEG-TS Analyzer. To do this, start the analyzer with the following command:
 
-```
+```sh
 astra --analyze udp://239.255.1.1:1234
 ```
 
@@ -46,7 +46,7 @@ The analyzer will write messages to the console, indicating that the stream is s
 
 Scrambled streams can be received and viewed using VLC Player. To launch VLC with the appropriate BISS key from the command line, enter the following command:
 
-```
+```sh
 vlc --ts-csa-ck 1234569C789ABCCE udp://@239.255.1.1:1234
 ```
 

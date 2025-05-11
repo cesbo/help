@@ -1,5 +1,5 @@
 ---
-title: "Decrypt streams with BISS CAS"
+title: Decrypt streams with BISS CAS
 date: 2023-04-01
 sidebar:
     order: 5
@@ -15,9 +15,9 @@ To decrypt a scrambled channel, you need to append the `biss` option with the ap
 dvb://a001#pnr=1&biss=12345600789ABC00
 ```
 
-::note
+:::note
 Input Options are separated by the `&` symbol, as shown in the example. The `#` symbol marks the beginning of the options. If your address does not have any options, the full address with the added `biss` option would look like this: `udp://239.255.1.1:1234#biss=12345600789ABC00`
-::
+:::
 
 When using an invalid BISS key, the decrypted stream will be corrupted. In this case, the Astra analyzer will display a `PES Error`.
 
@@ -29,4 +29,4 @@ To retransmit a scrambled channel without decrypting it, you can use the `cas` o
 dvb://a001#pnr=1&cas
 ```
 
-This method allows you pass the scrambled channel to the output, preserving all the necessary data required for descramblers to decode the content.
+This method allows you to pass the scrambled channel to the output, preserving all the necessary data required for descramblers to decode the content.

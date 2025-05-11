@@ -1,5 +1,5 @@
 ---
-title: "Receiving HLS"
+title: Receiving HLS
 date: 2023-08-10
 sidebar:
     order: 9

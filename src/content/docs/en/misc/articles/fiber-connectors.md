@@ -1,7 +1,6 @@
 ---
-title: "Types of fiber connectors"
+title: Types of fiber connectors
 date: 2023-05-26
-image: https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png
 sidebar:
     order: 10
 ---
@@ -35,7 +34,6 @@ Features and applications of SC connectors:
 ## FC Connector
 
 ![FC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
-
 
 FC Connector was developed by Nippon Telegraph and Telephone. It was the first optical connector, that used a ceramic tip. This was the first optical connector that used a ceramic tip. It is not currently used due to the more popular SC and LC connectors.
 
@@ -102,6 +100,6 @@ The connectors are similar to the PC type. Due to a clearer bevel curve, losses 
 
 APC polished connectors provide less reflected signal towards the source.The surface of the ferrule is beveled at an angle of 8-9 degrees. Because of this, the signal is not reflected from the connector at a 180-degree angle, so the reflected signal does not return to the transmitter at all, or returns with less power. APC polished connectors are used in systems with a high-power signal. This is why they are common in cable TV and PON networks.
 
-::alert
+:::danger
 It is forbidden to connect the APC and UPC connectors. This causes damage to the connectors and increases the risk of signal attenuation and reflection.
-::
+:::

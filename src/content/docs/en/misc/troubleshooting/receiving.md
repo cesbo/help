@@ -1,5 +1,5 @@
 ---
-title: "DVB Receiving issues"
+title: DVB Receiving issues
 date: 2023-02-28
 sidebar:
     order: 5
@@ -17,7 +17,7 @@ Adapter is taken by another process. Maybe Astra started twice.
 
 You may check wich process uses Astra with next command:
 
-```
+```sh
 lsof | grep adapter0
 ```
 
@@ -36,13 +36,13 @@ astra 23068 ... /dev/dvb/adapter31/frontend0
 
 The first step is to check whether the DVB adapters are present in the system using the command:
 
-```
+```sh
 ls /dev/dvb
 ```
 
 If the command shows an error message "No such file or directory", the first thing to do is to check if the hardware is available to the system using the command:
 
-```
+```sh
 lspci | grep Multimedia
 ```
 
@@ -58,7 +58,7 @@ Try to reinstall the driver. If this doesn't help, please contact the hardware v
 
 This issue common for adapters by DigitalDevices. Check dmesg output for i2c errors:
 
-```
+```sh
 dmesg | grep i2c
 ```
 

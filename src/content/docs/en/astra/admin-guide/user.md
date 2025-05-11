@@ -71,7 +71,9 @@ Request: `POST /control/`
 - `user` - user configuration
 - `password` - plain password, in the config will be saved the password hash
 
-::spoiler{title="Example"}
+<details>
+<summary>Example</summary>
+
 You may create new user by launching next command:
 
 ```sh
@@ -88,12 +90,12 @@ curl -X POST -user login -d @- http://server:8000/control/ <<END
 END
 ```
 
-on successful Astra returns:
+on success Astra returns:
 
 ```json
 { "set-user": "ok" }
 ```
-::
+</details>
 
 ## Remove user
 
@@ -124,7 +126,9 @@ Turn user on or off:
 
 - `id` - user login
 
-::spoiler{title="Example"}
+<details>
+<summary>Example</summary>
+
 You may enable or disable user by launching next command:
 
 ```sh
@@ -135,9 +139,9 @@ curl \
     http://server:8000/control/
 ```
 
-on successful Astra returns:
+on success Astra returns:
 
 ```json
 { "toggle-user": "ok" }
 ```
-::
+</details>

@@ -1,10 +1,11 @@
 ---
-title: "Cable Television with Astra for Hospitality Industry"
+title: Cable Television with Astra for Hospitality Industry
 date: 2023-05-04
-image: https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png
 sidebar:
     order: 7
 ---
+
+![Hospitality industry using TV](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/og-image.png)
 
 Hospitality TV, offering an excellent TV solution with high-quality broadcasts and a selection of the best channels, is an essential part of hotel service.
 
@@ -60,9 +61,9 @@ Short description:
 - Output with 8 active transponder: 101 dBµV
 - The FSM8 can make up to 7.1 MSym/s and QAM256. The maximum delivered bitrate is about 52Mbps
 
-::note
+:::note
 We advise sending no more than 40-42Mbps to a single transponder, especially if the input stream is from the satellite. As sat-channels usually have floating bitrate, which, for example, at HD channel may jump from 6Mbps to 11Mbps.
-::
+:::
 
 According to that, we may calculate how many channels we may put on a single transponder and on all available transponders:
 
@@ -92,23 +93,23 @@ Software:
 
 First of all, we need to prepare our server machine and install Linux and Astra. Information about Ubuntu installation could be found on the [official web site](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](/astra/getting-started/first-steps/install)
+Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](install)
 
 Quite often customers forget to configure their Adapters before the next steps. So be sure that you have DVB card drivers installed on the server.
 
-- [DigitalDevices Driver Installation](/misc/tools-and-utilities/dvb/dd-driver)
-- [TBS Driver Installation](/misc/tools-and-utilities/dvb/tbs-driver)
+- [DigitalDevices Driver Installation](../../misc/tools-and-utilities/dd-driver)
+- [TBS Driver Installation](../misc/tools-and-utilities/tbs-driver)
 - For other adapters you may find information on the vender web site
 
 ### Receiving channels with Astra
 
-Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](/astra/receiving).
+Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](../receiving/intro).
 
 To configure receiving channels from satellite we recommend to having a look at these articles:
 
-- [Introduction to DVB Adapter Tuning](/astra/receiving/dvb/intro)
-- [DVB-S/S2 Tuner Options](/astra/receiving/dvb/s)
-- [Scan DVB Adapter](/astra/receiving/dvb/scan)
+- [Introduction to DVB Adapter Tuning](../admin-guide/dvb)
+- [DVB-S/S2 Tuner Options](../receiving/s)
+- [Scan DVB Adapter](../receiving/scan)
 
 Below provided screenshot of example adapter settings:
 
@@ -148,7 +149,7 @@ At this point, we have already found and added all the necessary channels in Ast
 
 On the server console find the card number and modulators using the command:
 
-```
+```sh
 find "/dev/dvb" -name "mod*"
 ```
 
@@ -193,6 +194,6 @@ Also, we can connect the coaxial cable from RESI to the TV set, and in the TV se
 
 ## Troubleshooting DVB receiving
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/misc/troubleshooting/dvb)
+In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](../../misc/troubleshooting/receiving)
 
 We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.

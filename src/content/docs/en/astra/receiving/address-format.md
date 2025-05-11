@@ -1,5 +1,5 @@
 ---
-title: "Media Address Format"
+title: Media Address Format
 date: 2023-03-23
 sidebar:
     order: 1
@@ -23,23 +23,23 @@ Let's take a closer look at each of these components and their respective roles 
 
 ## Receiving Media Types
 
-- `dvb` - media source received via a DVB Tuner or Virtual adapter. [Introduction to DVB Adapter Tuning](/astra/receiving/dvb/intro)
-- `udp` - [UDP multicast or unicast](/astra/receiving/ip/udp)
-- `rtp` - [RTP multicast or unicast](/astra/receiving/ip/udp)
-- `http` - HTTP based protocols: [HTTP MPEG-TS](/astra/receiving/ip/http) or [HLS](/astra/receiving/ip/hls)
-- `srt` - [SRT protocol](/astra/receiving/ip/srt)
-- `rtsp` - [RTSP protocol](/astra/receiving/ip/rtsp), commonly used to receive stream from IP camera streams
+- `dvb` - media source received via a DVB Tuner or Virtual adapter. [Introduction to DVB Adapter Tuning](intro)
+- `udp` - [UDP multicast or unicast](udp)
+- `rtp` - [RTP multicast or unicast](udp)
+- `http` - HTTP based protocols: [HTTP MPEG-TS](http) or [HLS](hls)
+- `srt` - [SRT protocol](srt)
+- `rtsp` - [RTSP protocol](rtsp), commonly used to receive stream from IP camera streams
 - `file` - MPEG-TS file on the server
 
 ## Transmitting Media Types
 
-- `udp` - [UDP multicast or unicast](/astra/delivery/broadcasting/udp)
+- `udp` - [UDP multicast or unicast](../delivery/udp)
 - `rtp` - RTP multicast or unicast
 - `srt` - SRT protocol
 - `http` - HTTP based protocols, by the default HTTP MPEG-TS, or HLS if media address ends with `.m3u8` extension
-- `resi` - [DVB-C modulator by DigitalDevices](/astra/delivery/hardware/resi-dvb-c-modulator)
-- `tbs` - [DVB-C modulator by TBS](/astra/delivery/hardware/tbs-dvb-c-modulator)
-- `it950x` - [DVB-T modulator by HiDes](/astra/delivery/hardware/hides-dvb-t-modulator)
+- `resi` - [DVB-C modulator by DigitalDevices](../delivery/resi-dvb-c-modulator)
+- `tbs` - [DVB-C modulator by TBS](../delivery/tbs-dvb-c-modulator)
+- `it950x` - [DVB-T modulator by HiDes](../delivery/hides-dvb-t-modulator)
 - `file` - save stream to the MPEG-TS file, or directory on the server
 - `np` - (NetworkPush) the HTTP-based protocol, used to send streams from Astra to the remote server
 
@@ -53,22 +53,22 @@ General input options play a critical role in fine-tuning the receiving and proc
 
 Most common options:
 
-- `pnr=PNR` - the program number/SID (Service ID) retrieves the channel with the specified number from the stream. Read more in [MPEG-TS Demultiplexing](/astra/processing/mpegts/demux)
+- `pnr=PNR` - the program number/SID (Service ID) retrieves the channel with the specified number from the stream. Read more in [MPEG-TS Demultiplexing](../processing/demux)
 - `set_pnr=PNR` - to change PNR. The value must be between 1 and 65535
-- `filter=N,...` - stream filtration, used to remove the specified PID. Identifiers are separated by commas. Read more in [Filtering Stream PIDs](/astra/processing/mpegts/filter)
+- `filter=N,...` - stream filtration, used to remove the specified PID. Identifiers are separated by commas. Read more in [Filtering Stream PIDs](../processing/filter)
 - `filter~=N,...` - stream filtering, used to remove all data except specified PID and service tables. Identifiers are separated by commas
-- `order` - sort PID in the PMT table. Often used with the lang parameter to select a priority audio track. Read more in [Reorder audio streams](/astra/processing/mpegts/order)
+- `order` - sort PID in the PMT table. Often used with the lang parameter to select a priority audio track. Read more in [Reorder audio streams](../processing/order)
 - `lang` - set the language code for the audio track. Example: `lang.1241=eng` where: `1241` - pid, `eng` - language code
 
 Other options:
 
 - `set_tsid=TSID` - to change TSID (Transport Stream ID)
-- `biss=1122330044556600` - use BISS key for decrypting stream. Read more: [Decrypt streams with BISS CAS](/astra/processing/cas/decrypt-biss)
+- `biss=1122330044556600` - use BISS key for decrypting stream. Read more: [Decrypt streams with BISS CAS](../processing/decrypt-biss)
 - `cam` - use DVB-CI for decrypting stream
 - `cam=CAM-ID` - use CAM Client for decrypting stream
 - `ecm_pid=PID` - define ECM PID for CAM Client (not recommended)
 - `cas` - skip service data about conditional access systems. Used to transmit an encrypted stream
-- `map.SRC=DST` - change PID to the specified values. SRC - the original identifier or data type. Possible types: pmt, video, audio, ait, language code. DST - required identifier. The value can be between 32 and 8190. Read more in [Remapping Stream PIDs](/astra/processing/mpegts/remap)
+- `map.SRC=DST` - change PID to the specified values. SRC - the original identifier or data type. Possible types: pmt, video, audio, ait, language code. DST - required identifier. The value can be between 32 and 8190. Read more in [Remapping Stream PIDs](../processing/remap)
 - `no_sdt` - to delete channel information: channel name, operator name (SDT Service Description Table)
 - `pass_sdt` - SDT transfer without processing. By default, if pnr is set, Astra transmits information only on the selected stream
 - `no_eit` - delete EPG event information (EIT - Event Information Table)
@@ -76,4 +76,4 @@ Other options:
 - `no_analyze` - disables checking for changes in the stream
 - `cc_limit=N` - set CC error limit. If the number of CC errors exceeds the set limit, Astra will switch to the backup source (if available). Default: no limit is set
 - `bitrate_limit=RATE` - set the minimum bitrate for the analyzer in Kbit/s. The source will be considered non-working if the stream bitrate is less than the specified value. Default: `16 Kbit/s` for stream without video data and `128 Kbit/s` for stream with video data
-- `pass_data` - retain packets with the pivate data (data-pid). Read more in [MPEG-TS Demultiplexing](/astra/processing/mpegts/demux)
+- `pass_data` - retain packets with the pivate data (data-pid). Read more in [MPEG-TS Demultiplexing](../processing/demux)

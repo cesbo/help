@@ -1,5 +1,5 @@
 ---
-title: "License"
+title: License
 date: 2023-02-21
 sidebar:
     order: 4
@@ -18,9 +18,9 @@ Astra have several licensing models:
 
 You may purchase new license or get demo on our website: [Get License](https://cesbo.com/astra-license). To install new license folow an instruction in the email with new license.
 
-::note
-If you don't reseve email, please check in the Spam.
-::
+:::note
+If you don't receive email, please check in the Spam.
+:::
 
 We send email with new license on:
 
@@ -36,7 +36,7 @@ Your license will be same on:
 
 To install new license, follow the instructions in the email. After installing the license, restart Astra from the console:
 
-```
+```sh
 systemctl restart astra
 ```
 
@@ -44,9 +44,9 @@ systemctl restart astra
 
 You may renew your subscription in your profile on our website: [Profile](https://cesbo.com/profile). Your serial number will be same as before, so not needed any additional actions.
 
-::note
+:::note
 After renewing your license, please make sure to restart Astra at your earliest convenience, such as during a scheduled maintenance window or outside of peak business hours
-::
+:::
 
 ## Upgrade License
 

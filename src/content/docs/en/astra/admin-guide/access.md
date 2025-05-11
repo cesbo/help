@@ -1,5 +1,5 @@
 ---
-title: "HTTP Access Logs"
+title: HTTP Access Logs
 date: 2023-08-10
 sidebar:
     order: 22
@@ -28,9 +28,9 @@ remote_addr - remote_user [time] "request" status bytes_sent
 
 ## Log Rotation
 
-::alert
+:::caution
 Please use log rotation to save disk space and ensure your logs remain in good condition
-::
+:::
 
 Logrotate is a system utility that manages the automatic rotation and compression of log files. To use it, create a new configuration file at `/etc/logrotate.d/astra`:
 

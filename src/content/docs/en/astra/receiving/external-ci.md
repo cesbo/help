@@ -1,10 +1,11 @@
 ---
-title: "Descrambling channels with External DVB-CI"
+title: Descrambling channels with External DVB-CI
 date: 2023-06-27
-image: https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/ddci.jpg
 sidebar:
     order: 8
 ---
+
+![DDCI thumbnail](https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/ddci.jpg)
 
 With the rise of digital broadcasting, protecting content from unauthorized access has become increasingly important. This is why many TV providers, whether they are satellite, cable, or terrestrial, encrypt content using Conditional Access Systems (CAS).
 
@@ -35,9 +36,9 @@ Create MPTS with required channels in the input address for each channel you sho
 
 ### Create Virtual Adapter
 
-::alert
+:::caution
 Virtual Adapter available for versions released after 20 Sep 2022
-::
+:::
 
 Create New Adapter in the Astra Web Interface with the `CI` value in the `Virtual` field. Save adapter settings by clicking the Apply button
 
@@ -56,7 +57,7 @@ CI options:
 
 CI adapter number could be found with command:
 
-```
+```sh
 find /dev/dvb/ -name ca*
 ```
 
@@ -95,7 +96,7 @@ The number of programs (channels) that CAM may descramble simultaneously, depend
 
 If you need to check CAM menu to get some additional data about Conditional Access Module or SmartCard, you may use `gnutv` digital tv utility. Launch:
 
-```
+```sh
 gnutv -adapter N -cammenu
 ```
 

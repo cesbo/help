@@ -1,5 +1,5 @@
 ---
-title: "Managing Users"
+title: Managing Users
 date: 2023-03-23
 sidebar:
     order: 17
@@ -61,6 +61,6 @@ When HTTP Authentication is active, the user options include additional optional
 - `Limit connections` - number of simultaneous connections allowed for the user. By default, there are no connection limits.
 - `Packages` - click "New Package" to add a channel category to the user. The user will only have access to channels related to the specified category. New categories can be created in Settings->Groups. By default, all channels are available to the user.
 
-::alert
+:::caution
 For more advanced authentication requirements, we recommend using external HTTP authentication options, such as HTTP Backend or SecureToken.
-::
+:::

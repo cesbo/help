@@ -1,7 +1,6 @@
 ---
-title: "Low-Noise Block for satellite dishes"
+title: Low-Noise Block for satellite dishes
 date: 2023-07-07
-image: https://cdn.cesbo.com/help/misc/articles/hardware/lnb/lnb.jpg
 sidebar:
     order: 11
 ---
@@ -37,7 +36,7 @@ A Quattro LNB has four outputs, each dedicated to a specific band and polarizati
 
 A Quad LNB has for independent outputs, each capable of accessing all frequencies in the Ku-band.
 
-::note
+:::note
 It's important to note that a Quad LNB is designed for consumer use. Quattro LNB is not intended for direct connection to a receiver.
 The two types of LNBs are distinctly different and cannot replace each other in their respective applications. Be careful not to confuse them.
-::
+:::

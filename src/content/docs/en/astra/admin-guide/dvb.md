@@ -1,5 +1,5 @@
 ---
-title: "DVB Adapters API"
+title: DVB Adapters API
 date: 2023-03-23
 sidebar:
     order: 24
@@ -29,9 +29,9 @@ In the Astra interface, you can manage DVB Adapter configurations and control th
 
 ## Obtain Adapter configuration
 
-::alert
+:::caution
 Version: 2021-04-12 or later
-::
+:::
 
 Request: `GET /api/adapter-info/{id}`
 
@@ -69,9 +69,9 @@ Request: `POST /control/`
 
 ## Remove Adapter
 
-::alert
-**Attention!** This method removes adapter and all related streams
-::
+:::danger
+This method removes adapter and all related streams
+:::
 
 Request: `POST /control/`
 
@@ -89,9 +89,9 @@ Request: `POST /control/`
 
 ## Obtain Adapter Status
 
-::alert
+:::caution
 Version: 2021-04-12 or later
-::
+:::
 
 Request: `GET /api/adapter-status/{id}`
 
