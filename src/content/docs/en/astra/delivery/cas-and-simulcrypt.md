@@ -4,9 +4,6 @@ date: 2023-02-24
 sidebar:
     order: 5
 ---
-
-![Thumbnail](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/og-image.png)
-
 Conditional Access System (CAS) is a complex solution to protect media content from unauthorized access. Astra can communicates with Conditional Access Systems such as Conax via the Simulcrypt protocol and encrypt media content using the Common Scrambling Algorithm (CSA).
 
 ![CAS diagram](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas.svg)
