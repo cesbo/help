@@ -1,5 +1,5 @@
 ---
-title: TLS certificate for HTTPS"
+title: TLS certificate for HTTPS
 date: 2025-01-04
 sidebar:
     order: 12

@@ -1,5 +1,5 @@
 ---
-title: "Manage Alta Services"
+title: Manage Alta Services
 date: 2023-03-04
 sidebar:
     order: 1
@@ -15,7 +15,7 @@ Systemd is a popular service manager for Linux-based operating systems. It is us
 
 To register new service launch initialization wizard with next command:
 
-```
+```sh
 sudo alta init
 ```
 

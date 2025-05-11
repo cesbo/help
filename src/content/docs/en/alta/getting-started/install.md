@@ -1,5 +1,5 @@
 ---
-title: "Install"
+title: Install
 date: 2023-03-10
 sidebar:
     order: 1
@@ -21,14 +21,14 @@ In this guide we use the **curl** command to download files. Most Linux distribu
 
 Download binary file and set execute permission. On the server you may use next command:
 
-```
+```sh
 curl -Lo /usr/bin/alta https://cesbo.com/alta-latest
 chmod +x /usr/bin/alta
 ```
 
 Installation completed, now you may check version number:
 
-```
+```sh
 alta version
 ```
 
@@ -36,7 +36,7 @@ alta version
 
 Initialization wizard prepares new service on your system. Each service has owns configuration file, management port, and unique name. Launch initialization wizard with next command:
 
-```
+```sh
 sudo alta init
 ```
 

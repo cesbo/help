@@ -1,5 +1,5 @@
 ---
-title: "Install"
+title: Install
 date: 2023-02-21
 sidebar:
     order: 2
@@ -22,19 +22,19 @@ In this guide we use the **curl** command to download files. Most Linux distribu
 
 Open your server console and download binary file:
 
-```
+```sh
 curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
 ```
 
 Set execute permission:
 
-```
+```sh
 chmod +x /usr/bin/astra
 ```
 
 Installation completed, now you may check version number:
 
-```
+```sh
 astra -v
 ```
 
@@ -48,13 +48,13 @@ To install license folow an instruction in the email with new license.
 
 After installation, register new service in the systemd:
 
-```
+```sh
 astra init
 ```
 
 This command registers Astra as a system service with name `astra` and with management port `8000`. To start service launch command:
 
-```
+```sh
 systemctl start astra
 ```
 
@@ -64,7 +64,7 @@ Read more about service management and launching additional services on your ser
 
 Turn autorun on for your service:
 
-```
+```sh
 systemctl enable astra
 ```
 

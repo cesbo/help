@@ -1,5 +1,5 @@
 ---
-title: "Middleware Authorization"
+title: Middleware Authorization
 data: 2023-06-19
 sidebar:
     order: 16
@@ -12,9 +12,9 @@ The Middleware Authorization is a client authorization on the third-party servic
 ![HTTP Backend](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/http-backend.svg)
 
 1. Client initiates a request to access a TV channel. This request contains identification details such as token, client ID, or some else
-2. Astra sends HTTP GET request to the Middleware. This request includes identification details and session information
-3. Middleware validates request and sends back a response status
-4. If the Middleware grants access, then Astra provides access to the requested TV channel
+1. Astra sends HTTP GET request to the Middleware. This request includes identification details and session information
+1. Middleware validates request and sends back a response status
+1. If the Middleware grants access, then Astra provides access to the requested TV channel
 
 ## Configuration
 
@@ -82,9 +82,9 @@ In a response backend may send next HTTP headers:
 For example:
 
 1. Your backend address is: `https://auth.example.com/check`
-2. Client tries to start channel: `https://live.example.com/play/a001/index.m3u8?token=123`
-3. Full address to HTTP backend will be: `https://auth.example.com/check?token=123`
-4. In headers will be `X-Real-Path: /play/a001/index.m3u8` and other headers depending of clients request
+1. Client tries to start channel: `https://live.example.com/play/a001/index.m3u8?token=123`
+1. Full address to HTTP backend will be: `https://auth.example.com/check?token=123`
+1. In headers will be `X-Real-Path: /play/a001/index.m3u8` and other headers depending of clients request
 
 ## Default action
 
@@ -96,7 +96,7 @@ If backend is not available, then Astra allows access.
 
 If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
 
-```
+```sh
 curl -v "https://auth.example.com/check"
 ```
 

@@ -74,13 +74,13 @@ Approximately we can get 8 channels at one transponder, multiplied by 8 transpon
 
 ## Requirements
 
-Hardware:
+### Hardware
 
 - Server PC, at least Quad Core Intel® or AMD® CPU 2.8GHz,  8Gb RAM, with 2 or more PCIe slots, depending on the quantity of PCIe cards
 - DVB-C Modulators (RESI or TBS)
 - DVB-S/S2 or DVB-T/T2 TV Cards (as an example)
 
-Software:
+### Software
 
 - Linux-based operation system. We recommend Ubuntu 22.04 LTS
 - Cesbo Astra

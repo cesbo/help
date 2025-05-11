@@ -4,7 +4,7 @@ description: API senta-streamer
 sidebar:
     order: 6
 ---
-## API senta-streamer
+## Senta-streamer API
 
 Senta-streamer has two types of APIs.
 

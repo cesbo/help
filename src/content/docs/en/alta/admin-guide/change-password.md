@@ -1,5 +1,5 @@
 ---
-title: "Change Password to Alta Web Interface"
+title: Change Password to Alta Web Interface
 date: 2023-02-24
 sidebar:
     order: 2
@@ -17,7 +17,7 @@ Administrator can change password for any user by going to Settings > Users, the
 
 You may use console wizard to reset own password. On your server launch next command:
 
-```
+```sh
 alta reset-password
 ```
 
@@ -39,7 +39,7 @@ Service is not started or installed on another server
 
 Service is more privileged than wizard. Launch command with sudo to raise privileges:
 
-```
+```sh
 sudo alta reset-password
 ```
 
