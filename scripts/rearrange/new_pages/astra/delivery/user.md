@@ -1,0 +1,42 @@
+---
+title: "Авторизация пользователя"
+date: 2023-06-19
+sidebar:
+    order: 17
+---
+
+Метод авторизации пользователя обеспечивает доступ к контенту без дополнительного программного обеспечения.
+
+Прежде всего, убедитесь, что HTTP-авторизация включена. Откройте . `Settings` -> `HTTP Auth` и включите опцию `Enable built-in HTTP/HLS authentication`.
+
+## Авторизация по паролю[](https://help.cesbo.com/astra/delivery/http-hls-auth/user#password-authorization)
+
+Логин и пароль пользователя могут быть добавлены к URL-адресу плейлиста, если используется HTTP Play:
+
+```
+https://example.com:8000/playlist.m3u8?auth=login:password
+```
+
+Или на URL канала:
+
+```
+https://example.com:8000/channel-path/index.m3u8?auth=login:password
+```
+
+## Токен авторизации[](https://help.cesbo.com/astra/delivery/http-hls-auth/user#token-authorization)
+
+Токен-авторизация является более предпочтительным методом, чем парольная авторизация. Уникальный токен может быть задан в разделе Настройки -> Пользователи, открытые опции пользователя:
+
+![Опции пользователя](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/user.png)
+
+Токен может быть добавлен к URL-адресу плейлиста, если вы используете HTTP Play:
+
+```
+https://example.com:8000/playlist.m3u8?token=3e3db68b1486
+```
+
+Или на URL канала:
+
+```
+https://example.com:8000/channel-path/index.m3u8?token=3e3db68b1486
+```
