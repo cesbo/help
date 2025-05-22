@@ -1,5 +1,5 @@
 ---
-title: "Системные требования"
+title: Системные требования
 date: 2023-09-12
 sidebar:
     order: 3
@@ -34,7 +34,7 @@ sidebar:
 
 Избегайте использования VLAN, Bonding и сетевых адаптеров потребительского класса.
 
-## HLS[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#hls)
+## [HLS](https://help.cesbo.com/astra/getting-started/first-steps/requirements#hls)
 
 Доставка контента по протоколу HLS является наиболее сложным и ресурсоемким процессом, что обусловлено самой природой протокола.
 
@@ -107,7 +107,7 @@ Use server-grade network adapters with as many Tx queues as possible
 
 ### Scaling
 
-Due to HLS nature all clients connected directly to the server. For load balancing we recommend to use caching servers. Read more in [HLS Caching Proxy with Nginx](/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+Due to HLS nature all clients connected directly to the server. For load balancing we recommend to use caching servers. Read more in [HLS Caching Proxy with Nginx](../../misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
 
 ## Receiving channels
 
