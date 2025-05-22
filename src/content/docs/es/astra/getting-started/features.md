@@ -1,5 +1,5 @@
 ---
-title: "Características"
+title: Características
 date: 2024-08-02
 sidebar:
     order: 1
@@ -21,7 +21,7 @@ Astra admite varios tipos de fuentes:
 - Protocolo SRT en modos caller o listener
 - Transmisiones RTSP desde cámaras IP
 
-[Leer más...](/astra/receiving)
+[Leer más...](../receiving)
 
 ## Procesamiento de contenido
 
@@ -33,7 +33,7 @@ Astra prepara los canales recibidos para la entrega utilizando funciones de proc
 - Análisis de transmisiones
 - Redundancia de transmisiones mediante la conmutación automática a fuentes de respaldo
 
-[Leer más...](/astra/processing)
+[Leer más...](../processing)
 
 ## Entrega de contenido
 
@@ -46,7 +46,7 @@ Transmisión y difusión de contenido a través de diferentes redes:
 - Protocolo SRT en modos listener o caller
 
 
-[Leer más...](/astra/delivery)
+[Leer más...](../delivery)
 
 ## Gestión
 
