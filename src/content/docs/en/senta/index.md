@@ -1,6 +1,6 @@
 ---
 title: Senta
-description: Home page of Senta pages
+description: Home page of Senta
 sidebar:
   hidden: true
 tableOfContents: false

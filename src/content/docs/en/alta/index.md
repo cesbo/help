@@ -1,6 +1,6 @@
 ---
 title: Alta
-description: Home page of Alta pages
+description: Home page of Alta
 sidebar:
   hidden: true
 tableOfContents: false

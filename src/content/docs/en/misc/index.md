@@ -1,6 +1,6 @@
 ---
-title: Miscellaneous
-description: Home page of various pages
+title: Knowledge base
+description: Knowledge base home
 sidebar:
   hidden: true
 tableOfContents: false
