@@ -1,5 +1,5 @@
 ---
-title: "Recepción de MPTS vía UDP"
+title: Recepción de MPTS vía UDP
 date: 2023-03-10
 ---
 
@@ -7,9 +7,9 @@ Con Astra, puedes recibir MPTS (Multi Program Transport Stream) de diferentes fu
 
 ## Adaptador virtual[](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp#virtual-adapter)
 
-::alert
+:::note
 Adaptador virtual disponible para versiones posteriores al 20 de septiembre de 2022
-::
+:::
 
 Para una configuración rápida y sencilla de la recepción MPTS, puede utilizar el Adaptador Virtual. Haga clic en "Nuevo adaptador" en el menú principal:
 
@@ -25,7 +25,7 @@ En cualquier versión de Astra puedes añadir canales del flujo MPTS manualmente
 
 En primer lugar, analiza UDP MPTS con MPEG-TS Analyzer:
 
-```
+```sh
 astra --analyze udp://239.255.1.1:1234
 ```
 

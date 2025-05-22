@@ -1,13 +1,13 @@
 ---
-title: "Cifrar flujos con BISS CAS"
+title: Cifrar flujos con BISS CAS
 date: 2023-04-02
 ---
 
 El Basic Interoperable Scrambling System (BISS) es un sistema de acceso condicional sencillo y eficaz que utiliza una clave estática para proteger los contenidos de accesos no autorizados. BISS se basa en el algoritmo de codificación común (CSA), que codifica los datos del canal, garantizando la transmisión segura de contenidos a través de redes de radiodifusión por satélite y terrestres.
 
-::alert
+:::note
 Aunque BISS proporciona un nivel de protección de contenidos, es esencial señalar que este sistema no es recomendable debido a su débil mecanismo de protección. La clave CSA estática utilizada en BISS es susceptible a ataques de fuerza bruta.
-::
+:::
 
 ## Clave BISS[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#biss-key)
 
@@ -34,7 +34,7 @@ Al especificar la clave BISS en la Dirección de Salida, Astra codificará autom
 
 Puedes comprobar si un canal está codificado utilizando el analizador Astra MPEG-TS. Para ello, inicia el analizador con el siguiente comando:
 
-```
+```sh
 astra --analyze udp://239.255.1.1:1234
 ```
 
@@ -44,7 +44,7 @@ El analizador escribirá mensajes en la consola, indicando que el flujo está co
 
 Los flujos codificados pueden recibirse y visualizarse con VLC Player. Para iniciar VLC con la clave BISS adecuada desde la línea de comandos, introduzca el siguiente comando:
 
-```
+```sh
 vlc --ts-csa-ck 1234569C789ABCCE udp://@239.255.1.1:1234
 ```
 

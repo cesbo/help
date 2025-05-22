@@ -1,13 +1,13 @@
 ---
-title: "Integración Astra con Zabbix"
+title: Integración Astra con Zabbix
 date: 2023-03-04
 ---
 
 Zabbix es una plataforma de código abierto para la monitorización de servicios de red, servidores y aplicaciones. Puede integrarse con Astra para monitorizar Streams y adaptadores DVB.
 
-::alert
+:::note
 Disponible para las versiones de Astra lanzadas después del 2021-05-11
-::
+:::
 
 ## Instalación del servidor Zabbix[](https://help.cesbo.com/astra/monitoring/export/zabbix#zabbix-server-installation)
 
@@ -41,31 +41,31 @@ Guardar archivo.
 
 El Agente Zabbix recibe toda la información de Astra con scripts escritos en Python. Asegúrese de que en su servidor instalado Python3:
 
-```
+```sh
 sudo apt install python3 python3-pip
 ```
 
 para el uso de sistemas basados en RPM `yum` en lugar de `apt`. A continuación, instale la biblioteca necesaria para Python:
 
-```
+```sh
 pip3 install requests
 ```
 
 Descarga de scripts para el Agente Zabbix:
 
-```
+```sh
 curl https://cdn.cesbo.com/astra/zabbix/agent.tar.gz | tar -zxC /opt
 ```
 
 Los guiones se guardarán en la carpeta `/opt/zabbix_agent` directorio. Descargue el archivo de configuración del servicio para el Agente Zabbix:
 
-```
+```sh
 curl -o /etc/zabbix/zabbix_agentd.d/astra.conf https://cdn.cesbo.com/astra/zabbix/astra.conf
 ```
 
 Y finalmente reinicie el Agente Zabbix:
 
-```
+```sh
 systemctl restart zabbix-agent
 ```
 
