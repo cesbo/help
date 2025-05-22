@@ -14,9 +14,9 @@ Por defecto HTTP Play está desactivado. Para activarla abra: Configuración -> 
 - `Allow HTTP access to all streams` - esta opción permite habilitar el acceso a los canales con protocolo HTTP MPEG-TS
 - `Allow HLS access to all streams` - esta opción permite habilitar el acceso a los canales con protocolo HLS
 
-::alert
+:::note
 El Protocolo HLS desactiva el inicio de streams bajo demanda y los canales funcionarán permanentemente. Además, el protocolo HLS utiliza mucha RAM, unos 4Mb por 1Mbit.
-::
+:::
 
 - `HTTP play port` - le permite asignar un puerto que se utilizará para transferir la lista de reproducción y los flujos multimedia. Se utiliza para separar la interfaz web y la lista de reproducción
 - `Disable TLS on HTTP Play port` - este ajuste desactiva el uso de HTTPS para esta lista de reproducción multimedia
@@ -25,9 +25,9 @@ El Protocolo HLS desactiva el inicio de streams bajo demanda y los canales funci
 - `Playlist arrange` - esta opción permite seleccionar una categoría para agrupar canales. Puede configurar los grupos en Configuración -> Grupos
 - `playlist.m3u8` - Este es un enlace a la lista de reproducción de los canales. Puede utilizar la lista de reproducción en dispositivos móviles, ordenadores, televisores o descodificadores. Puede añadir detalles de autenticación a la lista de reproducción, por ejemplo `https://your-server/playlist.m3u8?token=xxx`. [Seguir leyendo](https://help.cesbo.com/astra/delivery/http-hls/playlist)
 
-::alert
+:::note
 Por defecto, la autenticación de acceso está desactivada. Sin autenticación, el acceso a los canales no está restringido, permitiendo que cualquiera pueda acceder potencialmente a los contenidos. Para restringir el acceso a sus canales, por favor considere habilitar la Autorización de Acceso o utilizar un Firewall de Sistema para limitar el acceso a su servidor. Esto ayudará a garantizar que su contenido permanezca seguro y accesible sólo a usuarios autorizados.
-::
+:::
 
 ## Logotipo del canal[](https://help.cesbo.com/astra/delivery/http-hls/http-play#channel-logo)
 

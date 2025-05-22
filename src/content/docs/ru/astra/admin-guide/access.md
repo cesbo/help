@@ -28,9 +28,9 @@ remote_addr - remote_user [time] "request" status bytes_sent
 
 ## Ротация журнала[](https://help.cesbo.com/astra/admin-guide/log/access#log-rotation)
 
-::alert
+:::note
 Для экономии дискового пространства и сохранения журналов в хорошем состоянии используйте ротацию журналов
-::
+:::
 
 Logrotate - это системная утилита, управляющая автоматической ротацией и сжатием файлов журналов. Для ее использования создайте новый конфигурационный файл по адресу `/etc/logrotate.d/astra`:
 

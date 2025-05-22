@@ -35,9 +35,9 @@ Las opciones por defecto dependen de la frecuencia del adaptador:
 | 2500 .. 2700 | 3650 | 0 | 0 |
 | 950 .. 2150 | 0 | 0 | 0 |
 
-::alert 
+:::note 
 Para convertidores de polarización circular (por ejemplo, 36°E, 56°E), ajuste 10750 en LOF1
-::
+:::
 
 ## Polarización LNB[](https://help.cesbo.com/astra/receiving/dvb/s#lnb-polarization)
 

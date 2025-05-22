@@ -9,7 +9,7 @@ sidebar:
 
 ## Состояние системы[](https://help.cesbo.com/astra/admin-guide/api/process#system-status)
 
-::alert Версия: 2021-04-12 или более поздняя ::
+:::note Версия: 2021-04-12 или более поздняя ::
 
 Запрос: `GET /api/system-status`
 

@@ -7,15 +7,15 @@ sidebar:
 
 Instale la nueva versión en su servidor
 
-::alert
+:::note
 Antes de actualizar por favor [Hacer una copia de seguridad](https://help.cesbo.com/astra/admin-guide/administration/backup)!
-::
+:::
 
 ## Instalar actualización[](https://help.cesbo.com/astra/admin-guide/administration/update#install-update)
 
 Descarga el último archivo binario:
 
-```
+```sh
 rm -f /usr/bin/astra
 curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
 chmod +x /usr/bin/astra

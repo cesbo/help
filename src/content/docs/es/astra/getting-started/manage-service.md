@@ -7,8 +7,8 @@ sidebar:
 
 El servicio es un proceso de aplicación con nombre especificado y configuración propia.
 
-::alert En la mayoría de las distribuciones Linux los servicios se gestionan con `systemd`. Systemd controla el estado del servicio, comprueba los registros de servicio y lanza el servicio al iniciar el sistema.
-::
+:::note En la mayoría de las distribuciones Linux los servicios se gestionan con `systemd`. Systemd controla el estado del servicio, comprueba los registros de servicio y lanza el servicio al iniciar el sistema.
+:::
 
 ## Ponga en marcha servicios adicionales[](https://help.cesbo.com/astra/getting-started/first-steps/manage-service#launch-additional-services)
 

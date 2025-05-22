@@ -8,9 +8,9 @@ El sistema de acceso condicional (CAS) es una solución compleja para proteger e
 
 ![Diagrama CAS](https://cdn.cesbo.com/help/astra/delivery/broadcasting/cas/cas.svg)
 
-::note
+:::note
 El cifrado de contenidos es eficaz para proteger métodos de difusión como satélite, cable y terrestre. Sin embargo, para la distribución OTT, se recomiendan métodos más adecuados y la combinación de técnicas de protección de contenidos para una protección integral contra la piratería.
-::
+:::
 
 ## Configuración CAS[](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt#cas-configuration)
 

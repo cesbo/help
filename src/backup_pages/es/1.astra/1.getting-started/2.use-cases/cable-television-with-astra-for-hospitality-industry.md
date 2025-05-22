@@ -56,8 +56,8 @@ Breve descripción:
 - Salida con 8 transpondedores activos: 101 dBµV
 - El FSM8 puede emitir hasta 7,1 MSym/s y QAM256. La tasa de bits máxima entregada es de unos 52 Mbps
 
-::note Aconsejamos no enviar más de 40-42Mbps a un solo transpondedor, especialmente si el flujo de entrada procede del satélite. Los canales por satélite suelen tener un bitrate flotante que, por ejemplo, en un canal HD puede pasar de 6 Mbps a 11 Mbps.
-::
+:::note Aconsejamos no enviar más de 40-42Mbps a un solo transpondedor, especialmente si el flujo de entrada procede del satélite. Los canales por satélite suelen tener un bitrate flotante que, por ejemplo, en un canal HD puede pasar de 6 Mbps a 11 Mbps.
+:::
 
 Según esto, podemos calcular cuántos canales podemos poner en un solo transpondedor y en todos los transpondedores disponibles:
 

@@ -9,9 +9,9 @@ En Astra, puede gestionar los procesos y controlar su estado mediante los métod
 
 ## Estado del sistema[](https://help.cesbo.com/astra/admin-guide/api/process#system-status)
 
-::alert
+:::note
 Versión: 2021-04-12 o posterior
-::
+:::
 
 Petición: `GET /api/system-status`
 

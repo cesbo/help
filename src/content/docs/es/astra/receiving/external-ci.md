@@ -35,9 +35,9 @@ Crear MPTS con los canales requeridos en la dirección de entrada para cada cana
 
 ### Crear adaptador virtual
 
-::alert
+:::note
 Adaptador virtual disponible para versiones posteriores al 20 de septiembre de 2022
-::
+:::
 
 Crear nuevo adaptador en la interfaz web de Astra con el botón `CI` en el `Virtual` campo. Guarde la configuración del adaptador pulsando el botón Aplicar
 

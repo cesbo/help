@@ -37,6 +37,6 @@ Un LNB Quattro tiene cuatro salidas, cada una dedicada a una banda y polarizaci�
 
 Un LNB cuádruple tiene dos salidas independientes, cada una capaz de acceder a todas las frecuencias de la banda Ku.
 
-::note
+:::note
 Es importante tener en cuenta que un LNB Quad está diseñado para uso del consumidor. El LNB Quattro no está pensado para su conexión directa a un receptor. Los dos tipos de LNB son claramente diferentes y no pueden sustituirse entre sí en sus respectivas aplicaciones. Tenga cuidado de no confundirlos.
-::
+:::

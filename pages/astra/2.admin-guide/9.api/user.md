@@ -90,7 +90,7 @@ en caso de que Astra regrese con éxito:
 ```
 { "set-user": "ok" }
 ``` 
-::
+:::
 
 ## Eliminar usuario[](https://help.cesbo.com/astra/admin-guide/api/user#remove-user)
 
@@ -136,4 +136,4 @@ en caso de que Astra regrese con éxito:
 ```
 { "toggle-user": "ok" }
 ```
-::
+:::

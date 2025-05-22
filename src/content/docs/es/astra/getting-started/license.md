@@ -42,8 +42,8 @@ systemctl restart astra
 
 Puede renovar su suscripción en su perfil de nuestro sitio web: [Perfil](https://cesbo.com/profile). Su número de serie será el mismo que antes, por lo que no necesitará ninguna acción adicional.
 
-::note Después de renovar su licencia, asegúrese de reiniciar Astra lo antes posible, por ejemplo, durante un periodo de mantenimiento programado o fuera de las horas punta.
-::
+:::note Después de renovar su licencia, asegúrese de reiniciar Astra lo antes posible, por ejemplo, durante un periodo de mantenimiento programado o fuera de las horas punta.
+:::
 
 ## Licencia de actualización[](https://help.cesbo.com/astra/getting-started/first-steps/license#upgrade-license)
 

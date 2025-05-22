@@ -61,6 +61,6 @@ Cuando la autenticación HTTP está activada, las opciones de usuario incluyen c
 - `Limit connections` - número de conexiones simultáneas permitidas para el usuario. Por defecto, no hay límites de conexión.
 - `Packages` - haz clic en "Nuevo paquete" para añadir una categoría de canales al usuario. El usuario sólo tendrá acceso a los canales relacionados con la categoría especificada. Se pueden crear nuevas categorías en Configuración->Grupos. Por defecto, todos los canales están disponibles para el usuario.
 
-::alert
+:::note
 Para requisitos de autenticación más avanzados, recomendamos utilizar opciones de autenticación HTTP externas, como HTTP Backend o SecureToken.
-::
+:::

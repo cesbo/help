@@ -15,9 +15,9 @@ Para descifrar un canal codificado, es necesario añadir el código `biss` con l
 dvb://a001#pnr=1&biss=12345600789ABC00
 ```
 
-::alert
+:::note
 Las opciones de entrada están separadas por el símbolo `&` como se muestra en el ejemplo. La dirección `#` marca el inicio de las opciones. Si su dirección no tiene opciones, se mostrará la dirección completa con el añadido `biss` quedaría así: `udp://239.255.1.1:1234#biss=12345600789ABC00`
-::
+:::
 
 Si se utiliza una clave BISS no válida, el flujo descifrado estará dañado. En este caso, el analizador Astra mostrará un mensaje `PES Error`.
 

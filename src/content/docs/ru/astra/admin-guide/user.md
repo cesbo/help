@@ -92,7 +92,7 @@ END
 ```
 { "set-user": "ok" }
 ``` 
-::
+:::
 
 ## Удалить пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#remove-user)
 
@@ -138,4 +138,4 @@ curl \
 ```
 { "toggle-user": "ok" }
 ```
-::
+:::

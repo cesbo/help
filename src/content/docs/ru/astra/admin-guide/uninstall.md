@@ -8,9 +8,9 @@ sidebar:
 
 Если Astra больше не нужна, вы можете полностью удалить ее с вашего сервера.
 
-::alert
+:::note
 Перед деинсталляцией, пожалуйста [создайте резервную копию](https://help.cesbo.com/astra/admin-guide/administration/backup)!
-::
+:::
 
 ## Отключить сервис[](https://help.cesbo.com/astra/admin-guide/administration/uninstall#disable-service)
 

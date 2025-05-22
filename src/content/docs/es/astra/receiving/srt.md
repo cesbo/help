@@ -7,9 +7,9 @@ sidebar:
 
 El protocolo SRT (Secure Reliable Transport) es un protocolo de streaming de vídeo de código abierto diseñado para ofrecer streaming de vídeo de alta calidad y baja latencia en redes poco fiables. SRT utiliza el cifrado de extremo a extremo y ofrece una serie de funciones diseñadas para mejorar la fiabilidad y la seguridad, como la corrección de errores, el control de la congestión y la retransmisión de paquetes perdidos. SRT se utiliza a menudo para aplicaciones de transmisión de vídeo en directo, como retransmisiones deportivas y de noticias, en las que es fundamental mantener una conexión fiable y de alta calidad.
 
-::alert
+:::note
 Disponible para las versiones de Astra lanzadas después del 2021-12-21
-::
+:::
 
 ## Formato de la dirección[](https://help.cesbo.com/astra/receiving/ip/srt#address-format)
 

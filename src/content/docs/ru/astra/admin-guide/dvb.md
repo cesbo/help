@@ -29,7 +29,7 @@ sidebar:
 
 ## Получение конфигурации адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#obtain-adapter-configuration)
 
-::alert Версия: 2021-04-12 или более поздняя ::
+:::note Версия: 2021-04-12 или более поздняя ::
 
 Запрос: `GET /api/adapter-info/{id}`
 
@@ -67,7 +67,7 @@ sidebar:
 
 ## Снимите адаптер[](https://help.cesbo.com/astra/admin-guide/api/dvb#remove-adapter)
 
-::alert **Внимание!** Этот метод удаляет адаптер и все связанные с ним потоки ::
+:::note **Внимание!** Этот метод удаляет адаптер и все связанные с ним потоки ::
 
 Запрос: `POST /control/`
 
@@ -85,7 +85,7 @@ sidebar:
 
 ## Получение статуса адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#obtain-adapter-status)
 
-::alert Версия: 2021-04-12 или более поздняя ::
+:::note Версия: 2021-04-12 или более поздняя ::
 
 Запрос: `GET /api/adapter-status/{id}`
 

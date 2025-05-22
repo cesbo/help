@@ -98,6 +98,6 @@ Los conectores pulidos UPC se utilizan mucho en los sistemas de transmisión de 
 
 Los conectores pulidos APC proporcionan menos señal reflejada hacia la fuente.La superficie de la virola está biselada en un ángulo de 8-9 grados. Debido a esto, la señal no se refleja desde el conector en un ángulo de 180 grados, por lo que la señal reflejada no vuelve al transmisor en absoluto, o vuelve con menos potencia. Los conectores pulidos APC se utilizan en sistemas con una señal de alta potencia. Por eso son habituales en redes de TV por cable y PON.
 
-::alert
+:::note
 Está prohibido conectar los conectores APC y UPC. Esto provoca daños en los conectores y aumenta el riesgo de atenuación y reflexión de la señal.
-::
+:::

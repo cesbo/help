@@ -5,9 +5,9 @@ date: 2023-03-04
 
 Zabbix es una plataforma de código abierto para la monitorización de servicios de red, servidores y aplicaciones. Puede integrarse con Astra para monitorizar Streams y adaptadores DVB.
 
-::alert
+:::note
 Disponible para las versiones de Astra lanzadas después del 2021-05-11
-::
+:::
 
 ## Instalación del servidor Zabbix[](https://help.cesbo.com/astra/monitoring/export/zabbix#zabbix-server-installation)
 

@@ -36,9 +36,9 @@ Para una mejor navegación, los canales de la lista de reproducción podrían ag
 
 A continuación, seleccione la categoría creada en el `HTTP Play` configuración, opción `Playlist Arrange`.
 
-::note 
+:::note 
 Algunos reproductores, como VLC, no soportan grupos M3U8 y muestran listas de reproducción planas
-::
+:::
 
 ## Canal Logos[](https://help.cesbo.com/astra/delivery/http-hls/playlist#channel-logos)
 

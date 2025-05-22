@@ -7,9 +7,9 @@ sidebar:
 
 Si Astra ya no es necesario, puedes eliminarlo completamente de tu servidor.
 
-::alert 
+:::note 
 Antes de desinstalar por favor [Hacer una copia de seguridad](https://help.cesbo.com/astra/admin-guide/administration/backup)!
-::
+:::
 
 ## Desactivar servicio[](https://help.cesbo.com/astra/admin-guide/administration/uninstall#disable-service)
 

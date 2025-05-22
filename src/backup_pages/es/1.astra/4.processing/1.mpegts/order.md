@@ -37,6 +37,6 @@ Para reordenar los flujos de audio, sigue estos pasos:
 
 ![Ajustes de canal](https://cdn.cesbo.com/help/astra/processing/utilities/order/channel-settings.png)
 
-::alert
+:::note
 Las opciones de entrada están separadas por el símbolo `&` como se muestra en la captura de pantalla de ejemplo. La dirección `#` marca el inicio de las opciones. Por ejemplo, si su dirección no tiene opciones, la dirección completa con las opciones de pedido sería `udp://239.255.1.1:1234#order=331,333,332`
-::
+:::

@@ -7,9 +7,9 @@ sidebar:
 
 El Basic Interoperable Scrambling System (BISS) es un sistema de acceso condicional sencillo y eficaz que utiliza una clave estática para proteger los contenidos de accesos no autorizados. BISS se basa en el algoritmo de codificación común (CSA), que codifica los datos del canal, garantizando la transmisión segura de contenidos a través de redes de radiodifusión por satélite y terrestres.
 
-::alert
+:::note
 Aunque BISS proporciona un nivel de protección de contenidos, es esencial señalar que este sistema no es recomendable debido a su débil mecanismo de protección. La clave CSA estática utilizada en BISS es susceptible a ataques de fuerza bruta.
-::
+:::
 
 ## Clave BISS[](https://help.cesbo.com/astra/delivery/cas/encrypt-streams-with-biss-cas#biss-key)
 
