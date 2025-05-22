@@ -1,0 +1,85 @@
+---
+title: "Requisitos del sistema"
+date: 2023-09-12
+sidebar:
+    order: 3
+---
+
+La televisión digital es un servicio de alta carga y requiere algunos recursos. Astra no tiene restricciones en cuanto al número de canales o clientes. Sin embargo, los protocolos elegidos y los recursos disponibles pueden influir en estos parámetros.
+
+## Funcionamiento del software[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#software-operation)
+
+Evite utilizar hardware de consumo o hardware obsoleto.
+
+Para el funcionamiento del sistema y del software en general recomendamos al menos 2Gb de RAM. Para reserva al menos un 20%.
+
+## Multidifusión UDP o difusión DVB[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#udp-multicast-or-dvb-broadcast)
+
+Distribución de contenidos a través de redes UDP Multicast o DVB Broadcast, los requisitos del sistema son mínimos. Un solo servidor puede preparar todos los canales y distribuirlos por la red.
+
+### CPU
+
+Recomendamos una CPU con la frecuencia más alta disponible. Asegúrese de que la CPU funciona en modo de rendimiento y el modo de ahorro de energía está desactivado.
+
+El número de núcleos de CPU necesarios depende del número de canales que se vayan a entregar. Una buena regla general es un núcleo por cada 30 canales. Por lo tanto, para 100 canales una buena elección será una CPU con 4 núcleos.
+
+### RAM
+
+- Para moduladores DVB como TBS, DigitalDevices o HiDes, Astra asigna 256 Mb por transpondedor.
+- Para canales UDP con sincronización de bitrate, Astra asigna unos 12Mb por canal. Sin sincronización, sólo se asigna 1 Mb por canal, pero esto no suele ser recomendable.
+
+Aproximadamente 2Gb de RAM son suficientes para entregar 100 canales.
+
+### Red
+
+Evite utilizar VLAN, Bonding y adaptadores de red de consumo.
+
+## HLS[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#hls)
+
+La entrega de contenidos con el protocolo HLS es el proceso más complicado y que más recursos consume, debido a la naturaleza del protocolo.
+
+### CPU
+
+La frecuencia de la CPU no es crucial para HLS. Asegúrate de que la CPU está en modo de rendimiento y el modo de ahorro de energía está desactivado.
+
+El número de núcleos de CPU necesarios depende del número de colas Rx/Tx del adaptador de red. Por lo tanto, para Intel 82599 con 128Tx colas utilizar CPU con tantos núcleos como sea posible.
+
+### RAM
+
+El uso de RAM depende de la configuración de HLS. Por defecto, Astra prepara 4 segmentos, cada uno de hasta 3 segundos de duración. Para un canal HD con un bitrate de 10Mbit por segundo, se asignarán aproximadamente 15Mb (calculado 4 \* 3 \* 10 / 8), además de 2Mb fijos por canal, que no dependen del bitrate del canal.
+
+Cada sesión activa requiere unos 2Mb de RAM.
+
+### Red
+
+Utilice adaptadores de red de nivel de servidor con tantas colas de Tx como sea posible.
+
+### Escala
+
+Debido a la naturaleza de HLS, todos los clientes se conectan directamente al servidor. Para el equilibrio de carga se recomienda el uso de servidores de caché. Leer más en [HLS Caching Proxy con Nginx](https://help.cesbo.com/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+
+## Canales de recepción[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#receiving-channels)
+
+Los recursos para la recepción de canales no son tan importantes como la entrega. Alrededor de 1 Gb de RAM por cada 100 canales.
+
+## Resumen[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#summary)
+
+RAM total necesaria calculada como la suma de los:
+
+- Funcionamiento general del software
+- Recepción
+- Entrega
+- Otros programas de su servidor
+- Reserva RAM
+
+### Ejemplo con radiodifusión DVB-C
+
+En resumen, para 100 canales:
+
+- Funcionamiento general del software: 2 Gb
+- Recepción: 1Gb
+- Entrega con 4 transpondedores: 2 Gb (256 Mb por transpondedor, más recursos adicionales para mulpiplexación)
+- Otros programas: 0
+- Reserva RAM: (2 + 1 + 2) \* 0,5 = 2,5 Gb
+
+Total (redondeado al alza): 8Gb
