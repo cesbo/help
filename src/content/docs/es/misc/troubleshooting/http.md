@@ -5,7 +5,7 @@ sidebar:
     order: 2
 ---
 
-## Códigos HTTP comunes[](https://help.cesbo.com/misc/troubleshooting/receiving/http#common-http-codes)
+## Códigos HTTP comunes[](/es/misc/troubleshooting/http#common-http-codes)
 
 Los códigos de respuesta HTTP son indicadores numéricos de tres dígitos que da un servidor en respuesta a la solicitud HTTP de un cliente.
 
@@ -38,7 +38,7 @@ Suele ocurrir cuando la petición de un cliente a un servidor tarda demasiado ti
 - restricciones del cortafuegos en la conexión
 - número de puerto o dirección de servidor incorrectos
 
-## ¿Por qué la calidad del flujo es inferior tras la retransmisión?[](https://help.cesbo.com/misc/troubleshooting/receiving/http#why-is-the-stream-quality-lower-after-retransmission)
+## ¿Por qué la calidad del flujo es inferior tras la retransmisión?[](/es/misc/troubleshooting/http#why-is-the-stream-quality-lower-after-retransmission)
 
 Cuando se trabaja con recepción HLS, es posible encontrar problemas de calidad después de retransmitir un flujo. Por ejemplo, un flujo puede reproducirse en calidad HD en el reproductor VLC, pero tras la retransmisión, el vídeo aparece en baja resolución. Este problema suele producirse porque el flujo HLS contiene variantes con resoluciones diferentes.
 

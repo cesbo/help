@@ -14,7 +14,7 @@ El sistema de acceso condicional (CAS) es una solución compleja para proteger e
 El cifrado de contenidos es eficaz para proteger métodos de difusión como satélite, cable y terrestre. Sin embargo, para la distribución OTT, se recomiendan métodos más adecuados y la combinación de técnicas de protección de contenidos para una protección integral contra la piratería.
 :::
 
-## Configuración CAS[](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt#cas-configuration)
+## Configuración CAS[](/es/astra/delivery/cas/cas-and-simulcrypt#cas-configuration)
 
 Elija en el menú principal Ajustes y haga clic en CAS.
 
@@ -37,7 +37,7 @@ Seleccione un perfil CAS o cree uno nuevo seleccionando el elemento Nuevo CAS.
 - `EMM Private Data` - datos para añadir a la tabla CAT. Estos datos se emiten en el software CAS. Si usted no tiene datos, entonces este parámetro no se llena;
 - `EMM Clone` - esta casilla activa la función de añadir EMM a cada canal CAS cifrado. El paquete EMM estará disponible en cualquier canal del usuario final.
 
-## Configuración de canales[](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt#channel-configuration)
+## Configuración de canales[](/es/astra/delivery/cas/cas-and-simulcrypt#channel-configuration)
 
 El siguiente paso es configurar los canales y añadir uno o varios Sistemas de Acceso Condicional (CAS) a cada canal. Para ello, abra el panel de control y seleccione el canal que desea proteger. A continuación, vaya a la pestaña Servicio de la configuración del canal y haga clic en "Nuevo CAS" para adjuntar el CAS:
 

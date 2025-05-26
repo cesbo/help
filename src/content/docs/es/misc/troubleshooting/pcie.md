@@ -13,7 +13,7 @@ pcieport 0000:00:1c.3: PCIe Bus Error: severity=Corrected, type=Physical Laye
 
 Normalmente, este error se produce como resultado de que la Gestión de Energía en Estado Activo (ASPM) del sistema intenta reducir el suministro de energía al puerto PCIe.
 
-## Desactivar ASPM[](https://help.cesbo.com/misc/troubleshooting/dvb/pcie#disable-aspm)
+## Desactivar ASPM[](/es/misc/troubleshooting/pcie#disable-aspm)
 
 En los servidores recomendamos desactivar la gestión de energía.
 

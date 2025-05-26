@@ -5,7 +5,7 @@ sidebar:
     order: 27
 ---
 
-## Iniciar analizador[](https://help.cesbo.com/astra/admin-guide/api/scan#start-analyzer)
+## Iniciar analizador[](/es/astra/admin-guide/api/scan#start-analyzer)
 
 Petición: `POST /control/`
 
@@ -16,7 +16,7 @@ Petición: `POST /control/`
 }
 ```
 
-- `scan` - dirección del flujo. Más información [Formato de dirección de medios](https://help.cesbo.com/astra/receiving/general/address-format)
+- `scan` - dirección del flujo. Más información [Formato de dirección de medios](/es/astra/receiving/general/address-format)
 
 Respuesta:
 
@@ -31,7 +31,7 @@ Respuesta:
 
 El analizador se detendrá automáticamente en 10 segundos. Para mantener el analizador activo durante más tiempo, utilice `scan-check` Método API.
 
-## Stop Analyzer[](https://help.cesbo.com/astra/admin-guide/api/scan#stop-analyzer)
+## Stop Analyzer[](/es/astra/admin-guide/api/scan#stop-analyzer)
 
 Petición: `POST /control/`
 
@@ -46,7 +46,7 @@ Petición: `POST /control/`
 
 Este método detiene el analizador inmediatamente.
 
-## Obtener información[](https://help.cesbo.com/astra/admin-guide/api/scan#get-information)
+## Obtener información[](/es/astra/admin-guide/api/scan#get-information)
 
 Petición: `POST /control/`
 

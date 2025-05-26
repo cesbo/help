@@ -5,9 +5,9 @@ sidebar:
     order: 3
 ---
 
-EIT Stream es una herramienta para convertir [archivos XMLTV](https://help.cesbo.com/misc/articles/format/xmltv) en flujo MPEG-TS con Tablas de Información de Eventos (EIT) para redes de difusión como DVB, ATSC, ISDB.
+EIT Stream es una herramienta para convertir [archivos XMLTV](/es/misc/articles/xmltv) en flujo MPEG-TS con Tablas de Información de Eventos (EIT) para redes de difusión como DVB, ATSC, ISDB.
 
-## Instalación[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#installation)
+## Instalación[](/es/misc/tools-and-utilities/eit-stream#installation)
 
 Sólo tiene que descargar un único archivo binario y establecer el permiso de ejecución:
 
@@ -16,7 +16,7 @@ curl -Lo /usr/bin/eit-stream http://cesbo.com/and/eit-stream
 chmod +x /usr/bin/eit-stream
 ```
 
-## Configuración[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#configuration)
+## Configuración[](/es/misc/tools-and-utilities/eit-stream#configuration)
 
 Crear un archivo de configuración `/etc/eit-stream.conf` con cualquier editor de texto. Ejemplo:
 
@@ -110,11 +110,11 @@ Sección `[multiplex/service]`
 - `xmltv-id` - id de canal en xmltv
 - `parental-rating` - restricción de edad. Valor definido en pares: país y edad. Por ejemplo: `parental-rating = EST 16 USA 14`. Código de país en formato ISO 3166-1 alfa-3 (3 letras). Edad de 4 a 18 años (inclusive), 0 - sin restricciones.
 
-## Flujo Mux con EIT a MPTS[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#mux-stream-with-eit-to-mpts)
+## Flujo Mux con EIT a MPTS[](/es/misc/tools-and-utilities/eit-stream#mux-stream-with-eit-to-mpts)
 
 Con Astra puedes añadir un flujo UDP con EIT al MPTS. En la configuración del MPTS añada la entrada y establezca la dirección UDP, por ejemplo en la configuración anterior la dirección es `udp://lo@239.0.0.1:1234`. En los ajustes avanzados del MPTS, active la opción "Pasar IET".
 
-## Arranque automático[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#autostart)
+## Arranque automático[](/es/misc/tools-and-utilities/eit-stream#autostart)
 
 Registrar el servicio en systemd para iniciar el servicio en segundo plano y autoarranque en el arranque del sistema. Crear archivo `/etc/systemd/system/eit-stream.service`:
 
@@ -140,7 +140,7 @@ El siguiente comando puede utilizarse para gestionar el servicio:
 - activar autoarranque: `systemctl enable eit-stream`
 - desactivar el arranque automático: `systemctl disable eit-stream`
 
-## Recarga[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream#reload)
+## Recarga[](/es/misc/tools-and-utilities/eit-stream#reload)
 
 Para reiniciar el servicio una vez por la noche, añada la siguiente línea a /etc/crontab:
 

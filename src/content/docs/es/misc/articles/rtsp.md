@@ -9,13 +9,13 @@ RTSP (Real-Time Streaming Protocol) es un protocolo de red a nivel de aplicació
 
 Para una descripción detallada, consulte la norma [RFC 7826](https://www.rfc-editor.org/rfc/rfc7826){target="_blank"}
 
-## RTP[](https://help.cesbo.com/misc/articles/protocols/rtsp#rtp)
+## RTP[](/es/misc/articles/rtsp#rtp)
 
 Mientras que el RTSP gestiona el control de los flujos multimedia, delega la transmisión real de los datos de streaming en otros protocolos. La mayoría de los servidores RTSP utilizan el Protocolo de Transporte en Tiempo Real (RTP) junto con el Protocolo de Control en Tiempo Real (RTCP).
 
 RTP es un protocolo de red empleado para la entrega de audio y vídeo a través de redes IP y se utiliza normalmente en sistemas que implican streaming de medios, como telefonía, aplicaciones de videoconferencia como WebRTC y servicios de televisión.
 
-## Streaming de cámaras IP[](https://help.cesbo.com/misc/articles/protocols/rtsp#ip-camera-streaming)
+## Streaming de cámaras IP[](/es/misc/articles/rtsp#ip-camera-streaming)
 
 Una de las aplicaciones más frecuentes de RTSP es el streaming de cámaras IP. Las cámaras IP, utilizadas a menudo en sistemas de vigilancia, suelen utilizar RTSP para transmitir vídeo en directo.
 

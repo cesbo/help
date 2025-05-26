@@ -7,7 +7,7 @@ sidebar:
 
 API (Application Programming Interface) es un método para acceder a datos e interactuar con componentes de software.
 
-## Llamar a métodos GET con curl[](https://help.cesbo.com/astra/admin-guide/api/call-api#call-get-methods-with-curl)
+## Llamar a métodos GET con curl[](/es/astra/admin-guide/api/call-api#call-get-methods-with-curl)
 
 Puede utilizar `curl` en la consola para llamar a un método de la API. Por ejemplo, puede obtener un estado resumido del proceso y del sistema:
 
@@ -21,7 +21,7 @@ curl \
 - `server:8000` - dirección del servidor y puerto primario
 - `/api/system-status` - ruta al método API
 
-## Llamar al método POST con curl[](https://help.cesbo.com/astra/admin-guide/api/call-api#call-post-method-with-curl)
+## Llamar al método POST con curl[](/es/astra/admin-guide/api/call-api#call-post-method-with-curl)
 
 Métodos POST utilizados para modificar la configuración de Astra. Por ejemplo, puede cambiar el usuario desde la consola:
 
@@ -50,7 +50,7 @@ END
 
 Después del lanzamiento curl pide contraseña.
 
-## Llamar a la API con PHP[](https://help.cesbo.com/astra/admin-guide/api/call-api#call-api-with-php)
+## Llamar a la API con PHP[](/es/astra/admin-guide/api/call-api#call-api-with-php)
 
 Puedes usar cualquier lenguaje de programación para controlar Astra. Por ejemplo, un simple script PHP para cambiar de usuario:
 

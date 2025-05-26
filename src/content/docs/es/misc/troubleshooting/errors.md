@@ -7,7 +7,7 @@ sidebar:
 
 Las métricas habituales, como el nivel de señal y la relación señal/ruido (SNR), indican el estado general de la recepción de la señal, pero no bastan para diagnosticar problemas concretos de recepción.
 
-## BER[](https://help.cesbo.com/misc/troubleshooting/dvb/errors#ber)
+## BER[](/es/misc/troubleshooting/errors#ber)
 
 BER (Bit Error Rate) es una métrica utilizada para cuantificar el número de bits que se reciben o descodifican incorrectamente en una transmisión determinada. El error BER es una expresión del número de bits incorrectos como ratio o porcentaje del número total de bits transmitidos.
 
@@ -15,7 +15,7 @@ En los sistemas DVB, el error BER es una métrica importante para medir la calid
 
 Para mejorar la BER, los sistemas DVB suelen emplear diversas técnicas de corrección de errores, como la corrección de errores hacia delante (FEC), que puede detectar y corregir errores en los datos transmitidos, mejorando la calidad y fiabilidad generales de la señal digital.
 
-## UNC[](https://help.cesbo.com/misc/troubleshooting/dvb/errors#unc)
+## UNC[](/es/misc/troubleshooting/errors#unc)
 
 UNC (Uncorrectable Error) indica que un paquete de datos recibido contiene errores que no pueden ser corregidos por los mecanismos de corrección de errores empleados en el sistema, como Forward Error Correction (FEC).
 

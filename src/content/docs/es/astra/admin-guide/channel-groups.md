@@ -9,7 +9,7 @@ La agrupación de canales en Astra le ayuda a organizar y gestionar su contenido
 
 Para acceder a los ajustes de grupo y configurarlos, ve a Ajustes -> Grupos en la interfaz web de Astra.
 
-## Categorías[](https://help.cesbo.com/astra/admin-guide/settings/channel-groups#categories)
+## Categorías[](/es/astra/admin-guide/settings/channel-groups#categories)
 
 Las categorías en Astra sirven como nivel superior en la jerarquía de agrupación de canales. Son clasificaciones amplias que te ayudan a organizar tus contenidos a gran escala. Por ejemplo, puedes utilizar una categoría de "Género" para dividir los canales en varios géneros, como películas, deportes o viajes.
 
@@ -18,7 +18,7 @@ Las categorías en Astra sirven como nivel superior en la jerarquía de agrupaci
 - `Category` - seleccione una categoría existente o cree una nueva
 - `Name` - nombre de la categoría
 
-## Grupos[](https://help.cesbo.com/astra/admin-guide/settings/channel-groups#groups)
+## Grupos[](/es/astra/admin-guide/settings/channel-groups#groups)
 
 Los grupos en Astra actúan como subcategorías dentro de las categorías más grandes. Son clasificaciones más específicas que ayudan a ordenar mejor tus canales. Cada grupo contiene canales relacionados con su tema específico. Cuando seleccionas una categoría en los ajustes del panel de control de Astra, todos los canales dentro de esa categoría se agrupan automáticamente por estos Grupos, para una mejor organización y una gestión más sencilla.
 
@@ -29,7 +29,7 @@ Los grupos en Astra actúan como subcategorías dentro de las categorías más g
 
 Si desea eliminar una categoría y todos sus grupos relacionados, sólo tiene que seleccionar el botón `Remove category` y haga clic en el botón "Aplicar". Es importante recordar que esta acción sólo elimina la categoría y los grupos, no los canales que contienen. Tenga en cuenta también que, una vez realizada, esta acción no se puede deshacer.
 
-## Corrientes[](https://help.cesbo.com/astra/admin-guide/settings/channel-groups#streams)
+## Corrientes[](/es/astra/admin-guide/settings/channel-groups#streams)
 
 El botón "Streams" abre una lista de todos los canales disponibles en el Astra. En este formulario, puedes añadir canales y streams a grupos o eliminarlos de ellos.
 

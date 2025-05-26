@@ -1,5 +1,5 @@
 ---
-title: "Equipamiento recomendado"
+title: Equipamiento recomendado
 date: 2023-06-23
 sidebar:
     order: 12
@@ -13,7 +13,7 @@ Se aconseja el hardware de servidor para construir una cabecera de TV digital de
 
 Estos elementos, entre otros, contribuyen a una sólida configuración de la cabecera de televisión digital.
 
-## CPU[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#cpu)
+## CPU[](/es/misc/articles/recommended-equipment#cpu)
 
 La frecuencia óptima de la CPU para una cabecera de TV digital es de 2,5 - 3GHz o superior. Los procesadores con muchos núcleos pero menor frecuencia (por ejemplo, 1,8-2,5 GHz) no son adecuados para tareas que requieren baja latencia.
 
@@ -26,7 +26,7 @@ Un ejemplo de buen procesador:
 - Intel Xeon 6C X5670
 - Core i5-9600K
 
-## RAM[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#ram)
+## RAM[](/es/misc/articles/recommended-equipment#ram)
 
 La frecuencia de la RAM también es bastante importante. Cifras aproximadas para comparar:
 
@@ -38,7 +38,7 @@ La frecuencia de la RAM también es bastante importante. Cifras aproximadas para
 
 La cantidad de RAM sólo es importante para almacenar trozos HLS (segmentos). La cantidad media de RAM para 100 canales HLS es de 16 Gb.
 
-## Adaptadores de red[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#network-adapters)
+## Adaptadores de red[](/es/misc/articles/recommended-equipment#network-adapters)
 
 ### tamaño del búfer rx/tx
 
@@ -54,7 +54,7 @@ Los paquetes se transmiten entre el búfer en anillo de la NIC y el núcleo del 
 
 Adaptadores de red con cola única para uso exclusivo del consumidor y no recomendados para la configuración de cabeceras de TV digital.
 
-## Adaptadores de red recomendados[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#recomended-network-adapters)
+## Adaptadores de red recomendados[](/es/misc/articles/recommended-equipment#recomended-network-adapters)
 
 ### Intel
 
@@ -70,7 +70,7 @@ Adaptadores de red con cola única para uso exclusivo del consumidor y no recome
 
 - SFN7122F
 
-## Adaptadores de red NO recomendados[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#not-recommended-network-adapters)
+## Adaptadores de red NO recomendados[](/es/misc/articles/recommended-equipment#not-recommended-network-adapters)
 
 ### D-Link, Realtek
 
@@ -122,7 +122,7 @@ Aunque recomendamos las tarjetas de red Intel, no recomendamos estos modelos esp
 - Tarjeta de red NC326i
 - NVidia Corporation MCP55 Ethernet (rev a3) - sólo una cola. Como resultado, incluso con una pequeña cantidad de tráfico da una carga muy alta en el núcleo del procesador, que se dedica a procesar el tráfico de esta tarjeta de red, lo que conduce a un procesamiento de paquetes inaceptablemente lento.
 
-## Adaptadores DVB recomendados[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#recommended-dvb-adapters)
+## Adaptadores DVB recomendados[](/es/misc/articles/recommended-equipment#recommended-dvb-adapters)
 
 ### Dispositivos digitales
 
@@ -153,7 +153,7 @@ También funciona bien otro hardware de TBS:
 
 T980CI - Receptor DVB-T/T2/C de 1 sintonizador con ranura CI. S950CI - Receptor DVB-S/S2 de 1 sintonizador con ranura CI. T9580 - Receptor de 2 sintonizadores S2/T2/T/C con sintonizadores independientes.
 
-## Adaptadores DVB NO recomendados[](https://help.cesbo.com/misc/articles/hardware/recommended-equipment#not-recommended-dvb-adapters)
+## Adaptadores DVB NO recomendados[](/es/misc/articles/recommended-equipment#not-recommended-dvb-adapters)
 
 ### Dispositivos Digitales
 

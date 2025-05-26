@@ -7,14 +7,14 @@ sidebar:
 
 La función Remap de Astra permite modificar el identificador de paquetes (PID) de los flujos elementales MPEG-TS.
 
-## Casos prácticos[](https://help.cesbo.com/astra/processing/mpegts/remap#use-cases)
+## Casos prácticos[](/es/astra/processing/remap#use-cases)
 
 La reasignación de los PID de flujo es beneficiosa en varios escenarios:
 
 - Redundancia de entrada suave: Si las entradas primaria y de reserva tienen PID distintos para los flujos elementales de vídeo y audio, el cambio a la entrada de reserva puede provocar una interrupción temporal de la reproducción. Si se reasignan los PID para garantizar la uniformidad entre las entradas primaria y de reserva, la transición puede realizarse sin problemas.
 - Preparación de flujos multiprograma (MPTS): Al preparar un canal para su inclusión en una emisión MPTS, cada flujo elemental dentro del canal debe poseer un PID único. La reasignación garantiza la unicidad de estos PID, lo que permite añadir sin problemas el canal al MPTS.
 
-## Analizar el canal[](https://help.cesbo.com/astra/processing/mpegts/remap#analyze-channel)
+## Analizar el canal[](/es/astra/processing/remap#analyze-channel)
 
 Para identificar los flujos elementales disponibles y sus PID, es necesario analizar el canal. Para ello, inicia el analizador MPEG-TS integrado desde el menú del canal o directamente desde los ajustes del canal.
 
@@ -28,17 +28,17 @@ En la captura de pantalla proporcionada, podemos ver los siguientes flujos eleme
 
 Cada flujo elemental está representado por un identificador de paquete (PID) único, que puede utilizarse para la reasignación de flujos en Astra.
 
-## Limitaciones[](https://help.cesbo.com/astra/processing/mpegts/remap#limitations)
+## Limitaciones[](/es/astra/processing/remap#limitations)
 
 Tenga en cuenta que el valor del PID puede estar comprendido entre 32 y 8190.
 
-## Reasignación de entradas[](https://help.cesbo.com/astra/processing/mpegts/remap#input-remapping)
+## Reasignación de entradas[](/es/astra/processing/remap#input-remapping)
 
 Para realizar la reasignación del flujo, cambiaremos el PID del PMT a 100, el PID del flujo de vídeo a 101, y el PID del flujo de audio a 102. Esta operación se puede realizar añadiendo el parámetro `map.pmt=100&map.video=101&map.audio.eng=102` a la dirección de entrada
 
 ![Opción de entrada](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
 
-## Reasignación de todas las entradas[](https://help.cesbo.com/astra/processing/mpegts/remap#remapping-for-all-inputs)
+## Reasignación de todas las entradas[](/es/astra/processing/remap#remapping-for-all-inputs)
 
 Para la reasignación de flujos en todas las entradas, la función `Remap` en los ajustes del canal.
 
@@ -50,7 +50,7 @@ Para comprobar los resultados del filtro de flujo aplicado, haga clic en "Aplica
 
 ![Analizar el flujo reasignado](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
 
-## Selectores[](https://help.cesbo.com/astra/processing/mpegts/remap#selectors)
+## Selectores[](/es/astra/processing/remap#selectors)
 
 El selector determina qué PID debe cambiarse al nuevo valor
 

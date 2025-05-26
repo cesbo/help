@@ -12,12 +12,12 @@ Las capturas de pantalla de canales ayudan a evaluar visualmente la calidad de l
 
 ![Panel de control con capturas de pantalla](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
 
-## Requisitos[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#requirements)
+## Requisitos[](/es/astra/admin-guide/administration/mosaic#requirements)
 
-- Astra con [HTTP Play](https://help.cesbo.com/astra/delivery/http-hls/http-play) activado
+- Astra con [HTTP Play](/es/astra/delivery/http-hls/http-play) activado
 - FFmpeg
 
-## Instalar FFmpeg[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#install-ffmpeg)
+## Instalar FFmpeg[](/es/astra/admin-guide/administration/mosaic#install-ffmpeg)
 
 Instala FFmpeg con el gestor de paquetes del sistema:
 
@@ -25,7 +25,7 @@ Instala FFmpeg con el gestor de paquetes del sistema:
 apt install ffmpeg
 ```
 
-## Configurar HTTP Play[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#configure-http-play)
+## Configurar HTTP Play[](/es/astra/admin-guide/administration/mosaic#configure-http-play)
 
 En su servidor cree un nuevo directorio para almacenar las imágenes de las capturas de pantalla:
 
@@ -43,7 +43,7 @@ También en la configuración de HTTP Play puede copiar enlace a la `playlist.m3
 
 Si utiliza Autorización HTTP, establezca un Token para el administrador. Abra la Interfaz Web de Astra -> Configuración -> Usuarios -> seleccione administrador, y establezca cualquier Token, por ejemplo: `c6017ac9`. Añada este token a la URL de la lista de reproducción: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
 
-## Descargar y configurar el script[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#download-and-configure-script)
+## Descargar y configurar el script[](/es/astra/admin-guide/administration/mosaic#download-and-configure-script)
 
 [Descargue](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) el script y guárdelo en su servidor:
 
@@ -60,7 +60,7 @@ Abra el script con cualquier editor de texto y modifique las siguientes variable
 - `API_PORT` - portar a Astra API
 - `API_AUTH` - login y contraseña admin para acceder a la API de Astra
 
-## Iniciar script con Systemd[](https://help.cesbo.com/astra/admin-guide/administration/mosaic#start-script-with-systemd)
+## Iniciar script con Systemd[](/es/astra/admin-guide/administration/mosaic#start-script-with-systemd)
 
 Para iniciar el script automáticamente puede añadirlo al systemd. Descargue el archivo de configuración para systemd y guárdelo en su servidor:
 

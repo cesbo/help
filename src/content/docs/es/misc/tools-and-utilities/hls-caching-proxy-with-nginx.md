@@ -70,7 +70,7 @@ mkdir -p /opt/ramcache
 chown -R nginx:root /opt/ramcache
 ```
 
-## Cabecera Expires[](https://help.cesbo.com/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx#expires-header)
+## Cabecera Expires[](/es/misc/tools-and-utilities/hls-caching-proxy-with-nginx#expires-header)
 
 Es importante que el servidor de origen envíe una respuesta con las cabeceras adecuadas que definan el tiempo de caducidad del contenido que se está sirviendo.
 

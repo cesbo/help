@@ -9,7 +9,7 @@ Astra MPEG-TS Analyzer es una herramienta integrada para analizar flujos MPEG-TS
 
 ![Interfaz del analizador Astra MPEG-TS](https://cdn.cesbo.com/help/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer/analyzer.png)
 
-## Inicio con interfaz web[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-with-web-interface)
+## Inicio con interfaz web[](/es/misc/tools-and-utilities/astra-mpeg-ts-analyzer#launch-with-web-interface)
 
 ```
 astra --analyze [OPTIONS] -p PORT
@@ -22,7 +22,7 @@ Opciones:
 - `--daemon` - arrancar en modo demonio;
 - `--log` /var/log/relay.log - ruta completa al archivo de registro.
 
-## Iniciar en consola[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-in-console)
+## Iniciar en consola[](/es/misc/tools-and-utilities/astra-mpeg-ts-analyzer#launch-in-console)
 
 ```
 astra --analyze [OPTIONS] ADDRESS
@@ -69,7 +69,7 @@ Nov 28 00:59:32: INFO: Bitrate: 2755 Kbit/s
 Nov 28 00:59:33: INFO: Bitrate: 4446 Kbit/s
 ```
 
-## Formato de la dirección[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#address-format)
+## Formato de la dirección[](/es/misc/tools-and-utilities/astra-mpeg-ts-analyzer#address-format)
 
 Analyzer admite cualquier formato de recepción admitido por Astra. Por ejemplo:
 

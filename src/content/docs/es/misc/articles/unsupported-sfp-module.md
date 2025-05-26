@@ -11,7 +11,7 @@ Es posible que experimente un problema con los módulos SFP+ en el adaptador Int
 ixgbe 0000:02:00.1: failed to load because an unsupported SFP+ module type was detected.
 ```
 
-## Solución[](https://help.cesbo.com/misc/articles/hardware/unsupported-sfp-module#solution)
+## Solución[](/es/misc/articles/unsupported-sfp-module#solution)
 
 Descarga el conductor:
 
@@ -35,7 +35,7 @@ Si hay varios interfaces de red, puede ser necesario escribir 1 para cada uno de
 modprobe ixgbe allow_unsupported_sfp=1,1,1,1
 ```
 
-## Opción Guardar[](https://help.cesbo.com/misc/articles/hardware/unsupported-sfp-module#save-option)
+## Opción Guardar[](/es/misc/articles/unsupported-sfp-module#save-option)
 
 La solución anterior sólo para la prueba y se vacía después de reiniciar el servidor. Para una configuración permanente pase la opción al kernel a través del gestor de arranque grub.
 

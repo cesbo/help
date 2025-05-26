@@ -16,18 +16,18 @@ Configure el comportamiento de redundancia para conmutar automáticamente las en
 
 El analizador integrado supervisa continuamente la entrada activa y, si detecta un fallo, cambia inmediatamente a una entrada alternativa.
 
-## Copia de seguridad activa[](https://help.cesbo.com/astra/admin-guide/stream/backup#active-backup)
+## Copia de seguridad activa[](/es/astra/admin-guide/stream/backup#active-backup)
 
 El comportamiento por defecto es Respaldo activo. En caso de fallo, Astra cambia a la siguiente entrada mientras sigue analizando las entradas anteriores para un posible retorno.
 
 Si todas las entradas fallan, Astra continuará transmitiendo la última entrada disponible. Para detener el streaming, existe una opción adicional para el tipo de copia de seguridad: "Copia de seguridad activa y detener el streaming si todas las entradas están inactivas"
 
-## Copia de seguridad pasiva[](https://help.cesbo.com/astra/admin-guide/stream/backup#passive-backup)
+## Copia de seguridad pasiva[](/es/astra/admin-guide/stream/backup#passive-backup)
 
 En caso de fallo, Astra pasa a la siguiente entrada y detiene la anterior. Si falla la última entrada, Astra volverá automáticamente a la primera entrada
 
-## Copia de seguridad desactivada[](https://help.cesbo.com/astra/admin-guide/stream/backup#disabled-backup)
+## Copia de seguridad desactivada[](/es/astra/admin-guide/stream/backup#disabled-backup)
 
 En caso de fallo, Astra no hace nada. Este método es adecuado para conmutar manualmente las entradas mediante la Interfaz Web o los métodos de la API.
 
-Más información en [Stream API > Conmutar entrada activa](https://help.cesbo.com/astra/admin-guide/api/stream#switch-active-input)
+Más información en [Stream API > Conmutar entrada activa](/es/astra/admin-guide/api/stream#switch-active-input)

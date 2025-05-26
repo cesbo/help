@@ -8,7 +8,7 @@ sidebar:
 
 En este artículo, intentaremos describir los conectores ópticos más comunes que se utilizan en redes de datos y redes de televisión.
 
-## La virola de fibra[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#the-fiber-ferrule)
+## La virola de fibra[](/es/misc/articles/fiber-connectors#the-fiber-ferrule)
 
 La virola de fibra es una pieza cerámica de un conector cilíndrico. En el centro de la virola se inserta una fibra óptica. Se utiliza para hacer pasar la radiación láser a través de dos fibras ópticas.
 
@@ -16,7 +16,7 @@ Los diámetros de virola de fibra más comunes son 2,5 mm (en conectores de tipo
 
 ![Conector](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
 
-## Conector SC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#sc-connector)
+## Conector SC[](/es/misc/articles/fiber-connectors#sc-connector)
 
 ![SC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/sc.png)
 
@@ -32,7 +32,7 @@ Características y aplicaciones de los conectores SC:
 - pérdida de 0,25 dB.;
 - utilizados en FTTH, telefonía, televisión por cable, etc.
 
-## Conector FC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#fc-connector)
+## Conector FC[](/es/misc/articles/fiber-connectors#fc-connector)
 
 ![FC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
 
@@ -46,7 +46,7 @@ Características y aplicaciones de los conectores FC:
 - utilizado con fibra monomodo;
 - de 0,3 dB.
 
-## Conector LC[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#lc-connector)
+## Conector LC[](/es/misc/articles/fiber-connectors#lc-connector)
 
 ![LC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/lc.png)
 
@@ -60,7 +60,7 @@ Características y aplicaciones de los conectores LC:
 - utilizado con fibra monomodo y multimodo;
 - de 0,10 dB.
 
-## Conector ST[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#st-connector)
+## Conector ST[](/es/misc/articles/fiber-connectors#st-connector)
 
 ST Connector fue desarrollado en Estados Unidos por AT&T y se utiliza en entornos profesionales: redes corporativas, en el ámbito militar.
 
@@ -72,7 +72,7 @@ Características y aplicaciones de los conectores ST:
 - utilizado con fibra multimodo;
 - de 0,25 dB.
 
-## Tipos de pulido en conectores de fibra óptica[](https://help.cesbo.com/misc/articles/hardware/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
+## Tipos de pulido en conectores de fibra óptica[](/es/misc/articles/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
 
 A lo largo de los años, los expertos han perfeccionado la forma y las características de los conectores ópticos, tratando de conseguir pérdidas y reflexiones mínimas en el conector. No es ningún secreto que las pérdidas en la conexión del conector reducen la potencia de la señal, lo que conlleva una disminución de la distancia a la que puede transmitirse. La parte reflejada de la señal también puede introducir errores (BER) y calentar el módulo SFP, lo que a su vez reduce la calidad de la información transmitida y provoca una reducción de la vida útil del equipo transmisor.
 

@@ -7,7 +7,7 @@ sidebar:
 
 El Basic Interoperable Scrambling System (BISS) es un sistema de acceso condicional sencillo y eficaz que utiliza una clave estática para proteger los contenidos de accesos no autorizados. BISS se basa en el algoritmo de codificación común (CSA), que codifica los datos del canal, garantizando la transmisión segura de contenidos a través de redes de radiodifusión por satélite y terrestres.
 
-## Recepción de un canal codificado[](https://help.cesbo.com/astra/processing/cas/decrypt-biss#receiving-a-scrambled-channel)
+## Recepción de un canal codificado[](/es/astra/processing/cas/decrypt-biss#receiving-a-scrambled-channel)
 
 Para descifrar un canal codificado, es necesario añadir el código `biss` con la tecla correspondiente a la dirección de entrada. Por ejemplo:
 
@@ -21,7 +21,7 @@ Las opciones de entrada están separadas por el símbolo `&` como se muestra en 
 
 Si se utiliza una clave BISS no válida, el flujo descifrado estará dañado. En este caso, el analizador Astra mostrará un mensaje `PES Error`.
 
-## Retransmisión de canales codificados[](https://help.cesbo.com/astra/processing/cas/decrypt-biss#retransmitting-scrambled-channels)
+## Retransmisión de canales codificados[](/es/astra/processing/cas/decrypt-biss#retransmitting-scrambled-channels)
 
 Para retransmitir un canal codificado sin desencriptarlo, puede utilizar la función `cas` en la dirección de entrada. Ejemplo de dirección de entrada con la opción `cas` opción:
 

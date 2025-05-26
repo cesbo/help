@@ -7,7 +7,7 @@ sidebar:
 
 Digital Video Broadcasting (DVB) es un conjunto de estándares internacionales abiertos para la difusión de televisión digital. Con las opciones DVB de Astra, puedes configurar la recepción de contenidos multimedia de varias redes DVB, incluyendo satélite, cable y fuentes terrestres.
 
-## Adaptador DVB[](https://help.cesbo.com/astra/receiving/dvb/intro#dvb-adapter)
+## Adaptador DVB[](/es/astra/receiving/dvb/intro#dvb-adapter)
 
 Para recibir señales DVB en un PC, necesitará hardware adicional: un adaptador DVB. Los adaptadores DVB suelen ser tarjetas PCIe, aunque también existen adaptadores DVB USB, aunque son menos populares.
 
@@ -24,14 +24,14 @@ Recomendamos los adaptadores DVB de:
 - [TBS](https://www.tbsdtv.com/)
 - [Dispositivos digitales](https://www.digital-devices.eu/)
 
-## Prepare su sistema[](https://help.cesbo.com/astra/receiving/dvb/intro#prepare-you-system)
+## Prepare su sistema[](/es/astra/receiving/dvb/intro#prepare-you-system)
 
 Antes de empezar, asegúrese de que el adaptador DVB está conectado a su servidor y de que el controlador Linux adecuado está instalado:
 
-- [Instalación del controlador TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver)
-- [Instalación del controlador DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
+- [Instalación del controlador TBS](/es/misc/tools-and-utilities/tbs-driver)
+- [Instalación del controlador DigitalDevices](/es/misc/tools-and-utilities/dd-driver)
 
-## Opciones generales[](https://help.cesbo.com/astra/receiving/dvb/intro#general-options)
+## Opciones generales[](/es/astra/receiving/dvb/intro#general-options)
 
 Para crear un nuevo adaptador, haga clic en "Nuevo adaptador" en el menú principal.
 
@@ -45,7 +45,7 @@ Para crear un nuevo adaptador, haga clic en "Nuevo adaptador" en el menú princi
 - `Adapter` - seleccionar los dispositivos del sistema;
 - `Type` - seleccione el adaptador estándar.
 
-## Opciones avanzadas[](https://help.cesbo.com/astra/receiving/dvb/intro#advanced-options)
+## Opciones avanzadas[](/es/astra/receiving/dvb/intro#advanced-options)
 
 ![Opciones avanzadas de DVB](https://cdn.cesbo.com/help/astra/receiving/dvb/intro/dvb-advanced.png)
 
@@ -59,18 +59,18 @@ Para crear un nuevo adaptador, haga clic en "Nuevo adaptador" en el menú princi
 - `Budget Mode` - desactivar el filtrado PID por hardware. En el modo de presupuesto, Astra recibe todo el transpondedor del adaptador;
 - `CA Delay` - retardo entre el envío de paquetes de control al Módulo de Acceso Condicional (CAM).
 
-## Tipo DVB[](https://help.cesbo.com/astra/receiving/dvb/intro#dvb-type)
+## Tipo DVB[](/es/astra/receiving/dvb/intro#dvb-type)
 
 Las demás opciones dependen del tipo de adaptador seleccionado:
 
-- [DVB-S/S2](https://help.cesbo.com/astra/receiving/dvb/s)
-- [DVB-T/T2](https://help.cesbo.com/astra/receiving/dvb/t)
-- [DVB-C](https://help.cesbo.com/astra/receiving/dvb/c)
+- [DVB-S/S2](/es/astra/receiving/dvb/s)
+- [DVB-T/T2](/es/astra/receiving/dvb/t)
+- [DVB-C](/es/astra/receiving/dvb/c)
 
-## Escanear[](https://help.cesbo.com/astra/receiving/dvb/intro#scan)
+## Escanear[](/es/astra/receiving/dvb/intro#scan)
 
-Una vez configurado el adaptador, puedes comprobar la calidad de la señal y buscar canales disponibles. Más información: [Escanear adaptador DVB](https://help.cesbo.com/astra/receiving/dvb/scan)
+Una vez configurado el adaptador, puedes comprobar la calidad de la señal y buscar canales disponibles. Más información: [Escanear adaptador DVB](/es/astra/receiving/dvb/scan)
 
-## Solución de problemas[](https://help.cesbo.com/astra/receiving/dvb/intro#troubleshooting)
+## Solución de problemas[](/es/astra/receiving/dvb/intro#troubleshooting)
 
-Si tienes algún problema al iniciar el adaptador DVB, consulta nuestra guía: [Solución de problemas de recepción DVB](https://help.cesbo.com/misc/troubleshooting/dvb)
+Si tienes algún problema al iniciar el adaptador DVB, consulta nuestra guía: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/dvb)

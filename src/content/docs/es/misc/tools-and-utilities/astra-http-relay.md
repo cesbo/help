@@ -7,7 +7,7 @@ sidebar:
 
 Astra HTTP Relay es una sencilla herramienta integrada para retransmitir datos desde cualquier fuente soportada por Astra a un cliente HTTP.
 
-## Utilización[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-http-relay#usage)
+## Utilización[](/es/misc/tools-and-utilities/astra-http-relay#usage)
 
 ```
 astra --relay -p 8000
@@ -27,14 +27,14 @@ Argumentos de la línea de comandos:
 - `--log` /var/log/relay.log - ruta completa al archivo de registro;
 - `--channels /etc/astra/relay.lua` - ruta completa a los alias del canal.
 
-## Formato de la dirección[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-http-relay#address-format)
+## Formato de la dirección[](/es/misc/tools-and-utilities/astra-http-relay#address-format)
 
 La dirección solicitada tiene el siguiente formato:
 
 - `http://your-server-address:8000/udp/239.255.1.1:1234` - recibe el flujo UDP del grupo multidifusión `239.255.1.1:1234`
 - `http://your-server-address:8000/http/example.com/travel-channel` - recibe el flujo HTTP de `http://example.com/travel-channel`
 
-## Alias de canales[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-http-relay#channel-aliases)
+## Alias de canales[](/es/misc/tools-and-utilities/astra-http-relay#channel-aliases)
 
 Los alias de canal permiten utilizar el nombre corto en lugar de la dirección completa. Ejemplo de lista de alias:
 
@@ -58,7 +58,7 @@ Los canales del ejemplo anterior estarán disponibles:
 - `http://your-server-address:8000/demo` - Flujo UDP
 - `http://your-server-address:8000/travel-channel` - Flujo HTTP
 
-## Estadísticas[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-http-relay#statistics)
+## Estadísticas[](/es/misc/tools-and-utilities/astra-http-relay#statistics)
 
 Estadísticas es una página simple con sesiones activas contienen la siguiente información:
 

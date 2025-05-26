@@ -9,7 +9,7 @@ IGMP (Internet Group Management Protocol) es un protocolo de comunicación utili
 
 Es posible que algunos equipos de red, como conmutadores o enrutadores, sólo admitan IGMPv2, lo que puede causar problemas si el servidor intenta unirse a un grupo multidifusión utilizando IGMPv3. Por lo tanto, puede ser necesario cambiar la versión de IGMP utilizada por el servidor.
 
-## Configuración[](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version#configuration)
+## Configuración[](/es/misc/tools-and-utilities/configure-igmp-version#configuration)
 
 Para cambiar la versión de IGMP en su servidor, puede modificar la directiva `/etc/sysctl.conf` archivo. En primer lugar, determine la interfaz que necesita utilizar una versión IGMP diferente (por ejemplo, eth0). A continuación, añada la siguiente línea al archivo `/etc/sysctl.conf` archivo:
 
@@ -23,7 +23,7 @@ Esta línea fuerza a su servidor a utilizar IGMPv2 en la interfaz especificada. 
 sudo sysctl -p
 ```
 
-## Comprobar versión IGMP[](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version#check-igmp-version)
+## Comprobar versión IGMP[](/es/misc/tools-and-utilities/configure-igmp-version#check-igmp-version)
 
 Para confirmar que la versión IGMP se ha cambiado correctamente, puede utilizar el comando tcpdump para capturar el tráfico de red en la interfaz especificada. Por ejemplo, para capturar el tráfico IGMP en eth0, ejecute el siguiente comando:
 

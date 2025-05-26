@@ -7,7 +7,7 @@ sidebar:
 
 A veces es necesario comprobar la velocidad de conexión a Internet desde la consola del servidor.
 
-## Instale[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#install)
+## Instale[](/es/misc/tools-and-utilities/speedtest#install)
 
 Descargar e instalar la herramienta de línea de comandos para probar el ancho de banda de Internet utilizando speedtest.net
 
@@ -16,7 +16,7 @@ sudo curl -Lo /usr/bin/speedtest-cli https://raw.githubusercontent.com/sivel/spe
 sudo chmod +x /usr/bin/speedtest-cli
 ```
 
-## Lanzamiento[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#launch)
+## Lanzamiento[](/es/misc/tools-and-utilities/speedtest#launch)
 
 Para iniciar la prueba de lanzamiento en la consola:
 
@@ -38,7 +38,7 @@ Testing upload speed..........................
 Upload: 92.25 Mbit/s
 ```
 
-## Seleccionar servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/speedtest#select-server)
+## Seleccionar servidor[](/es/misc/tools-and-utilities/speedtest#select-server)
 
 Puede listar los servidores disponibles con el comando
 

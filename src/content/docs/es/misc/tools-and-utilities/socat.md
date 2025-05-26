@@ -7,7 +7,7 @@ sidebar:
 
 Socat es una herramienta de línea de comandos que permite la transferencia bidireccional de datos entre dos flujos.
 
-## Exposición de recursos locales[](https://help.cesbo.com/misc/tools-and-utilities/network/socat#exposing-local-resources)
+## Exposición de recursos locales[](/es/misc/tools-and-utilities/network/socat#exposing-local-resources)
 
 Solicitud recibida en el puerto `11554` se remitirá a `192.168.88.100:554`
 

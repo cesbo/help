@@ -7,7 +7,7 @@ sidebar:
 
 DigitalDevices es un fabricante de hardware especializado en dispositivos DVB: sintonizadores, moduladores.
 
-## Instalación de automóviles[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#auto-installation)
+## Instalación de automóviles[](/es/misc/tools-and-utilities/dd-driver#auto-installation)
 
 Puede instalar el controlador de forma automática o manual. Para instalar el controlador automáticamente, ejecútelo en la consola:
 
@@ -15,9 +15,9 @@ Puede instalar el controlador de forma automática o manual. Para instalar el co
 curl -sSf https://cdn.cesbo.com/astra/scripts/drv-dd.sh | sh
 ```
 
-Tras reiniciar el servidor, [compruebe](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#check-driver) si el controlador se ha instalado correctamente.
+Tras reiniciar el servidor, [compruebe](/es/misc/tools-and-utilities/dd-driver#check-driver) si el controlador se ha instalado correctamente.
 
-## Instalación manual[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#manual-installation)
+## Instalación manual[](/es/misc/tools-and-utilities/dd-driver#manual-installation)
 
 ### Preparar el sistema
 
@@ -91,9 +91,9 @@ Para iniciar los controladores instalados, reinicie el sistema:
 shutdown -r now
 ```
 
-Tras reiniciar el servidor, [compruebe](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#check-driver) si el controlador se ha instalado correctamente.
+Tras reiniciar el servidor, [compruebe](/es/misc/tools-and-utilities/dd-driver#check-driver) si el controlador se ha instalado correctamente.
 
-## Comprobar conductor[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#check-driver)
+## Comprobar conductor[](/es/misc/tools-and-utilities/dd-driver#check-driver)
 
 Para comprobar si el controlador se ha instalado correctamente, liste los adaptadores en el directorio dvb:
 
@@ -107,6 +107,6 @@ Deben listarse todos los adaptadores instalados en el sistema. Por ejemplo:
 adapter0 adapter1 adapter2 adapter3 ...
 ```
 
-## Solución de problemas[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver#troubleshooting)
+## Solución de problemas[](/es/misc/tools-and-utilities/dd-driver#troubleshooting)
 
-Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](https://help.cesbo.com/misc/troubleshooting/dvb)
+Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](/es/misc/troubleshooting/dvb)

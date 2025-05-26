@@ -10,12 +10,12 @@ Con el auge de la radiodifusión digital, cada vez es más importante proteger l
 
 Un método común utilizado en este proceso es la Interfaz Común (CI), una interfaz que permite a los Módulos de Acceso Condicional (CAM) conectarse al receptor DVB y descifrar canales protegidos. El descifrado de canales con un adaptador DVB-CI externo proporciona una arquitectura de cabecera flexible al separar las partes de recepción y procesamiento.
 
-## Ventajas del DVB-CI externo[](https://help.cesbo.com/astra/receiving/dvb/external-ci#advantages-of-external-dvb-ci)
+## Ventajas del DVB-CI externo[](/es/astra/receiving/dvb/external-ci#advantages-of-external-dvb-ci)
 
 - Los canales codificados de diferentes fuentes pueden agruparse para su posterior descodificación en un único módulo CI. Esto puede resultar muy útil si dispone de varios transpondedores DVB con canales codificados
-- Los canales se pueden recibir y descifrar en servidores separados. Es especialmente conveniente si utiliza receptores SAT>IP. Es posible que tengas un servidor Astra con tarjetas CI almacenado en la sala de servidores, mientras que los receptores SAT>IP se encuentran más cerca del tejado donde están montadas las antenas parabólicas. Leer más sobre [Recepción](https://help.cesbo.com/astra/receiving/dvb/satip-client) SAT>IP con Astra
+- Los canales se pueden recibir y descifrar en servidores separados. Es especialmente conveniente si utiliza receptores SAT>IP. Es posible que tengas un servidor Astra con tarjetas CI almacenado en la sala de servidores, mientras que los receptores SAT>IP se encuentran más cerca del tejado donde están montadas las antenas parabólicas. Leer más sobre [Recepción](/es/astra/receiving/dvb/satip-client) SAT>IP con Astra
 
-## Requisitos[](https://help.cesbo.com/astra/receiving/dvb/external-ci#requirements)
+## Requisitos[](/es/astra/receiving/dvb/external-ci#requirements)
 
 - Adaptador DVB-CI externo. Probamos y admitimos los siguientes modelos:
     - [Dispositivos digitales Octopus Twin CI](https://www.digital-devices.eu/shop/en/accessoires/bridge/266/digital-devices-octopus-twin-ci-double-ci-slot-with-2-expansionports)
@@ -25,7 +25,7 @@ Un método común utilizado en este proceso es la Interfaz Común (CI), una inte
 
 ![Dispositivos digitales Octopus Twin CI](https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/ddci.jpg)
 
-## Configuración Astra[](https://help.cesbo.com/astra/receiving/dvb/external-ci#astra-configuration)
+## Configuración Astra[](/es/astra/receiving/dvb/external-ci#astra-configuration)
 
 ### Crear MPTS
 
@@ -81,7 +81,7 @@ Seleccione los programas necesarios y añádalos pulsando el botón Aplicar.
 
 ![Cuadro de mandos](https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/dashboard.png)
 
-## Solución de problemas[](https://help.cesbo.com/astra/receiving/dvb/external-ci#troubleshooting)
+## Solución de problemas[](/es/astra/receiving/dvb/external-ci#troubleshooting)
 
 ### El módulo CI+ no funciona
 

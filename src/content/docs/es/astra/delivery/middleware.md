@@ -7,7 +7,7 @@ sidebar:
 
 La autorización Middleware es una autorización de cliente en el servicio de terceros, conocido como Middleware.
 
-## Proceso[](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#process)
+## Proceso[](/es/astra/delivery/middleware#process)
 
 ![HTTP Backend](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/http-backend.svg)
 
@@ -16,7 +16,7 @@ La autorización Middleware es una autorización de cliente en el servicio de te
 3. El middleware valida la solicitud y devuelve un estado de respuesta
 4. Si el middleware concede el acceso, Astra proporciona acceso al canal de TV solicitado.
 
-## Configuración[](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#configuration)
+## Configuración[](/es/astra/delivery/middleware#configuration)
 
 Para configurar Middleware Authorization abra `Settings` -> `HTTP Auth`. A partir de ahí, seleccione el "Tipo de backend" deseado e introduzca la "Dirección de backend" adecuada en función del tipo seleccionado.
 
@@ -86,11 +86,11 @@ Por ejemplo:
 3. La dirección completa al backend HTTP será: `https://auth.example.com/check?token=123`
 4. En las cabeceras estarán `X-Real-Path: /play/a001/index.m3u8` y otras cabeceras en función de la solicitud del cliente
 
-## Acción por defecto[](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#default-action)
+## Acción por defecto[](/es/astra/delivery/middleware#default-action)
 
 Si el backend no está disponible, Astra permite el acceso.
 
-## Solución de problemas[](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#troubleshooting)
+## Solución de problemas[](/es/astra/delivery/middleware#troubleshooting)
 
 ### Acceso inesperado
 

@@ -9,7 +9,7 @@ El middleware genera un token único para cada canal con algoritmos criptográfi
 
 Astra utiliza los mismos algoritmos criptográficos y el mismo securetoken para verificar los datos proporcionados y conceder acceso al canal.
 
-## Ficha[](https://help.cesbo.com/astra/delivery/http-hls-auth/securetoken#token)
+## Ficha[](/es/astra/delivery/securetoken#token)
 
 Token temporal calculado por el middleware en el lado del servidor cuando el cliente solicita la lista de reproducción. El token contiene las siguientes partes:
 
@@ -20,7 +20,7 @@ Token temporal calculado por el middleware en el lado del servidor cuando el cli
 
 Todas las partes deben separarse con el signo menos y añadirse a la dirección del canal. Por ejemplo: `https://example.com:8100/tv/travel-channel/index.m3u8?token=e8bff06f373694dda657e8417fe76f6b54b69807-a5cd6c00-1669890000-1669810000`
 
-## Hash[](https://help.cesbo.com/astra/delivery/http-hls-auth/securetoken#hash)
+## Hash[](/es/astra/delivery/securetoken#hash)
 
 El hash debe calcularse en el middleware con el algoritmo SHA1 a partir de la cadena concatenada de las partes siguientes:
 
@@ -31,7 +31,7 @@ El hash debe calcularse en el middleware con el algoritmo SHA1 a partir de la ca
 - Securetoke - definido en la configuración de Astra
 - Sal - palabra aleatoria para asegurar mejor
 
-## Ejemplo en PHP[](https://help.cesbo.com/astra/delivery/http-hls-auth/securetoken#example-on-php)
+## Ejemplo en PHP[](/es/astra/delivery/securetoken#example-on-php)
 
 Crear un archivo `securetoken.php` con el siguiente código:
 

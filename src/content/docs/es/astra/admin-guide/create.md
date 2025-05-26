@@ -7,7 +7,7 @@ sidebar:
 
 Un Stream es un aspecto central de la configuración de Astra, incluye una lista de Entradas para la recepción de medios y Salidas para distribuir o proporcionar acceso. Cada flujo también contiene opciones para el procesamiento de datos.
 
-## Programa único[](https://help.cesbo.com/astra/admin-guide/stream/create#single-program-stream)
+## Programa único[](/es/astra/admin-guide/stream/create#single-program-stream)
 
 ![Opciones de flujo de programa único](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/spts.png)
 
@@ -15,9 +15,9 @@ El flujo de programa único (SPTS, también conocido como canal o servicio) sirv
 
 Además de la redundancia, SPTS ofrece diversas opciones de procesamiento. Entre ellas están el filtrado para transmitir sólo los datos de medios necesarios, la modificación de la información de los flujos, la descodificación para acceder a flujos protegidos y la codificación para salvaguardar los flujos transmitidos. Así, SPTS ofrece una solución versátil y segura para la formación de canales de TV.
 
-Más información sobre la [configuración general de Stream](https://help.cesbo.com/astra/admin-guide/stream/general)
+Más información sobre la [configuración general de Stream](/es/astra/admin-guide/stream/general)
 
-## Secuencia multiprograma[](https://help.cesbo.com/astra/admin-guide/stream/create#multi-program-stream)
+## Secuencia multiprograma[](/es/astra/admin-guide/stream/create#multi-program-stream)
 
 ![Opciones multiprograma](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/mpts.png)
 
@@ -25,4 +25,4 @@ El Multi Program Stream (MPTS, también conocido como Multiplex) es otro tipo de
 
 Este tipo de flujo también ofrece varias funciones diseñadas para la radiodifusión. Entre ellas se incluyen opciones para definir la descripción del flujo, información de red, búsqueda de red y números de canal lógicos.
 
-Más información sobre [los ajustes MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings)
+Más información sobre [los ajustes MPTS](/es/astra/delivery/broadcasting/mpts-settings)

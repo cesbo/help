@@ -9,7 +9,7 @@ En el mundo de la televisión digital en streaming, cada milisegundo cuenta. Los
 
 Uno de los factores clave es el modo de alimentación de la CPU. Por defecto, los servidores Linux tienen la CPU configurada en modo de ahorro de energía para reducir el consumo y gestionar la generación de calor. Para garantizar un rendimiento óptimo del software de streaming, se recomienda configurar la CPU en su modo de máximo rendimiento.
 
-## Con la utilidad cpupower[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#with-cpupower-utility)
+## Con la utilidad cpupower[](/es/misc/tools-and-utilities/cpupower#with-cpupower-utility)
 
 Para comprobar el modo de alimentación de la CPU en un servidor Linux, puede utilizar la función `cpupower` utilidad. Esta utilidad forma parte del `linux-tools-common` paquete.
 
@@ -38,7 +38,7 @@ cpupower frequency-set -g performance
 
 Esta configuración se perderá tras un reinicio. Si desea que sea permanente, puede añadir el comando anterior a `/etc/rc.local` para que se ejecute en cada arranque.
 
-## Comprobar el modo CPU manualmente[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#check-cpu-mode-manually)
+## Comprobar el modo CPU manualmente[](/es/misc/tools-and-utilities/cpupower#check-cpu-mode-manually)
 
 ```
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor

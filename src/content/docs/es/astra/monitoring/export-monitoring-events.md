@@ -7,7 +7,7 @@ sidebar:
 
 Astra permite exportar eventos de monitorización con el estado de los flujos entrantes o adaptadores DVB.
 
-## URL de supervisión[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#monitoring-url)
+## URL de supervisión[](/es/astra/monitoring/export/export-monitoring-events#monitoring-url)
 
 La dirección del servidor de monitorización puede especificarse en la interfaz web: Configuración -> General -> Monitorización:
 
@@ -20,7 +20,7 @@ La dirección tiene los siguientes parámetros:
 
 Por ejemplo, con la dirección `http://example.com/api#interval=60&total=1` astra envía una solicitud HTTP POST al archivo `http://example.com/api` cada minuto, petición que contiene JSON con las estadísticas resumidas de un minuto de monitorización del flujo.
 
-## Propiedades del arroyo[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-properties)
+## Propiedades del arroyo[](/es/astra/monitoring/export/export-monitoring-events#stream-properties)
 
 Las propiedades del flujo Astra sólo se envían una vez al iniciarse el flujo.
 
@@ -43,7 +43,7 @@ Las propiedades del flujo Astra sólo se envían una vez al iniciarse el flujo.
 - `timestamp` - hora del evento
 - `hostname` - nombre del servidor
 
-## Estado del flujo[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#stream-status)
+## Estado del flujo[](/es/astra/monitoring/export/export-monitoring-events#stream-status)
 
 ```
 [
@@ -81,7 +81,7 @@ Esta lista describe los parámetros que proporcionan información sobre el flujo
 
 Estos datos se transmiten en formato JSON como una matriz de varios elementos, en la que cada elemento representa un segundo de observaciones. El número de elementos de la matriz viene determinado por la frecuencia de transmisión de las estadísticas. Si la agregación de estadísticas está activada, sólo hay un elemento en la matriz, que contiene el número total de errores y el bitrate medio para el periodo igual a la frecuencia de transmisión de estadísticas.
 
-## Propiedades del adaptador[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-properties)
+## Propiedades del adaptador[](/es/astra/monitoring/export/export-monitoring-events#adapter-properties)
 
 Propiedades del adaptador Astra enviar sólo una vez en el arranque del adaptador.
 
@@ -103,7 +103,7 @@ Propiedades del adaptador Astra enviar sólo una vez en el arranque del adaptado
 - `timestamp` - hora del evento
 - `hostname` - nombre del servidor
 
-## Estado del adaptador[](https://help.cesbo.com/astra/monitoring/export/export-monitoring-events#adapter-status)
+## Estado del adaptador[](/es/astra/monitoring/export/export-monitoring-events#adapter-status)
 
 ```
 [

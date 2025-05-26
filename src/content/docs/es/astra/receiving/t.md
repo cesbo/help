@@ -7,13 +7,13 @@ sidebar:
 
 DVB-T/T2 es una norma para la transmisión de televisión digital terrestre.
 
-## Opciones generales[](https://help.cesbo.com/astra/receiving/dvb/t#general-options)
+## Opciones generales[](/es/astra/receiving/dvb/t#general-options)
 
 ![DVB-T/T2 Opciones generales](https://cdn.cesbo.com/help/astra/receiving/dvb/t/general.png)
 
 - `Frequency` - frecuencia portadora (0-1000 MHz)
 
-## Opciones avanzadas[](https://help.cesbo.com/astra/receiving/dvb/t#advanced-options)
+## Opciones avanzadas[](/es/astra/receiving/dvb/t#advanced-options)
 
 ![Opciones avanzadas de DVB-T/T2](https://cdn.cesbo.com/help/astra/receiving/dvb/t/advanced.png)
 

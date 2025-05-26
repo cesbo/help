@@ -10,7 +10,7 @@ El servicio es un proceso de aplicación con nombre especificado y configuració
 :::note En la mayoría de las distribuciones Linux los servicios se gestionan con `systemd`. Systemd controla el estado del servicio, comprueba los registros de servicio y lanza el servicio al iniciar el sistema.
 :::
 
-## Ponga en marcha servicios adicionales[](https://help.cesbo.com/astra/getting-started/first-steps/manage-service#launch-additional-services)
+## Ponga en marcha servicios adicionales[](/es/astra/getting-started/first-steps/manage-service#launch-additional-services)
 
 Puede lanzar en su servidor uno o varios servicios en función de sus necesidades.
 
@@ -20,7 +20,7 @@ astra init 8001 astra-1
 
 El nombre del servicio será `astra-1` con el puerto de la interfaz web `8001`.
 
-## Gestión de servicios[](https://help.cesbo.com/astra/getting-started/first-steps/manage-service#service-management)
+## Gestión de servicios[](/es/astra/getting-started/first-steps/manage-service#service-management)
 
 En este ejemplo el nombre del servicio es por defecto: `astra`
 
@@ -34,7 +34,7 @@ En este ejemplo el nombre del servicio es por defecto: `astra`
 | `systemctl disable astra` | Desactivar la ejecución automática |
 | `journalctl -fu astra` | Registros de servicio |
 
-## Eliminar servicio[](https://help.cesbo.com/astra/getting-started/first-steps/manage-service#remove-service)
+## Eliminar servicio[](/es/astra/getting-started/first-steps/manage-service#remove-service)
 
 Antes de eliminar el servicio, deténgalo y desactive la ejecución automática:
 

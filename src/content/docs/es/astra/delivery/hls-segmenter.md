@@ -13,7 +13,7 @@ El Segmentador HLS es una función de Astra para dividir el flujo continuo de me
 
 Astra funciona específicamente como segmentador HLS. Otras funciones, como la transcodificación y el almacenamiento en caché, requieren software adicional. Por ejemplo, se recomienda FFmpeg para la transcodificación, mientras que Nginx podría utilizarse para el almacenamiento en caché.
 
-## Opciones del segmentador HLS[](https://help.cesbo.com/astra/delivery/http-hls/hls-segmenter#hls-segmenter-options)
+## Opciones del segmentador HLS[](/es/astra/delivery/http-hls/hls-segmenter#hls-segmenter-options)
 
 En la Interfaz Web de Astra las opciones HLS están disponibles en Ajustes -> HLS
 
@@ -40,7 +40,7 @@ La ruta del recurso permite elegir la ruta a los recursos de la lista de reprodu
 ### Otras opciones
 
 - `Round duration value` - esta función redondea la duración de los segmentos del flujo multimedia a valores enteros (no recomendado)
-- `Use Expires header` - esta opción añade la cabecera Expires a la respuesta HTTP. Esta cabecera es necesaria para los proxies de caché. Más información en [Proxy de caché HLS con Nginx](https://help.cesbo.com/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+- `Use Expires header` - esta opción añade la cabecera Expires a la respuesta HTTP. Esta cabecera es necesaria para los proxies de caché. Más información en [Proxy de caché HLS con Nginx](/es/misc/tools-and-utilities/hls-caching-proxy-with-nginx)
 - `Pass all data PIDs` - Por defecto, sólo los paquetes de vídeo y audio se escriben en los segmentos HLS. Esta opción permite escribir todos los paquetes de datos.
 
 ### Lista de reproducción multimedia HLS

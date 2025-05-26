@@ -7,7 +7,7 @@ sidebar:
 
 Astra DVB List es una sencilla herramienta integrada para obtener información sobre los adaptadores DVB instalados.
 
-## Utilización[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dvbls#usage)
+## Utilización[](/es/misc/tools-and-utilities/dvbls#usage)
 
 ```
 astra --dvbls [OPTIONS]
@@ -45,7 +45,7 @@ Nov 10 09:00:00: ERROR: adapter = 1, device = 0
 Nov 10 09:00:00: ERROR:     failed to open [Bad file descriptor]
 ```
 
-## Exportar la lista DVB al archivo[](https://help.cesbo.com/misc/tools-and-utilities/dvb/dvbls#export-dvb-list-to-the-file)
+## Exportar la lista DVB al archivo[](/es/misc/tools-and-utilities/dvbls#export-dvb-list-to-the-file)
 
 Cuando Astra se inicia, recupera información sobre los adaptadores DVB instalados en el sistema. En algunos casos excepcionales, esta operación puede tardar mucho tiempo. Para evitar que Astra actualice esta información en cada arranque, puedes guardarla en un archivo.
 

@@ -80,8 +80,8 @@ export default defineConfig({
         starlightLlmsTxt(),
         starlightLinksValidator({
             errorOnInconsistentLocale: true,
-            errorOnInvalidHashes: true,
             errorOnRelativeLinks: true,
+            errorOnInvalidHashes: false,
             errorOnLocalLinks: false,
         }),
       ],

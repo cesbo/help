@@ -7,7 +7,7 @@ sidebar:
 
 La transmisión de televisión digital emplea distintos protocolos para difundir contenidos multimedia, en concreto, el Protocolo de Datagramas de Usuario (UDP), el Protocolo de Transferencia de Hipertexto (HTTP) y el HTTP Live Streaming (HLS). Cada uno de estos protocolos posee características distintivas que afectan a su eficacia, fiabilidad y compatibilidad con diversos dispositivos y redes. La siguiente comparación profundizará en sus funciones básicas, ventajas e inconvenientes para proporcionar una comprensión clara de su uso en el panorama de la televisión digital.
 
-## Multidifusión UDP[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#udp-multicast)
+## Multidifusión UDP[](/es/misc/articles/udp-vs-http#udp-multicast)
 
 ![Multidifusión UDP](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
@@ -22,11 +22,11 @@ El control de acceso puede establecerse mediante dos métodos:
 - encriptación de los flujos para una transmisión de datos segura
 - gestión de los puertos del equipo de conmutación
 
-## Unicast UDP[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#udp-unicast)
+## Unicast UDP[](/es/misc/articles/udp-vs-http#udp-unicast)
 
 UDP unicast sirve como método de transmisión uno a uno. Suele utilizarse para enviar flujos entre distintos servidores de una cabecera. Un ejemplo sería la transmisión de flujos de un receptor a un transcodificador y, a continuación, del transcodificador a un multiplexor.
 
-## HTTP MPEG-TS[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#http-mpeg-ts)
+## HTTP MPEG-TS[](/es/misc/articles/udp-vs-http#http-mpeg-ts)
 
 El protocolo HTTP MPEG-TS se basa en el protocolo HTTP y funciona como la descarga de un archivo infinito, enviando continuamente datos al receptor en un flujo constante. Este enfoque permite una buena compatibilidad con los descodificadores más antiguos que se diseñaron con este protocolo en mente.
 
@@ -34,7 +34,7 @@ Sin embargo, este protocolo es más susceptible a las conexiones inestables y es
 
 En cuanto al control de acceso, HTTP MPEG-TS puede aprovechar los métodos HTTP estándar para la autorización, eliminando la necesidad de cifrado, aunque es posible el cifrado a través de Transport Layer Security (TLS) si se requiere para mayor seguridad.
 
-## HLS[](https://help.cesbo.com/misc/articles/protocols/udp-vs-http#hls)
+## HLS[](/es/misc/articles/udp-vs-http#hls)
 
 ![Diagrama HLS](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/diagram.svg)
 

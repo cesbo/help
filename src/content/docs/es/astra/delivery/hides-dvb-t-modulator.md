@@ -22,7 +22,7 @@ Características:
 
 [Seguir leyendo](http://www.hides.com.tw/product_pt100_eng.html)
 
-## Configurar[](https://help.cesbo.com/astra/delivery/hardware/hides-dvb-t-modulator#setup)
+## Configurar[](/es/astra/delivery/hardware/hides-dvb-t-modulator#setup)
 
 El controlador puede descargarse del [sitio oficial](http://www.hides.com.tw/downloads_eng.html)
 
@@ -41,9 +41,9 @@ En la salida del comando, obtendremos los números de los moduladores:
 
 `it950x1` - donde 1 es el número de modulador
 
-## Ajustes Astra[](https://help.cesbo.com/astra/delivery/hardware/hides-dvb-t-modulator#astra-settings)
+## Ajustes Astra[](/es/astra/delivery/hardware/hides-dvb-t-modulator#astra-settings)
 
-Prepare [el](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) MPTS para el modulador. En los ajustes NIT del MPTS, configure las opciones del transpondedor:
+Prepare [el](/es/astra/delivery/broadcasting/mpts-settings) MPTS para el modulador. En los ajustes NIT del MPTS, configure las opciones del transpondedor:
 
 ![Ajustes MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 

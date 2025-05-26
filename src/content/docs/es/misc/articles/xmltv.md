@@ -7,7 +7,7 @@ sidebar:
 
 XMLTV es un formato basado en XML para describir información sobre la programación de televisión. Proporciona un mecanismo para almacenar información sobre canales, horarios de programas y sus metadatos asociados.
 
-## Ejemplo[](https://help.cesbo.com/misc/articles/format/xmltv#example)
+## Ejemplo[](/es/misc/articles/xmltv#example)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,10 +92,10 @@ Elementos anidados:
 - `category` - género o categoría del programa. Múltiples
     
 
-## IET[](https://help.cesbo.com/misc/articles/format/xmltv#eit)
+## IET[](/es/misc/articles/xmltv#eit)
 
 La tabla de información de eventos (EIT) forma parte del flujo de transporte MPEG-2 (MPEG-TS) utilizado en radiodifusión digital. Esta tabla contiene metadatos sobre los eventos o programas programados en varios canales, de forma similar a la guía de programas que se puede encontrar en un televisor digital o descodificador.
 
-El archivo XMLTV se puede convertir al flujo MPEG-TS con paquetes EIT con nuestra herramienta gratuita - EIT Stream. [Más información](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/eit-stream)
+El archivo XMLTV se puede convertir al flujo MPEG-TS con paquetes EIT con nuestra herramienta gratuita - EIT Stream. [Más información](/es/misc/tools-and-utilities/eit-stream)
 
 El paquete EIT puede extraerse del flujo MPEG-TS y guardarse en archivos XMLTV con Astra.

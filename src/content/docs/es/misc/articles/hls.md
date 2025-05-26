@@ -9,7 +9,7 @@ HLS (HTTP Live Streaming) es un protocolo de comunicaciones de streaming con bit
 
 Para una descripción detallada, consulte la norma [RFC8216](https://www.rfc-editor.org/rfc/rfc8216){target="_blank"}
 
-## Arquitectura HLS[](https://help.cesbo.com/misc/articles/protocols/hls#hls-architecture)
+## Arquitectura HLS[](/es/misc/articles/hls#hls-architecture)
 
 La arquitectura HLS (HTTP Live Streaming) está diseñada para facilitar la transmisión eficiente y en tiempo real de contenidos multimedia. A continuación se presenta un desglose general de los componentes que intervienen en el streaming HLS, desde el origen del flujo hasta el usuario final:
 

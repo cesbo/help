@@ -1,5 +1,5 @@
 ---
-title: "Protocolo de anuncio de sesión para multidifusión"
+title: Protocolo de anuncio de sesión para multidifusión
 date: 2023-09-01
 sidebar:
     order: 3
@@ -14,12 +14,12 @@ El Protocolo de Anuncio de Sesión (SAP) es un protocolo para anunciar flujos Mu
 
 Astra envía paquetes SAP al grupo multicast 239.255.255.255 puerto 9875.
 
-## Configurar Astra[](https://help.cesbo.com/astra/delivery/broadcasting/sap#configure-astra)
+## Configurar Astra[](/es/astra/delivery/sap#configure-astra)
 
 En la dirección de salida añada `sap` para activar los anuncios SAP.
 
 ![Ajustes de canal](https://cdn.cesbo.com/help/astra/delivery/broadcasting/sap/channel.png)
 
-## Recepción de SAP con VLC[](https://help.cesbo.com/astra/delivery/broadcasting/sap#receiving-sap-with-vlc)
+## Recepción de SAP con VLC[](/es/astra/delivery/sap#receiving-sap-with-vlc)
 
 Abra VLC Media Player y, en la lista de reproducción, seleccione Red local -> Secuencias de red (SAP). VLC recibe los anuncios SAP y lista todos los streams disponibles. Haga doble clic en el flujo para iniciar la reproducción.

@@ -7,7 +7,7 @@ sidebar:
 
 La tecnología rp\_filter es una herramienta útil para mejorar la seguridad y protección de los servidores que reciben tráfico UDP multicast, particularmente para servidores con múltiples interfaces de red. Cuando se configuran servidores para recibir tráfico UDP multicast, hay dos opciones disponibles: configurar el enrutamiento del sistema para grupos multicast o modificar la configuración de rp\_filter.
 
-## Configurar el modo estricto para el filtro RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#configure-strict-mode-for-rp-filter)
+## Configurar el modo estricto para el filtro RP[](/es/misc/tools-and-utilities/rp-filter#configure-strict-mode-for-rp-filter)
 
 Para modificar la configuración de rp\_filter, añada las siguientes líneas al archivo `/etc/sysctl.conf` archivo:
 
@@ -21,7 +21,7 @@ Tenga en cuenta que `eth0` debe sustituirse por el nombre de la interfaz que se 
 sysctl -p
 ```
 
-## Valores del filtro RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#rp-filter-values)
+## Valores del filtro RP[](/es/misc/tools-and-utilities/rp-filter#rp-filter-values)
 
 Hay tres valores posibles para el parámetro rp\_filter en Linux:
 

@@ -11,7 +11,7 @@ El protocolo SRT (Secure Reliable Transport) es un protocolo de streaming de ví
 Disponible para las versiones de Astra lanzadas después del 2021-12-21
 :::
 
-## Formato de la dirección[](https://help.cesbo.com/astra/receiving/ip/srt#address-format)
+## Formato de la dirección[](/es/astra/receiving/srt#address-format)
 
 La TER podía recibirse de dos modos:
 
@@ -61,7 +61,7 @@ Ejemplos:
 - `no_tsbpdmode` - desactivar el modo de entrega de paquetes basado en marcas de tiempo
 - `oheadbw` - limita la sobrecarga del ancho de banda, en porcentaje. Valores posibles en el rango: 5 - 100. Valor por defecto: `25`
 
-## Interfaz web[](https://help.cesbo.com/astra/receiving/ip/srt#web-interface)
+## Interfaz web[](/es/astra/receiving/srt#web-interface)
 
 Uno de los mayores retos de trabajar con el protocolo Secure Reliable Transport (SRT) es navegar por el abanico de requisitos técnicos y configuraciones que implica el proceso de configuración. Afortunadamente, Astra agiliza este proceso ofreciendo un amplio conjunto de opciones de configuración de entrada SRT
 

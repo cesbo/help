@@ -8,10 +8,10 @@ sidebar:
 Instale la nueva versión en su servidor
 
 :::note
-Antes de actualizar por favor [Hacer una copia de seguridad](https://help.cesbo.com/astra/admin-guide/administration/backup)!
+Antes de actualizar por favor [Hacer una copia de seguridad](/es/astra/admin-guide/administration/backup)!
 :::
 
-## Instalar actualización[](https://help.cesbo.com/astra/admin-guide/administration/update#install-update)
+## Instalar actualización[](/es/astra/admin-guide/administration/update#install-update)
 
 Descarga el último archivo binario:
 

@@ -7,7 +7,7 @@ sidebar:
 
 UDP (User Datagram Protocol) - protocolo de comunicación en redes locales o Internet, con retrasos y estabilidad mínimos.
 
-## Software para analizar su problema[](https://help.cesbo.com/misc/troubleshooting/receiving/udp#software-to-analyze-your-issue)
+## Software para analizar su problema[](/es/misc/troubleshooting/udp#software-to-analyze-your-issue)
 
 ### Analizar UDP con Astra MPEG-TS Analyzer
 
@@ -17,7 +17,7 @@ Con Astra puedes analizar cualquier fuente soportada. Basta con lanzar en consol
 astra --analyze "udp://eth0@239.255.1.1:1234"
 ```
 
-Para detener el analizador Astra, pulsa Ctrl+C. Más información sobre el analizador Astra [MPEG-TS](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer)
+Para detener el analizador Astra, pulsa Ctrl+C. Más información sobre el analizador Astra [MPEG-TS](/es/misc/tools-and-utilities/astra-mpeg-ts-analyzer)
 
 ### Analizar UDP con Tcpdump
 
@@ -42,7 +42,7 @@ La salida de tcpdump tiene el aspecto de muchas líneas con información sobre e
 
 Para detener tcpdump pulse Ctrl+C
 
-## UDP No funciona en absoluto[](https://help.cesbo.com/misc/troubleshooting/receiving/udp#udp-not-working-at-all)
+## UDP No funciona en absoluto[](/es/misc/troubleshooting/udp#udp-not-working-at-all)
 
 No funciona significa una tasa de bits cero en la salida del analizador Astra MPEG-TS. Por ejemplo:
 
@@ -57,16 +57,16 @@ En primer lugar, compruebe el tráfico en la interfaz de red con la herramienta 
 
 1. Configuración de rutas inválida. Si tiene varias interfaces, por favor, compruebe que la ruta al grupo multicast está configurada correctamente o defina el nombre de la interfaz en la dirección udp.
 2. Problemas de conectividad. Compruebe que el servidor conectado a Ethernet o interfaz vlan creado
-3. Versión IGMP incompatible. Por ejemplo, su servidor utiliza IGMPv3, pero el equipo de red sólo admite IGMPv2: [Configurar versión IGMP](https://help.cesbo.com/misc/tools-and-utilities/network/configure-igmp-version)
+3. Versión IGMP incompatible. Por ejemplo, su servidor utiliza IGMPv3, pero el equipo de red sólo admite IGMPv2: [Configurar versión IGMP](/es/misc/tools-and-utilities/configure-igmp-version)
 
 ### El software no puede recibir paquetes UDP
 
 Si tcpdump muestra información sobre paquetes UDP, podría haber problemas a continuación:
 
 1. UDP descartado por las reglas del cortafuegos. Compruebe la configuración de su cortafuegos
-2. Si su servidor tiene interfaces multiplay entonces añada la ruta al grupo multicast o configure el Filtro RP: [Filtro RP y recepción multicast en Linux](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter)
+2. Si su servidor tiene interfaces multiplay entonces añada la ruta al grupo multicast o configure el Filtro RP: [Filtro RP y recepción multicast en Linux](/es/misc/tools-and-utilities/rp-filter)
 
-## Demasiados errores al recibir UDP[](https://help.cesbo.com/misc/troubleshooting/receiving/udp#too-many-errors-on-receiving-udp)
+## Demasiados errores al recibir UDP[](/es/misc/troubleshooting/udp#too-many-errors-on-receiving-udp)
 
 Los errores CC (Contador de Continuidad) indican que la continuidad de los paquetes está dañada. El error puede deberse a la pérdida o exceso de paquetes. Ejemplo de salida con errores CC en el analizador Astra MPEG-TS:
 

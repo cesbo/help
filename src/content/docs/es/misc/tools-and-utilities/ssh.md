@@ -7,13 +7,13 @@ sidebar:
 
 SSH - es el principal protocolo y herramienta para la gestión de servidores remotos. También le permite crear túneles y transferir archivos.
 
-## Conexión al servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#connection-to-server)
+## Conexión al servidor[](/es/misc/tools-and-utilities/ssh#connection-to-server)
 
 ```
 ssh root@192.168.1.1
 ```
 
-## Configuración de clientes[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#client-configuration)
+## Configuración de clientes[](/es/misc/tools-and-utilities/ssh#client-configuration)
 
 El cliente SSH puede funcionar sin un archivo de configuración y recuperar todos los parámetros necesarios de los argumentos de la línea de comandos. Sin embargo, puede crear un archivo de configuración llamado `~/.ssh/config`. Este archivo debe contener la siguiente información:
 
@@ -31,7 +31,7 @@ Host server-alias
 - `Port` - el puerto del servidor. Por defecto: `22`
 - `IdentityFile` - un campo opcional que especifica la ruta completa al archivo de clave privada
 
-## Generación de claves[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#key-generation)
+## Generación de claves[](/es/misc/tools-and-utilities/ssh#key-generation)
 
 Por razones de seguridad, se recomienda encarecidamente utilizar claves de autenticación en lugar de contraseñas.
 
@@ -58,7 +58,7 @@ En el servidor, añada esta línea al archivo `~/.ssh/authorized_keys` archivo. 
 echo "ssh-ed25519 AAAA...UUUU user@example.com" >>~/.ssh/authorized_keys
 ```
 
-## Copiar archivo al servidor[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#copy-file-to-server)
+## Copiar archivo al servidor[](/es/misc/tools-and-utilities/ssh#copy-file-to-server)
 
 Para copiar archivos en el servidor, utilice el siguiente comando:
 
@@ -70,7 +70,7 @@ scp FILE 192.168.1.1:REMOTE
 - `192.168.1.1` - dirección del servidor
 - `REMOTE` - ruta absoluta al archivo en el servidor
 
-## Reenvío de puertos[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#port-forwarding)
+## Reenvío de puertos[](/es/misc/tools-and-utilities/ssh#port-forwarding)
 
 Para reenviar el tráfico de un servidor remoto a un equipo local, utilice el siguiente comando:
 
