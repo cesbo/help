@@ -73,4 +73,4 @@ Una vez configurado el adaptador, puedes comprobar la calidad de la señal y bus
 
 ## Solución de problemas[](/es/astra/receiving/intro#troubleshooting)
 
-Si tienes algún problema al iniciar el adaptador DVB, consulta nuestra guía: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/dvb)
+Si tienes algún problema al iniciar el adaptador DVB, consulta nuestra guía: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/receiving)

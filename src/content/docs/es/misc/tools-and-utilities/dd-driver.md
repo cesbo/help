@@ -109,4 +109,4 @@ adapter0 adapter1 adapter2 adapter3 ...
 
 ## Solución de problemas[](/es/misc/tools-and-utilities/dd-driver#troubleshooting)
 
-Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](/es/misc/troubleshooting/dvb)
+Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](/es/misc/troubleshooting/receiving)

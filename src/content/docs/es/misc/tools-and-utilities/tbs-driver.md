@@ -99,4 +99,4 @@ adapter0 adapter1 adapter2 adapter3 ...
 
 Puede ponerse en contacto con los representantes de TBS para que le ayuden a instalar los controladores en este enlace: [https://www.tbsdtv.com/contact-us.html](https://www.tbsdtv.com/contact-us.html) - seleccione "Instalación y depuración de software"
 
-Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](/es/misc/troubleshooting/dvb)
+Si tiene algún problema con sus adaptadores DVB, consulte [Solución de problemas DVB](/es/misc/troubleshooting/receiving)

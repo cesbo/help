@@ -99,7 +99,7 @@ Muy a menudo los clientes olvidan configurar sus Adaptadores antes de los siguie
 
 ### Canales de recepción con Astra
 
-Ahora es el momento de configurar todos nuestros Adaptadores y encontrar los canales, que queremos Modular sobre DVB-C. Lista de todos los artículos sobre recepción de canales disponible aquí: [Recepción con Astra](/es/astra/receiving).
+Ahora es el momento de configurar todos nuestros Adaptadores y encontrar los canales, que queremos Modular sobre DVB-C. Lista de todos los artículos sobre recepción de canales disponible aquí: [Recepción con Astra](/es/astra/receiving/intro).
 
 Para configurar la recepción de canales desde satélite te recomendamos que eches un vistazo a estos artículos:
 
@@ -190,6 +190,6 @@ Además, podemos conectar el cable coaxial del RESI al televisor y, en la config
 
 ## Solución de problemas de recepción DVB[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
 
-En caso de que surja algún problema durante la configuración, le ofrecemos una lista de artículos sobre cómo identificar problemas y eliminar la posible causa del problema: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/dvb)
+En caso de que surja algún problema durante la configuración, le ofrecemos una lista de artículos sobre cómo identificar problemas y eliminar la posible causa del problema: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/receiving)
 
 Cuidamos de cada uno de nuestros clientes y de su mejor experiencia de trabajo con Cesbo Astra, por eso ofrecemos más canales de soporte como la ayuda Online y el soporte vía E-mail.

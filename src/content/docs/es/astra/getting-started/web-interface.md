@@ -1,5 +1,5 @@
 ---
-title: "Interfaz web"
+title: Interfaz web
 date: 2023-02-22
 sidebar:
     order: 5
@@ -29,6 +29,6 @@ Nombre de usuario y contraseña por defecto: `admin`. Recomendamos cambiar la co
 4. `Settings` - Lista de todos los ajustes de Astra, como la gestión de usuarios, la autenticación HTTP, los ajustes generales de Astra, etc. Más información en [Ajustes Astra](/es/astra/admin-guide/settings)
 5. `Log` - mensajes en tiempo real sobre el estado del software Astra. Más información en [Troncos Astra](/es/astra/admin-guide/log)
 6. `Search` - Búsqueda rápida de canales y adaptadores. Se puede acceder a la función de búsqueda pulsando la tecla `S` clave
-7. `New Adapter` - configurar un nuevo Adaptador DVB para recibir señales de redes DVB, incluidas fuentes por satélite, cable o terrestres. Obtenga más información sobre la sintonización y configuración DVB en la sección [Recepción DVB](/es/astra/receiving/dvb) guías
+7. `New Adapter` - configurar un nuevo Adaptador DVB para recibir señales de redes DVB, incluidas fuentes por satélite, cable o terrestres. Obtenga más información sobre la sintonización y configuración DVB en la sección [Recepción DVB](/es/astra/admin-guide/dvb) guías
 8. `New Stream` - añadir un nuevo Stream para recibir canales desde fuentes HTTP, UDP, RTSP y DVB. Más información sobre la creación de un nuevo flujo y las opciones de flujo en la Guía del administrador [Ajustes de Astra Stream](/es/astra/admin-guide/stream)
 9. `View` - personalizar el tema de la interfaz y la configuración del panel de control, como la agrupación, el orden y el filtrado de canales y adaptadores dvb
