@@ -1,17 +1,17 @@
 ---
-title: "EIT Stream"
+title: EIT Stream
 date: 2023-03-17
 sidebar:
     order: 3
 ---
 
-EIT Stream is a tool to convert [XMLTV files](../articles/xmltv) into MPEG-TS stream with Event Information Tables (EIT) for broadcasting networks like DVB, ATSC, ISDB.
+EIT Stream is a tool to convert [XMLTV files](/en/misc/articles/xmltv) into MPEG-TS stream with Event Information Tables (EIT) for broadcasting networks like DVB, ATSC, ISDB.
 
 ## Installation
 
 Just download single binary file and set execute permission:
 
-```
+```sh
 curl -Lo /usr/bin/eit-stream http://cesbo.com/and/eit-stream
 chmod +x /usr/bin/eit-stream
 ```
@@ -20,7 +20,7 @@ chmod +x /usr/bin/eit-stream
 
 Create a configuration file `/etc/eit-stream.conf` with any text editor. Example:
 
-```
+```conf
 xmltv = /opt/xmltv.xml
 output = udp://lo@239.0.0.1:1234
 onid = 8000
@@ -120,7 +120,7 @@ In the MPTS advanced settings turn on option "Pass EIT".
 
 Register service in systemd to start service in background and autostart on system startup. Create file `/etc/systemd/system/eit-stream.service`:
 
-```
+```conf
 [Unit]
 Description=eit-stream service
 After=network-online.target

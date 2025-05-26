@@ -9,7 +9,7 @@ sidebar:
 
 Astra funciona en cualquier distribución basada en Linux para CPUs x86 de 64 bits. Recomendamos usar Ubuntu 22.04 LTS.
 
-[Leer más...](requirements)
+[Leer más...](/es/astra/getting-started/requirements)
 
 ## Recepción de contenido
 
@@ -21,7 +21,7 @@ Astra admite varios tipos de fuentes:
 - Protocolo SRT en modos caller o listener
 - Transmisiones RTSP desde cámaras IP
 
-[Leer más...](../receiving)
+[Leer más...](/es/astra/receiving/intro)
 
 ## Procesamiento de contenido
 
@@ -33,7 +33,7 @@ Astra prepara los canales recibidos para la entrega utilizando funciones de proc
 - Análisis de transmisiones
 - Redundancia de transmisiones mediante la conmutación automática a fuentes de respaldo
 
-[Leer más...](../processing)
+[Leer más...](/es/astra/processing/demux)
 
 ## Entrega de contenido
 
@@ -46,7 +46,7 @@ Transmisión y difusión de contenido a través de diferentes redes:
 - Protocolo SRT en modos listener o caller
 
 
-[Leer más...](../delivery)
+[Leer más...](/es/astra/delivery/mpts-settings)
 
 ## Gestión
 

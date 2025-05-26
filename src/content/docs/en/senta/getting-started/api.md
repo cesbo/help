@@ -17,11 +17,11 @@ Designed for interaction between the client part (frontend) and the server. Don'
 
 ## Integration API
 
-It has OpenAPI schema that can be found [here](installation).
+It has OpenAPI schema that can be found [here](/en/senta/getting-started/installation).
 
 You can get `API key` in senta-playlist web interface. 
 
 1. Click `Settings`
 2. See API key in `API key` fileld
 
-You need set license for turn on it (see [add-license](add-license) article).
+You need set license for turn on it (see [add-license](/en/senta/getting-started/add-license) article).

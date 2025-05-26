@@ -52,11 +52,11 @@ sudo alta init
 - **Start service** - start service immediately after wizard.
 
 On your server you may launch as many services as you want. Just use unique service name and management port. Read more:
-[How To Use Systemctl to Manage Alta Services](../../admin-guide/administration/manage-services)
+[How To Use Systemctl to Manage Alta Services](/en/alta/admin-guide/administration/manage-services)
 
 ## Login to Web Interface
 
 Your service is ready to use. Now you may connect to the Cesbo Alta Web Interface using a web browser - Chrome, Safari, or Firefox. In example above we keep default port `8100` so interface address will be `http://server-address:8100` where server-address is a server IP or hostname.
 To log in to the web interface, use the default login `admin` and password which has been defined in wizard.
 
-Read next article about [Alta Web Interface](web-interface)
+Read next article about [Alta Web Interface](/en/alta/getting-started/web-interface)

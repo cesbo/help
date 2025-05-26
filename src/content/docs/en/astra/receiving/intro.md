@@ -28,8 +28,8 @@ We recommend DVB adapters by:
 
 Before you begin, make sure that the DVB Adapter is connected to your server and that the appropriate Linux driver is installed:
 
-- [TBS Driver Installation](../../misc/tools-and-utilities/tbs-driver)
-- [DigitalDevices Driver Installation](../../misc/tools-and-utilities/dd-driver)
+- [TBS Driver Installation](/en/misc/tools-and-utilities/tbs-driver)
+- [DigitalDevices Driver Installation](/en/misc/tools-and-utilities/dd-driver)
 
 ## General options
 
@@ -63,14 +63,14 @@ To create new adapter click "New Adapter" in the main menu.
 
 Other options depends of the selected adapter type:
 
-- [DVB-S/S2](s)
-- [DVB-T/T2](t)
-- [DVB-C](c)
+- [DVB-S/S2](/en/astra/receiving/s)
+- [DVB-T/T2](/en/astra/receiving/t)
+- [DVB-C](/en/astra/receiving/c)
 
 ## Scan
 
-Once your adapter is configured, you can check the signal quality and scan it for available channels. Read more: [Scan DVB Adapter](scan)
+Once your adapter is configured, you can check the signal quality and scan it for available channels. Read more: [Scan DVB Adapter](/en/astra/receiving/scan)
 
 ## Troubleshooting
 
-If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](../admin-guide/dvb)
+If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](/en/astra/admin-guide/dvb)

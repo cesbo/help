@@ -58,7 +58,7 @@ This command registers Astra as a system service with name `astra` and with mana
 systemctl start astra
 ```
 
-Read more about service management and launching additional services on your server: [Manage Astra Service](manage-service).
+Read more about service management and launching additional services on your server: [Manage Astra Service](/en/astra/getting-started/manage-service).
 
 ## Enable autorun
 
@@ -75,4 +75,4 @@ Now service `astra` will be started automatically on system startup.
 After installing Astra, you can access its web interface using a web browser - Chrome, Safari, or Firefox. The default port for the web interface is 8000. So interface address will be `http://your-server-address:8000`.
 To log in to the web interface, use the default login and password, which are both set to "admin".  It is recommended to change the default password to prevent unauthorized access.
 
-Read next article about [Astra Web Interface](web-interface)
+Read next article about [Astra Web Interface](/en/astra/getting-started/web-interface)

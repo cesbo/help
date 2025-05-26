@@ -4,7 +4,7 @@ description: How add profile?
 sidebar:
     order: 3
 ---
-You can read about profile [here](../profiles)
+You can read about profile [here](/en/senta/profiles)
 
 For adding profile go to **ffmpeg profiles** tab
 

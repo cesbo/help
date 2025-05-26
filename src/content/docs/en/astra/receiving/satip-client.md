@@ -17,7 +17,7 @@ The most important advantage is the possibility of separating the reception and 
 
 Secondly, we can extend the variety of hardware with what you may receive a DVB signal.  It is SAT>IP server hardware like: [Digital Devices Octopus NET](https://www.digital-devices.eu/shop/en/business-tv/network-tuner/), HDHomeRun,  Telestar R1, and many other devices, including low-cost options, which support SAT>IP Standard.
 
-What is important to mention, is that with the Minisatip server software, we also may use PCIe DVB cards and/or USB sticks (tuners) as SAT>IP Adapters at Astra Cesbo. For more details on how to use the Minisatip server look at [our article](../../../misc/tools-and-utilities/dvb/minisatip) and on developer [GitHub](https://github.com/catalinii/minisatip).
+What is important to mention, is that with the Minisatip server software, we also may use PCIe DVB cards and/or USB sticks (tuners) as SAT>IP Adapters at Astra Cesbo. For more details on how to use the Minisatip server look at [our article](/en/misc/tools-and-utilities/minisatip) and on developer [GitHub](https://github.com/catalinii/minisatip).
 
 ## Configuration
 
@@ -32,7 +32,7 @@ To use the SAT>IP protocol, you need to create New Adapter in the Astra Web Inte
 - `Type` - select adapter type (Satellite/Terrestrial/Cable)
 
 Depending on the reception type, you will need additionally configure the Transponder data or Frequency to scan. You can find more detailed information at the following links:
-[Introduction to DVB Adapter Tuning](./intro) and [DVB-S/S2 Tuner Options](./s)
+[Introduction to DVB Adapter Tuning](/en/astra/receiving/intro) and [DVB-S/S2 Tuner Options](/en/astra/receiving/s)
 
 Save adapter settings by clicking "Apply" button. Now you can click on the "Scan" button and select the required programs.
 

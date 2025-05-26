@@ -17,7 +17,7 @@ For example, to receive a stream from a DVB Adapter with the identifier `a001` a
 dvb://a001#pnr=1
 ```
 
-Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](../receiving/scan) and [Receiving MPTS via UDP](../receiving/mpts-via-udp)
+Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](/en/astra/receiving/scan) and [Receiving MPTS via UDP](/en/astra/receiving/mpts-via-udp)
 
 ## Filter service tables
 
@@ -59,7 +59,7 @@ During the demultiplexing process, Astra discards all packets and associated inf
 dvb://a001#pnr=1&cas
 ```
 
-This option becomes essential when descrambling streams using dedicated CAM modules. Read more in our article: [Descrambling channels with External DVB-CI](../receiving/external-ci)
+This option becomes essential when descrambling streams using dedicated CAM modules. Read more in our article: [Descrambling channels with External DVB-CI](/en/astra/receiving/external-ci)
 
 ## Change program number
 

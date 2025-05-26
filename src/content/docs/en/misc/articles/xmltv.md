@@ -1,5 +1,5 @@
 ---
-title: "XMLTV"
+title: XMLTV
 date: 2023-06-13
 sidebar:
     order: 9
@@ -95,6 +95,6 @@ Nested elements:
 
 The Event Information Table (EIT) is a part of the MPEG-2 Transport Stream (MPEG-TS) used in digital broadcasting. This table contains metadata about the scheduled events or programmes on various channels, similar to the programme guide one might find on a digital TV or set-top box.
 
-XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](../tools-and-utilities/eit-stream)
+XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/en/misc/tools-and-utilities/eit-stream)
 
 EIT packet could be extracted from MPEG-TS stream and saved to XMLTV files with Astra.

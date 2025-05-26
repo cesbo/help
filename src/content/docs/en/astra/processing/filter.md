@@ -1,5 +1,5 @@
 ---
-title: "Filtering Stream PIDs"
+title: Filtering Stream PIDs
 date: 2023-07-17
 sidebar:
     order: 2
@@ -16,9 +16,9 @@ To identify available elementary streams and their PIDs, it's necessary to analy
 On the provided screenshot, we can see the following elementary streams:
 
 1. Video - PID: `1331`
-2. Subtitle - PID: `1335`, Language: `bul` (Bulgarian)
-3. Audio - PID: `1332`, Language: `bul` (Bulgarian)
-4. Audio - PID: `1336`, Language: `eng` (English)
+1. Subtitle - PID: `1335`, Language: `bul` (Bulgarian)
+1. Audio - PID: `1332`, Language: `bul` (Bulgarian)
+1. Audio - PID: `1336`, Language: `eng` (English)
 
 Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Filtering in Astra.
 
@@ -46,4 +46,4 @@ In the `Map PIDs` field, `video=101, audio.eng=102` has been set. This alters th
 
 Subsequently, in the `Filter PID` field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
 
-Read more: [Remap PIDs](./remap)
+Read more: [Remap PIDs](/en/astra/processing/remap)

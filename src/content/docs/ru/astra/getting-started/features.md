@@ -45,7 +45,7 @@ sidebar:
 - Доставка потоков по IP сетям с UDP мультикастом
 - SRT протокол в режиме listenner или caller
 
-[Читать больше...](/ru/astra/delivery)
+[Читать больше...](/ru/astra/delivery/mpts-settings)
 
 ## Управление
 

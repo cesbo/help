@@ -14,7 +14,7 @@ A common method used in this process is the Common Interface (CI), an interface 
 ## Advantages of External DVB-CI
 
 - Encrypted channels from different sources can be grouped together for subsequent decryption in a single CI module. This can be quite useful if you have various DVB transponders with encrypted channels
-- Channels can be received and decrypted on a separate servers. It is especially convenient if you use SAT>IP receivers. You may have Astra server with CI cards stored in the server room, while SAT>IP receivers are located closer to the roof where satellite dishes are mounted. Read more about [Receiving SAT>IP](./satip-client) with Astra
+- Channels can be received and decrypted on a separate servers. It is especially convenient if you use SAT>IP receivers. You may have Astra server with CI cards stored in the server room, while SAT>IP receivers are located closer to the roof where satellite dishes are mounted. Read more about [Receiving SAT>IP](/en/astra/receiving/satip-client) with Astra
 
 ## Requirements
 

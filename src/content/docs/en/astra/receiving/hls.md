@@ -5,7 +5,7 @@ sidebar:
     order: 9
 ---
 
-HLS or HTTP Live Streaming is an HTTP-based adaptive bitrate video streaming protocol. It is most popular format for streaming over internet (OTT services). Read more about [HLS Protocol](../../misc/articles/hls)
+HLS or HTTP Live Streaming is an HTTP-based adaptive bitrate video streaming protocol. It is most popular format for streaming over internet (OTT services). Read more about [HLS Protocol](/en/misc/articles/hls)
 
 ## Address format
 

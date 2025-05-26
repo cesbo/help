@@ -23,7 +23,7 @@ udp://interface@address:port#options
 
 Additional Options:
 
-- `src=IP` - UDP multicast source address for IGMPv3. Should be enabled IGMPv3 in linux settings: [Configure IGMP Version](../../misc/tools-and-utilities/configure-igmp-version). Available from version 230303 and later
+- `src=IP` - UDP multicast source address for IGMPv3. Should be enabled IGMPv3 in linux settings: [Configure IGMP Version](/en/misc/tools-and-utilities/configure-igmp-version). Available from version 230303 and later
 - `sync` - receives UDP in separate thread with bitrate syncing
 - `no_sync` - disables bitrate syncing if enabled globally
 - `renew=seconds` - interval for renewing the multicast subscription. Usually operation renew IGMP subscription automatically
@@ -45,7 +45,7 @@ Most options presented in the web interface correspond directly to the component
 - `PNR` - program number for MPTS streams. When defined, it enables stream demultiplexing and selects the program with the specified number
 - `DD-CI CAM` - this option is now deprecated and has been replaced by virtual adapters. More information can be found in ...
 - `Softcam` - selects a descrambler for the CAM Client. You can learn more about this in ...
-- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](../processing/decrypt-biss)
+- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/en/astra/processing/decrypt-biss)
 
 There are also advanced options available for further customization:
 
@@ -55,4 +55,4 @@ Please use the advanced options only if you understand their implications
 
 ## Troubleshooting
 
-Find more information in [Troubleshooting UDP reception](../../misc/troubleshooting/udp)
+Find more information in [Troubleshooting UDP reception](/en/misc/troubleshooting/udp)

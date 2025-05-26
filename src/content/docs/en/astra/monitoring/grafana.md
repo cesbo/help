@@ -1,16 +1,16 @@
 ---
-title: "Integration Astra with Grafana"
+title: Integration Astra with Grafana
 date: 2023-06-10
 sidebar:
     order: 2
 ---
 
 Grafana is an open source analytics and interactive visualization web application.
-It works in pair with [InfluxDB](./influxdb) to visualize status of the Astra, stream, and adapters.
+It works in pair with [InfluxDB](/en/astra/monitoring/influxdb) to visualize status of the Astra, stream, and adapters.
 
 ## Install
 
-Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](./influxdb)
+Before Grafana installation, make sure that InfluxDB installed and configured: [Read more...](/en/astra/monitoring/influxdb)
 
 Download latest version from
 
