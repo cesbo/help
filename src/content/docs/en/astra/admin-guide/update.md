@@ -8,7 +8,7 @@ sidebar:
 Install new version on your server
 
 :::danger
-Before update please [Make a Backup](../../admin-guide/administration/backup)!
+Before update please [Make a Backup](/en/astra/admin-guide/backup)!
 :::
 
 ## Install update

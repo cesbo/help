@@ -15,8 +15,8 @@ This message printed as debug message in Astra logs, and as error message in the
 
 Check more information depending of the protocol you use for receiving stream:
 
-- UDP does not guarantee data delivery, so packets can be lost, duplicated, or arrive out of order. [UDP Troubleshooting](../../misc/troubleshooting/udp#too-many-errors-on-receiving-udp)
-- DVB depends of the signal quality, check errors on DVB adapter. [Common errors on DVB receiving](../../misc/troubleshooting/errors)
+- UDP does not guarantee data delivery, so packets can be lost, duplicated, or arrive out of order. [UDP Troubleshooting](/en/misc/troubleshooting/udp#too-many-errors-on-receiving-udp)
+- DVB depends of the signal quality, check errors on DVB adapter. [Common errors on DVB receiving](/en/misc/troubleshooting/errors)
 
 ## PES Error
 
@@ -32,4 +32,4 @@ In the channel settings (Single program stream), you can specify multiple source
 
 ## PAT: stream with id is not found
 
-No channel with the specified number (pnr) was found in the stream. To check available channels and their corresponding numbers, perform a scan the input with [Astra MPEG-TS Analyzer](../misc/tools-and-utilities/astra-mpeg-ts-analyzer).
+No channel with the specified number (pnr) was found in the stream. To check available channels and their corresponding numbers, perform a scan the input with [Astra MPEG-TS Analyzer](/en/misc/tools-and-utilities/astra-mpeg-ts-analyzer).

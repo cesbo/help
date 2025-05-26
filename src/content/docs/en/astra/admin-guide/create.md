@@ -1,5 +1,5 @@
 ---
-title: "Create New Stream"
+title: Create New Stream
 date: 2023-05-22
 sidebar:
     order: 10
@@ -15,7 +15,7 @@ The Single Program Stream (SPTS, also known as Channel or Service) serves as the
 
 In addition to redundancy, SPTS offers a range of processing options. These include filtering for transmitting only required media data, modifying stream information, descrambling to access protected streams, and scrambling to safeguard transmitted streams. Thus, SPTS provides a versatile and secure solution for TV channel formation.
 
-Read more about [Stream General Settings](general)
+Read more about [Stream General Settings](/en/astra/admin-guide/general)
 
 ## Multi Program Stream
 
@@ -25,4 +25,4 @@ The Multi Program Stream (MPTS, also known as Multiplex) is another type of stre
 
 This stream type also provides several features designed for broadcasting. These include options for defining the stream description, network information, network search, and logical channel numbers.
 
-Read more about [MPTS Settings](../delivery/mpts-settings)
+Read more about [MPTS Settings](/en/astra/delivery/mpts-settings)

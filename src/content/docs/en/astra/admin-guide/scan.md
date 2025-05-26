@@ -16,7 +16,7 @@ Request: `POST /control/`
 }
 ```
 
-- `scan` - stream address. Read more about [Media Address Format](../receiving/address-format)
+- `scan` - stream address. Read more about [Media Address Format](/en/astra/receiving/address-format)
 
 Response:
 
@@ -44,7 +44,7 @@ Request: `POST /control/`
 
 - `id` - identifier of the analyzer instance
 
-This method stops analyzer immediatelly.
+This method stops analyzer immediately.
 
 ## Get Information
 

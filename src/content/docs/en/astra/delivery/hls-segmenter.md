@@ -1,5 +1,5 @@
 ---
-title: "HLS Segmenter"
+title: HLS Segmenter
 date: 2023-05-26
 sidebar:
     order: 11
@@ -40,7 +40,7 @@ The resource path let choose path to the resources in the HLS Media Playlist:
 ### Other options
 
 - `Round duration value` - this function rounds the duration of media stream segments to integer values (not recommended)
-- `Use Expires header` - this option adds the Expires header to the HTTP response. This header is necessary for the caching proxies. Read more in [HLS Caching Proxy with Nginx](../../../misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+- `Use Expires header` - this option adds the Expires header to the HTTP response. This header is necessary for the caching proxies. Read more in [HLS Caching Proxy with Nginx](/en/misc/tools-and-utilities/hls-caching-proxy-with-nginx)
 - `Pass all data PIDs` - by default, only video and audio packets writes to the HLS segments. This option allow to write all Data packets.
 
 ### HLS Media Playlist

@@ -1,5 +1,5 @@
 ---
-title: "HTTP Authorization"
+title: HTTP Authorization
 data: 2023-06-19
 image: https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/og-image.png
 sidebar:
@@ -24,9 +24,9 @@ The second step is requesting channel access from Astra. During this step, the c
 
 The third step is autorizing request by Astra. Astra support next authorization methods:
 
-- [User Authorization](./user) - Astra use login and password or unique token defined in the user settings
-- [Middleware Authorization](./middleware) - Astra initiate subrequest to the Middleware with unique token and all information related to the request
-- [HTTP Securetoken](./securetoken) - Astra checks unique token with crypto algorithms to  to validate access
-- [HTTP IP](./ip) - Astra compares the user's IP address with an access list
+- [User Authorization](/en/astra/delivery/user) - Astra use login and password or unique token defined in the user settings
+- [Middleware Authorization](/en/astra/delivery/middleware) - Astra initiate subrequest to the Middleware with unique token and all information related to the request
+- [HTTP Securetoken](/en/astra/delivery/securetoken) - Astra checks unique token with crypto algorithms to  to validate access
+- [HTTP IP](/en/astra/delivery/ip) - Astra compares the user's IP address with an access list
 
 These methods offer customizable authorization workflows, allowing administrators to control access securely.
