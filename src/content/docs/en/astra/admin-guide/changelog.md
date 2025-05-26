@@ -1,5 +1,5 @@
 ---
-title: "Changelog"
+title: Changelog
 noindex: true
 sidebar:
     order: 6
@@ -91,9 +91,9 @@ If your address contains the # symbol in the streamid option, it should be chang
 ### DVB Virtual adapters
 
 Virtual adapters is an option in the Adapter settings for easy setup streams:
-- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](../receiving/mpts-via-udp)
-- CI adapter: you may configure channels descrambling with external CI adapters like DigitalDevices Octopus Twin CI or TBS6900. [Read more](../receiving/external-ci)
-- SAT>IP adapter: this is replacement for the SAT>IP checkbox in previous versions. [Read more](../receiving/satip-client)
+- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](/en/astra/receiving/mpts-via-udp)
+- CI adapter: you may configure channels descrambling with external CI adapters like DigitalDevices Octopus Twin CI or TBS6900. [Read more](/en/astra/receiving/external-ci)
+- SAT>IP adapter: this is replacement for the SAT>IP checkbox in previous versions. [Read more](/en/astra/receiving/satip-client)
 - SAT>IP: increase receiving buffer size
 - SAT>IP: more log for HTTP connection errors
 
@@ -140,8 +140,8 @@ Output:
 ### Monitoring
 
 - Option `interval=SEC` for InfluxDB address to define sending intervals. Default is 60 second. For example: `https://example.com:8086#interval=5`
-- `app_mem_kb` in the [Process status API](process). Process memory usage in kilobytes
-- `video_count` and `audio_count` in the [Stream status API](stream)
+- `app_mem_kb` in the [Process status API](/en/astra/admin-guide/process). Process memory usage in kilobytes
+- `video_count` and `audio_count` in the [Stream status API](/en/astra/admin-guide/stream)
 
 ### Master-Slave
 

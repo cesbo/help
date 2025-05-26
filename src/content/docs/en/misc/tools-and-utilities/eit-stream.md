@@ -20,7 +20,7 @@ chmod +x /usr/bin/eit-stream
 
 Create a configuration file `/etc/eit-stream.conf` with any text editor. Example:
 
-```conf
+```ini
 xmltv = /opt/xmltv.xml
 output = udp://lo@239.0.0.1:1234
 onid = 8000
@@ -120,7 +120,7 @@ In the MPTS advanced settings turn on option "Pass EIT".
 
 Register service in systemd to start service in background and autostart on system startup. Create file `/etc/systemd/system/eit-stream.service`:
 
-```conf
+```ini
 [Unit]
 Description=eit-stream service
 After=network-online.target

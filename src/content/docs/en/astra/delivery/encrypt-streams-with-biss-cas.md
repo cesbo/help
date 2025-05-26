@@ -54,4 +54,4 @@ By using the `--ts-csa-ck` option followed by the BISS key, VLC will be able to 
 
 ## Receive scrambled streams with Astra
 
-To receive scrambled streams with Astra, please check this guide: [Decrypt streams with BISS CAS](../../processing/cas/decrypt-biss)
+To receive scrambled streams with Astra, please check this guide: [Decrypt streams with BISS CAS](/en/astra/processing/decrypt-biss)

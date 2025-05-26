@@ -1,0 +1,62 @@
+---
+title: General Settings
+date: 2023-03-23
+sidebar:
+    order: 16
+---
+
+General Settings in Astra encompass a collection of essential configuration options that allow you to customize and optimize your software setup.  These settings ensure a seamless streaming experience by managing aspects like InfluxDB integration, HTTP Server Settings, and Default Stream Options.
+
+## InfluxDB Integration
+
+The InfluxDB integration options in Astra allow you to configure the connection between Astra and InfluxDB for storing statistics related to streams and adapters.
+
+- `Instance Name` - data store name. As a default Astra used the InfluxDB
+- `InfluxDB Address` - attached storage address. As a default address of the InfluxDB is: `http://db-server:8086`
+- `InfluxDB Organization` - name of your orgranization in the InfluxDB settings
+- `InfluxDB Token` - if you need to connect an external interface, then you need to enter API token from clipboard
+
+For a detailed guide, please refer to [Integration Astra with InfluxDB](/en/astra/monitoring/influxdb)
+
+## Monitoring
+
+The Monitoring feature in Astra is a legacy option that enables sending event data, such as stream and adapter statistics, through HTTP POST requests to external services.
+
+Read more in: [Export Monitoring Events](/en/astra/monitoring/export-monitoring-events)
+
+## HTTP Server Options
+
+The HTTP Server Options in Astra allow you to configure the HTTP Server for providing access to media content using HTTP MPEG-TS or HLS protocols.
+
+- `HTTP Access Log` - full path to the file for writing the request log
+- `HTTP Sessions` - enables HTTP Sessions to authenticate and track user activity. When enabled, the "Sessions" item appears in the main menu to view all active sessions. Options enabled by default
+- `Sessions Backend Address` - webhook to export information about sessions on finalization
+- `Minimal Session Time` - send webhook information about sessions lasting longer than the minimal time.
+
+To enable HTTPS, configure the following options:
+
+- `TLS certificate chain` - full path to the certificate chain. For example: `/etc/dehydrated/certs/example.com/fullchain.pem`
+- `TLS certificate key` - full path to the certificate key. For example - `/etc/dehydrated/certs/example.com/privkey.pem`
+- `Disable TLS on primary port` - check this option if you want the primary port, defined by the command-line argument `-p PORT`, to work without HTTPS
+
+You can obtain a free certificate from Let's Encrypt. For a detailed guide, please refer to [HTTPS certificate with Dehydrated](/en/misc/tools-and-utilities/dehydrated)
+
+## Default stream options
+
+These settings are global for all streams (unless overridden in the stream settings)
+
+- `Start stream on demand` - activate streams in the presence of HTTP clients. Enabled by default
+- `HTTP Keep Active` - defines time in seconds, during which the stream will be active, despite the absence of clients. By the default is 0 - turns channel off immediately when last client closed session
+- `Backup Start Delay` - sets delay in seconds before switching to a backup source
+- `Backup Return Delay` - sets delay in seconds before returning to the previous source
+- `Default codepage` - define codepage for stream information in SDT
+- `Service provider` - your company name. Used in the SDT stream description
+- `Network name` - name of the provider's network. Used in the SDT stream description
+- `TCP Congestion Control` - defines the operation algorithm for TCP CC
+- `CC Limit` - sets limit on the number of CC errors in the source. After exceeding this limit - the source will be considered non-working
+- `Use multithreading for UDP receiving and transmitting` - launch separate threads for processing UDP sockets, turned on by the default
+- `Bind DVB adapters by MAC` - use DVB MAC addresses to bind configured adapters to the system device
+
+:::note
+After saving the general settings, Astra restarts
+:::

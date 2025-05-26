@@ -37,9 +37,9 @@ Let's take a closer look at each of these components and their respective roles 
 - `rtp` - RTP multicast or unicast
 - `srt` - SRT protocol
 - `http` - HTTP based protocols, by the default HTTP MPEG-TS, or HLS if media address ends with `.m3u8` extension
-- `resi` - [DVB-C modulator by DigitalDevices](/en/astra/receiving/resi-dvb-c-modulator)
-- `tbs` - [DVB-C modulator by TBS](/en/astra/receiving/tbs-dvb-c-modulator)
-- `it950x` - [DVB-T modulator by HiDes](/en/astra/receiving/hides-dvb-t-modulator)
+- `resi` - [DVB-C modulator by DigitalDevices](/en/astra/delivery/resi-dvb-c-modulator)
+- `tbs` - [DVB-C modulator by TBS](/en/astra/delivery/tbs-dvb-c-modulator)
+- `it950x` - [DVB-T modulator by HiDes](/en/astra/delivery/hides-dvb-t-modulator)
 - `file` - save stream to the MPEG-TS file, or directory on the server
 - `np` - (NetworkPush) the HTTP-based protocol, used to send streams from Astra to the remote server
 

@@ -52,7 +52,7 @@ sudo alta init
 - **Start service** - start service immediately after wizard.
 
 On your server you may launch as many services as you want. Just use unique service name and management port. Read more:
-[How To Use Systemctl to Manage Alta Services](/en/alta/admin-guide/administration/manage-services)
+[How To Use Systemctl to Manage Alta Services](/en/alta/admin-guide/manage-services)
 
 ## Login to Web Interface
 
