@@ -93,17 +93,17 @@ Approximately we can get 8 channels at one transponder, multiplied by 8 transpon
 
 First of all, we need to prepare our server machine and install Linux and Astra. Information about Ubuntu installation could be found on the [official web site](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](install)
+Astra installation is simple – just copy a single binary file to your server. Here, in detail, you may find how to [Install Astra](/en/astra/getting-started/install)
 
 Quite often customers forget to configure their Adapters before the next steps. So be sure that you have DVB card drivers installed on the server.
 
-- [DigitalDevices Driver Installation](../../misc/tools-and-utilities/dd-driver)
-- [TBS Driver Installation](../misc/tools-and-utilities/tbs-driver)
+- [DigitalDevices Driver Installation](../../../misc/tools-and-utilities/dd-driver)
+- [TBS Driver Installation](../../../misc/tools-and-utilities/tbs-driver)
 - For other adapters you may find information on the vender web site
 
 ### Receiving channels with Astra
 
-Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](../receiving/intro).
+Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](../../receiving/intro).
 
 To configure receiving channels from satellite we recommend to having a look at these articles:
 

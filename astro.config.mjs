@@ -79,8 +79,10 @@ export default defineConfig({
         starlightAutoSidebar(),
         starlightLlmsTxt(),
         starlightLinksValidator({
+            errorOnInconsistentLocale: true,
+            errorOnInvalidHashes: true,
+            errorOnRelativeLinks: true,
             errorOnLocalLinks: false,
-            errorOnRelativeLinks: false,
         }),
       ],
       }),

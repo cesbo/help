@@ -176,7 +176,7 @@ Example.
 
 
 :::note[Important!]
-This functionality is available only with an active [license](../getting-started/add-license).
+This functionality is available only with an active [license](/en/senta/getting-started/add-license).
 :::
 
 This functionality is being developed for integration with other systems, such as [Astra Cesbo](https://cesbo.com). But you can use it manually. At the moment, automatic input generation has been implemented.
