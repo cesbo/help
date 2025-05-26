@@ -23,13 +23,13 @@ El Protocolo HLS desactiva el inicio de streams bajo demanda y los canales funci
 - `Path to TV logos` - el parámetro se utiliza para especificar la ruta al directorio con los archivos del logotipo
 - `Custom name for playlist` - el parámetro cambia de nombre `playlist.m3u8` a un nombre arbitrario
 - `Playlist arrange` - esta opción permite seleccionar una categoría para agrupar canales. Puede configurar los grupos en Configuración -> Grupos
-- `playlist.m3u8` - Este es un enlace a la lista de reproducción de los canales. Puede utilizar la lista de reproducción en dispositivos móviles, ordenadores, televisores o descodificadores. Puede añadir detalles de autenticación a la lista de reproducción, por ejemplo `https://your-server/playlist.m3u8?token=xxx`. [Seguir leyendo](/es/astra/delivery/http-hls/playlist)
+- `playlist.m3u8` - Este es un enlace a la lista de reproducción de los canales. Puede utilizar la lista de reproducción en dispositivos móviles, ordenadores, televisores o descodificadores. Puede añadir detalles de autenticación a la lista de reproducción, por ejemplo `https://your-server/playlist.m3u8?token=xxx`. [Seguir leyendo](/es/astra/delivery/playlist)
 
 :::note
 Por defecto, la autenticación de acceso está desactivada. Sin autenticación, el acceso a los canales no está restringido, permitiendo que cualquiera pueda acceder potencialmente a los contenidos. Para restringir el acceso a sus canales, por favor considere habilitar la Autorización de Acceso o utilizar un Firewall de Sistema para limitar el acceso a su servidor. Esto ayudará a garantizar que su contenido permanezca seguro y accesible sólo a usuarios autorizados.
 :::
 
-## Logotipo del canal[](/es/astra/delivery/http-hls/http-play#channel-logo)
+## Logotipo del canal[](/es/astra/delivery/http-play#channel-logo)
 
 Si añade logotipos a las listas de reproducción de sus canales, ofrecerá a sus espectadores una experiencia visual más atractiva y fácil de usar. Los logotipos ayudan a los usuarios a identificar rápidamente sus canales favoritos y facilitan la navegación por la lista de reproducción.
 

@@ -91,9 +91,9 @@ En este registro de cambios hay una breve comparación con la última versión e
 
 Adaptadores virtuales es una opción en la configuración del adaptador para facilitar la configuración de los flujos:
 
-- Secuencias MPTS: puede definir la dirección de la secuencia MPTS y escanearla para añadir todos los canales por separado. [Más información](/es/astra/receiving/ip/mpts-via-udp)
-- Adaptador CI: puede configurar la descodificación de canales con adaptadores CI externos como DigitalDevices Octopus Twin CI o TBS6900. [Más información](/es/astra/receiving/dvb/external-ci)
-- Adaptador SAT>IP: sustituye a la casilla SAT>IP de versiones anteriores. [Más información](/es/astra/receiving/dvb/satip-client)
+- Secuencias MPTS: puede definir la dirección de la secuencia MPTS y escanearla para añadir todos los canales por separado. [Más información](/es/astra/receiving/mpts-via-udp)
+- Adaptador CI: puede configurar la descodificación de canales con adaptadores CI externos como DigitalDevices Octopus Twin CI o TBS6900. [Más información](/es/astra/receiving/external-ci)
+- Adaptador SAT>IP: sustituye a la casilla SAT>IP de versiones anteriores. [Más información](/es/astra/receiving/satip-client)
 - SAT>IP: aumentar el tamaño del búfer de recepción
 - SAT>IP: más log para errores de conexión HTTP
 
@@ -140,8 +140,8 @@ Salida:
 ### Supervisión
 
 - Opción `interval=SEC` para que la dirección de InfluxDB defina los intervalos de envío. Por defecto es de 60 segundos. Por ejemplo `https://example.com:8086#interval=5`
-- `app_mem_kb` en el [API de estado del proceso](/es/astra/admin-guide/api/process). Uso de la memoria del proceso en kilobytes
-- `video_count` y `audio_count` en el [API de estado del flujo](/es/astra/admin-guide/api/stream#get-stream-status)
+- `app_mem_kb` en el [API de estado del proceso](/es/astra/admin-guide/process). Uso de la memoria del proceso en kilobytes
+- `video_count` y `audio_count` en el [API de estado del flujo](/es/astra/admin-guide/stream#get-stream-status)
 
 ### Maestro-Esclavo
 
@@ -164,7 +164,7 @@ Salida:
 - Actualizar OpenSSL a v1.1.1t
 - Integrar LibUV v1.44.2 (preparando el cambio del procesamiento interno de eventos a libuv)
 
-## Versiones de archivo[](/es/astra/admin-guide/administration/changelog#archive-versions)
+## Versiones de archivo[](/es/astra/admin-guide/changelog#archive-versions)
 
 - [241024](https://cdn.cesbo.com/astra/builds/astra-241024)
 - [230719](https://cdn.cesbo.com/astra/builds/astra-230719)

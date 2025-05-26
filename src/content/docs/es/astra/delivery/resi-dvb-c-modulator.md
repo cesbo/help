@@ -18,7 +18,7 @@ Especificaciones técnicas:
 - Relación señal/ruido: 42 dB
 - Salida con 8 canales (por canal) 101 dBµV
 
-## Buscar modulador en el sistema[](/es/astra/delivery/hardware/resi-dvb-c-modulator#find-modulator-in-system)
+## Buscar modulador en el sistema[](/es/astra/delivery/resi-dvb-c-modulator#find-modulator-in-system)
 
 Utilice nuestra guía para [instalar el controlador de DigitalDevices](/es/misc/tools-and-utilities/dd-driver).
 
@@ -40,7 +40,7 @@ La salida mostrará una lista de dispositivos en el sistema:
 
 ## Ajustes Astra[](/es/astra/delivery/resi-dvb-c-modulator#astra-settings)
 
-1. Preparar [MPTS](/es/astra/delivery/broadcasting/mpts-settings) para modulador
+1. Preparar [MPTS](/es/astra/delivery/mpts-settings) para modulador
 1. En la configuración de salida, especifique la dirección: resi://#adapter=0&device=1 (0 - número de adaptador, 1 - modulador)
 1. En los ajustes MPTS NIT, configure las opciones del transpondedor
 

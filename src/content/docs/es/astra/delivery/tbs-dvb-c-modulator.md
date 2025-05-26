@@ -19,7 +19,7 @@ Especificaciones técnicas:
 - Modulación - 16QAM, 32QAM, 64QAM, 128QAM, 256QAM
 - Nivel de salida RF - 5-120 dBuV
 
-## Configurar[](/es/astra/delivery/hardware/tbs-dvb-c-modulator#setup)
+## Configurar[](/es/astra/delivery/tbs-dvb-c-modulator#setup)
 
 Utilice nuestra guía para [instalar el controlador TBS](/es/misc/tools-and-utilities/tbs-driver). Utilice el siguiente comando para encontrar el número de adaptador y el número de dispositivo modulador:
 
@@ -37,15 +37,15 @@ En la salida - veremos los números de moduladores:
 - `tbsmod0` - número de adaptador
 - `mod1` - número de dispositivo
 
-## Ajustes Astra[](/es/astra/delivery/hardware/tbs-dvb-c-modulator#astra-settings)
+## Ajustes Astra[](/es/astra/delivery/tbs-dvb-c-modulator#astra-settings)
 
-1. Preparar [MPTS](/es/astra/delivery/broadcasting/mpts-settings) para modulador
+1. Preparar [MPTS](/es/astra/delivery/mpts-settings) para modulador
 2. En la configuración de salida, especifique la dirección: `tbs://#adapter=0&device=1` (0 - número de adaptador, 1 - modulador)
 3. En los ajustes MPTS NIT, configure las opciones del transpondedor
 
 ![Ajustes MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/mpts-nit.png)
 
-Más información en: [Televisión por cable con Astra para la hostelería](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry)
+Más información en: [Televisión por cable con Astra para la hostelería](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry)
 
 ### Opciones adicionales
 
@@ -54,7 +54,7 @@ Se podrían añadir opciones adicionales a la dirección de salida:
 - `bitrate=N` - El valor por defecto depende de la tasa de símbolos y del tipo de modulación. Por ejemplo, para symbolrate 6900 y 256-QAM el valor será 55
 - `gain=N` - nivel de señal en un rango de 0 a 100. Valor por defecto: 60
 
-## Solución de problemas[](/es/astra/delivery/hardware/tbs-dvb-c-modulator#troubleshooting)
+## Solución de problemas[](/es/astra/delivery/tbs-dvb-c-modulator#troubleshooting)
 
 ### No such file or directory
 

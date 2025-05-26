@@ -7,13 +7,13 @@ sidebar:
 
 La televisión digital es un servicio de alta carga y requiere algunos recursos. Astra no tiene restricciones en cuanto al número de canales o clientes. Sin embargo, los protocolos elegidos y los recursos disponibles pueden influir en estos parámetros.
 
-## Funcionamiento del software[](/es/astra/getting-started/first-steps/requirements#software-operation)
+## Funcionamiento del software[](/es/astra/getting-started/requirements#software-operation)
 
 Evite utilizar hardware de consumo o hardware obsoleto.
 
 Para el funcionamiento del sistema y del software en general recomendamos al menos 2Gb de RAM. Para reserva al menos un 20%.
 
-## Multidifusión UDP o difusión DVB[](/es/astra/getting-started/first-steps/requirements#udp-multicast-or-dvb-broadcast)
+## Multidifusión UDP o difusión DVB[](/es/astra/getting-started/requirements#udp-multicast-or-dvb-broadcast)
 
 Distribución de contenidos a través de redes UDP Multicast o DVB Broadcast, los requisitos del sistema son mínimos. Un solo servidor puede preparar todos los canales y distribuirlos por la red.
 
@@ -34,7 +34,7 @@ Aproximadamente 2Gb de RAM son suficientes para entregar 100 canales.
 
 Evite utilizar VLAN, Bonding y adaptadores de red de consumo.
 
-## HLS[](/es/astra/getting-started/first-steps/requirements#hls)
+## HLS[](/es/astra/getting-started/requirements#hls)
 
 La entrega de contenidos con el protocolo HLS es el proceso más complicado y que más recursos consume, debido a la naturaleza del protocolo.
 
@@ -58,11 +58,11 @@ Utilice adaptadores de red de nivel de servidor con tantas colas de Tx como sea 
 
 Debido a la naturaleza de HLS, todos los clientes se conectan directamente al servidor. Para el equilibrio de carga se recomienda el uso de servidores de caché. Leer más en [HLS Caching Proxy con Nginx](/es/misc/tools-and-utilities/hls-caching-proxy-with-nginx)
 
-## Canales de recepción[](/es/astra/getting-started/first-steps/requirements#receiving-channels)
+## Canales de recepción[](/es/astra/getting-started/requirements#receiving-channels)
 
 Los recursos para la recepción de canales no son tan importantes como la entrega. Alrededor de 1 Gb de RAM por cada 100 canales.
 
-## Resumen[](/es/astra/getting-started/first-steps/requirements#summary)
+## Resumen[](/es/astra/getting-started/requirements#summary)
 
 RAM total necesaria calculada como la suma de los:
 

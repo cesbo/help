@@ -7,7 +7,7 @@ sidebar:
 
 La instalación de Astra es un proceso sencillo: basta con copiar un único archivo binario a su servidor.
 
-## Requisitos[](/es/astra/getting-started/first-steps/install#requirements)
+## Requisitos[](/es/astra/getting-started/install#requirements)
 
 - Cualquier sistema operativo basado en Linux
 - CPU x86 de 64 bits
@@ -17,7 +17,7 @@ La instalación de Astra es un proceso sencillo: basta con copiar un único arch
 :::note En esta guía utilizamos el **rizo** para descargar archivos. La mayoría de las distribuciones de Linux tienen preinstalado **rizo**
 :::
 
-## Instalar Astra[](/es/astra/getting-started/first-steps/install#install-astra)
+## Instalar Astra[](/es/astra/getting-started/install#install-astra)
 
 Abra la consola de su servidor y descargue el archivo binario:
 
@@ -31,13 +31,13 @@ Instalación completada, ahora puede comprobar el número de versión:
 
 `astra -v` 
 
-## Obtener licencia[](/es/astra/getting-started/first-steps/install#get-license)
+## Obtener licencia[](/es/astra/getting-started/install#get-license)
 
 Se requiere una licencia válida para ejecutar Astra en su servidor. Puede obtener una licencia de demostración gratuita o comprar una suscripción en nuestro sitio web: [https://cesbo.com/astra-license](https://cesbo.com/astra-license)
 
 Para instalar la licencia siga las instrucciones del correo electrónico con la nueva licencia.
 
-## Lanzar Astra[](/es/astra/getting-started/first-steps/install#launch-astra)
+## Lanzar Astra[](/es/astra/getting-started/install#launch-astra)
 
 Después de la instalación, registre el nuevo servicio en el systemd:
 
@@ -47,9 +47,9 @@ Este comando registra Astra como un servicio del sistema con el nombre `astra` y
 
 `systemctl start astra` 
 
-Más información sobre la gestión de servicios y el lanzamiento de servicios adicionales en su servidor: [Gestionar el servicio Astra](/es/astra/getting-started/first-steps/manage-service).
+Más información sobre la gestión de servicios y el lanzamiento de servicios adicionales en su servidor: [Gestionar el servicio Astra](/es/astra/getting-started/manage-service).
 
-## Activar la ejecución automática[](/es/astra/getting-started/first-steps/install#enable-autorun)
+## Activar la ejecución automática[](/es/astra/getting-started/install#enable-autorun)
 
 Active la ejecución automática para su servicio:
 
@@ -57,8 +57,8 @@ Active la ejecución automática para su servicio:
 
 Servicio Now `astra` se iniciará automáticamente al arrancar el sistema.
 
-## Iniciar sesión en la interfaz web[](/es/astra/getting-started/first-steps/install#login-to-web-interface)
+## Iniciar sesión en la interfaz web[](/es/astra/getting-started/install#login-to-web-interface)
 
 Después de instalar Astra, puedes acceder a su interfaz web utilizando un navegador web - Chrome, Safari o Firefox. El puerto por defecto para la interfaz web es 8000. Así que la dirección de la interfaz será `http://your-server-address:8000`. Para iniciar sesión en la interfaz web, utilice el nombre de usuario y la contraseña predeterminados, ambos configurados como "admin". Se recomienda cambiar la contraseña predeterminada para evitar accesos no autorizados.
 
-Leer el siguiente artículo sobre [Astra Web Interface](/es/astra/getting-started/first-steps/web-interface)
+Leer el siguiente artículo sobre [Astra Web Interface](/es/astra/getting-started/web-interface)

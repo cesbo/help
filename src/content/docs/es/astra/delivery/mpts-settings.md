@@ -9,7 +9,7 @@ MPTS (Multi Program Transport Stream): flujo que contiene varios servicios (prog
 
 Abra la página principal (Dashboard) de Astra y busque el elemento `New Stream`en la esquina superior derecha, para abrir una nueva ventana. Visite `Multi Program Stream` y active la casilla correspondiente. Después de eso, usted tendrá campos adicionales.
 
-## General[](/es/astra/delivery/broadcasting/mpts-settings#general)
+## General[](/es/astra/delivery/mpts-settings#general)
 
 La ventana General permite configurar los parámetros básicos de un modulador DVB-T, incluyendo su gama de frecuencias, esquema de modulación y nivel de salida.
 
@@ -29,7 +29,7 @@ Definiciones de los elementos de un bloque:
 - `TSID` - este parámetro (Transport Stream ID) es un identificador único para un flujo de transporte DVB. Se utiliza para diferenciar entre flujos de transporte transmitidos por diferentes fuentes o con diferente contenido. Por defecto es 1
 - `ONID` - este parámetro hace referencia al ID de red original, que se utiliza para identificar la red de origen a la que pertenece un canal. Es un identificador único asignado a una red, y se utiliza junto con el TSID para formar un identificador completo de la corriente de transporte. El valor ONID debe ser el mismo para todos los flujos de transporte dentro de una red determinada. Por defecto es 1
 
-## Lista de entradas[](/es/astra/delivery/broadcasting/mpts-settings#input-list)
+## Lista de entradas[](/es/astra/delivery/mpts-settings#input-list)
 
 La Lista de entradas de la ventana General se utiliza para definir los flujos de entrada que se utilizarán para modular la salida. Permite especificar la corriente de transporte, el número de programa y otros parámetros para cada corriente de entrada. La Lista de entradas puede editarse, añadirse o eliminarse según sea necesario.
 
@@ -47,7 +47,7 @@ udp://225.1.1.28:1234#set_pnr=12
 udp://225.1.1.29:1234#set_pnr=13
 ```
 
-## Lista de salida[](/es/astra/delivery/broadcasting/mpts-settings#output-list)
+## Lista de salida[](/es/astra/delivery/mpts-settings#output-list)
 
 La sección Lista de salidas de la ventana General muestra la lista de salidas que pueden configurarse para el modulador seleccionado. En esta sección, puede añadir o eliminar salidas y configurar sus parámetros. Cada salida de la lista está representada por una fila en la que se muestran sus parámetros y su estado. El estado de cada salida puede activarse o desactivarse mediante la casilla correspondiente de la primera columna de la fila de salida
 
@@ -57,7 +57,7 @@ La sección Lista de salidas de la ventana General muestra la lista de salidas q
 
 Igual que para el modo SPTS.
 
-## SDT[](/es/astra/delivery/broadcasting/mpts-settings#sdt)
+## SDT[](/es/astra/delivery/mpts-settings#sdt)
 
 La pestaña SDT es una ventana que permite configurar la Tabla de Descripción de Servicios, encargada de proporcionar información sobre los servicios disponibles en la corriente de transporte. Esta información puede incluir el nombre del servicio, el nombre del proveedor, el tipo de servicio y otros detalles. En otras palabras, la pestaña SDT proporciona una forma de definir y gestionar los servicios que estarán disponibles para los espectadores
 
@@ -69,7 +69,7 @@ La pestaña SDT es una ventana que permite configurar la Tabla de Descripción d
 - `Scrambled channel` - este parámetro es una casilla de verificación que indica si el canal seleccionado está codificado o no. Cuando está marcada, añade información a la descripción del canal de que éste está codificado. Los dvb-receptores modernos, centrándose en esta información, pueden mostrar en la pantalla del televisor los datos de que el canal está codificado
 - `LCN` - este parámetro significa Número Lógico de Canal. Es un identificador único asignado a cada canal o servicio en un sistema de radiodifusión digital
 
-## NIT[](/es/astra/delivery/broadcasting/mpts-settings#nit)
+## NIT[](/es/astra/delivery/mpts-settings#nit)
 
 La ventana "NIT" permite definir la tabla de información de red (NIT) de un modulador personalizado. La NIT contiene información sobre las redes disponibles para el usuario, como el ID de red, el nombre de red y la frecuencia.
 
@@ -82,7 +82,7 @@ La ventana "NIT" permite definir la tabla de información de red (NIT) de un mod
 - `FEC` - si sus flujos contienen FEC, seleccione el valor requerido. En caso contrario, seleccione el valor por defecto
 - `Modulation` - este parámetro permite seleccionar el tipo de modulación que se utilizará para el servicio seleccionado
 
-## Búsqueda en la red[](/es/astra/delivery/broadcasting/mpts-settings#network-search)
+## Búsqueda en la red[](/es/astra/delivery/mpts-settings#network-search)
 
 Centrándose en estos parámetros, dvb-tuner y televisores modernos pueden realizar la búsqueda rápida. No llevar a cabo en los decodificadores y TV búsqueda de canales completa (que por lo general toma mucho tiempo), configurar este servicio simple y necesario:
 
@@ -106,7 +106,7 @@ Centrándose en estos parámetros, dvb-tuner y televisores modernos pueden reali
 
 > Cómo funciona Durante la configuración del canal, el televisor o STB encuentra la frecuencia 378, con `mpts_1`, consiguió el `NIT` tablas para todos los multiplexores enlazados y escanearlos rápidamente.
 
-## Ficha Avanzado[](/es/astra/delivery/broadcasting/mpts-settings#advanced-tab)
+## Ficha Avanzado[](/es/astra/delivery/mpts-settings#advanced-tab)
 
 La pestaña Avanzado contiene opciones especiales y avanzadas para configurar el MPTS.
 

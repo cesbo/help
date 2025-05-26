@@ -11,7 +11,7 @@ El Basic Interoperable Scrambling System (BISS) es un sistema de acceso condicio
 Aunque BISS proporciona un nivel de protección de contenidos, es esencial señalar que este sistema no es recomendable debido a su débil mecanismo de protección. La clave CSA estática utilizada en BISS es susceptible a ataques de fuerza bruta.
 :::
 
-## Clave BISS[](/es/astra/delivery/cas/encrypt-streams-with-biss-cas#biss-key)
+## Clave BISS[](/es/astra/delivery/encrypt-streams-with-biss-cas#biss-key)
 
 La clave BISS es una secuencia de 8 bytes de longitud, representada como 16 símbolos hexadecimales. Por ejemplo, la clave `1234569C789ABCCE` puede desglosarse del siguiente modo:
 
@@ -22,7 +22,7 @@ La clave BISS es una secuencia de 8 bytes de longitud, representada como 16 sím
 
 En Astra, puede definir la clave como `12345600789ABC00`y Astra calculará automáticamente las sumas de comprobación por ti. Esto simplifica el proceso y ayuda a garantizar la precisión y la integridad de la clave BISS
 
-## Codificación de flujos transmitidos[](/es/astra/delivery/cas/encrypt-streams-with-biss-cas#scrambling-transmitted-streams)
+## Codificación de flujos transmitidos[](/es/astra/delivery/encrypt-streams-with-biss-cas#scrambling-transmitted-streams)
 
 Para codificar un flujo transmitido, añada el parámetro `biss` con la tecla adecuada a la Dirección de Salida. Por ejemplo:
 
@@ -32,7 +32,7 @@ udp://239.255.1.1:1234#biss=12345600789ABC00
 
 Al especificar la clave BISS en la Dirección de Salida, Astra codificará automáticamente el canal utilizando la clave proporcionada.
 
-## Analizar el flujo codificado[](/es/astra/delivery/cas/encrypt-streams-with-biss-cas#analyze-scrambled-stream)
+## Analizar el flujo codificado[](/es/astra/delivery/encrypt-streams-with-biss-cas#analyze-scrambled-stream)
 
 Puedes comprobar si un canal está codificado utilizando el analizador Astra MPEG-TS. Para ello, inicia el analizador con el siguiente comando:
 
@@ -42,7 +42,7 @@ astra --analyze udp://239.255.1.1:1234
 
 El analizador escribirá mensajes en la consola, indicando que el flujo está codificado.
 
-## Reproducir secuencias codificadas con VLC Player[](/es/astra/delivery/cas/encrypt-streams-with-biss-cas#play-scrambled-streams-with-vlc-player)
+## Reproducir secuencias codificadas con VLC Player[](/es/astra/delivery/encrypt-streams-with-biss-cas#play-scrambled-streams-with-vlc-player)
 
 Los flujos codificados pueden recibirse y visualizarse con VLC Player. Para iniciar VLC con la clave BISS adecuada desde la línea de comandos, introduzca el siguiente comando:
 
@@ -52,6 +52,6 @@ vlc --ts-csa-ck 1234569C789ABCCE udp://@239.255.1.1:1234
 
 Utilizando el `--ts-csa-ck` seguida de la clave BISS, VLC podrá descifrar y reproducir el contenido sin problemas. Asegúrate de proporcionar la clave BISS correcta con las sumas de comprobación calculadas.
 
-## Recibe flujos codificados con Astra[](/es/astra/delivery/cas/encrypt-streams-with-biss-cas#receive-scrambled-streams-with-astra)
+## Recibe flujos codificados con Astra[](/es/astra/delivery/encrypt-streams-with-biss-cas#receive-scrambled-streams-with-astra)
 
-Para recibir flujos codificados con Astra, consulta esta guía: [Descifrar flujos con BISS CAS](/es/astra/processing/cas/decrypt-biss)
+Para recibir flujos codificados con Astra, consulta esta guía: [Descifrar flujos con BISS CAS](/es/astra/processing/decrypt-biss)

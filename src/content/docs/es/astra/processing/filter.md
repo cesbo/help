@@ -7,7 +7,7 @@ sidebar:
 
 El filtrado de secuencias elimina paquetes específicos dentro de la secuencia MPEG-TS en función de sus PID. Además, el proceso modifica las correspondientes tablas de información específicas del programa, como la tabla de asociación de programas (PAT) y la tabla de mapas de programas (PMT), para reflejar la eliminación de los paquetes identificados.
 
-## Analizar el canal[](/es/astra/processing/mpegts/filter#analyze-channel)
+## Analizar el canal[](/es/astra/processing/filter#analyze-channel)
 
 Para identificar los flujos elementales disponibles y sus PID, es necesario analizar el canal. Para ello, inicia el analizador MPEG-TS integrado desde el menú del canal o directamente desde los ajustes del canal.
 
@@ -22,13 +22,13 @@ En la captura de pantalla proporcionada, podemos ver los siguientes flujos eleme
 
 Cada flujo elemental está representado por un identificador de paquete (PID) único, que puede utilizarse para el filtrado de flujos en Astra.
 
-## Filtrado de entrada[](/es/astra/processing/mpegts/filter#input-filtering)
+## Filtrado de entrada[](/es/astra/processing/filter#input-filtering)
 
 Para poder realizar el filtrado del flujo, eliminaremos el flujo con PID 1336. Esta operación se puede realizar añadiendo el comando `filter=1336` a la dirección de entrada
 
 ![Opción de entrada](https://cdn.cesbo.com/help/astra/processing/utilities/filter/input-options.png)
 
-## Filtrado de entrada inverso[](/es/astra/processing/mpegts/filter#inverse-input-filtering)
+## Filtrado de entrada inverso[](/es/astra/processing/filter#inverse-input-filtering)
 
 Para realizar un filtrado inverso y eliminar todos los flujos excepto los especificados, puede utilizar el símbolo de la tilde (`~`) junto con la opción de filtro. Por ejemplo, para conservar sólo el flujo de vídeo y el flujo de audio en inglés (PIDs 1331 y 1336), se añadiría el parámetro `filter~=1331,1336` a la dirección de entrada. Esto eliminará todos los demás flujos, dejando sólo los flujos definidos.
 
@@ -36,7 +36,7 @@ Para comprobar los resultados del filtro de flujo aplicado, haga clic en "Aplica
 
 ![Analizar el flujo filtrado](https://cdn.cesbo.com/help/astra/processing/utilities/filter/analyze-filtered.png)
 
-## Filtrado de todas las entradas[](/es/astra/processing/mpegts/filter#filtering-for-all-inputs)
+## Filtrado de todas las entradas[](/es/astra/processing/filter#filtering-for-all-inputs)
 
 Para el filtrado de flujos en todas las entradas, el `Remap` en los ajustes del canal. Este método es adecuado con la función de reasignación.
 

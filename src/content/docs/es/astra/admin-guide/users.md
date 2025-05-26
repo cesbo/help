@@ -7,7 +7,7 @@ sidebar:
 
 Astra cuenta con un sencillo sistema de gestión de usuarios con tres tipos de usuario distintos, diseñados para satisfacer las necesidades de los administradores, el soporte técnico y los usuarios finales.
 
-## Funciones de los usuarios[](/es/astra/admin-guide/settings/users#user-roles)
+## Funciones de los usuarios[](/es/astra/admin-guide/users#user-roles)
 
 En Astra, existen tres roles de usuario principales, cada uno con diferentes niveles de acceso y funcionalidad:
 
@@ -15,7 +15,7 @@ En Astra, existen tres roles de usuario principales, cada uno con diferentes niv
 - `Observer` - Este rol permite el acceso de sólo lectura al panel de control de la interfaz web y a la API. Los observadores pueden supervisar el sistema, pero no pueden realizar cambios en los ajustes o configuraciones.
 - `User` - Esta función de usuario normal está diseñada para controlar el acceso a contenidos multimedia con autenticación HTTP integrada.
 
-## Lista de usuarios[](/es/astra/admin-guide/settings/users#user-list)
+## Lista de usuarios[](/es/astra/admin-guide/users#user-list)
 
 En la interfaz web de Astra, puedes acceder a la lista de usuarios navegando a Configuración->Usuarios
 
@@ -33,7 +33,7 @@ Si se activa la autenticación HTTP integrada para controlar el acceso a los med
 - `IP` - dirección IP del dispositivo permitido para el usuario, desde el que se permite el acceso a los contenidos multimedia
 - `Expiration` - fecha hasta la que la cuenta de usuario permanece activa
 
-## Nuevo usuario[](/es/astra/admin-guide/settings/users#new-user)
+## Nuevo usuario[](/es/astra/admin-guide/users#new-user)
 
 Para crear un nuevo usuario, abra la lista de usuarios accediendo a Configuración -> Usuarios. Haga clic en el botón "Nuevo usuario" situado en la parte superior de la lista.
 
@@ -47,7 +47,7 @@ Al crear un nuevo usuario, deberá rellenar los siguientes campos:
 - `Comment` - opcionalmente, añadir cualquier nota o comentario adicional sobre el usuario
 - `Type` - tipo de usuario apropiado
 
-## Autenticación HTTP integrada[](/es/astra/admin-guide/settings/users#built-in-http-authentication)
+## Autenticación HTTP integrada[](/es/astra/admin-guide/users#built-in-http-authentication)
 
 La autenticación HTTP integrada en Astra ayuda a controlar el acceso al contenido multimedia proporcionado. Puedes activar esta función accediendo a Configuración -> Autenticación HTTP en la interfaz web de Astra.
 

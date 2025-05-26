@@ -7,7 +7,7 @@ sidebar:
 
 InfluxDB es una base de datos de series temporales de código abierto.
 
-## Instale[](/es/astra/monitoring/export/influxdb#install)
+## Instale[](/es/astra/monitoring/influxdb#install)
 
 Descargue la última versión desde
 
@@ -20,7 +20,7 @@ Más información en el sitio oficial: [https://docs.influxdata.com/influxdb/lat
 
 InfluxDB es una base de datos de series temporales de código abierto.
 
-## Configuración de InfluxDB[](/es/astra/monitoring/export/influxdb#influxdb-configuration)
+## Configuración de InfluxDB[](/es/astra/monitoring/influxdb#influxdb-configuration)
 
 Abra la interfaz de administración de InfluxDB en `http://db-server:8086`.
 
@@ -39,7 +39,7 @@ El siguiente paso es conceder a Astra acceso al cubo. En la barra lateral izquie
 
 Ahora, InfluxDB está configurado y listo para recibir datos.
 
-## Configuración Astra[](/es/astra/monitoring/export/influxdb#astra-configuration)
+## Configuración Astra[](/es/astra/monitoring/influxdb#astra-configuration)
 
 Abra Configuración -> General en la interfaz web de Astra. Establece las opciones de configuración de InfluxDB:
 
@@ -49,7 +49,7 @@ Abra Configuración -> General en la interfaz web de Astra. Establece las opcion
 - `InfluxDB Token` - pegue el token generado en el paso anterior
 - Haga clic en "Aplicar y reiniciar".
 
-## Estructura de datos de InfluxDB[](/es/astra/monitoring/export/influxdb#influxdb-data-structure)
+## Estructura de datos de InfluxDB[](/es/astra/monitoring/influxdb#influxdb-data-structure)
 
 ### Corriente
 

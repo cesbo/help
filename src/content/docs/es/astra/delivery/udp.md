@@ -15,7 +15,7 @@ Una de las principales aplicaciones de UDP es la difusión de contenidos televis
 - Proveedores de servicios de Internet: Las redes locales de los proveedores de internet aprovechan este protocolo para ofrecer servicios de televisión digital a sus abonados
 - Instalaciones deportivas: Los estadios y los recintos deportivos pueden utilizar la multidifusión UDP para retransmitir en directo un partido a varias pantallas repartidas por el recinto.
 
-## Formato de dirección de medios[](/es/astra/delivery/broadcasting/udp#media-address-format)
+## Formato de dirección de medios[](/es/astra/delivery/udp#media-address-format)
 
 Media Address configura el destino del flujo UDP. El formato de esta dirección es el siguiente:
 
@@ -36,7 +36,7 @@ Se pueden definir opciones adicionales después de `#` y están separados por el
 - `no_sync` - desactivar la sincronización del bitrate si se ha activado globalmente
 - `cbr=Kbps` - activa la sincronización de la tasa de bits y activa la inserción de paquetes de relleno para lograr una tasa de bits constante.
 - `ttl=n` - controla el tiempo de vida del datagrama para evitar que se repita indefinidamente debido a errores de enrutamiento. El valor por defecto es `32`
-- `sap` - activar SAP. Más información [Protocolo de anuncio de sesión para multidifusión](/es/astra/delivery/broadcasting/sap)
+- `sap` - activar SAP. Más información [Protocolo de anuncio de sesión para multidifusión](/es/astra/delivery/sap)
 
 Aquí tienes algunos ejemplos de cómo se puede utilizar el formato de dirección multimedia en diferentes escenarios con Astra:
 
@@ -47,7 +47,7 @@ Aquí tienes algunos ejemplos de cómo se puede utilizar el formato de direcció
 - Active CBR para preparar el flujo para la modulación DVB: Si desea entregar un flujo UDP al modulador DVB, puede necesitar una tasa de bits constante, por ejemplo `24000Kbit/s`la dirección sería: `udp://239.255.0.4#cbr=24000`
 - Entrega Localhost con un Puerto Específico: Si usted necesita entregar un flujo UDP a un servicio en el mismo servidor, como FFMpeg para transcodificación, usted usaría la siguiente dirección: `udp://127.0.0.1:11000`
 
-## Interfaz web[](/es/astra/delivery/broadcasting/udp#web-interface)
+## Interfaz web[](/es/astra/delivery/udp#web-interface)
 
 Para configurar una nueva salida UDP utilizando la Interfaz Web, comience seleccionando "Nuevo Flujo" en el menú principal. A continuación, en la Lista de salidas, haga clic en el icono de engranaje y establezca el "Tipo de salida" en UDP. Alternativamente, puede modificar un flujo existente abriendo su configuración, añadiendo una Nueva Salida y haciendo clic en el icono del engranaje correspondiente.
 

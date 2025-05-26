@@ -18,7 +18,7 @@ Configurar la Exportación de EPG para extraer la Guía Electrónica de Programa
     - `http://` - enviar EPG mediante una solicitud HTTP POST. En el lado del servidor, se requiere una aplicación para gestionar la solicitud recibida, como EPG Aggregator
 - `Codepage` - decodificar el texto de los paquetes EIT recibidos utilizando la codificación definida. El texto almacenado siempre se codifica con UTF-8
 
-## Agregador EPG[](/es/astra/admin-guide/stream/epg#epg-aggregator)
+## Agregador EPG[](/es/astra/admin-guide/epg#epg-aggregator)
 
 EPG Aggregator es un script para que Astra reciba EPG de muchos servidores y los guarde en un único archivo XMLTV.
 

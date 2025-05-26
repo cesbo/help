@@ -13,7 +13,7 @@ El Segmentador HLS es una función de Astra para dividir el flujo continuo de me
 
 Astra funciona específicamente como segmentador HLS. Otras funciones, como la transcodificación y el almacenamiento en caché, requieren software adicional. Por ejemplo, se recomienda FFmpeg para la transcodificación, mientras que Nginx podría utilizarse para el almacenamiento en caché.
 
-## Opciones del segmentador HLS[](/es/astra/delivery/http-hls/hls-segmenter#hls-segmenter-options)
+## Opciones del segmentador HLS[](/es/astra/delivery/hls-segmenter#hls-segmenter-options)
 
 En la Interfaz Web de Astra las opciones HLS están disponibles en Ajustes -> HLS
 

@@ -7,7 +7,7 @@ sidebar:
 
 Sesiones es una lista de conexiones activas a salidas HTTP MPEG-TS o HLS.
 
-## Obtener lista de sesiones[](/es/astra/admin-guide/api/session#get-session-list)
+## Obtener lista de sesiones[](/es/astra/admin-guide/session#get-session-list)
 
 ```
 {
@@ -37,7 +37,7 @@ En respuesta será matriz de sesiones activas:
 - `addr` - dirección IP del cliente
 - `uptime` - el tiempo en segundos durante el que se ha estado ejecutando la sesión
 
-## Cerrar la sesión[](/es/astra/admin-guide/api/session#close-session)
+## Cerrar la sesión[](/es/astra/admin-guide/session#close-session)
 
 ```
 {

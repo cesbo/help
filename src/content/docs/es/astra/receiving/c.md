@@ -7,14 +7,14 @@ sidebar:
 
 DVB-C es una norma para la transmisión de televisión digital por cable.
 
-## Opciones generales[](/es/astra/receiving/dvb/c#general-options)
+## Opciones generales[](/es/astra/receiving/c#general-options)
 
 ![DVB-C Opciones generales](https://cdn.cesbo.com/help/astra/receiving/dvb/c/general.png)
 
 - `Frequency` - frecuencia portadora (80-1000 MHz)
 - `Symbolrate` - tasa de símbolos también conocida como tasa de baudios, se refiere al número de cambios de señal por segundo (1000-10000 Kbaud)
 
-## Opciones avanzadas[](/es/astra/receiving/dvb/c#advanced-options)
+## Opciones avanzadas[](/es/astra/receiving/c#advanced-options)
 
 ![Opciones avanzadas de DVB-C](https://cdn.cesbo.com/help/astra/receiving/dvb/c/advanced.png)
 

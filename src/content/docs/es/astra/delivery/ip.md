@@ -9,7 +9,7 @@ La Autorización IP compara la dirección IP solicitada con la lista predetermin
 
 ![Autenticación IP](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/ip.svg)
 
-## Lista global de IP[](/es/astra/delivery/http-hls-auth/ip#global-ip-list)
+## Lista global de IP[](/es/astra/delivery/ip#global-ip-list)
 
 Lista global de IP disponible en Configuración -> Autenticación HTTP
 
@@ -17,6 +17,6 @@ Lista global de IP disponible en Configuración -> Autenticación HTTP
 
 En esta lista puede definir direcciones IPv4 individuales y direcciones de red IPv4 en notación CIDR.
 
-## Configuración de la IP de usuario[](/es/astra/delivery/http-hls-auth/ip#user-ip-settings)
+## Configuración de la IP de usuario[](/es/astra/delivery/ip#user-ip-settings)
 
 En la configuración del usuario se puede definir la dirección IPv4. En este caso, la sesión podría estar vinculada al usuario.

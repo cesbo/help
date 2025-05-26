@@ -7,14 +7,14 @@ sidebar:
 
 Un problema común al retransmitir flujos HLS a redes de difusión, como satélite, cable, terrestre o multidifusión UDP, es la aparición de diversos artefactos como pixelación, desviaciones de sonido y chasquidos. Curiosamente, estos flujos funcionan bien cuando se reproducen en un PC. A menudo, los ingenieros echan la culpa al fabricante de la cabecera; sin embargo, para entender realmente la raíz del problema, es esencial examinar las características de la codificación de vídeo.
 
-## Codificación de vídeo[](/es/astra/delivery/broadcasting/limitations-of-hls-sources-for-broadcasting-networks#video-encoding)
+## Codificación de vídeo[](/es/astra/delivery/limitations-of-hls-sources-for-broadcasting-networks#video-encoding)
 
 La codificación de vídeo es el proceso de comprimir datos de vídeo para almacenarlos y transmitirlos con eficacia. Los flujos de vídeo se dividen en fotogramas:
 
 - Fotograma clave (fotograma I): contiene toda la imagen.
 - Fotogramas posteriores (fotogramas P y B): sólo cambia en relación con el fotograma anterior.
 
-## Velocidad de transmisión[](/es/astra/delivery/broadcasting/limitations-of-hls-sources-for-broadcasting-networks#stream-bitrate)
+## Velocidad de transmisión[](/es/astra/delivery/limitations-of-hls-sources-for-broadcasting-networks#stream-bitrate)
 
 La entrega de cada fotograma dentro de un plazo específico es crucial para garantizar una reproducción fluida y una sincronización adecuada del audio y el vídeo en las redes de difusión. Para lograrlo, los flujos de vídeo deben codificarse con una tasa de bits media más alta para mantener una tasa de bits predecible y uniforme. Equilibrar el tamaño del GOP y la calidad de la codificación es esencial para mantener una tasa de bits uniforme y lograr una calidad visual óptima en los flujos de vídeo destinados a la radiodifusión.
 
@@ -28,11 +28,11 @@ El gráfico ilustra que el flujo codificado para HLS tiene un bitrate medio bajo
 
 La flexibilidad de HLS no se traslada bien a las redes de radiodifusión, que requieren un ancho de banda constante y predecible para una transmisión y reproducción estables. Por eso, cuando se trabaja con flujos HLS y sistemas de radiodifusión, es esencial tener en cuenta las diferencias en los requisitos de bitrate y ajustar los parámetros de codificación en consecuencia para garantizar una transmisión y reproducción estables.
 
-## Picos de bitrate y difusión UDP[](/es/astra/delivery/broadcasting/limitations-of-hls-sources-for-broadcasting-networks#bitrate-peaks-and-udp-broadcasting)
+## Picos de bitrate y difusión UDP[](/es/astra/delivery/limitations-of-hls-sources-for-broadcasting-networks#bitrate-peaks-and-udp-broadcasting)
 
 Los picos de bitrate también pueden plantear problemas para la difusión UDP. La mayoría de los dispositivos de consumo, como los descodificadores (STB) y los televisores, tienen búferes de red limitados para recibir paquetes UDP. Cuando llegan muchos paquetes en poco tiempo debido a los picos de bitrate, el búfer de red del dispositivo puede verse desbordado, con la consiguiente pérdida de paquetes.
 
-## Solución[](/es/astra/delivery/broadcasting/limitations-of-hls-sources-for-broadcasting-networks#solution)
+## Solución[](/es/astra/delivery/limitations-of-hls-sources-for-broadcasting-networks#solution)
 
 Para flujos con una desviación moderada de la tasa de bits, puedes activar la función CBR (tasa de bits constante) en los ajustes de salida de Astra. Esta función ayuda a distribuir grandes fotogramas clave a lo largo del tiempo y añade paquetes TS vacíos para mantener una tasa de bits constante.
 

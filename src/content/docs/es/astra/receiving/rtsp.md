@@ -7,7 +7,7 @@ sidebar:
 
 El RSTP es un protocolo muy utilizado para la transmisión de contenidos multimedia a través de redes IP y se suele emplear en cámaras IP por su baja latencia y su capacidad de transmisión de vídeo de alta calidad.
 
-## Formato de la dirección[](/es/astra/receiving/ip/rtsp#address-format)
+## Formato de la dirección[](/es/astra/receiving/rtsp#address-format)
 
 Las direcciones RSTP se utilizan para identificar la ubicación del flujo de medios que se está transmitiendo por la red
 
@@ -27,7 +27,7 @@ Opciones:
 - `tcp` - modo intercalado. flujo de recepción a través de TCP en lugar de UDP
 - `ua=Name` - cabecera User-Agent personalizada
 
-## Interfaz web[](/es/astra/receiving/ip/rtsp#web-interface)
+## Interfaz web[](/es/astra/receiving/rtsp#web-interface)
 
 Para configurar una entrada RSTP en Astra, puede introducir la dirección de origen directamente en el campo `Input address` en la configuración del flujo o utilice el formulario de configuración de entrada al que se accede haciendo clic en el formulario con el icono del engranaje:
 
@@ -36,7 +36,7 @@ Para configurar una entrada RSTP en Astra, puede introducir la dirección de ori
 - `RSTP address` - dirección de origen del flujo RSTP
 - `Interleaved mode` - por defecto Astra utiliza UDP para recibir datos multimedia de la cámara, el modo intercalado fuerza a la cámara a enviar datos a través de TCP
 
-## Solución de problemas[](/es/astra/receiving/ip/rtsp#troubleshooting)
+## Solución de problemas[](/es/astra/receiving/rtsp#troubleshooting)
 
 ### h.265 no funciona
 

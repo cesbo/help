@@ -7,7 +7,7 @@ sidebar:
 
 Con Astra, puedes recibir MPTS (Multi Program Transport Stream) de diferentes fuentes, incluyendo UDP. El MPTS recibido puede demultiplexarse en varios canales SPTS (Single Program Transport Stream).
 
-## Adaptador virtual[](/es/astra/receiving/ip/mpts-via-udp#virtual-adapter)
+## Adaptador virtual[](/es/astra/receiving/mpts-via-udp#virtual-adapter)
 
 :::note
 Adaptador virtual disponible para versiones posteriores al 20 de septiembre de 2022
@@ -17,11 +17,11 @@ Para una configuración rápida y sencilla de la recepción MPTS, puede utilizar
 
 ![Adaptador virtual para MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
 
-En el **Dirección** establezca la fuente UDP, por ejemplo `udp://239.255.1.1:1234`. Más información sobre el formato de dirección UDP en [Recepción UDP/RTP](/es/astra/receiving/ip/udp).
+En el **Dirección** establezca la fuente UDP, por ejemplo `udp://239.255.1.1:1234`. Más información sobre el formato de dirección UDP en [Recepción UDP/RTP](/es/astra/receiving/udp).
 
 Aplica los cambios y, a continuación, puedes escanear el adaptador para obtener una lista de los canales disponibles. Seleccione los canales que desea añadir y haga clic en Aplicar.
 
-## Crear canales manualmente[](/es/astra/receiving/ip/mpts-via-udp#create-channels-manually)
+## Crear canales manualmente[](/es/astra/receiving/mpts-via-udp#create-channels-manually)
 
 En cualquier versión de Astra puedes añadir canales del flujo MPTS manualmente.
 

@@ -7,11 +7,11 @@ sidebar:
 
 Los registros de acceso HTTP contienen información sobre las solicitudes procesadas por el servidor HTTP integrado de Astra.
 
-## Configuración[](/es/astra/admin-guide/log/access#configuration)
+## Configuración[](/es/astra/admin-guide/access#configuration)
 
 Los registros de acceso HTTP están desactivados por defecto, puede activarlos en Configuración -> General, establezca la ruta completa al archivo de registro en el campo "Registro de acceso HTTP". Por ejemplo `/var/log/astra-access.log`
 
-## Campos de registro[](/es/astra/admin-guide/log/access#log-fields)
+## Campos de registro[](/es/astra/admin-guide/access#log-fields)
 
 ```
 192.168.88.100 - - [11/Aug/2023:07:03:07 +0000] "GET / HTTP/1.1" 200 0
@@ -26,7 +26,7 @@ El registro de acceso tiene el mismo formato que la mayoría de los servidores H
 remote_addr - remote_user [time] "request" status bytes_sent
 ```
 
-## Rotación de troncos[](/es/astra/admin-guide/log/access#log-rotation)
+## Rotación de troncos[](/es/astra/admin-guide/access#log-rotation)
 
 :::note 
 Utilice la rotación de registros para ahorrar espacio en disco y garantizar que sus registros se mantengan en buen estado.

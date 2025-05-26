@@ -7,19 +7,19 @@ sidebar:
 
 Astra proporciona una interfaz web que puedes utilizar para gestionar y configurar el software.
 
-## Acceso a la Interfaz Web[](/es/astra/getting-started/first-steps/web-interface#accessing-the-web-interface)
+## Acceso a la Interfaz Web[](/es/astra/getting-started/web-interface#accessing-the-web-interface)
 
 La Interfaz Web funciona bien en los siguientes navegadores: Firefox, Chrome o Safari.
 
 El puerto por defecto para la interfaz web es 8000. Para acceder a la interfaz web, introduzca la siguiente URL en su navegador web: `http://your-server-address:8000`donde tu-servidor es la dirección IP o el nombre de host del servidor donde está instalado Astra.
 
-## Iniciar sesión en la interfaz web[](/es/astra/getting-started/first-steps/web-interface#login-to-web-interface)
+## Iniciar sesión en la interfaz web[](/es/astra/getting-started/web-interface#login-to-web-interface)
 
 ![Inicio de sesión en la interfaz web](https://cdn.cesbo.com/help/astra/getting-started/web-interface/login.png)
 
 Nombre de usuario y contraseña por defecto: `admin`. Recomendamos cambiar la contraseña por defecto por una más segura para evitar accesos no autorizados.
 
-## Interfaz[](/es/astra/getting-started/first-steps/web-interface#interface-overview)
+## Interfaz[](/es/astra/getting-started/web-interface#interface-overview)
 
 ![Cuadro de mandos](https://cdn.cesbo.com/help/astra/getting-started/web-interface/dashboard.png)
 

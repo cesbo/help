@@ -7,7 +7,7 @@ sidebar:
 
 La demultiplexación MPEG-TS es el proceso de extraer flujos individuales de audio, vídeo y datos de una emisión combinada MPEG-TS, también conocida como multiplext o MPTS.
 
-## Extracción de un canal del múltiplex[](/es/astra/processing/mpegts/demux#extracting-single-channel-from-multiplex)
+## Extracción de un canal del múltiplex[](/es/astra/processing/demux#extracting-single-channel-from-multiplex)
 
 En la radiodifusión de televisión digital, el flujo recibido de fuentes como satélite, terrestre o redes de cable contiene múltiples canales. Para extraer un solo canal de este múltiplex, Astra ofrece una opción específica: `pnr`.
 
@@ -17,9 +17,9 @@ Por ejemplo, para recibir un flujo de un adaptador DVB con el identificador `a00
 dvb://a001#pnr=1
 ```
 
-Astra forma esta dirección automáticamente si escaneas el adaptador DVB y añades canales con la interfaz web. Más información: Escanear adaptador [DVB](/es/astra/receiving/dvb/scan) y [recibir MPTS vía UDP](/es/astra/receiving/ip/mpts-via-udp)
+Astra forma esta dirección automáticamente si escaneas el adaptador DVB y añades canales con la interfaz web. Más información: Escanear adaptador [DVB](/es/astra/receiving/scan) y [recibir MPTS vía UDP](/es/astra/receiving/mpts-via-udp)
 
-## Filtrar mesas de servicio[](/es/astra/processing/mpegts/demux#filter-service-tables)
+## Filtrar mesas de servicio[](/es/astra/processing/demux#filter-service-tables)
 
 En algunos casos es posible que desee eliminar las tablas de servicio suministradas con el canal. Para ello Astra tiene opciones de entrada adicionales:
 
@@ -34,7 +34,7 @@ Ejemplo:
 dvb://a001#pnr=1&no_sdt&no_eit
 ```
 
-## Pasar mesas de servicio sin modificar[](/es/astra/processing/mpegts/demux#pass-service-tables-without-modification)
+## Pasar mesas de servicio sin modificar[](/es/astra/processing/demux#pass-service-tables-without-modification)
 
 Durante el proceso de demultiplexado, Astra mantiene en las tablas EIT y SDT la información relacionada únicamente con el canal seleccionado. Si quieres pasar los paquetes tal cual, sin ningún cambio, puedes usar las siguientes opciones:
 
@@ -43,7 +43,7 @@ Durante el proceso de demultiplexado, Astra mantiene en las tablas EIT y SDT la 
 
 No se recomienda utilizar estas opciones y son incompatibles con `set_pnr` y `set_tsid` opciones.
 
-## Paquetes con datos privados[](/es/astra/processing/mpegts/demux#packets-with-private-data)
+## Paquetes con datos privados[](/es/astra/processing/demux#packets-with-private-data)
 
 Durante el proceso de demultiplexado, Astra excluye los paquetes que contienen datos desconocidos y sólo permite el paso de los flujos de Vídeo y Audio. Si desea conservar datos privados, utilice la opción `pass_data`:
 
@@ -51,7 +51,7 @@ Durante el proceso de demultiplexado, Astra excluye los paquetes que contienen d
 dvb://a001#pnr=1&pass_data
 ```
 
-## Paquetes con datos de acceso condicional[](/es/astra/processing/mpegts/demux#packets-with-conditional-access-data)
+## Paquetes con datos de acceso condicional[](/es/astra/processing/demux#packets-with-conditional-access-data)
 
 Durante el proceso de demultiplexación, Astra descarta todos los paquetes y la información asociada relacionada con el Sistema de Acceso Condicional (CAS). Si desea conservar estos datos, utilice la opción `cas`:
 
@@ -59,9 +59,9 @@ Durante el proceso de demultiplexación, Astra descarta todos los paquetes y la 
 dvb://a001#pnr=1&cas
 ```
 
-Esta opción resulta esencial cuando se descodifican flujos utilizando módulos CAM dedicados. Más información en nuestro artículo: [Descodificación de canales con DVB-CI externo](/es/astra/receiving/dvb/external-ci)
+Esta opción resulta esencial cuando se descodifican flujos utilizando módulos CAM dedicados. Más información en nuestro artículo: [Descodificación de canales con DVB-CI externo](/es/astra/receiving/external-ci)
 
-## Cambiar el número de programa[](/es/astra/processing/mpegts/demux#change-program-number)
+## Cambiar el número de programa[](/es/astra/processing/demux#change-program-number)
 
 Para personalizar el número de programa (PNR), utilice la opción `set_pnr`:
 

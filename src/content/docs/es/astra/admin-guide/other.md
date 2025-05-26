@@ -5,7 +5,7 @@ sidebar:
     order: 26
 ---
 
-## Versión Astra[](/es/astra/admin-guide/api/other#astra-version)
+## Versión Astra[](/es/astra/admin-guide/other#astra-version)
 
 Petición: `POST /control/`
 
@@ -15,7 +15,7 @@ Petición: `POST /control/`
 }
 ```
 
-## Astra Restart[](/es/astra/admin-guide/api/other#astra-restart)
+## Astra Restart[](/es/astra/admin-guide/other#astra-restart)
 
 Petición: `POST /control/`
 
@@ -25,7 +25,7 @@ Petición: `POST /control/`
 }
 ```
 
-## Descargar configuración[](/es/astra/admin-guide/api/other#download-configuration)
+## Descargar configuración[](/es/astra/admin-guide/other#download-configuration)
 
 Petición: `POST /control/`
 
@@ -37,7 +37,7 @@ Petición: `POST /control/`
 
 En la respuesta estará todo el archivo de configuración.
 
-## Cargar configuración[](/es/astra/admin-guide/api/other#upload-configuration)
+## Cargar configuración[](/es/astra/admin-guide/other#upload-configuration)
 
 Petición: `POST /control/`
 
@@ -50,7 +50,7 @@ Petición: `POST /control/`
 
 - `config` - archivo de configuración completo
 
-## Establecer número de serie[](/es/astra/admin-guide/api/other#set-serial-number)
+## Establecer número de serie[](/es/astra/admin-guide/other#set-serial-number)
 
 Petición: `POST /control/`
 
@@ -63,7 +63,7 @@ Petición: `POST /control/`
 
 - `license` - número de serie de la licencia
 
-## Establecer la imagen en el azulejo de flujo[](/es/astra/admin-guide/api/other#set-image-to-the-stream-tile)
+## Establecer la imagen en el azulejo de flujo[](/es/astra/admin-guide/other#set-image-to-the-stream-tile)
 
 Petición: `POST /control/`
 
@@ -78,4 +78,4 @@ Petición: `POST /control/`
 - `id` - identificador de flujo
 - `url` - dirección de la imagen, también se podría utilizar el formato de datos, por ejemplo: `data:image/png;base64,...`
 
-Este método se utiliza en el script para establecer capturas de pantalla para los mosaicos de flujo. Leer más en Capturas de pantalla de [canal en el panel de control](/es/astra/admin-guide/administration/mosaic).
+Este método se utiliza en el script para establecer capturas de pantalla para los mosaicos de flujo. Leer más en Capturas de pantalla de [canal en el panel de control](/es/astra/admin-guide/mosaic).

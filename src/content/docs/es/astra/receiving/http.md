@@ -7,7 +7,7 @@ sidebar:
 
 Protocolo basado en HTTP para streaming de vídeo. Astra recibe flujo continuo del servidor en respuesta HTTP.
 
-## Formato de la dirección[](/es/astra/receiving/ip/http#address-format)
+## Formato de la dirección[](/es/astra/receiving/http#address-format)
 
 ```
 http://address
@@ -30,6 +30,6 @@ Opciones:
 - `buffer_time=N` - especifica el tamaño del búfer temporal para recibir el flujo y sincronizar la tasa de bits. Astra descarga los datos del flujo en el búfer a la máxima velocidad y, a continuación, envía los datos de manera uniforme para su procesamiento
 - `no_sync` - es una opción corta para `buffer_time=0` desactiva la sincronización y descarga los datos del flujo sin límites
 
-## Interfaz web[](/es/astra/receiving/ip/http#web-interface)
+## Interfaz web[](/es/astra/receiving/http#web-interface)
 
 Para configurar la entrada HTTP MPEG-TS en Astra, sólo tienes que escribir la dirección de tu fuente en el campo Entrada.

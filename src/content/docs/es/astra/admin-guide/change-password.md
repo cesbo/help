@@ -13,7 +13,7 @@ Para administrar la interfaz de Astra, puede cambiar la contraseña de cualquier
 
 Si has cambiado tu propia contraseña, la interfaz web de Astra se recargará y deberás iniciar sesión con tu nueva contraseña.
 
-## Restablecer contraseña[](/es/astra/admin-guide/administration/change-password#reset-password)
+## Restablecer contraseña[](/es/astra/admin-guide/change-password#reset-password)
 
 La contraseña de la interfaz de Astra también se puede cambiar mediante el comando de la consola del servidor:
 

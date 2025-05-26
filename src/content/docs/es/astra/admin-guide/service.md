@@ -14,4 +14,4 @@ Los Ajustes del servicio ofrecen la opción de personalizar la información del 
 - `Service Name` - nombre público del servicio, que se mostrará en el televisor
 - `Codepage` - codificación de texto utilizada para las opciones Proveedor de servicios y Nombre del servicio
 - `HbbTV URL` - añadir URL a la HbbTV (televisión híbrida de banda ancha) para ofrecer funciones avanzadas de televisión interactiva
-- `Conditional Access` - proteger un arroyo mediante un Sistema de Acceso Condicionado para impedir el acceso no autorizado. Más información en [CAS y Simulcrypt](/es/astra/delivery/cas/cas-and-simulcrypt)
+- `Conditional Access` - proteger un arroyo mediante un Sistema de Acceso Condicionado para impedir el acceso no autorizado. Más información en [CAS y Simulcrypt](/es/astra/delivery/cas-and-simulcrypt)

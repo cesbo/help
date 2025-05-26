@@ -7,14 +7,14 @@ sidebar:
 
 Se necesita una licencia válida para poner en marcha Astra.
 
-## Tipo de licencia[](/es/astra/getting-started/first-steps/license#license-type)
+## Tipo de licencia[](/es/astra/getting-started/license#license-type)
 
 Astra tiene varios modelos de licencia:
 
 - **Demo** - esta es una licencia de prueba para probar nuestro software de forma gratuita, sin ningún límite funcional, por un período de 40 días. Es importante tener en cuenta que una licencia de demostración no está destinada a uso comercial, y sólo debe utilizarse con fines de evaluación.
 - **Suscripción** - el modelo de licencia ofrece una forma flexible y rentable de acceder a nuestro software. Además de proporcionar asistencia técnica, una licencia de suscripción también incluye actualizaciones periódicas del software que permiten a los usuarios acceder a las últimas funciones y correcciones de errores.
 
-## Nueva licencia[](/es/astra/getting-started/first-steps/license#new-license)
+## Nueva licencia[](/es/astra/getting-started/license#new-license)
 
 Puede adquirir una nueva licencia u obtener una demostración en nuestro sitio web: [Obtener licencia](https://cesbo.com/astra-license). Para instalar la nueva licencia siga las instrucciones del correo electrónico con la nueva licencia.
 
@@ -38,17 +38,17 @@ Para instalar la nueva licencia, siga las instrucciones del correo electrónico.
 systemctl restart astra
 ```
 
-## Renovar licencia[](/es/astra/getting-started/first-steps/license#renew-license)
+## Renovar licencia[](/es/astra/getting-started/license#renew-license)
 
 Puede renovar su suscripción en su perfil de nuestro sitio web: [Perfil](https://cesbo.com/profile). Su número de serie será el mismo que antes, por lo que no necesitará ninguna acción adicional.
 
 :::note Después de renovar su licencia, asegúrese de reiniciar Astra lo antes posible, por ejemplo, durante un periodo de mantenimiento programado o fuera de las horas punta.
 :::
 
-## Licencia de actualización[](/es/astra/getting-started/first-steps/license#upgrade-license)
+## Licencia de actualización[](/es/astra/getting-started/license#upgrade-license)
 
 Puede añadir más servidores a su suscripción en su perfil en nuestro sitio web: [Perfil](https://cesbo.com/profile). El precio de la actualización se calcula a partir de los días restantes de la suscripción con descuento por servidor adicional. Puede comprobar el precio en nuestra calculadora.
 
-## Transferencia de licencia[](/es/astra/getting-started/first-steps/license#transfer-license)
+## Transferencia de licencia[](/es/astra/getting-started/license#transfer-license)
 
 Usted puede transferir su licencia y suscripción a otra cuenta, por favor póngase en contacto con nosotros en el chat.

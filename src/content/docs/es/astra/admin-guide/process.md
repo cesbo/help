@@ -7,7 +7,7 @@ sidebar:
 
 En Astra, puede gestionar los procesos y controlar su estado mediante los métodos de la API HTTP.
 
-## Estado del sistema[](/es/astra/admin-guide/api/process#system-status)
+## Estado del sistema[](/es/astra/admin-guide/process#system-status)
 
 :::note
 Versión: 2021-04-12 o posterior
@@ -53,7 +53,7 @@ Respuesta:
 - `sys_uptime` - tiempo total de actividad del sistema en segundos
 - `app_uptime` - tiempo de actividad del proceso en segundos
 
-## Reiniciar Astra[](/es/astra/admin-guide/api/process#restart-astra)
+## Reiniciar Astra[](/es/astra/admin-guide/process#restart-astra)
 
 Petición: `POST /control/`
 

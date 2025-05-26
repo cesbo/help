@@ -5,11 +5,11 @@ sidebar:
     order: 2
 ---
 
-Grafana es una aplicación web de análisis y visualización interactiva de código abierto. Funciona en combinación con [InfluxDB](/es/astra/monitoring/export/influxdb) para visualizar el estado de Astra, el flujo y los adaptadores.
+Grafana es una aplicación web de análisis y visualización interactiva de código abierto. Funciona en combinación con [InfluxDB](/es/astra/monitoring/influxdb) para visualizar el estado de Astra, el flujo y los adaptadores.
 
-## Instale[](/es/astra/monitoring/export/grafana#install)
+## Instale[](/es/astra/monitoring/grafana#install)
 
-Antes de instalar Grafana, asegúrate de que InfluxDB está instalado y configurado: [Leer más...](/es/astra/monitoring/export/influxdb)
+Antes de instalar Grafana, asegúrate de que InfluxDB está instalado y configurado: [Leer más...](/es/astra/monitoring/influxdb)
 
 Descargue la última versión desde
 
@@ -20,13 +20,13 @@ Descargue la última versión desde
 
 Más información en el sitio oficial: [https://grafana.com/docs/grafana/latest/](https://grafana.com/docs/grafana/latest/)
 
-## Configuración de Grafana[](/es/astra/monitoring/export/grafana#grafana-configuration)
+## Configuración de Grafana[](/es/astra/monitoring/grafana#grafana-configuration)
 
 1. Abra la interfaz de administración de Grafana: `http://grafana-server:3000`
 2. En la página de inicio de sesión, introduzca `admin` para nombre de usuario y contraseña
 3. Establecer nueva contraseña
 
-## Añadir fuente de datos[](/es/astra/monitoring/export/grafana#append-data-source)
+## Añadir fuente de datos[](/es/astra/monitoring/grafana#append-data-source)
 
 Abra Configuración -> Fuentes de datos y haga clic en "Añadir fuente de datos", elija InfluxDB y configure las siguientes opciones:
 
@@ -40,7 +40,7 @@ Abra Configuración -> Fuentes de datos y haga clic en "Añadir fuente de datos"
 
 Haga clic en `Save & Test`deberías ver una notificación verde: `Bucket found`
 
-## Añadir cuadro de mandos[](/es/astra/monitoring/export/grafana#append-dashboard)
+## Añadir cuadro de mandos[](/es/astra/monitoring/grafana#append-dashboard)
 
 1. Descargue nuestra plantilla para Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
 2. Abrir: Crear -> Importar
@@ -49,7 +49,7 @@ Haga clic en `Save & Test`deberías ver una notificación verde: `Bucket found`
 5. Cualquier nombre para el cuadro de mandos
 6. Haga clic en `Import`
 
-## Cuadro de mandos[](/es/astra/monitoring/export/grafana#dashboard)
+## Cuadro de mandos[](/es/astra/monitoring/grafana#dashboard)
 
 ![Panel de control de Grafana](https://cdn.cesbo.com/help/astra/monitoring/export/grafana/dashboard.png)
 

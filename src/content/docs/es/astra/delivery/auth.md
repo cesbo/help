@@ -24,9 +24,9 @@ El segundo paso consiste en solicitar acceso al canal a Astra. Durante este paso
 
 El tercer paso es la autorización de la solicitud por parte de Astra. Astra soporta los siguientes métodos de autorización:
 
-- [Autorización de usuario](/es/astra/delivery/http-hls-auth/user): Astra utiliza el nombre de usuario y la contraseña o un token único definido en la configuración de usuario.
+- [Autorización de usuario](/es/astra/delivery/user): Astra utiliza el nombre de usuario y la contraseña o un token único definido en la configuración de usuario.
 - [Autorización del](/es/astra/delivery/middleware) Middleware - Astra inicia una subpetición al Middleware con un token único y toda la información relacionada con la petición.
 - [HTTP Securetoken](/es/astra/delivery/securetoken) - Astra comprueba el token único con algoritmos criptográficos para validar el acceso
-- [HTTP IP](/es/astra/delivery/http-hls-auth/ip) - Astra compara la dirección IP del usuario con una lista de acceso
+- [HTTP IP](/es/astra/delivery/ip) - Astra compara la dirección IP del usuario con una lista de acceso
 
 Estos métodos ofrecen flujos de trabajo de autorización personalizables, lo que permite a los administradores controlar el acceso de forma segura.

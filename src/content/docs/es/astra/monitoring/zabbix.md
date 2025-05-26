@@ -11,7 +11,7 @@ Zabbix es una plataforma de código abierto para la monitorización de servicios
 Disponible para las versiones de Astra lanzadas después del 2021-05-11
 :::
 
-## Instalación del servidor Zabbix[](/es/astra/monitoring/export/zabbix#zabbix-server-installation)
+## Instalación del servidor Zabbix[](/es/astra/monitoring/zabbix#zabbix-server-installation)
 
 Zabbix puede instalarse tanto en un servidor dedicado como en un servidor Astra
 
@@ -22,7 +22,7 @@ Zabbix puede instalarse tanto en un servidor dedicado como en un servidor Astra
 
 Encontrará información detallada en [los manuales de Zabbix](https://www.zabbix.com/manuals)
 
-## Instalación del Agente Zabbix[](/es/astra/monitoring/export/zabbix#zabbix-agent-installation)
+## Instalación del Agente Zabbix[](/es/astra/monitoring/zabbix#zabbix-agent-installation)
 
 Instala el Agente Zabbix en el servidor con Astra.
 
@@ -32,7 +32,7 @@ Instala el Agente Zabbix en el servidor con Astra.
 
 Encontrará información detallada en [los manuales del agente Zabbix](https://www.zabbix.com/documentation/current/manual/concepts/agent)
 
-## Configuración del Agente Zabbix[](/es/astra/monitoring/export/zabbix#zabbix-agent-configuration)
+## Configuración del Agente Zabbix[](/es/astra/monitoring/zabbix#zabbix-agent-configuration)
 
 En primer lugar el Agente Zabbix debe estar configurado para permitir conexiones entrantes desde el Servidor Zabbix. Abra el archivo de configuración del Agente ubicado en `/etc/zabbix/zabbix_agentd.conf` con tu editor favorito.
 
@@ -71,7 +71,7 @@ Y finalmente reinicie el Agente Zabbix:
 systemctl restart zabbix-agent
 ```
 
-## Configuración de Zabbix[](/es/astra/monitoring/export/zabbix#zabbix-configuration)
+## Configuración de Zabbix[](/es/astra/monitoring/zabbix#zabbix-configuration)
 
 ### Instalar plantilla Zabbix para Astra
 
@@ -101,7 +101,7 @@ Abra la pestaña Plantillas y en el campo `Link new templates` añadir `Astra AP
 
 Guarda los cambios. Después de unos 10 minutos, verá gráficos y disparadores sobre el estado de los canales y adaptadores
 
-## Ejemplos de gráficos[](/es/astra/monitoring/export/zabbix#chart-examples)
+## Ejemplos de gráficos[](/es/astra/monitoring/zabbix#chart-examples)
 
 ![Canales en Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-channel.png)
 

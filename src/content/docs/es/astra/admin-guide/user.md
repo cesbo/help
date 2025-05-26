@@ -7,7 +7,7 @@ sidebar:
 
 Usuarios utilizados para controlar el acceso a la interfaz web de Astra, así como el acceso a las salidas HTTP MPEG-TS y HLS.
 
-## Configuración del usuario[](/es/astra/admin-guide/api/user#user-configuration)
+## Configuración del usuario[](/es/astra/admin-guide/user#user-configuration)
 
 ```
 {
@@ -36,7 +36,7 @@ Campos opcionales para la autorización integrada de acceso a canales HLS o HTTP
 - `expire` - fecha en formato unix timestamp, en la que se restringirá el acceso a los canales
 - `connlimit` - limitar las conexiones a los canales
 
-## Obtener usuario[](/es/astra/admin-guide/api/user#get-user)
+## Obtener usuario[](/es/astra/admin-guide/user#get-user)
 
 Petición: `POST /control/`
 
@@ -51,7 +51,7 @@ Petición: `POST /control/`
 
 En respuesta será JSON con la configuración del usuario
 
-## Crear o actualizar usuario[](/es/astra/admin-guide/api/user#create-or-update-user)
+## Crear o actualizar usuario[](/es/astra/admin-guide/user#create-or-update-user)
 
 Petición: `POST /control/`
 
@@ -94,7 +94,7 @@ en caso de que Astra regrese con éxito:
 ``` 
 :::
 
-## Eliminar usuario[](/es/astra/admin-guide/api/user#remove-user)
+## Eliminar usuario[](/es/astra/admin-guide/user#remove-user)
 
 Petición: `POST /control/`
 
@@ -108,7 +108,7 @@ Petición: `POST /control/`
 }
 ```
 
-## Alternar usuario[](/es/astra/admin-guide/api/user#toggle-user)
+## Alternar usuario[](/es/astra/admin-guide/user#toggle-user)
 
 Petición: `POST /control/`
 

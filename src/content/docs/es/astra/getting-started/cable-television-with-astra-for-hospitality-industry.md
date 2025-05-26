@@ -10,7 +10,7 @@ Hospitality TV, que ofrece una excelente solución de televisión con emisiones 
 
 El número y la calidad de los canales crean una impresión positiva en los huéspedes. Sin embargo, aquí es donde surge el reto. Los hoteles tienen que modernizar su red de TV existente o diseñar una nueva, buscando un equilibrio entre los costes de los equipos y los servicios necesarios. Le sugerimos que considere el software Astra, que cuenta con funciones potentes y flexibles cuando se utiliza junto con un modulador DVB-C. En este artículo analizaremos los pros y los contras de esta solución y explicaremos los pasos necesarios para configurarla.
 
-## Ventajas de la televisión por cable[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
+## Ventajas de la televisión por cable[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
 
 - construido sobre un cable de TV normal, puede utilizar la red existente del hotel
 - un gran número de canales sin restricciones de calidad
@@ -19,12 +19,12 @@ El número y la calidad de los canales crean una impresión positiva en los hué
 - control de emisiones, como monitorización, configuración, conmutación de canales, etc. Todo esto es posible con Astra Web Interface
 - Por último, pero no menos importante, puedes ampliar de forma sencilla el número de fuentes y canales de vídeo. Astra te permite recibir una señal de entrada no sólo desde tarjetas DVB, sino también desde una red (HTTP, HLS, UDP, RTSP), así como crear tus canales de TV a partir de tus grabaciones de vídeo.
 
-## Desventajas[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#disadvantages)
+## Desventajas[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#disadvantages)
 
 - el coste de la cabecera, incluido el modulador DVB-C y las tarjetas DVB para recibir
 - es posible que algunos televisores antiguos no admitan el estándar DVB-C para la televisión por cable
 
-## Hardware[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#hardware)
+## Hardware[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#hardware)
 
 ![Diagrama de TV para hostelería](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
 
@@ -68,7 +68,7 @@ Según esto, podemos calcular cuántos canales podemos poner en un solo transpon
 
 Aproximadamente podemos obtener 8 canales en un transpondedor, multiplicado por 8 transpondedores podemos obtener hasta 64 canales en su red DVB-C. Esta combinación de canales puede ser diferente, depende de sus necesidades. Si necesita más canales puede obtener RESI DVB-C FSM 16 o 24.
 
-## Requisitos[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#requirements)
+## Requisitos[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#requirements)
 
 Hardware:
 
@@ -83,13 +83,13 @@ Software:
 - Controladores de tarjeta DVB
 - Navegador de Internet en tu PC. Chrome, Safari o Firefox
 
-## Configurar Astra[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#configure-astra)
+## Configurar Astra[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#configure-astra)
 
 ### Instalar Astra
 
 En primer lugar, tenemos que preparar nuestra máquina servidor e instalar Linux y Astra. La información sobre la instalación de Ubuntu se puede encontrar en el [sitio web oficial](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-La instalación de Astra es sencilla - sólo tienes que copiar un único archivo binario a tu servidor. Aquí, en detalle, usted puede encontrar cómo [instalar Astra](/es/astra/getting-started/first-steps/install)
+La instalación de Astra es sencilla - sólo tienes que copiar un único archivo binario a tu servidor. Aquí, en detalle, usted puede encontrar cómo [instalar Astra](/es/astra/getting-started/install)
 
 Muy a menudo los clientes olvidan configurar sus Adaptadores antes de los siguientes pasos. Así que asegúrese de que tiene instalados los controladores de la tarjeta DVB en el servidor.
 
@@ -103,9 +103,9 @@ Ahora es el momento de configurar todos nuestros Adaptadores y encontrar los can
 
 Para configurar la recepción de canales desde satélite te recomendamos que eches un vistazo a estos artículos:
 
-- [Introducción a la sintonización del adaptador DVB](/es/astra/receiving/dvb/intro)
-- [Opciones de sintonizador DVB-S/S2](/es/astra/receiving/dvb/s)
-- [Scan DVB Adaptador](/es/astra/receiving/dvb/scan)
+- [Introducción a la sintonización del adaptador DVB](/es/astra/receiving/intro)
+- [Opciones de sintonizador DVB-S/S2](/es/astra/receiving/s)
+- [Scan DVB Adaptador](/es/astra/receiving/scan)
 
 A continuación se muestra una captura de pantalla de la configuración del adaptador de ejemplo:
 
@@ -166,7 +166,7 @@ Como resultado, deberíamos obtener un Stream completamente configurado, como se
 
 ![MPTS en el salpicadero](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
 
-## Supervisar y gestionar[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
+## Supervisar y gestionar[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
 
 Con Astra, podrá Analizar la calidad y estabilidad de los flujos de transporte. Exportar estadísticas y eventos a sistemas externos como Zabbix o Grafana.
 
@@ -178,7 +178,7 @@ También puedes abrir en cualquier momento la interfaz web de Astra para ver el 
 
 ![Grafana](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/grafana.png)
 
-## Comprobación de la señal DVB-C de salida[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
+## Comprobación de la señal DVB-C de salida[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
 
 Con estos sencillos pasos hemos configurado nuestro Stream. Ahora tenemos los canales convertidos y modulados con el modulador RESI DVB-C FSM.
 
@@ -188,7 +188,7 @@ La mejor manera de comprobar la señal de salida es utilizar un analizador. Hay 
 
 Además, podemos conectar el cable coaxial del RESI al televisor y, en la configuración del televisor, realizar una nueva búsqueda de canales DVB-C, ya sea Búsqueda completa o Búsqueda de red (o especificar los parámetros de búsqueda manualmente). Los ajustes de búsqueda de canales dependen totalmente del fabricante del televisor, pero en general son muy similares.
 
-## Solución de problemas de recepción DVB[](/es/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
+## Solución de problemas de recepción DVB[](/es/astra/getting-started/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
 
 En caso de que surja algún problema durante la configuración, le ofrecemos una lista de artículos sobre cómo identificar problemas y eliminar la posible causa del problema: [Solución de problemas de recepción DVB](/es/misc/troubleshooting/dvb)
 
