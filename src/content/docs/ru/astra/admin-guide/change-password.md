@@ -13,7 +13,7 @@ sidebar:
 
 Если вы изменили свой пароль, то веб-интерфейс Astra будет перезагружен, и вам потребуется войти в систему с новым паролем.
 
-## Сброс пароля[](https://help.cesbo.com/astra/admin-guide/administration/change-password#reset-password)
+## Сброс пароля[](/ru/astra/admin-guide/administration/change-password#reset-password)
 
 Пароль интерфейса Astra можно также изменить с помощью команды консоли сервера:
 

@@ -7,13 +7,13 @@ sidebar:
 
 SSH - основной протокол и инструмент для управления удаленными серверами. Также позволяет создавать туннели и передавать файлы.
 
-## Подключение к серверу[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#connection-to-server)
+## Подключение к серверу[](/ru/misc/tools-and-utilities/network/ssh#connection-to-server)
 
 ```
 ssh root@192.168.1.1
 ```
 
-## Конфигурация клиента[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#client-configuration)
+## Конфигурация клиента[](/ru/misc/tools-and-utilities/network/ssh#client-configuration)
 
 SSH-клиент может работать без конфигурационного файла и получать все необходимые параметры из аргументов командной строки. Однако можно создать конфигурационный файл с именем `~/.ssh/config`. Этот файл должен содержать следующую информацию:
 
@@ -31,7 +31,7 @@ Host server-alias
 - `Port` - порт сервера. По умолчанию: `22`
 - `IdentityFile` - необязательное поле, указывающее полный путь к файлу закрытого ключа
 
-## Генерация ключей[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#key-generation)
+## Генерация ключей[](/ru/misc/tools-and-utilities/network/ssh#key-generation)
 
 В целях безопасности настоятельно рекомендуется использовать не пароли, а ключи аутентификации.
 
@@ -58,7 +58,7 @@ ssh-ed25519 AAAA...UUUU user@example.com
 echo "ssh-ed25519 AAAA...UUUU user@example.com" >>~/.ssh/authorized_keys
 ```
 
-## Копирование файла на сервер[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#copy-file-to-server)
+## Копирование файла на сервер[](/ru/misc/tools-and-utilities/network/ssh#copy-file-to-server)
 
 Для копирования файлов на сервер используйте следующую команду:
 
@@ -70,7 +70,7 @@ scp FILE 192.168.1.1:REMOTE
 - `192.168.1.1` - адрес сервера
 - `REMOTE` - абсолютный путь к файлу на сервере
 
-## Переадресация портов[](https://help.cesbo.com/misc/tools-and-utilities/network/ssh#port-forwarding)
+## Переадресация портов[](/ru/misc/tools-and-utilities/network/ssh#port-forwarding)
 
 Чтобы перенаправить трафик с удаленного сервера на локальный компьютер, используйте следующую команду:
 

@@ -8,10 +8,10 @@ sidebar:
 Установка новой версии на сервер:
 
 :::note
-Перед обновлением, пожалуйста [создайте резервную копию](https://help.cesbo.com/astra/admin-guide/administration/backup)!
+Перед обновлением, пожалуйста [создайте резервную копию](/ru/astra/admin-guide/administration/backup)!
 :::
 
-## Установка обновления[](https://help.cesbo.com/astra/admin-guide/administration/update#install-update)
+## Установка обновления[](/ru/astra/admin-guide/administration/update#install-update)
 
 Загрузите актуальную версию файла:
 

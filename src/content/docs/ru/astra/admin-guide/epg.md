@@ -18,7 +18,7 @@ sidebar:
     - `http://` - отправка EPG с помощью HTTP POST-запроса. На стороне сервера для обработки полученного запроса требуется приложение, например, EPG Aggregator
 - `Codepage` - декодирование текста из полученных EIT-пакетов с использованием заданной кодовой страницы. Хранимый текст всегда кодируется в формате UTF-8
 
-## Агрегатор EPG[](https://help.cesbo.com/astra/admin-guide/stream/epg#epg-aggregator)
+## Агрегатор EPG[](/ru/astra/admin-guide/stream/epg#epg-aggregator)
 
 EPG Aggregator - это скрипт для Astra, позволяющий получать EPG со многих серверов и сохранять его в единый файл XMLTV.
 

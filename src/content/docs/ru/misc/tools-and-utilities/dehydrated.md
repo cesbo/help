@@ -7,7 +7,7 @@ sidebar:
 
 Dehydrated - клиент для подписания сертификатов на ACME-сервере (например, Let's Encrypt). Этот клиент поддерживает как ACME v1, так и новую версию ACME v2, включая поддержку сертификатов с подстановочными знаками.
 
-## Установка Dehydrated[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#install-dehydrated)
+## Установка Dehydrated[](/ru/misc/tools-and-utilities/network/dehydrated#install-dehydrated)
 
 ```
 curl -Lo /usr/local/bin/dehydrated https://raw.githubusercontent.com/dehydrated-io/dehydrated/master/dehydrated
@@ -16,7 +16,7 @@ chmod +x /usr/local/bin/dehydrated
 
 Конфигурация должна быть восстановлена из резервной копии на `/etc/dehydrated` или можно создать новую конфигурацию.
 
-## Создание новой конфигурации[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#create-new-configuration)
+## Создание новой конфигурации[](/ru/misc/tools-and-utilities/network/dehydrated#create-new-configuration)
 
 Создайте каталог для конфигурации и сертификатов:
 
@@ -51,7 +51,7 @@ example.com www.example.com
 dehydrated --register --accept-terms
 ```
 
-## Запуск HTTP-сервера[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#launch-http-server)
+## Запуск HTTP-сервера[](/ru/misc/tools-and-utilities/network/dehydrated#launch-http-server)
 
 Web-сервер должен работать на порту 80 и обслуживать каталог `/opt/www`. Вы можете использовать любой другой каталог, но не забудьте изменить порт в конфигурации dehydrated.
 
@@ -62,7 +62,7 @@ mkdir -p /opt/www/.well-known/acme-challenge
 python3 -m http.server -d /opt/www 80
 ```
 
-## Создать сертификат[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#create-certificate)
+## Создать сертификат[](/ru/misc/tools-and-utilities/network/dehydrated#create-certificate)
 
 Для создания сертификата запустите следующую команду:
 
@@ -70,7 +70,7 @@ python3 -m http.server -d /opt/www 80
 dehydrated -c
 ```
 
-## Автообновление сертификата[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#autoupdate-certificate)
+## Автообновление сертификата[](/ru/misc/tools-and-utilities/network/dehydrated#autoupdate-certificate)
 
 Для автоматического обновления сертификата создайте сценарий для ежедневного задания cron `/etc/cron.daily/dehydrated.sh`. В этом сценарии напишите:
 
@@ -88,7 +88,7 @@ chmod +x /etc/cron.daily/dehydrated.sh
 
 Сертификат будет автоматически обновляться, когда до окончания срока действия останется 30 дней.
 
-## Использование сертификата[](https://help.cesbo.com/misc/tools-and-utilities/network/dehydrated#use-certificate)
+## Использование сертификата[](/ru/misc/tools-and-utilities/network/dehydrated#use-certificate)
 
 - Путь к сертификату: `/etc/dehydrated/certs/example.com/fullchain.pem`
 - Путь к закрытому ключу: `/etc/dehydrated/certs/example.com/privkey.pem`

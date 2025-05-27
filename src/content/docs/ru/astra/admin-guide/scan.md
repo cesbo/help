@@ -5,7 +5,7 @@ sidebar:
     order: 27
 ---
 
-## Запуск анализатора[](https://help.cesbo.com/astra/admin-guide/api/scan#start-analyzer)
+## Запуск анализатора[](/ru/astra/admin-guide/api/scan#start-analyzer)
 
 Запрос: `POST /control/`
 
@@ -16,7 +16,7 @@ sidebar:
 }
 ```
 
-- `scan` - адрес потока. Подробнее о [Формат медиа-адреса](https://help.cesbo.com/astra/receiving/general/address-format)
+- `scan` - адрес потока. Подробнее о [Формат медиа-адреса](/ru/astra/receiving/general/address-format)
 
 Ответ:
 
@@ -31,7 +31,7 @@ sidebar:
 
 Анализатор будет автоматически остановлен через 10 секунд. Для сохранения активности анализатора в течение более длительного времени используйте `scan-check` Метод API.
 
-## Стоп-анализатор[](https://help.cesbo.com/astra/admin-guide/api/scan#stop-analyzer)
+## Стоп-анализатор[](/ru/astra/admin-guide/api/scan#stop-analyzer)
 
 Запрос: `POST /control/`
 
@@ -46,7 +46,7 @@ sidebar:
 
 Этот метод сразу же останавливает анализатор.
 
-## Получить информацию[](https://help.cesbo.com/astra/admin-guide/api/scan#get-information)
+## Получить информацию[](/ru/astra/admin-guide/api/scan#get-information)
 
 Запрос: `POST /control/`
 

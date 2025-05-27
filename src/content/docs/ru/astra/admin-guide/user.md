@@ -7,7 +7,7 @@ sidebar:
 
 Пользователи, используемые для управления доступом к веб-интерфейсу Astra, а также доступом к выходам HTTP MPEG-TS и HLS
 
-## Конфигурация пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#user-configuration)
+## Конфигурация пользователя[](/ru/astra/admin-guide/api/user#user-configuration)
 
 ```
 {
@@ -36,7 +36,7 @@ sidebar:
 - `expire` - дата в формате unix timestamp, когда доступ к каналам будет ограничен
 - `connlimit` - ограничение подключений к каналам
 
-## Получить пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#get-user)
+## Получить пользователя[](/ru/astra/admin-guide/api/user#get-user)
 
 Запрос: `POST /control/`
 
@@ -51,7 +51,7 @@ sidebar:
 
 В ответ будет получен JSON с конфигурацией пользователя
 
-## Создание или обновление пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#create-or-update-user)
+## Создание или обновление пользователя[](/ru/astra/admin-guide/api/user#create-or-update-user)
 
 Запрос: `POST /control/`
 
@@ -94,7 +94,7 @@ END
 ``` 
 :::
 
-## Удалить пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#remove-user)
+## Удалить пользователя[](/ru/astra/admin-guide/api/user#remove-user)
 
 Запрос: `POST /control/`
 
@@ -108,7 +108,7 @@ END
 }
 ```
 
-## Переключить пользователя[](https://help.cesbo.com/astra/admin-guide/api/user#toggle-user)
+## Переключить пользователя[](/ru/astra/admin-guide/api/user#toggle-user)
 
 Запрос: `POST /control/`
 

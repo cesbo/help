@@ -7,7 +7,7 @@ sidebar:
 
 Технология rp\_filter является полезным инструментом для повышения безопасности и защиты серверов, принимающих многоадресный UDP-трафик, особенно для серверов с несколькими сетевыми интерфейсами. При настройке серверов на прием многоадресного UDP-трафика возможны два варианта: настройка системной маршрутизации для многоадресных групп или модификация настройки rp\_filter.
 
-## Настройка строгого режима для фильтра RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#configure-strict-mode-for-rp-filter)
+## Настройка строгого режима для фильтра RP[](/ru/misc/tools-and-utilities/network/rp-filter#configure-strict-mode-for-rp-filter)
 
 Чтобы изменить настройку rp\_filter, добавьте следующие строки в файл `/etc/sysctl.conf` файл:
 
@@ -21,7 +21,7 @@ net.ipv4.conf.eth0.rp_filter = 2
 sysctl -p
 ```
 
-## Значения фильтра RP[](https://help.cesbo.com/misc/tools-and-utilities/network/rp-filter#rp-filter-values)
+## Значения фильтра RP[](/ru/misc/tools-and-utilities/network/rp-filter#rp-filter-values)
 
 В Linux существует три возможных значения параметра rp\_filter:
 

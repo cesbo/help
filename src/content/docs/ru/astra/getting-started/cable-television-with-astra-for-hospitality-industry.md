@@ -10,7 +10,7 @@ Hospitality TV, предлагающее отличное телевизионн
 
 Количество и качество каналов создают положительное впечатление у гостей. Однако именно здесь и возникает проблема. Гостиницам приходится либо модернизировать существующую телевизионную сеть, либо создавать новую, находя баланс между стоимостью оборудования и необходимыми услугами. Мы предлагаем рассмотреть программное обеспечение Astra, которое обладает мощными и гибкими возможностями при использовании в сочетании с DVB-C модулятором. В этой статье мы рассмотрим плюсы и минусы такого решения, а также пройдемся по шагам его настройки.
 
-## Преимущества кабельного телевидения[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
+## Преимущества кабельного телевидения[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#advantages-of-cable-television)
 
 - построенный на обычном телевизионном кабеле, можно использовать существующую сеть отеля
 - большое количество каналов без ограничений по качеству
@@ -19,12 +19,12 @@ Hospitality TV, предлагающее отличное телевизионн
 - управление вещанием, такое как мониторинг, конфигурирование, переключение каналов и т.д. Все это возможно с помощью Web-интерфейса Astra
 - наконец, можно просто расширить количество источников видеосигнала и каналов. Astra позволяет принимать входной сигнал не только с DVB-карт, но и из сети (HTTP, HLS, UDP, RTSP), а также создавать свои телеканалы из видеозаписей.
 
-## Недостатки[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#disadvantages)
+## Недостатки[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#disadvantages)
 
 - стоимость головной станции, включая DVB-C модулятор и DVB-карты для приема
 - некоторые старые телевизоры могут не поддерживать стандарт DVB-C для кабельного телевидения
 
-## Оборудование[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#hardware)
+## Оборудование[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#hardware)
 
 ![Схема гостеприимного телевидения](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/ctv.svg)
 
@@ -67,7 +67,7 @@ Hospitality TV, предлагающее отличное телевизионн
 
 Приблизительно мы можем получить 8 каналов на одном транспондере, умножив их на 8 транспондеров, мы можем получить до 64 каналов в вашей сети DVB-C. Это сочетание каналов может быть различным, все зависит от ваших потребностей. Если Вам необходимо большее количество каналов, Вы можете приобрести RESI DVB-C FSM 16 или 24.
 
-## Требования[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#requirements)
+## Требования[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#requirements)
 
 Аппаратное обеспечение:
 
@@ -82,29 +82,29 @@ Hospitality TV, предлагающее отличное телевизионн
 - Драйверы DVB-карт
 - Интернет-браузер на компьютере. Chrome, Safari или Firefox
 
-## Настройка Astra[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#configure-astra)
+## Настройка Astra[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#configure-astra)
 
 ### Установка Astra
 
 Прежде всего, необходимо подготовить серверную машину и установить Linux и Astra. Информацию об установке Ubuntu можно найти на [официальном сайте](https://ubuntu.com/tutorials/install-ubuntu-server)
 
-Установка Astra очень проста - достаточно скопировать один бинарный файл на ваш сервер. Здесь подробно описано, как [установить Astra](https://help.cesbo.com/astra/getting-started/first-steps/install)
+Установка Astra очень проста - достаточно скопировать один бинарный файл на ваш сервер. Здесь подробно описано, как [установить Astra](/ru/astra/getting-started/first-steps/install)
 
 Довольно часто клиенты забывают настроить свои адаптеры перед выполнением следующих шагов. Поэтому убедитесь, что на сервере установлены драйверы DVB-карты.
 
-- [Установка драйверов DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
-- [Установка драйвера TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver)
+- [Установка драйверов DigitalDevices](/ru/misc/tools-and-utilities/dvb/dd-driver)
+- [Установка драйвера TBS](/ru/misc/tools-and-utilities/dvb/tbs-driver)
 - Информацию о других адаптерах можно найти на сайте производителя
 
 ### Прием каналов с помощью системы Astra
 
-Теперь самое время настроить все наши адаптеры и найти каналы, которые мы хотим модулировать по DVB-C. Список всех статей о приеме каналов доступен здесь: [Прием с помощью Astra](https://help.cesbo.com/astra/receiving).
+Теперь самое время настроить все наши адаптеры и найти каналы, которые мы хотим модулировать по DVB-C. Список всех статей о приеме каналов доступен здесь: [Прием с помощью Astra](/ru/astra/receiving).
 
 Для настройки приема каналов со спутника рекомендуем ознакомиться с этими статьями:
 
-- [Введение в настройку адаптера DVB](https://help.cesbo.com/astra/receiving/dvb/intro)
-- [Опции тюнера DVB-S/S2](https://help.cesbo.com/astra/receiving/dvb/s)
-- [Сканирование](https://help.cesbo.com/astra/receiving/dvb/scan)
+- [Введение в настройку адаптера DVB](/ru/astra/receiving/dvb/intro)
+- [Опции тюнера DVB-S/S2](/ru/astra/receiving/dvb/s)
+- [Сканирование](/ru/astra/receiving/dvb/scan)
 
 Ниже приведен скриншот примера настроек адаптера:
 
@@ -165,7 +165,7 @@ find "/dev/dvb" -name "mod*"
 
 ![MPTS на приборной панели](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/mpts-dashboard.png)
 
-## Мониторинг и управление[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
+## Мониторинг и управление[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#monitor-and-manage)
 
 С помощью Astra можно анализировать качество и стабильность транспортных потоков. Экспортировать статистику и события во внешние системы, такие как Zabbix или Grafana.
 
@@ -177,7 +177,7 @@ find "/dev/dvb" -name "mod*"
 
 ![Grafana](https://cdn.cesbo.com/help/astra/getting-started/ctv-with-astra/grafana.png)
 
-## Проверка выходного сигнала DVB-C[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
+## Проверка выходного сигнала DVB-C[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#checking-the-output-dvb-c-signal)
 
 С помощью этих простых шагов мы настроили наш поток. Теперь у нас есть каналы, преобразованные и промодулированные FSM-модулятором RESI DVB-C.
 
@@ -187,8 +187,8 @@ find "/dev/dvb" -name "mod*"
 
 Также мы можем подключить коаксиальный кабель от RESI к телевизору и в настройках телевизора произвести новое сканирование каналов DVB-C - Full Scan или Network Scan (или задать параметры сканирования вручную). Настройки поиска каналов полностью зависят от производителя телевизора, но в целом они очень похожи.
 
-## Поиск и устранение неисправностей при приеме сигнала DVB[](https://help.cesbo.com/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
+## Поиск и устранение неисправностей при приеме сигнала DVB[](/ru/astra/getting-started/use-cases/cable-television-with-astra-for-hospitality-industry#troubleshooting-dvb-receiving)
 
-В случае возникновения проблем при настройке мы приводим список статей по выявлению проблем и устранению потенциальной причины их возникновения: [Troubleshooting DVB receiving](https://help.cesbo.com/misc/troubleshooting/dvb)
+В случае возникновения проблем при настройке мы приводим список статей по выявлению проблем и устранению потенциальной причины их возникновения: [Troubleshooting DVB receiving](/ru/misc/troubleshooting/dvb)
 
 Мы заботимся о каждом нашем клиенте и о том, чтобы у вас остались самые лучшие впечатления от работы с Cesbo Astra, поэтому мы предлагаем больше каналов поддержки, таких как Online-помощь и поддержка по электронной почте.

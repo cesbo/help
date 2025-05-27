@@ -91,9 +91,9 @@ sidebar:
 
 Виртуальные адаптеры - это опция в настройках адаптера для упрощения настройки потоков:
 
-- MPTS-потоки: можно задать адрес MPTS-потока и просканировать его для добавления всех каналов по отдельности. [Подробнее](https://help.cesbo.com/astra/receiving/ip/mpts-via-udp)
-- CI-адаптер: можно настроить дешифрование каналов с помощью внешних CI-адаптеров, таких как DigitalDevices Octopus Twin CI или TBS6900. [Подробнее](https://help.cesbo.com/astra/receiving/dvb/external-ci)
-- Адаптер SAT>IP: это замена флажка SAT>IP в предыдущих версиях. [Подробнее](https://help.cesbo.com/astra/receiving/dvb/satip-client)
+- MPTS-потоки: можно задать адрес MPTS-потока и просканировать его для добавления всех каналов по отдельности. [Подробнее](/ru/astra/receiving/ip/mpts-via-udp)
+- CI-адаптер: можно настроить дешифрование каналов с помощью внешних CI-адаптеров, таких как DigitalDevices Octopus Twin CI или TBS6900. [Подробнее](/ru/astra/receiving/dvb/external-ci)
+- Адаптер SAT>IP: это замена флажка SAT>IP в предыдущих версиях. [Подробнее](/ru/astra/receiving/dvb/satip-client)
 - SAT>IP: увеличить размер приемного буфера
 - SAT>IP: больше журналов для ошибок HTTP-соединений
 
@@ -140,8 +140,8 @@ sidebar:
 ### Мониторинг
 
 - Вариант `interval=SEC` для адреса InfluxDB для определения интервалов отправки. По умолчанию это 60 секунд. Например: `https://example.com:8086#interval=5`
-- `app_mem_kb` в [API состояния процесса](https://help.cesbo.com/astra/admin-guide/api/process). Использование памяти процесса в килобайтах
-- `video_count` и `audio_count` в [API состояния потока](https://help.cesbo.com/astra/admin-guide/api/stream#get-stream-status)
+- `app_mem_kb` в [API состояния процесса](/ru/astra/admin-guide/api/process). Использование памяти процесса в килобайтах
+- `video_count` и `audio_count` в [API состояния потока](/ru/astra/admin-guide/api/stream#get-stream-status)
 
 ### Master-Slave
 

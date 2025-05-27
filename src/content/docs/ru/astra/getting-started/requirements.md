@@ -7,13 +7,13 @@ sidebar:
 
 Цифровое телевидение является высоконагруженным сервисом и требует определенных ресурсов. Astra не имеет ограничений на количество каналов и клиентов. Однако выбранные протоколы и доступные ресурсы могут влиять на эти параметры.
 
-## Работа программного обеспечения[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#software-operation)
+## Работа программного обеспечения[](/ru/astra/getting-started/first-steps/requirements#software-operation)
 
 Избегайте использования оборудования потребительского класса или устаревшего оборудования.
 
 Для работы системы и общего программного обеспечения рекомендуется не менее 2 Гб оперативной памяти. Для резерва - не менее 20%.
 
-## UDP Multicast или DVB вещание[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#udp-multicast-or-dvb-broadcast)
+## UDP Multicast или DVB вещание[](/ru/astra/getting-started/first-steps/requirements#udp-multicast-or-dvb-broadcast)
 
 Доставка контента по сетям UDP Multicast или DVB вещание требует минимальных системных требований. Всего один сервер может подготовить все каналы и распределить их по сети.
 
@@ -34,7 +34,7 @@ sidebar:
 
 Избегайте использования VLAN, Bonding и сетевых адаптеров потребительского класса.
 
-## [HLS](https://help.cesbo.com/astra/getting-started/first-steps/requirements#hls)
+## [HLS](/ru/astra/getting-started/first-steps/requirements#hls)
 
 Доставка контента по протоколу HLS является наиболее сложным и ресурсоемким процессом, что обусловлено самой природой протокола.
 
@@ -56,13 +56,13 @@ sidebar:
 
 ### Масштабирование
 
-В силу особенностей HLS все клиенты подключаются непосредственно к серверу. Для балансировки нагрузки мы рекомендуем использовать кэширующие серверы. Подробнее в статье [Кэширующий прокси-сервер HLS с Nginx](https://help.cesbo.com/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
+В силу особенностей HLS все клиенты подключаются непосредственно к серверу. Для балансировки нагрузки мы рекомендуем использовать кэширующие серверы. Подробнее в статье [Кэширующий прокси-сервер HLS с Nginx](/ru/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx)
 
-## Каналы приема[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#receiving-channels)
+## Каналы приема[](/ru/astra/getting-started/first-steps/requirements#receiving-channels)
 
 Ресурсы для приема каналов не так важны, как для доставки. Около 1 Гб оперативной памяти на 100 каналов.
 
-## Резюме[](https://help.cesbo.com/astra/getting-started/first-steps/requirements#summary)
+## Резюме[](/ru/astra/getting-started/first-steps/requirements#summary)
 
 Общая потребность в оперативной памяти рассчитывается как сумма:
 

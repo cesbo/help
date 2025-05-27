@@ -7,14 +7,14 @@ sidebar:
 
 Функция Remap в Astra позволяет изменять идентификатор пакета (PID) для элементарных потоков MPEG-TS.
 
-## Примеры использования[](https://help.cesbo.com/astra/processing/mpegts/remap#use-cases)
+## Примеры использования[](/ru/astra/processing/mpegts/remap#use-cases)
 
 Ремаппинг PID потоков полезен в различных сценариях:
 
 - Плавное резервирование входов: Если основной и резервный входы имеют разные PID для элементарных потоков видео и аудио, переключение на резервный вход может привести к временному прерыванию воспроизведения. Перестановка PID для обеспечения единообразия основных и резервных входов позволяет сделать переход плавным.
 - Подготовка многопрограммного потока (MPTS): При подготовке канала к включению в MPTS-вещание каждый элементарный поток в канале должен обладать уникальным PID. Ремаппинг обеспечивает уникальность этого PID, что позволяет плавно добавить канал в MPTS
 
-## Анализ канала[](https://help.cesbo.com/astra/processing/mpegts/remap#analyze-channel)
+## Анализ канала[](/ru/astra/processing/mpegts/remap#analyze-channel)
 
 Для определения доступных элементарных потоков и их PID необходимо проанализировать канал. Это можно сделать, запустив встроенный анализатор MPEG-TS либо из меню канала, либо непосредственно из настроек канала.
 
@@ -28,17 +28,17 @@ sidebar:
 
 Каждый элементарный поток представлен уникальным идентификатором пакета (PID), который может быть использован для ремаппинга потока в Astra.
 
-## Ограничения[](https://help.cesbo.com/astra/processing/mpegts/remap#limitations)
+## Ограничения[](/ru/astra/processing/mpegts/remap#limitations)
 
 Обратите внимание, что значение PID может находиться в диапазоне от 32 до 8190.
 
-## Ремаппинг ввода[](https://help.cesbo.com/astra/processing/mpegts/remap#input-remapping)
+## Ремаппинг ввода[](/ru/astra/processing/mpegts/remap#input-remapping)
 
 Для того чтобы выполнить перестановку потоков, изменим PID PMT на 100, PID видеопотока на 101, а PID аудиопотока на 102. Эту операцию можно выполнить, добавив в поле `map.pmt=100&map.video=101&map.audio.eng=102` опция на входной адрес
 
 ![Опция ввода](https://cdn.cesbo.com/help/astra/processing/utilities/remap/input-options.png)
 
-## Ремаппинг для всех входов[](https://help.cesbo.com/astra/processing/mpegts/remap#remapping-for-all-inputs)
+## Ремаппинг для всех входов[](/ru/astra/processing/mpegts/remap#remapping-for-all-inputs)
 
 Для ремаппинга потока по всем входам используется параметр `Remap` можно использовать вкладку в настройках канала.
 
@@ -50,7 +50,7 @@ sidebar:
 
 ![Анализ ремаппированного потока](https://cdn.cesbo.com/help/astra/processing/utilities/remap/analyze-remapped.png)
 
-## Селекторы[](https://help.cesbo.com/astra/processing/mpegts/remap#selectors)
+## Селекторы[](/ru/astra/processing/mpegts/remap#selectors)
 
 Селектор определяет, какой PID должен быть изменен на новое значение
 

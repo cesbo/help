@@ -7,7 +7,7 @@ sidebar:
 
 Журналы потоков содержат информацию о приеме и обработке потоков.
 
-## Ошибка CC[](https://help.cesbo.com/astra/admin-guide/log/stream#cc-error)
+## Ошибка CC[](/ru/astra/admin-guide/log/stream#cc-error)
 
 Ошибки CC (Continuity Counter) указывают на то, что непрерывность пакетов MPEG-TS нарушена. Ошибка может быть вызвана потерей или избытком пакетов MPEG-TS.
 
@@ -15,20 +15,20 @@ sidebar:
 
 Проверьте дополнительную информацию в зависимости от протокола, используемого для приема потока:
 
-- UDP не гарантирует доставку данных, поэтому пакеты могут теряться, дублироваться или приходить не по порядку. [Устранение неисправностей UDP](https://help.cesbo.com/misc/troubleshooting/receiving/udp#too-many-errors-on-receiving-udp)
-- DVB зависит от качества сигнала, проверьте ошибки на DVB-адаптере. [Распространенные ошибки при приеме DVB](https://help.cesbo.com/misc/troubleshooting/dvb/errors)
+- UDP не гарантирует доставку данных, поэтому пакеты могут теряться, дублироваться или приходить не по порядку. [Устранение неисправностей UDP](/ru/misc/troubleshooting/receiving/udp#too-many-errors-on-receiving-udp)
+- DVB зависит от качества сигнала, проверьте ошибки на DVB-адаптере. [Распространенные ошибки при приеме DVB](/ru/misc/troubleshooting/dvb/errors)
 
-## Ошибка PES[](https://help.cesbo.com/astra/admin-guide/log/stream#pes-error)
+## Ошибка PES[](/ru/astra/admin-guide/log/stream#pes-error)
 
 Поврежденный заголовок пакетов с медиаданными, такими как видео или аудио.
 
 - Проблемы с дескремблированием защищенного потока, такие как недействительный ключ, просроченная подписка, перегрев модуля условного доступа
 - Проблема с сигналом DVB из-за солнечных помех
 
-## Канал не имеет активных входов[](https://help.cesbo.com/astra/admin-guide/log/stream#channel-has-no-active-inputs)
+## Канал не имеет активных входов[](/ru/astra/admin-guide/log/stream#channel-has-no-active-inputs)
 
 Ошибка возникает, если в канале нет доступных источников для переключения. В настройках канала (Single program stream) можно указать несколько источников (Input) для резервирования. Эти источники работают в последовательном порядке - при отказе первого источника происходит переключение на второй и так далее. Ошибка возникает, если в канале отсутствуют доступные для переключения источники.
 
-## PAT: поток с идентификатором не найден[](https://help.cesbo.com/astra/admin-guide/log/stream#pat-stream-with-id-is-not-found)
+## PAT: поток с идентификатором не найден[](/ru/astra/admin-guide/log/stream#pat-stream-with-id-is-not-found)
 
-В потоке не обнаружен канал с указанным номером (pnr). Для проверки доступных каналов и соответствующих им номеров выполните сканирование входа с помощью [Astra MPEG-TS Analyzer](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer).
+В потоке не обнаружен канал с указанным номером (pnr). Для проверки доступных каналов и соответствующих им номеров выполните сканирование входа с помощью [Astra MPEG-TS Analyzer](/ru/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer).

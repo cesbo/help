@@ -7,13 +7,13 @@ sidebar:
 
 DVB-T/T2 - стандарт вещания цифрового наземного телевидения.
 
-## Общие опции[](https://help.cesbo.com/astra/receiving/dvb/t#general-options)
+## Общие опции[](/ru/astra/receiving/dvb/t#general-options)
 
 ![DVB-T/T2 Общие параметры](https://cdn.cesbo.com/help/astra/receiving/dvb/t/general.png)
 
 - `Frequency` - несущая частота (0-1000 МГц)
 
-## Дополнительные опции[](https://help.cesbo.com/astra/receiving/dvb/t#advanced-options)
+## Дополнительные опции[](/ru/astra/receiving/dvb/t#advanced-options)
 
 ![Дополнительные параметры DVB-T/T2](https://cdn.cesbo.com/help/astra/receiving/dvb/t/advanced.png)
 

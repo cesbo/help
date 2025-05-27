@@ -7,7 +7,7 @@ sidebar:
 
 InfluxDB - это база данных временных рядов с открытым исходным кодом.
 
-## Установка[](https://help.cesbo.com/astra/monitoring/export/influxdb#install)
+## Установка[](/ru/astra/monitoring/export/influxdb#install)
 
 Загрузите последнюю версию с сайта
 
@@ -20,7 +20,7 @@ InfluxDB - это база данных временных рядов с отк�
 
 InfluxDB - это база данных временных рядов с открытым исходным кодом.
 
-## Конфигурация InfluxDB[](https://help.cesbo.com/astra/monitoring/export/influxdb#influxdb-configuration)
+## Конфигурация InfluxDB[](/ru/astra/monitoring/export/influxdb#influxdb-configuration)
 
 Откройте интерфейс InfluxDB Admin по адресу `http://db-server:8086`.
 
@@ -39,7 +39,7 @@ InfluxDB - это база данных временных рядов с отк�
 
 Теперь InfluxDB настроена и готова к приему данных.
 
-## Конфигурация Astra[](https://help.cesbo.com/astra/monitoring/export/influxdb#astra-configuration)
+## Конфигурация Astra[](/ru/astra/monitoring/export/influxdb#astra-configuration)
 
 Откройте Settings -> General в веб-интерфейсе Astra. Установите параметры конфигурации InfluxDB:
 
@@ -49,7 +49,7 @@ InfluxDB - это база данных временных рядов с отк�
 - `InfluxDB Token` - вставьте свой токен, созданный на предыдущем шаге
 - Нажмите кнопку "Применить и перезапустить"
 
-## Структура данных InfluxDB[](https://help.cesbo.com/astra/monitoring/export/influxdb#influxdb-data-structure)
+## Структура данных InfluxDB[](/ru/astra/monitoring/export/influxdb#influxdb-data-structure)
 
 ### Поток
 

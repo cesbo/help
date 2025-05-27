@@ -9,7 +9,7 @@ Astra MPEG-TS Analyzer - встроенный инструмент для ана
 
 ![Интерфейс анализатора Astra MPEG-TS](https://cdn.cesbo.com/help/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer/analyzer.png)
 
-## Запуск с помощью веб-интерфейса[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-with-web-interface)
+## Запуск с помощью веб-интерфейса[](/ru/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-with-web-interface)
 
 ```
 astra --analyze [OPTIONS] -p PORT
@@ -22,7 +22,7 @@ astra --analyze [OPTIONS] -p PORT
 - `--daemon` - запуск в режиме демона;
 - `--log` /var/log/relay.log - полный путь к файлу журнала.
 
-## Запуск в консоли[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-in-console)
+## Запуск в консоли[](/ru/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#launch-in-console)
 
 ```
 astra --analyze [OPTIONS] ADDRESS
@@ -69,7 +69,7 @@ Nov 28 00:59:32: INFO: Bitrate: 2755 Kbit/s
 Nov 28 00:59:33: INFO: Bitrate: 4446 Kbit/s
 ```
 
-## Формат адреса[](https://help.cesbo.com/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#address-format)
+## Формат адреса[](/ru/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer#address-format)
 
 Анализатор поддерживает любой формат приема, поддерживаемый Astra. Например:
 

@@ -11,7 +11,7 @@ sidebar:
 ixgbe 0000:02:00.1: failed to load because an unsupported SFP+ module type was detected.
 ```
 
-## Решение[](https://help.cesbo.com/misc/articles/hardware/unsupported-sfp-module#solution)
+## Решение[](/ru/misc/articles/hardware/unsupported-sfp-module#solution)
 
 Выгрузите драйвер:
 
@@ -35,7 +35,7 @@ modprobe ixgbe allow_unsupported_sfp=1
 modprobe ixgbe allow_unsupported_sfp=1,1,1,1
 ```
 
-## Сохранение изменений:[](https://help.cesbo.com/misc/articles/hardware/unsupported-sfp-module#save-option)
+## Сохранение изменений:[](/ru/misc/articles/hardware/unsupported-sfp-module#save-option)
 
 Приведенное выше решение предназначено только для тестирования и будет удалено после перезагрузки сервера. Для постоянной конфигурации передайте опцию в ядро через загрузчик grub.
 

@@ -9,7 +9,7 @@ sidebar:
 
 Одним из ключевых факторов является режим энергопотребления процессора. По умолчанию в Linux-серверах процессоры переведены в энергосберегающий режим для снижения энергопотребления и управления тепловыделением. Для обеспечения оптимальной работы потокового ПО рекомендуется перевести процессор в режим максимальной производительности.
 
-## С помощью утилиты cpupower[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#with-cpupower-utility)
+## С помощью утилиты cpupower[](/ru/misc/tools-and-utilities/linux/cpupower#with-cpupower-utility)
 
 Для проверки режима энергопотребления процессора на сервере Linux можно воспользоваться командой `cpupower` утилита. Эта утилита входит в состав `linux-tools-common` пакет.
 
@@ -38,7 +38,7 @@ cpupower frequency-set -g performance
 
 Эта настройка будет потеряна после перезагрузки. Если вы хотите сделать ее постоянной, то можете добавить приведенную выше команду в `/etc/rc.local` файл, чтобы он выполнялся при каждой загрузке.
 
-## Проверьте режим работы процессора вручную[](https://help.cesbo.com/misc/tools-and-utilities/linux/cpupower#check-cpu-mode-manually)
+## Проверьте режим работы процессора вручную[](/ru/misc/tools-and-utilities/linux/cpupower#check-cpu-mode-manually)
 
 ```
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor

@@ -7,7 +7,7 @@ sidebar:
 
 Установка Astra очень проста - достаточно скопировать один бинарный файл на свой сервер.
 
-## Требования[](https://help.cesbo.com/astra/getting-started/first-steps/install#requirements)
+## Требования[](/ru/astra/getting-started/first-steps/install#requirements)
 
 - Любая операционная система на базе Linux x64
 - x86 64-разрядный процессор
@@ -16,7 +16,7 @@ sidebar:
 
 :::note В данном руководстве мы используем **curl** команду для загрузки файлов. В большинстве дистрибутивов Linux предустановлен **curl** ::
 
-## Установка Astra[](https://help.cesbo.com/astra/getting-started/first-steps/install#install-astra)
+## Установка Astra[](/ru/astra/getting-started/first-steps/install#install-astra)
 
 Откройте консоль вашего сервера и загрузите программу:
 
@@ -30,13 +30,13 @@ sidebar:
 
 `astra -v` 
 
-## Получение лицензии[](https://help.cesbo.com/astra/getting-started/first-steps/install#get-license)
+## Получение лицензии[](/ru/astra/getting-started/first-steps/install#get-license)
 
 Для запуска Astra на вашем сервере необходима действующая лицензия. Вы можете получить демо-лицензию бесплатно или приобрести подписку на нашем сайте: [https://cesbo.com/astra-license](https://cesbo.com/astra-license).
 
 Для установки лицензии следуйте инструкциям, приведенным в письме с новой лицензией.
 
-## Запуск Astra[](https://help.cesbo.com/astra/getting-started/first-steps/install#launch-astra)
+## Запуск Astra[](/ru/astra/getting-started/first-steps/install#launch-astra)
 
 После установки зарегистрируйте новый сервис в systemd:
 
@@ -46,9 +46,9 @@ sidebar:
 
 `systemctl start astra` 
 
-Подробнее об управлении сервисами и запуске дополнительных сервисов на сервере: [Управление сервисами Astra](https://help.cesbo.com/astra/getting-started/first-steps/manage-service).
+Подробнее об управлении сервисами и запуске дополнительных сервисов на сервере: [Управление сервисами Astra](/ru/astra/getting-started/first-steps/manage-service).
 
-## Включение автозапуска[](https://help.cesbo.com/astra/getting-started/first-steps/install#enable-autorun)
+## Включение автозапуска[](/ru/astra/getting-started/first-steps/install#enable-autorun)
 
 Включите автозапуск для вашего сервиса:
 
@@ -56,8 +56,8 @@ sidebar:
 
 Теперь сервис `astra` будет запускаться автоматически при старте системы.
 
-## Вход в веб-интерфейс[](https://help.cesbo.com/astra/getting-started/first-steps/install#login-to-web-interface)
+## Вход в веб-интерфейс[](/ru/astra/getting-started/first-steps/install#login-to-web-interface)
 
 После установки Astra можно получить доступ к ее веб-интерфейсу с помощью браузера - Chrome, Safari или Firefox. По умолчанию для веб-интерфейса используется порт 8000. Таким образом, адрес интерфейса будет `http://your-server-address:8000`. Для входа в веб-интерфейс используйте логин и пароль, установленные по умолчанию - "admin". Для предотвращения несанкционированного доступа рекомендуется изменить пароль по умолчанию.
 
-Прочитать следующую статью о [веб-интерфейсе Astra](https://help.cesbo.com/astra/getting-started/first-steps/web-interface)
+Прочитать следующую статью о [веб-интерфейсе Astra](/ru/astra/getting-started/first-steps/web-interface)

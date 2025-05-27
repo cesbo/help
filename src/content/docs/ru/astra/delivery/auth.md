@@ -1,7 +1,6 @@
 ---
-title: "HTTP-авторизация"
+title: HTTP-авторизация
 data: 2023-06-19
-image: https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/og-image.png
 sidebar:
     order: 13
 ---
@@ -10,7 +9,7 @@ HTTP-авторизация - это процесс предоставления
 
 ![HTTP Auth](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/diagram.svg)
 
-## Процесс авторизации[](https://help.cesbo.com/astra/delivery/http-hls-auth/auth#authorization-workflow)
+## Процесс авторизации[](/ru/astra/delivery/auth#authorization-workflow)
 
 Прежде чем приступить к детальному рассмотрению процесса настройки авторизации в Astra, необходимо разобраться в его основополагающих принципах.
 
@@ -24,9 +23,9 @@ HTTP-авторизация - это процесс предоставления
 
 Третий этап - авторизация запроса компанией Astra. Astra поддерживает следующие методы авторизации:
 
-- [Авторизация пользователя](https://help.cesbo.com/astra/delivery/http-hls-auth/user) - Astra использует логин и пароль или уникальный токен, заданный в настройках пользователя
-- [Авторизация Middleware](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware) - Astra инициирует подзапрос к Middleware с уникальным токеном и всей информацией, относящейся к запросу
-- [HTTP Securetoken](https://help.cesbo.com/astra/delivery/http-hls-auth/securetoken) - Astra проверяет уникальный токен с помощью криптоалгоритмов для подтверждения доступа
-- [HTTP IP](https://help.cesbo.com/astra/delivery/http-hls-auth/ip) - Astra сравнивает IP-адрес пользователя со списком доступа
+- [Авторизация пользователя](/ru/astra/delivery/http-hls-auth/user) - Astra использует логин и пароль или уникальный токен, заданный в настройках пользователя
+- [Авторизация Middleware](/ru/astra/delivery/http-hls-auth/middleware) - Astra инициирует подзапрос к Middleware с уникальным токеном и всей информацией, относящейся к запросу
+- [HTTP Securetoken](/ru/astra/delivery/http-hls-auth/securetoken) - Astra проверяет уникальный токен с помощью криптоалгоритмов для подтверждения доступа
+- [HTTP IP](/ru/astra/delivery/http-hls-auth/ip) - Astra сравнивает IP-адрес пользователя со списком доступа
 
 Эти методы предлагают настраиваемые рабочие процессы авторизации, позволяя администраторам надежно контролировать доступ.

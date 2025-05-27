@@ -5,9 +5,9 @@ sidebar:
     order: 9
 ---
 
-HLS или HTTP Live Streaming - это протокол потокового видео с адаптивным битрейтом, основанный на HTTP. Это наиболее популярный формат для потокового вещания через Интернет (OTT-сервисы). Подробнее о [протоколе HLS](https://help.cesbo.com/misc/articles/protocols/hls)
+HLS или HTTP Live Streaming - это протокол потокового видео с адаптивным битрейтом, основанный на HTTP. Это наиболее популярный формат для потокового вещания через Интернет (OTT-сервисы). Подробнее о [протоколе HLS](/ru/misc/articles/protocols/hls)
 
-## Формат адреса[](https://help.cesbo.com/astra/receiving/ip/hls#address-format)
+## Формат адреса[](/ru/astra/receiving/ip/hls#address-format)
 
 ```
 http://address
@@ -29,6 +29,6 @@ http://login:password@address:port/path#options
 - `debug` - заголовки ответов в журнале. Также следует включить отладку в сообщениях журнала
 - `bandwidth=N` - выбрать поток с заданной пропускной способностью. По умолчанию astra выбирает поток с максимальным значением пропускной способности
 
-## Веб-интерфейс[](https://help.cesbo.com/astra/receiving/ip/hls#web-interface)
+## Веб-интерфейс[](/ru/astra/receiving/ip/hls#web-interface)
 
 Чтобы настроить HLS-ввод в Astra, достаточно написать адрес источника в поле Input.

@@ -5,7 +5,7 @@ sidebar:
     order: 2
 ---
 
-## Общие коды HTTP[](https://help.cesbo.com/misc/troubleshooting/receiving/http#common-http-codes)
+## Общие коды HTTP[](/ru/misc/troubleshooting/receiving/http#common-http-codes)
 
 Коды ответов HTTP - это трехзначные числовые показатели, выдаваемые сервером в ответ на HTTP-запрос клиента.
 
@@ -38,7 +38,7 @@ sidebar:
 - ограничения межсетевого экрана на соединение
 - неверный номер порта или адрес сервера
 
-## Почему качество потока после ретрансляции снижается?[](https://help.cesbo.com/misc/troubleshooting/receiving/http#why-is-the-stream-quality-lower-after-retransmission)
+## Почему качество потока после ретрансляции снижается?[](/ru/misc/troubleshooting/receiving/http#why-is-the-stream-quality-lower-after-retransmission)
 
 При работе с приемом HLS возможны проблемы с качеством после ретрансляции потока. Например, поток может воспроизводиться в HD-качестве в плеере VLC, но после повторной передачи видео отображается в низком разрешении. Как правило, эта проблема возникает из-за того, что поток HLS содержит варианты с разным разрешением.
 

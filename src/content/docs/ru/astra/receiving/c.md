@@ -7,14 +7,14 @@ sidebar:
 
 DVB-C - стандарт передачи цифрового кабельного телевидения.
 
-## Общие опции[](https://help.cesbo.com/astra/receiving/dvb/c#general-options)
+## Общие опции[](/ru/astra/receiving/dvb/c#general-options)
 
 ![Общие параметры DVB-C](https://cdn.cesbo.com/help/astra/receiving/dvb/c/general.png)
 
 - `Frequency` - несущая частота (80-1000 МГц)
 - `Symbolrate` - символьная скорость, также известная как скорость передачи данных, обозначает количество изменений сигнала в секунду (1000-10000 Кбод)
 
-## Дополнительные опции[](https://help.cesbo.com/astra/receiving/dvb/c#advanced-options)
+## Дополнительные опции[](/ru/astra/receiving/dvb/c#advanced-options)
 
 ![Дополнительные параметры DVB-C](https://cdn.cesbo.com/help/astra/receiving/dvb/c/advanced.png)
 

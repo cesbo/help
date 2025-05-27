@@ -14,4 +14,4 @@ sidebar:
 - `Service Name` - публичное имя сервиса, которое будет отображаться на экране телевизора
 - `Codepage` - текстовая кодировка, используемая для опций Service Provider и Service Name
 - `HbbTV URL` - добавление URL к HbbTV (Hybrid broadcast broadband TV) для предоставления расширенных возможностей интерактивного телевидения
-- `Conditional Access` - защита ручья с использованием системы условного доступа для предотвращения несанкционированного доступа. Подробнее в [CAS и Simulcrypt](https://help.cesbo.com/astra/delivery/cas/cas-and-simulcrypt)
+- `Conditional Access` - защита ручья с использованием системы условного доступа для предотвращения несанкционированного доступа. Подробнее в [CAS и Simulcrypt](/ru/astra/delivery/cas/cas-and-simulcrypt)

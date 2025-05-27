@@ -7,7 +7,7 @@ sidebar:
 
 Basic Interoperable Scrambling System (BISS) - это простая и эффективная система условного доступа, использующая статический ключ для защиты контента от несанкционированного доступа. В основе BISS лежит алгоритм Common Scrambling Algorithm (CSA), который скремблирует данные канала, обеспечивая безопасную передачу контента по сетям спутникового и наземного вещания.
 
-## Прием скремблированного канала[](https://help.cesbo.com/astra/processing/cas/decrypt-biss#receiving-a-scrambled-channel)
+## Прием скремблированного канала[](/ru/astra/processing/cas/decrypt-biss#receiving-a-scrambled-channel)
 
 Чтобы расшифровать скремблированный канал, необходимо добавить к нему значение `biss` опцию с соответствующим ключом к адресу ввода. Например:
 
@@ -20,7 +20,7 @@ dvb://a001#pnr=1&biss=12345600789ABC00
 
 При использовании недействительного ключа BISS расшифрованный поток будет искажен. В этом случае на экране анализатора Astra появится сообщение `PES Error`.
 
-## Ретрансляция скремблированных каналов[](https://help.cesbo.com/astra/processing/cas/decrypt-biss#retransmitting-scrambled-channels)
+## Ретрансляция скремблированных каналов[](/ru/astra/processing/cas/decrypt-biss#retransmitting-scrambled-channels)
 
 Для повторной передачи скремблированного канала без его расшифровки можно использовать `cas` в адресе ввода. Пример входного адреса с опцией `cas` вариант:
 

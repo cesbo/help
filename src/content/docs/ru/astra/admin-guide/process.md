@@ -7,7 +7,7 @@ sidebar:
 
 В Astra можно управлять процессом и контролировать его состояние с помощью методов HTTP API.
 
-## Состояние системы[](https://help.cesbo.com/astra/admin-guide/api/process#system-status)
+## Состояние системы[](/ru/astra/admin-guide/api/process#system-status)
 
 :::note Версия: 2021-04-12 или более поздняя ::
 
@@ -51,7 +51,7 @@ sidebar:
 - `sys_uptime` - общее время безотказной работы системы в секундах
 - `app_uptime` - время работы процесса в секундах
 
-## Перезапустить Astra[](https://help.cesbo.com/astra/admin-guide/api/process#restart-astra)
+## Перезапустить Astra[](/ru/astra/admin-guide/api/process#restart-astra)
 
 Запрос: `POST /control/`
 

@@ -7,7 +7,7 @@ sidebar:
 
 Digital Video Broadcasting (DVB) - это набор международных открытых стандартов для цифрового телевизионного вещания. С помощью опций DVB в Astra можно настроить прием медиаконтента из различных DVB-сетей, включая спутниковые, кабельные и наземные источники.
 
-## Адаптер DVB[](https://help.cesbo.com/astra/receiving/dvb/intro#dvb-adapter)
+## Адаптер DVB[](/ru/astra/receiving/dvb/intro#dvb-adapter)
 
 Для приема DVB-сигналов на ПК необходимо дополнительное оборудование - DVB-адаптер. Как правило, DVB-адаптеры представляют собой платы PCIe, однако существуют и USB DVB-адаптеры, хотя они и менее популярны.
 
@@ -24,14 +24,14 @@ Digital Video Broadcasting (DVB) - это набор международных 
 - [TBS](https://www.tbsdtv.com/)
 - [Цифровые устройства](https://www.digital-devices.eu/)
 
-## Подготовьте систему[](https://help.cesbo.com/astra/receiving/dvb/intro#prepare-you-system)
+## Подготовьте систему[](/ru/astra/receiving/dvb/intro#prepare-you-system)
 
 Перед началом работы убедитесь, что DVB-адаптер подключен к серверу и что установлен соответствующий драйвер для Linux:
 
-- [Установка драйвера TBS](https://help.cesbo.com/misc/tools-and-utilities/dvb/tbs-driver)
-- [Установка драйверов DigitalDevices](https://help.cesbo.com/misc/tools-and-utilities/dvb/dd-driver)
+- [Установка драйвера TBS](/ru/misc/tools-and-utilities/dvb/tbs-driver)
+- [Установка драйверов DigitalDevices](/ru/misc/tools-and-utilities/dvb/dd-driver)
 
-## Общие опции[](https://help.cesbo.com/astra/receiving/dvb/intro#general-options)
+## Общие опции[](/ru/astra/receiving/dvb/intro#general-options)
 
 Для создания нового адаптера нажмите кнопку "New Adapter" в главном меню.
 
@@ -45,7 +45,7 @@ Digital Video Broadcasting (DVB) - это набор международных 
 - `Adapter` - выбрать системные устройства;
 - `Type` - выберите стандарт адаптера.
 
-## Дополнительные опции[](https://help.cesbo.com/astra/receiving/dvb/intro#advanced-options)
+## Дополнительные опции[](/ru/astra/receiving/dvb/intro#advanced-options)
 
 ![Дополнительные параметры DVB](https://cdn.cesbo.com/help/astra/receiving/dvb/intro/dvb-advanced.png)
 
@@ -59,18 +59,18 @@ Digital Video Broadcasting (DVB) - это набор международных 
 - `Budget Mode` - отключить аппаратную фильтрацию PID. В бюджетном режиме Astra получает от адаптера транспондер целиком;
 - `CA Delay` - задержка между отправкой управляющих пакетов в модуль условного доступа (CAM).
 
-## Тип DVB[](https://help.cesbo.com/astra/receiving/dvb/intro#dvb-type)
+## Тип DVB[](/ru/astra/receiving/dvb/intro#dvb-type)
 
 Остальные опции зависят от выбранного типа адаптера:
 
-- [DVB-S/S2](https://help.cesbo.com/astra/receiving/dvb/s)
-- [DVB-T/T2](https://help.cesbo.com/astra/receiving/dvb/t)
-- [DVB-C](https://help.cesbo.com/astra/receiving/dvb/c)
+- [DVB-S/S2](/ru/astra/receiving/dvb/s)
+- [DVB-T/T2](/ru/astra/receiving/dvb/t)
+- [DVB-C](/ru/astra/receiving/dvb/c)
 
-## Сканирование[](https://help.cesbo.com/astra/receiving/dvb/intro#scan)
+## Сканирование[](/ru/astra/receiving/dvb/intro#scan)
 
-После настройки адаптера можно проверить качество сигнала и просканировать его на наличие доступных каналов. Подробнее: [Сканирование DVB-адаптера](https://help.cesbo.com/astra/receiving/dvb/scan)
+После настройки адаптера можно проверить качество сигнала и просканировать его на наличие доступных каналов. Подробнее: [Сканирование DVB-адаптера](/ru/astra/receiving/dvb/scan)
 
-## Поиск и устранение неисправностей[](https://help.cesbo.com/astra/receiving/dvb/intro#troubleshooting)
+## Поиск и устранение неисправностей[](/ru/astra/receiving/dvb/intro#troubleshooting)
 
-Если у вас возникли проблемы с запуском DVB-адаптера, обратитесь к нашему руководству: [Устранение неполадок при приеме DVB](https://help.cesbo.com/misc/troubleshooting/dvb)
+Если у вас возникли проблемы с запуском DVB-адаптера, обратитесь к нашему руководству: [Устранение неполадок при приеме DVB](/ru/misc/troubleshooting/dvb)

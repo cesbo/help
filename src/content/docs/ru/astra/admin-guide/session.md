@@ -7,7 +7,7 @@ sidebar:
 
 Sessions - это список активных соединений с выходами HTTP MPEG-TS или HLS.
 
-## Получить список сессий[](https://help.cesbo.com/astra/admin-guide/api/session#get-session-list)
+## Получить список сессий[](/ru/astra/admin-guide/api/session#get-session-list)
 
 ```
 {
@@ -37,7 +37,7 @@ Sessions - это список активных соединений с выхо
 - `addr` - IP-адрес клиента
 - `uptime` - время в секундах, в течение которого выполняется сессия
 
-## Закрыть сессию[](https://help.cesbo.com/astra/admin-guide/api/session#close-session)
+## Закрыть сессию[](/ru/astra/admin-guide/api/session#close-session)
 
 ```
 {

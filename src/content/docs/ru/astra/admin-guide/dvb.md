@@ -7,7 +7,7 @@ sidebar:
 
 В интерфейсе Astra можно управлять конфигурациями DVB-адаптеров и контролировать их состояние с помощью методов HTTP API.
 
-## Конфигурация адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#adapter-configuration)
+## Конфигурация адаптера[](/ru/astra/admin-guide/api/dvb#adapter-configuration)
 
 ```
 {
@@ -27,7 +27,7 @@ sidebar:
 - `device` - номер устройства в адаптере: `/dev/dvb/adapter0/frontend0`
 - Другие опции зависят от конфигурации адаптера
 
-## Получение конфигурации адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#obtain-adapter-configuration)
+## Получение конфигурации адаптера[](/ru/astra/admin-guide/api/dvb#obtain-adapter-configuration)
 
 :::note Версия: 2021-04-12 или более поздняя ::
 
@@ -37,7 +37,7 @@ sidebar:
 
 В ответ будет получен JSON с конфигурацией адаптера
 
-## Изменение конфигурации адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#modify-adapter-configuration)
+## Изменение конфигурации адаптера[](/ru/astra/admin-guide/api/dvb#modify-adapter-configuration)
 
 Запрос: `POST /control/`
 
@@ -52,7 +52,7 @@ sidebar:
 - `id` - уникальный идентификатор адаптера
 - `adapter` - конфигурация адаптера
 
-## Перезапустить адаптер[](https://help.cesbo.com/astra/admin-guide/api/dvb#restart-adapter)
+## Перезапустить адаптер[](/ru/astra/admin-guide/api/dvb#restart-adapter)
 
 Запрос: `POST /control/`
 
@@ -65,7 +65,7 @@ sidebar:
 
 - `id` - уникальный идентификатор адаптера
 
-## Снимите адаптер[](https://help.cesbo.com/astra/admin-guide/api/dvb#remove-adapter)
+## Снимите адаптер[](/ru/astra/admin-guide/api/dvb#remove-adapter)
 
 :::note **Внимание!** Этот метод удаляет адаптер и все связанные с ним потоки ::
 
@@ -83,7 +83,7 @@ sidebar:
 
 - `id` - уникальный идентификатор адаптера
 
-## Получение статуса адаптера[](https://help.cesbo.com/astra/admin-guide/api/dvb#obtain-adapter-status)
+## Получение статуса адаптера[](/ru/astra/admin-guide/api/dvb#obtain-adapter-status)
 
 :::note Версия: 2021-04-12 или более поздняя ::
 
