@@ -1,0 +1,23 @@
+---
+title: "Options for DVB-T/T2 and ISDB-T"
+date: 2023-02-28
+sidebar:
+    order: 6
+---
+
+DVB-T/T2 is a standard for the broadcast transmission of digital terrestrial television.
+
+## General options
+
+![DVB-T/T2 General Options](https://cdn.cesbo.com/help/astra/receiving/dvb/t/general.png)
+
+- `Frequency` - carrier frequency (0-1000 MHz)
+
+## Advanced Options
+
+![DVB-T/T2 Advanced Options](https://cdn.cesbo.com/help/astra/receiving/dvb/t/advanced.png)
+
+- `Bandwidth` - signal bandwidth in kHz determines the amount of data that can be transmitted. Default: 8000
+- `Guard` - guard interval used to prevent intersymbol interference (ISI) caused by multi-path propagation of the transmitted signal. The larger the guard interval, the more robust the signal against ISI, but at the cost of lower data rates
+- `Transmit` - COFDM (Coded Orthogonal Frequency Division Multiplexing) transmission modes to adapt to different channel conditions and maximize the robustness of the transmitted signal. For example: 2K mode uses 2048 sub-carriers to transmit the digital signal, and is suitable for transmitting the signal over short distances with low to moderate signal interference. 8K mode is suitable for transmitting the signal over very long distances or in areas with very high levels of signal interference
+- `Hierarchy` - hierarchical modulation schemes, which allow for the transmission of two different bitstreams with different levels of robustness

@@ -1,0 +1,48 @@
+---
+title: Integration whith GitHub
+description: Downloading and uploading profile from GitHub
+sidebar:
+    order: 3
+---
+import { Steps } from '@astrojs/starlight/components';
+
+## Download profile from github
+
+You can load profiles from github. First, go to the profile tab and click **Load newprofiles from github**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_load.png)Next, click **Show info**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_show_info.png)You can see info about profile, and if you want to add it, click **Accept**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_accept.png)
+
+## Upload profile to github
+
+<Steps>
+
+1. **Fork the repository** : Go to [https://github.com/cesbo/senta-streamer-profiles](https://github.com/cesbo/senta-streamer-profiles) and click on the "Fork" button in the top right corner of the page. This will create a copy of the repository in your GitHub account.
+
+1. **Clone your fork** : Open your terminal (or Git Bash on Windows) and execute the command `git clone https://github.com/your_username/senta-streamer-profiles`, replacing "your_username" with your GitHub username.
+
+1. **Create a new branch** : Navigate into the cloned repository using the command `cd senta-streamer-profiles`, then create a new branch using `git checkout -b add_profile`, where "add_profile" is the name of your branch.
+
+1. **Add your file** : Place your profile file into the /profiles directory in the cloned repository.
+
+1. **Add the file to staging and commit** : Execute the following commands in your terminal:
+    ```bash [terminal]
+    git add profiles/your_file_name
+    git commit -m "Added profile: %your_file_name%"
+    ```
+    Replace "your_file_name" with the name of your file.
+
+1. **Push your changes to your GitHub repository** : Execute the command `git push origin add_profile`, where "add_profile" is the name of your branch.
+
+1. **Open a Pull Request (PR)** : After pushing your changes, go to your forked repository's page on GitHub. There you should see a "Compare & pull request" button for your new branch. Click on it.
+
+1. **Create a Pull Request** : Review the changes you want to make, ensure everything is correct, and then click on the "Create pull request" button.
+
+1. **Wait for review and merge** : Other contributors to the project may review your Pull Request, leave comments, or request changes. Once your PR is reviewed and approved, one of the project maintainers will merge your branch into the main branch.
+
+</Steps>
+
+That's it! Your profile file should now be added to the public repository.

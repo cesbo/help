@@ -1,0 +1,89 @@
+---
+title: Multiservers  
+description: General Information
+sidebar:
+    order: 7
+---
+import { Steps } from '@astrojs/starlight/components';
+
+```
+                  +-----------------------+             
+                  |     Main server       |
+                  |  +-----------------+  |
+                  |  | stream M1       |  |
+                  |  +-----------------+  |
+                  |  | stream M2       |  |
+                  |  +-----------------+  |
+                  |  |       ...       |  |
+                  |  +-----------------+  |
+                  |  | stream MN       |  |
+                  |  +-----------------+  |
+                  |                       |
+                  +-----------------------+
+                     /                \
+    +-----------------------+      +-----------------------+
+    |     Slave server #K   |      |     Slave server #L   |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | stream K1       |  |      |  | stream L1       |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | stream K2       |  |      |  | stream L2       |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  |       ...       |  |      |  |       ...       |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | stream KN       |  |      |  | stream LN       |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |                       |      |                       |
+    +-----------------------+      +-----------------------+              
+```
+
+Starting with the December 16, 2024 version, Senta-Streamer supports a multi-server architecture. This feature allows the main server to manage dependent servers (assigning streams, starting, and stopping them). This enables:
+
+- Scaling Senta-Streamer to handle a larger number of streams
+- Building geographically distributed transcoding systems
+- Simplifying monitoring and management of multiple Senta-Streamer servers
+
+### Adding an Additional Server to the Main Senta-Streamer Server
+
+**On the remote server:**
+
+<Steps>
+
+1. Install the Senta-Streamer binary.
+
+1. Verify the functionality of the `ffmpeg` utility.
+
+1. Add Senta-Streamer to autostart, similar to the main server setup.
+
+1. Ensure Senta-Streamer is running and ready to work (you can check this via the web interface).
+
+1. Enter the [license](/en/senta/getting-started/add-license) key in the settings.
+
+1. Generate an [API key](/en/senta/getting-started/api) (copy it from *Settings → API Key*).
+
+</Steps>
+
+*Note: You do not need to configure streams and profiles, as this will be handled automatically by the main server.*
+
+**On the main server:**
+
+<Steps>
+
+1. Go to the **Servers** section.
+
+1. Click **Add Server**.
+
+1. In the pop-up window, fill in the following:
+   - **Server Name** - Any convenient name for display purposes in the web interface and logs. It does not affect management.
+   - **IP** - The IP address (or domain name) of the remote server. The server API must be accessible at this address.
+   - **Port** - Matches the web interface port of the remote server.
+   - **API Key** - The API key of the remote server.
+
+1. After saving, the server should appear in the server table, showing its status. If the main server successfully connects to it via the API, the status will display as *online*.
+
+</Steps>
+
+### Managing Streams
+
+To assign a stream to a remote server, go to the stream settings on the main server and select the desired server under the **Server** option. Upon saving the stream settings, the stream will automatically start on the remote server.
+
+Similarly, you can switch servers for a stream during operation (for example, when taking a server down for maintenance).

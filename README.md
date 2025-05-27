@@ -1,117 +1,54 @@
-# Cesbo Docs
+# Starlight Starter Kit: Basics
 
-All docs separated by language and category.
-
-Categories:
-
-- `astra` - Cesbo Astra
-- `misc` - Tools, Utilities, System Administration, etc
-
-## Formatting rules
-
-### Heading
-
-Only 2 levels is available:
-
-- `##` - second-level heading
-- `###` - third-level heading
-
-### Lists
-
-Nested lists is illegal
-
-### Text decoration
-
-Bold - names:
-
-- Form field
-- Button
-- Menu item
-- Application name
-
-Code - examples and example parts:
-
-- Part of the log
-- Command
-- Example URL
-
-### General note
-
-Used for additional information
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
 ```
-::note
-New feature now available! Check it out
-::
+npm create astro@latest -- --template starlight
 ```
 
-### Alert block
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
 
-For attention
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-```
-::alert
-Please update your password immediately
-::
-```
+## 🚀 Project Structure
 
-### Spoiler block
-
-For hidden content like examples
+Inside of your Astro + Starlight project, you'll see the following folders and files:
 
 ```
-::spoiler{title="Example"}
-Spoiler content in markdown format
-::
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   ├── docs/
+│   └── content.config.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-### Badge
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
 
-```
-:badge[Version]
-:badge[Warning]{type="warning"}
-:badge[Error]{type="error"}
-```
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
-### YouTube
+Static assets, like favicons, can be placed in the `public/` directory.
 
-```
-:youtube[Description]{id="video-id"}
-```
+## 🧞 Commands
 
+All commands are run from the root of the project, from a terminal:
 
-## Search Index
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### Configure Language
+## 👀 Want to learn more?
 
-1. Go to Algolia dashboard and select your index
-2. Click the **Configuration** tab, then click on **Language**
-3. Select required language in **Index Languages**
-
-### Configure Grouping
-
-1. Go to Algolia dashboard and select your index
-2. Click the **Configuration** tab, then click on **Facets**
-3. Append attribute `category` to the **Attributes for faceting** list
-4. Save changes
-
-### Update Algolia index
-
-Append Admin API key to the environment variables:
-
-```
-ALGOLIA_SECRET_KEY="..."
-```
-
-Launch:
-
-```
-npm run generate
-```
-
-## Deploy
-
-```
-npm run generate
-tar -zHcf - dist | ssh cesbo.dev tar -C /opt/help -zxf -
-```
+Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
