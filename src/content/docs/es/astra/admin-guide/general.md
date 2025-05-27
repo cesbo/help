@@ -31,7 +31,7 @@ Lea más información en nuestras guías para la configuración específica del 
 - [SRT](/es/astra/receiving/srt)
 - [RSTP](/es/astra/receiving/rtsp)
 - [Cómo recibir MPTS vía UDP](/es/astra/receiving/mpts-via-udp)
-- [Cómo configurar DVB, ATSC, ISDB-T, SAT>IP](/es/astra/admin-guide/dvb)
+- [Cómo configurar DVB, ATSC, ISDB-T, SAT>IP](/es/misc/troubleshooting/errors)
 
 ## Lista de salida[](/es/astra/admin-guide/general#output-list)
 
@@ -40,7 +40,7 @@ Configure una o más salidas para proporcionar contenido a los clientes. Las sal
 Lea más información en nuestras guías para la configuración específica del protocolo:
 
 - [UDP](/es/astra/delivery/udp)
-- [DVB con hardware de radiodifusión](/es/astra/admin-guide/dvb)
+- [DVB con hardware de radiodifusión](/es/misc/troubleshooting/errors)
 
 ## Guardar[](/es/astra/admin-guide/general#save)
 

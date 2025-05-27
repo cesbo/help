@@ -1,5 +1,5 @@
 ---
-title: "Instalación del controlador DigitalDevices"
+title: Instalación del controlador DigitalDevices
 date: 2023-02-23
 sidebar:
     order: 13
@@ -11,7 +11,7 @@ DigitalDevices es un fabricante de hardware especializado en dispositivos DVB: s
 
 Puede instalar el controlador de forma automática o manual. Para instalar el controlador automáticamente, ejecútelo en la consola:
 
-```
+```sh
 curl -sSf https://cdn.cesbo.com/astra/scripts/drv-dd.sh | sh
 ```
 
@@ -23,13 +23,13 @@ Tras reiniciar el servidor, [compruebe](/es/misc/tools-and-utilities/dd-driver#c
 
 Para instalar los controladores necesarios privilegios de root:
 
-```
+```sh
 sudo -s
 ```
 
 Instale utilidades del sistema para crear controladores a partir del código fuente:
 
-```
+```sh
 apt -y install \
     build-essential \
     patchutils \
@@ -40,7 +40,7 @@ apt -y install \
 
 Elimine los controladores de medios antiguos:
 
-```
+```sh
 rm -rf /lib/modules/$(uname -r)/extra
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/media
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
@@ -50,13 +50,13 @@ rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
 
 Descargue el controlador más reciente del repositorio oficial:
 
-```
+```sh
 git clone -b 0.9.37 --depth=1 https://github.com/DigitalDevices/dddvb /usr/src/dddvb
 ```
 
 Cree los controladores e instálelos:
 
-```
+```sh
 cd /usr/src/dddvb
 make
 make install
@@ -64,7 +64,7 @@ make install
 
 Actualizar las dependencias del dirver:
 
-```
+```sh
 mkdir -p /etc/depmod.d
 echo 'search extra updates built-in' | tee /etc/depmod.d/extra.conf
 depmod -a
@@ -72,7 +72,7 @@ depmod -a
 
 Cree la configuración del controlador para DigitalDevices MaxS8:
 
-```
+```sh
 echo 'options ddbridge fmode=0' | tee /etc/modprobe.d/ddbridge.conf
 ```
 
@@ -87,7 +87,7 @@ Para MaxS8 disponibles los siguientes valores de fmode en lugar de 0:
 
 Para iniciar los controladores instalados, reinicie el sistema:
 
-```
+```sh
 shutdown -r now
 ```
 
@@ -97,7 +97,7 @@ Tras reiniciar el servidor, [compruebe](/es/misc/tools-and-utilities/dd-driver#c
 
 Para comprobar si el controlador se ha instalado correctamente, liste los adaptadores en el directorio dvb:
 
-```
+```sh
 ls /dev/dvb
 ```
 

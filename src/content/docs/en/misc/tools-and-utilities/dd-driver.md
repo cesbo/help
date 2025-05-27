@@ -1,5 +1,5 @@
 ---
-title: "DigitalDevices Driver Installation"
+title: DigitalDevices Driver Installation
 date: 2023-02-23
 sidebar:
     order: 13
@@ -23,13 +23,13 @@ After server restart, [check](#check-driver) if the driver has been installed co
 
 To install drivers needed root privileges:
 
-```
+```sh
 sudo -s
 ```
 
 Install system utilities to build drivers from the source code:
 
-```
+```sh
 apt -y install \
     build-essential \
     patchutils \
@@ -40,7 +40,7 @@ apt -y install \
 
 Remove old media drivers:
 
-```
+```sh
 rm -rf /lib/modules/$(uname -r)/extra
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/media
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
@@ -50,13 +50,13 @@ rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
 
 Download latest driver from the official repository:
 
-```
+```sh
 git clone -b 0.9.37 --depth=1 https://github.com/DigitalDevices/dddvb /usr/src/dddvb
 ```
 
 Build drivers and install it:
 
-```
+```sh
 cd /usr/src/dddvb
 make
 make install
@@ -64,7 +64,7 @@ make install
 
 Update dirver dependencies:
 
-```
+```sh
 mkdir -p /etc/depmod.d
 echo 'search extra updates built-in' | tee /etc/depmod.d/extra.conf
 depmod -a
@@ -72,7 +72,7 @@ depmod -a
 
 Create driver configuration for DigitalDevices MaxS8:
 
-```
+```sh
 echo 'options ddbridge fmode=0' | tee /etc/modprobe.d/ddbridge.conf
 ```
 
@@ -87,7 +87,7 @@ For MaxS8 available next fmode values instead of 0:
 
 To launch installed drivers restart your system:
 
-```
+```sh
 shutdown -r now
 ```
 
@@ -97,7 +97,7 @@ After server restart, [check](#check-driver) if the driver has been installed co
 
 To check if the driver has been installed correctly, list adapters in the dvb directory:
 
-```
+```sh
 ls /dev/dvb
 ```
 
@@ -109,4 +109,4 @@ adapter0 adapter1 adapter2 adapter3 ...
 
 ## Troubleshooting
 
-If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/astra/admin-guide/dvb)
+If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/misc/troubleshooting/errors)

@@ -107,7 +107,7 @@ Now is the time to configure all our Adapters and find channels, which we want t
 
 To configure receiving channels from satellite we recommend to having a look at these articles:
 
-- [Introduction to DVB Adapter Tuning](/en/astra/admin-guide/dvb)
+- [Introduction to DVB Adapter Tuning](/en/misc/troubleshooting/errors)
 - [DVB-S/S2 Tuner Options](/en/astra/receiving/s)
 - [Scan DVB Adapter](/en/astra/receiving/scan)
 

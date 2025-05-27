@@ -1,5 +1,5 @@
 ---
-title: "Common errors on DVB receiving"
+title: Common errors on DVB receiving
 date: 2023-08-02
 sidebar:
     order: 3

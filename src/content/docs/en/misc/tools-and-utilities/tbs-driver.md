@@ -99,4 +99,4 @@ adapter0 adapter1 adapter2 adapter3 ...
 
 You can contact TBS representatives for help installing drivers at this link: [https://www.tbsdtv.com/contact-us.html](https://www.tbsdtv.com/contact-us.html) - select "Software installation and debugging"
 
-If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/astra/admin-guide/dvb)
+If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/misc/troubleshooting/errors)

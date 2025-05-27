@@ -31,7 +31,7 @@ Read more information in our guides for protocol specific configuration:
 - [SRT](/en/astra/receiving/srt)
 - [RSTP](/en/astra/receiving/rtsp)
 - [How to receive MPTS via UDP](/en/astra/receiving/mpts-via-udp)
-- [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/astra/admin-guide/dvb)
+- [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/misc/troubleshooting/errors)
 
 ## Output List
 
@@ -40,7 +40,7 @@ Configure one or more outputs to provide content to clients. Outputs are optiona
 Read more information in our guides for protocol specific configuration:
 
 - [UDP](/en/astra/delivery/udp)
-- [DVB with Broadcasting hardware](/en/astra/admin-guide/dvb)
+- [DVB with Broadcasting hardware](/en/misc/troubleshooting/errors)
 
 ## Save
 

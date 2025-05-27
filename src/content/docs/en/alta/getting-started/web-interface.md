@@ -1,5 +1,5 @@
 ---
-title: "Web Interface"
+title: Web Interface
 date: 2023-03-10
 sidebar:
     order: 2
