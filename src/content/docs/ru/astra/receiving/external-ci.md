@@ -10,12 +10,12 @@ sidebar:
 
 Обычно в этом процессе используется Common Interface (CI) - интерфейс, позволяющий модулям условного доступа (CAM) подключаться к DVB-приемнику и расшифровывать защищенные каналы. Расшифровка каналов с помощью внешнего адаптера DVB-CI обеспечивает гибкую архитектуру головной станции за счет разделения приемной и обрабатывающей частей.
 
-## Преимущества внешнего DVB-CI[](/ru/astra/receiving/dvb/external-ci#advantages-of-external-dvb-ci)
+## Преимущества внешнего DVB-CI[](/ru/astra/receiving/external-ci#advantages-of-external-dvb-ci)
 
 - Зашифрованные каналы из разных источников могут быть сгруппированы для последующей расшифровки в одном CI-модуле. Это может быть весьма полезно, если у вас есть различные DVB-транспондеры с зашифрованными каналами
-- Каналы могут приниматься и расшифровываться на отдельных серверах. Это особенно удобно, если вы используете приемники SAT>IP. При этом сервер Astra с картами CI может храниться в серверной комнате, а приемники SAT>IP располагаться ближе к крыше, где установлены спутниковые антенны. Подробнее о [Приеме SAT>IP](/ru/astra/receiving/dvb/satip-client) с помощью Astra
+- Каналы могут приниматься и расшифровываться на отдельных серверах. Это особенно удобно, если вы используете приемники SAT>IP. При этом сервер Astra с картами CI может храниться в серверной комнате, а приемники SAT>IP располагаться ближе к крыше, где установлены спутниковые антенны. Подробнее о [Приеме SAT>IP](/ru/astra/receiving/satip-client) с помощью Astra
 
-## Требования[](/ru/astra/receiving/dvb/external-ci#requirements)
+## Требования[](/ru/astra/receiving/external-ci#requirements)
 
 - Внешний адаптер DVB-CI. Мы протестировали и поддерживаем следующие модели:
     - [DigitalDevices Octopus Twin CI](https://www.digital-devices.eu/shop/en/accessoires/bridge/266/digital-devices-octopus-twin-ci-double-ci-slot-with-2-expansionports)
@@ -25,7 +25,7 @@ sidebar:
 
 ![DigitalDevices Octopus Twin CI](https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/ddci.jpg)
 
-## Конфигурация Astra[](/ru/astra/receiving/dvb/external-ci#astra-configuration)
+## Конфигурация Astra[](/ru/astra/receiving/external-ci#astra-configuration)
 
 ### Создание MPTS
 
@@ -80,7 +80,7 @@ find /dev/dvb/ -name ca*
 
 ![Приборная панель](https://cdn.cesbo.com/help/astra/receiving/dvb/external-ci/dashboard.png)
 
-## Поиск и устранение неисправностей[](/ru/astra/receiving/dvb/external-ci#troubleshooting)
+## Поиск и устранение неисправностей[](/ru/astra/receiving/external-ci#troubleshooting)
 
 ### Модуль CI+ не работает
 

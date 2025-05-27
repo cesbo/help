@@ -7,7 +7,7 @@ sidebar:
 
 С помощью Astra можно принимать MPTS (Multi Program Transport Stream) из различных источников, включая UDP. Полученный MPTS может быть демультиплексирован на несколько каналов SPTS (Single Program Transport Stream).
 
-## Виртуальный адаптер[](/ru/astra/receiving/ip/mpts-via-udp#virtual-adapter)
+## Виртуальный адаптер[](/ru/astra/receiving/mpts-via-udp#virtual-adapter)
 
 :::note Виртуальный адаптер доступен для версий, выпущенных после 20 сентября 2022 года
 :::
@@ -16,11 +16,11 @@ sidebar:
 
 ![Виртуальный адаптер для MPTS](https://cdn.cesbo.com/help/astra/receiving/ip/mpts-via-udp/virtual-mpts.png)
 
-В **Адрес** поле задает источник UDP, например `udp://239.255.1.1:1234`. Подробнее о формате адреса UDP читайте в [Прием UDP/RTP](/ru/astra/receiving/ip/udp).
+В **Адрес** поле задает источник UDP, например `udp://239.255.1.1:1234`. Подробнее о формате адреса UDP читайте в [Прием UDP/RTP](/ru/astra/receiving/udp).
 
 Примените изменения, после чего можно просканировать адаптер, чтобы получить список доступных каналов. Выберите каналы, которые необходимо добавить, и нажмите кнопку Применить.
 
-## Создание каналов вручную[](/ru/astra/receiving/ip/mpts-via-udp#create-channels-manually)
+## Создание каналов вручную[](/ru/astra/receiving/mpts-via-udp#create-channels-manually)
 
 На любой версии Astra можно добавлять каналы из потока MPTS вручную.
 
@@ -30,7 +30,7 @@ sidebar:
 astra --analyze udp://239.255.1.1:1234
 ```
 
-Подробнее о том, как анализировать потоки: [Astra MPEG-TS Analyzer](/ru/misc/tools-and-utilities/tv-and-media/astra-mpeg-ts-analyzer). Анализатор показывает информацию о доступных каналах, например:
+Подробнее о том, как анализировать потоки: [Astra MPEG-TS Analyzer](/ru/misc/tools-and-utilities/astra-mpeg-ts-analyzer). Анализатор показывает информацию о доступных каналах, например:
 
 ```
 INFO: PMT pnr:100 version:1

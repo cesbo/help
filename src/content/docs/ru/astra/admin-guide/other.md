@@ -5,7 +5,7 @@ sidebar:
     order: 26
 ---
 
-## Версия Astra[](/ru/astra/admin-guide/api/other#astra-version)
+## Версия Astra[](/ru/astra/admin-guide/other#astra-version)
 
 Запрос: `POST /control/`
 
@@ -15,7 +15,7 @@ sidebar:
 }
 ```
 
-## Перезапуск Astra[](/ru/astra/admin-guide/api/other#astra-restart)
+## Перезапуск Astra[](/ru/astra/admin-guide/other#astra-restart)
 
 Запрос: `POST /control/`
 
@@ -25,7 +25,7 @@ sidebar:
 }
 ```
 
-## Конфигурация загрузки[](/ru/astra/admin-guide/api/other#download-configuration)
+## Конфигурация загрузки[](/ru/astra/admin-guide/other#download-configuration)
 
 Запрос: `POST /control/`
 
@@ -37,7 +37,7 @@ sidebar:
 
 В ответе будет находиться весь конфигурационный файл.
 
-## Загрузка конфигурации[](/ru/astra/admin-guide/api/other#upload-configuration)
+## Загрузка конфигурации[](/ru/astra/admin-guide/other#upload-configuration)
 
 Запрос: `POST /control/`
 
@@ -50,7 +50,7 @@ sidebar:
 
 - `config` - весь конфигурационный файл
 
-## Установить серийный номер[](/ru/astra/admin-guide/api/other#set-serial-number)
+## Установить серийный номер[](/ru/astra/admin-guide/other#set-serial-number)
 
 Запрос: `POST /control/`
 
@@ -63,7 +63,7 @@ sidebar:
 
 - `license` - серийный номер лицензии
 
-## Установить изображение на плитку потока[](/ru/astra/admin-guide/api/other#set-image-to-the-stream-tile)
+## Установить изображение на плитку потока[](/ru/astra/admin-guide/other#set-image-to-the-stream-tile)
 
 Запрос: `POST /control/`
 
@@ -78,4 +78,4 @@ sidebar:
 - `id` - идентификатор потока
 - `url` - адрес изображения, а также может быть использован формат данных, например: `data:image/png;base64,...`
 
-Этот метод используется в скрипте для установки скриншотов для плиток потока. Подробнее в разделе [Скриншоты каналов на Dashboard](/ru/astra/admin-guide/administration/mosaic)
+Этот метод используется в скрипте для установки скриншотов для плиток потока. Подробнее в разделе [Скриншоты каналов на Dashboard](/ru/astra/admin-guide/mosaic)

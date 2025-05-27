@@ -9,7 +9,7 @@ sidebar:
 
 Прежде всего, убедитесь, что HTTP-авторизация включена. Откройте . `Settings` -> `HTTP Auth` и включите опцию `Enable built-in HTTP/HLS authentication`.
 
-## Авторизация по паролю[](/ru/astra/delivery/http-hls-auth/user#password-authorization)
+## Авторизация по паролю[](/ru/astra/delivery/user#password-authorization)
 
 Логин и пароль пользователя могут быть добавлены к URL-адресу плейлиста, если используется HTTP Play:
 
@@ -23,7 +23,7 @@ https://example.com:8000/playlist.m3u8?auth=login:password
 https://example.com:8000/channel-path/index.m3u8?auth=login:password
 ```
 
-## Токен авторизации[](/ru/astra/delivery/http-hls-auth/user#token-authorization)
+## Токен авторизации[](/ru/astra/delivery/user#token-authorization)
 
 Токен-авторизация является более предпочтительным методом, чем парольная авторизация. Уникальный токен может быть задан в разделе Настройки -> Пользователи, открытые опции пользователя:
 

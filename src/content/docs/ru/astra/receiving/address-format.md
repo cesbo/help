@@ -7,7 +7,7 @@ sidebar:
 
 В Astra источник или место назначения медиаданных описывается с помощью медиаадреса, напоминающего типичный URL. Такой формат облегчает пользователям понимание и работу с различными компонентами, участвующими в управлении медиапотоками.
 
-## Понимание формата медиа-адреса[](/ru/astra/receiving/general/address-format#understanding-the-media-address-format)
+## Понимание формата медиа-адреса[](/ru/astra/receiving/address-format#understanding-the-media-address-format)
 
 Формат медиа-адреса состоит из трех основных компонентов: тип, адрес и опции. Он имеет следующую структуру:
 
@@ -21,54 +21,54 @@ type://address#options
 
 Рассмотрим подробнее каждый из этих компонентов и их роль в формате адреса.
 
-## Получение медиа-данных[](/ru/astra/receiving/general/address-format#receiving-media-types)
+## Получение медиа-данных[](/ru/astra/receiving/address-format#receiving-media-types)
 
-- `dvb` - источник мультимедиа, получаемый через DVB-тюнер или виртуальный адаптер. [Введение в настройку адаптера DVB](/ru/astra/receiving/dvb/intro)
-- `udp` - [UDP многоадресная или одноадресная рассылка](/ru/astra/receiving/ip/udp)
-- `rtp` - [RTP multicast или unicast](/ru/astra/receiving/ip/udp)
-- `http` - Протоколы на основе HTTP: [HTTP MPEG-TS](/ru/astra/receiving/ip/http) или [HLS](/ru/astra/receiving/ip/hls)
-- `srt` - [Протокол SRT](/ru/astra/receiving/ip/srt)
-- `rtsp` - [Протокол RTSP](/ru/astra/receiving/ip/rtsp), обычно используется для приема потока с IP-камер
+- `dvb` - источник мультимедиа, получаемый через DVB-тюнер или виртуальный адаптер. [Введение в настройку адаптера DVB](/ru/astra/receiving/intro)
+- `udp` - [UDP многоадресная или одноадресная рассылка](/ru/astra/receiving/udp)
+- `rtp` - [RTP multicast или unicast](/ru/astra/receiving/udp)
+- `http` - Протоколы на основе HTTP: [HTTP MPEG-TS](/ru/astra/receiving/http) или [HLS](/ru/astra/receiving/hls)
+- `srt` - [Протокол SRT](/ru/astra/receiving/srt)
+- `rtsp` - [Протокол RTSP](/ru/astra/receiving/rtsp), обычно используется для приема потока с IP-камер
 - `file` - Файл MPEG-TS на сервере
 
-## Передача медиа-данных[](/ru/astra/receiving/general/address-format#transmitting-media-types)
+## Передача медиа-данных[](/ru/astra/receiving/address-format#transmitting-media-types)
 
-- `udp` - [UDP многоадресная или одноадресная рассылка](/ru/astra/delivery/broadcasting/udp)
+- `udp` - [UDP многоадресная или одноадресная рассылка](/ru/astra/delivery/udp)
 - `rtp` - RTP multicast или unicast
 - `srt` - Протокол SRT
 - `http` - Протоколы, основанные на HTTP, по умолчанию HTTP MPEG-TS, или HLS, если адрес носителя заканчивается на `.m3u8` расширение
-- `resi` - [DVB-C модулятор от DigitalDevices](/ru/astra/delivery/hardware/resi-dvb-c-modulator)
-- `tbs` - [DVB-C модулятор фирмы TBS](/ru/astra/delivery/hardware/tbs-dvb-c-modulator)
-- `it950x` - [DVB-T модулятор от HiDes](/ru/astra/delivery/hardware/hides-dvb-t-modulator)
+- `resi` - [DVB-C модулятор от DigitalDevices](/ru/astra/delivery/resi-dvb-c-modulator)
+- `tbs` - [DVB-C модулятор фирмы TBS](/ru/astra/delivery/tbs-dvb-c-modulator)
+- `it950x` - [DVB-T модулятор от HiDes](/ru/astra/delivery/hides-dvb-t-modulator)
 - `file` - сохранение потока в файл MPEG-TS или каталог на сервере
 - `np` - (NetworkPush) протокол на основе HTTP, используемый для отправки потоков из Astra на удаленный сервер
 
-## Специфичные медиа-адреса[](/ru/astra/receiving/general/address-format#type-specific-addresses)
+## Специфичные медиа-адреса[](/ru/astra/receiving/address-format#type-specific-addresses)
 
 В формате медиа-адреса компонент адреса, относящийся к конкретному типу, определяет источник или пункт назначения медиа-потока в зависимости от выбранного протокола. Подробнее о форматах адресов для каждого типа носителей можно узнать из приведенных выше статей.
 
-## Введение в общие параметры ввода[](/ru/astra/receiving/general/address-format#introduction-to-general-input-options)
+## Введение в общие параметры ввода[](/ru/astra/receiving/address-format#introduction-to-general-input-options)
 
 Общие параметры ввода играют важную роль в тонкой настройке приема и обработки медиапотоков. Эти опции позволяют изменять различные параметры, влияющие на поведение медиапотока, такие как фильтрация, анализ и модификация.
 
 Наиболее распространенные варианты:
 
-- `pnr=PNR` - номер программы/SID (Service ID) извлекает из потока канал с указанным номером. Подробнее в [Демультиплексирование MPEG-TS](/ru/astra/processing/mpegts/demux)
+- `pnr=PNR` - номер программы/SID (Service ID) извлекает из потока канал с указанным номером. Подробнее в [Демультиплексирование MPEG-TS](/ru/astra/processing/demux)
 - `set_pnr=PNR` - для изменения PNR. Значение должно находиться в диапазоне от 1 до 65535
-- `filter=N,...` - фильтрация потока, используемая для удаления указанного PID. Идентификаторы разделяются запятыми. Подробнее в [Фильтрация PID](/ru/astra/processing/mpegts/filter)
+- `filter=N,...` - фильтрация потока, используемая для удаления указанного PID. Идентификаторы разделяются запятыми. Подробнее в [Фильтрация PID](/ru/astra/processing/filter)
 - `filter~=N,...` - фильтрация потока, используемая для удаления всех данных, кроме заданных PID и служебных таблиц. Идентификаторы разделяются запятыми
-- `order` - сортировка PID в таблице PMT. Часто используется вместе с параметром lang для выбора приоритетной звуковой дорожки. Подробнее в [Упорядочивание аудиопотоков](/ru/astra/processing/mpegts/order)
+- `order` - сортировка PID в таблице PMT. Часто используется вместе с параметром lang для выбора приоритетной звуковой дорожки. Подробнее в [Упорядочивание аудиопотоков](/ru/astra/processing/order)
 - `lang` - установить код языка для звуковой дорожки. Пример: `lang.1241=eng` где: `1241` - pid, `eng` - код языка
 
 Другие варианты:
 
 - `set_tsid=TSID` - для изменения TSID (Transport Stream ID)
-- `biss=1122330044556600` - использовать ключ BISS для расшифровки потока. Подробнее: [Расшифровка потоков с помощью BISS CAS](/ru/astra/processing/cas/decrypt-biss)
+- `biss=1122330044556600` - использовать ключ BISS для расшифровки потока. Подробнее: [Расшифровка потоков с помощью BISS CAS](/ru/astra/processing/decrypt-biss)
 - `cam` - использование DVB-CI для расшифровки потока
 - `cam=CAM-ID` - использование CAM-клиента для расшифровки потока
 - `ecm_pid=PID` - определить PID ECM для CAM-клиента (не рекомендуется)
 - `cas` - пропускать служебные данные о системах условного доступа. Используется для передачи зашифрованного потока
-- `map.SRC=DST` - изменить PID на указанные значения. SRC - исходный идентификатор или тип данных. Возможные типы: pmt, video, audio, ait, language code. DST - требуемый идентификатор. Значение может находиться в диапазоне от 32 до 8190. Подробнее в [Переопределение PID потоков](/ru/astra/processing/mpegts/remap)
+- `map.SRC=DST` - изменить PID на указанные значения. SRC - исходный идентификатор или тип данных. Возможные типы: pmt, video, audio, ait, language code. DST - требуемый идентификатор. Значение может находиться в диапазоне от 32 до 8190. Подробнее в [Переопределение PID потоков](/ru/astra/processing/remap)
 - `no_sdt` - для удаления информации о канале: название канала, имя оператора (SDT Service Description Table)
 - `pass_sdt` - Передача SDT без обработки. По умолчанию, если установлено значение pnr, Astra передает информацию только по выбранному потоку
 - `no_eit` - удаление информации о событиях EPG (EIT - Event Information Table).
@@ -76,4 +76,4 @@ type://address#options
 - `no_analyze` - отключает проверку изменений в потоке
 - `cc_limit=N` - установить предел ошибок КС. Если количество ошибок СС превысит установленный предел, то Astra переключится на резервный источник (если таковой имеется). По умолчанию: предел не задан
 - `bitrate_limit=RATE` - установить минимальный битрейт для анализатора в Кбит/с. Источник будет считаться нерабочим, если битрейт потока меньше указанного значения. По умолчанию: `16 Kbit/s` для потока без видеоданных и `128 Kbit/s` для потока с видеоданными
-- `pass_data` - сохранять пакеты с данными pivate (data-pid). Подробнее в [Демультиплексирование MPEG-TS](/ru/astra/processing/mpegts/demux)
+- `pass_data` - сохранять пакеты с данными pivate (data-pid). Подробнее в [Демультиплексирование MPEG-TS](/ru/astra/processing/demux)

@@ -12,12 +12,12 @@ Mosaic - это простой скрипт для создания скринш
 
 ![Приборная панель со скриншотами](https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png)
 
-## Требования[](/ru/astra/admin-guide/administration/mosaic#requirements)
+## Требования[](/ru/astra/admin-guide/mosaic#requirements)
 
-- Astra с включенной функцией [HTTP Play](/ru/astra/delivery/http-hls/http-play)
+- Astra с включенной функцией [HTTP Play](/ru/astra/delivery/http-play)
 - FFmpeg
 
-## Установка FFmpeg[](/ru/astra/admin-guide/administration/mosaic#install-ffmpeg)
+## Установка FFmpeg[](/ru/astra/admin-guide/mosaic#install-ffmpeg)
 
 Установите FFmpeg с помощью менеджера пакетов:
 
@@ -25,7 +25,7 @@ Mosaic - это простой скрипт для создания скринш
 apt install ffmpeg
 ```
 
-## Настройка HTTP Play[](/ru/astra/admin-guide/administration/mosaic#configure-http-play)
+## Настройка HTTP Play[](/ru/astra/admin-guide/mosaic#configure-http-play)
 
 На сервере создайте новый каталог для хранения скриншотов:
 
@@ -43,7 +43,7 @@ mkdir -p /var/lib/astra/mosaic
 
 Если используется HTTP-авторизация, установите Token для администратора. Откройте веб-интерфейс Astra и перейдите в -> Settings -> Users -> выберите администратора и установите любой Токен, например: `c6017ac9`. Добавьте этот токен к URL-адресу плейлиста: `https://example.com:8000/playlist.m3u8?token=c6017ac9`
 
-## Скачайте и настройте скрипт[](/ru/astra/admin-guide/administration/mosaic#download-and-configure-script)
+## Скачайте и настройте скрипт[](/ru/astra/admin-guide/mosaic#download-and-configure-script)
 
 [Скачайте](https://cdn.cesbo.com/astra/scripts/mosaic/mosaic.sh) скрипт и сохраните его на своем сервере:
 
@@ -60,7 +60,7 @@ chmod +x /usr/local/bin/mosaic.sh
 - `API_PORT` - порт для API Astra 
 - `API_AUTH` - логин и пароль admin для доступа к Astra API
 
-## Запуск скрипта с помощью Systemd[](/ru/astra/admin-guide/administration/mosaic#start-script-with-systemd)
+## Запуск скрипта с помощью Systemd[](/ru/astra/admin-guide/mosaic#start-script-with-systemd)
 
 Для автоматического запуска скрипта его можно добавить в systemd. Загрузите конфигурационный файл для systemd и сохраните его на своем сервере:
 

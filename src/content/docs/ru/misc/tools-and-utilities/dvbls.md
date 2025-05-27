@@ -7,7 +7,7 @@ sidebar:
 
 Astra DVB List - это простой встроенный инструмент для получения информации об установленных DVB-адаптерах.
 
-## Использование[](/ru/misc/tools-and-utilities/dvb/dvbls#usage)
+## Использование[](/ru/misc/tools-and-utilities/dvbls#usage)
 
 ```
 astra --dvbls [OPTIONS]
@@ -45,7 +45,7 @@ Nov 10 09:00:00: ERROR: adapter = 1, device = 0
 Nov 10 09:00:00: ERROR:     failed to open [Bad file descriptor]
 ```
 
-## Экспорт списка DVB в файл[](/ru/misc/tools-and-utilities/dvb/dvbls#export-dvb-list-to-the-file)
+## Экспорт списка DVB в файл[](/ru/misc/tools-and-utilities/dvbls#export-dvb-list-to-the-file)
 
 При запуске Astra получает информацию об установленных в системе DVB-адаптерах. В некоторых редких случаях эта операция может занять длительное время. Чтобы не обновлять эту информацию при каждом запуске, можно сохранить ее в файл.
 

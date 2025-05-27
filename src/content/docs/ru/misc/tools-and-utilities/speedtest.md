@@ -7,7 +7,7 @@ sidebar:
 
 Иногда возникает необходимость проверить скорость подключения к Интернету из консоли сервера.
 
-## Установка[](/ru/misc/tools-and-utilities/network/speedtest#install)
+## Установка[](/ru/misc/tools-and-utilities/speedtest#install)
 
 Загрузите и установите инструмент командной строки для тестирования пропускной способности Интернета с помощью speedtest.net
 
@@ -16,7 +16,7 @@ sudo curl -Lo /usr/bin/speedtest-cli https://raw.githubusercontent.com/sivel/spe
 sudo chmod +x /usr/bin/speedtest-cli
 ```
 
-## Запуск[](/ru/misc/tools-and-utilities/network/speedtest#launch)
+## Запуск[](/ru/misc/tools-and-utilities/speedtest#launch)
 
 Для запуска теста запустите его в консоли:
 
@@ -38,7 +38,7 @@ Testing upload speed..........................
 Upload: 92.25 Mbit/s
 ```
 
-## Выберите сервер[](/ru/misc/tools-and-utilities/network/speedtest#select-server)
+## Выберите сервер[](/ru/misc/tools-and-utilities/speedtest#select-server)
 
 Список доступных серверов можно составить с помощью команды:
 

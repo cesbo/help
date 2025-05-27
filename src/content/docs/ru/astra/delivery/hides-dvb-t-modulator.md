@@ -22,7 +22,7 @@ PT100 - DVB-T модулятор на 4 частоты производства 
 
 [Читать далее](http://www.hides.com.tw/product_pt100_eng.html)
 
-## Настройка[](/ru/astra/delivery/hardware/hides-dvb-t-modulator#setup)
+## Настройка[](/ru/astra/delivery/hides-dvb-t-modulator#setup)
 
 Драйвер можно загрузить с [официального сайта](http://www.hides.com.tw/downloads_eng.html)
 
@@ -41,9 +41,9 @@ find "/dev" -name "it950x*"
 
 `it950x1` - где 1 - номер модулятора
 
-## Настройки Astra[](/ru/astra/delivery/hardware/hides-dvb-t-modulator#astra-settings)
+## Настройки Astra[](/ru/astra/delivery/hides-dvb-t-modulator#astra-settings)
 
-Подготовьте [MPTS](/ru/astra/delivery/broadcasting/mpts-settings) к работе с модулятором. В настройках MPTS NIT настройте параметры транспондера:
+Подготовьте [MPTS](/ru/astra/delivery/mpts-settings) к работе с модулятором. В настройках MPTS NIT настройте параметры транспондера:
 
 ![Настройки MPTS NIT](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 

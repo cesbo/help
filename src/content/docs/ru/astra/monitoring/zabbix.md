@@ -9,7 +9,7 @@ sidebar:
 
 :::note Доступно для версий Astra, выпущенных после 2021-05-11 ::
 
-## Установка сервера Zabbix[](/ru/astra/monitoring/export/zabbix#zabbix-server-installation)
+## Установка сервера Zabbix[](/ru/astra/monitoring/zabbix#zabbix-server-installation)
 
 Zabbix может быть установлен как на выделенном сервере, так и на сервере Astra
 
@@ -20,7 +20,7 @@ Zabbix может быть установлен как на выделенном
 
 Подробную информацию можно найти в [руководствах Zabbix](https://www.zabbix.com/manuals).
 
-## Установка агента Zabbix Agent[](/ru/astra/monitoring/export/zabbix#zabbix-agent-installation)
+## Установка агента Zabbix Agent[](/ru/astra/monitoring/zabbix#zabbix-agent-installation)
 
 Установите Zabbix Agent на сервер с Astra.
 
@@ -30,7 +30,7 @@ Zabbix может быть установлен как на выделенном
 
 Подробную информацию можно найти в [руководстве по Zabbix Agent Manuals](https://www.zabbix.com/documentation/current/manual/concepts/agent)
 
-## Конфигурация агента Zabbix[](/ru/astra/monitoring/export/zabbix#zabbix-agent-configuration)
+## Конфигурация агента Zabbix[](/ru/astra/monitoring/zabbix#zabbix-agent-configuration)
 
 Прежде всего, Zabbix Agent должен быть настроен на разрешение входящих соединений с сервера Zabbix. Откройте файл конфигурации агента, расположенный в `/etc/zabbix/zabbix_agentd.conf` с помощью вашего любимого редактора.
 
@@ -69,7 +69,7 @@ curl -o /etc/zabbix/zabbix_agentd.d/astra.conf https://cdn.cesbo.com/astra/zabbi
 systemctl restart zabbix-agent
 ```
 
-## Конфигурация Zabbix[](/ru/astra/monitoring/export/zabbix#zabbix-configuration)
+## Конфигурация Zabbix[](/ru/astra/monitoring/zabbix#zabbix-configuration)
 
 ### Установка шаблона Zabbix для Astra
 
@@ -99,7 +99,7 @@ systemctl restart zabbix-agent
 
 Сохраните изменения. Примерно через 10 минут на экране появятся графики и триггеры о состоянии каналов и адаптеров
 
-## Примеры диаграмм[](/ru/astra/monitoring/export/zabbix#chart-examples)
+## Примеры диаграмм[](/ru/astra/monitoring/zabbix#chart-examples)
 
 ![Каналы в Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-channel.png)
 

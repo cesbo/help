@@ -70,7 +70,7 @@ mkdir -p /opt/ramcache
 chown -R nginx:root /opt/ramcache
 ```
 
-## Заголовок Expires[](/ru/misc/tools-and-utilities/network/hls-caching-proxy-with-nginx#expires-header)
+## Заголовок Expires[](/ru/misc/tools-and-utilities/hls-caching-proxy-with-nginx#expires-header)
 
 Важно, чтобы сервер-источник отправлял ответ с соответствующими заголовками, определяющими время истечения срока действия обслуживаемого содержимого.
 

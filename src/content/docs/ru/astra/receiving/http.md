@@ -7,7 +7,7 @@ sidebar:
 
 Протокол на основе HTTP для потокового видео. Astra получает непрерывный поток от сервера в виде HTTP-ответа.
 
-## Формат адреса[](/ru/astra/receiving/ip/http#address-format)
+## Формат адреса[](/ru/astra/receiving/http#address-format)
 
 ```
 http://address
@@ -30,6 +30,6 @@ http://login:password@address:port/path#options
 - `buffer_time=N` - задает размер временного буфера для приема потока и синхронизации битрейта. Astra загружает данные потока в буфер с максимальной скоростью, затем равномерно отправляет данные на обработку
 - `no_sync` - является коротким вариантом для `buffer_time=0` отключает синхронизацию и загружает потоковые данные без ограничений
 
-## Веб-интерфейс[](/ru/astra/receiving/ip/http#web-interface)
+## Веб-интерфейс[](/ru/astra/receiving/http#web-interface)
 
 Для настройки входа HTTP MPEG-TS в Astra достаточно записать адрес источника в поле Input.

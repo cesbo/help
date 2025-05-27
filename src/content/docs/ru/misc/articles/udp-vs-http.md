@@ -7,7 +7,7 @@ sidebar:
 
 При передаче цифрового телевидения используются различные протоколы для трансляции медиаконтента, в частности, User Datagram Protocol (UDP), Hypertext Transfer Protocol (HTTP) и HTTP Live Streaming (HLS). Каждый из этих протоколов обладает своими отличительными характеристиками, которые влияют на их эффективность, надежность и совместимость с различными устройствами и сетями. Ниже мы рассмотрим их основные функции, преимущества и недостатки, чтобы получить четкое представление об их использовании в цифровом телевидении.
 
-## UDP Multicast[](/ru/misc/articles/protocols/udp-vs-http#udp-multicast)
+## UDP Multicast[](/ru/misc/articles/udp-vs-http#udp-multicast)
 
 ![UDP Multicast](https://cdn.cesbo.com/help/astra/delivery/udp.svg)
 
@@ -22,11 +22,11 @@ UDP multicast функционирует в диапазоне IP-адресов
 - шифрование потоков для безопасной передачи данных
 - управление портами на коммутационном оборудовании
 
-## UDP Unicast[](/ru/misc/articles/protocols/udp-vs-http#udp-unicast)
+## UDP Unicast[](/ru/misc/articles/udp-vs-http#udp-unicast)
 
 Одноадресная рассылка UDP служит методом передачи "один к одному". Обычно он используется для передачи потоков между различными серверами в головной станции. В качестве примера можно привести передачу потоков от приемника к транскодеру, а затем от транскодера к мультиплексору.
 
-## HTTP MPEG-TS[](/ru/misc/articles/protocols/udp-vs-http#http-mpeg-ts)
+## HTTP MPEG-TS[](/ru/misc/articles/udp-vs-http#http-mpeg-ts)
 
 Протокол HTTP MPEG-TS основан на протоколе HTTP и работает подобно загрузке бесконечного файла, непрерывно отправляя данные на приемник в виде постоянного потока. Такой подход обеспечивает хорошую совместимость со старыми приставками, которые были разработаны с учетом этого протокола.
 
@@ -34,7 +34,7 @@ UDP multicast функционирует в диапазоне IP-адресов
 
 Что касается управления доступом, то для авторизации HTTP MPEG-TS может использовать стандартные методы HTTP, что исключает необходимость шифрования, хотя при необходимости для обеспечения дополнительной безопасности возможно шифрование через Transport Layer Security (TLS).
 
-## HLS[](/ru/misc/articles/protocols/udp-vs-http#hls)
+## HLS[](/ru/misc/articles/udp-vs-http#hls)
 
 ![Диаграмма HLS](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/diagram.svg)
 

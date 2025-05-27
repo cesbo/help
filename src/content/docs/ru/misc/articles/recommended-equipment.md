@@ -13,7 +13,7 @@ sidebar:
 
 Эти элементы, помимо прочего, способствуют созданию надежной головной станции цифрового телевидения.
 
-## CPU[](/ru/misc/articles/hardware/recommended-equipment#cpu)
+## CPU[](/ru/misc/articles/recommended-equipment#cpu)
 
 Оптимальная частота процессора для головной станции цифрового телевидения составляет 2,5-3 ГГц и выше. Процессоры с большим количеством ядер, но меньшей частотой (например, 1,8-2,5 ГГц) плохо подходят для задач, требующих низкой латентности.
 
@@ -26,7 +26,7 @@ sidebar:
 - Intel Xeon 6C X5670
 - Core i5-9600K
 
-## RAM[](/ru/misc/articles/hardware/recommended-equipment#ram)
+## RAM[](/ru/misc/articles/recommended-equipment#ram)
 
 Частота оперативной памяти также имеет немаловажное значение. Приблизительные цифры для сравнения:
 
@@ -38,7 +38,7 @@ sidebar:
 
 Объем оперативной памяти важен только для хранения HLS-кусков (сегментов). Средний объем оперативной памяти для 100 hls-каналов составляет 16 Гб.
 
-## Сетевые адаптеры[](/ru/misc/articles/hardware/recommended-equipment#network-adapters)
+## Сетевые адаптеры[](/ru/misc/articles/recommended-equipment#network-adapters)
 
 ### размер буфера rx/tx
 
@@ -54,7 +54,7 @@ sidebar:
 
 Сетевые адаптеры с одной очередью предназначены только для потребительского использования и не рекомендуются для настройки головных станций цифрового телевидения.
 
-## Рекомендуемые сетевые адаптеры[](/ru/misc/articles/hardware/recommended-equipment#recomended-network-adapters)
+## Рекомендуемые сетевые адаптеры[](/ru/misc/articles/recommended-equipment#recomended-network-adapters)
 
 ### Intel
 
@@ -70,7 +70,7 @@ sidebar:
 
 - SFN7122F
 
-## НЕ рекомендуемые сетевые адаптеры[](/ru/misc/articles/hardware/recommended-equipment#not-recommended-network-adapters)
+## НЕ рекомендуемые сетевые адаптеры[](/ru/misc/articles/recommended-equipment#not-recommended-network-adapters)
 
 ### D-Link, Realtek
 
@@ -122,7 +122,7 @@ sidebar:
 - Сетевая карта NC326i
 - NVidia Corporation MCP55 Ethernet (rev a3) - только одна очередь. В результате даже при небольшом объеме трафика возникает очень высокая нагрузка на процессорное ядро, занятое обработкой трафика от данной сетевой карты, что приводит к неприемлемо медленной обработке пакетов.
 
-## Рекомендуемые DVB-адаптеры[](/ru/misc/articles/hardware/recommended-equipment#recommended-dvb-adapters)
+## Рекомендуемые DVB-адаптеры[](/ru/misc/articles/recommended-equipment#recommended-dvb-adapters)
 
 ### Цифровые устройства
 
@@ -153,7 +153,7 @@ DVB-адаптеры компании [TBS](https://www.tbsdtv.com/){target="_bl
 
 T980CI - 1 тюнерный DVB-T/T2/C ресивер со слотом CI. S950CI - 1 тюнерный DVB-S/S2 ресивер со слотом CI. T9580 - 2-тюнерный S2/T2/T/C ресивер с независимыми тюнерами.
 
-## Не рекомендуется использовать DVB-адаптеры[](/ru/misc/articles/hardware/recommended-equipment#not-recommended-dvb-adapters)
+## Не рекомендуется использовать DVB-адаптеры[](/ru/misc/articles/recommended-equipment#not-recommended-dvb-adapters)
 
 ### DigitalDevices
 

@@ -8,7 +8,7 @@ sidebar:
 
 В этой статье мы постараемся описать наиболее распространенные оптические разъемы, которые используются в сетях передачи данных и телевизионных сетях.
 
-## Ферула[](/ru/misc/articles/hardware/fiber-connectors#the-fiber-ferrule)
+## Ферула[](/ru/misc/articles/fiber-connectors#the-fiber-ferrule)
 
 Ферула - это керамическая часть коннектора. В центр ферулы вставляется оптическое волокно. Оно используется для пропускания лазерного излучения через два оптических волокна.
 
@@ -16,7 +16,7 @@ sidebar:
 
 ![Разъем](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/connector.png)
 
-## Разъем SC[](/ru/misc/articles/hardware/fiber-connectors#sc-connector)
+## Разъем SC[](/ru/misc/articles/fiber-connectors#sc-connector)
 
 ![SC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/sc.png)
 
@@ -32,7 +32,7 @@ sidebar:
 - потери 0,25 дБ;
 - используемых в FTTH, телефонии, кабельном телевидении и т.д.
 
-## Разъем FC[](/ru/misc/articles/hardware/fiber-connectors#fc-connector)
+## Разъем FC[](/ru/misc/articles/fiber-connectors#fc-connector)
 
 ![ФК](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/fc.png)
 
@@ -46,7 +46,7 @@ sidebar:
 - используется с одномодовым волокном;
 - потери 0,3 дБ.
 
-## Разъем LC[](/ru/misc/articles/hardware/fiber-connectors#lc-connector)
+## Разъем LC[](/ru/misc/articles/fiber-connectors#lc-connector)
 
 ![LC](https://cdn.cesbo.com/help/misc/articles/fiber-connectors/lc.png)
 
@@ -60,7 +60,7 @@ LC-коннектор был разработан компанией Lucent Tech
 - используется с одномодовым и многомодовым волокном;
 - потери 0,10 дБ.
 
-## Разъем ST[](/ru/misc/articles/hardware/fiber-connectors#st-connector)
+## Разъем ST[](/ru/misc/articles/fiber-connectors#st-connector)
 
 ST Connector был разработан в США компанией AT&T и использовался в профессиональных средах: корпоративных сетях, в военной сфере.
 
@@ -72,7 +72,7 @@ ST Connector был разработан в США компанией AT&T и и
 - используется с многомодовым волокном;
 - потери 0,25 дБ.
 
-## Виды полировки волоконно-оптических соединителей[](/ru/misc/articles/hardware/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
+## Виды полировки волоконно-оптических соединителей[](/ru/misc/articles/fiber-connectors#types-of-polish-on-fiber-optic-connectors)
 
 На протяжении многих лет специалисты совершенствовали форму и характеристики оптических разъемов, стараясь добиться минимальных потерь и отражений на разъеме. Не секрет, что потери на коннекторе снижают мощность сигнала, что приводит к уменьшению расстояния, на которое он может быть передан. Отраженная часть сигнала также может вносить ошибки (BER) и нагревать SFP-модуль, что, в свою очередь, снижает качество передаваемой информации и приводит к сокращению срока службы передающего оборудования.
 

@@ -7,7 +7,7 @@ sidebar:
 
 Socat - это инструмент командной строки, обеспечивающий двунаправленную передачу данных между двумя потоками.
 
-## Раскрытие локальных ресурсов[](/ru/misc/tools-and-utilities/network/socat#exposing-local-resources)
+## Раскрытие локальных ресурсов[](/ru/misc/tools-and-utilities/socat#exposing-local-resources)
 
 Запрос получен на порт `11554` будет направлена в `192.168.88.100:554`
 

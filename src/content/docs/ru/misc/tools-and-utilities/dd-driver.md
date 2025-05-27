@@ -7,7 +7,7 @@ sidebar:
 
 DigitalDevices - производитель аппаратуры, специализирующийся на DVB-устройствах: тюнерах, модуляторах.
 
-## Автоматическая установка[](/ru/misc/tools-and-utilities/dvb/dd-driver#auto-installation)
+## Автоматическая установка[](/ru/misc/tools-and-utilities/dd-driver#auto-installation)
 
 Вы можете установить драйвер в автоматическом режиме или вручную. Для автоматической установки драйвера запустите консоль:
 
@@ -15,9 +15,9 @@ DigitalDevices - производитель аппаратуры, специал
 curl -sSf https://cdn.cesbo.com/astra/scripts/drv-dd.sh | sh
 ```
 
-После перезапуска сервера [проверьте](/ru/misc/tools-and-utilities/dvb/dd-driver#check-driver) правильность установки драйвера.
+После перезапуска сервера [проверьте](/ru/misc/tools-and-utilities/dd-driver#check-driver) правильность установки драйвера.
 
-## Ручная установка[](/ru/misc/tools-and-utilities/dvb/dd-driver#manual-installation)
+## Ручная установка[](/ru/misc/tools-and-utilities/dd-driver#manual-installation)
 
 ### Подготовка системы
 
@@ -91,9 +91,9 @@ echo 'options ddbridge fmode=0' | tee /etc/modprobe.d/ddbridge.conf
 shutdown -r now
 ```
 
-После перезапуска сервера [проверьте](/ru/misc/tools-and-utilities/dvb/dd-driver#check-driver) правильность установки драйвера.
+После перезапуска сервера [проверьте](/ru/misc/tools-and-utilities/dd-driver#check-driver) правильность установки драйвера.
 
-## Проверка работы драйвера[](/ru/misc/tools-and-utilities/dvb/dd-driver#check-driver)
+## Проверка работы драйвера[](/ru/misc/tools-and-utilities/dd-driver#check-driver)
 
 Чтобы проверить правильность установки драйвера, выведите список адаптеров в каталоге dvb:
 
@@ -107,6 +107,6 @@ ls /dev/dvb
 adapter0 adapter1 adapter2 adapter3 ...
 ```
 
-## Поиск и устранение неисправностей[](/ru/misc/tools-and-utilities/dvb/dd-driver#troubleshooting)
+## Поиск и устранение неисправностей[](/ru/misc/tools-and-utilities/dd-driver#troubleshooting)
 
 Если у вас возникли какие-либо проблемы с адаптерами DVB, пожалуйста, проверьте раздел [Устранение неисправностей DVB](/ru/misc/troubleshooting/dvb)

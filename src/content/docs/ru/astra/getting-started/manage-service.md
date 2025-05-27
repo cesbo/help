@@ -9,7 +9,7 @@ sidebar:
 
 :::note В большинстве дистрибутивов Linux сервисы, управляемые с помощью `systemd`. Systemd контролирует состояние сервисов, проверяет журналы сервисов и запускает сервисы при старте системы. ::
 
-## Запуск дополнительных процессов[](/ru/astra/getting-started/first-steps/manage-service#launch-additional-services)
+## Запуск дополнительных процессов[](/ru/astra/getting-started/manage-service#launch-additional-services)
 
 Вы можете запустить на своем сервере один или несколько сервисов в зависимости от ваших потребностей.
 
@@ -19,7 +19,7 @@ astra init 8001 astra-1
 
 Имя сервиса будет `astra-1` с портом веб-интерфейса `8001`.
 
-## Управление службой[](/ru/astra/getting-started/first-steps/manage-service#service-management)
+## Управление службой[](/ru/astra/getting-started/manage-service#service-management)
 
 В данном примере имя сервиса задано по умолчанию: `astra`
 
@@ -33,7 +33,7 @@ astra init 8001 astra-1
 | `systemctl disable astra` | Отключение автозапуска |
 | `journalctl -fu astra` | Лог сервиса |
 
-## Удалить сервис[](/ru/astra/getting-started/first-steps/manage-service#remove-service)
+## Удалить сервис[](/ru/astra/getting-started/manage-service#remove-service)
 
 Перед удалением сервиса остановите его и отключите автозапуск:
 

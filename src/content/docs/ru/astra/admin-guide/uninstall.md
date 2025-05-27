@@ -9,10 +9,10 @@ sidebar:
 Если Astra больше не нужна, вы можете полностью удалить ее с вашего сервера.
 
 :::note
-Перед деинсталляцией, пожалуйста [создайте резервную копию](/ru/astra/admin-guide/administration/backup)!
+Перед деинсталляцией, пожалуйста [создайте резервную копию](/ru/astra/admin-guide/backup)!
 :::
 
-## Отключить сервис[](/ru/astra/admin-guide/administration/uninstall#disable-service)
+## Отключить сервис[](/ru/astra/admin-guide/uninstall#disable-service)
 
 Остановите службу и отключите автозапуск:
 
@@ -21,7 +21,7 @@ systemctl stop astra
 systemctl disable astra
 ```
 
-## Удалить сервис[](/ru/astra/admin-guide/administration/uninstall#remove-service)
+## Удалить сервис[](/ru/astra/admin-guide/uninstall#remove-service)
 
 Удалите сервис из системы:
 
@@ -35,7 +35,7 @@ astra remove
 astra remove astra-8001
 ```
 
-## Очистка[](/ru/astra/admin-guide/administration/uninstall#cleanup)
+## Очистка[](/ru/astra/admin-guide/uninstall#cleanup)
 
 Наконец, удалите двоичный файл и файлы конфигурации:
 

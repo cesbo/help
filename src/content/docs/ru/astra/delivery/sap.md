@@ -14,12 +14,12 @@ Session Announcement Protocol (SAP) - это протокол для анонс�
 
 Astra отправляет SAP-пакеты в многоадресную группу 239.255.255.255 порт 9875.
 
-## Настройка Astra[](/ru/astra/delivery/broadcasting/sap#configure-astra)
+## Настройка Astra[](/ru/astra/delivery/sap#configure-astra)
 
 В поле Выходной адрес добавьте `sap` опция для включения объявлений SAP.
 
 ![Настройки каналов](https://cdn.cesbo.com/help/astra/delivery/broadcasting/sap/channel.png)
 
-## Получение SAP с помощью VLC[](/ru/astra/delivery/broadcasting/sap#receiving-sap-with-vlc)
+## Получение SAP с помощью VLC[](/ru/astra/delivery/sap#receiving-sap-with-vlc)
 
 Откройте VLC Media Player и в списке воспроизведения выберите Local Network -> Network streams (SAP). VLC получит анонсы SAP и выведет список всех доступных потоков. Дважды щелкните на потоке, чтобы начать воспроизведение.

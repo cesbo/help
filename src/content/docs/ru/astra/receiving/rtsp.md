@@ -7,7 +7,7 @@ sidebar:
 
 RSTP является популярным протоколом для потоковой передачи мультимедиа по IP-сетям и широко используется в IP-камерах благодаря возможности передачи видеопотока с низкой задержкой и высоким качеством.
 
-## Формат адреса[](/ru/astra/receiving/ip/rtsp#address-format)
+## Формат адреса[](/ru/astra/receiving/rtsp#address-format)
 
 Адреса RSTP используются для идентификации местоположения медиапотока, передаваемого по сети
 
@@ -27,7 +27,7 @@ rtsp://login:password@address:port/path#options
 - `tcp` - чередующийся режим. принимать поток по TCP вместо UDP
 - `ua=Name` - пользовательский заголовок User-Agent
 
-## Веб-интерфейс[](/ru/astra/receiving/ip/rtsp#web-interface)
+## Веб-интерфейс[](/ru/astra/receiving/rtsp#web-interface)
 
 Для настройки входа RSTP в Astra можно либо ввести адрес источника непосредственно в `Input address` поле в настройках потока или воспользуйтесь формой настройки входа, доступ к которой осуществляется нажатием на значок шестеренки:
 
@@ -36,7 +36,7 @@ rtsp://login:password@address:port/path#options
 - `RSTP address` - адрес источника потока RSTP
 - `Interleaved mode` - По умолчанию Astra использует UDP для получения медиаданных от камеры, режим чередования заставляет камеру передавать данные по TCP
 
-## Поиск и устранение неисправностей[](/ru/astra/receiving/ip/rtsp#troubleshooting)
+## Поиск и устранение неисправностей[](/ru/astra/receiving/rtsp#troubleshooting)
 
 ### h.265 не работает
 

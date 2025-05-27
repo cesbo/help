@@ -5,9 +5,9 @@ sidebar:
     order: 3
 ---
 
-EIT Stream - это инструмент для преобразования [файлов XMLTV](/ru/misc/articles/format/xmltv) в поток MPEG-TS с информационными таблицами событий (EIT) для таких сетей вещания, как DVB, ATSC, ISDB.
+EIT Stream - это инструмент для преобразования [файлов XMLTV](/ru/misc/articles/xmltv) в поток MPEG-TS с информационными таблицами событий (EIT) для таких сетей вещания, как DVB, ATSC, ISDB.
 
-## Установка[](/ru/misc/tools-and-utilities/tv-and-media/eit-stream#installation)
+## Установка[](/ru/misc/tools-and-utilities/eit-stream#installation)
 
 Достаточно загрузить один двоичный файл и установить разрешение на выполнение:
 
@@ -16,7 +16,7 @@ curl -Lo /usr/bin/eit-stream http://cesbo.com/and/eit-stream
 chmod +x /usr/bin/eit-stream
 ```
 
-## Конфигурация[](/ru/misc/tools-and-utilities/tv-and-media/eit-stream#configuration)
+## Конфигурация[](/ru/misc/tools-and-utilities/eit-stream#configuration)
 
 Создание файла конфигурации `/etc/eit-stream.conf` с помощью любого текстового редактора. Пример:
 
@@ -110,11 +110,11 @@ xmltv-id = euronews
 - `xmltv-id` - идентификатор канала в xmltv
 - `parental-rating` - возрастное ограничение. Значение определяется парами: страна и возраст. Например: `parental-rating = EST 16 USA 14`. Код страны в формате ISO 3166-1 alpha-3 (3 буквы). Возраст от 4 до 18 лет (включительно), 0 - без ограничений.
 
-## Добавление EIT в MPTS[](/ru/misc/tools-and-utilities/tv-and-media/eit-stream#mux-stream-with-eit-to-mpts)
+## Добавление EIT в MPTS[](/ru/misc/tools-and-utilities/eit-stream#mux-stream-with-eit-to-mpts)
 
 С помощью Astra можно добавлять в MPTS UDP-поток с EIT. В настройках MPTS добавьте вход и задайте UDP-адрес, например, в приведенной выше конфигурации адрес `udp://lo@239.0.0.1:1234`. В дополнительных настройках MPTS включите опцию "Проходить EIT".
 
-## Автозапуск[](/ru/misc/tools-and-utilities/tv-and-media/eit-stream#autostart)
+## Автозапуск[](/ru/misc/tools-and-utilities/eit-stream#autostart)
 
 Зарегистрируйте сервис в systemd для запуска службы в фоновом режиме и автозапуска при старте системы. Создайте файл `/etc/systemd/system/eit-stream.service`:
 
@@ -140,7 +140,7 @@ WantedBy=multi-user.target
 - включить автозапуск: `systemctl enable eit-stream`
 - отключить автозапуск: `systemctl disable eit-stream`
 
-## Перезагрузка[](/ru/misc/tools-and-utilities/tv-and-media/eit-stream#reload)
+## Перезагрузка[](/ru/misc/tools-and-utilities/eit-stream#reload)
 
 Чтобы перезапускать службу один раз ночью, добавьте в /etc/crontab следующую строку:
 

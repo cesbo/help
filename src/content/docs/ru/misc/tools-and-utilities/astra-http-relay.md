@@ -7,7 +7,7 @@ sidebar:
 
 Astra HTTP Relay - это простой встроенный инструмент для ретрансляции данных из любого источника, поддерживаемого Astra, на HTTP-клиент.
 
-## Использование[](/ru/misc/tools-and-utilities/tv-and-media/astra-http-relay#usage)
+## Использование[](/ru/misc/tools-and-utilities/astra-http-relay#usage)
 
 ```
 astra --relay -p 8000
@@ -27,14 +27,14 @@ astra --relay -p 8000
 - `--log` /var/log/relay.log - полный путь к файлу журнала;
 - `--channels /etc/astra/relay.lua` - полный путь к псевдонимам каналов.
 
-## Формат адреса[](/ru/misc/tools-and-utilities/tv-and-media/astra-http-relay#address-format)
+## Формат адреса[](/ru/misc/tools-and-utilities/astra-http-relay#address-format)
 
 Адрес запроса имеет следующий формат:
 
 - `http://your-server-address:8000/udp/239.255.1.1:1234` - получает UDP-поток от многоадресной группы `239.255.1.1:1234`
 - `http://your-server-address:8000/http/example.com/travel-channel` - получает HTTP-поток от `http://example.com/travel-channel`
 
-## Псевдонимы каналов[](/ru/misc/tools-and-utilities/tv-and-media/astra-http-relay#channel-aliases)
+## Псевдонимы каналов[](/ru/misc/tools-and-utilities/astra-http-relay#channel-aliases)
 
 Канал aslias позволяет использовать короткое имя вместо полного адреса. Пример списка псевдонимов:
 
@@ -58,7 +58,7 @@ astra --relay -p 8000 --channels /etc/astra/relay.conf
 - `http://your-server-address:8000/demo` - UDP-поток
 - `http://your-server-address:8000/travel-channel` - HTTP-поток
 
-## Статистика[](/ru/misc/tools-and-utilities/tv-and-media/astra-http-relay#statistics)
+## Статистика[](/ru/misc/tools-and-utilities/astra-http-relay#statistics)
 
 Статистика - это простая страница, на которой активные сессии содержат следующую информацию:
 

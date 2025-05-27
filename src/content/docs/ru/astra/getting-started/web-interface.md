@@ -7,19 +7,19 @@ sidebar:
 
 Astra предоставляет веб-интерфейс, который можно использовать для управления и настройки программного обеспечения.
 
-## Доступ к веб-интерфейсу[](/ru/astra/getting-started/first-steps/web-interface#accessing-the-web-interface)
+## Доступ к веб-интерфейсу[](/ru/astra/getting-started/web-interface#accessing-the-web-interface)
 
 Веб-интерфейс хорошо работает в следующих браузерах: Firefox, Chrome или Safari.
 
 По умолчанию для веб-интерфейса используется порт 8000. Для доступа к веб-интерфейсу введите в веб-браузере следующий URL: `http://your-server-address:8000`, где your-server - IP-адрес или имя хоста сервера, на котором установлена Astra.
 
-## Вход в веб-интерфейс[](/ru/astra/getting-started/first-steps/web-interface#login-to-web-interface)
+## Вход в веб-интерфейс[](/ru/astra/getting-started/web-interface#login-to-web-interface)
 
 ![Вход в веб-интерфейс](https://cdn.cesbo.com/help/astra/getting-started/web-interface/login.png)
 
 Логин и пароль по умолчанию: `admin`. Для предотвращения несанкционированного доступа рекомендуется изменить пароль по умолчанию на более надежный.
 
-## Обзор интерфейса[](/ru/astra/getting-started/first-steps/web-interface#interface-overview)
+## Обзор интерфейса[](/ru/astra/getting-started/web-interface#interface-overview)
 
 ![Приборная панель](https://cdn.cesbo.com/help/astra/getting-started/web-interface/dashboard.png)
 
