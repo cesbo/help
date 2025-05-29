@@ -2,43 +2,14 @@
 
 The **Receivers** section in Alta Cesbo allows managing input streams (e.g., UDP, RTP, RTSP) that are ingested by the HLS server.
 ## Supported protocols include:
- - UDP (MPEG-TS), 
- - HTTP/HTTPS (MPEG-TS),
+ - UDP (MPEG-TS)
+ - HTTP MPEG-TS
+ - HLS
  - RTSP
 
 ---
 
-## 1. Import Receivers via M3U
-
-**Steps:**
-
-1. Click **Import m3u**.
-2. **Step 1: Import**
-   - **Web**: Enter a public `.m3u` URL → **Next**.
-   - **Local**: Upload `.m3u` file → **Next**.
-3. **Step 2: Create Receivers**
-   - Review and select streams to enable.
-4. **Step 3: Results**
-   - View import success and error messages.
-
-**Tip:** Use M3U playlists from your provider to import large channel lists efficiently.
-
----
-
-## 2. Manually Create a Receiver
-
-1. Click **Create**.
-2. Fill in:
-   - **Enable**: Toggle on/off.
-   - **Name** *(required)*: e.g., `Cinemax 2 HD`.
-   - **Source** *(required)*: e.g., `udp://239.10.10.7:5000`, `http://example.com/stream.ts`, `rtsp://192.168.1.100/stream`.
-3. Click **Save**.
-
-*Required fields are validated on save. Errors are highlighted.*
-
----
-
-## 3. Receiver List
+## 1. Receiver List
 
  **Enabled**  Toggle stream on/off                              
  **Name**     Descriptive label                                 
@@ -52,6 +23,34 @@ The **Receivers** section in Alta Cesbo allows managing input streams (e.g., UDP
 > - **Sort** by name or status.
 
 ---
+
+## 2. Import Receivers via M3U
+
+**Steps:**
+
+1. Click **Import m3u**.
+2. **Step 1: Import**
+   - **Web**: Enter a public `.m3u` URL → **Next**.
+   - **Local**: Upload `.m3u` file → **Next**.
+3. **Step 2: Create Receivers**
+   - Review and select streams to enable.
+4. **Step 3: Results**
+   - View import success and error messages.
+
+> **Tip:** Use M3U playlists from your provider to import large channel lists efficiently.
+
+---
+
+## 3. Manually Create a Receiver
+
+1. Click **Create**.
+2. Fill in:
+   - **Enable**: Toggle on/off.
+   - **Name** *(required)*: e.g., `Cinemax 2 HD`.
+   - **Source** *(required)*: e.g., `udp://239.10.10.7:5000`, `http://example.com/stream.ts`, `rtsp://192.168.1.100/stream`.
+3. Click **Save**.
+
+> *Required fields are validated on save. Errors are highlighted.*
 
 ## 4. Best Practices & Troubleshooting
 
