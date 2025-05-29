@@ -1,6 +1,10 @@
 # Receivers Overview
 
-The **Receivers** section in Alta Cesbo allows administrators to manage input streams (e.g., UDP, RTP, RTSP) that are ingested by the HLS server.
+The **Receivers** section in Alta Cesbo allows managing input streams (e.g., UDP, RTP, RTSP) that are ingested by the HLS server.
+## Supported protocols include:
+ - UDP (MPEG-TS), 
+ - HTTP/HTTPS (MPEG-TS),
+ - RTSP
 
 ---
 
