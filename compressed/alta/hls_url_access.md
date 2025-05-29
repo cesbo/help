@@ -2,21 +2,28 @@
 
 ## 1. URL Structure
 
-- **Base path**: `/<channel_id>` (e.g., `/discovery`)
-- **Variant path** (multi-bitrate): `/<channel_id>/<variant>` (e.g., `/discovery/1080p`)
+- **Base path**: `/<channel_name>` (e.g., `/discovery`)
+- **Variant path** (multi-bitrate): `/<channel_name>/<variant>` (e.g., `/discovery/1080p`)
 - **Filenames** (default, configurable in [HLS Access]()):
-  - `index.m3u8` – Stream mode
-  - `media.m3u8` – Live; exposes static media playlist without session token
-  - `vod.m3u8` – On-demand; URL includes `start` and `duration` parameters
+  - `index.m3u8`: Main access point for both live and on-demand content
+    * Without parameters: Streams live content
+    * With `start` parameter: Provides time-shifted content
+  - `media.m3u8` –  Direct access to live content without session creation
+  - `vod.m3u8` – Direct access to on-demand content without session creation; URL includes `start` and `duration` parameters
 
 ---
 
 ## 2. Index Playlist (Stream Mode)
 
 **URL**:  
-`/<channel_id>/index.m3u8?start=<time>[&duration=<sec>]`
 
-- **start** (required):
+`/<channel_name>/index.m3u8`
+
+or with optional parameters:
+
+`/<channel_name>/index.m3u8?start=<time>&duration=<sec>`
+
+- **start** (optional):
   - Relative: Seconds before now (e.g., `-300`)
   - Absolute: Unix timestamp (e.g., `1747485787`)
 - **duration** (optional): Playback length in seconds
@@ -37,7 +44,7 @@
 ## 3. Media Playlist (Live)
 
 **URL**:
-`/<channel_id>[/<variant>]/media.m3u8`
+`/<channel_name>/<variant>/media.m3u8`
 
 * Streams current live segments
 * No query parameters
@@ -48,7 +55,7 @@
 ## 4. VOD Playlist (On-Demand)
 
 **URL**:
-`/<channel_id>[/<variant>]/vod.m3u8?start=<time>&duration=<sec>`
+`/<channel_name>/<variant>/vod.m3u8?start=<time>&duration=<sec>`
 
 * **start**: Relative or absolute
 * **duration**: Required
@@ -78,13 +85,13 @@
 
 * **Access**: Public by default. Enable [authentication]() if needed.
 * **Pause/Seek**:
-
   * *Index*: Limited rewind
   * *VOD*: Full seek within requested range
+  
 * **Multi-bitrate**:
-
   * `index.m3u8` lists available variants
   * Direct URL forces specific variant
-* **Archive**: Access to VOD or index requires archive to be enabled (Storage must be assigned in channel settings)
+  
+* **Archive**: Access to VOD or index requires archive to be enabled ([Storage]() must be assigned in channel settings)
 
 ---
