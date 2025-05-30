@@ -34,7 +34,12 @@ Used for both new and existing channels. Includes:
 5. **Authorizer**:
    - Select predefined access control.
    - If disabled, stream is public.
-
+   - If **Secure Token** is selected, the `Secure Link` button appears. Clicking it opens the `Generate Channel Secure Link` dialog with:
+     - **IP**: Client IP.
+     - **Start/End**: Secure token timeout.
+   - Click **Generate** to create a secure link:
+     ```http://<host>:<OTT_PORT>/<channel_name>/index.m3u8?token=<generated_tocken>```
+      > Where `<host>` is a [OTT server]() name.
 6. **Storage & Duration**:
    - **Storage**: Disk quota per variant (select from existing storages). Read more [Storage]()
    - **Duration**: Retention time overrides storage default if different.
