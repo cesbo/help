@@ -18,4 +18,3 @@ IP Authorization supports IPv4 and IPv6 addresses with CIDR notation.
 - `deny 192.168.0.100` - deny access to single address
 - `pass 192.168.0.0/24` - pass client from the IPv4 network to the next authorizer - securetoken or backend
 - `pass fd32:ce04:8a5c::1/64` - same for IPv6 network
-- `deny any` - deny access for any other addresses
