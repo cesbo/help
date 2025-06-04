@@ -15,7 +15,7 @@ noindex: true
 ### Receivers
 
 - Better receiving stability - could handle many errors in the stream without stopping the receiver
-- Transmits the last full video frame when the input source stops working
+- If the receiver stops working, the last full video frame continues to be delivered — the stream doesn’t interrupt in the player and will resume automatically when the source returns
 
 ### Channels
 
