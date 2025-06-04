@@ -3,6 +3,30 @@ title: "Changelog"
 noindex: true
 ---
 
+## 250603
+
+[Download Alta-250603](https://cdn.cesbo.com/alta/builds/alta-250603)
+
+### Interface
+
+- Short guide how to reset password on the login page
+- Fixed issue with network mask in the IP authentication settings
+
+### Receivers
+
+- Better receiving stability - could handle many errors in the stream without stopping the receiver
+- Transmits the last full video frame when the input source stops working
+
+### Channels
+
+- Pause - Player can pause the channel and continue playback from the last position. In case of a live channel, it will continue playback from archive (if enabled).
+
+### Base App
+
+- Small fixes for `alta init` command
+- Fix issues with app crash in UDP receiver and app restart after crash
+- Config backup on changes
+
 ## 250314
 
 [Download Alta-250314](https://cdn.cesbo.com/alta/builds/alta-250314)
