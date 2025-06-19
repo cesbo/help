@@ -8,40 +8,30 @@ template: splash
 hero:
   title: Cesbo Help Center
 ---
-import ProductLayout from '@/components/ProductLayout.astro';
+import { LinkButton } from '@astrojs/starlight/components';
 import ProductCard from '@/components/ProductCard.astro';
 
-<ProductLayout>
-    <ProductCard
-      title="Astra"
-      description="TV Broadcasting simplified"
-      mainLink="/en/astra"
-      links={{
-        "/en/astra/getting-started/install": "Install",
-        "/en/astra/getting-started/features": "Learn"
-      }}
-    />
-    <ProductCard
-      title="Alta"
-      description="Digital recording solution"
-      mainLink="/en/alta"
-      links={{
-        "/en/alta/getting-started/install": "Install"
-      }}
-    />
-    <ProductCard
-      title="Senta"
-      description="Bring your streams to the next level"
-      mainLink="/en/senta"
-      links={{
-        "/en/senta/getting-started/installation": "Install",
-        "/en/senta/getting-started": "Learn"
-      }}
-    />
-</ProductLayout>
+<ProductCard
+  title="Astra"
+  description="Software headend for Digital TV broadcasting over cable, satellite, terrestrial, and IP networks."
+>
+  <LinkButton href="/en/astra/getting-started/" variant="primary" class="p-0 m-0">Learn more</LinkButton>
+</ProductCard>
+
+<ProductCard
+  title="Alta"
+  description="Software for live and video on demand content deliver."
+  link="/en/alta/"
+/>
+
+<ProductCard
+  title="Senta"
+  description="Software for video transcoding with FFmpeg"
+  link="/en/senta/"
+/>
+
 <ProductCard
   title="Knowledge base"
   description="Explore advanced articles and guides"
-  mainLink="/en/misc"
-  class="col-span-3"
+  link="/en/misc/"
 />

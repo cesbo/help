@@ -1,17 +1,31 @@
 ---
-title: Features
-date: 2024-08-02
+title: About Astra
 sidebar:
     order: 1
 ---
 
-## System Requirements
+Software headend for Digital TV broadcasting over cable, satellite, terrestrial, and IP networks.
 
-Astra works on any Linux-based distribution for x86 64-bit CPUs. We recommend using Ubuntu 22.04 LTS.
+## Is This for You?
 
-[Read more...](/en/astra/getting-started/requirements)
+Astra is designed for professionals in the broadcasting industry, including:
 
-## Receiving content
+- Cable, satellite, and terrestrial TV operators
+- IPTV and OTT service providers
+- Content delivery networks (CDNs)
+- Hotels, hospitals, and others who provide TV services for their own customers
+
+## What needs to be installed?
+
+Astra works on any Linux-based distribution for x86 64-bit CPUs. We recommend using Fedora 42.
+
+[Read how to install Astra](/en/astra/getting-started/install/)
+
+## How Does It Work?
+
+Astra is a software headend that receives, processes, and delivers digital TV content.
+
+### Receiving content
 
 Astra supports various types of sources:
 
@@ -21,9 +35,9 @@ Astra supports various types of sources:
 - SRT protocol in caller or listenner modes
 - RTSP streams from IP cameras
 
-[Read more...](/en/astra/receiving/intro)
+[Read more...](/en/astra/receiving/intro/)
 
-## Processing content
+### Processing content
 
 Astra prepares received channels for delivery using MPEG-TS processing features:
 
@@ -33,9 +47,11 @@ Astra prepares received channels for delivery using MPEG-TS processing features:
 - Analyzing streams
 - Stream redundancy by automatically switching to backup sources
 
-[Read more...](/en/astra/processing/demux)
+Astra works on the transport stream level, and delivers content without changing the original video and audio streams.
 
-## Delivering content
+[Read more...](/en/astra/processing/demux/)
+
+### Delivering content
 
 Broadcasting & Streaming content over different networks:
 
@@ -45,11 +61,11 @@ Broadcasting & Streaming content over different networks:
 - Delivery streams over IP networks with UDP Multicast
 - SRT protocol in listenner or caller modes
 
-[Read more...](/en/astra/delivery/mpts-settings)
+[Read more...](/en/astra/delivery/mpts-settings/)
 
 ## Management
 
-- Responsive Web-Interface
+- Web-Interface
 - Realtime monitoring
 - Integration with Zabbix, Grafana, and InfluxDB
 - API

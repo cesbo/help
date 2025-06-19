@@ -1,6 +1,5 @@
 ---
-title: Install
-date: 2023-02-21
+title: Installing Astra
 sidebar:
     order: 2
 ---

@@ -6,6 +6,7 @@ import starlightImageZoom from 'starlight-image-zoom'
 import starlightAutoSidebar from 'starlight-auto-sidebar'
 import starlightLlmsTxt from 'starlight-llms-txt'
 import starlightLinksValidator from 'starlight-links-validator'
+import starlightThemeRapide from 'starlight-theme-rapide'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -36,8 +37,6 @@ export default defineConfig({
       },
       routeMiddleware: './src/components/sidebar-middleware.ts',
       components: {
-          Sidebar: './src/components/Sidebar.astro',
-          SiteTitle: './src/components/SiteTitle.astro',
       },
       sidebar: [
           {
@@ -70,6 +69,7 @@ export default defineConfig({
       ],
       favicon: "/favicon.ico",
       plugins: [
+        starlightThemeRapide(),
         starlightImageZoom(),
         starlightAutoSidebar(),
         starlightLlmsTxt(),
