@@ -22,11 +22,6 @@ export default defineConfig({
          alt: 'Cesbo logo',
          replacesTitle: true,
       },
-      social: [
-          { icon: 'email', label: 'Email', href: 'mailto:support@cesbo.com' },
-          { icon: 'telegram', label: 'Telegram', href: 'https://t.me/cesbo' },
-          { icon: 'twitter', label: 'Twitter', href: 'https://twitter.com/cesbo' },
-      ],
       defaultLocale: 'en',
       locales: {
           en: {
@@ -97,7 +92,7 @@ export default defineConfig({
   },
 
   redirects: {
-      "/": "/en",
+      "/": "/en/",
       "/profile": "https://cesbo.com/accounts/profile/",
   },
 
