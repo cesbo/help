@@ -1,8 +1,5 @@
 ---
 title: System Requirements
-date: 2023-09-12
-sidebar:
-    order: 3
 ---
 
 Digital TV is a high-load service and requires some resources. Astra has no restrictions on the number of channels or clients. However, the chosen protocols and available resources may influence these parameters.

@@ -1,8 +1,5 @@
 ---
-title: "Session API"
-date: 2023-08-03
-sidebar:
-    order: 29
+title: Sessions API
 ---
 
 Sessions is a list of active connections to HTTP MPEG-TS or HLS outputs.

@@ -1,8 +1,7 @@
 ---
 title: DVB Adapters API
-date: 2023-03-23
 sidebar:
-    order: 24
+    order: 2
 ---
 
 In the Astra interface, you can manage DVB Adapter configurations and control their status using HTTP API methods.

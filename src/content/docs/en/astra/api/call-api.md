@@ -2,7 +2,7 @@
 title: "How to call API methods in Astra?"
 date: 2023-03-23
 sidebar:
-    order: 23
+    order: 1
 ---
 
 API (Application Programming Interface) is a methods to access data and interact with software components.

@@ -1,8 +1,7 @@
 ---
 title: Uninstall
-date: 2023-02-21
 sidebar:
-    order: 4
+    order: 100
 ---
 
 If Astra is not needed anymore you can remove it completely from your server.

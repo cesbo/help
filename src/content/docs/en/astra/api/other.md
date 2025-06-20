@@ -1,8 +1,5 @@
 ---
 title: Other API Methods
-date: 2023-06-30
-sidebar:
-    order: 27
 ---
 
 ## Astra Version

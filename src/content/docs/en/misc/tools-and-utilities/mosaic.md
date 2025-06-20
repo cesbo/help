@@ -2,8 +2,6 @@
 title: "Mosaic: Channel Screenshots on Dashboard"
 date: 2023-08-28
 image: https://cdn.cesbo.com/help/astra/admin-guide/administration/mosaic/dashboard.png
-sidebar:
-    order: 8
 ---
 
 Mosaic is a simple script to create channel screenshots with ffmpeg and set them on Astra Dashboard using Astra API.

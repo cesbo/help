@@ -1,8 +1,5 @@
 ---
-title: "Users API"
-date: 2023-06-30
-sidebar:
-    order: 30
+title: Users API
 ---
 
 Users used to control access to the Astra Web Interface as well as access to the HTTP MPEG-TS and HLS outputs

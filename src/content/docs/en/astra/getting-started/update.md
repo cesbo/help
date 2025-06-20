@@ -1,8 +1,5 @@
 ---
-title: Update
-date: 2023-02-21
-sidebar:
-    order: 1
+title: Updating Astra
 ---
 
 Install new version on your server
