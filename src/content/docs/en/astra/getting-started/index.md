@@ -35,8 +35,6 @@ Astra supports various types of sources:
 - SRT protocol in caller or listenner modes
 - RTSP streams from IP cameras
 
-[Read more...](/en/astra/receiving/intro/)
-
 ### Processing content
 
 Astra prepares received channels for delivery using MPEG-TS processing features:
@@ -49,8 +47,6 @@ Astra prepares received channels for delivery using MPEG-TS processing features:
 
 Astra works on the transport stream level, and delivers content without changing the original video and audio streams.
 
-[Read more...](/en/astra/processing/demux/)
-
 ### Delivering content
 
 Broadcasting & Streaming content over different networks:
@@ -60,8 +56,6 @@ Broadcasting & Streaming content over different networks:
 - HLS and HTTP MPEG-TS streaming with access authentication
 - Delivery streams over IP networks with UDP Multicast
 - SRT protocol in listenner or caller modes
-
-[Read more...](/en/astra/delivery/mpts-settings/)
 
 ## Management
 

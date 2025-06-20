@@ -45,4 +45,4 @@ In the `Map PIDs` field, `video=101, audio.eng=102` has been set. This alters th
 
 Subsequently, in the `Filter PID` field, `101, 102` has been specified. This implies that only the streams with these PIDs will be retained in the output, while all other elementary streams will be filtered out.
 
-Read more: [Remap PIDs](/en/astra/processing/remap)
+Read more: [Remap PIDs](/en/astra/streams/remap/)

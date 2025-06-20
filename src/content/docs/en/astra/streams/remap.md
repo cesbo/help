@@ -17,8 +17,8 @@ Remapping Stream PIDs is beneficial in various scenarios:
 
 ![Stream Remap Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/remap.png)
 
-- `Map PID's` - modify the Packet Identifier (PID) for MPEG-TS elementary streams. Read more in [Remapping Stream PIDs](/en/astra/processing/remap)
-- `Filter PID's` - removes specific packets within the MPEG-TS stream based on their PIDs. Read more in [Filtering Stream PIDs](/en/astra/processing/filter)
+- `Map PID's` - modify the Packet Identifier (PID) for MPEG-TS elementary streams. Read more in [Remapping Stream PIDs](/en/astra/streams/remap/)
+- `Filter PID's` - removes specific packets within the MPEG-TS stream based on their PIDs. Read more in [Filtering Stream PIDs](/en/astra/streams/filter/)
 - `Change PNR` - change program number. Program number could be in range from 1 to 65535
 - `Change TSID` - change transport stream identifier
 

@@ -12,7 +12,7 @@ Channel Screenshots helps to visually evaluate quality of the channels.
 
 ## Requirements
 
-- Astra with enabled [HTTP Play](/en/astra/delivery/http-play)
+- Astra with enabled [HTTP Play](/en/astra/delivery-http/http-play/)
 - FFmpeg
 
 ## Install FFmpeg

@@ -18,7 +18,7 @@ Technical specifications:
 
 ## Setup
 
-Use our guide to [Install TBS driver](/en/misc/tools-and-utilities/tbs-driver). Use the following command to find the adapter number and the modulator device number:
+Use our guide to [Install TBS Driver](/en/astra/adapters/tbs-driver/). Use the following command to find the adapter number and the modulator device number:
 
 ```sh
 find "/dev" -name "mod*"
@@ -36,13 +36,13 @@ In the output - we will see the numbers of modulators:
 
 ## Astra settings
 
-1. Prepare [MPTS](/en/astra/delivery/mpts-settings) for modulator
+1. Prepare [MPTS](/en/astra/streams/mpts-settings/) for modulator
 2. In the output setting, specify the address: `tbs://#adapter=0&device=1` (0 - adapter number, 1 - modulator)
 3. In the MPTS NIT settings, configure transponder options
 
 ![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/tbs-dvb-c-modulator/mpts-nit.png)
 
-Read more in: [Cable Television with Astra for Hospitality Industry](/en/astra/getting-started/cable-television-with-astra-for-hospitality-industry)
+Read more in: [Cable Television with Astra for Hospitality Industry](/en/astra/use-cases/cable-television-with-astra-for-hospitality-industry)
 
 ### Additional options
 
@@ -61,4 +61,4 @@ If you attempt to find the adapter number and encounter an error:
 find: ‘/dev/dvb’: No such file or directory
 ```
 
-it is likely that the TBS driver is not installed. Please [install TBS driver](/en/misc/tools-and-utilities/tbs-driver)
+it is likely that the TBS driver is not installed. Please [install TBS driver](/en/astra/adapters/tbs-driver/)

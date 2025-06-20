@@ -5,7 +5,7 @@ sidebar:
     order: 11
 ---
 
-Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](/en/astra/delivery/http-play) feature.
+Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](/en/astra/delivery-http/http-play/) feature.
 
 ![HTTP Play settings](https://cdn.cesbo.com/help/astra/delivery/http-hls/playlist/http-play.png)
 
@@ -34,7 +34,7 @@ Where:
 
 ## Channel Groups
 
-For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/en/astra/admin-guide/channel-groups).
+For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/en/astra/settings/channel-groups/).
 
 Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
 
@@ -74,7 +74,7 @@ url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
 ```
 
 Line will be added to the playlist header and provide information about EPG location.
-This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/en/astra/admin-guide/epg).
+This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/en/astra/streams/epg/#epg-aggregator).
 
 The final step is a configuring channel ID to link your channels with EPG records. Each channel in the XMLTV has unique identifier, like so:
 

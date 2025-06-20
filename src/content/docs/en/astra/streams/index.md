@@ -28,7 +28,7 @@ The Single Program Stream (SPTS) commonly used to form TV channels. It can utili
 
 ## Input List
 
-Configure one or more inputs to receive stream content. To set up inputs, you can use the [Media Address Format](/en/astra/receiving/address-format) or the configuration dialog.
+Configure one or more inputs to receive stream content. To set up inputs, you can use the [Media Address Format](/en/astra/streams/address-format/) or the configuration dialog.
 
 Read more information in our guides for protocol specific configuration:
 
@@ -38,16 +38,16 @@ Read more information in our guides for protocol specific configuration:
 - [SRT](/en/astra/receiving/srt)
 - [RSTP](/en/astra/receiving/rtsp)
 - [How to receive MPTS via UDP](/en/astra/receiving/mpts-via-udp)
-- [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/misc/troubleshooting/errors)
+- [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/astra/adapters/)
 
 ## Output List
 
-Configure one or more outputs to provide content to clients. Outputs are optional. You can use the [HTTP Play](/en/astra/delivery/http-play) feature to provide access to channels with HLS or HTTP MPEG-TS.
+Configure one or more outputs to provide content to clients. Outputs are optional. You can use the [HTTP Play](/en/astra/delivery-http/http-play/) feature to provide access to channels with HLS or HTTP MPEG-TS.
 
 Read more information in our guides for protocol specific configuration:
 
-- [UDP](/en/astra/delivery/udp)
-- [DVB with Broadcasting hardware](/en/misc/troubleshooting/errors)
+- [UDP](/en/astra/delivery-udp/)
+- DVB with Broadcasting hardware, such as: [HiDes DVB-T](/en/astra/delivery-broadcast/hides-dvb-t-modulator/), [RESI DVB-C](/en/astra/delivery-broadcast/resi-dvb-c-modulator/), [TBS DVB-C](/en/astra/delivery-broadcast/tbs-dvb-c-modulator/)
 
 ## Single Program Stream
 
@@ -57,8 +57,6 @@ The Single Program Stream (SPTS, also known as Channel or Service) serves as the
 
 In addition to redundancy, SPTS offers a range of processing options. These include filtering for transmitting only required media data, modifying stream information, descrambling to access protected streams, and scrambling to safeguard transmitted streams. Thus, SPTS provides a versatile and secure solution for TV channel formation.
 
-Read more about [Stream General Settings](/en/astra/admin-guide/general)
-
 ## Multi Program Stream
 
 ![Multi Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/mpts.png)
@@ -67,4 +65,4 @@ The Multi Program Stream (MPTS, also known as Multiplex) is another type of stre
 
 This stream type also provides several features designed for broadcasting. These include options for defining the stream description, network information, network search, and logical channel numbers.
 
-Read more about [MPTS Settings](/en/astra/delivery/mpts-settings)
+Read more about [MPTS Settings](/en/astra/streams/mpts-settings/)

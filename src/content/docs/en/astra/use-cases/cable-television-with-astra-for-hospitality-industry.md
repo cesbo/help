@@ -97,19 +97,19 @@ Astra installation is simple – just copy a single binary file to your server. 
 
 Quite often customers forget to configure their Adapters before the next steps. So be sure that you have DVB card drivers installed on the server.
 
-- [DigitalDevices Driver Installation](/en/misc/tools-and-utilities/dd-driver)
-- [TBS Driver Installation](/en/misc/tools-and-utilities/tbs-driver)
+- [DigitalDevices Driver Installation](/en/astra/adapters/dd-driver/)
+- [TBS Driver Installation](/en/astra/adapters/tbs-driver/)
 - For other adapters you may find information on the vender web site
 
 ### Receiving channels with Astra
 
-Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C. List of all articles about channel receiving available here: [Receiving with Astra](/en/astra/receiving/intro).
+Now is the time to configure all our Adapters and find channels, which we want to Modulate over DVB-C.
 
 To configure receiving channels from satellite we recommend to having a look at these articles:
 
-- [Introduction to DVB Adapter Tuning](/en/misc/troubleshooting/errors)
-- [DVB-S/S2 Tuner Options](/en/astra/receiving/s)
-- [Scan DVB Adapter](/en/astra/receiving/scan)
+- [Introduction to DVB Adapter Tuning](/en/astra/adapters/)
+- [DVB-S/S2 Tuner Options](/en/astra/adapters/s/)
+- [Scan DVB Adapter](/en/astra/adapters/scan/)
 
 Below provided screenshot of example adapter settings:
 
@@ -194,6 +194,6 @@ Also, we can connect the coaxial cable from RESI to the TV set, and in the TV se
 
 ## Troubleshooting DVB receiving
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/en/misc/troubleshooting/receiving)
+In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/en/astra/adapters/troubleshooting/)
 
 We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.

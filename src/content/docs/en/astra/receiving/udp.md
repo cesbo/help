@@ -44,7 +44,7 @@ Most options presented in the web interface correspond directly to the component
 - `PNR` - program number for MPTS streams. When defined, it enables stream demultiplexing and selects the program with the specified number
 - `DD-CI CAM` - this option is now deprecated and has been replaced by virtual adapters. More information can be found in ...
 - `Softcam` - selects a descrambler for the CAM Client. You can learn more about this in ...
-- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/en/astra/processing/decrypt-biss)
+- `BISS Key` - key for the BISS CAS descrambler. More details can be found in [Decrypt streams with BISS CAS](/en/astra/streams/decrypt-biss/)
 
 There are also advanced options available for further customization:
 

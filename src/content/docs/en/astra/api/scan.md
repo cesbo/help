@@ -13,7 +13,7 @@ Request: `POST /control/`
 }
 ```
 
-- `scan` - stream address. Read more about [Media Address Format](/en/astra/receiving/address-format)
+- `scan` - stream address. Read more about [Media Address Format](/en/astra/streams/address-format/)
 
 Response:
 

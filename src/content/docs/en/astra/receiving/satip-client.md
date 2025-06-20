@@ -31,7 +31,7 @@ To use the SAT>IP protocol, you need to create New Adapter in the Astra Web Inte
 - `Type` - select adapter type (Satellite/Terrestrial/Cable)
 
 Depending on the reception type, you will need additionally configure the Transponder data or Frequency to scan. You can find more detailed information at the following links:
-[Introduction to DVB Adapter Tuning](/en/astra/receiving/intro) and [DVB-S/S2 Tuner Options](/en/astra/receiving/s)
+[Introduction to DVB Adapter Tuning](/en/astra/adapters/) and [DVB-S/S2 Tuner Options](/en/astra/adapters/s/)
 
 Save adapter settings by clicking "Apply" button. Now you can click on the "Scan" button and select the required programs.
 

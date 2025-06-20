@@ -7,7 +7,7 @@ sidebar:
 If Astra is not needed anymore you can remove it completely from your server.
 
 :::danger
-Before uninstall please [Make a Backup](/en/astra/admin-guide/backup)!
+Before uninstall please [Make a Backup](/en/astra/getting-started/backup/)!
 :::
 
 ## Disable service
