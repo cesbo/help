@@ -5,10 +5,6 @@ sidebar:
     order: 7
 ---
 
-import { Badge } from '@astrojs/starlight/components'
-
-<Badge text="Astra 2021.08.09" variant="note" />
-
 PT100 is a DVB-T modulator for 4 frequencies by HiDes
 
 ![PT100 DVB-T modulator](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/pt100.jpeg)

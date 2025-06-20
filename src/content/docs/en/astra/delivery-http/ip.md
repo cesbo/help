@@ -1,6 +1,5 @@
 ---
-title: "IP Authorization"
-date: 2023-06-19
+title: IP Authorization
 sidebar:
     order: 15
 ---

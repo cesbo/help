@@ -4,9 +4,6 @@ date: 2023-06-23
 sidebar:
     order: 9
 ---
-import { Badge } from '@astrojs/starlight/components'
-
-<Badge text="Astra 2021.08.09" variant="note" />
 
 TBS6004 is a DVB-C 4 QAM modulator PCIe card.
 
