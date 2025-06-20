@@ -1,6 +1,5 @@
 ---
-title: "Stream EPG Export Settings"
-date: 2023-08-14
+title: "Stream: EPG Export Settings"
 sidebar:
     order: 15
 ---

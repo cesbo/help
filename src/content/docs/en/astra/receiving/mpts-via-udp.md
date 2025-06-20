@@ -1,5 +1,5 @@
 ---
-title: Receiving MPTS via UDP
+title: MPTS via UDP
 sidebar:
     order: 11
 ---

@@ -1,8 +1,7 @@
 ---
 title: MPEG-TS Demultiplexing
-date: 2023-08-28
 sidebar:
-    order: 1
+    order: 3
 ---
 
 MPEG-TS Demultiplexing is the process of extracting individual audio, video, and data streams from a combined MPEG-TS broadcast, also known as multiplext or MPTS.

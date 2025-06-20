@@ -6,6 +6,10 @@ sidebar:
 
 Streams in Astra represents an individual channel or media flow that receives content from various sources, processes it, and delivers it to clients.
 
+## Create New Stream
+
+To create a new stream, navigate to the "Dashboard" and click on the "New Stream" in main menu. This will open a dialog where you can select the type of stream you want to create: Single Program Stream (SPTS) or Multi Program Stream (MPTS).
+
 ## General Options
 
 The Single Program Stream (SPTS) commonly used to form TV channels. It can utilize multiple inputs for redundancy purposes, enhancing the reliability of the stream.
@@ -45,6 +49,22 @@ Read more information in our guides for protocol specific configuration:
 - [UDP](/en/astra/delivery/udp)
 - [DVB with Broadcasting hardware](/en/misc/troubleshooting/errors)
 
-## Save
+## Single Program Stream
 
-Channel settings are saved when you click the Apply button.
+![Single Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/spts.png)
+
+The Single Program Stream (SPTS, also known as Channel or Service) serves as the default stream type in Astra configuration, commonly used to form TV channels. It can employ multiple inputs for redundancy purposes, enhancing the reliability of the stream. The integrated analyzer continuously monitors the active input, and if a fault is detected, it immediately switches to an alternate input.
+
+In addition to redundancy, SPTS offers a range of processing options. These include filtering for transmitting only required media data, modifying stream information, descrambling to access protected streams, and scrambling to safeguard transmitted streams. Thus, SPTS provides a versatile and secure solution for TV channel formation.
+
+Read more about [Stream General Settings](/en/astra/admin-guide/general)
+
+## Multi Program Stream
+
+![Multi Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/mpts.png)
+
+The Multi Program Stream (MPTS, also known as Multiplex) is another type of stream available in Astra, activated via an option of the same name within stream settings. MPTS takes all provided inputs and multiplexes them into a singular stream for broadcasting purposes.
+
+This stream type also provides several features designed for broadcasting. These include options for defining the stream description, network information, network search, and logical channel numbers.
+
+Read more about [MPTS Settings](/en/astra/delivery/mpts-settings)

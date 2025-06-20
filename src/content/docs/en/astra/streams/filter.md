@@ -1,8 +1,7 @@
 ---
 title: Filtering Stream PIDs
-date: 2023-07-17
 sidebar:
-    order: 2
+    order: 20
 ---
 
 Stream Filtering removes specific packets within the MPEG-TS stream based on their PIDs. Additionally, the process modifies the corresponding program-specific information tables, such as Program Association Table (PAT) and Program Map Table (PMT), to reflect the removal of the identified packets.

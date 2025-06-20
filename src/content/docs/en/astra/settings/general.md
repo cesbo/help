@@ -1,8 +1,7 @@
 ---
 title: General Settings
-date: 2023-03-23
 sidebar:
-    order: 1
+    order: 2
 ---
 
 General Settings in Astra encompass a collection of essential configuration options that allow you to customize and optimize your software setup.  These settings ensure a seamless streaming experience by managing aspects like InfluxDB integration, HTTP Server Settings, and Default Stream Options.

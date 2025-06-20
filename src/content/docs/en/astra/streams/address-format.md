@@ -22,17 +22,17 @@ Let's take a closer look at each of these components and their respective roles 
 
 ## Receiving Media Types
 
-- `dvb` - media source received via a DVB Tuner or Virtual adapter. [Introduction to DVB Adapter Tuning](/en/astra/receiving/intro)
-- `udp` - [UDP multicast or unicast](/en/astra/receiving/udp)
-- `rtp` - [RTP multicast or unicast](/en/astra/receiving/udp)
-- `http` - HTTP based protocols: [HTTP MPEG-TS](/en/astra/receiving/http) or [HLS](/en/astra/receiving/hls)
-- `srt` - [SRT protocol](/en/astra/receiving/srt)
-- `rtsp` - [RTSP protocol](/en/astra/receiving/rtsp), commonly used to receive stream from IP camera streams
+- `dvb` - media source received via a DVB Tuner or Virtual adapter. [Introduction to DVB Adapter Tuning](/en/astra/adapters/)
+- `udp` - [UDP multicast or unicast](/en/astra/receiving/udp/)
+- `rtp` - [RTP multicast or unicast](/en/astra/receiving/udp/)
+- `http` - HTTP based protocols: [HTTP MPEG-TS](/en/astra/receiving/http/) or [HLS](/en/astra/receiving/hls/)
+- `srt` - [SRT protocol](/en/astra/receiving/srt/)
+- `rtsp` - [RTSP protocol](/en/astra/receiving/rtsp/), commonly used to receive stream from IP camera streams
 - `file` - MPEG-TS file on the server
 
 ## Transmitting Media Types
 
-- `udp` - [UDP multicast or unicast](/en/astra/delivery/udp)
+- `udp` - [UDP multicast or unicast](/en/astra/delivery-udp/)
 - `rtp` - RTP multicast or unicast
 - `srt` - SRT protocol
 - `http` - HTTP based protocols, by the default HTTP MPEG-TS, or HLS if media address ends with `.m3u8` extension

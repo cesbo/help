@@ -1,6 +1,5 @@
 ---
-title: Stream Service Settings
-date: 2023-08-14
+title: "Stream: Service Settings"
 sidebar:
     order: 12
 ---

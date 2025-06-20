@@ -1,6 +1,5 @@
 ---
-title: "Channel Groups"
-date: 2023-03-23
+title: Channel Groups
 sidebar:
     order: 18
 ---
