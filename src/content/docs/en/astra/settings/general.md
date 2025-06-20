@@ -6,7 +6,11 @@ sidebar:
 
 General Settings in Astra encompass a collection of essential configuration options that allow you to customize and optimize your software setup.  These settings ensure a seamless streaming experience by managing aspects like InfluxDB integration, HTTP Server Settings, and Default Stream Options.
 
-## InfluxDB Integration
+## Monitoring Options
+
+![Monitoring Options](https://cdn.cesbo.com/help/astra/admin-guide/settings/general/monitoring.png)
+
+### InfluxDB Integration
 
 The InfluxDB integration options in Astra allow you to configure the connection between Astra and InfluxDB for storing statistics related to streams and adapters.
 
@@ -15,15 +19,24 @@ The InfluxDB integration options in Astra allow you to configure the connection 
 - `InfluxDB Organization` - name of your orgranization in the InfluxDB settings
 - `InfluxDB Token` - if you need to connect an external interface, then you need to enter API token from clipboard
 
-For a detailed guide, please refer to [Integration Astra with InfluxDB](/en/astra/monitoring/influxdb)
+For a detailed guide, please refer to [Integration Astra with InfluxDB](/en/astra/monitoring/influxdb/)
 
-## Monitoring
+### Analyzer Webhook
 
 The Monitoring feature in Astra is a legacy option that enables sending event data, such as stream and adapter statistics, through HTTP POST requests to external services.
 
-Read more in: [Export Monitoring Events](/en/astra/monitoring/export-monitoring-events)
+Read more in: [Export Monitoring Events](/en/astra/monitoring/export-monitoring-events/)
+
+### Sessions Webhook
+
+Exporting events on closing sessions.
+
+- `URL` - webhook URL for sending events
+- `Minimal Session Time` - minimum session duration in seconds for sending events. If the session lasts less than this time, no event will be sent
 
 ## HTTP Server Options
+
+![HTTP Server Options](https://cdn.cesbo.com/help/astra/admin-guide/settings/general/http-server.png)
 
 The HTTP Server Options in Astra allow you to configure the HTTP Server for providing access to media content using HTTP MPEG-TS or HLS protocols.
 
@@ -42,6 +55,8 @@ You can obtain a free certificate from Let's Encrypt. For a detailed guide, plea
 
 ## Default Stream Options
 
+![Default Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/settings/general/stream.png)
+
 These settings are global for all streams (unless overridden in the stream settings)
 
 - `Start stream on demand` - activate streams in the presence of HTTP clients. Enabled by default
@@ -54,6 +69,14 @@ These settings are global for all streams (unless overridden in the stream setti
 - `TCP Congestion Control` - defines the operation algorithm for TCP CC
 - `CC Limit` - sets limit on the number of CC errors in the source. After exceeding this limit - the source will be considered non-working
 - `Use multithreading for UDP receiving and transmitting` - launch separate threads for processing UDP sockets, turned on by the default
+- `Bind DVB adapters by MAC` - use DVB MAC addresses to bind configured adapters to the system device
+
+## Default Adapter Options
+
+![Default Adapter Options](https://cdn.cesbo.com/help/astra/admin-guide/settings/general/adapter.png)
+
+These settings are global for all adapters (unless overridden in the adapter settings)
+
 - `Bind DVB adapters by MAC` - use DVB MAC addresses to bind configured adapters to the system device
 
 :::note

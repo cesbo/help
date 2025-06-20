@@ -19,7 +19,7 @@ export default defineConfig({
           es: 'Cesbo Ayuda',
       },
       logo: {
-         src: './src/assets/logo.png',
+         src: './src/assets/logo.svg',
          alt: 'Cesbo logo',
          replacesTitle: true,
       },
