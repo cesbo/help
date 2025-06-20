@@ -22,7 +22,7 @@ udp://interface@address:port#options
 
 Additional Options:
 
-- `src=IP` - UDP multicast source address for IGMPv3. Should be enabled IGMPv3 in linux settings: [Configure IGMP Version](/en/misc/tools-and-utilities/configure-igmp-version). Available from version 230303 and later
+- `src=IP` - UDP multicast source address for IGMPv3. Should be enabled IGMPv3 in linux settings: [Configure IGMP Version](/en/articles/system/configure-igmp-version/). Available from version 230303 and later
 - `sync` - receives UDP in separate thread with bitrate syncing
 - `no_sync` - disables bitrate syncing if enabled globally
 - `renew=seconds` - interval for renewing the multicast subscription. Usually operation renew IGMP subscription automatically

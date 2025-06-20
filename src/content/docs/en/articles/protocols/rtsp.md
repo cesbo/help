@@ -1,6 +1,5 @@
 ---
-title: "RTSP"
-date: 2023-06-13
+title: RTSP
 sidebar:
     order: 5
 ---

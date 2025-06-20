@@ -1,6 +1,5 @@
 ---
 title: HTTP MPEG-TS
-date: 2023-06-13
 sidebar:
     order: 4
 ---

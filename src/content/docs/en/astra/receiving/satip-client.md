@@ -16,7 +16,7 @@ The most important advantage is the possibility of separating the reception and 
 
 Secondly, we can extend the variety of hardware with what you may receive a DVB signal.  It is SAT>IP server hardware like: [Digital Devices Octopus NET](https://www.digital-devices.eu/shop/en/business-tv/network-tuner/), HDHomeRun,  Telestar R1, and many other devices, including low-cost options, which support SAT>IP Standard.
 
-What is important to mention, is that with the Minisatip server software, we also may use PCIe DVB cards and/or USB sticks (tuners) as SAT>IP Adapters at Astra Cesbo. For more details on how to use the Minisatip server look at [our article](/en/misc/tools-and-utilities/minisatip) and on developer [GitHub](https://github.com/catalinii/minisatip).
+What is important to mention, is that with the Minisatip server software, we also may use PCIe DVB cards and/or USB sticks (tuners) as SAT>IP Adapters at Astra Cesbo. For more details on how to use the Minisatip server look at [our article](/en/articles/tools-and-utilities/minisatip/) and on developer [GitHub](https://github.com/catalinii/minisatip).
 
 ## Configuration
 

@@ -7,6 +7,10 @@ sidebar:
 
 To efficiently send or receive data over UDP, you need to set up your operating system’s buffer sizes correctly.
 
+:::note
+You can use our Tune script to automatically configure these settings. [Read more](/en/articles/system/tune/)
+:::
+
 ## Configuring Buffer Sizes
 
 You should add the buffer size settings to the `/etc/sysctl.conf` file.

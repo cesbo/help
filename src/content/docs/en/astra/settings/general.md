@@ -38,7 +38,7 @@ To enable HTTPS, configure the following options:
 - `TLS certificate key` - full path to the certificate key. For example - `/etc/dehydrated/certs/example.com/privkey.pem`
 - `Disable TLS on primary port` - check this option if you want the primary port, defined by the command-line argument `-p PORT`, to work without HTTPS
 
-You can obtain a free certificate from Let's Encrypt. For a detailed guide, please refer to [HTTPS certificate with Dehydrated](/en/misc/tools-and-utilities/dehydrated)
+You can obtain a free certificate from Let's Encrypt. For a detailed guide, please refer to [HTTPS certificate with Dehydrated](/en/articles/tools-and-utilities/dehydrated/)
 
 ## Default Stream Options
 

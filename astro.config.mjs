@@ -58,9 +58,9 @@ export default defineConfig({
               collapsed: true,
           },
           {
-              label: 'Miscelaneous',
-              translations: { es: 'Misceláneo', ru: 'Разное' },
-              autogenerate: { directory: 'misc' },
+              label: 'Articles',
+              translations: { es: 'Artículos', ru: 'Статьи' },
+              autogenerate: { directory: 'articles' },
               collapsed: true,
           },
       ],

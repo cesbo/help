@@ -9,6 +9,10 @@ In the world of digital TV streaming, every millisecond matters. Delays or lags 
 
 One of the key factors is the CPU power mode. By default, Linux servers have their CPUs set to a power-saving mode to reduce power consumption and manage heat generation. To ensure optimal performance of your streaming software, it is recommended to set your CPU to its maximum performance mode.
 
+:::note
+You can use our Tune script to automatically configure these settings. [Read more](/en/articles/system/tune/)
+:::
+
 ## With cpupower utility
 
 To check the CPU power mode on a Linux server, you can use the `cpupower` utility. This utility is part of the `linux-tools-common` package.

@@ -69,6 +69,10 @@ systemctl enable astra
 
 Now service `astra` will be started automatically on system startup.
 
+## System Tune
+
+To ensure optimal performance of your Astra server, it is recommended to tune your system settings. You can use our [Tune script](/en/articles/system/tune/) to automatically configure these settings. This script will adjust network parameters, CPU power modes, and other system configurations to enhance the performance of Astra.
+
 ## Login to Web Interface
 
 After installing Astra, you can access its web interface using a web browser - Chrome, Safari, or Firefox. The default port for the web interface is 8000. So interface address will be `http://your-server-address:8000`.

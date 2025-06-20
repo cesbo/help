@@ -32,4 +32,4 @@ In the channel settings (Single program stream), you can specify multiple source
 
 ## PAT: stream with id is not found
 
-No channel with the specified number (pnr) was found in the stream. To check available channels and their corresponding numbers, perform a scan the input with [Astra MPEG-TS Analyzer](/en/misc/tools-and-utilities/astra-mpeg-ts-analyzer).
+No channel with the specified number (pnr) was found in the stream. To check available channels and their corresponding numbers, perform a scan the input with [Astra MPEG-TS Analyzer](/en/articles/tools-and-utilities/astra-mpeg-ts-analyzer/).

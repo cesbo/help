@@ -30,7 +30,7 @@ First of all analyze UDP MPTS with MPEG-TS Analyzer:
 astra --analyze udp://239.255.1.1:1234
 ```
 
-Read more how to analyze streams: [Astra MPEG-TS Analyzer](/en/misc/tools-and-utilities/astra-mpeg-ts-analyzer/). Analyzer shows information about available channels, for example:
+Read more how to analyze streams: [Astra MPEG-TS Analyzer](/en/articles/tools-and-utilities/astra-mpeg-ts-analyzer/). Analyzer shows information about available channels, for example:
 
 ```
 INFO: PMT pnr:100 version:1

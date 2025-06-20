@@ -1,6 +1,5 @@
 ---
-title: "MPEG-TS"
-date: 2023-06-13
+title: MPEG-TS
 sidebar:
     order: 8
 ---

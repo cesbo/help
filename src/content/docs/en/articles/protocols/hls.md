@@ -1,6 +1,5 @@
 ---
-title: HLS Protocol
-date: 2023-06-13
+title: HLS
 sidebar:
     order: 3
 ---

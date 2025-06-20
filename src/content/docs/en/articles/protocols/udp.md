@@ -1,6 +1,5 @@
 ---
-title: "UDP"
-date: 2023-06-13
+title: UDP
 sidebar:
     order: 7
 ---

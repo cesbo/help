@@ -75,4 +75,4 @@ Request: `POST /control/`
 - `id` - stream identifier
 - `url` - image address, as well could be used data-format, for example: `data:image/png;base64,...`
 
-This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](/en/misc/tools-and-utilities/mosaic/)
+This method used in the script to set screenshots for stream tiles. Read more in [Channel Screenshots on Dashboard](/en/articles/tools-and-utilities/mosaic/)

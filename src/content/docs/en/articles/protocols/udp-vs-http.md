@@ -1,6 +1,5 @@
 ---
 title: "Comparing UDP, HTTP & HLS Protocols"
-date: 2023-03-17
 sidebar:
     order: 6
 ---

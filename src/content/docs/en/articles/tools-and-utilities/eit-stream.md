@@ -5,7 +5,7 @@ sidebar:
     order: 3
 ---
 
-EIT Stream is a tool to convert [XMLTV files](/en/misc/articles/xmltv) into MPEG-TS stream with Event Information Tables (EIT) for broadcasting networks like DVB, ATSC, ISDB.
+EIT Stream is a tool to convert [XMLTV files](/en/articles/protocols/xmltv/) into MPEG-TS stream with Event Information Tables (EIT) for broadcasting networks like DVB, ATSC, ISDB.
 
 ## Installation
 

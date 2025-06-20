@@ -5,6 +5,5 @@ sidebar:
   hidden: true
 tableOfContents: false
 hero:
-  title: Cesbo Knowledge Base
-  tagline: Explore articles on advanced topics
+  title: Articles
 ---

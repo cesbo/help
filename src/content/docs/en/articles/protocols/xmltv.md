@@ -5,7 +5,7 @@ sidebar:
     order: 9
 ---
 
-XMLTV is an XML-based format for describing TV schedule information. It provides a mechanism to store channel information, programme schedules, and their associated metadata. 
+XMLTV is an XML-based format for describing TV schedule information. It provides a mechanism to store channel information, programme schedules, and their associated metadata.
 
 ## Example
 
@@ -89,12 +89,12 @@ Nested elements:
 - `title` – provides the name of the programme. The lang attribute can be used to specify the language of the title
 - `desc` – description of the programme
 - `date` – pecifies the release date of the programme
-- `category` – genre or category of the programme. Multiple <category> elements can be included for a single programme to represent multiple genres or categories, with the lang attribute defining the language
+- `category` – genre or category of the programme. Multiple `<category>` elements can be included for a single programme to represent multiple genres or categories, with the lang attribute defining the language
 
 ## EIT
 
 The Event Information Table (EIT) is a part of the MPEG-2 Transport Stream (MPEG-TS) used in digital broadcasting. This table contains metadata about the scheduled events or programmes on various channels, similar to the programme guide one might find on a digital TV or set-top box.
 
-XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/en/misc/tools-and-utilities/eit-stream)
+XMLTV file could be converted to the MPEG-TS stream with EIT packets with our free tool - EIT Stream. [Read More](/en/articles/tools-and-utilities/eit-stream/)
 
 EIT packet could be extracted from MPEG-TS stream and saved to XMLTV files with Astra.

@@ -16,7 +16,7 @@ With Astra you can analyze any supported source. Just launch in console next com
 astra --analyze "udp://eth0@239.255.1.1:1234"
 ```
 
-To stop Astra analyzer press Ctrl+C. Read more about [Astra MPEG-TS Analyzer](/en/misc/tools-and-utilities/astra-mpeg-ts-analyzer)
+To stop Astra analyzer press Ctrl+C. Read more about [Astra MPEG-TS Analyzer](/en/articles/tools-and-utilities/astra-mpeg-ts-analyzer/)
 
 ### Analyze UDP with Tcpdump
 
@@ -56,7 +56,7 @@ First of all check traffic on the network interface with tcpdump tool. If there 
 
 1. Invalid routes configuration. If you have has several interfaces, please, check that route to multicast group configured correctly or define interface name in the udp address
 2. Connectivity issues. Check that you server connected to ethernet or vlan interface created
-3. Incompatable IGMP Version. For example your server uses IGMPv3, but network equipment supports only IGMPv2: [Configure IGMP Version](/en/misc/tools-and-utilities/configure-igmp-version/)
+3. Incompatable IGMP Version. For example your server uses IGMPv3, but network equipment supports only IGMPv2: [Configure IGMP Version](/en/articles/system/configure-igmp-version/)
 
 ### Software unable to receive UDP packets
 

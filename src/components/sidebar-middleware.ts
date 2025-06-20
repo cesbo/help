@@ -1,6 +1,6 @@
 import { defineRouteMiddleware } from '@astrojs/starlight/route-data'
 
-const products = ['astra', 'alta', 'senta', 'misc']
+const products = ['astra', 'alta', 'senta', 'articles']
 
 export const onRequest = defineRouteMiddleware(async (context, next) => {
     if (!context.locals.starlightRoute.hasSidebar) {

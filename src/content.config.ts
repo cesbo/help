@@ -11,7 +11,7 @@ export const collections = {
 			'product.astra': z.string().optional(),
 			'product.alta': z.string().optional(),
 			'product.senta': z.string().optional(),
-			'product.misc': z.string().optional(),
+			'product.articles': z.string().optional(),
 		}),
 	}) }),
 	autoSidebar: defineCollection({
