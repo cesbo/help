@@ -60,6 +60,4 @@ When HTTP Authentication is active, the user options include additional optional
 - `Limit connections` - number of simultaneous connections allowed for the user. By default, there are no connection limits.
 - `Packages` - click "New Package" to add a channel category to the user. The user will only have access to channels related to the specified category. New categories can be created in Settings->Groups. By default, all channels are available to the user.
 
-:::caution
-For more advanced authentication requirements, we recommend using external HTTP authentication options, such as HTTP Backend or SecureToken.
-:::
+Read more about [Built-in Users Authentication](/en/astra/delivery-http/auth-user/) and other [HTTP Authentication options](/en/astra/delivery-http/auth/).

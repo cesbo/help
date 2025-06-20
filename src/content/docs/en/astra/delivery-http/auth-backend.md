@@ -1,11 +1,10 @@
 ---
-title: Middleware Authorization
-data: 2023-06-19
+title: "Auth: HTTP Backend"
 sidebar:
     order: 22
 ---
 
-The Middleware Authorization is a client authorization on the third-party service, known as Middleware.
+The HTTP Backend authorization is a client authorization on the third-party service, known as Middleware.
 
 ## Process
 

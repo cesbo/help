@@ -1,5 +1,5 @@
 ---
-title: IP Authorization
+title: "Auth: IP"
 sidebar:
     order: 24
 ---

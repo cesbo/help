@@ -1,5 +1,5 @@
 ---
-title: Securetoken Authorization
+title: "Auth: Securetoken"
 sidebar:
     order: 23
 ---

@@ -1,5 +1,5 @@
 ---
-title: User Authorization
+title: "Auth: Users"
 sidebar:
     order: 21
 ---
