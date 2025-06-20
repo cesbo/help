@@ -1,5 +1,7 @@
 ---
 title: Updating Astra
+sidebar:
+    order: 12
 ---
 
 Install new version on your server

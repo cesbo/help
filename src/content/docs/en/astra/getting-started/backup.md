@@ -1,7 +1,7 @@
 ---
 title: "Backup"
 sidebar:
-    order: 100
+    order: 11
 ---
 
 Backups is an important part of system administration!
