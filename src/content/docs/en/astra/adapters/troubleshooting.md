@@ -1,15 +1,16 @@
 ---
-title: DVB Receiving issues
-date: 2023-02-28
+title: Troubleshooting
 sidebar:
-    order: 5
+    order: 90
 ---
 
 Detailed guide on troubleshooting DVB reception issues, covering essential aspects such as signal quality, error rates, equipment setup, and interference. Learn practical tips and techniques to diagnose and resolve common problems, ensuring a seamless digital TV viewing experience.
 
 ## All works fine until server reboot
 
-Probably Linux kernel has been updated with autoupdate or manually. Try to reinstall driver.
+Most common issue with DVB adapters is that they stop working after server reboot.
+Probably Linux kernel has been updated with autoupdate or manually.
+Try to reinstall driver.
 
 ## failed to open frontend: Device or resource busy
 
@@ -69,6 +70,62 @@ Open file `/etc/modprobe.d/ddbridge.conf` in any text editor. Find line `options
 ```
 options ddbridge msi=0 fmode=1
 ```
+
+## PCIe Bus Error
+
+DVB adapters may stop to working over time, or work with issues like CC errors and signal re-tuning. These malfunction signs could be reflected as the following error in the dmesg:
+
+```
+pcieport 0000:00:1c.3: PCIe Bus Error: severity=Corrected, type=Physical Laye
+```
+
+Typically, this error occurs as a result of the system's Active-State Power Management (ASPM) attempting to reduce power supply to the PCIe port.
+
+## Disable ASPM
+
+On the servers we recommend to disable power management.
+
+Open file `/etc/default/grub` in any text editor and find the line started with:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT=
+```
+
+add the parameter `pcie_aspm=off`:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=off"
+```
+
+Save the file and apply the changes:
+
+```
+sudo update-grub
+```
+
+Restart your server
+
+## Secure Boot
+
+If the `/dev/dvb` folder is empty or not found, try to start driver manually. Launch in your console:
+
+```
+modprobe dvb-core
+```
+
+If you got error:
+
+```
+modprobe: ERROR: could not insert 'dvb_core': Required key not available
+```
+
+This error message is related to Secure Boot.
+
+1. Restart your system and enter the system's BIOS/UEFI settings.
+2. Navigate to the Secure Boot configuration page (the exact position varies based on the manufacturer and BIOS/UEFI version).
+3. Disable the Secure Boot option.
+4. Save changes and exit.
+5. Boot into Linux again and check adapters with `ls /dev/dvb`
 
 ## cxd2878: SLtoAIT_BandSetting error
 

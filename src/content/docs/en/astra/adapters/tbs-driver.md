@@ -1,18 +1,17 @@
 ---
-title: DigitalDevices Driver Installation
-date: 2023-02-23
+title: TBS Driver
 sidebar:
-    order: 13
+    order: 21
 ---
 
-DigitalDevices is a hardware manufacturer specialized on DVB devices: tuners, modulators.
+TBS is a hardware manufacturer specialized on DVB devices: tuners, modulators.
 
 ## Auto Installation
 
 You can install driver in automatically mode or manually. To install driver automatically run in console:
 
 ```sh
-curl -sSf https://cdn.cesbo.com/astra/scripts/drv-dd.sh | sh
+curl -sSf https://cdn.cesbo.com/astra/scripts/drv-tbs.sh | sh
 ```
 
 After server restart, [check](#check-driver) if the driver has been installed correctly.
@@ -23,13 +22,13 @@ After server restart, [check](#check-driver) if the driver has been installed co
 
 To install drivers needed root privileges:
 
-```sh
+```
 sudo -s
 ```
 
 Install system utilities to build drivers from the source code:
 
-```sh
+```
 apt -y install \
     build-essential \
     patchutils \
@@ -40,7 +39,7 @@ apt -y install \
 
 Remove old media drivers:
 
-```sh
+```
 rm -rf /lib/modules/$(uname -r)/extra
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/media
 rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
@@ -50,44 +49,32 @@ rm -rf /lib/modules/$(uname -r)/kernel/drivers/staging/media
 
 Download latest driver from the official repository:
 
-```sh
-git clone -b 0.9.37 --depth=1 https://github.com/DigitalDevices/dddvb /usr/src/dddvb
+```
+git clone --depth=1 https://github.com/tbsdtv/media_build.git /usr/src/media_build
+git clone --depth=1 https://github.com/tbsdtv/linux_media.git -b latest /usr/src/media
 ```
 
 Build drivers and install it:
 
-```sh
-cd /usr/src/dddvb
+```
+cd /usr/src/media_build
+make dir DIR=../media
+make allyesconfig
 make
 make install
 ```
 
-Update dirver dependencies:
+Install firmware for DVB adapters:
 
-```sh
-mkdir -p /etc/depmod.d
-echo 'search extra updates built-in' | tee /etc/depmod.d/extra.conf
-depmod -a
 ```
-
-Create driver configuration for DigitalDevices MaxS8:
-
-```sh
-echo 'options ddbridge fmode=0' | tee /etc/modprobe.d/ddbridge.conf
+curl -L http://www.tbsdtv.com/download/document/linux/tbs-tuner-firmwares_v1.0.tar.bz2 | tar -C /lib/firmware/ -jxf -
 ```
-
-For MaxS8 available next fmode values instead of 0:
-
-- `fmode=0` - 4 tuner mode (internal multiswitch disabled)
-- `fmode=1` - Quad LNB / normal outputs of multiswitches
-- `fmode=2` - Quattro - LNB / cascade outputs of multiswitches
-- `fmode=3` - Unicable LNB or JESS / Unicabel output of the multiswitch
 
 ### Restart System
 
 To launch installed drivers restart your system:
 
-```sh
+```
 shutdown -r now
 ```
 
@@ -97,7 +84,7 @@ After server restart, [check](#check-driver) if the driver has been installed co
 
 To check if the driver has been installed correctly, list adapters in the dvb directory:
 
-```sh
+```
 ls /dev/dvb
 ```
 
@@ -108,5 +95,7 @@ adapter0 adapter1 adapter2 adapter3 ...
 ```
 
 ## Troubleshooting
+
+You can contact TBS representatives for help installing drivers at this link: [https://www.tbsdtv.com/contact-us.html](https://www.tbsdtv.com/contact-us.html) - select "Software installation and debugging"
 
 If you have any issues with your DVB Adapters, please check [DVB Troubleshooting](/en/misc/troubleshooting/errors)
