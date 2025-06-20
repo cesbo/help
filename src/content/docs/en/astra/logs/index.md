@@ -10,7 +10,7 @@ The log messages in Astra provide insight into the service status and activities
 - `warnings` - point out issues with the disrupted stream or those that might not affect streams at all
 - `information` - includes limited number of messages, such as version information on process start, normal exit, process restart, activation input on the stream, and a few others
 - `debug` - detailed information about receiving and processing activities. Turned off by default and can be enabled in the log settings or using command line argument `--debug`
-- `access log` - this kind off messages records requests to the built-in Astra HTTP server. The access logs are separate from other logs and stored in a specific file. For more detals, please refer to the [Access Log](/en/astra/delivery-http/access-log/)
+- `access log` - this kind off messages records requests to the built-in Astra HTTP server. The access logs are separate from other logs and stored in a specific file. For more detals, please refer to the [Access Log](/en/astra/logs/access-log/)
 
 ## Web interface
 
