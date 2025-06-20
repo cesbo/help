@@ -1,6 +1,5 @@
 ---
 title: "Options for DVB-T/T2 and ISDB-T"
-date: 2023-02-28
 sidebar:
     order: 6
 ---

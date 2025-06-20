@@ -1,6 +1,5 @@
 ---
 title: Receiving MPTS via UDP
-date: 2023-03-10
 sidebar:
     order: 11
 ---

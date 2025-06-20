@@ -1,5 +1,5 @@
 ---
-title: "Receiving HTTP MPEG-TS"
+title: HTTP MPEG-TS
 date: 2023-08-10
 sidebar:
     order: 10

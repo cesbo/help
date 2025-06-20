@@ -1,8 +1,7 @@
 ---
-title: Introduction to DVB Adapter Tuning
-date: 2023-02-28
+title: Adapters Overview
 sidebar:
-    order: 2
+    order: 1
 ---
 
 Digital Video Broadcasting (DVB) is a set of international open standards for digital television broadcasting. With Astra's DVB options, you can configure the reception of media content from various DVB networks, including satellite, cable, and terrestrial sources.

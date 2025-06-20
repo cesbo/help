@@ -1,6 +1,5 @@
 ---
-title: Receiving UDP/RTP
-date: 2023-03-04
+title: UDP/RTP
 sidebar:
     order: 14
 ---

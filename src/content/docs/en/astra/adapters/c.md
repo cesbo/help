@@ -1,6 +1,5 @@
 ---
-title: "Options for DVB-C"
-date: 2023-02-28
+title: Options for DVB-C
 sidebar:
     order: 5
 ---

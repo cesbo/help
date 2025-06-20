@@ -1,6 +1,5 @@
 ---
-title: Receiving HLS
-date: 2023-08-10
+title: HLS
 sidebar:
     order: 9
 ---

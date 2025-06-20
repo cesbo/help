@@ -1,6 +1,5 @@
 ---
-title: Receiving RSTP
-date: 2023-03-23
+title: RSTP
 sidebar:
     order: 12
 ---

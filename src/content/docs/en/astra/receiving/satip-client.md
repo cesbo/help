@@ -1,6 +1,5 @@
 ---
 title: "SAT>IP Client"
-date: 2023-05-04
 sidebar:
     order: 3
 ---

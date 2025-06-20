@@ -1,5 +1,5 @@
 ---
-title: Stream Overview
+title: Streams Overview
 sidebar:
     order: 1
 ---

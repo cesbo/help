@@ -1,6 +1,5 @@
 ---
 title: Options for DVB-S/S2
-date: 2023-02-28
 sidebar:
     order: 4
 ---
