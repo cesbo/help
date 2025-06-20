@@ -2,7 +2,7 @@
 title: General Settings
 date: 2023-03-23
 sidebar:
-    order: 16
+    order: 1
 ---
 
 General Settings in Astra encompass a collection of essential configuration options that allow you to customize and optimize your software setup.  These settings ensure a seamless streaming experience by managing aspects like InfluxDB integration, HTTP Server Settings, and Default Stream Options.
@@ -41,7 +41,7 @@ To enable HTTPS, configure the following options:
 
 You can obtain a free certificate from Let's Encrypt. For a detailed guide, please refer to [HTTPS certificate with Dehydrated](/en/misc/tools-and-utilities/dehydrated)
 
-## Default stream options
+## Default Stream Options
 
 These settings are global for all streams (unless overridden in the stream settings)
 
