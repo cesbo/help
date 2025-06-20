@@ -1,7 +1,7 @@
 ---
 title: HTTP Access Log
 sidebar:
-    order: 80
+    order: 3
 ---
 
 HTTP Access Logs is an information about processed requests by the buil-in Astra HTTP server.

@@ -65,9 +65,9 @@ If tcpdump shows information about UDP packets, there is could be next issues:
 1. UDP droped by firewall rulles. Check your firewall configuration
 1. If you server has multiplay interfaces then append route to the multicast group or configure RP Filter: [RP Filter and Multicast receiving in Linux](/en/astra/receiving-udp/rp-filter/)
 
-## Too many errors on receiving UDP
+## CC Errors on receiving UDP
 
-CC (Continuity Counter) errors indicates that packets continuity is corrupted. Error can be caused by packets loss or excess. Example output with CC errors in the Astra MPEG-TS Analyzer:
+CC (Continuity Counter) errors indicates that packets continuity is corrupted. Error can be caused by packets loss or excess:
 
 ```
 Jan 27 09:00:00: INFO: Bitrate: 13259 Kbit/s
@@ -76,37 +76,4 @@ Jan 27 09:00:01: INFO: Bitrate: 13261 Kbit/s
 Jan 27 09:00:01: ERROR: CC: PID:18=5 PID:20=2
 ```
 
-There is two common issues: packets loss or packets excess.
-
-### Packets excess
-
-Excess packets looks in the tcpdump output as packets from different sources to the same destination:
-
-```
-21:38:42.143839 IP 192.168.88.100.33610 > 239.255.1.1.1234: UDP, length 1316
-21:38:42.143868 IP 192.168.88.100.24081 > 239.255.1.1.1234: UDP, length 1316
-```
-
-There is could be two causes:
-
-- If source address is same but ports are different (in example is 33610 and 24081) then source server sends same channel twice
-- If source addresses are different then more than one server sends packets into the same group
-
-In both cases need to check remote server configuration. If this is not possible or as temporary solution you can drop packets from second source with firewall.
-
-### Packets loss
-
-First of all need to check losses and errors on the network interface:
-
-```sh
-ip -s link show eth0
-```
-
-You need to look at RX Errors. Some network cards provide more detailed information about the nature of the loss:
-
-```sh
-ethtool -S eth1
-```
-
-Losses can be not only on the network cards of your server. They can also be on the network equipment port. You can find the information how to see it in the documentation of the network equipment manufacturer.
-Where eth0 is an interface name. After the RX-row will be row with numbers. Third number is an UDP receiving errors.
+Read more about [CC Errors](/en/astra/logs/cc/).

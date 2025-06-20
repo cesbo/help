@@ -1,8 +1,7 @@
 ---
-title: Browsing Logs in Astra
-date: 2023-08-10
+title: Logs in Astra
 sidebar:
-    order: 19
+    order: 1
 ---
 
 The log messages in Astra provide insight into the service status and activities during the receiving and processing of data streams. Log messages are categorized into several types:
