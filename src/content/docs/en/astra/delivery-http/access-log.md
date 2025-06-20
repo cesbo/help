@@ -1,8 +1,7 @@
 ---
-title: HTTP Access Logs
-date: 2023-08-10
+title: HTTP Access Log
 sidebar:
-    order: 22
+    order: 80
 ---
 
 HTTP Access Logs is an information about processed requests by the buil-in Astra HTTP server.

@@ -1,8 +1,7 @@
 ---
-title: "Troubleshooting HTTP/HLS reception"
-date: 2023-04-05
+title: Troubleshooting
 sidebar:
-    order: 2
+    order: 100
 ---
 
 ## Common HTTP codes

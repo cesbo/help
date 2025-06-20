@@ -1,8 +1,7 @@
 ---
 title: HTTP MPEG-TS
-date: 2023-08-10
 sidebar:
-    order: 10
+    order: 2
 ---
 
 HTTP-based protocol for video streaming. Astra receives continuous stream from the server in HTTP response.

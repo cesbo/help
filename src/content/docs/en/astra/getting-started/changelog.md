@@ -91,7 +91,7 @@ If your address contains the # symbol in the streamid option, it should be chang
 ### DVB Virtual adapters
 
 Virtual adapters is an option in the Adapter settings for easy setup streams:
-- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](/en/astra/receiving/mpts-via-udp/)
+- MPTS streams: you may define address of the MPTS stream and scan it to append all channels separately. [Read more](/en/astra/receiving-udp/mpts-via-udp/)
 - CI adapter: you may configure channels descrambling with external CI adapters like DigitalDevices Octopus Twin CI or TBS6900. [Read more](/en/astra/adapters/external-ci/)
 - SAT>IP adapter: this is replacement for the SAT>IP checkbox in previous versions. [Read more](/en/astra/receiving/satip-client/)
 - SAT>IP: increase receiving buffer size

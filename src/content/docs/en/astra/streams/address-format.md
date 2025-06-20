@@ -23,9 +23,9 @@ Let's take a closer look at each of these components and their respective roles 
 ## Receiving Media Types
 
 - `dvb` - media source received via a DVB Tuner or Virtual adapter. [Introduction to DVB Adapter Tuning](/en/astra/adapters/)
-- `udp` - [UDP multicast or unicast](/en/astra/receiving/udp/)
-- `rtp` - [RTP multicast or unicast](/en/astra/receiving/udp/)
-- `http` - HTTP based protocols: [HTTP MPEG-TS](/en/astra/receiving/http/) or [HLS](/en/astra/receiving/hls/)
+- `udp` - [UDP multicast or unicast](/en/astra/receiving-udp/)
+- `rtp` - [RTP multicast or unicast](/en/astra/receiving-udp/)
+- `http` - HTTP based protocols: [HTTP MPEG-TS](/en/astra/receiving-http/http/) or [HLS](/en/astra/receiving-http/hls/)
 - `srt` - [SRT protocol](/en/astra/receiving/srt/)
 - `rtsp` - [RTSP protocol](/en/astra/receiving/rtsp/), commonly used to receive stream from IP camera streams
 - `file` - MPEG-TS file on the server

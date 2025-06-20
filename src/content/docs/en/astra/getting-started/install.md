@@ -57,7 +57,7 @@ This command registers Astra as a system service with name `astra` and with mana
 systemctl start astra
 ```
 
-Read more about service management and launching additional services on your server: [Manage Astra Service](/en/astra/getting-started/manage-service).
+Read more about service management and launching additional services on your server: [Manage Astra Service](/en/astra/admin-guide/manage-service).
 
 ## Enable autorun
 

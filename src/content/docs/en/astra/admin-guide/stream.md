@@ -15,7 +15,7 @@ This message printed as debug message in Astra logs, and as error message in the
 
 Check more information depending of the protocol you use for receiving stream:
 
-- UDP does not guarantee data delivery, so packets can be lost, duplicated, or arrive out of order. [UDP Troubleshooting](/en/misc/troubleshooting/udp/#too-many-errors-on-receiving-udp)
+- UDP does not guarantee data delivery, so packets can be lost, duplicated, or arrive out of order. [UDP Troubleshooting](/en/astra/receiving-udp/troubleshooting/#too-many-errors-on-receiving-udp)
 - DVB depends of the signal quality, check errors on DVB adapter. [Common errors on DVB receiving](/en/astra/adapters/errors/)
 
 ## PES Error

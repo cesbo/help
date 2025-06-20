@@ -1,8 +1,7 @@
 ---
-title: Troubleshooting UDP reception
-date: 2023-03-04
+title: Troubleshooting
 sidebar:
-    order: 1
+    order: 90
 ---
 
 UDP (User Datagram Protocol) - communication protocol in local networks or Internet, with minimal delays and minimal stability.
@@ -57,14 +56,14 @@ First of all check traffic on the network interface with tcpdump tool. If there 
 
 1. Invalid routes configuration. If you have has several interfaces, please, check that route to multicast group configured correctly or define interface name in the udp address
 2. Connectivity issues. Check that you server connected to ethernet or vlan interface created
-3. Incompatable IGMP Version. For example your server uses IGMPv3, but network equipment supports only IGMPv2: [Configure IGMP Version](/en/misc/tools-and-utilities/configure-igmp-version)
+3. Incompatable IGMP Version. For example your server uses IGMPv3, but network equipment supports only IGMPv2: [Configure IGMP Version](/en/misc/tools-and-utilities/configure-igmp-version/)
 
 ### Software unable to receive UDP packets
 
 If tcpdump shows information about UDP packets, there is could be next issues:
 
 1. UDP droped by firewall rulles. Check your firewall configuration
-1. If you server has multiplay interfaces then append route to the multicast group or configure RP Filter: [RP Filter and Multicast receiving in Linux](/en/misc/tools-and-utilities/rp-filter)
+1. If you server has multiplay interfaces then append route to the multicast group or configure RP Filter: [RP Filter and Multicast receiving in Linux](/en/astra/receiving-udp/rp-filter/)
 
 ## Too many errors on receiving UDP
 

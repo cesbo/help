@@ -1,7 +1,7 @@
 ---
-title: UDP/RTP
+title: UDP/RTP Overview
 sidebar:
-    order: 14
+    order: 1
 ---
 
 UDP (User Datagram Protocol) is the most popular protocol for delivering digital TV in local networks, including those in hospitality organizations and internet provider city networks. As a connectionless protocol, UDP does not provide any error-checking or correction mechanisms. This makes it a faster and more lightweight protocol than TCP.
@@ -54,4 +54,4 @@ Please use the advanced options only if you understand their implications
 
 ## Troubleshooting
 
-Find more information in [Troubleshooting UDP reception](/en/misc/troubleshooting/udp)
+Find more information in [Troubleshooting UDP reception](/en/astra/receiving-udp/troubleshooting/)
