@@ -72,4 +72,4 @@ Once your adapter is configured, you can check the signal quality and scan it fo
 
 ## Troubleshooting
 
-If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](/en/misc/troubleshooting/errors)
+If you have any issues with starting DVB adapter please check our guide: [Troubleshooting DVB receiving](/en/astra/adapters/troubleshooting/)

@@ -12,27 +12,6 @@ Most common issue with DVB adapters is that they stop working after server reboo
 Probably Linux kernel has been updated with autoupdate or manually.
 Try to reinstall driver.
 
-## failed to open frontend: Device or resource busy
-
-Adapter is taken by another process. Maybe Astra started twice.
-
-You may check wich process uses Astra with next command:
-
-```sh
-lsof | grep adapter0
-```
-
-Example output:
-
-```
-astra 23068 ... /dev/dvb/adapter31/dvr0
-astra 23068 ... /dev/dvb/adapter31/frontend0
-```
-
-- `astra` - process name
-- `23068` - process PID
-- `/dev/dvb/adapter32/...` - path to the adapter
-
 ## failed to open frontend: No such file or directory
 
 The first step is to check whether the DVB adapters are present in the system using the command:
@@ -54,6 +33,27 @@ If the adapters are properly connected to the PCIe slot, you should see a listin
 ```
 
 Try to reinstall the driver. If this doesn't help, please contact the hardware vendor.
+
+## failed to open frontend: Device or resource busy
+
+Adapter is taken by another process. Maybe Astra started twice.
+
+You may check wich process uses Astra with next command:
+
+```sh
+lsof | grep adapter0
+```
+
+Example output:
+
+```
+astra 23068 ... /dev/dvb/adapter31/dvr0
+astra 23068 ... /dev/dvb/adapter31/frontend0
+```
+
+- `astra` - process name
+- `23068` - process PID
+- `/dev/dvb/adapter32/...` - path to the adapter
 
 ## Signal is fine, but channels not working
 

@@ -1,5 +1,5 @@
 ---
-title: Common DVB Errors
+title: BER and UNC Errors
 sidebar:
     order: 80
 ---
