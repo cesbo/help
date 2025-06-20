@@ -1,6 +1,6 @@
 ---
-title: Descrambling channels with External DVB-CI
-date: 2023-06-27
+title: External DVB-CI
+description: How to use External DVB-CI adapters with Astra for decrypting channels
 sidebar:
     order: 8
 ---
