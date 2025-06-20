@@ -1,6 +1,5 @@
 ---
 title: HTTP Play
-date: 2023-03-23
 sidebar:
     order: 10
 ---

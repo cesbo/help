@@ -2,7 +2,7 @@
 title: Middleware Authorization
 data: 2023-06-19
 sidebar:
-    order: 16
+    order: 22
 ---
 
 The Middleware Authorization is a client authorization on the third-party service, known as Middleware.

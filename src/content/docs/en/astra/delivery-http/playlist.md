@@ -2,7 +2,7 @@
 title: Playlist for HTTP Play
 date: 2023-08-22
 sidebar:
-    order: 13
+    order: 11
 ---
 
 Astra generate simple playlist with links to all enabled channels. This playlist available only for [HTTP Play](/en/astra/delivery/http-play) feature.

@@ -1,7 +1,7 @@
 ---
 title: IP Authorization
 sidebar:
-    order: 15
+    order: 24
 ---
 
 IP Authorization compares the requests IP address with the predetermined list of IP addresses. Access to the content will be granted only for allowed IP addresses.

@@ -1,8 +1,5 @@
 ---
-title: "Session Announcement Protocol for Multicast"
-date: 2023-09-01
-sidebar:
-    order: 3
+title: SAP for Multicast
 ---
 
 Session Announcement Protocol (SAP) is a protocol to announce available Multicast streams in local networks. Clients on the network listens for announces and receives information such:

@@ -1,8 +1,7 @@
 ---
-title: "User Authorization"
-date: 2023-06-19
+title: User Authorization
 sidebar:
-    order: 18
+    order: 21
 ---
 
 The User Authorization method provide access to the content without any additional software.

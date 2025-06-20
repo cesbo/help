@@ -3,7 +3,7 @@ title: HTTP Authorization
 data: 2023-06-19
 image: https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/og-image.png
 sidebar:
-    order: 14
+    order: 20
 ---
 
 The HTTP authorization is a process of granting a user access to protected content.

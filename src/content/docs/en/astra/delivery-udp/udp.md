@@ -1,8 +1,7 @@
 ---
 title: UDP for Digital TV delivery
-date: 2023-05-18
 sidebar:
-    order: 2
+    order: 8
 ---
 
 UDP (User Datagram Protocol) is an essential transport layer protocol in networking, known for its simplicity and speed. It plays a significant role in broadcasting and streaming applications, including digital TV delivery, where data packet loss can be tolerated but speed and delays are crucial.

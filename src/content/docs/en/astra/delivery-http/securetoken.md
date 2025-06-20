@@ -1,8 +1,7 @@
 ---
-title: "Securetoken Authorization"
-date: 2023-06-19
+title: Securetoken Authorization
 sidebar:
-    order: 17
+    order: 23
 ---
 
 Middleware generates an unique token for every channel with crypto algorithms and with securetoken. To the each channel address Middleware appends information when access granted, expiration time, and token to validate provided data.

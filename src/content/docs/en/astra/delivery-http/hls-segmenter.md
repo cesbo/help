@@ -1,8 +1,7 @@
 ---
 title: HLS Segmenter
-date: 2023-05-26
 sidebar:
-    order: 11
+    order: 13
 ---
 
 HLS (HTTP Live Streaming) one of the most popular media streaming protocol. It is designed to transmit audio and video data over HTTP from a server to clients. Media content could be distributed with Content Delivery Networks (CDN) to enchance availability. In pair with dynamic, adaptable streaming HLS provides highest quality in varying network conditions.
