@@ -4,11 +4,11 @@ sidebar:
     order: 1
 ---
 
-Software headend for Digital TV broadcasting over cable, satellite, terrestrial, and IP networks.
+Astra is digital TV broadcasting software that receives television signals from different sources, then delivers them to your viewers over cable, satellite, terrestrial, and IP networks.
 
 ## Is This for You?
 
-Astra is designed for professionals in the broadcasting industry, including:
+Astra is designed for:
 
 - Cable, satellite, and terrestrial TV operators
 - IPTV and OTT service providers
@@ -29,10 +29,10 @@ Astra is a software headend that receives, processes, and delivers digital TV co
 
 Astra supports various types of sources:
 
-- DVB, including satellite, cable, and terrestrial
+- Satellite, Cable, and Terrestrial signals using DVB and ISDB-T standards
 - HLS and HTTP MPEG-TS streams
 - Multicast streams in IP networks with UDP or RTP
-- SRT protocol in caller or listenner modes
+- SRT protocol in caller or listener modes
 - RTSP streams from IP cameras
 
 ### Processing content
@@ -43,7 +43,7 @@ Astra prepares received channels for delivery using MPEG-TS processing features:
 - Streams filtering and remapping
 - Descrambling with DVB-CI and Conditional Access Modules
 - Analyzing streams
-- Stream redundancy by automatically switching to backup sources
+- Stream redundancy with automatic failover to backup sources when primary feeds fail
 
 Astra works on the transport stream level, and delivers content without changing the original video and audio streams.
 
@@ -55,12 +55,12 @@ Broadcasting & Streaming content over different networks:
 - Scrambling using DVB Simulcrypt
 - HLS and HTTP MPEG-TS streaming with access authentication
 - Delivery streams over IP networks with UDP Multicast
-- SRT protocol in listenner or caller modes
+- SRT protocol in listener or caller modes
 
-## Management
+### Other Features
 
-- Web-Interface
-- Realtime monitoring
-- Integration with Zabbix, Grafana, and InfluxDB
-- API
-- Lua scripts
+- **Web-Interface** - Control and configure Astra in your browser
+- **Realtime monitoring** - Track adapters and streams health
+- **Integration with Zabbix, Grafana, and InfluxDB** - Connect with your existing monitoring tools
+- **API** - Automate tasks and integrate with other systems
+- **Lua scripts** - Customize functionality with scripting

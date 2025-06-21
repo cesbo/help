@@ -4,7 +4,7 @@ sidebar:
     order: 11
 ---
 
-Backups is an important part of system administration!
+Backups are an important part of system administration!
 
 ## Create
 

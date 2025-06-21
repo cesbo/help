@@ -14,8 +14,8 @@ sidebar:
 - [CAS](/en/astra/delivery-broadcast/cas-and-simulcrypt/)
 - Servers
 - [Groups](/en/astra/settings/groups/)
-- Import
-- Edit Config
-- License
-- Restart
-- Logout
+- Import - import channels from m3u playlist or from Astra configuration file
+- Edit Config - export or edit Astra configuration file
+- License - show license information and Astra version
+- Restart - restart Astra. If you have several servers with Astra, will ask which server to restart
+- Logout - logout from the Astra Web Interface

@@ -41,7 +41,7 @@ astra -v
 
 Valid license is required to launch Astra on your server. You may get demo license for free or buy subscription on our web site: https://cesbo.com/astra-license
 
-To install license folow an instruction in the email with new license.
+To install license follow the instructions in the email with new license.
 
 ## Launch Astra
 
@@ -71,7 +71,7 @@ Now service `astra` will be started automatically on system startup.
 
 ## System Tune
 
-To ensure optimal performance of your Astra server, it is recommended to tune your system settings. You can use our [Tune script](/en/articles/system/tune/) to automatically configure these settings. This script will adjust network parameters, CPU power modes, and other system configurations to enhance the performance of Astra.
+For better performance of your Astra server, tune your system settings. You can use our [Tune script](/en/articles/system/tune/) to automatically configure these settings. This script will adjust network parameters, CPU power modes, and other system configurations to enhance the performance of Astra.
 
 ## Login to Web Interface
 

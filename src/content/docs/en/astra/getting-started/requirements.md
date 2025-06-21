@@ -23,11 +23,11 @@ Ensure the CPU is operating in performance mode and power-saving mode is disable
 
 ## RAM
 
-For system and general software operation we recommend at least 2Gb of RAM. For reserve at least 20%.
+For system and general software operation we recommend at least 2Gb of RAM. Reserve at least 20%.
 
 Additional RAM is needed:
 
-- For receiving, resources is not so important as delivery. About 1Gb of RAM per 100 channels.
+- For receiving, resources are not as important as delivery. About 1Gb of RAM per 100 channels.
 - For DVB modulators such as TBS, DigitalDevices, or HiDes, Astra allocates 256Mb per transponder
 - For delivery UDP channels with bitrate synchronization, Astra allocates about 12Mb per channel. Approximately 2Gb of RAM is enough for deliver 100 channels with UDP protocol.
 - For delivery UDP channels without synchronization, Astra allocates only 1Mb per channel. This is generally not recommended.
@@ -57,7 +57,7 @@ NIC ring buffer sizes differ according to the NIC vendor and grade. A larger buf
 
 Packets are transmitted between the NIC ring buffer and the operating system kernel via queues. Each queue is assigned one dedicated CPU core. Network adapters equipped with multiple queues can process packets simultaneously.
 
-Network adapters with single queue for consumer use only and not recommended for digital TV headend setup.
+Network adapters with single queue are for consumer use only and not recommended for digital TV headend setup.
 
 ### Recommended Network Adapters
 

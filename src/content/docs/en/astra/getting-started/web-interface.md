@@ -8,7 +8,7 @@ Astra provides a web interface that you can use to manage and configure the soft
 
 ## Accessing the Web Interface
 
-Web Interface works well in next browsers: Firefox, Chrome, or Safari.
+Web Interface works well in these browsers: Firefox, Chrome, or Safari.
 
 The default port for the web interface is 8000. To access the web interface, enter the following URL in your web browser: `http://your-server-address:8000`, where your-server is the IP address or hostname of the server where Astra is installed.
 
