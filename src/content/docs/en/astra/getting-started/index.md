@@ -1,5 +1,6 @@
 ---
 title: About Astra
+description: Digital TV broadcasting software that receives, processes, and delivers television signals over cable, satellite, terrestrial, and IP networks
 sidebar:
     order: 1
 ---

@@ -1,5 +1,6 @@
 ---
 title: Web Interface
+description: Access and navigate Astra Web Interface to manage streams, adapters, and system settings
 sidebar:
     order: 4
 ---

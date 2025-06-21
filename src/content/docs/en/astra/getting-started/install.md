@@ -1,5 +1,6 @@
 ---
 title: Installing Astra
+description: Step-by-step guide to install Astra binary, get a license, and set up the system service
 sidebar:
     order: 2
 ---

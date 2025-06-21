@@ -1,5 +1,6 @@
 ---
 title: Hardware Requirements
+description: CPU, RAM, networking, and DVB adapter requirements for optimal Astra performance
 sidebar:
     order: 31
 ---

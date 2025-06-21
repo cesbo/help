@@ -1,5 +1,6 @@
 ---
 title: Changelog
+description: Release notes and feature updates for recent Astra versions
 noindex: true
 sidebar:
     order: 100

@@ -1,5 +1,6 @@
 ---
 title: License
+description: Get demo, subscription, or lifetime licenses for Astra with installation, renewal, and troubleshooting instructions
 sidebar:
     order: 3
 ---

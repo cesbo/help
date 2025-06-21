@@ -1,5 +1,6 @@
 ---
-title: "Backup"
+title: Backup
+description: Create and restore backups of Astra binary and configuration files
 sidebar:
     order: 11
 ---

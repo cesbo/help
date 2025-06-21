@@ -1,5 +1,6 @@
 ---
 title: Updating Astra
+description: Download and install the latest version of Astra with proper backup procedures
 sidebar:
     order: 12
 ---
