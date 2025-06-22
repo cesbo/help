@@ -36,7 +36,7 @@ In the output - we will see the numbers of modulators:
 
 ## Astra settings
 
-1. Prepare [MPTS](/en/astra/streams/mpts-settings/) for modulator
+1. Prepare [MPTS](/en/astra/streams/mpts/) for modulator
 2. In the output setting, specify the address: `tbs://#adapter=0&device=1` (0 - adapter number, 1 - modulator)
 3. In the MPTS NIT settings, configure transponder options
 

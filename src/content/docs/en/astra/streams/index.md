@@ -65,4 +65,4 @@ The Multi Program Stream (MPTS, also known as Multiplex) is another type of stre
 
 This stream type also provides several features designed for broadcasting. These include options for defining the stream description, network information, network search, and logical channel numbers.
 
-Read more about [MPTS Settings](/en/astra/streams/mpts-settings/)
+Read more about [MPTS Settings](/en/astra/streams/mpts/)

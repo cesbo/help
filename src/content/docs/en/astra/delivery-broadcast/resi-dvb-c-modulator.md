@@ -39,7 +39,7 @@ The output will display a list of devices in the system:
 
 ## Astra settings
 
-1. Prepare [MPTS](/en/astra/streams/mpts-settings/) for modulator
+1. Prepare [MPTS](/en/astra/streams/mpts/) for modulator
 1. In the output setting, specify the address: resi://#adapter=0&device=1 (0 - adapter number, 1 - modulator)
 1. In the MPTS NIT settings, configure transponder options
 

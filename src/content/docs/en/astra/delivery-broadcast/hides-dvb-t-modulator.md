@@ -40,7 +40,7 @@ In the output of the command, we will get the numbers of the modulators:
 
 ## Astra settings
 
-Prepare [MPTS](https://help.cesbo.com/astra/delivery/broadcasting/mpts-settings) for modulator. In the MPTS NIT settings, configure transponder options:
+Prepare [MPTS](/en/astra/streams/mpts/) for modulator. In the MPTS NIT settings, configure transponder options:
 
 ![MPTS NIT Settings](https://cdn.cesbo.com/help/astra/delivery/broadcasting/hides-dvb-t-modulator/mpts-nit.png)
 
