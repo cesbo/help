@@ -1,26 +1,13 @@
 ---
-title: "Stream: Remap Settings"
+title: "How to Remap PIDs"
 sidebar:
-    order: 33
+  order: 33
 ---
-
-The Remap feature in Astra allows modify the Packet Identifier (PID) for MPEG-TS elementary streams.
-
-## Use Cases
 
 Remapping Stream PIDs is beneficial in various scenarios:
 
 - Smooth Input Redundancy: If primary and backup inputs have differing PIDs for video and audio elementary streams, switching to the backup input may lead to a temporary interruption in playback. By remapping PIDs to ensure uniformity across primary and backup inputs, the transition can be made seamless.
 - Multi Program Stream (MPTS) Preparation: When preparing a channel for inclusion in an MPTS broadcast, each elementary stream within the channel must possess a unique PID. Remapping ensures this PIDs uniqueness, enabling smooth addition of the channel to the MPTS
-
-## Remap Options
-
-![Stream Remap Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/remap.png)
-
-- `Map PID's` - modify the Packet Identifier (PID) for MPEG-TS elementary streams. Read more in [Remapping Stream PIDs](/en/astra/streams/remap/)
-- `Filter PID's` - removes specific packets within the MPEG-TS stream based on their PIDs. Read more in [Filtering Stream PIDs](/en/astra/streams/filter/)
-- `Change PNR` - change program number. Program number could be in range from 1 to 65535
-- `Change TSID` - change transport stream identifier
 
 ## Analyze Channel
 
@@ -35,10 +22,6 @@ On the provided screenshot, we can see the following elementary streams:
 2. Audio - PID: `376`, Language: `eng` (English)
 
 Each elementary stream is represented by a unique Packet Identifier (PID), which can be used for Stream Remapping in Astra.
-
-## Limitations
-
-Please note that PID value could be in range from 32 to 8190.
 
 ## Input remapping
 
@@ -62,13 +45,13 @@ To verify the results of the applied stream filter, click "Apply" to save the ch
 
 Selector determinates what PID should be changed to the new value
 
+- `371` - any number as an original PID
 - `pmt` - PID for Program Map Table (PMT)
 - `video` - video stream
 - `audio` - any audio stream. You may define this option twice if you have several audio streams, for example: `video=101, audio=102, audio=103`
 - `audio.eng` - audio stream with defined language code
 - `ac3` - AC3 audio stream. The `audio` selector could be used for AC3 streams as well
 - `aac` - AAC audio stream. The `audio` selector could be used for ACC streams as well
-- `371` - original PID
 - `pcr` - PID for packets with PCR. Usually the PCR timestamp delivered with video stream packets
 - `sub` - subtitle stream
 - `ttx` - teletext stream

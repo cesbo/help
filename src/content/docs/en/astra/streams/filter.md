@@ -1,5 +1,5 @@
 ---
-title: Filtering Stream PIDs
+title: How to Filter PIDs
 sidebar:
     order: 32
 ---
