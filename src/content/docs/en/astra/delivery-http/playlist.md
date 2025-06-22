@@ -34,7 +34,7 @@ Where:
 
 ## Channel Groups
 
-For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/en/astra/settings/channel-groups/).
+For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/en/astra/settings/groups/).
 
 Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
 
