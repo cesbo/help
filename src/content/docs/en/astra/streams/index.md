@@ -8,25 +8,26 @@ Streams in Astra represents an individual channel or media flow that receives co
 
 ## Create New Stream
 
-To create a new stream, navigate to the "Dashboard" and click on the "New Stream" in main menu. This will open a dialog where you can select the type of stream you want to create: Single Program Stream (SPTS) or Multi Program Stream (MPTS).
+To create a new stream:
+
+1. Go to the main Dashboard
+2. Click `New Stream` in the upper right corner
+
+A dialog opens where you choose between Single Program Stream (SPTS) or Multi Program Stream (MPTS).
 
 ## General Options
 
-The Single Program Stream (SPTS) commonly used to form TV channels. It can utilize multiple inputs for redundancy purposes, enhancing the reliability of the stream.
+Configure basic stream settings that control how your stream behaves and appears in the system.
 
-![Single Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/general.png)
+![General Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/general.png)
 
 - `Enable` - new stream is enabled by default, but can be turned off if needed
 - `Name` - friendly channel name used in dashboards and logs
-- `ID` - unique identifier, by default Astra assigns a sequential number to new channels, but you may define your own
-- `Multi Program Stream` - switch to MPTS configuration
-- `Enable monitoring` - analyze stream status and send reports to the monitoring system
-- `Start stream on demand` - Astra will wait for an incomming request to start stream. This mode is turned of for channels with UDP or HLS outputs
-- `Keep Active` - additional option for the on-demand mode. By default, when the last client is closes connection, Astra turns channel off. This option allows the channel to remain active for some time
-- `Channel Number` - option used to order channels in the playlist
+- `ID` - unique stream identifier. Keep it empty to assigns a sequential number to new channels or you may define your own
+- `Create Multi Program Stream` - switch to MPTS configuration
 - `Description` - arbitrary channel description
 
-## Input List
+### Input List
 
 Configure one or more inputs to receive stream content. To set up inputs, you can use the [Media Address Format](/en/astra/streams/address-format/) or the configuration dialog.
 
@@ -40,7 +41,7 @@ Read more information in our guides for protocol specific configuration:
 - [How to receive MPTS via UDP](/en/astra/receiving-udp/mpts-via-udp/)
 - [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/astra/adapters/)
 
-## Output List
+### Output List
 
 Configure one or more outputs to provide content to clients. Outputs are optional. You can use the [HTTP Play](/en/astra/delivery-http/http-play/) feature to provide access to channels with HLS or HTTP MPEG-TS.
 
@@ -51,15 +52,11 @@ Read more information in our guides for protocol specific configuration:
 
 ## Single Program Stream
 
-![Single Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/spts.png)
-
 The Single Program Stream (SPTS, also known as Channel or Service) serves as the default stream type in Astra configuration, commonly used to form TV channels. It can employ multiple inputs for redundancy purposes, enhancing the reliability of the stream. The integrated analyzer continuously monitors the active input, and if a fault is detected, it immediately switches to an alternate input.
 
 In addition to redundancy, SPTS offers a range of processing options. These include filtering for transmitting only required media data, modifying stream information, descrambling to access protected streams, and scrambling to safeguard transmitted streams. Thus, SPTS provides a versatile and secure solution for TV channel formation.
 
 ## Multi Program Stream
-
-![Multi Program Stream Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/create/mpts.png)
 
 The Multi Program Stream (MPTS, also known as Multiplex) is another type of stream available in Astra, activated via an option of the same name within stream settings. MPTS takes all provided inputs and multiplexes them into a singular stream for broadcasting purposes.
 

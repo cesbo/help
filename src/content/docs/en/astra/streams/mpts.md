@@ -1,7 +1,7 @@
 ---
-title: MPTS Settings
+title: "MPTS: General Settings"
 sidebar:
-    order: 3
+    order: 21
 ---
 
 MPTS (Multi Program Transport Stream) lets you bundle multiple TV channels into a single stream. This is useful when you need to send several channels together to broadcasting equipment or cable networks.
@@ -54,6 +54,7 @@ udp://225.1.1.27:1234#set_pnr=11
 udp://225.1.1.28:1234#set_pnr=12
 udp://225.1.1.29:1234#set_pnr=13
 ```
+
 ## Output List
 
 The Output List section in the General window displays the list of outputs, which can be configured for the selected modulator. In this section, you can add or remove outputs and configure their settings. Each output in the list is represented by a row with its parameters and status displayed. The status of each output can be enabled or disabled using the corresponding checkbox in the first column of the output row
@@ -63,52 +64,3 @@ The Output List section in the General window displays the list of outputs, whic
 - `New Output` - this button opens a new window where you can configure the parameters for the new output. The modulator number for the new output can be assigned based on the number of modulators in the adapter, starting from 0
 
 Same as for the SPTS mode.
-
-## SDT
-
-The SDT tab is a window that allows you to configure the Service Description Table, which is responsible for providing information about the services available in the transport stream. This information can include the service name, provider name, service type, and other details. In other words, the SDT tab provides a way to define and manage the services that will be available to viewers
-
-![Service Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/sdt.png)
-
-- `Service type` - this parameter specifies the type of service that the user wants to configure, such as digital television, digital radio, or data services
-- `Service name` - this parameter refers to the name of the service that is being transmitted over the air. The service name is typically displayed on the user's TV or other receiving device
-- `PNR` - this parameter describes the Program number of the selected service
-- `Scrambled channel` -  this parameter is a checkbox that indicates whether the selected channel is scrambled or not. When checked, it adds information to the channel description that the channel is encrypted. Modern dvb-receivers, focusing on this information, can display on the TV screen data that the channel is encrypted
-- `LCN` - this parameter stands for Logical Channel Number. It is a unique identifier assigned to each channel or service in a digital broadcasting system
-
-## NIT
-
-The "NIT" window allows you to define the network information table (NIT) for a custom modulator. The NIT contains information about the networks available to the user, such as the network ID, network name, and frequency
-
-![Network Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/nit.png)
-
-- `LCN Version` - this parameter indicates the version number of the Logical Channel Number (LCN) table used by the service. The LCN table contains information about the ordering of services in a particular region or country
-- `Delivery Type` - this parameter defines the method used to deliver the signal for the selected service
-- `Frequency` - this parameter determines the frequency of the output signal. It can be set in MHz (megahertz) and can have values ranging from 45 to 1002 MHz, depending on the delivery type selected for the modulator
-- `Symbolrate` - symbol rate. Specified in KBaud
-- `FEC` - if your streams contain FEC, select the required value. Otherwise, select the default value
-- `Modulation` - this parameter allows you to select the type of modulation to be used for the selected service
-
-## Network Search
-
-Focusing on these parameters, modern dvb-tuner and TVs can perform the Quick Search. Not to perform on the set-top boxes and TV full channel search (which usually takes a long time), set up this simple and necessary service:
-
-1. Create all necessary mpts streams and fill in Delivery Type parameters in them. For example:
-  - mpts_1 with frequency 378
-  - mpts_2 with frequency 386
-  - mpts_3 with frequency 394
-2. Go to settings mpts_1 and open the NIT tab. Check all related multiplexes
-3. Done!
-
-> How it works During the channel setup, the TV or STB finds the frequency 378, with `mpts_1`, got the `NIT` tables for all linked multiplexes and scan them fast.
-
-## Advanced tab
-
-IThe Advanced tab contains special, advanced options for configuring MPTS
-
-![Advanced Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/advanced.png)
-
-- `Disable PID's auto-remap` - Disable automatic redefinition of PID numbers in MPTS
-- `SI packets interval` - this is the interval for sending stream data. The default value is 500 milliseconds. This value does not need to be changed
-- `Pass NIT/SDT/EIT/TDT` - disables Astra processing of these tables. For example, tables are prepared by an external generator
-- `PAT/NIT/CAT/SDT version` - table version number. The number is incremented each time the mpts settings are updated. When the dvb receiver finds a change in the table number, it immediately re-reads it. There is no need to change the values manually

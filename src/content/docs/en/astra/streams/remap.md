@@ -1,7 +1,7 @@
 ---
 title: "Stream: Remap Settings"
 sidebar:
-    order: 13
+    order: 33
 ---
 
 The Remap feature in Astra allows modify the Packet Identifier (PID) for MPEG-TS elementary streams.

@@ -6,7 +6,7 @@ sidebar:
 
 The Service Settings offers option to customize the stream information delivered to the players.
 
-![Stream Service Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/service.png)
+![Stream: Form for Service Settings](https://cdn.cesbo.com/help/astra/admin-guide/stream/service.png)
 
 - `Service Type` - type of the service, video, radio or some other
 - `Service Provider` - name of your service provider, which can be defined globally under Settings -> General -> Service Provider

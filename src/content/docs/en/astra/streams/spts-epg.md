@@ -6,7 +6,7 @@ sidebar:
 
 Configure the EPG Export to extract Electronic Programme Guide from stream
 
-![Stream EPG Export Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/epg.png)
+![Stream: Form for EPG Export Settings](https://cdn.cesbo.com/help/astra/admin-guide/stream/epg.png)
 
 - `XMLTV Channel ID` - use a custom channel ID instead of primary ID
 - `Format` - EPG Export format:

@@ -6,7 +6,7 @@ sidebar:
 
 Configure the redundancy behaviour to automatically switch stream inputs in case of a failure.
 
-![Stream Backup Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/backup.png)
+![Stream: Form for Backup Settings](https://cdn.cesbo.com/help/astra/admin-guide/stream/backup.png)
 
 - `Backup Type` - redundancy behaviour type. Default: Active Backup
 - `Initial Delay` - delay in seconds before starting the next input after the stream has been initiated. Default: 5 for UDP or SRT; 10 for HLS, HTTP MPEG-TS, or RTSP; 120 for DVB

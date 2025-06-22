@@ -1,7 +1,7 @@
 ---
 title: Media Address Format
 sidebar:
-    order: 2
+    order: 30
 ---
 
 In Astra, the media source or destination is described using a media address that resembles a typical URL. This format makes it easy for users to understand and work with the different components involved in managing media streams.

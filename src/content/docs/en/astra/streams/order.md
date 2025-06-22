@@ -1,7 +1,7 @@
 ---
 title: Reorder audio streams
 sidebar:
-    order: 20
+    order: 34
 ---
 
 In this article, we will explore how to change the order of audio streams in a channel using Astra. When broadcasting a channel with multiple audio streams the order of the streams can be crucial for viewers convenience. Most TV and other media players automatically select the first audio stream by default. By reordering the audio streams, you can ensure that your preferred language is set as the default option.
