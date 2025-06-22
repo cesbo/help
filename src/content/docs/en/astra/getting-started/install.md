@@ -9,10 +9,9 @@ Astra installation is a simple process – just copy single binary file to your 
 
 ## Requirements
 
-- Any Linux based operation system
+- Any Linux-based operation system. We recommend using Fedora 42.
 - x86 64bit CPU
-- Connection to the internet on your server
-- Periodic internet access is required for license validation by Astra on the servers: `ls1.cesbo.com`, `ls2.cesbo.com`, and `ls3.cesbo.com`
+- Connection to the internet on your server for periodic license validation on the servers: `ls1.cesbo.com`, `ls2.cesbo.com`, and `ls3.cesbo.com`
 
 :::note
 In this guide we use the **curl** command to download files. Most Linux distribution has pre-installed **curl**

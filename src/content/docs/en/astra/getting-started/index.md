@@ -16,15 +16,11 @@ Astra is designed for:
 - Content delivery networks (CDNs)
 - Hotels, hospitals, and others who provide TV services for their own customers
 
-## What needs to be installed?
-
-Astra works on any Linux-based distribution for x86 64-bit CPUs. We recommend using Fedora 42.
-
-[Read how to install Astra](/en/astra/getting-started/install/)
-
 ## How Does It Work?
 
-Astra is a software headend that receives, processes, and delivers digital TV content.
+Astra runs on Linux servers and gets TV content from various sources, then delivers it to your viewers.
+
+[Read how to install Astra](/en/astra/getting-started/install/)
 
 ### Receiving content
 
