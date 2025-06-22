@@ -74,7 +74,7 @@ url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"
 ```
 
 Line will be added to the playlist header and provide information about EPG location.
-This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/en/astra/streams/epg/#epg-aggregator).
+This URL is just an example, you can use any other EPG source or explore our solution, [EPG Aggregator](/en/astra/streams/spts-epg/#epg-aggregator).
 
 The final step is a configuring channel ID to link your channels with EPG records. Each channel in the XMLTV has unique identifier, like so:
 
