@@ -1,17 +1,25 @@
 ---
-title: "MPTS Settings"
-date: 2023-03-23
+title: MPTS Settings
 sidebar:
-    order: 1
+    order: 3
 ---
 
-MPTS (Multi Program Transport Stream) - a stream containing several services (programs). It is often used to transfer channels to ip-qam/ip-asi modulators.
+MPTS (Multi Program Transport Stream) lets you bundle multiple TV channels into a single stream. This is useful when you need to send several channels together to broadcasting equipment or cable networks.
 
-Open the main page (Dashboard) of Astra and find the item `New Stream`, in the upper right corner, to open a new window. Find `Multi Program Stream` and set the checkbox on it. After that, you will have additional fields.
+For example, instead of sending Channel 1, Channel 2, and Channel 3 as separate streams, MPTS combines them into one stream that carries all three channels.
+
+## Creating an MPTS Stream
+
+To create an MPTS stream:
+
+1. Go to the main Dashboard
+2. Click `New Stream` in the upper right corner
+3. Check the `Multi Program Stream` checkbox
+4. Configure the settings below
 
 ## General
 
-The General window allows you to configure the basic settings of a DVB-T modulator, including its frequency range, modulation scheme, and output level
+The General tab contains the basic settings for your MPTS stream
 
 ![General Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/general.png)
 
@@ -86,9 +94,9 @@ The "NIT" window allows you to define the network information table (NIT) for a 
 Focusing on these parameters, modern dvb-tuner and TVs can perform the Quick Search. Not to perform on the set-top boxes and TV full channel search (which usually takes a long time), set up this simple and necessary service:
 
 1. Create all necessary mpts streams and fill in Delivery Type parameters in them. For example:
--      mpts_1 with frequency 378
--      mpts_2 with frequency 386
--      mpts_3 with frequency 394
+  - mpts_1 with frequency 378
+  - mpts_2 with frequency 386
+  - mpts_3 with frequency 394
 2. Go to settings mpts_1 and open the NIT tab. Check all related multiplexes
 3. Done!
 
