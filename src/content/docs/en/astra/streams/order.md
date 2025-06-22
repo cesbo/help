@@ -1,5 +1,5 @@
 ---
-title: Reorder audio streams
+title: How to Reorder PIDs
 sidebar:
     order: 34
 ---

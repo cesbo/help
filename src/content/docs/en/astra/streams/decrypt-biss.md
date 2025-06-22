@@ -1,5 +1,5 @@
 ---
-title: Decrypt streams with BISS CAS
+title: How to decrypt BISS CAS
 sidebar:
     order: 35
 ---
