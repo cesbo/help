@@ -8,12 +8,12 @@ The "NIT" window allows you to define the network information table (NIT) for a 
 
 ![Network Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/nit.png)
 
-- `LCN Version` - this parameter indicates the version number of the Logical Channel Number (LCN) table used by the service. The LCN table contains information about the ordering of services in a particular region or country
-- `Delivery Type` - this parameter defines the method used to deliver the signal for the selected service
-- `Frequency` - this parameter determines the frequency of the output signal. It can be set in MHz (megahertz) and can have values ranging from 45 to 1002 MHz, depending on the delivery type selected for the modulator
-- `Symbolrate` - symbol rate. Specified in KBaud
-- `FEC` - if your streams contain FEC, select the required value. Otherwise, select the default value
-- `Modulation` - this parameter allows you to select the type of modulation to be used for the selected service
+- `LCN Version`: this parameter indicates the version number of the Logical Channel Number (LCN) table used by the service. The LCN table contains information about the ordering of services in a particular region or country
+- `Delivery Type`: this parameter defines the method used to deliver the signal for the selected service
+- `Frequency`: this parameter determines the frequency of the output signal. It can be set in MHz (megahertz) and can have values ranging from 45 to 1002 MHz, depending on the delivery type selected for the modulator
+- `Symbolrate`: symbol rate. Specified in KBaud
+- `FEC`: if your streams contain FEC, select the required value. Otherwise, select the default value
+- `Modulation`: this parameter allows you to select the type of modulation to be used for the selected service
 
 ## Network Search
 
@@ -26,4 +26,6 @@ Focusing on these parameters, modern dvb-tuner and TVs can perform the Quick Sea
 2. Go to settings mpts_1 and open the NIT tab. Check all related multiplexes
 3. Done!
 
-> How it works During the channel setup, the TV or STB finds the frequency 378, with `mpts_1`, got the `NIT` tables for all linked multiplexes and scan them fast.
+### How it works
+
+The TV or STB finds the frequency 378, with `mpts_1`, got the `NIT` tables for all linked multiplexes and scan them fast.

@@ -45,14 +45,14 @@ To verify the results of the applied stream filter, click "Apply" to save the ch
 
 Selector determinates what PID should be changed to the new value
 
-- `371` - any number as an original PID
-- `pmt` - PID for Program Map Table (PMT)
-- `video` - video stream
-- `audio` - any audio stream. You may define this option twice if you have several audio streams, for example: `video=101, audio=102, audio=103`
-- `audio.eng` - audio stream with defined language code
-- `ac3` - AC3 audio stream. The `audio` selector could be used for AC3 streams as well
-- `aac` - AAC audio stream. The `audio` selector could be used for ACC streams as well
-- `pcr` - PID for packets with PCR. Usually the PCR timestamp delivered with video stream packets
-- `sub` - subtitle stream
-- `ttx` - teletext stream
-- `ait` - PID for Application Information Table (AIT)
+- `371`: any number as an original PID
+- `pmt`: PID for Program Map Table (PMT)
+- `video`: video stream
+- `audio`: any audio stream. You may define this option twice if you have several audio streams, for example: `video=101, audio=102, audio=103`
+- `audio.eng`: audio stream with defined language code
+- `ac3`: AC3 audio stream. The `audio` selector could be used for AC3 streams as well
+- `aac`: AAC audio stream. The `audio` selector could be used for ACC streams as well
+- `pcr`: PID for packets with PCR. Usually the PCR timestamp delivered with video stream packets
+- `sub`: subtitle stream
+- `ttx`: teletext stream
+- `ait`: PID for Application Information Table (AIT)

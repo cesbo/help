@@ -8,14 +8,14 @@ Configure the EPG Export to extract Electronic Programme Guide from stream
 
 ![Stream: Form for EPG Export Settings](https://cdn.cesbo.com/help/astra/admin-guide/stream/epg.png)
 
-- `XMLTV Channel ID` - use a custom channel ID instead of primary ID
-- `Format` - EPG Export format:
-    - `XMLTV` - this is popular format is used for storing and distributing EPG. XMLTV is compatible with various middleware and IPTV players
-    - `JSON` - useful for sending EPG to external servers or for direct use in a web application. For instance, it can be embedded on a website
-- `Destination` - destination for EPG Export:
-    - `file://` - save the EPG to a local file. For example, using `file:///tmp/test_channel.xml` will store the EPG in the `/tmp` directory with the filename `test_channel.xml`
-    - `http://` - sending EPG using an HTTP POST request. On the server side, an application is required to handle the received request, such as EPG Aggregator
-- `Codepage` - decode text from received EIT packets using defined codepage. Stored text is always encoded with UTF-8
+- `XMLTV Channel ID`: use a custom channel ID instead of primary ID
+- `Format`: EPG Export format:
+    - `XMLTV`: this is popular format is used for storing and distributing EPG. XMLTV is compatible with various middleware and IPTV players
+    - `JSON`: useful for sending EPG to external servers or for direct use in a web application. For instance, it can be embedded on a website
+- `Destination`: destination for EPG Export:
+    - `file://`: save the EPG to a local file. For example, using `file:///tmp/test_channel.xml` will store the EPG in the `/tmp` directory with the filename `test_channel.xml`
+    - `http://`: sending EPG using an HTTP POST request. On the server side, an application is required to handle the received request, such as EPG Aggregator
+- `Codepage`: decode text from received EIT packets using defined codepage. Stored text is always encoded with UTF-8
 
 ## EPG Aggregator
 
@@ -41,11 +41,11 @@ To start script automatically you may append it to the systemd.
 
 Command line arguments:
 
-- `-o /tmp/epg.xml` - full path to store generated XMLTV file
-- `-p 5000` -port for receiving requests from Astra
-- `–daemon` - run as daemon
-- `–interval SEC` - interval of saving EPG to file. default: 60 seconds
-- `–stalker` — replace tag `<sub-title>` to `<desc>` for middleware Stalker/Ministra
+- `-o /tmp/epg.xml`: full path to store generated XMLTV file
+- `-p 5000`:port for receiving requests from Astra
+- `–daemon`: run as daemon
+- `–interval SEC`: interval of saving EPG to file. default: 60 seconds
+- `–stalker`: replace tag `<sub-title>` to `<desc>` for middleware Stalker/Ministra
 
 Script is ready to receive requests from Astra
 
@@ -53,11 +53,11 @@ Script is ready to receive requests from Astra
 
 In stream settings, on the "EPG" tab, configure the EPG Export:
 
-- `Format` - set `JSON`
-- `Destination` - set `http://EPG_agregator_IP:5000`
+- `Format`: set `JSON`
+- `Destination`: set `http://EPG_aggregator_IP:5000`
 
 XMLTV file with the collected data will be located on the path: `/tmp/epg.xml`.
-Also you may download XMLTV from http://EPG_agregator_IP:5000/epg.xml or you may append this URL to the client application.
+Also you may download XMLTV from http://EPG_aggregator_IP:5000/epg.xml or you may append this URL to the client application.
 
 ### Restart EPG Aggregator nightly
 

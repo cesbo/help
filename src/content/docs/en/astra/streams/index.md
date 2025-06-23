@@ -23,7 +23,7 @@ Configure basic stream settings that control how your stream behaves and appears
 
 - `Enable` - new stream is enabled by default, but can be turned off if needed
 - `Name` - friendly channel name used in dashboards and logs
-- `ID` - unique stream identifier. Keep it empty to assigns a sequential number to new channels or you may define your own
+- `ID` - unique stream identifier. Keep it empty to assign a sequential number to new channels or you may define your own
 - `Create Multi Program Stream` - switch to MPTS configuration
 - `Description` - arbitrary channel description
 
@@ -37,7 +37,7 @@ Read more information in our guides for protocol specific configuration:
 - [HTTP MPEG-TS](/en/astra/receiving-http/http/)
 - [UDP/RTP](/en/astra/receiving-udp/)
 - [SRT](/en/astra/receiving/srt/)
-- [RSTP](/en/astra/receiving/rtsp/)
+- [RTSP](/en/astra/receiving/rtsp/)
 - [How to receive MPTS via UDP](/en/astra/receiving-udp/mpts-via-udp/)
 - [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/astra/adapters/)
 
@@ -52,14 +52,28 @@ Read more information in our guides for protocol specific configuration:
 
 ## Single Program Stream
 
-The Single Program Stream (SPTS, also known as Channel or Service) serves as the default stream type in Astra configuration, commonly used to form TV channels. It can employ multiple inputs for redundancy purposes, enhancing the reliability of the stream. The integrated analyzer continuously monitors the active input, and if a fault is detected, it immediately switches to an alternate input.
+Single Program Stream (SPTS) is the default stream type for creating individual TV channels. Think of it as one channel carrying one program - like CNN or ESPN.
 
-In addition to redundancy, SPTS offers a range of processing options. These include filtering for transmitting only required media data, modifying stream information, descrambling to access protected streams, and scrambling to safeguard transmitted streams. Thus, SPTS provides a versatile and secure solution for TV channel formation.
+SPTS automatically switches between multiple inputs if one fails. For example, if you have two satellite feeds for the same channel, SPTS monitors both and switches to the backup feed when problems occur.
+
+You can also process the stream by:
+
+- Filtering unwanted content (like subtitles you don't need)
+- Changing stream details (channel name, language info)
+- Removing encryption from protected streams
+- Adding encryption to secure your broadcasts
 
 ## Multi Program Stream
 
-The Multi Program Stream (MPTS, also known as Multiplex) is another type of stream available in Astra, activated via an option of the same name within stream settings. MPTS takes all provided inputs and multiplexes them into a singular stream for broadcasting purposes.
+Multi Program Stream (MPTS) combines multiple channels into one broadcast stream. Think of it like a cable TV package - instead of sending channels separately, you bundle them together for broadcasting.
 
-This stream type also provides several features designed for broadcasting. These include options for defining the stream description, network information, network search, and logical channel numbers.
+For example, if you have 10 different TV channels, MPTS packages them all into one stream that cable or satellite providers can broadcast to viewers.
+
+MPTS includes broadcasting features like:
+
+- Channel descriptions and network information
+- Channel numbering (so viewers see "Channel 5" instead of technical IDs)
+- Network search capabilities for receivers to find channels easily
+- EPG (Electronic Program Guide) data embedding for showing TV schedules to viewers
 
 Read more about [MPTS Settings](/en/astra/streams/mpts/)

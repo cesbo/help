@@ -22,10 +22,10 @@ Astra forms this address automatically if you scan DVB Adapter and append channe
 
 In some cases you may want to remove service tables delivered with channel. To do that Astra has additional input options:
 
-- `no_eit` - removes Event Information Table (EIT). EIT provides Electronic Program Guide (EPG)
-- `no_sdt` - removes Service Description Table (SDT). SDT provides information about channel and delivery network
-- `no_tdt` - removes Time and Date Table (TDT). TDT provides current UTC date and time
-- `no_tot` - removes Time Offset Table (TOT). TOT provides current UTC date and time with offset information of the current region time zone
+- `no_eit`: removes Event Information Table (EIT). EIT provides Electronic Program Guide (EPG)
+- `no_sdt`: removes Service Description Table (SDT). SDT provides information about channel and delivery network
+- `no_tdt`: removes Time and Date Table (TDT). TDT provides current UTC date and time
+- `no_tot`: removes Time Offset Table (TOT). TOT provides current UTC date and time with offset information of the current region time zone
 
 Example:
 
@@ -37,10 +37,10 @@ dvb://a001#pnr=1&no_sdt&no_eit
 
 During the demultiplexing process, Astra keep in EIT and SDT tables information related to the selected channel only. If you want to pass packets as is, without any changes you may use next options:
 
-- `pass_eit` - pass EIT without changes
-- `pass_sdt` - pass SDT without changes
+- `pass_eit`: pass EIT without changes
+- `pass_sdt`: pass SDT without changes
 
-These options is not recommended to use and they are incompatible with `set_pnr` and `set_tsid` options.
+These options are not recommended to use and they are incompatible with `set_pnr` and `set_tsid` options.
 
 ## Packets with private data
 
