@@ -4,7 +4,7 @@ sidebar:
     order: 35
 ---
 
-The Basic Interoperable Scrambling System (BISS) is a straightforward and efficient conditional access system that utilizes a static key to protect content from unauthorized access. BISS is based on the Common Scrambling Algorithm (CSA), which scrambles the channel data, ensuring secure transmission of content over satellite and terrestrial broadcasting networks.
+BISS is a basic conditional access system with a static key to protect content from unauthorized access.
 
 ## Receiving a Scrambled Channel
 
