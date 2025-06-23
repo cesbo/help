@@ -4,20 +4,20 @@ sidebar:
     order: 22
 ---
 
-The HTTP Backend authorization is a client authorization on the third-party service, known as Middleware.
+HTTP Backend authorization lets you use your existing user management system (Middleware) to control access to your streams. Instead of managing users in Astra, you can connect to your current platform like Ministra, IPTVportal, or a custom system.
 
-## Process
+## How it works
 
 ![HTTP Backend](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/http-backend.svg)
 
-1. Client initiates a request to access a TV channel. This request contains identification details such as token, client ID, or some else
-1. Astra sends HTTP GET request to the Middleware. This request includes identification details and session information
-1. Middleware validates request and sends back a response status
-1. If the Middleware grants access, then Astra provides access to the requested TV channel
+1. **User requests a channel**: The viewer's player sends a request with their token or credentials
+2. **Astra asks your Middleware**: Astra forwards the request details to your user management system
+3. **Middleware checks permissions**: Your system verifies if the user can access this channel
+4. **Access granted or denied**: If approved, Astra streams the content; if not, access is blocked
 
 ## Configuration
 
-To configure Middleware Authorization open `Settings` -> `HTTP Auth`. From there, select the desired "Backend Type" and enter the appropriate "Backend Address" based on the selected type.
+Go to `Settings` → `HTTP Auth` in Astra. Choose your "Backend Type" and enter the "Backend Address" for your system.
 
 ### Ministra/Stalker
 
@@ -27,17 +27,17 @@ Backend Address:
 http://example.com/stalker_portal
 ```
 
-In the Ministra / Stalker settings turn on option `Temporary URL` -> `Flussonic support`
+In your Ministra/Stalker admin panel, enable `Temporary URL` → `Flussonic support`
 
 ### IPTVportal
 
-Backend Address for cloud platform:
+**For cloud platform:**
 
 ```
 https://go.iptvportal.cloud
 ```
 
-For local platform will be address of your server.
+**For local installation:** Use your server's address (e.g., `http://your-server.com`)
 
 In the portal settings open `Keys` menu and create a new key:
 
@@ -63,44 +63,58 @@ http://example.com
 
 ### HTTP Request
 
-If you need to implement custom authentication logic, you can create your own backend. Select `HTTP Request` in `Backend Type` and specify URL to your Middleware endpoint.
+Create your own authentication system by selecting `HTTP Request` as the Backend Type and providing your custom endpoint URL.
 
-Astra sends an HTTP GET request to the Middleware endpoint, appending all query parameters from the original request, and session information in the HTTP headers:
+When a user requests access, Astra sends a GET request to your endpoint with:
 
-- `X-Session-ID` - unique session number
-- `X-Channel-ID` - unique channel identifier
-- `X-Real-IP` - client's IP address
-- `X-Real-Path` - client's request path
-- `X-Real-UA` - client's User-Agent
-- `X-Real-Host` - client's Host request
+- Query parameters: All parameters from the original user request
+- HTTP headers with session details:
+    - `X-Session-ID`: unique session number
+    - `X-Channel-ID`: unique channel identifier
+    - `X-Real-IP`: client's IP address
+    - `X-Real-Path`: client's request path
+    - `X-Real-UA`: client's User-Agent
+    - `X-Real-Host`: client's Host request
 
-In a response backend may send next HTTP headers:
+Your backend can respond with:
 
-- `X-Session-Name` - client login or any other name for session
+- `HTTP 200`: Access granted
+- `HTTP 403/401`: Access denied
+- `X-Session-Name` header - User's login name (optional)
 
-For example:
+**Example workflow:**
 
-1. Your backend address is: `https://auth.example.com/check`
-1. Client tries to start channel: `https://live.example.com/play/a001/index.m3u8?token=123`
-1. Full address to HTTP backend will be: `https://auth.example.com/check?token=123`
-1. In headers will be `X-Real-Path: /play/a001/index.m3u8` and other headers depending of clients request
+1. Your backend: `https://auth.example.com/check`
+2. User requests: `https://live.example.com/play/a001/index.m3u8?token=123`
+3. Astra calls: `https://auth.example.com/check?token=123`
+4. Headers include: `X-Real-Path: /play/a001/index.m3u8` plus other request details
 
-## Default action
+## Important: Default behavior
 
-If backend is not available, then Astra allows access.
+If your backend is unreachable, Astra allows access by default. This prevents your service from going down if your authentication server has issues, but means users get free access during outages.
 
 ## Troubleshooting
 
-### Unexpected access
+### Users getting free access
 
-If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
+If users can watch channels without paying, your backend might be down. Test your backend connection:
 
 ```sh
 curl -v "https://auth.example.com/check"
 ```
 
-Of course address should be same as in your settings.
+Replace the URL with your actual backend address from Astra settings.
 
-If you see something like `Connection refused` or connection is stuck without any response, then issue with access to the backend.
+**Common issues:**
 
-### No access
+- `Connection refused`: Backend server is down
+- Request hangs: Network connectivity problems
+- Wrong URL: Check your backend address in settings
+
+### Users can't access paid channels
+
+If legitimate users are blocked:
+
+1. Check your backend logs: Look for authentication errors
+2. Verify response codes: Your backend must return HTTP 200 for valid users
+3. Test manually: Use curl with a valid token to test your endpoint
