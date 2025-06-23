@@ -4,6 +4,7 @@ description: Step-by-step guide to install Astra binary, get a license, and set 
 sidebar:
     order: 2
 ---
+import { Steps } from '@astrojs/starlight/components'
 
 Astra installation is a simple process – just copy single binary file to your server.
 
@@ -19,23 +20,29 @@ In this guide we use the **curl** command to download files. Most Linux distribu
 
 ## Install Astra
 
-Open your server console and download binary file:
+<Steps>
 
-```sh
-curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
-```
+1. **Open your server console and download binary file**
 
-Set execute permission:
+    ```sh
+    curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
+    ```
 
-```sh
-chmod +x /usr/bin/astra
-```
+2. **Set execute permission**
 
-Installation completed, now you may check version number:
+    ```sh
+    chmod +x /usr/bin/astra
+    ```
 
-```sh
-astra -v
-```
+3. **Installation completed**
+
+    You can check the installed version of Astra by running:
+
+    ```sh
+    astra -v
+    ```
+
+</Steps>
 
 ## Get License
 
