@@ -31,8 +31,8 @@ In the output - we will see the numbers of modulators:
 /dev/tbsmod0/mod0
 ```
 
-- `tbsmod0` - adapter number
-- `mod1` - device number
+- `tbsmod0`: adapter number
+- `mod1`: device number
 
 ## Astra settings
 
@@ -48,8 +48,8 @@ Read more in: [Cable Television with Astra for Hospitality Industry](/en/astra/u
 
 Additional options could be added to the output address:
 
-- `bitrate=N` - default value depends on symbolrate and modulation type. For example for symbolrate 6900 and 256-QAM value will be 55
-- `gain=N` - signal level in range from 0 to 100. Default value: 60
+- `bitrate=N`: default value depends on symbolrate and modulation type. For example for symbolrate 6900 and 256-QAM value will be 55
+- `gain=N`: signal level in range from 0 to 100. Default value: 60
 
 ## Troubleshooting
 

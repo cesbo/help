@@ -34,8 +34,8 @@ The output will display a list of devices in the system:
 /dev/dvb/adapter0/mod1
 ```
 
-- `adapter0` - adapter number
-- `mod1` - device (modulator) number
+- `adapter0`: adapter number
+- `mod1`: device (modulator) number
 
 ## Astra settings
 
@@ -49,9 +49,9 @@ Read more in: [Cable Television with Astra for Hospitality Industry](/en/astra/u
 
 ### Additional options
 
-- `gain=N` - signal level in range from 0 to 100
-- `buffer_size=N` - buffer size in megabytes. Default: `256`
-- `legacy` - compatibility mode with old RESI modulator for 10 transpodners
+- `gain=N`: signal level in range from 0 to 100
+- `buffer_size=N`: buffer size in megabytes. Default: `256`
+- `legacy`: compatibility mode with old RESI modulator for 10 transpodners
 
 ## Troubleshooting
 

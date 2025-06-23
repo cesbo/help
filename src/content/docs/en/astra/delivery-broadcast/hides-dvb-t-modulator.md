@@ -1,6 +1,5 @@
 ---
-title: HiDes DVB-T modulator
-date: 2023-06-23
+title: HiDes DVB-T Modulator
 sidebar:
     order: 7
 ---
@@ -36,7 +35,7 @@ In the output of the command, we will get the numbers of the modulators:
 /dev/usb-it950x0
 ```
 
-`it950x1` - where 1 is the modulator number
+- `it950x1`: where 1 is the modulator number
 
 ## Astra settings
 
@@ -50,5 +49,5 @@ In the output setting, specify the type it950x and adapter number: `it950x://#ad
 
 Additional options could be added to the output address:
 
-- `gain=N` - signal level in range from 0 to 100
-- `fec=1/2` - :badge[Astra 2023.08.16] FEC coding ratio. Values: `1/2`, `2/3`, `3/4`, `5/6`, `7/8`, `none`
+- `gain=N`: signal level in range from 0 to 100
+- `fec=1/2`: FEC coding ratio. Values: `1/2`, `2/3`, `3/4`, `5/6`, `7/8`, `none`

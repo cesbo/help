@@ -4,11 +4,11 @@ sidebar:
     order: 24
 ---
 
-The Advanced tab contains special, advanced options for configuring MPTS
+The Advanced tab contains specialized MPTS settings. These options are typically used for troubleshooting or integration with external systems. Most users can leave these settings at their default values.
 
 ![Advanced Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/advanced.png)
 
-- `Disable PID's auto-remap`: Disable automatic redefinition of PID numbers in MPTS
-- `SI packets interval`: this is the interval for sending stream data. The default value is 500 milliseconds. This value does not need to be changed
-- `Pass NIT/SDT/EIT/TDT`: disables Astra processing of these tables. For example, tables are prepared by an external generator
-- `PAT/NIT/CAT/SDT version`: table version number. The number is incremented each time the mpts settings are updated. When the dvb receiver finds a change in the table number, it immediately re-reads it. There is no need to change the values manually
+- `Disable PID's auto-remap`: Prevents Astra from automatically reassigning PID numbers. Use when you need to preserve original PID values from source streams
+- `SI packets interval`: How often service information is transmitted (default: 500ms). Only change if required by specific equipment
+- `Pass NIT/SDT/EIT/TDT`: Skips table processing and passes original tables from source. Enable when using external EPG generators or pre-configured tables
+- `PAT/NIT/CAT/SDT version`: Custom version numbers for service tables. By default Astra automatically increments version when settings change to trigger updates on devices. Manual changes are rarely needed
