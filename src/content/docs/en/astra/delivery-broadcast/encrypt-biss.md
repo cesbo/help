@@ -1,7 +1,7 @@
 ---
-title: How to encrypt streams with BISS CAS
+title: BISS
 sidebar:
-    order: 6
+    order: 11
 ---
 
 BISS is a basic conditional access system with a static key to protect content from unauthorized access.

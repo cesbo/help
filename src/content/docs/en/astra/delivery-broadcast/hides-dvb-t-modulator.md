@@ -1,7 +1,7 @@
 ---
 title: HiDes DVB-T Modulator
 sidebar:
-    order: 7
+    order: 3
 ---
 
 PT100 is a DVB-T modulator for 4 frequencies by HiDes

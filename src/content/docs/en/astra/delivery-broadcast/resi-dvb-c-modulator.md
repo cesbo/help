@@ -1,7 +1,7 @@
 ---
 title: DigitalDevices RESI DVB-C Modulator
 sidebar:
-    order: 8
+    order: 1
 ---
 
 The RESI, a DVB-C modulator by Digital Devices, outputs a DVB-C compatible data stream into an existing 75-ohm coaxial cabling.

@@ -1,7 +1,7 @@
 ---
 title: "Limitations of HLS for Broadcasting"
 sidebar:
-    order: 4
+    order: 12
 ---
 
 When you send HLS streams to broadcasting networks like satellite, cable, or terrestrial TV, you might see problems like pixelated video, audio drift, or clicking sounds. The same streams work fine on computers. This happens because HLS and broadcasting networks handle video data differently.
@@ -43,6 +43,6 @@ Bitrate spikes also cause problems with UDP broadcasting. Set-top boxes and TVs 
 
 Astra has no built-in transcoding capabilities. You need to transcode the stream using external tools like FFmpeg. Try these settings:
 
-- **Reduce GOP size** - Use around 30 frames for better motion quality and smaller bitrate spikes
-- **Enable interlacing** - Provides smoother motion, especially for broadcasting
-- **Use CBR (Constant Bitrate)** - This fills bitrate gaps with null packets to achieve a constant rate
+- **Reduce GOP size**: Use around 30 frames for better motion quality and smaller bitrate spikes
+- **Enable interlacing**: Provides smoother motion, especially for broadcasting
+- **Use CBR (Constant Bitrate)**: This fills bitrate gaps with null packets to achieve a constant rate

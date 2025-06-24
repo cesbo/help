@@ -1,8 +1,7 @@
 ---
 title: TBS6004 DVB-C modulator
-date: 2023-06-23
 sidebar:
-    order: 9
+    order: 2
 ---
 
 TBS6004 is a DVB-C 4 QAM modulator PCIe card.
