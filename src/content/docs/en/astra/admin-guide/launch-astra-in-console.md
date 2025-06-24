@@ -1,6 +1,5 @@
 ---
 title: Launch Astra in console
-date: 2023-02-21
 sidebar:
     order: 8
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Limitations of HLS for Broadcasting"
+title: "HLS for Broadcasting"
 sidebar:
     order: 12
 ---

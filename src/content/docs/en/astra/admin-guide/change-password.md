@@ -1,6 +1,5 @@
 ---
-title: "Change password to Astra Web Interface"
-date: 2023-02-22
+title: Change password to Astra Web Interface
 sidebar:
     order: 5
 ---

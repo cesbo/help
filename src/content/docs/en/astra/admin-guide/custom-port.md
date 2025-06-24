@@ -1,6 +1,5 @@
 ---
-title: "Custom port for Astra Web Interface"
-date: 2023-02-21
+title: Custom port for Astra Web Interface
 sidebar:
     order: 7
 ---

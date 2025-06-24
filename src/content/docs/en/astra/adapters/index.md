@@ -23,7 +23,7 @@ We recommend DVB adapters by:
 - [TBS](https://www.tbsdtv.com)
 - [Digital Devices](https://www.digital-devices.eu)
 
-## Prepare you system
+## Prepare your system
 
 Before you begin, make sure that the DVB Adapter is connected to your server and that the appropriate Linux driver is installed:
 

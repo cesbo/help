@@ -1,6 +1,5 @@
 ---
-title: "Fault-tolerant configuration"
-date: 2023-08-08
+title: Fault-tolerant configuration
 sidebar:
     order: 9
 ---
