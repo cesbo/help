@@ -1,0 +1,12 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "search.exclude": {
+        "**/.astro": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/package-lock.json": true
+    }
+}
