@@ -5,16 +5,16 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components'
 
-Download single binary file to your server and start service in few simple steps.
+Download a single binary file to your server and start the service in a few simple steps.
 
 ## Requirements
 
-- Any Linux-based operation system. We recommend using Fedora 42.
+- Any Linux-based operating system. We recommend using Fedora 42.
 - x86 64bit CPU
-- Connection to the internet on your server for periodic license validation on the servers: `ls1.cesbo.com`, `ls2.cesbo.com`, and `ls3.cesbo.com`
+- Internet connection for periodic license validation (connects to `ls4.cesbo.com`)
 
 :::note
-In this guide we use the **curl** command to download files. Most Linux distribution has pre-installed **curl**
+This guide uses the **curl** command to download files. Most Linux distributions have **curl** pre-installed.
 :::
 
 ## Install Alta
@@ -45,7 +45,7 @@ In this guide we use the **curl** command to download files. Most Linux distribu
 
 ## Start service
 
-Initialization wizard prepares new service on your system. Each service has owns configuration file, management port, and unique name. Launch initialization wizard with next command:
+The initialization wizard prepares a new service on your system. Each service has its own configuration file, management port, and unique name. Launch the initialization wizard with this command:
 
 ```sh
 alta init
@@ -53,21 +53,19 @@ alta init
 
 :youtube[Cesbo Alta initialization wizard]{id="cnp3IsYHSZw"}
 
-- **Service name** - name of the service in the system;
-- **Config path** - full path to the configuration file. Wizard makes parent directories as needed;
-- **Admin login** - login for first administrator, after configuration you can create additional users in the web interface;
-- **Admin password** - password for administrator. If you specify own password then on the next step wizard asks for password confirmation. Please note that password is not showing in the console on typing;
-- **Management Port** - port for API and web interface. Could be defined with local interface address as well, for example `127.0.0.1:8100`;
-- **Add service to systemd** - service will be registered in the Systemd - a service manager for the Linux based systems. This option useful to control service status, check service logs, and launch service on system startup;
-- **Launch service on system startup** - this option available only with Systemd. Service will be launched automatically on system startup;
-- **Start service** - start service immediately after wizard.
+- **Service name**: Unique identifier for the service.
+- **Config path**: Full path to config file; directories created as needed.
+- **Admin login**: Username for first admin.
+- **Admin password**: Set and confirm password (not visible while typing).
+- **Management port**: API/Web UI port (e.g., `127.0.0.1:8100`).
+- **OTT Port**: OTT Streaming Port (e.g., `127.0.0.1:8200`)
+- **Add to systemd**: Registers the service for system management.
+- **Launch on startup**: Enable if added to systemd.
+- **Start service**: Launch immediately.
 
-On your server you may launch as many services as you want. Just use unique service name and management port. Read more:
-[How To Use Systemctl to Manage Alta Services](/en/alta/admin-guide/manage-services)
+You can run multiple services using unique service names and ports. Read more: [Manage Alta Services](/en/alta/admin-guide/manage-services)
 
-## Login to Web Interface
+## Access Web Interface
 
-Your service is ready to use. Now you may connect to the Cesbo Alta Web Interface using a web browser - Chrome, Safari, or Firefox. In example above we keep default port `8100` so interface address will be `http://server-address:8100` where server-address is a server IP or hostname.
-To log in to the web interface, use the default login `admin` and password which has been defined in wizard.
-
-Read next article about [Alta Web Interface](/en/alta/getting-started/web-interface)
+Your service is ready to use. Connect to the Web Interface using any web browser. If you kept the default port `8100`, the interface address will be `http://server-address:8100` where server-address is your server IP or hostname.
+To log in, use the username `admin` and the password you defined in the wizard.
