@@ -1,17 +1,17 @@
 ---
-title: Install
-date: 2023-03-10
+title: Installing Alta
 sidebar:
-    order: 1
+    order: 2
 ---
+import { Steps } from '@astrojs/starlight/components'
 
 Download single binary file to your server and start service in few simple steps.
 
 ## Requirements
 
-- Any Linux based operation system
+- Any Linux-based operation system. We recommend using Fedora 42.
 - x86 64bit CPU
-- Connection to the internet on your server
+- Connection to the internet on your server for periodic license validation on the servers: `ls1.cesbo.com`, `ls2.cesbo.com`, and `ls3.cesbo.com`
 
 :::note
 In this guide we use the **curl** command to download files. Most Linux distribution has pre-installed **curl**
@@ -19,25 +19,36 @@ In this guide we use the **curl** command to download files. Most Linux distribu
 
 ## Install Alta
 
-Download binary file and set execute permission. On the server you may use next command:
+<Steps>
 
-```sh
-curl -Lo /usr/bin/alta https://cesbo.com/alta-latest
-chmod +x /usr/bin/alta
-```
+1. **Open your server console and download binary file**
 
-Installation completed, now you may check version number:
+    ```sh
+    curl -Lo /usr/bin/alta https://cesbo.com/alta-latest
+    ```
 
-```sh
-alta version
-```
+2. **Set execute permission**
+
+    ```sh
+    chmod +x /usr/bin/alta
+    ```
+
+3. **Installation completed**
+
+    You can check the installed version of Alta by running:
+
+    ```sh
+    alta version
+    ```
+
+</Steps>
 
 ## Start service
 
 Initialization wizard prepares new service on your system. Each service has owns configuration file, management port, and unique name. Launch initialization wizard with next command:
 
 ```sh
-sudo alta init
+alta init
 ```
 
 :youtube[Cesbo Alta initialization wizard]{id="cnp3IsYHSZw"}
