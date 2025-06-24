@@ -20,9 +20,9 @@ To configure CBR in Astra, you need to add the `cbr` parameter to your UDP outpu
 
 This will enable CBR with a target bitrate of 4000 Kbps. You can adjust the bitrate value according to your requirements.
 
-::note
+:::note
 CBR doesn't reduce bitrate. If your stream's bitrate exceeds the CBR limit, all excess packets will be dropped.
-::
+:::
 
 ## How to reduce bitrate
 

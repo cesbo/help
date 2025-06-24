@@ -6,9 +6,9 @@ sidebar:
 
 Alta is software for over-the-top (OTT) live and video on demand content deliver.
 
-::note
+:::note
 Alta is under active development. The documentation is being updated.
-::
+:::
 
 ## Is This for You?
 

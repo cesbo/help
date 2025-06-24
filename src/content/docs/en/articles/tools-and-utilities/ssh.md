@@ -60,9 +60,9 @@ Host example.com
 
 SSH keys are a more secure way of logging into an SSH server, compared to using passwords. They consist of a pair of keys: a public key and a private key. The public key is placed on the server you want to connect to, while the private key remains on your local machine.
 
-::alert
+:::caution
 Do not share your private keys!
-::
+:::
 
 ### Generating
 
@@ -108,9 +108,9 @@ Host example.com
     ForwardAgent yes
 ```
 
-::note
+:::note
 SSH Agent will be forwarded only in active SSH session, and the private key will not be copied to the remote server. SSH Agent forwarding is not recommended for untrusted servers.
-::
+:::
 
 ## SSH Proxy Jump
 

@@ -6,9 +6,9 @@ sidebar:
 
 In the Astra interface, you can manage Stream configurations and control their status using HTTP API methods.
 
-::alert
+:::note
 Configurable parameters are similar to those used in the Astra interface configuration, you can read more on the relevant articles about configuring these parameters. Read more
-::
+:::
 
 ## Stream configuration
 
@@ -31,10 +31,6 @@ Configurable parameters are similar to those used in the Astra interface configu
 - other options depends of the stream configuration.
 
 ## Get Stream configuration
-
-::alert
-Version: 2021-04-12 or later
-::
 
 Request: `GET /api/stream-info/{id}`
 
@@ -70,7 +66,7 @@ Turn stream on/off. Request: `POST /control/`
 
 - `id` - unique stream identifier
 
-::spoiler{title="Example"}
+:::tip
 You may enable or disable stream by launching next command:
 
 ```sh
@@ -86,7 +82,7 @@ on successful Astra returns:
 ```json
 { "toggle-stream": "ok" }
 ```
-::
+:::
 
 ## Restart Stream
 
@@ -100,24 +96,6 @@ Request: `POST /control/`
 ```
 
 - `id` - unique stream identifier
-
-::spoiler{title="Example"}
-You may restart stream by launching next command:
-
-```sh
-curl \
-    -X POST \
-    -user login \
-    -d '{"cmd":"restart-stream", "id":"a001"}' \
-    http://server:8000/control/
-```
-
-on successful Astra returns:
-
-```json
-{ "restart-stream": "ok" }
-```
-::
 
 ## Switch active input
 
@@ -134,7 +112,7 @@ Choose active input. Works only for streams with next backup types: `passive` or
 - `id` - unique stream identifier
 - `input` – input number. Numbering starts from 1. If option not defined will be started next input after the active input
 
-::spoiler{title="Example"}
+:::tip
 You may switch stream input by launching next command:
 
 ```sh
@@ -150,7 +128,7 @@ on successful Astra returns:
 ```json
 { "set-stream-input": "ok" }
 ```
-::
+:::
 
 ## Delete Stream
 
@@ -169,10 +147,6 @@ Request: `POST /control/`
 - `id` - unique stream identifier
 
 ## Get Stream Status
-
-::alert
-Version: 2021-04-12 or later
-::
 
 Request: `GET /api/stream-status/{id}`
 
