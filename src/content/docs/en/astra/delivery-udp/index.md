@@ -33,7 +33,7 @@ Additional options can be defined after the `#` symbol and are separated by the 
 - `socket_size=bytes` - defines custom size of the system socket. If not specified, the default value is taken from the system configuration: `sysctl net.core.wmem_default`
 - `sync` - enables the transmission of UDP in a separate thread with bitrate syncing
 - `no_sync` - disable bitrate syncing if it has been enabled globally
-- `cbr=Kbps` - enables bitrate syncing and turns on the insertion of stuffing packets to achieve a constant bitrate
+- `cbr=Kbps` - enables bitrate syncing and constant bitrate. Read more on [Constant Bitrate (CBR)](/en/astra/delivery-udp/cbr/)
 - `ttl=n` - controls the lifetime of the datagram to prevent it from looping indefinitely due to routing errors. The default value is `32`
 - `sap` - turn on SAP. Read more on [Session Announcement Protocol for Multicast](/en/astra/delivery-udp/sap/)
 
