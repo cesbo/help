@@ -1,8 +1,7 @@
 ---
 title: Changelog
-noindex: true
 sidebar:
-    order: 5
+    order: 100
 ---
 
 ## 250603
