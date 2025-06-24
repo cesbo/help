@@ -1,13 +1,11 @@
 ---
 title: Backup
-date: 2023-02-24
+description: Create and restore backups of Alta binary and configuration files
 sidebar:
-    order: 3
+    order: 11
 ---
 
-:::tip
-Backups is an important part of system administration!
-:::
+Backups are an important part of system administration!
 
 ## Create
 
