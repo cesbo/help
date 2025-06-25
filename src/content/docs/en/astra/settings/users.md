@@ -16,7 +16,7 @@ In Astra, there are three main user roles, each with different levels of access 
 
 ## User List
 
-In the Astra web interface, you can access the users list by navigating to Settings->Users
+In the Astra web interface, you can access the users list by navigating to Settings → Users
 
 ![Users List](https://cdn.cesbo.com/help/astra/admin-guide/settings/users/users.png)
 
@@ -34,7 +34,7 @@ When built-in HTTP authentication to control media access is turned on, addition
 
 ## New User
 
-To create a new user, open the Users list by navigating to Settings -> Users. Click the "New User" button located at the top of the list.
+To create a new user, open the Users list by navigating to Settings → Users. Click the "New User" button located at the top of the list.
 
 ![New User](https://cdn.cesbo.com/help/astra/admin-guide/settings/users/new-user.png)
 
@@ -48,7 +48,7 @@ When creating a new user, you will need to fill in the following fields:
 
 ## Built-in HTTP Authentication
 
-Built-in HTTP authentication in Astra helps control access to the provided media content. You can enable this feature by navigating to Settings -> HTTP Authentication in the Astra web interface.
+Built-in HTTP authentication in Astra helps control access to the provided media content. You can enable this feature by navigating to Settings → HTTP Authentication in the Astra web interface.
 
 When HTTP Authentication is active, the user options include additional optional fields:
 
@@ -58,6 +58,6 @@ When HTTP Authentication is active, the user options include additional optional
 - `IP` - static IP address for the device that is allowed access. By default, any IP is allowed.
 - `Expiration` - date until which the user account remains active. By default, there is no time limit for the account.
 - `Limit connections` - number of simultaneous connections allowed for the user. By default, there are no connection limits.
-- `Packages` - click "New Package" to add a channel category to the user. The user will only have access to channels related to the specified category. New categories can be created in Settings->Groups. By default, all channels are available to the user.
+- `Packages` - click "New Package" to add a channel category to the user. The user will only have access to channels related to the specified category. New categories can be created in Settings → Groups. By default, all channels are available to the user.
 
 Read more about [Built-in Users Authentication](/en/astra/delivery-http/auth-user/) and other [HTTP Authentication options](/en/astra/delivery-http/auth/).

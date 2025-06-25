@@ -91,11 +91,11 @@ systemctl restart zabbix-agent
 
 Download the [Template](https://cdn.cesbo.com/astra/zabbix/zbx_astra.xml) to your computer and import this file to Zabbix:
 
-In Zabbix Web Interface open `Configuration` -> `Templates`, then click the `Import` button in the upper right corner. Click `Browse` and select the downloaded template file, then click `Import` button. After successful import, you will see a green message `Imported successfully`
+In Zabbix Web Interface open `Configuration` → `Templates`, then click the `Import` button in the upper right corner. Click `Browse` and select the downloaded template file, then click `Import` button. After successful import, you will see a green message `Imported successfully`
 
 ### Configure Template
 
-In Zabbix Web Interface open `Configuration` -> `Templates`, then select `Astra API monitoring` and open the Macros tab. Fill next values:
+In Zabbix Web Interface open `Configuration` → `Templates`, then select `Astra API monitoring` and open the Macros tab. Fill next values:
 
 - First line, set administrator password to Astra Web Interface
 - Second line, set administrator username to Astra Web Interface
@@ -105,7 +105,7 @@ Click `Update` button to apply changes
 
 ### Connect Zabbix to Astra
 
-In Zabbix Web Interface open Configuration -> Hosts, then click `Create host` in the top right corner. Fill following fields:
+In Zabbix Web Interface open Configuration → Hosts, then click `Create host` in the top right corner. Fill following fields:
 
 - `Hostname` - any name of the server where Astra is installed, for example: Astra
 - `Groups` - select `Cesbo_templates` or create a new group

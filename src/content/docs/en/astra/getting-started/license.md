@@ -90,4 +90,4 @@ Astra checks your license on startup by connecting to one of these servers:
 
 ### Message: "License expired!" after renewal
 
-If you renewed your license but Astra still shows "License expired!" in the web interface, restart Astra to update the license information: Settings -> Restart.
+If you renewed your license but Astra still shows "License expired!" in the web interface, restart Astra to update the license information: Settings → Restart.

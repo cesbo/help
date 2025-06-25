@@ -178,7 +178,7 @@ Response:
 ```
 
 - `timestamp` - report time, for `t=0` is a current time
-- `instance` - instance name if defined in the Settings -> General -> Instance Name
+- `instance` - instance name if defined in the Settings → General → Instance Name
 - `name` - stream name
 - `input_id` - active input identifier. for example if primary works fine will be 1. if stream switched to the backup input will be number of this input
 - `active` - `true` if stream is active, or `false` if stream work on demand and inactive

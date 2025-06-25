@@ -14,7 +14,7 @@ Astra specifically functions as the HLS segmenter. Other features such as transc
 
 ## HLS Segmenter Options
 
-In Astra Web Interface HLS options available in Settings -> HLS
+In Astra Web Interface HLS options available in Settings → HLS
 
 ![HLS Segmenter Options](https://cdn.cesbo.com/help/astra/delivery/http-hls/hls-segmenter/options.png)
 

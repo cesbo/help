@@ -29,7 +29,7 @@ Find out more information on official site: https://grafana.com/docs/grafana/lat
 
 ## Append data source
 
-Open Settings -> Data Sources and click "Append data source", choose InfluxDB and set next options:
+Open Settings → Data Sources and click "Append data source", choose InfluxDB and set next options:
 
 - Name: `Astra` or any other
 - Query language: `Flux`
@@ -44,7 +44,7 @@ Click `Save & Test`, you should see green notification: `Bucket found`
 ## Append dashboard
 
 1. Download our template for Grafana: [dashboard.json](https://cdn.cesbo.com/astra/grafana/dashboard.json)
-2. Open: Create -> Import
+2. Open: Create → Import
 3. Click `Upload JSON file`
 4. Choose downloaded file
 5. Set any name for dashboard

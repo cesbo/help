@@ -29,4 +29,4 @@ In the event of a failure, Astra switches to the next input and stops the previo
 
 In the event of a failure, Astra does nothing. This method is suitable for manually switching inputs using the Web Interface or API methods.
 
-Read more in [Stream API > Switch active input](/en/astra/api/stream/#switch-active-input)
+Read more in [Stream API → Switch active input](/en/astra/api/stream/#switch-active-input)

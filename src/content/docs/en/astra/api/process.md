@@ -37,7 +37,7 @@ Response:
 ```
 
 - `timestamp` - report time, for `t=0` is a current time
-- `instance` - instance name if defined in the Settings -> General -> Instance Name
+- `instance` - instance name if defined in the Settings → General → Instance Name
 - `la1` - load average for 1 minute multiplied by 100
 - `la5` - load average for 5 minutes multiplied by 100
 - `la15` - load average for 15 minutes multiplied by 100

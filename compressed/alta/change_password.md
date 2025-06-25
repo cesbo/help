@@ -1,6 +1,6 @@
 # Change Password to Alta Web Interface
 
-Password could be changed by administrator. 
+Password could be changed by administrator.
 
 ## Console Wizard
 

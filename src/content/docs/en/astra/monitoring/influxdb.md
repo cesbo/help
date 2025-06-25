@@ -41,7 +41,7 @@ Now, InfluxDB is configured and ready to receive data.
 
 ## Astra Configuration
 
-Open Settings -> General in the Astra Web Interface. Set options for InfluxDB configuration:
+Open Settings → General in the Astra Web Interface. Set options for InfluxDB configuration:
 
 - `Instance Name` - by the default is `astra` will be used as bucket in the InfluxDB
 - `InfluxDB Address` - address of the InfluxDB: `http://db-server:8086`

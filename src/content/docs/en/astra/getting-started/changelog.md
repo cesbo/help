@@ -33,7 +33,7 @@ sidebar:
 
 ### Web Interface
 
-- Links to m3u-playlists with different sources (HLS, HTTP MPEG-TS, UDP): Settings -> HTTP Play
+- Links to m3u-playlists with different sources (HLS, HTTP MPEG-TS, UDP): Settings → HTTP Play
 
 ## 241024
 
@@ -67,7 +67,7 @@ sidebar:
 - fix web reload on reconnect
 - fix servers deletion in the web interface
 - logout button
-- tabs for Settings -> General
+- tabs for Settings → General
 
 ### Internal changes
 
@@ -100,7 +100,7 @@ Virtual adapters is an option in the Adapter settings for easy setup streams:
 
 ### DVB Tuners & DVB Input
 
-- For multistandard adapters available option for manual frontend selection - `fe_device`. This can be found in the web interface: Adapter options -> Advanced -> FE Device
+- For multistandard adapters available option for manual frontend selection - `fe_device`. This can be found in the web interface: Adapter options → Advanced → FE Device
 - Scan DVB adapters before Astra start
 
 ### DigitalDevices RESI modulator
@@ -122,7 +122,7 @@ Output:
 - HTTP Backend authorization supports redirects
 - Check IP list in HTTP authorization before other methods
 - HLS Output sends empty TS file if file is not found (was 404 error, but some ffplay based players sends many requests trying to reload it)
-- Option Settings -> HLS -> Session Timeout to customize time when session should be closed on inactive
+- Option Settings → HLS → Session Timeout to customize time when session should be closed on inactive
 
 ### UDP
 
@@ -152,9 +152,9 @@ Output:
 
 - Icon
 - Web Interface from `als.cesbo.com` integrated into Astra binary file (`als.cesbo.com` not used anymore)
-- Option to set a custom path to the web interface. This can be found in Settings -> General -> Custom Path. For example, with the path `secret`, the interface will be available at `http://example.com:8000/secret/`
-- Option to modify port for the web interface. This can be found in Settings -> General -> Custom Port. This option customizes the port value defined in the `-p` option. Also supported local interface address, such as `127.0.0.1:8000` - the web will be available only on localhost
-- Option Settings -> HTTP Play -> Path to TV Screenshots - attach channel screenshots to the cards on dashboard
+- Option to set a custom path to the web interface. This can be found in Settings → General → Custom Path. For example, with the path `secret`, the interface will be available at `http://example.com:8000/secret/`
+- Option to modify port for the web interface. This can be found in Settings → General → Custom Port. This option customizes the port value defined in the `-p` option. Also supported local interface address, such as `127.0.0.1:8000` - the web will be available only on localhost
+- Option Settings → HTTP Play → Path to TV Screenshots - attach channel screenshots to the cards on dashboard
 - Description for channel
 - Modal dialogs to configure stream and adapter settings
 

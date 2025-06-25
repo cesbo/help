@@ -6,7 +6,7 @@ sidebar:
 
 HTTP Play - is a convenient and efficient way to access all your channels with just one click. With HTTP Play, you can easily stream channels by their ID using either the HTTP MPEG-TS or HLS protocols. This feature simplifies the streaming process, providing seamless access to your channels and enhancing the overall user experience.
 
-By the default HTTP Play is disabled. To activate it open: Settings -> HTTP Play.
+By the default HTTP Play is disabled. To activate it open: Settings → HTTP Play.
 
 ![HTTP Play Options](https://cdn.cesbo.com/help/astra/delivery/http-hls/http-play/options.png)
 
@@ -21,7 +21,7 @@ HLS Protocol turns off starting streams on demand and channels will works perman
 - `Disable TLS on HTTP Play port` - this setting disables the use of HTTPS for this media playlist
 - `Path to TV logos` - the parameter is used to specify the path to the directory with logo files
 - `Custom name for playlist` - the parameter renames `playlist.m3u8` to an arbitrary name
-- `Playlist arrange` - this option allows to select a category for grouping channels. You may configure groups in the Settings -> Groups
+- `Playlist arrange` - this option allows to select a category for grouping channels. You may configure groups in the Settings → Groups
 - `playlist.m3u8` - this is a link to the channels playlist. You may use playlist on the mobile devices, computer, TV, or Set-top-Box. You may append authentication details to the playlist, for example `https://your-server/playlist.m3u8?token=xxx`. [Read more](/en/astra/delivery-http/playlist/)
 
 :::caution

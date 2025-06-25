@@ -10,7 +10,7 @@ IP Authorization compares the requests IP address with the predetermined list of
 
 ## Global IP list
 
-Global IP list available in Settings -> HTTP Auth
+Global IP list available in Settings → HTTP Auth
 
 ![Global IP list](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/ip-list.png)
 

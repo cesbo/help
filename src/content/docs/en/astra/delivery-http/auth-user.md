@@ -6,7 +6,7 @@ sidebar:
 
 The User Authorization method provide access to the content without any additional software.
 
-First off all make sure that HTTP Authorization is enbaled. Open `Settings` -> `HTTP Auth` and turn on option `Enable built-in HTTP/HLS authentication`.
+First off all make sure that HTTP Authorization is enbaled. Open `Settings` → `HTTP Auth` and turn on option `Enable built-in HTTP/HLS authentication`.
 
 ## Password authorization
 
@@ -24,7 +24,7 @@ https://example.com:8000/channel-path/index.m3u8?auth=login:password
 
 ## Token authorization
 
-Token authorization is more preferable method than password authorization. Unique token could be defined in Settings -> Users, open user options:
+Token authorization is more preferable method than password authorization. Unique token could be defined in Settings → Users, open user options:
 
 ![User Options](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/user.png)
 

@@ -19,4 +19,4 @@ In the Output address append `sap` option to turn the SAP announcements on.
 
 ## Receiving SAP with VLC
 
-Open VLC Media Player and in the Playlist select Local Network -> Network streams (SAP). VLC receives SAP announcements and list all available streams. Double click on the stream to start playing.
+Open VLC Media Player and in the Playlist select Local Network → Network streams (SAP). VLC receives SAP announcements and list all available streams. Double click on the stream to start playing.

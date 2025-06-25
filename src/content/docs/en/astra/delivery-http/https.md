@@ -11,7 +11,7 @@ TLS certificate is required to enable HTTPS for the Astra web interface and medi
 
 You can obtain a TLS certificate with [Dehydrated](/en/articles/tools-and-utilities/dehydrated) for free.
 
-In the Astra web interface, navigate to `Settings` -> `General` -> `HTTP Server` and set paths to the certificate and private key files.
+In the Astra web interface, navigate to `Settings` → `General` → `HTTP Server` and set paths to the certificate and private key files.
 
 ![TLS certificate](https://cdn.cesbo.com/help/astra/delivery/http-hls/https/tls-certificate.png)
 
@@ -19,7 +19,7 @@ The option `Disable TLS for primary port` allows you to disable HTTPS for web in
 
 ## HTTP Play
 
-Once you turn on HTTPS, it will be enabled for the HTTP Play as well. To disable HTTPS for HTTP Play, you can use the option `Disable TLS on HTTP Play port` in the `Settings` -> `HTTP Play`.
+Once you turn on HTTPS, it will be enabled for the HTTP Play as well. To disable HTTPS for HTTP Play, you can use the option `Disable TLS on HTTP Play port` in the `Settings` → `HTTP Play`.
 
 ![HTTP Play Options](https://cdn.cesbo.com/help/astra/delivery/http-hls/https/http-play.png)
 

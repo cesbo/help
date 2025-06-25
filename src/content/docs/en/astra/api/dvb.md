@@ -119,7 +119,7 @@ Response:
 ```
 
 - `timestamp` - report time, for `t=0` is a current time;
-- `instance` - instance name if defined in the Settings -> General -> Instance Name;
+- `instance` - instance name if defined in the Settings → General → Instance Name;
 - `name` - stream name;
 - `lock` - `true` if tuner has lock and able to receive data;
 - `signal` - approximate signal level in percent;

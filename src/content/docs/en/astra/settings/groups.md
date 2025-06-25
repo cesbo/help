@@ -6,7 +6,7 @@ sidebar:
 
 Channel Grouping in Astra helps you organize and manage your media content. By using categories and groups, you can make channel packages to fit each customer's subscription plan. Also, it makes arranging channels on your dashboard easier for better management.
 
-To access and configure group settings, navigate to Settings -> Groups in your Astra Web Interface.
+To access and configure group settings, navigate to Settings → Groups in your Astra Web Interface.
 
 ## Categories
 

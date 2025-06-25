@@ -34,7 +34,7 @@ Where:
 
 ## Channel Groups
 
-For better navigation channels in playlist could be grouped. To do that create new category in the Settings -> Groups. Read more how to create [Channel Groups](/en/astra/settings/groups/).
+For better navigation channels in playlist could be grouped. To do that create new category in the Settings → Groups. Read more how to create [Channel Groups](/en/astra/settings/groups/).
 
 Then select created category in the `HTTP Play` settings, option `Playlist Arrange`.
 
@@ -59,7 +59,7 @@ unzip it999_transparent_logo.zip
 rm it999_transparent_logo.zip
 ```
 
-In the Settings -> `HTTP Play` -> `Path to TV logos`, set the path as `/var/lib/astra/it999_transparent_220x132`. Please, note the directory name is for example above.
+In the Settings → `HTTP Play` → `Path to TV logos`, set the path as `/var/lib/astra/it999_transparent_220x132`. Please, note the directory name is for example above.
 
 The provided archive includes logos in PNG format, with filenames matching the channel names. With these steps completed, the playlist will now include the `tvg-logo` option for each channel.
 
@@ -67,7 +67,7 @@ The provided archive includes logos in PNG format, with filenames matching the c
 
 Some players and middleware solutions display current and upcoming events for channels. The Electronic Program Guide (EPG) can be exported to the player in XMLTV or any other format supported by the player.
 
-In the Astra Settings -> `HTTP Play` -> `M3U Header`, set option
+In the Astra Settings → `HTTP Play` → `M3U Header`, set option
 
 ```
 url-tvg="https://teleguide.info/download/new3/xmltv.xml.gz"

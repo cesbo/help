@@ -8,7 +8,7 @@ HTTP Access Logs is an information about processed requests by the buil-in Astra
 
 ## Configuration
 
-HTTP Access Logs disabled by default, you may turn it on in the Settings -> General, set full path to the log file in the "HTTP Access Log" field. For example: `/var/log/astra-access.log`
+HTTP Access Logs disabled by default, you may turn it on in the Settings → General, set full path to the log file in the "HTTP Access Log" field. For example: `/var/log/astra-access.log`
 
 ## Log Fields
 

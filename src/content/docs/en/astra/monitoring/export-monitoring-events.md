@@ -1,6 +1,5 @@
 ---
-title: "Export Monitoring Events"
-date: 2023-03-01
+title: Export Monitoring Events
 sidebar:
     order: 1
 ---
@@ -9,7 +8,7 @@ Astra allows you to export monitoring events with the status of incoming streams
 
 ## Monitoring URL
 
-The address of the monitoring server can be specified in the web interface: Settings -> General -> Monitoring:
+The address of the monitoring server can be specified in the web interface: Settings → General → Monitoring:
 
 ![Monitoring Options](https://cdn.cesbo.com/help/astra/monitoring/export/export-monitoring-events/options.png)
 
