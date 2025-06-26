@@ -8,7 +8,7 @@ sidebar:
 If Alta is not needed anymore you can remove it completely from your server.
 
 :::caution
-Before uninstall please [Make a Backup](/en/alta/admin-guide/backup)!
+Before uninstall please [Make a Backup](/en/alta/getting-started/backup/)!
 :::
 
 ## Remove service
