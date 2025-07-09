@@ -138,15 +138,16 @@ Recommended DVB Modulators and CI interfaces:
     - DD Octopus Twin CI - 2 CI interfaces for channel descrambling
 - **TBS**
     - TBS6004 DVB-C 4 QAM PCIe Card
+    - TBS6104 DVB-T Quad Modulator Card
     - TBS6900 - 2 CI interfaces for channel descrambling
 
-### NOT Recommended DVB Adapters
+### NOT Recommended DVB Modulators
 
 - **DigitalDevices**
     - Digital Devices RESI SDR Modulator - DVB-T/ISDB-T (not supported. unpredictable behavior)
     - Digital Devices RESI SDR Modulator - PAL Modulator (not supported)
 - **TBS**
-    - TBS6104 DVB-T Quad Modulator Card - (unpredictable behavior)
+    - TBS6032 16 QAM DVB-C Modulator - (unpredictable behavior)
 
 ### NOT Recommended DVB Adapters
 
