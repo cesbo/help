@@ -1,51 +1,50 @@
-# HLS Streaming Parameters: Core Configuration
+## HLS Streaming Parameters: Core Configuration
 
-## Parameters
+### Parameters
 
-| Parameter                  | Description                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| **Media Access**           | Relative URL path for live HLS segments. Default: `media`                                  |
-| **Vod Access**             | Path prefix for VOD assets. Default: `vod`                                                 |
-| **Index**                  | Main HLS playlist filename (e.g., `index.m3u8`)                                            |
-| **Segment Duration**       | Segment length in seconds (**2–30**). Lower = lower latency, higher = fewer requests       |
-| **Segment Playlist Count** | Number of segments in playlist window (**3–15**). Higher = more buffer/resilience          |
-| **Maximum Pause Duration** | Time (in minutes) to retain segments for paused sessions. Min: **5 min**, Default: **30 min** |
+| Parameter                  | Description                                                                                                        |      Default | Range   |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------ | -----------: | ------- |
+| **Media Access**           | Relative URL path for live HLS segments (e.g., `/media.m3u8`).                                                          |      `media` | —       |
+| **Vod Access**             | Path prefix for VOD assets (e.g., `/vod.m3u8`).                                                                         |        `vod` | —       |
+| **Index Filename**         | Main playlist filename for both live and VOD (e.g., `index.m3u8`).                                                 | `index` | —       |
+| **Segment Duration**       | Length of each HLS segment in seconds. Lower values reduce latency; higher values reduce HTTP overhead.            |          `4` | 2–30 s  |
+| **Segment Playlist Count** | Number of segments retained in the rolling playlist window. Affects buffer size and resilience.                    |          `8` | 3–15    |
+| **Maximum Pause Duration** | Time to retain segments for paused sessions (DVR). Expressed in minutes; conversion to seconds applied internally. |     `30 min` | ≥ 5 min |
 
-## Configuration Details
+### Session Timeout Calculation
 
-- **Media/VOD Access**: Set URL paths for segment access. Use consistent naming for server/CDN integration.
-- **Index File**: Root playlist for HLS clients (e.g., `index.m3u8`).
-- **Segment Duration**: Lower values (e.g., 2s) reduce latency; higher values increase latency but reduce HTTP load.
-- **Segment Playlist Count**: Determines rolling window size. Example: 2s duration × 8 segments = 16s window.
-- **Maximum Pause Duration**: Controls how long paused content remains accessible before removal. Used for DVR/live pause.
+* **Without channel storage**
 
-## Session Timeout Calculation for Channels
+  ```
+  Session Timeout = Segment Duration (s) × Segment Playlist Count
+  # e.g. 4s × 8 = 32s
+  ```
 
-- **Without active Storage**:  
-  `Session Timeout = Segment Duration × Segment Playlist Count`  
-  Example: 2s × 8 = 16s
+* **With channel storage**
+  Let **Storage Duration** be the configured retention (in minutes).
 
-- **With Active Storage**:  
-  If the value in `Maximum Pause Duration` is less than or equal to the storage duration for the channel:  
-  `Session Timeout = Maximum Pause Duration (min)`  
-  Example: 20 min
-  
-  If the value in `Maximum Pause Duration` is greater than the storage duration for the channel:  
-  `Session Timeout = Storage Duration + (Segment Duration × Segment Playlist Count)`  
-  Example: 10 min (storage) + (2s × 8)
+  * If *Maximum Pause Duration* ≤ *Storage Duration*:
 
-- **Minimum value for `Maximum Pause Duration`**: 5 min  
-- **Default value `Maximum Pause Duration`**: 30 min
+    ```
+    Session Timeout = Maximum Pause Duration (min)
+    ```
 
-## Example
+    *e.g.*, both 20 min ⇒ 20 min of retention
 
-- Segments: 2s each
-- Playlist: 8 segments (16s window)
-- Live: `/media/index.m3u8`
-- VOD: `/vod/index.m3u8`
-- Paused content accessible for up to 10 min (if set)
+  * If *Maximum Pause Duration* > *Storage Duration*:
 
-## Best Practices
+    ```
+    Session Timeout = Storage Duration (min) + (Segment Duration × Segment Playlist Count) (converted to minutes)
+    ```
 
-- **Live**: Use low `Segment Duration` and moderate `Playlist Count` for low latency and stability.
-- **VOD**: Use longer segments for better caching and reduced overhead.
+    *e.g.*, 120 min storage + (4s × 8 = 32 s ≈ 0.5 min) ⇒ \~120.5 min
+
+
+### Best Practices
+
+* **Live streaming**:
+
+  * Use *lower* segment duration (2–6 s) and *moderate* playlist count (6–10) for minimal latency and smooth playback.
+* **VOD streaming**:
+
+  * Use *higher* segment duration (10–30 s) and larger playlist count for efficient caching and reduced request overhead.
