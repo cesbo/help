@@ -26,11 +26,16 @@
   Example: 2s × 8 = 16s
 
 - **With Active Storage**:  
-  `Session Timeout = Maximum Pause Duration (min) + (Segment Duration × Segment Playlist Count)`  
-  Example: 20 min + (2s × 8)
+  If the value in `Maximum Pause Duration` is less than or equal to the storage duration for the channel:  
+  `Session Timeout = Maximum Pause Duration (min)`  
+  Example: 20 min
+  
+  If the value in `Maximum Pause Duration` is greater than the storage duration for the channel:  
+  `Session Timeout = Storage Duration + (Segment Duration × Segment Playlist Count)`  
+  Example: 10 min (storage) + (2s × 8)
 
-- **Minimum Maximum Pause Duration**: 5 min  
-- **Default Maximum Pause Duration**: 30 min
+- **Minimum value for `Maximum Pause Duration`**: 5 min  
+- **Default value `Maximum Pause Duration`**: 30 min
 
 ## Example
 
