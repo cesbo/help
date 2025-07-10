@@ -28,3 +28,8 @@ Each channel and variant has its own directory structure for easy management.
     - For channels running continuously, the archive may retain the full intended duration (e.g., 24 hours) if space permits.
     - For newly started channels, only the most recent data up to the threshold may be retained (e.g., 10 hours).
   - If free disk space increases, the archive size for each channel can expand accordingly.
+
+**Notes:**
+- This solution increases system resilience:
+  - There is no need to stop recording.
+  - Prevents errors caused by disk exhaustion.
