@@ -63,8 +63,8 @@ or with optional parameters:
 **Examples**:
 
 ```text
-# 30s clip from 100s ago
-/discovery/vod.m3u8?start=-100&duration=30
+# 30s clip from 100s ago for SD variant
+/discovery/sd/vod.m3u8?start=-100&duration=30
 
 # 30s clip from timestamp using variant
 /discovery/hd/vod.m3u8?start=1747485787&duration=30
