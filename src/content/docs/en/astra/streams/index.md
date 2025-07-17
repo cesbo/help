@@ -11,9 +11,9 @@ Streams in Astra represents an individual channel or media flow that receives co
 To create a new stream:
 
 1. Go to the main Dashboard
-2. Click `New Stream` in the upper right corner
+2. Click "New Stream" in the upper right corner
 
-A dialog opens where you choose between Single Program Stream (SPTS) or Multi Program Stream (MPTS).
+A dialog opens where you choose between SPTS (Single Program Stream) or MPTS (Multi Program Stream).
 
 ## General Options
 
@@ -21,11 +21,11 @@ Configure basic stream settings that control how your stream behaves and appears
 
 ![General Options](https://cdn.cesbo.com/help/astra/admin-guide/stream/general.png)
 
-- `Enable` - new stream is enabled by default, but can be turned off if needed
-- `Name` - friendly channel name used in dashboards and logs
-- `ID` - unique stream identifier. Keep it empty to assign a sequential number to new channels or you may define your own
-- `Create Multi Program Stream` - switch to MPTS configuration
-- `Description` - arbitrary channel description
+- `Enable`: new stream is enabled by default, but can be turned off if needed
+- `Name`: friendly channel name used in dashboards and logs
+- `ID`: unique stream identifier. Keep it empty to assign a sequential number to new channels or you may define your own
+- `Create Multi Program Stream`: switch to MPTS configuration
+- `Description`: arbitrary channel description
 
 ### Input List
 
@@ -52,7 +52,7 @@ Read more information in our guides for protocol specific configuration:
 
 ## Single Program Stream
 
-Single Program Stream (SPTS) is the default stream type for creating individual TV channels. Think of it as one channel carrying one program - like CNN or ESPN.
+SPTS (Single Program Stream) is the default stream type for creating individual TV channels. Think of it as one channel carrying one program - like CNN or ESPN.
 
 SPTS automatically switches between multiple inputs if one fails. For example, if you have two satellite feeds for the same channel, SPTS monitors both and switches to the backup feed when problems occur.
 
@@ -65,7 +65,7 @@ You can also process the stream by:
 
 ## Multi Program Stream
 
-Multi Program Stream (MPTS) combines multiple channels into one broadcast stream. Think of it like a cable TV package - instead of sending channels separately, you bundle them together for broadcasting.
+MPTS (Multi Program Stream) combines multiple channels into one broadcast stream. Think of it like a cable TV package - instead of sending channels separately, you bundle them together for broadcasting.
 
 For example, if you have 10 different TV channels, MPTS packages them all into one stream that cable or satellite providers can broadcast to viewers.
 

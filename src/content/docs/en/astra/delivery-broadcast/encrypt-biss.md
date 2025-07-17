@@ -14,8 +14,8 @@ BISS has weak protection and can be broken with brute force attacks. Use it only
 
 BISS keys are 16 hexadecimal characters long. You can use either format:
 
-- **Full key with checksums**: `1234569C789ABCCE` (16 characters)
-- **Simplified key**: `12345600789ABC00` (Astra calculates checksums automatically)
+- Full key with checksums: `1234569C789ABCCE` (16 characters)
+- Simplified key: `12345600789ABC00` (Astra calculates checksums automatically)
 
 We recommend using the simplified format to avoid checksum calculation errors.
 

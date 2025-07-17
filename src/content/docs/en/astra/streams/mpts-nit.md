@@ -37,9 +37,9 @@ When a TV or set-top box finds frequency 378 MHz with `mpts_1`, it gets the NIT 
 
 Astra uses NIT settings to automatically configure DigitalDevices and TBS modulators defined in the MPTS Output List. When you set up NIT parameters in your MPTS stream, Astra applies these settings directly to the modulator hardware:
 
-- **Frequency**: Configures the RF output frequency on the modulator
-- **Symbolrate**: Sets the symbol rate for the modulated signal
-- **Modulation**: Applies the modulation scheme (QPSK, QAM16, QAM64, etc.)
-- **FEC**: Configures Forward Error Correction on the hardware
+- `Frequency`: Configures the RF output frequency on the modulator
+- `Symbolrate`: Sets the symbol rate for the modulated signal
+- `Modulation`: Applies the modulation scheme (QPSK, QAM16, QAM64, etc.)
+- `FEC`: Configures Forward Error Correction on the hardware
 
 This integration eliminates the need for separate modulator configuration, as Astra synchronizes your stream settings with the hardware automatically.

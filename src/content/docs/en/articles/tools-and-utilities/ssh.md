@@ -10,15 +10,15 @@ SSH - is the primary protocol and tool for the remote servers management. Also a
 
 ### OpenSSH Server
 
-- **sshd** (OpenSSH Daemon): A server-side daemon that listens for incoming SSH connections. Authenticates users and establishes secure sessions.
-- **sftp-server** (SFTP server subsystem): A program for file transfers using the SFTP protocol, usually invoked automatically by the sshd daemon.
+- `sshd` (OpenSSH Daemon): A server-side daemon that listens for incoming SSH connections. Authenticates users and establishes secure sessions.
+- `sftp-server` (SFTP server subsystem): A program for file transfers using the SFTP protocol, usually invoked automatically by the sshd daemon.
 
 ### OpenSSH Client
 
-- **ssh** (SSH client): Logs into a remote server, provides virtual terminal, and executes commands.
-- **ssh-keygen**: Creates and manages authentication keys.
-- **scp**: Copies files between local and remote machines using an encrypted channel.
-- **sftp**: Transfers files over a secure channel, similar to FTP.
+- `ssh` (SSH client): Logs into a remote server, provides virtual terminal, and executes commands.
+- `ssh-keygen`: Creates and manages authentication keys.
+- `scp`: Copies files between local and remote machines using an encrypted channel.
+- `sftp`: Transfers files over a secure channel, similar to FTP.
 
 ## Connection to server
 
@@ -50,11 +50,11 @@ Host example.com
     IdentityFile ~/.ssh/server_ed25519
 ```
 
-- `Host` - server name. This is the name used in the connection command: `ssh example.com`
-- `HostName` - an optional server address. If HostName is not defined, the proper address or host name should be defined in `Host`
-- `User` - username
-- `Port` - the server port. Default: `22`
-- `IdentityFile` - an optional field that specifies the full path to the private key file
+- `Host`: server name. This is the name used in the connection command: `ssh example.com`
+- `HostName`: an optional server address. If HostName is not defined, the proper address or host name should be defined in `Host`
+- `User`: username
+- `Port`: the server port. Default: `22`
+- `IdentityFile`: an optional field that specifies the full path to the private key file
 
 ## SSH Keys
 
