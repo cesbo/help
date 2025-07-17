@@ -1,0 +1,46 @@
+---
+title: HTTP Authorization
+data: 2023-06-19
+image: https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/og-image.png
+sidebar:
+    order: 20
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+El control de autorización HTTP determina quién puede acceder a tu contenido de video protegido. Asegura que solo los usuarios autorizados puedan ver tus transmisiones.
+
+![Auth HTTP](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/diagram.svg)
+
+## Flujo de trabajo de autorización
+
+Antes de configurar la autorización en Astra, necesitas entender cómo funciona el proceso.
+
+<Steps>
+
+1. **Obtener la lista de canales del Middleware**
+
+    ![Lista de canales de TV](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/step-1.svg)
+
+    El cliente envía sus credenciales de inicio de sesión a tu sistema de Middleware. Si las credenciales son válidas, el Middleware devuelve una lista de canales a los que el usuario puede acceder. Cada canal incluye un token único para la autorización posterior.
+
+2. **Solicitar canal a Astra**
+
+    ![Solicitar Canal](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/step-2.svg)
+
+    Cuando el usuario selecciona un canal, su reproductor de video envía una solicitud a Astra con el token único del Paso 1.
+
+3. **Astra autoriza la solicitud**
+
+    Astra verifica el token según el método de autorización configurado. Si el token es válido, Astra devuelve la transmisión del canal. Si no, responde con un error.
+
+</Steps>
+
+## Métodos de autorización
+
+- **[Autorización de Usuario](/en/astra/delivery-http/auth-user/)** - Utiliza login/contraseña o tokens almacenados en la configuración de usuarios de Astra
+- **[Autorización HTTP Backend](/en/astra/delivery-http/auth-backend/)** - Envía el token a tu Middleware para su verificación
+- **[Securetoken](/en/astra/delivery-http/auth-securetoken/)** - Valida tokens usando algoritmos criptográficos
+- **[Autorización por IP](/en/astra/delivery-http/auth-ip/)** - Verifica si la dirección IP del usuario está en tu lista de acceso
+
+Elige el método que mejor se adapte a tus necesidades de seguridad e infraestructura existente.

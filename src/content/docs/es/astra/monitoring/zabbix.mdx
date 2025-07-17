@@ -1,0 +1,123 @@
+---
+title: Integration Astra with Zabbix
+date: 2023-03-04
+sidebar:
+    order: 4
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+Zabbix es una plataforma de código abierto para monitorear servicios de red, servidores y aplicaciones. Se puede integrar con Astra para monitorear Streams y Adaptadores DVB.
+
+:::note
+Disponible para versiones de Astra lanzadas después del 2021-05-11
+:::
+
+## Instalación del servidor Zabbix
+
+Zabbix se puede instalar tanto en un servidor dedicado como en un servidor Astra.
+
+<Steps>
+
+1. Ve a https://zabbix.com
+
+1. Selecciona la versión de Zabbix
+
+1. Selecciona tu sistema operativo
+
+1. Sigue las instrucciones de instalación
+
+</Steps>
+
+Puedes encontrar información detallada en los [Manuales de Zabbix](https://www.zabbix.com/manuals)
+
+## Instalación del agente Zabbix
+
+Instala el agente Zabbix en el servidor con Astra.
+
+<Steps>
+
+1. Ve a https://www.zabbix.com/download_agents
+
+1. Selecciona tu sistema operativo
+
+1. Sigue las instrucciones de instalación
+
+</Steps>
+
+Puedes encontrar información detallada en los [Manuales del Agente Zabbix](https://www.zabbix.com/documentation/current/manual/concepts/agent)
+
+## Configuración del agente Zabbix
+
+Primero, el agente Zabbix debe estar configurado para permitir conexiones entrantes desde el servidor Zabbix. Abre el archivo de configuración del agente ubicado en `/etc/zabbix/zabbix_agentd.conf` con tu editor favorito.
+
+1. Busca la opción `Server=` y establece la dirección IP o el nombre de host del servidor con Zabbix Server;
+1. Busca la opción `UnsafeUserParameters=` o añade una nueva y establezca el valor a `1`.
+
+Guarda el archivo.
+
+El agente Zabbix recibe toda la información de Astra con scripts escritos en Python. Asegúrate de que en tu servidor esté instalado Python3:
+
+```sh
+sudo apt install python3 python3-pip
+```
+
+Para sistemas basados en RPM usa `yum` en lugar de `apt`. Luego instala la librería necesaria para Python:
+
+```sh
+pip3 install requests
+```
+
+Descarga los scripts para el agente Zabbix:
+
+```sh
+curl https://cdn.cesbo.com/astra/zabbix/agent.tar.gz | tar -zxC /opt
+```
+
+Los scripts se guardarán en el directorio `/opt/zabbix_agent`. Descarga el archivo de configuración para el servicio del agente Zabbix:
+
+```sh
+curl -o /etc/zabbix/zabbix_agentd.d/astra.conf https://cdn.cesbo.com/astra/zabbix/astra.conf
+```
+
+Y finalmente, reinicia el agente Zabbix:
+
+```sh
+systemctl restart zabbix-agent
+```
+
+## Configuración de Zabbix
+
+### Instalar la plantilla Zabbix para Astra
+
+Descarga la [Plantilla](https://cdn.cesbo.com/astra/zabbix/zbx_astra.xml) a tu computadora e importa este archivo en Zabbix:
+
+En la interfaz web de Zabbix, abre `Configuración` → `Plantillas`, luego haz clic en el botón `Importar` en la esquina superior derecha. Haz clic en `Browse` y selecciona el archivo de plantilla descargado, luego haz clic en el botón `Importar`. Después de una importación exitosa, verás un mensaje verde `Importado con éxito`.
+
+### Configurar la plantilla
+
+En la interfaz web de Zabbix abre `Configuración` → `Plantillas`, luego selecciona `Astra API monitoring` y abre la pestaña Macros. Rellena los siguientes valores:
+
+- Primera línea, establece la contraseña del administrador para la interfaz web de Astra
+- Segunda línea, establece el nombre de usuario del administrador para la interfaz web de Astra
+- La última línea, el puerto de la interfaz web de Astra. Si tienes múltiples procesos, especifica todos los puertos separados por comas. Por ejemplo: `8000,8001,8002`
+
+Haz clic en el botón `Actualizar` para aplicar los cambios.
+
+### Conectar Zabbix a Astra
+
+En la interfaz web de Zabbix abre Configuración → Hosts, luego haz clic en `Crear host` en la esquina superior derecha. Rellena los siguientes campos:
+
+- `Hostname` - cualquier nombre del servidor donde se instala Astra, por ejemplo: Astra
+- `Groups` - selecciona `Cesbo_templates` o crea un nuevo grupo
+- `Interfaces` - haz clic en añadir, selecciona `Agente` y especifica la dirección IP o el nombre de host del servidor con el agente Zabbix
+
+Abre la pestaña Plantillas y en el campo `Enlazar nuevas plantillas` añade `Astra API monitoring`. Además, si deseas controlar el estado general del sistema, añade también `Linux by Zabbix agent`.
+
+Guarda los cambios. Después de unos 10 minutos, verás gráficos y disparadores sobre el estado de los canales y adaptadores.
+
+## Ejemplos de gráficos
+
+![Canales en Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-channel.png)
+
+![DVB en Zabbix](https://cdn.cesbo.com/help/astra/monitoring/export/zabbix/zabbix-dvb.png)

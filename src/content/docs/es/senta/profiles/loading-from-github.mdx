@@ -1,0 +1,49 @@
+---
+title: Integration whith GitHub
+description: Downloading and uploading profile from GitHub
+sidebar:
+    order: 3
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+## Descargar perfil desde github
+
+Puedes cargar perfiles desde github. Primero, ve a la pestaña de perfil y haz clic en **Cargar nuevos perfiles desde github**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_load.png)Luego, haz clic en **Mostrar información**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_show_info.png)Puedes ver la información sobre el perfil, y si deseas agregarlo, haz clic en **Aceptar**
+
+![](https://cesbo.b-cdn.net/senta/help/streamer/Click_to_accept.png)
+
+## Subir perfil a github
+
+<Steps>
+
+1. **Realizar un fork del repositorio** : Ve a [https://github.com/cesbo/senta-streamer-profiles](https://github.com/cesbo/senta-streamer-profiles) y haz clic en el botón "Fork" en la esquina superior derecha de la página. Esto creará una copia del repositorio en tu cuenta de GitHub.
+
+1. **Clonar tu fork** : Abre tu terminal (o Git Bash en Windows) y ejecuta el comando `git clone https://github.com/tu_usuario/senta-streamer-profiles`, reemplazando "tu_usuario" con tu nombre de usuario de GitHub.
+
+1. **Crear una nueva rama** : Navega dentro del repositorio clonado usando el comando `cd senta-streamer-profiles`, luego crea una nueva rama usando `git checkout -b add_profile`, donde "add_profile" es el nombre de tu rama.
+
+1. **Agregar tu archivo** : Coloca tu archivo de perfil en el directorio /profiles dentro del repositorio clonado.
+
+1. **Agregar el archivo al área de preparación y confirmar** : Ejecuta los siguientes comandos en tu terminal:
+    ```bash [terminal]
+    git add profiles/nombre_de_tu_archivo
+    git commit -m "Added profile: %nombre_de_tu_archivo%"
+    ```
+    Reemplaza "nombre_de_tu_archivo" con el nombre de tu archivo.
+
+1. **Subir tus cambios a tu repositorio de GitHub** : Ejecuta el comando `git push origin add_profile`, donde "add_profile" es el nombre de tu rama.
+
+1. **Abrir un Pull Request (PR)** : Después de subir tus cambios, ve a la página de tu repositorio bifurcado en GitHub. Allí deberías ver un botón "Compare & pull request" para tu nueva rama. Haz clic en él.
+
+1. **Crear un Pull Request** : Revisa los cambios que deseas realizar, asegúrate de que todo esté correcto, y luego haz clic en el botón "Create pull request".
+
+1. **Esperar revisión y fusión** : Otros contribuyentes al proyecto pueden revisar tu Pull Request, dejar comentarios o solicitar cambios. Una vez que tu PR sea revisado y aprobado, uno de los mantenedores del proyecto fusionará tu rama en la rama principal.
+
+</Steps>
+
+¡Eso es todo! Tu archivo de perfil ahora debería estar agregado al repositorio público.

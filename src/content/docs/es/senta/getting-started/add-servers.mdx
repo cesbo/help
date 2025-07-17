@@ -1,0 +1,90 @@
+---
+title: Multiservers  
+description: General Information
+sidebar:
+    order: 7
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+```
+                  +-----------------------+             
+                  |     Servidor principal |
+                  |  +-----------------+  |
+                  |  | flujo M1        |  |
+                  |  +-----------------+  |
+                  |  | flujo M2        |  |
+                  |  +-----------------+  |
+                  |  |       ...       |  |
+                  |  +-----------------+  |
+                  |  | flujo MN        |  |
+                  |  +-----------------+  |
+                  |                       |
+                  +-----------------------+
+                     /                \
+    +-----------------------+      +-----------------------+
+    |    Servidor esclavo #K |      |    Servidor esclavo #L |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | flujo K1        |  |      |  | flujo L1        |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | flujo K2        |  |      |  | flujo L2        |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  |       ...       |  |      |  |       ...       |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |  | flujo KN        |  |      |  | flujo LN        |  |
+    |  +-----------------+  |      |  +-----------------+  |
+    |                       |      |                       |
+    +-----------------------+      +-----------------------+              
+```
+
+A partir de la versión del 16 de diciembre de 2024, Senta-Streamer admite una arquitectura de múltiples servidores. Esta función permite al servidor principal gestionar servidores dependientes (asignando flujos, iniciándolos y deteniéndolos). Esto habilita:
+
+- Escalar Senta-Streamer para manejar un mayor número de flujos
+- Construir sistemas de transcodificación distribuidos geográficamente
+- Simplificar la monitorización y gestión de múltiples servidores Senta-Streamer
+
+### Añadir un Servidor Adicional al Servidor Principal de Senta-Streamer
+
+**En el servidor remoto:**
+
+<Steps>
+
+1. Instala el binario de Senta-Streamer.
+
+1. Verifica la funcionalidad de la utilidad `ffmpeg`.
+
+1. Añade Senta-Streamer al inicio automático, similar a la configuración del servidor principal.
+
+1. Asegúrate de que Senta-Streamer esté en funcionamiento y listo para trabajar (puedes verificarlo a través de la interfaz web).
+
+1. Introduce la clave de [licencia](/en/senta/getting-started/add-license) en la configuración.
+
+1. Genera una [clave API](/en/senta/getting-started/api) (cópiala de *Configuración → Clave API*).
+
+</Steps>
+
+*Nota: No es necesario configurar flujos y perfiles, ya que serán gestionados automáticamente por el servidor principal.*
+
+**En el servidor principal:**
+
+<Steps>
+
+1. Ve a la sección **Servidores**.
+
+1. Haz clic en **Añadir Servidor**.
+
+1. En la ventana emergente, completa lo siguiente:
+   - **Nombre del Servidor** - Cualquier nombre conveniente para fines de visualización en la interfaz web y en logs. No afecta la gestión.
+   - **IP** - La dirección IP (o nombre de dominio) del servidor remoto. La API del servidor debe ser accesible en esta dirección.
+   - **Puerto** - Coincide con el puerto de la interfaz web del servidor remoto.
+   - **Clave API** - La clave API del servidor remoto.
+
+1. Tras guardar, el servidor debería aparecer en la tabla de servidores, mostrando su estado. Si el servidor principal se conecta con éxito a través de la API, el estado se mostrará como *en línea*.
+
+</Steps>
+
+### Gestión de Flujos
+
+Para asignar un flujo a un servidor remoto, ve a la configuración del flujo en el servidor principal y selecciona el servidor deseado bajo la opción **Servidor**. Al guardar la configuración del flujo, este se iniciará automáticamente en el servidor remoto.
+
+De manera similar, puedes cambiar los servidores para un flujo durante la operación (por ejemplo, al detener un servidor para mantenimiento).

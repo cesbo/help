@@ -1,0 +1,72 @@
+---
+title: Installing Alta
+sidebar:
+    order: 2
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+Descargue un único archivo binario a su servidor e inicie el servicio en unos pocos pasos sencillos.
+
+## Requisitos
+
+- Cualquier sistema operativo basado en Linux. Recomendamos usar Fedora 42.
+- CPU x86 de 64 bits
+- Conexión a Internet para la validación periódica de la licencia (se conecta a `ls4.cesbo.com`)
+
+:::note
+Esta guía utiliza el comando **curl** para descargar archivos. La mayoría de las distribuciones de Linux tienen **curl** preinstalado.
+:::
+
+## Instalar Alta
+
+<Steps>
+
+1. **Abra la consola de su servidor y descargue el archivo binario**
+
+    ```sh
+    curl -Lo /usr/bin/alta https://cesbo.com/alta-latest
+    ```
+
+2. **Establecer permisos de ejecución**
+
+    ```sh
+    chmod +x /usr/bin/alta
+    ```
+
+3. **Instalación completada**
+
+    Puede verificar la versión instalada de Alta ejecutando:
+
+    ```sh
+    alta version
+    ```
+
+</Steps>
+
+## Iniciar servicio
+
+El asistente de inicialización prepara un nuevo servicio en su sistema. Cada servicio tiene su propio archivo de configuración, puerto de gestión y nombre único. Inicie el asistente de inicialización con este comando:
+
+```sh
+alta init
+```
+
+:youtube[Asistente de inicialización de Cesbo Alta]{id="cnp3IsYHSZw"}
+
+- **Nombre del servicio**: Identificador único para el servicio.
+- **Ruta de configuración**: Ruta completa al archivo de configuración; los directorios se crean según sea necesario.
+- **Inicio de sesión del administrador**: Nombre de usuario para el primer administrador.
+- **Contraseña del administrador**: Establezca y confirme la contraseña (no visible mientras escribe).
+- **Puerto de gestión**: Puerto para la API/interfaz web (ej., `127.0.0.1:8100`).
+- **Puerto OTT**: Puerto de Streaming OTT (ej., `127.0.0.1:8200`)
+- **Agregar a systemd**: Registra el servicio para la gestión del sistema.
+- **Iniciar al arrancar**: Habilite si fue agregado a systemd.
+- **Iniciar servicio**: Iniciar inmediatamente.
+
+Puede ejecutar múltiples servicios usando nombres de servicio y puertos únicos. Lea más: [Administrar Servicios Alta](/en/alta/admin-guide/manage-services)
+
+## Acceder a la Interfaz Web
+
+Su servicio está listo para usar. Conéctese a la Interfaz Web utilizando cualquier navegador web. Si mantuvo el puerto predeterminado `8100`, la dirección de la interfaz será `http://server-address:8100` donde server-address es la IP de su servidor o el nombre de host.
+Para iniciar sesión, use el nombre de usuario `admin` y la contraseña que definió en el asistente.
