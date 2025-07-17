@@ -4,6 +4,32 @@ sidebar:
     order: 100
 ---
 
+## 250716
+
+[Download Alta-250716](https://cdn.cesbo.com/alta/builds/alta-250716)
+
+### Storage
+
+- Automatic switch to circular recording on low disk space
+- Fix issue with storage statistics in web interface
+- Emulate Flussonic to access the storage from third-party applications
+
+### Receivers
+
+- Stream from file in loop without interruptions
+- Fix crash on turning off the receiver
+
+### HLS
+
+- Configurable HLS segments duration and quantity
+- Configurable timeout to close paused sessions
+- Fix high memory usage on many active sessions
+
+### Interface and API
+
+- Better API to import channels and receivers
+- Fix issue with cards background on dark theme
+
 ## 250603
 
 [Download Alta-250603](https://cdn.cesbo.com/alta/builds/alta-250603)

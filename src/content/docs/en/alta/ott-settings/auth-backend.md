@@ -1,6 +1,5 @@
 ---
-title: HTTP Backend Authorization
-date: 2023-02-24
+title: "Auth: HTTP Backend"
 sidebar:
     order: 5
 ---
