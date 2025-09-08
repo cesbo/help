@@ -72,7 +72,7 @@ You may enable or disable stream by launching next command:
 ```sh
 curl \
     -X POST \
-    -user login \
+    --user login \
     -d '{"cmd":"toggle-stream", "id":"a001"}' \
     http://server:8000/control/
 ```
@@ -118,7 +118,7 @@ You may switch stream input by launching next command:
 ```sh
 curl \
     -X POST \
-    -user login \
+    --user login \
     -d '{"cmd":"set-stream-input", "id":"a001", "input": 2}' \
     http://server:8000/control/
 ```
