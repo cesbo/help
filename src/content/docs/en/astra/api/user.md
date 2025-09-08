@@ -74,7 +74,7 @@ Request: `POST /control/`
 You may create new user by launching next command:
 
 ```sh
-curl -X POST -user login -d @- http://server:8000/control/ <<END
+curl -X POST --user login -d @- http://server:8000/control/ <<END
 {
   "cmd": "set-user",
   "id": "new-admin",
@@ -131,7 +131,7 @@ You may enable or disable user by launching next command:
 ```sh
 curl \
     -X POST \
-    -user login \
+    --user login \
     -d '{"cmd":"toggle-user", "id":"login"}' \
     http://server:8000/control/
 ```

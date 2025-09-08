@@ -39,3 +39,5 @@ Or to the channel URL:
 ```
 https://example.com:8000/channel-path/index.m3u8?token=3e3db68b1486
 ```
+
+Read more about [Managing Users](/en/astra/settings/users/)
