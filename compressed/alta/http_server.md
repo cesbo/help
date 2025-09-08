@@ -76,10 +76,11 @@ Each server entry exposes the same set of configurable parameters. Configure the
    * To obscure version info, replace or blank this field.
 
 2. **Allow Origin (CORS)**
-
    * Click **+ Add Origin** to whitelist a domain for Cross-Origin Resource Sharing.
    * Enter a domain (e.g., `https://app.example.com`) per line.
    * Leave empty to disallow cross-origin requests.
+   > If left empty, the `Allow origin` header will be set to `*`/ `allow all`, allowing cross-origin requests from any domain.
+   
    > Add only trusted domains under **Allow Origin** to avoid unwanted cross-origin requests.
 
 ---
