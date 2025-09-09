@@ -1,7 +1,5 @@
 ---
 title: CC Error
-sidebar:
-    order: 2
 ---
 
 CC (Continuity Counter) errors indicates that MPEG-TS packets continuity is corrupted. Error can be caused by MPEG-TS packets loss or excess.
@@ -20,6 +18,9 @@ Jan 27 09:00:01: ERROR: CC: PID:18=5 PID:20=2
 ## CC Error on UDP Receiving
 
 UDP does not guarantee data delivery, so packets can be lost, duplicated, or arrive out of order. There is two common issues: packets loss or packets excess.
+
+We recommend using our [System Tune](/en/articles/system/tune/) script to optimize your Linux settings.
+
 
 ### Packets loss
 

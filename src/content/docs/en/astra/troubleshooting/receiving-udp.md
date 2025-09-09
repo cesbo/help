@@ -1,10 +1,12 @@
 ---
-title: Troubleshooting
-sidebar:
-    order: 90
+title: Common Issues with UDP Reception
 ---
 
 UDP (User Datagram Protocol) - communication protocol in local networks or Internet, with minimal delays and minimal stability.
+
+## System Tune
+
+Before troubleshooting we recommend using our [System Tune](/en/articles/system/tune/) script to optimize your Linux settings.
 
 ## Software to analyze your issue
 

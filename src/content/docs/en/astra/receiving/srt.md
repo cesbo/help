@@ -1,7 +1,7 @@
 ---
 title: SRT
 sidebar:
-    order: 13
+    order: 21
 ---
 
 The Secure Reliable Transport (SRT) protocol is an open-source video streaming protocol designed to provide low-latency, high-quality video streaming over unreliable networks. SRT uses end-to-end encryption and provides a range of features designed to enhance reliability and security, including error correction, congestion control, and retransmission of lost packets. SRT is often used for live video streaming applications, such as sports and news broadcasts, where maintaining a reliable, high-quality connection is critical.

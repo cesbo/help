@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: Common Issues with DVB Adapters
 sidebar:
     order: 90
 ---

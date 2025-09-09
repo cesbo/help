@@ -1,7 +1,7 @@
 ---
 title: MPTS via UDP
 sidebar:
-    order: 11
+    order: 42
 ---
 
 With Astra, you can receive MPTS (Multi Program Transport Stream) from different sources, including UDP. The received MPTS can be demultiplexed into several SPTS (Single Program Transport Stream) channels.

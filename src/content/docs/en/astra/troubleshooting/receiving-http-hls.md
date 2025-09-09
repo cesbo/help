@@ -1,7 +1,5 @@
 ---
-title: Troubleshooting
-sidebar:
-    order: 100
+title: Common Issues with HTTP/HLS Reception
 ---
 
 ## Common HTTP codes

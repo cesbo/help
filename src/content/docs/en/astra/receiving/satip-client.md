@@ -1,7 +1,7 @@
 ---
 title: "SAT>IP Client"
 sidebar:
-    order: 3
+    order: 41
 ---
 
 SAT>IP (or Sat-IP) specifies an IP-based client–server communication protocol for a TV gateway. SAT>IP server connects to one or more DVB broadcast sources and provides access to channels for multiple clients over HTTP or RTSP protocols.

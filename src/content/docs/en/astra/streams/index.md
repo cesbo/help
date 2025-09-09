@@ -13,8 +13,6 @@ To create a new stream:
 1. Go to the main Dashboard
 2. Click "New Stream" in the upper right corner
 
-A dialog opens where you choose between SPTS (Single Program Stream) or MPTS (Multi Program Stream).
-
 ## General Options
 
 Configure basic stream settings that control how your stream behaves and appears in the system.
