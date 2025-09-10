@@ -4,39 +4,43 @@ sidebar:
     order: 1
 ---
 
-The log messages in Astra provide insight into the service status and activities during the receiving and processing of data streams. Log messages are categorized into several types:
+Astra writes logs to help you understand the service status and how streams are received and processed. Logs are grouped into types:
 
-- `errors` - indicate operational issues that can disrupt the stream input
-- `warnings` - point out issues with the disrupted stream or those that might not affect streams at all
-- `information` - includes limited number of messages, such as version information on process start, normal exit, process restart, activation input on the stream, and a few others
-- `debug` - detailed information about receiving and processing activities. Turned off by default and can be enabled in the log settings or using command line argument `--debug`
-- `access log` - this kind off messages records requests to the built-in Astra HTTP server. The access logs are separate from other logs and stored in a specific file. For more detals, please refer to the [Access Log](/en/astra/logs/access-log/)
+- `errors` - iproblems that break or stop stream input
+- `warnings` - issues in the stream that may or may not affect playback
+- `information` - short messages such as process start, version info, normal exit, restart, or stream input activation
+- `debug` -  detailed stream processing messages. Disabled by default. Enable in log settings or with `--debug` command line option
+- `access log` - requests to Astra's HTTP server. Stored in a separate file
 
 ## Web interface
 
-Log could be found in web interface, just click "Log" in the main menu:
+Open logs in the web interface by clicking Log in the main menu:
 
 ![Logs in web interface](https://cdn.cesbo.com/help/astra/admin-guide/log/web.png)
 
-- `Search` - search bar in the main menu could be used to filter messages
-- `Settings` - basic log options
-- `Clear` - clear log in the web interface. On the server Astra keep log as is
+- `Search` - filter log messages
+- `Settings` - change log options
+- `Clear` - clear the log view. On the server side logs remain unchanged
 
 ![Log settings](https://cdn.cesbo.com/help/astra/admin-guide/log/web-settings.png)
 
-- `API Access` - write to the log all API requests to Astra. Useful to check who manage your service
-- `Debug` - write detalied information about receiving and processing
+- `API Access` - log all API requests. Helps track who manages the service
+- `Debug` - write detailed information about receiving and processing
 
-## Console
+## Log Output
 
-By default, Astra writes all information to the file `/var/log/astra.log`. File name depends of the service name. Therefore, if you have launched several instances on the same server, the file name will be same as a service name.
+Log location depends on how Astra is started:
 
+- If you used `astra init` to set up the service, logs are written to `/var/log/astra.log`
+- If you used `astra init <port> <service>` to set up the service, logs are written to `/var/log/<service>.log`
+- If you start Astra directly in the console, logs are shown only in the console
 
 ## HTTP Access Logs
 
-HTTP Access Logs is an information about processed requests by the buil-in Astra HTTP server. HTTP Access Logs disabled by default, you may turn it on in the Settings → General, set full path to the log file in the "HTTP Access Log" field. For example: `/var/log/astra-access.log`
+HTTP Access Logs capture requests to the built-in Astra HTTP server. They are off by default.
+Enable them in Settings → General and set the full path in the HTTP Access Log field, for example: `/var/log/astra-access.log`
 
-### Log Fields
+### Example Entries
 
 ```
 192.168.88.100 - - [11/Aug/2023:07:03:07 +0000] "GET / HTTP/1.1" 200 0
@@ -45,7 +49,7 @@ HTTP Access Logs is an information about processed requests by the buil-in Astra
 198.51.100.1 - - [11/Aug/2023:07:03:08 +0000] "GET /play/a0g2/113900585_92b9.ts HTTP/1.1" 200 0
 ```
 
-Access log has format like most HTTP servers:
+Format is the same as most HTTP servers:
 
 ```
 remote_addr - remote_user [time] "request" status bytes_sent
@@ -53,13 +57,20 @@ remote_addr - remote_user [time] "request" status bytes_sent
 
 ## Log Rotation
 
-Logrotate is a system utility that manages the automatic rotation and compression of log files.
+Use log rotation to save disk space and keep logs clean.
+Linux systems use logrotate to manage rotation and compression.
 
 :::caution
-Please use log rotation to save disk space and ensure your logs remain in good condition
+Astra rotates its own log file but not the HTTP Access Log.
 :::
 
-By default, Astra rotates its own log file, but does not rotate the HTTP Access Log. To set up log rotation for the HTTP Access Log using logrotate, create a new configuration file at `/etc/logrotate.d/astra`:
+### Astra Log File
+
+Astra rotates its own log file automatically when file size exceeds 2MB. It keeps only one rotated file.
+
+### HTTP Access Log File
+
+Astra does not rotate the HTTP Access Log. To set up log rotation for the HTTP Access Log using logrotate, create a new configuration file at `/etc/logrotate.d/astra`:
 
 ```
 /var/log/astra-access.log {
@@ -76,12 +87,12 @@ By default, Astra rotates its own log file, but does not rotate the HTTP Access 
 }
 ```
 
-- `/var/log/astra-access.log` - full path to the log file. You can define multiple files separated by spaces
-- `daily` - daily rotation. Each log archive file will contain records for a single day
-- `rotate 10` - only the last 10 log archive files are kept. For daily rotation, this equates to 10 days of archives
-- `missingok` - ignore error if defined log file is not found
-- `notifempty` - log will not be rotated if it is empty
-- `compress` - compress the log archive files with gzip
-- `delaycompress` - new log archive file will be compressed on the next day. As Astra continues to write logs to the new log archive file until the `postrotate` script runs, this option needed to prevent the loss of the latest messages
-- `sharedscripts` - execute the `postrotate` script once for all log files
-- `postrotate` - command is executed after log file is rotated. Astra receives a signal to start writing in the new empty file
+- `/var/log/astra-access.log` - path to the log file. You can list multiple files
+- `daily` - rotate logs every day
+- `rotate 10` - keep the last 10 archives
+- `missingok` - skip if the file is missing
+- `notifempty` - skip if the file is empty
+- `compress` - compress archives with gzip
+- `delaycompress` - compress the archive on the next day, preventing message loss
+- `sharedscripts` - run the postrotate script once for all files
+- `postrotate` - command to run after rotation. Reloads Astra so it writes to the new file

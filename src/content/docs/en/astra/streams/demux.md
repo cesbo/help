@@ -16,7 +16,7 @@ For example, to receive a stream from a DVB Adapter with the identifier `a001` a
 dvb://a001#pnr=1
 ```
 
-Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](/en/astra/adapters/scan/) and [Receiving MPTS via UDP](/en/astra/receiving-udp/mpts-via-udp/)
+Astra forms this address automatically if you scan DVB Adapter and append channels with web interface. Read more: [Scan DVB Adapter](/en/astra/adapters/scan/) and [Receiving MPTS via UDP](/en/astra/receiving/mpts-via-udp/)
 
 ## Filter service tables
 

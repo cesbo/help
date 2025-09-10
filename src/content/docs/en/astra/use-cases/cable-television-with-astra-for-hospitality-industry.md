@@ -194,6 +194,6 @@ Also, we can connect the coaxial cable from RESI to the TV set, and in the TV se
 
 ## Troubleshooting DVB receiving
 
-In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/en/astra/adapters/troubleshooting/)
+In case you get any issues during configuration, we provide a list of articles on how to identify issues and eliminate the potential cause of the problem: [Troubleshooting DVB receiving](/en/astra/troubleshooting/dvb/)
 
 We take care of each of our customers and your best experience of working with Cesbo Astra, which is why we offer more support channels such as Online help and support via E-mail.

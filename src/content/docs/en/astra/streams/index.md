@@ -31,12 +31,12 @@ Configure one or more inputs to receive stream content. To set up inputs, you ca
 
 Read more information in our guides for protocol specific configuration:
 
-- [HLS](/en/astra/receiving-http/hls/)
-- [HTTP MPEG-TS](/en/astra/receiving-http/http/)
-- [UDP/RTP](/en/astra/receiving-udp/)
+- [HLS](/en/astra/receiving/hls/)
+- [HTTP MPEG-TS](/en/astra/receiving/http/)
+- [UDP/RTP](/en/astra/receiving/udp/)
 - [SRT](/en/astra/receiving/srt/)
 - [RTSP](/en/astra/receiving/rtsp/)
-- [How to receive MPTS via UDP](/en/astra/receiving-udp/mpts-via-udp/)
+- [How to receive MPTS via UDP](/en/astra/receiving/mpts-via-udp/)
 - [How to configure DVB, ATSC, ISDB-T, SAT>IP](/en/astra/adapters/)
 
 ### Output List

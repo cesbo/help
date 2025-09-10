@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: Common Issues with HTTP/HLS Output
 description: Common issues and solutions for HTTP delivery in Astra
 ---
 

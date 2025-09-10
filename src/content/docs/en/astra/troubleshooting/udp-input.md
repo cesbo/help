@@ -1,5 +1,5 @@
 ---
-title: Common Issues with UDP Reception
+title: Common Issues with UDP Input
 ---
 
 UDP (User Datagram Protocol) - communication protocol in local networks or Internet, with minimal delays and minimal stability.
@@ -65,7 +65,7 @@ First of all check traffic on the network interface with tcpdump tool. If there 
 If tcpdump shows information about UDP packets, there is could be next issues:
 
 1. UDP droped by firewall rulles. Check your firewall configuration
-1. If you server has multiplay interfaces then append route to the multicast group or configure RP Filter: [RP Filter and Multicast receiving in Linux](/en/astra/receiving-udp/rp-filter/)
+1. If you server has multiplay interfaces then append route to the multicast group or configure RP Filter: [RP Filter and Multicast receiving in Linux](/en/astra/troubleshooting/rp-filter/)
 
 ## CC Errors on receiving UDP
 
@@ -78,4 +78,4 @@ Jan 27 09:00:01: INFO: Bitrate: 13261 Kbit/s
 Jan 27 09:00:01: ERROR: CC: PID:18=5 PID:20=2
 ```
 
-Read more about [CC Errors](/en/astra/logs/cc/).
+Read more about [CC Errors](/en/astra/troubleshooting/cc-error/).

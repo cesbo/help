@@ -47,7 +47,7 @@ Access content from the archive with time parameters:
 
 Direct access skips authentication and sessions. Use this when Alta acts as a backend and your app handles user access.
 
-**Note**: This is disabled by default. Enable it in [Channel Settings](../channel-settings/) under Media Access options.
+**Note**: This is disabled by default. Enable it in [Channel Settings](/en/alta/ott-settings/channel-settings/) under Media Access options.
 
 ### Live Direct Access
 

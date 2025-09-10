@@ -54,4 +54,4 @@ Please use the advanced options only if you understand their implications
 
 ## Troubleshooting
 
-Find more information in [Troubleshooting UDP reception](/en/astra/receiving-udp/troubleshooting/)
+Find more information in [Troubleshooting UDP Input](/en/astra/troubleshooting/udp-input/)

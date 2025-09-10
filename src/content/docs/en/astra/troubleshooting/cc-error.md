@@ -61,4 +61,4 @@ In both cases need to check remote server configuration. If this is not possible
 
 ## CC Error on DVB Receiving
 
-DVB depends of the signal quality, check errors on DVB adapter: [BER and UNC Errors](/en/astra/adapters/errors/)
+DVB depends of the signal quality, check errors on DVB adapter: [BER and UNC Errors](/en/astra/troubleshooting/ber-unc-error/)

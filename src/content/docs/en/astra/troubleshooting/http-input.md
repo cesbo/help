@@ -1,5 +1,5 @@
 ---
-title: Common Issues with HTTP/HLS Reception
+title: Common Issues with HTTP/HLS Input
 ---
 
 ## Common HTTP codes
