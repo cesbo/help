@@ -1,6 +1,8 @@
 ---
 title: Common Issues with HTTP/HLS Output
 description: Common issues and solutions for HTTP delivery in Astra
+sidebar:
+    order: 21
 ---
 
 ## Error 404

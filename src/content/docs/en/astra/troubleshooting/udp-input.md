@@ -1,5 +1,7 @@
 ---
 title: Common Issues with UDP Input
+sidebar:
+    order: 10
 ---
 
 UDP (User Datagram Protocol) - communication protocol in local networks or Internet, with minimal delays and minimal stability.

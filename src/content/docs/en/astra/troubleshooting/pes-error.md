@@ -1,5 +1,7 @@
 ---
 title: PES Error
+sidebar:
+    order: 2
 ---
 
 PES (Packetized Elementary Stream) error indicates that the header of the packets with media data such as video or audio is corrupted. This can lead to issues in decoding and playback of the stream.

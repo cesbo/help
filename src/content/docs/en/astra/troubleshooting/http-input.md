@@ -1,5 +1,7 @@
 ---
 title: Common Issues with HTTP/HLS Input
+sidebar:
+    order: 20
 ---
 
 ## Common HTTP codes

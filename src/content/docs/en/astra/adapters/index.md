@@ -44,15 +44,20 @@ To create new adapter click "New Adapter" in the main menu.
 - `Adapter`: select system devices;
 - `Type`: select adapter standard.
 
+## External CI options
+
+External CI is a DVB-CI adapter like [DigitalDevices DuoFlex CI](https://www.digital-devices.eu/shop/en/cine-series/ci-expansion/224/digital-devices-duoflex-ci-double-common-interface-ci-extension-duoflex-ci?c=173) or [TBS 6900](https://www.tbsdtv.com/products/tbs6900-dvb-dual-pci-e-card.html)
+
+- `CI`: adapter number for DVB-CI device;
+- `CI Device`: device number on DVB-CI adapter;
+- `CI Bitrate`: bitrate for TBS DVB-CI adapter in Mbps. Default: 70.
+
 ## Advanced options
 
 ![DVB Advanced Options](https://cdn.cesbo.com/help/astra/receiving/dvb/intro/dvb-advanced.png)
 
 - `Enable monitoring`: enable telemetry sending to Zabbix or InfluxDB;
 - `Timeout`: check DVR errors in defined interval. Default: 120;
-- `CI`: use external DVB-CI adapter like [DigitalDevices DuoFlex CI](https://www.digital-devices.eu/shop/en/cine-series/ci-expansion/224/digital-devices-duoflex-ci-double-common-interface-ci-extension-duoflex-ci?c=173) or [TBS 6900](https://www.tbsdtv.com/products/tbs6900-dvb-dual-pci-e-card.html);
-- `CI Device`: device number on DVB-CI adapter;
-- `CI Bitrate`: define bitrate for DVB-CI adapter;
 - `BISS`: descramble an entire transponder;
 - `DVB API v3`: use deprecated API to read information from Adapter;
 - `Budget Mode`: disable hardware PID filtering. In budget mode Astra receives whole transponder from adapter;

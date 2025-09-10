@@ -1,5 +1,7 @@
 ---
 title: Channel has no active inputs
+sidebar:
+    order: 3
 ---
 
 The error occurs if the channel does not have any available sources for switching.

@@ -1,7 +1,7 @@
 ---
 title: Common Issues with DVB Adapters
 sidebar:
-    order: 90
+    order: 30
 ---
 
 Detailed guide on troubleshooting DVB reception issues, covering essential aspects such as signal quality, error rates, equipment setup, and interference. Learn practical tips and techniques to diagnose and resolve common problems, ensuring a seamless digital TV viewing experience.

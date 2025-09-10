@@ -84,20 +84,4 @@ Select the required programs and append them by clicking on the Apply button.
 
 ## Troubleshooting
 
-### CI+ Module not working
-
-CI+ modules only for consumer use and don't supported by the External DVB-CI adapters
-
-### Descrambled only 1 channel
-
-The number of programs (channels) that CAM may descramble simultaneously, depending on CAM manufacturer and/or model
-
-### How to check CAM menu?
-
-If you need to check CAM menu to get some additional data about Conditional Access Module or SmartCard, you may use `gnutv` digital tv utility. Launch:
-
-```sh
-gnutv -adapter N -cammenu
-```
-
-Where N is a CI adapter number.
+For common CAM-related issues see [CAM Troubleshooting](/en/astra/troubleshooting/cam/).

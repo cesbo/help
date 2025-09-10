@@ -1,7 +1,7 @@
 ---
 title: RP Filter for UDP Reception
 sidebar:
-    order: 89
+    order: 11
 ---
 
 The rp_filter technology is a useful tool for enhancing the security and protection of servers that receive UDP multicast traffic, particularly for servers with multiple network interfaces. When configuring servers to receive UDP multicast traffic, there are two options available: configuring system routing for multicast groups or modifying the rp_filter setting.

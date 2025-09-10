@@ -1,5 +1,7 @@
 ---
 title: CC Error
+sidebar:
+    order: 1
 ---
 
 CC (Continuity Counter) errors indicates that MPEG-TS packets continuity is corrupted. Error can be caused by MPEG-TS packets loss or excess.

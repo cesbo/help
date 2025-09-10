@@ -1,7 +1,7 @@
 ---
 title: BER/UNC Error on DVB Adapters
 sidebar:
-    order: 80
+    order: 31
 ---
 
 Common metrics like signal level and signal-to-noise ratio (SNR) indicate the broad status of signal reception, but are not sufficient for diagnosing specific reception problems.
