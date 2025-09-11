@@ -8,56 +8,34 @@ Alta provides a web interface that you can use to manage and configure the softw
 
 ## Accessing the Web Interface
 
-Web Interface works well in next browsers: Firefox, Chrome, or Safari.
+Web interface will be available at: `http://<server-address>:<port>`
 
-Port for the web interface depends on your configuration, by the default it `8100`. To access the web interface, enter the following URL in your web browser: `http://your-server:8100`, where your-server is the IP address or hostname of the server where Alta is installed.
+- `<server-address>` is the IP address or hostname of the server where Alta is installed
+- `<port>` is the port number. Default is `8100` (can be set during `alta init`)
+- Supported browsers: Firefox, Chrome, or Safari
 
 ## Login to Web Interface
 
 ![Web Interface Login](https://cdn.cesbo.com/help/alta/getting-started/web-interface/login.png)
 
-Default login is `admin`. Password defines in the wizard on service initialization.
+Default login is `admin`. Password set during `alta init`.
 
-## Dashboard
+## Top Bar Navigation
 
-The **Dashboard** provides a real-time overview of all configured **Channels** and **Receivers**, showing key metrics for system monitoring:
+- `Dashboard`: Overview of the system status including active channels, receivers, sessions, and storage usage. Quick insights into channel health and activity.
+- `Receivers`: Manage and configure input sources such as RTMP, SRT, and more. Allows importing from M3U playlists and assigning inputs to channels.
+- `Channels`: Create and monitor broadcast channels. Displays stream status, ingest state, and allows grouping of multirate variants.
+- `Sessions`: Live viewer tracking with session details such as IP address, session time, and bitrate consumption.
+- `Settings`: Configure advanced system options
 
-- **Stream Bitrates**
-- **Active User Counts**
-- **Storage Usage** (if enabled)
+### Settings
 
-Each Channel/Receiver is shown as a **card** with a color-coded border indicating its status.
+Configure advanced system options:
 
-### Card Status Indicators
-
-- **Green Border**: Enabled and streaming normally.
-- **Gray Border**: Disabled or no stream.
-- **Yellow Border**: One or more stream variants inactive.
-
-### Card Header Contents
-
-- **Name**: Identifier for Channel/Receiver
-  - ⚙️ icon: Opens Channel settings
-  - `<Variant>/<Channel>`: Opens Edit Receiver dialog
-- **User Count**: Number of active stream viewers
-- **Bitrate**: Real-time bitrate in **Mbit/s**
-- Clicking a card expands it to show more details.
-
-### Expanded Card Details
-
-- **Stream Details**
-  - **Variants List**: e.g., `HD / SD`, `Receiver A / Receiver B`
-  - **Individual Bitrates**: Shown per resolution/variant
-
-- **Storage Usage** if enabled shows variants with:
-  - **Data Size**: Total storage used by the variant
-  - **Time Frame**: Duration for which content is stored
-
-## Usage Tips
-
-- **Search & Sort** via Navigation Bar to find Channels/Receivers
-- **Monitor**:
-  - **Bitrate** and **user count** for performance
-- **Troubleshooting**:
-  - **Gray card**: Check if stream is enabled and receiving input
-  - **Yellow card**: Check variant statuses in settings
+- `Storages`: Create Storages. Monitor archive usage and disk capacity
+- `Authorizers`: Define access control and token rules
+- `Users`: Manage user roles and credentials
+- `HTTP Servers`: Set TLS, ports, and connection limits
+- `HLS Access`: Configure cache, CORS, and retention policies
+- `Export Config`: Download full configuration in JSON
+- `Logout`: End the current web session
