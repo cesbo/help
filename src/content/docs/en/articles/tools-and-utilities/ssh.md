@@ -111,26 +111,3 @@ Host example.com
 :::note
 SSH Agent will be forwarded only in active SSH session, and the private key will not be copied to the remote server. SSH Agent forwarding is not recommended for untrusted servers.
 :::
-
-## SSH Proxy Jump
-
-ProxyJump is another useful mechanism. It allows you to connect to a remote server via an intermediate SSH server, also known as a "jump host".
-
-To connect to server2 via server1:
-
-```bash
-ssh -J user@server1 server2
-```
-
-Alternatively, you can enable it permanently for a specific host in your SSH config file `~/.ssh/config`:
-
-```
-Host server2
-    ProxyJump user@server1
-```
-
-Now you can simply use:
-
-```bash
-ssh server2
-```

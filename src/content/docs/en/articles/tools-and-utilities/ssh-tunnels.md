@@ -31,6 +31,29 @@ ssh -R 9090:localhost:3000 example.com
 
 Now all request on the remote server to port `9090` will be forwarded to port `3000` on your local machine.
 
+## SSH Proxy Jump
+
+ProxyJump is another useful mechanism. It allows you to connect to a remote server via an intermediate SSH server, also known as a "jump host".
+
+To connect to server2 via server1:
+
+```bash
+ssh -J user@server1 server2
+```
+
+Alternatively, you can enable it permanently for a specific host in your SSH config file `~/.ssh/config`:
+
+```
+Host server2
+    ProxyJump user@server1
+```
+
+Now you can simply use:
+
+```bash
+ssh server2
+```
+
 ## Examples
 
 ### Secure Remote Database Access
