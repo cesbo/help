@@ -32,10 +32,10 @@ First of all need to check losses and errors on the network interface:
 ip -s link show eth0
 ```
 
-You need to look at RX Errors. Some network cards provide more detailed information about the nature of the loss:
+Look at RX errors. Some network cards provide more detailed information about the nature of the loss:
 
 ```sh
-ethtool -S eth1
+ethtool -S eth0
 ```
 
 Losses can be not only on the network cards of your server. They can also be on the network equipment port. You can find the information how to see it in the documentation of the network equipment manufacturer.
