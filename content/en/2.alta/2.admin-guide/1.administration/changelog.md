@@ -3,42 +3,26 @@ title: "Changelog"
 noindex: true
 ---
 
-## 250603
-
-[Download Alta-250603](https://cdn.cesbo.com/alta/builds/alta-250603)
-
-### Interface
-
-- Short guide how to reset password on the login page
-- Fixed issue with network mask in the IP authentication settings
-
-### Receivers
-
-- Better receiving stability - could handle many errors in the stream without stopping the receiver
-- If the receiver stops working, the last full video frame continues to be delivered — the stream doesn’t interrupt in the player and will resume automatically when the source returns
-
-### Channels
-
-- Pause - Player can pause the channel and continue playback from the last position. In case of a live channel, it will continue playback from archive (if enabled).
-
-### Base App
-
-- Small fixes for `alta init` command
-- Fix issues with app crash in UDP receiver and app restart after crash
-- Config backup on changes
-
 ## 250314
 
-[Download Alta-250205](https://cdn.cesbo.com/alta/builds/alta-250314)
+[Download Alta-250314](https://cdn.cesbo.com/alta/builds/alta-250314)
 
 ### Interface
 
 - Filter bar for channels, receivers, and dashboard
+- Config export
 
 ### Channels
 
 - Fixed issue with receiving interruptions due to PTS/DTS handling
 - Enhanced logging for PTS/DTS errors and demuxer monitoring
+- Added DirectIO for file writing operations
+
+### Important configuration refactoring
+
+- Removed options `Media Access` and `VOD Access` from the channel settings
+- Options `Media Enable` and `VOD Enable` are now available in the Channels -> HLS Access settings. Use this options only if you want to get access to the content without sessions and authentication (eg. you use Alta as a backend)
+- Access to the VOD playlist through the `index.m3u8` without additional options: `http://your-server/channel-path/index.m3u8?start=unix-timestamp&duration=minutes`
 
 ## 250205
 
