@@ -1,0 +1,48 @@
+---
+title: Cesbo Help Center
+description: Configure your media delivery system with ease
+head:
+  - tag: title
+    content: Cesbo Help Center
+template: splash
+hero:
+  title: Cesbo Help Center
+---
+import { LinkButton } from '@astrojs/starlight/components';
+import ProductCard from '@/components/ProductCard.astro';
+
+<ProductCard
+  title="Astra"
+  description="Software headend for Digital TV broadcasting over cable, satellite, terrestrial, and IP networks."
+>
+  <LinkButton href="/en/astra/getting-started/" variant="primary" class="p-0 m-0">Learn more</LinkButton>
+</ProductCard>
+
+<ProductCard
+  title="Alta"
+  description="Software for live and video on demand content deliver."
+  link="/en/alta/"
+>
+  <LinkButton href="/en/alta/getting-started/" variant="primary" class="p-0 m-0">Learn more</LinkButton>
+</ProductCard>
+
+<ProductCard
+  title="Senta"
+  description="Software for video transcoding with FFmpeg"
+>
+  <LinkButton href="/en/senta/getting-started/" variant="primary" class="p-0 m-0">Learn more</LinkButton>
+</ProductCard>
+
+<ProductCard
+  title="MPEG-TS Analyzer"
+  description="Astra MPEG-TS Analyzer is a built-in tool for real-time, accurate stream analysis. The analyzer features a web interface and can also be used in the console. It supports all types of sources that Astra can handle."
+>
+  <LinkButton href="/en/articles/tools-and-utilities/astra-mpeg-ts-analyzer/" variant="primary" class="p-0 m-0">Learn more</LinkButton>
+</ProductCard>
+
+<ProductCard
+  title="Articles"
+  description="Explore advanced articles and guides"
+>
+  <LinkButton href="/en/articles/" variant="primary" class="p-0 m-0">Read more</LinkButton>
+</ProductCard>

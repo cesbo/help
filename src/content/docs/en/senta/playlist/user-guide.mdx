@@ -1,0 +1,146 @@
+---
+title: Senta Playlist - User Guide
+sidebar:
+  label: User guide
+  order: 1
+description: Senta Playlist (SP) is a convenient solution for managing media resources - radio, internet TV, and streams.
+---
+import { Badge, Steps } from '@astrojs/starlight/components';
+
+Senta Playlist (SP) is a convenient solution for managing media resources: radio, internet TV, and streams.
+
+SP allows you to organize channels by themes and packages. You can create individual playlists for each user.
+
+## Installation and Setup
+
+<Steps>
+
+1. Go to [senta.tv/bins](https://senta.tv/bins) and download the latest version of Senta Playlist.
+
+1. Unpack the archive and run the program.<br/>
+  <Badge text="Windows" variant="note" /> The Windows firewall may ask if you allow Senta Playlist to send and receive data. Click "Allow access" to proceed.<br/>
+  💡 During the first launch, the program will perform some preparatory steps, so it might take longer than usual.<br/>
+
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+  ![Senta Playlist landing page screenshot](https://cesbo.b-cdn.net/senta/help/v3/Senta_Playlist_Landing.jpg)
+
+1. [Configure the admin account and enter the license key](#-admin-configuration)
+
+</Steps>
+
+:::tip[Good to know]
+To see the available launch parameters, run:
+```sh
+./senta-playlist --help
+```
+
+You can change the Senta Playlist port using the command:
+```sh
+./senta-playlist --port 3001
+```
+:::
+
+### 🔑 Admin Configuration
+
+After registering an account, you will be prompted to configure Senta Playlist.
+
+:::caution[Important!]
+First, you need to enter the license key in the appropriate field and apply the settings.
+
+Without a license, Senta Playlist **will not function**.
+:::
+
+Next, configure the method of delivering channel icons to users. You can use Senta Playlist's resources or distribute original icons through external [CDNs](https://en.wikipedia.org/wiki/Content_Delivery_Network), such as Imgur.
+
+:::note[Important!]
+If you choose to use Senta Playlist as the icon server, specify the address through which your clients can access Senta Playlist. Alternatively, you can set up a [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy) to redirect requests to SP. In this case, provide the proxy address.
+:::
+
+## Channel Organization
+
+### 📺 Channels
+
+The easiest way to add channels is to upload an [.m3u8 playlist](https://open-file.ru/types/m3u8) downloaded from [Astra Cesbo](https://help.cesbo.com/astra/getting-started).
+
+![Uploading channels process](https://cesbo.b-cdn.net/senta/help/v3/uploading_channels.gif "Uploading channels process")
+
+You can also create a channel manually using a dedicated form.
+
+![Manual channel entry](https://cesbo.b-cdn.net/senta/help/v3/manually_entering_channel.gif "Manual channel entry")
+
+To organize channels, we offer two categories: `groups` and `packages`.
+
+Channels are grouped by themes, and groups are combined into packages. A package is a set of channels provided to viewers (e.g., through a subscription plan).
+
+### 🎨📺 Channel Groups
+
+You can create a new group on the respective screen by clicking the `Add Group` button. Enter the name and select channels for this group. Click `Save`, and the group will be created!
+
+![Creating a group](https://cesbo.b-cdn.net/senta/help/v3/creating_a_group.gif "Creating a group")
+
+💡 A channel can belong to multiple groups.
+
+### 📦📺 Channel Packages
+
+Creating a package is similar to creating a group. On the `Packages` screen, click `Add Package`, enter the name, and select groups for this package. Click `Save`. Done!
+
+![Creating a package](https://cesbo.b-cdn.net/senta/help/v3/creating_a_package.gif "Creating a package")
+
+💡 A group can belong to multiple packages.
+
+### 🏠📡 Viewers
+
+On the `Users` page, you can create clients and assign them [channel packages](#-channel-packages).
+
+![Creating a user category](https://cesbo.b-cdn.net/senta/help/v3/creating_a_user.gif "Creating a user category")
+
+---
+
+## Middleware for Astra
+
+When configuring [Astra Cesbo](https://help.cesbo.com/astra/getting-started), you can specify Senta Playlist as a [middleware](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#http-request) for verifying viewers' access to channels:
+
+Service URL for verification:
+
+```
+GET %Path from Astra Cesbo to Senta Playlist%/astra/tokens/verifications
+```
+
+For example:
+```
+GET http://localhost:3000/astra/tokens/verifications
+```
+
+:::note[Important!]
+To configure the path from Astra Cesbo to Senta Playlist, [Astra Cesbo](https://help.cesbo.com/astra/getting-started) must be able to send API requests to Senta Playlist. The requests can be made either via the internet or a local network—what matters is the ability to communicate.
+:::
+
+## Moderation and Monitoring
+
+Once you've organized the playlist, you can download it and share it with clients.
+
+During use, [Astra Cesbo](https://help.cesbo.com/astra/delivery/http-hls-auth/middleware#http-request) will verify with Senta Playlist whether the user is allowed to watch the channel. For instance, it will check if the [device limit](#device-limit) for the user is met.
+
+You can view channel-opening statistics on the [corresponding screen](#-user-statistics).
+
+### 📤 Playlist Export
+
+After creating a user and organizing channels, you can download the [playlist file](https://open-file.ru/types/m3u8) to your computer and share it with users.
+
+There are two ways to download the playlist:
+
+1. Click the download button in the user list:
+![Downloading playlist from the list](https://cesbo.b-cdn.net/senta/help/v3/download_directly.gif "Downloading playlist from the list")
+
+2. Use the viewer editing screen:
+![Downloading playlist via form](https://cesbo.b-cdn.net/senta/help/v3/download_via_form.gif "Downloading playlist via form")
+
+### 📈 User Statistics
+
+As viewers watch channels from the playlist, Senta Playlist collects usage statistics. Based on this data, the number of devices used by a viewer is checked.
+
+#### Device Limit
+
+Viewers' requests to open a channel will be allowed if:
+
+The number of unique IP addresses within 24 hours does not exceed the device limit for that viewer and denied otherwise.

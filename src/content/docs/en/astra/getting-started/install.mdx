@@ -1,0 +1,88 @@
+---
+title: Installing Astra
+description: Step-by-step guide to install Astra binary, get a license, and set up the system service
+sidebar:
+    order: 2
+---
+import { Steps } from '@astrojs/starlight/components'
+
+Astra installation is a simple process – just copy single binary file to your server.
+
+## Requirements
+
+- Any Linux-based operating system. We recommend using Fedora 42.
+- x86 64bit CPU
+- Connection to the internet on your server for periodic license validation on the servers: `ls1.cesbo.com`, `ls2.cesbo.com`, and `ls3.cesbo.com`
+
+:::note
+This guide uses the **curl** command to download files. Most Linux distributions have **curl** pre-installed.
+:::
+
+## Install Astra
+
+<Steps>
+
+1. **Open your server console and download binary file**
+
+    ```sh
+    curl -Lo /usr/bin/astra https://cesbo.com/astra-latest
+    ```
+
+2. **Set execute permission**
+
+    ```sh
+    chmod +x /usr/bin/astra
+    ```
+
+3. **Installation completed**
+
+    You can check the installed version of Astra by running:
+
+    ```sh
+    astra -v
+    ```
+
+</Steps>
+
+## Get License
+
+Valid license is required to launch Astra on your server. You may get demo license for free or buy subscription on our web site: https://cesbo.com/astra-license
+
+To install license follow the instructions in the email with new license.
+
+## Launch Astra
+
+After installation, register new service in the systemd:
+
+```sh
+astra init
+```
+
+This command registers Astra as a system service with name `astra` and with management port `8000`. To start service launch command:
+
+```sh
+systemctl start astra
+```
+
+Read more about service management and launching additional services on your server: [Manage Astra Service](/en/astra/admin-guide/manage-service).
+
+## Enable autorun
+
+Turn autorun on for your service:
+
+```sh
+systemctl enable astra
+```
+
+Now service `astra` will be started automatically on system startup.
+
+## System Tune
+
+For better performance of your Astra server, tune your system settings. You can use our [Tune script](/en/articles/system/tune/) to automatically configure these settings. This script will adjust network parameters, CPU power modes, and other system configurations to enhance the performance of Astra.
+
+## Login to Web Interface
+
+After installing Astra, you can access its web interface using a web browser - Chrome, Safari, or Firefox. The default port for the web interface is 8000. So interface address will be `http://your-server-address:8000`.
+To log in to the web interface, use the default login and password, which are both set to "admin".  It is recommended to change the default password to prevent unauthorized access.
+
+Read next article about [Astra Web Interface](/en/astra/getting-started/web-interface)

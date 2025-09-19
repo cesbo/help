@@ -1,0 +1,34 @@
+---
+title: Web Interface
+description: Access and navigate Astra Web Interface to manage streams, adapters, and system settings
+sidebar:
+    order: 4
+---
+
+Astra provides a web interface that you can use to manage and configure the software.
+
+## Accessing the Web Interface
+
+Web Interface works well in these browsers: Firefox, Chrome, or Safari.
+
+The default port for the web interface is 8000. To access the web interface, enter the following URL in your web browser: `http://your-server-address:8000`, where your-server is the IP address or hostname of the server where Astra is installed.
+
+## Login to Web Interface
+
+![Web Interface Login](https://cdn.cesbo.com/help/astra/getting-started/web-interface/login.png)
+
+Default login and password: `admin`. We recommend changing the default password to a more secure one to prevent unauthorized access.
+
+## Interface Overview
+
+![Dashboard](https://cdn.cesbo.com/help/astra/getting-started/web-interface/dashboard.png)
+
+1. `Dashboard` - the dashboard presents real-time status updates for all Streams and DVB Adapters. By clicking on a card, you will open the object options.
+1. `Main Menu` - is a central hub of the Astra interface. It provides users with easy navigation between different functions
+1. `Sessions` - provides a list of all active sessions for HTTP/HLS clients
+1. `Settings` - list of all Astra settings, such as Users management, HTTP Authentication, Astra General settings, etc. Learn more in [Astra Settings](/en/astra/settings/)
+1. `Log` - real-time messages about the status of the Astra software. Learn more in [Astra Logs](/en/astra/admin-guide/logs/)
+1. `Search` - quick search for streams and adapters. The Search function can be accessed by pressing the `S` key
+1. `New Adapter` -  configure a new DVB Adapter to receive signals from DVB networks, including satellite, cable, or terrestrial sources. Learn more about DVB tuning and configuration in the [Receiving DVB](/en/astra/adapters/) guides
+1. `New Stream` - add a new Stream to receive channels from HTTP, UDP, RTSP, and DVB sources. Learn more about creating new stream and stream options in the Admin Guide [Astra Stream Settings](/en/astra/streams/)
+1. `View` - customize interface theme and dashboard settings such a streams and dvb adapters grouping, ordering, filtering

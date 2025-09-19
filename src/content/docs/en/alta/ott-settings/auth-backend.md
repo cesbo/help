@@ -1,0 +1,123 @@
+---
+title: "Auth: HTTP Backend"
+sidebar:
+    order: 5
+---
+
+Backend Authorization is a system for verifying client requests with an external HTTP service in an extensible way.
+
+![Backend Authorization](https://cdn.cesbo.com/help/alta/ott-settings/authorization/http-backend/options.png)
+
+The backend URL depends on the middleware being used. When a client starts a channel, Alta sends a request to the backend service. The backend service verifies the client request based on its own rules and returns a response to Alta. A response status of 200 indicates that access to the content is allowed, while any other response denies access. If the backend service is unavailable, Alta processes a default action.
+
+## Ministra / Stalker
+
+Backend URL:
+
+```
+http://example.com/stalker_portal/server/api/chk_flussonic_tmp_link.php
+```
+
+In the Ministra / Stalker settings turn on option "Temporary URL - Flussonic support"
+
+## IPTVPORTAL
+
+Backend URL:
+
+```
+https://go.iptvportal.cloud/auth/arescrypt/
+```
+
+In the portal settings open "Keys" menu and create a new key:
+
+- Name: Alta
+- Algorithm: ARESSTREAM
+- Mode: SM
+- Key Length: 1472 bit
+- Update Rate: 1:00:00
+
+In channel settings:
+
+- Auth: arescrypt
+- Encoded: turn on
+- Key: Alta
+
+## Microimpulse Smarty
+
+Backend URL:
+
+```
+http://example.com/tvmiddleware/api/streamservice/token/check/
+```
+
+## Custom Backend
+
+If you need to implement custom authentication logic, you can create your own backend.
+
+Alta sends an HTTP GET request to the backend, appending all URL parameters from the original request passed to the backend URL. In addition to the URL parameters, Alta also sends the following HTTP headers to the backend:
+
+- `X-Session-Id` - unique session identifier
+- `X-Real-Ip` - client IP address
+- `X-Real-Path` - path requested by the client
+- `X-Real-Origin` - origin is a combination of a protocol (for example http or https), hostname, and port (if specified)
+- `X-Real-Ua` - User-Agent from original request
+
+In this guide, we provide an example of an extremely simple PHP backend that allows access if the token is equal to `123`.
+
+Create new file `auth.php` with the following code:
+
+```php
+<?php
+
+// Get token from query string
+$token = $_GET['token'];
+
+// Check token
+if ($token == '123') {
+    // Write headers to console and allow access
+    error_log(
+        "\n" .
+        " Session ID: " . $_SERVER['HTTP_X_SESSION_ID']  . "\n" .
+        "    Real IP: " . $_SERVER['HTTP_X_REAL_IP']     . "\n" .
+        "  Real Path: " . $_SERVER['HTTP_X_REAL_PATH']   . "\n" .
+        "Real Origin: " . $_SERVER['HTTP_X_REAL_ORIGIN'] . "\n" .
+        "    Real UA: " . $_SERVER['HTTP_X_REAL_UA']
+    );
+    http_response_code(200);
+} else {
+    // Deny access
+    http_response_code(403);
+}
+```
+
+To launch the backend on the server with Alta, run the following command:
+
+```sh
+php -S 127.0.0.1:6000 auth.php
+```
+
+The backend URL will be:
+
+```
+http://127.0.0.1:6000
+```
+
+For production environments, you can use nginx with php-fpm or any other suitable solution.
+
+:::caution
+Note that this is just an example and you should implement your own backend logic according to your specific requirements.
+:::
+
+## Troubleshooting
+
+### Unexpected access
+
+If you get access to the channel without authorization, probably your HTTP backend is unavailable. You can check it with `curl` command. Open console on your server with Astra. And try to send request to the HTTP backend manually:
+
+```sh
+curl -v "http://127.0.0.1:6000?token=123"
+```
+
+Of course address should be same as in your settings.
+
+If you see something like **Connection refused** or connection is stuck without any response, then issue with access to the backend.

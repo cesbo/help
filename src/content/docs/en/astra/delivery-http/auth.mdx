@@ -1,0 +1,45 @@
+---
+title: HTTP Authorization
+data: 2023-06-19
+image: https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/og-image.png
+sidebar:
+    order: 20
+---
+import { Steps } from '@astrojs/starlight/components'
+
+HTTP authorization controls who can access your protected video content. It ensures only authorized users can watch your streams.
+
+![HTTP Auth](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/diagram.svg)
+
+## Authorization workflow
+
+Before configuring authorization in Astra, you need to understand how the process works.
+
+<Steps>
+
+1. **Get channel list from Middleware**
+
+    ![List of TV channels](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/step-1.svg)
+
+    The client sends their login credentials to your Middleware system. If the credentials are valid, the Middleware returns a list of channels the user can access. Each channel includes a unique token for later authorization.
+
+2. **Request channel from Astra**
+
+    ![Request Channel](https://cdn.cesbo.com/help/astra/delivery/http-hls/auth/step-2.svg)
+
+    When the user selects a channel, their video player sends a request to Astra with the unique token from Step 1.
+
+3. **Astra authorizes the request**
+
+    Astra checks the token against the configured authorization method. If the token is valid, Astra returns the channel stream. If not, it responds with an error.
+
+</Steps>
+
+## Authorization methods
+
+- **[User Authorization](/en/astra/delivery-http/auth-user/)** - Uses login/password or tokens stored in Astra's user settings
+- **[HTTP Backend Authorization](/en/astra/delivery-http/auth-backend/)** - Sends the token to your Middleware for verification
+- **[Securetoken](/en/astra/delivery-http/auth-securetoken/)** - Validates tokens using cryptographic algorithms
+- **[IP Authorization](/en/astra/delivery-http/auth-ip/)** - Checks if the user's IP address is on your access list
+
+Choose the method that best fits your security needs and existing infrastructure.

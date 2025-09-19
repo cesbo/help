@@ -1,0 +1,47 @@
+---
+title: Change Password to Alta Web Interface
+sidebar:
+    order: 2
+---
+
+Password could be changed by administrator. There are two ways to do it: web interface and console wizard.
+
+## Web Interface
+
+Administrator can change password for any user by going to Settings → Users, then selecting the user's account and clicking on the action menu to choose the 'Reset Password':
+
+![web-reset-password](https://cdn.cesbo.com/help/alta/admin-guide/change-password/user-password.png)
+
+## Console Wizard
+
+You may use console wizard to reset own password. On your server launch next command:
+
+```sh
+alta reset-password
+```
+
+Wizard ask you next details:
+
+- Service Name
+- User login
+- New password. Please note that password is not showing in the console on typing
+
+## Troubleshooting
+
+If you have any issues with console wizard please check common errors:
+
+### Service not found
+
+Service is not started or installed on another server
+
+### Permission denied
+
+Service is more privileged than wizard. Launch command with sudo to raise privileges:
+
+```sh
+sudo alta reset-password
+```
+
+### User not found
+
+User with defined name is not found
