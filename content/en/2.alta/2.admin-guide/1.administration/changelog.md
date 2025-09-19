@@ -34,19 +34,11 @@ noindex: true
 ### Interface
 
 - Filter bar for channels, receivers, and dashboard
-- Config export
 
 ### Channels
 
 - Fixed issue with receiving interruptions due to PTS/DTS handling
 - Enhanced logging for PTS/DTS errors and demuxer monitoring
-- Added DirectIO for file writing operations
-
-### Important configuration refactoring
-
-- Removed options `Media Access` and `VOD Access` from the channel settings
-- Options `Media Enable` and `VOD Enable` are now available in the Channels -> HLS Access settings. Use this options only if you want to get access to the content without sessions and authentication (eg. you use Alta as a backend)
-- Access to the VOD playlist through the `index.m3u8` without additional options: `http://your-server/channel-path/index.m3u8?start=unix-timestamp&duration=minutes`
 
 ## 250205
 
