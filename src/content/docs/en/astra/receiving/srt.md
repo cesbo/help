@@ -49,6 +49,10 @@ Examples:
 - `srt://@:3001` - wait for connection on any interface
 - `srt://eth0@:3001` - wait for connection on interface `eth0`
 
+:::caution
+Avoid using ports in the dynamic port range when configuring Listener mode. In Linux, the dynamic port range is typically 32768-60999 (you can check the range on your system with `cat /proc/sys/net/ipv4/ip_local_port_range`). Using ports in this range may cause conflicts with ports that Linux allocates dynamically for outbound connections, such as SRT Caller mode connections.
+:::
+
 ### Options
 
 - `timeout=N` - restarts the receiver if no data is received within a defined interval, seconds. Default value: `5` seconds
