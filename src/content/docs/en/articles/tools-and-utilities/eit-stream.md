@@ -113,8 +113,9 @@ Section `[multiplex/service]`
 ## Mux stream with EIT to MPTS
 
 With Astra you can append UDP stream with EIT to the MPTS.
-In the MPTS settings append input and set and UDP address, for example in configuration above address is `udp://lo@239.0.0.1:1234`.
+In the MPTS settings append input and set UDP address, for example in configuration above address is `udp://lo@239.0.0.1:1234`.
 In the MPTS advanced settings turn on option "Pass EIT".
+Use `no_eit` option on other inputs to disable EIT from other inputs.
 
 ## Autostart
 
