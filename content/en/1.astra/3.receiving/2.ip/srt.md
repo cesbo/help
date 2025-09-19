@@ -43,6 +43,10 @@ srt://[interface]@:port[#options]
 - `port` - local port to accept incomming connection
 - `options` - additional options for SRT protocol
 
+::alert{type="warning"}
+**Port Selection Warning**: Avoid using ports within the Linux dynamic port range to prevent conflicts with system-allocated ports. The dynamic port range is defined in `/proc/sys/net/ipv4/ip_local_port_range` and defaults to 32768-60999. Linux automatically allocates ports from this range for outgoing connections (including SRT Caller mode), which may conflict with your Listener mode ports.
+::
+
 Examples:
 
 - `srt://@:3001` - wait for connection on any interface

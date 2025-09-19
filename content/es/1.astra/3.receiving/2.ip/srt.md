@@ -43,6 +43,10 @@ srt://[interface]@:port[#options]
 - `port` - puerto local para aceptar la conexión entrante
 - `options` - opciones adicionales para el protocolo SRT
 
+::alert{type="warning"}
+**Advertencia de Selección de Puertos**: Evite usar puertos dentro del rango de puertos dinámicos de Linux para prevenir conflictos con puertos asignados por el sistema. El rango de puertos dinámicos se define en `/proc/sys/net/ipv4/ip_local_port_range` y por defecto es 32768-60999. Linux asigna automáticamente puertos de este rango para conexiones salientes (incluyendo SRT en modo Caller), lo que puede generar conflictos con sus puertos de modo Listener.
+::
+
 Ejemplos:
 
 - `srt://@:3001` - esperar conexión en cualquier interfaz
