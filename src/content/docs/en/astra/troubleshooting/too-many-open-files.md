@@ -14,21 +14,21 @@ If you start Astra in a different way, you need to make sure the open file limit
 
 ## Starting with init.d
 
-When using an init.d script, you must increase the limit before starting Astra. Add the ulimit -n 65536 line before the command that launches Astra.
+When using an init.d script, you must increase the limit before starting Astra. Add the `ulimit -n 65536` line before the command that launches Astra.
 
 Example script:
 
 ```sh
 if [ "$1" = "start" ]; then
-    /usr/bin/astra -c /etc/astra/astra.conf -p 8000 --pid /var/run/astra.pid --log /var/log/astra.log --daemon
+  /usr/bin/astra -c /etc/astra/astra.conf -p 8000 --pid /var/run/astra.pid --log /var/log/astra.log --daemon
 elif [ "$1" = "stop" ]; then
-    if [ -f /var/run/astra.pid ]; then
-        kill $(cat /var/run/astra.pid)
-    fi
+  if [ -f /var/run/astra.pid ]; then
+    kill $(cat /var/run/astra.pid)
+  fi
 elif [ "$1" = "restart" ]; then
-    $0 stop
-    sleep 1
-    $0 start
+  $0 stop
+  sleep 1
+  $0 start
 fi
 ```
 
