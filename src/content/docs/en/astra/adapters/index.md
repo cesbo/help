@@ -36,32 +36,32 @@ To create new adapter click "New Adapter" in the main menu.
 
 ![DVB General Options](https://cdn.cesbo.com/help/astra/receiving/dvb/intro/dvb-general.png)
 
-- `Enable`: turn adapter on/off;
-- `Name`: adapter name;
-- `ID`: unique adapter identifier. For new adapter you may keep this field blank and Astra generates it;
-- `Virtual`: virtual adapters is custom interface to receive MPTS streams from different sources like SAT>IP, UDP, CI-Adapters;
-- `SAT>IP`: use adapter on remote server over SAT>IP protocol (deprecated, use Virtual - SAT>IP instead);
-- `Adapter`: select system devices;
-- `Type`: select adapter standard.
+- **Enable**: turn adapter on/off;
+- **Name**: adapter name;
+- **ID**: unique adapter identifier. For new adapter you may keep this field blank and Astra generates it;
+- **Virtual**: virtual adapters is custom interface to receive MPTS streams from different sources like SAT>IP, UDP, CI-Adapters;
+- **SAT>IP**: use adapter on remote server over SAT>IP protocol (deprecated, use Virtual - SAT>IP instead);
+- **Adapter**: select system devices;
+- **Type**: select adapter standard.
 
 ## External CI options
 
 External CI is a DVB-CI adapter like [DigitalDevices DuoFlex CI](https://www.digital-devices.eu/shop/en/cine-series/ci-expansion/224/digital-devices-duoflex-ci-double-common-interface-ci-extension-duoflex-ci?c=173) or [TBS 6900](https://www.tbsdtv.com/products/tbs6900-dvb-dual-pci-e-card.html)
 
-- `CI`: adapter number for DVB-CI device;
-- `CI Device`: device number on DVB-CI adapter;
-- `CI Bitrate`: bitrate for TBS DVB-CI adapter in Mbps. Default: 70.
+- **CI**: adapter number for DVB-CI device;
+- **CI Device**: device number on DVB-CI adapter;
+- **CI Bitrate**: bitrate for TBS DVB-CI adapter in Mbps. Default: 70.
 
 ## Advanced options
 
 ![DVB Advanced Options](https://cdn.cesbo.com/help/astra/receiving/dvb/intro/dvb-advanced.png)
 
-- `Enable monitoring`: enable telemetry sending to Zabbix or InfluxDB;
-- `Timeout`: check DVR errors in defined interval. Default: 120;
-- `BISS`: descramble an entire transponder;
-- `DVB API v3`: use deprecated API to read information from Adapter;
-- `Budget Mode`: disable hardware PID filtering. In budget mode Astra receives whole transponder from adapter;
-- `CA Delay`: delay between sending control packets to Conditional Access Module (CAM).
+- **Enable monitoring**: enable telemetry sending to Zabbix or InfluxDB;
+- **Timeout**: check DVR errors in defined interval. Default: 120;
+- **BISS**: descramble an entire transponder;
+- **DVB API v3**: use deprecated API to read information from Adapter;
+- **Budget Mode**: disable hardware PID filtering. In budget mode Astra receives whole transponder from adapter;
+- **CA Delay**: delay between sending control packets to Conditional Access Module (CAM).
 
 ## DVB Type
 

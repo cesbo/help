@@ -18,14 +18,14 @@ Open logs in the web interface by clicking Log in the main menu:
 
 ![Logs in web interface](https://cdn.cesbo.com/help/astra/admin-guide/log/web.png)
 
-- `Search` - filter log messages
-- `Settings` - change log options
-- `Clear` - clear the log view. On the server side logs remain unchanged
+- **Search**: filter log messages
+- **Settings**: change log options
+- **Clear**: clear the log view. On the server side logs remain unchanged
 
 ![Log settings](https://cdn.cesbo.com/help/astra/admin-guide/log/web-settings.png)
 
-- `API Access` - log all API requests. Helps track who manages the service
-- `Debug` - write detailed information about receiving and processing
+- **API Access**: log all API requests. Helps track who manages the service
+- **Debug**: write detailed information about receiving and processing
 
 ## Log Output
 

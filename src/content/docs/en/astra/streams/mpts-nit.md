@@ -8,12 +8,12 @@ The NIT (Network Information Table) tab lets you configure network information f
 
 ![Network Options](https://cdn.cesbo.com/help/astra/delivery/broadcasting/mpts/nit.png)
 
-- `LCN Version`: The Logical Channel Number controls how channels are ordered on viewers devices in your region
-- `Delivery Type`: Method used to deliver the signal (cable, terrestrial, satellite)
-- `Frequency`: Output signal frequency in MHz. Range: 45-1002 MHz depending on delivery type
-- `Symbolrate`: Symbol rate in KBaud (kilobaud - thousands of symbols per second)
-- `FEC`: Forward Error Correction setting. Use default unless your streams require specific FEC
-- `Modulation`: Signal modulation type for the service
+- **LCN Version**: The Logical Channel Number controls how channels are ordered on viewers devices in your region
+- **Delivery Type**: Method used to deliver the signal (cable, terrestrial, satellite)
+- **Frequency**: Output signal frequency in MHz. Range: 45-1002 MHz depending on delivery type
+- **Symbolrate**: Symbol rate in KBaud (kilobaud - thousands of symbols per second)
+- **FEC**: Forward Error Correction setting. Use default unless your streams require specific FEC
+- **Modulation**: Signal modulation type for the service
 
 ## Network Search
 
@@ -37,9 +37,9 @@ When a TV or set-top box finds frequency 378 MHz with `mpts_1`, it gets the NIT 
 
 Astra uses NIT settings to automatically configure DigitalDevices and TBS modulators defined in the MPTS Output List. When you set up NIT parameters in your MPTS stream, Astra applies these settings directly to the modulator hardware:
 
-- `Frequency`: Configures the RF output frequency on the modulator
-- `Symbolrate`: Sets the symbol rate for the modulated signal
-- `Modulation`: Applies the modulation scheme (QPSK, QAM16, QAM64, etc.)
-- `FEC`: Configures Forward Error Correction on the hardware
+- **Frequency**: Configures the RF output frequency on the modulator
+- **Symbolrate**: Sets the symbol rate for the modulated signal
+- **Modulation**: Applies the modulation scheme (QPSK, QAM16, QAM64, etc.)
+- **FEC**: Configures Forward Error Correction on the hardware
 
 This integration eliminates the need for separate modulator configuration, as Astra synchronizes your stream settings with the hardware automatically.

@@ -28,10 +28,6 @@ In the Astra interface, you can manage DVB Adapter configurations and control th
 
 ## Obtain Adapter configuration
 
-:::caution
-Version: 2021-04-12 or later
-:::
-
 Request: `GET /api/adapter-info/{id}`
 
 - `id` - unique adapter identifier
@@ -87,10 +83,6 @@ Request: `POST /control/`
 - `id` - unique adapter identifier
 
 ## Obtain Adapter Status
-
-:::caution
-Version: 2021-04-12 or later
-:::
 
 Request: `GET /api/adapter-status/{id}`
 

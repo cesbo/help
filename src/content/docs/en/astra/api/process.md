@@ -6,10 +6,6 @@ In Astra, you can manage process and control it status using HTTP API methods.
 
 ## System status
 
-:::caution
-Version: 2021-04-12 or later
-:::
-
 Request: `GET /api/system-status`
 
 Optional query parameters: `GET /api/system-status?t={time}`

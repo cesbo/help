@@ -8,14 +8,14 @@ Configure the EPG Export to extract Electronic Programme Guide from stream
 
 ![Stream: Form for EPG Export Settings](https://cdn.cesbo.com/help/astra/admin-guide/stream/epg.png)
 
-- `XMLTV Channel ID`: use a custom channel ID instead of primary ID
-- `Format`: EPG Export format:
-    - `XMLTV`: this is popular format is used for storing and distributing EPG. XMLTV is compatible with various middleware and IPTV players
-    - `JSON`: useful for sending EPG to external servers or for direct use in a web application. For instance, it can be embedded on a website
-- `Destination`: destination for EPG Export:
-    - `file://`: save the EPG to a local file. For example, using `file:///tmp/test_channel.xml` will store the EPG in the `/tmp` directory with the filename `test_channel.xml`
-    - `http://`: sending EPG using an HTTP POST request. On the server side, an application is required to handle the received request, such as EPG Aggregator
-- `Codepage`: decode text from received EIT packets using defined codepage. Stored text is always encoded with UTF-8
+- **XMLTV Channel ID**: use a custom channel ID instead of primary ID
+- **Format**: EPG Export format:
+    - **XMLTV**: this is popular format is used for storing and distributing EPG. XMLTV is compatible with various middleware and IPTV players
+    - **JSON**: useful for sending EPG to external servers or for direct use in a web application. For instance, it can be embedded on a website
+- **Destination**: destination for EPG Export:
+    - **file**: save the EPG to a local file. For example, using `file:///tmp/test_channel.xml` will store the EPG in the `/tmp` directory with the filename `test_channel.xml`
+    - **http**: sending EPG using an HTTP POST request. On the server side, an application is required to handle the received request, such as EPG Aggregator
+- **Codepage**: decode text from received EIT packets using defined codepage. Stored text is always encoded with UTF-8
 
 ## EPG Aggregator
 

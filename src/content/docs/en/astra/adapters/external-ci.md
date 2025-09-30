@@ -46,14 +46,14 @@ Create New Adapter in the Astra Web Interface with the `CI` value in the `Virtua
 
 CI options:
 
-- `Name`: adapter name
-- `ID`: unique identifier. Leave blank to auto-generate
-- `Virtual`: select **CI** option
-- `Adapter`: number of the CI adapter in the system
-- `Stream ID`: ID of the MPTS created earlier
-- `CI Device`: device number on the CI adapter (default: 0)
-- `CI Bitrate`: bitrate limit in MBps. Default for TBS: `70`. For DigitalDevices, should be defined in the driver
-- `CA Delay`: delay (seconds) before sending channel info to the CAM. Default: `20`
+- **Name**: adapter name
+- **ID**: unique identifier. Leave blank to auto-generate
+- **Virtual**: select **CI** option
+- **Adapter**: number of the CI adapter in the system
+- **Stream ID**: ID of the MPTS created earlier
+- **CI Device**: device number on the CI adapter (default: 0)
+- **CI Bitrate**: bitrate limit in MBps. Default for TBS: `70`. For DigitalDevices, should be defined in the driver
+- **CA Delay**: delay (seconds) before sending channel info to the CAM. Default: `20`
 
 CI adapter number could be found with command:
 

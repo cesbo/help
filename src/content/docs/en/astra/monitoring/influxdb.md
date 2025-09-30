@@ -1,6 +1,5 @@
 ---
-title: "Integration Astra with InfluxDB"
-date: 2023-03-23
+title: Integration Astra with InfluxDB
 sidebar:
     order: 3
 ---
@@ -26,16 +25,16 @@ Open the InfluxDB Admin interface at `http://db-server:8086`.
 
 First, create a new bucket. A bucket serves as storage for all data received from Astra. You can find buckets in the left sidebar under the "Load Data" group. To create a new bucket:
 
-1. Click `Create Bucket`
+1. Click **Create Bucket**
 2. Set the bucket name, for example, `astra`
-3. Set data retention: in the `Delete Data` section, select `Older than` and choose 30 days or any other value you prefer.
+3. Set data retention: in the **Delete Data** section, select **Older than** and choose 30 days or any other value you prefer.
 
 The next step is to grant Astra access to the bucket. In the left sidebar under the `Load Data` group, open `API Tokens`:
 
-1. Click `Generate API Token` and choose `Custom API Token.`
+1. Click **Generate API Token** and choose **Custom API Token.**
 2. Set the token description as `astra`
 3. In the Bucket group, set Read and Write permissions for the `astra` bucket.
-4. Click `Generate`
+4. Click **Generate**
 
 Now, InfluxDB is configured and ready to receive data.
 
@@ -43,10 +42,10 @@ Now, InfluxDB is configured and ready to receive data.
 
 Open Settings → General in the Astra Web Interface. Set options for InfluxDB configuration:
 
-- `Instance Name` - by the default is `astra` will be used as bucket in the InfluxDB
-- `InfluxDB Address` - address of the InfluxDB: `http://db-server:8086`
-- `InfluxDB Organization` - your orgranization in the InfluxDB settings
-- `InfluxDB Token` - paste your token generated on previous step
+- **Instance Name**: by the default is `astra` will be used as bucket in the InfluxDB
+- **InfluxDB Address**: address of the InfluxDB: `http://db-server:8086`
+- **InfluxDB Organization**: your orgranization in the InfluxDB settings
+- **InfluxDB Token**: paste your token generated on previous step
 - Click "Apply & Restart"
 
 ## InfluxDB data structure
