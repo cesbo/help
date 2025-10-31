@@ -72,6 +72,18 @@ If you lost your license or it has been leaked, you may reset your serial number
 Open your profile on our website: [Profile](https://cesbo.com/profile) and click "Reset serial number".
 You will receive a new license and installation guide by email immediately.
 
+## Move License to New Server
+
+You have three options to move your Astra license to a new server:
+
+1. **Restore from Backup** - Create a backup on your old server and restore it on the new one. This moves your license and all settings. See [Backup and Restore](../backup/) guide.
+2. **Copy License File** - Copy `/etc/astra/license.txt` from your old server to the new server, then restart Astra with `systemctl restart astra`
+3. **Reset Serial Number** - If you can't access your old server, reset your serial number in your [Profile](https://cesbo.com/profile) and install the new license file you receive by email
+
+:::note
+After moving your license, the old server will no longer work with Astra.
+:::
+
 ## Troubleshooting
 
 ### Error: "Failed to check license"
